@@ -43,10 +43,11 @@ EODHD_API_KEY = "6a10e8411d06d1.41490389"
 EODHD_BASE_URL = "https://eodhd.com/api"
 EODHD_MAX_RETRIES = 3
 KEEP_EXCHANGES = {"NASDAQ", "NYSE", "NYSE ARCA", "BATS", "AMEX", "NYSE MKT"}
+KEEP_TYPES = {"Common Stock", "ADR", "ETF", "ETN"}
 
 # ── Screener params ──
 MCAP_THRESHOLD = 3_000_000_000
-MIN_DAILY_DOLLAR_VOL = 20_000_000   # Phase 1 rough filter (conservative for 20d avg ≥ $50M)
+MIN_DAILY_DOLLAR_VOL = 100_000_000  # Phase 1 rough filter ($100M USD)
 LOOKBACK_DAYS = 730                 # 2y for SMA200
 US_WORKERS = 20                     # parallel EODHD downloads
 
@@ -81,9 +82,9 @@ def fetch_us_symbol_list():
     if not data:
         raise RuntimeError("Failed to fetch US symbol list from EODHD")
     df = pd.DataFrame(data)
-    df = df[df["Type"].isin({"Common Stock"}) & df["Exchange"].isin(KEEP_EXCHANGES)]
+    df = df[df["Type"].isin(KEEP_TYPES) & df["Exchange"].isin(KEEP_EXCHANGES)]
     df = df[~df["Code"].str.contains(r"-WS|-WT|\.WS", regex=True, na=False)]
-    print(f"  Common Stock (major exchanges): {len(df)}", file=sys.stderr)
+    print(f"  Common Stock + ADR + ETF/ETN (major exchanges): {len(df)}", file=sys.stderr)
     return df
 
 
@@ -191,7 +192,7 @@ def analyze_from_history(code, df):
     recent_volumes = volumes[-20:]
     avg_trading_value = sum(c * v for c, v in zip(recent_closes, recent_volumes)) / len(recent_closes)
 
-    if avg_trading_value < 50_000_000:
+    if avg_trading_value < 100_000_000:
         return None
 
     change = last_price - prev_close
