@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Equity Screener — SMA Trend Alignment</title>
-  <meta name="description" content="US, HK & A-Share equity screener with SMA trend alignment filters. Free, open-source." />
+  <title>Equity Screener — Breakout & Trend Pools</title>
+  <meta name="description" content="US & HK equity screener with Breakout Pool and Trend Pool." />
   <style>
     :root {
       --bg: #ffffff;
@@ -20,6 +20,18 @@
       --negative: #dc2626;
       --negative-bg: rgba(220,38,38,0.08);
       --hover: rgba(0,0,0,0.03);
+      --pool-new: #f59e0b;
+      --pool-new-bg: rgba(245,158,11,0.12);
+      --pool-strongest: #16a34a;
+      --pool-strongest-bg: rgba(22,163,74,0.12);
+      --pool-pullback: #2563eb;
+      --pool-pullback-bg: rgba(37,99,235,0.10);
+      --pool-watching: #8b5cf6;
+      --pool-watching-bg: rgba(139,92,246,0.10);
+      --pool-broken: #dc2626;
+      --pool-broken-bg: rgba(220,38,38,0.10);
+      --pool-exited: #9ca3af;
+      --pool-exited-bg: rgba(156,163,175,0.10);
     }
     .dark {
       --bg: #0f1117;
@@ -35,6 +47,18 @@
       --negative: #f87171;
       --negative-bg: rgba(248,113,113,0.1);
       --hover: rgba(255,255,255,0.03);
+      --pool-new: #fbbf24;
+      --pool-new-bg: rgba(251,191,36,0.15);
+      --pool-strongest: #4ade80;
+      --pool-strongest-bg: rgba(74,222,128,0.12);
+      --pool-pullback: #60a5fa;
+      --pool-pullback-bg: rgba(96,165,250,0.12);
+      --pool-watching: #a78bfa;
+      --pool-watching-bg: rgba(167,139,250,0.12);
+      --pool-broken: #f87171;
+      --pool-broken-bg: rgba(248,113,113,0.12);
+      --pool-exited: #64748b;
+      --pool-exited-bg: rgba(100,116,139,0.10);
     }
     * { margin:0; padding:0; box-sizing:border-box; }
     body {
@@ -45,7 +69,6 @@
       font-size: 14px;
       line-height: 1.5;
     }
-    /* Header */
     .header {
       border-bottom: 1px solid var(--border);
       background: var(--bg-card);
@@ -61,19 +84,27 @@
     .logo { color: var(--primary); flex-shrink: 0; }
     .title { font-size: 15px; font-weight: 600; letter-spacing: -0.02em; line-height: 1; }
     .subtitle { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
-    /* Market Toggle */
-    .market-toggle {
+    .market-toggle, .tab-toggle {
       display: inline-flex; border-radius: 8px; border: 1px solid var(--border);
       background: var(--bg-muted); padding: 2px;
     }
-    .market-btn {
+    .market-btn, .tab-btn {
       padding: 4px 12px; border-radius: 6px; font-size: 12px; font-weight: 600;
       cursor: pointer; border: none; background: none; color: var(--text-muted);
       transition: all 0.15s;
     }
-    .market-btn.active {
+    .market-btn.active, .tab-btn.active {
       background: var(--bg); color: var(--text);
       box-shadow: 0 1px 2px rgba(0,0,0,0.06);
+    }
+    .tab-btn .tab-count {
+      display: inline-flex; align-items: center; justify-content: center;
+      min-width: 18px; height: 16px; border-radius: 8px; font-size: 10px;
+      font-weight: 700; margin-left: 4px; padding: 0 4px;
+      background: var(--bg-muted); color: var(--text-muted);
+    }
+    .tab-btn.active .tab-count {
+      background: var(--primary); color: white;
     }
     .icon-btn {
       width: 32px; height: 32px; border-radius: 6px; border: none;
@@ -82,23 +113,26 @@
       transition: background 0.15s;
     }
     .icon-btn:hover { background: var(--bg-muted); }
-    /* Filters */
-    .filters-box {
-      margin-bottom: 12px; padding: 12px; border-radius: 8px;
-      background: var(--bg-card); border: 1px solid var(--border);
-    }
-    .filters-label {
-      font-size: 11px; font-weight: 600; text-transform: uppercase;
-      letter-spacing: 0.05em; color: var(--text-muted); margin-bottom: 8px;
-      display: flex; align-items: center; gap: 6px;
-    }
     .badge {
       display: inline-flex; align-items: center; padding: 2px 8px;
       border-radius: 4px; font-size: 11px; background: var(--bg-muted);
-      color: var(--text-muted); white-space: nowrap;
+      color: var(--text-muted); white-space: nowrap; gap: 3px;
     }
     .badges { display: flex; flex-wrap: wrap; gap: 6px; }
-    /* Toolbar */
+    .pool-badge {
+      display: inline-flex; align-items: center; padding: 2px 7px;
+      border-radius: 4px; font-size: 11px; font-weight: 600;
+      white-space: nowrap; gap: 3px;
+    }
+    .pool-NEW { color: var(--pool-new); background: var(--pool-new-bg); }
+    .pool-STRONGEST { color: var(--pool-strongest); background: var(--pool-strongest-bg); }
+    .pool-PULLBACK { color: var(--pool-pullback); background: var(--pool-pullback-bg); }
+    .pool-WATCHING { color: var(--pool-watching); background: var(--pool-watching-bg); }
+    .pool-BROKEN { color: var(--pool-broken); background: var(--pool-broken-bg); }
+    .pool-EXITED { color: var(--pool-exited); background: var(--pool-exited-bg); }
+    .from-bottom { font-size: 13px; }
+    .upgrade { color: var(--positive); font-weight: 600; font-size: 11px; }
+    .downgrade { color: var(--negative); font-weight: 600; font-size: 11px; }
     .toolbar {
       display: flex; align-items: center; justify-content: space-between;
       gap: 12px; margin-bottom: 10px; flex-wrap: wrap;
@@ -126,12 +160,9 @@
       transition: all 0.15s; white-space: nowrap;
     }
     .btn:hover { background: var(--bg-muted); }
-    .btn-primary { background: var(--primary); color: white; border-color: var(--primary); }
-    .btn-primary:hover { opacity: 0.9; }
     .btn.copied { border-color: var(--positive); color: var(--positive); }
     .stats { font-size: 12px; color: var(--text-muted); display: flex; align-items: center; gap: 12px; }
     .stats-num { font-weight: 600; color: var(--text); font-variant-numeric: tabular-nums; }
-    /* Table */
     .table-wrap {
       border-radius: 8px; border: 1px solid var(--border);
       background: var(--bg-card); overflow: hidden;
@@ -155,6 +186,7 @@
     .ticker { font-weight: 600; font-size: 13px; letter-spacing: -0.01em; }
     .name { font-size: 12px; color: var(--text-muted); max-width: 180px; overflow: hidden; text-overflow: ellipsis; }
     .sector { font-size: 12px; color: var(--text-muted); }
+    .theme { font-size: 11px; color: var(--text-xs); }
     .price { font-weight: 500; }
     .chg-badge {
       display: inline-flex; padding: 2px 6px; border-radius: 4px;
@@ -163,19 +195,31 @@
     .chg-pos { color: var(--positive); background: var(--positive-bg); }
     .chg-neg { color: var(--negative); background: var(--negative-bg); }
     .muted-val { font-size: 12px; color: var(--text-muted); }
-    .sma-primary { font-size: 12px; font-weight: 500; color: var(--primary); }
     .sma-val { font-size: 12px; }
     .row-num { font-size: 11px; color: var(--text-xs); }
-    .empty-state {
-      padding: 48px 12px; text-align: center; color: var(--text-muted);
-    }
+    .empty-state { padding: 48px 12px; text-align: center; color: var(--text-muted); }
     .empty-state svg { opacity: 0.3; margin-bottom: 8px; }
     .empty-state p { font-size: 13px; }
-    /* Footer */
+    .filters-box {
+      margin-bottom: 12px; padding: 12px; border-radius: 8px;
+      background: var(--bg-card); border: 1px solid var(--border);
+    }
+    .filters-label {
+      font-size: 11px; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 0.05em; color: var(--text-muted); margin-bottom: 8px;
+      display: flex; align-items: center; gap: 6px;
+    }
+    .alert-card {
+      padding: 10px 14px; border-radius: 8px; border: 1px solid var(--border);
+      background: var(--bg-card); margin-bottom: 8px; display: flex;
+      align-items: center; gap: 12px;
+    }
+    .alert-card .alert-ticker { font-weight: 700; font-size: 14px; min-width: 80px; }
+    .alert-card .alert-date { font-size: 12px; color: var(--text-muted); margin-left: auto; }
+    .alert-card .alert-detail { font-size: 13px; color: var(--text-muted); }
     .footer { margin-top: 24px; padding-bottom: 16px; text-align: center; }
     .footer a { font-size: 12px; color: var(--text-xs); text-decoration: none; }
     .footer a:hover { color: var(--text-muted); }
-    /* Main */
     .main { max-width: 1600px; margin: 0 auto; padding: 16px 20px; }
     @media (max-width: 640px) {
       .header-inner, .main { padding-left: 12px; padding-right: 12px; }
@@ -190,18 +234,27 @@
     // ─── State ─────────────────────────────────────────
     let market = 'us';
     let data = { us: null, hk: null, cn: null };
+    let poolData = { us: [], hk: [] };
+    let alertData = { us: [], hk: [] };
     let search = '';
-    let sortField = 'marketCap';
+    let sortField = 'last_close';
     let sortDir = 'desc';
+    let tab = 'breakout'; // 'screener' | 'breakout' | 'trend' | 'alerts'
     let minDailyChg = 'none';
     let min5dChg = 'none';
     let isDark = true;
     let copied = false;
 
     const CONFIG = {
-      us: { title: 'US Equity Screener', currency: '$', mcap: 'Turnover ≥ $200M', price: 'Price > $10', value: 'AvgValue > $100M' },
-      hk: { title: 'HK Equity Screener', currency: 'HK$', mcap: 'AvgValue ≥ HK$5000万', price: 'Price > HK$10', value: 'Vol > 500K' },
-      cn: { title: 'A-Share Equity Screener', currency: '¥', mcap: 'MCap > ¥100亿', price: 'Price > ¥10', value: 'Vol Top 20%' },
+      us: { title: 'US Equity Screener', currency: '$', mcap: 'Turnover >= $200M', price: 'Price > $10', value: 'AvgValue > $100M' },
+      hk: { title: 'HK Equity Screener', currency: 'HK$', mcap: 'AvgValue >= HK$5000wan', price: 'Price > HK$10', value: 'Vol > 500K' },
+      cn: { title: 'A-Share Equity Screener', currency: 'CNY', mcap: 'MCap > CNY 100yi', price: 'Price > CNY 10', value: 'Vol Top 20%' },
+    };
+
+    const POOL_STATUS_ORDER = { STRONGEST: 0, PULLBACK: 1, WATCHING: 2, BROKEN: 3, NEW: 4 };
+    const POOL_STATUS_LABEL = {
+      NEW: 'NEW', STRONGEST: 'STRONGEST', PULLBACK: 'PULLBACK',
+      WATCHING: 'WATCHING', BROKEN: 'BROKEN', EXITED: 'EXITED'
     };
 
     // ─── Data Loading ──────────────────────────────────
@@ -216,7 +269,52 @@
       render();
     }
 
+    async function loadPoolData(m) {
+      if (poolData[m] && poolData[m].length > 0) return;
+      try {
+        const resp = await fetch(`data/pools_${m}.json`);
+        const arr = await resp.json();
+        poolData[m] = Array.isArray(arr) ? arr : Object.values(arr);
+      } catch(e) {
+        poolData[m] = [];
+      }
+      render();
+    }
+
+    async function loadAlertData(m) {
+      if (alertData[m] && alertData[m].length > 0) return;
+      try {
+        const resp = await fetch(`data/alerts_${m}.json`);
+        alertData[m] = await resp.json();
+      } catch(e) {
+        alertData[m] = [];
+      }
+      render();
+    }
+
     // ─── Filtering & Sorting ───────────────────────────
+    function getPoolFiltered() {
+      let pool = poolData[market] || [];
+      if (tab === 'breakout') {
+        pool = pool.filter(e => e.pool === 'breakout');
+      } else if (tab === 'trend') {
+        pool = pool.filter(e => e.pool === 'trend');
+      }
+      if (search.trim()) {
+        const q = search.toLowerCase();
+        pool = pool.filter(e => e.ticker.toLowerCase().includes(q) || (e.sector||'').toLowerCase().includes(q) || (e.theme||'').toLowerCase().includes(q));
+      }
+      if (sortField) {
+        pool.sort((a, b) => {
+          const av = a[sortField] ?? 0, bv = b[sortField] ?? 0;
+          if (typeof av === 'string' && typeof bv === 'string')
+            return sortDir === 'asc' ? av.localeCompare(bv) : bv.localeCompare(av);
+          return sortDir === 'asc' ? Number(av) - Number(bv) : Number(bv) - Number(av);
+        });
+      }
+      return pool;
+    }
+
     function getFiltered() {
       const stocks = data[market]?.stocks || [];
       let result = [...stocks];
@@ -246,47 +344,25 @@
     // ─── Format Helpers ────────────────────────────────
     const fmt = {
       mcap(v) {
-        if (v === 0) return '—';
+        if (v === 0) return '-';
         const c = CONFIG[market].currency;
         const yi = Math.round(v / 1e8);
         if (market === 'cn') {
-          if (yi >= 10000) return '¥' + Math.round(yi/10000).toLocaleString() + '万亿';
-          return '¥' + yi.toLocaleString() + '亿';
+          if (yi >= 10000) return 'CNY' + Math.round(yi/10000).toLocaleString() + 'wanyi';
+          return 'CNY' + yi.toLocaleString() + 'yi';
         }
-        if (market === 'us') {
-          return '$' + yi.toLocaleString() + '亿';
-        }
-        if (market === 'hk') {
-          return 'HK$' + yi.toLocaleString() + '亿';
-        }
-        return c + yi.toLocaleString() + '亿';
+        if (market === 'us') return '$' + yi.toLocaleString() + 'yi';
+        if (market === 'hk') return 'HK$' + yi.toLocaleString() + 'yi';
+        return c + yi.toLocaleString() + 'yi';
       },
       vol(v) {
-        if (v >= 1e8) return (v/1e8).toFixed(1) + '亿';
-        if (v >= 1e4) return (v/1e4).toFixed(0) + '万';
+        if (v >= 1e8) return (v/1e8).toFixed(1) + 'yi';
+        if (v >= 1e4) return (v/1e4).toFixed(0) + 'wan';
         if (v >= 1e6) return (v/1e6).toFixed(1) + 'M';
         if (v >= 1e3) return (v/1e3).toFixed(0) + 'K';
         return v.toLocaleString();
       },
-      price(v) { return v.toFixed(2); },
-      val(v) {
-        if (v === 0) return '—';
-        const c = CONFIG[market].currency;
-        const yi = Math.round(v / 1e8);
-        if (market === 'cn') {
-          if (yi >= 1) return '¥' + yi.toLocaleString() + '亿';
-          return '¥' + Math.round(v/1e4).toLocaleString() + '万';
-        }
-        if (market === 'us') {
-          if (yi >= 1) return '$' + yi.toLocaleString() + '亿';
-          return '$' + Math.round(v/1e6).toLocaleString() + 'M';
-        }
-        if (market === 'hk') {
-          if (yi >= 1) return 'HK$' + yi.toLocaleString() + '亿';
-          return 'HK$' + Math.round(v/1e6).toLocaleString() + 'M';
-        }
-        return c + yi.toLocaleString() + '亿';
-      },
+      price(v) { return v != null ? v.toFixed(2) : '-'; },
     };
 
     function toTV(ticker) {
@@ -299,7 +375,6 @@
       return ticker;
     }
 
-    // ─── Copy Tickers ──────────────────────────────────
     function copyTickers(tickers) {
       const formatted = tickers.map(toTV);
       const text = formatted.join(', ');
@@ -313,17 +388,6 @@
       setTimeout(() => { copied = false; render(); }, 2000);
     }
 
-    // ─── Export CSV ────────────────────────────────────
-    function exportCSV(stocks) {
-      const h = ['Ticker','Name','Price','Change','Change%','5D Chg%','Sector','MarketCap','AvgVol60d','AvgVol90d','AvgTradingValue','SMA10','SMA20','SMA30','SMA50','SMA100','SMA200'];
-      const rows = stocks.map(s => [s.ticker,`"${s.name}"`,s.price,s.change,s.changePercent,s.change5dPercent??0,`"${s.sector||''}"`,s.marketCap,s.avgVolume60d,s.avgVolume90d,s.avgTradingValue,s.sma10,s.sma20,s.sma30,s.sma50,s.sma100,s.sma200].join(','));
-      const csv = [h.join(','), ...rows].join('\n');
-      const a = document.createElement('a');
-      a.href = URL.createObjectURL(new Blob([csv], {type:'text/csv'}));
-      a.download = `screener_${market}_${new Date().toISOString().split('T')[0]}.csv`;
-      a.click();
-    }
-
     // ─── SVG Icons ─────────────────────────────────────
     const icons = {
       sort: '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 15l5 5 5-5M7 9l5-5 5 5"/></svg>',
@@ -333,23 +397,256 @@
       sun: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>',
       moon: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>',
       chart: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>',
-      filter: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>',
-      trend: '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>',
       copy: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>',
       check: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>',
-      download: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>',
+      rocket: '🚀',
     };
 
     // ─── Render ────────────────────────────────────────
     function render() {
       document.documentElement.className = isDark ? 'dark' : '';
       const c = CONFIG[market];
+
+      const breakoutCount = (poolData[market] || []).filter(e => e.pool === 'breakout').length;
+      const trendCount = (poolData[market] || []).filter(e => e.pool === 'trend').length;
+      const alertCount = (alertData[market] || []).length;
+
+      let mainContent = '';
+      if (tab === 'breakout' || tab === 'trend') {
+        mainContent = renderPoolTable();
+      } else if (tab === 'alerts') {
+        mainContent = renderAlerts();
+      } else {
+        mainContent = renderScreenerTable();
+      }
+
+      document.getElementById('app').innerHTML = `
+        <header class="header">
+          <div class="header-inner">
+            <div class="header-left">
+              <svg class="logo" width="28" height="28" viewBox="0 0 32 32" fill="none">
+                <rect x="2" y="18" width="6" height="12" rx="1" fill="currentColor" opacity="0.5"/>
+                <rect x="10" y="12" width="6" height="18" rx="1" fill="currentColor" opacity="0.7"/>
+                <rect x="18" y="6" width="6" height="24" rx="1" fill="currentColor" opacity="0.85"/>
+                <rect x="26" y="2" width="4" height="28" rx="1" fill="currentColor"/>
+              </svg>
+              <div>
+                <div class="title">${c.title}</div>
+                <div class="subtitle">Breakout & Trend Pools</div>
+              </div>
+              <div class="market-toggle">
+                <button class="market-btn ${market==='us'?'active':''}" data-market="us">US</button>
+                <button class="market-btn ${market==='hk'?'active':''}" data-market="hk">HK</button>
+              </div>
+              <div class="tab-toggle">
+                <button class="tab-btn ${tab==='breakout'?'active':''}" data-tab="breakout">Breakout<span class="tab-count">${breakoutCount}</span></button>
+                <button class="tab-btn ${tab==='trend'?'active':''}" data-tab="trend">Trend<span class="tab-count">${trendCount}</span></button>
+                <button class="tab-btn ${tab==='alerts'?'active':''}" data-tab="alerts">Alerts<span class="tab-count">${alertCount}</span></button>
+                <button class="tab-btn ${tab==='screener'?'active':''}" data-tab="screener">Screener</button>
+              </div>
+            </div>
+            <button class="icon-btn" id="theme-toggle">${isDark ? icons.sun : icons.moon}</button>
+          </div>
+        </header>
+        <main class="main">
+          ${mainContent}
+          <div class="footer">
+            <a href="https://github.com" target="_blank">Open Source Equity Screener</a>
+          </div>
+        </main>
+      `;
+
+      // ─── Event Binding ───────────────────────────────
+      document.querySelectorAll('.market-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          market = btn.dataset.market;
+          search = '';
+          loadData(market);
+          loadPoolData(market);
+          loadAlertData(market);
+        });
+      });
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          tab = btn.dataset.tab;
+          search = ''; sortField = tab === 'screener' ? 'marketCap' : 'last_close'; sortDir = 'desc';
+          render();
+        });
+      });
+      document.getElementById('theme-toggle').addEventListener('click', () => { isDark = !isDark; render(); });
+
+      const si = document.getElementById('search-input');
+      if (si) {
+        si.addEventListener('input', e => { search = e.target.value; render(); });
+        si.focus();
+        si.setSelectionRange(si.value.length, si.value.length);
+      }
+
+      document.querySelectorAll('th[data-sort]').forEach(th => {
+        th.addEventListener('click', () => {
+          const field = th.dataset.sort;
+          if (sortField === field) sortDir = sortDir === 'asc' ? 'desc' : 'asc';
+          else { sortField = field; sortDir = 'desc'; }
+          render();
+        });
+      });
+
+      const cb = document.getElementById('copy-btn');
+      if (cb) cb.addEventListener('click', () => copyTickers(currentTickers));
+
+      const fd = document.getElementById('filter-daily');
+      if (fd) fd.addEventListener('change', e => { minDailyChg = e.target.value; render(); });
+      const f5 = document.getElementById('filter-5d');
+      if (f5) f5.addEventListener('change', e => { min5dChg = e.target.value; render(); });
+    }
+
+    let currentTickers = [];
+
+    // ─── Pool Table ────────────────────────────────────
+    function renderPoolTable() {
+      const pool = getPoolFiltered();
+      currentTickers = pool.map(e => e.ticker);
+      const c = CONFIG[market];
+
+      function th(field, label) {
+        const active = sortField === field;
+        const icon = active ? (sortDir === 'desc' ? icons.sortDown : icons.sortUp) : icons.sort;
+        return `<th class="${active?'active':''}" data-sort="${field}">${label}<span class="sort-icon">${icon}</span></th>`;
+      }
+
+      let rows = '';
+      if (pool.length === 0) {
+        rows = `<tr><td colspan="14" class="empty-state">${icons.chart}<p>No stocks in ${tab} pool</p></td></tr>`;
+      } else {
+        pool.forEach((e, i) => {
+          const statusBadge = `<span class="pool-badge pool-${e.pool_status}">${e.pool_status}</span>`;
+          const fbIcon = e.from_bottom ? `<span class="from-bottom">${icons.rocket}</span>` : '';
+          const changeIcon = e.status_change === 'upgrade' ? '<span class="upgrade">&#9650;</span>' :
+                            e.status_change === 'downgrade' ? '<span class="downgrade">&#9660;</span>' : '';
+          const wAlign = e.weekly_aligned ? '<span style="color:var(--positive)">&#10003;</span>' : '<span style="color:var(--text-xs)">&#10007;</span>';
+          const dAlign = e.daily_aligned ? '<span style="color:var(--positive)">&#10003;</span>' : '<span style="color:var(--text-xs)">&#10007;</span>';
+
+          rows += `<tr>
+            <td class="row-num">${i+1}</td>
+            <td class="ticker">${e.ticker}</td>
+            <td class="sector">${e.sector || '-'}</td>
+            <td class="theme">${e.theme || ''}</td>
+            <td>${statusBadge}${fbIcon}</td>
+            <td>${changeIcon}</td>
+            <td class="price">${c.currency}${fmt.price(e.last_close)}</td>
+            <td>${wAlign}</td>
+            <td>${dAlign}</td>
+            <td class="muted-val">${fmt.price(e.ma_10d)}</td>
+            <td class="muted-val">${fmt.price(e.ma_20d)}</td>
+            <td class="muted-val">${fmt.price(e.ma_50d)}</td>
+            <td class="muted-val">${e.days_in_trend}</td>
+          </tr>`;
+        });
+      }
+
+      return `
+        <div class="toolbar">
+          <div class="toolbar-left">
+            <div class="search-wrap">
+              ${icons.search}
+              <input type="search" class="search-input" placeholder="Search ticker or sector..." value="${search}" id="search-input" />
+            </div>
+          </div>
+          <div class="toolbar-right">
+            <div class="stats">
+              ${icons.chart}
+              <span><span class="stats-num">${pool.length}</span> stocks</span>
+            </div>
+            <button class="btn ${copied?'copied':''}" id="copy-btn">
+              ${copied ? icons.check : icons.copy}
+              ${copied ? 'Copied!' : `Copy ${pool.length} Tickers`}
+            </button>
+          </div>
+        </div>
+        <div class="table-wrap">
+          <div class="table-scroll">
+            <table>
+              <thead><tr>
+                <th style="width:36px">#</th>
+                ${th('ticker','Ticker')}
+                ${th('sector','Sector')}
+                ${th('theme','Theme')}
+                ${th('pool_status','Status')}
+                <th style="width:32px">Chg</th>
+                ${th('last_close','Price')}
+                <th style="width:40px">W-Al</th>
+                <th style="width:40px">D-Al</th>
+                ${th('ma_10d','MA10')}
+                ${th('ma_20d','MA20')}
+                ${th('ma_50d','MA50')}
+                ${th('days_in_trend','Days')}
+              </tr></thead>
+              <tbody>${rows}</tbody>
+            </table>
+          </div>
+        </div>`;
+    }
+
+    // ─── Alerts ────────────────────────────────────────
+    function renderAlerts() {
+      const alerts = alertData[market] || [];
+      currentTickers = alerts.map(a => a.ticker);
+
+      if (alerts.length === 0) {
+        return `<div class="empty-state"><p>No alerts today</p></div>`;
+      }
+
+      let cards = '';
+      alerts.forEach(a => {
+        let badge = '', detail = '';
+        if (a.event === 'NEW') {
+          badge = `<span class="pool-badge pool-NEW">NEW</span>`;
+          detail = a.from_bottom ? `${icons.rocket} from_bottom` : '';
+        } else if (a.event === 'upgrade') {
+          badge = `<span class="upgrade">&#9650; upgrade</span>`;
+          detail = `${a.from} &rarr; <span class="pool-badge pool-${a.to}">${a.to}</span>`;
+        } else if (a.event === 'downgrade') {
+          badge = `<span class="downgrade">&#9660; downgrade</span>`;
+          detail = `${a.from} &rarr; <span class="pool-badge pool-${a.to}">${a.to}</span>`;
+        } else if (a.event === 'BROKEN') {
+          badge = `<span class="pool-badge pool-BROKEN">BROKEN</span>`;
+          detail = a.reason || '';
+        }
+        cards += `<div class="alert-card">
+          <div class="alert-ticker">${a.ticker}</div>
+          <div>${badge}</div>
+          <div class="alert-detail">${detail}</div>
+          <div class="alert-date">${a.date}</div>
+        </div>`;
+      });
+
+      return `
+        <div class="toolbar">
+          <div class="toolbar-left">
+            <div class="search-wrap">
+              ${icons.search}
+              <input type="search" class="search-input" placeholder="Search ticker..." value="${search}" id="search-input" />
+            </div>
+          </div>
+          <div class="toolbar-right">
+            <div class="stats">
+              ${icons.chart}
+              <span><span class="stats-num">${alerts.length}</span> alerts</span>
+            </div>
+          </div>
+        </div>
+        ${cards}`;
+    }
+
+    // ─── Screener Table (original) ─────────────────────
+    function renderScreenerTable() {
+      const c = CONFIG[market];
       const filtered = getFiltered();
-      const tickers = filtered.map(s => s.ticker);
+      currentTickers = filtered.map(s => s.ticker);
       const lastUpdated = data[market]?.lastUpdated;
 
-      const chgOptions = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15].map(v => `<option value="${v}" ${minDailyChg===String(v)?'selected':''}>≥ ${v}%</option>`).join('');
-      const chg5dOptions = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15].map(v => `<option value="${v}" ${min5dChg===String(v)?'selected':''}>≥ ${v}%</option>`).join('');
+      const chgOptions = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15].map(v => `<option value="${v}" ${minDailyChg===String(v)?'selected':''}>&ge; ${v}%</option>`).join('');
+      const chg5dOptions = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15].map(v => `<option value="${v}" ${min5dChg===String(v)?'selected':''}>&ge; ${v}%</option>`).join('');
 
       function th(field, label) {
         const active = sortField === field;
@@ -368,15 +665,15 @@
             <td class="row-num">${i+1}</td>
             <td class="ticker">${s.ticker}</td>
             <td class="name">${s.name}</td>
-            <td class="sector">${s.sector||'—'}</td>
+            <td class="sector">${s.sector||'-'}</td>
             <td class="price">${c.currency}${fmt.price(s.price)}</td>
             <td><span class="chg-badge ${chgCls}">${s.changePercent>=0?'+':''}${s.changePercent.toFixed(2)}%</span></td>
             <td><span class="chg-badge ${chg5dCls}">${(s.change5dPercent??0)>=0?'+':''}${(s.change5dPercent??0).toFixed(2)}%</span></td>
             <td class="muted-val">${fmt.mcap(s.marketCap)}</td>
             <td class="muted-val">${fmt.vol(s.avgVolume60d)}</td>
             <td class="muted-val">${fmt.vol(s.avgVolume90d)}</td>
-            <td class="muted-val">${fmt.val(s.avgTradingValue)}</td>
-            <td class="sma-primary">${fmt.price(s.sma10)}</td>
+            <td class="muted-val">${fmt.vol(s.avgTradingValue)}</td>
+            <td class="sma-val">${fmt.price(s.sma10)}</td>
             <td class="sma-val">${fmt.price(s.sma20)}</td>
             <td class="sma-val">${fmt.price(s.sma50)}</td>
             <td class="sma-val">${fmt.price(s.sma100)}</td>
@@ -385,139 +682,80 @@
         });
       }
 
-      document.getElementById('app').innerHTML = `
-        <header class="header">
-          <div class="header-inner">
-            <div class="header-left">
-              <svg class="logo" width="28" height="28" viewBox="0 0 32 32" fill="none">
-                <rect x="2" y="18" width="6" height="12" rx="1" fill="currentColor" opacity="0.5"/>
-                <rect x="10" y="12" width="6" height="18" rx="1" fill="currentColor" opacity="0.7"/>
-                <rect x="18" y="6" width="6" height="24" rx="1" fill="currentColor" opacity="0.85"/>
-                <rect x="26" y="2" width="4" height="28" rx="1" fill="currentColor"/>
-              </svg>
-              <div>
-                <div class="title">${c.title}</div>
-                <div class="subtitle">SMA Trend Alignment</div>
-              </div>
-              <div class="market-toggle">
-                <button class="market-btn ${market==='us'?'active':''}" data-market="us">US</button>
-                <button class="market-btn ${market==='hk'?'active':''}" data-market="hk">HK</button>
-                <button class="market-btn ${market==='cn'?'active':''}" data-market="cn">CN</button>
-              </div>
-            </div>
-            <button class="icon-btn" id="theme-toggle">${isDark ? icons.sun : icons.moon}</button>
+      return `
+        <div class="filters-box">
+          <div class="filters-label">Active Filters</div>
+          <div class="badges">
+            <span class="badge">${c.mcap}</span>
+            <span class="badge">${c.price}</span>
+            <span class="badge">SMA 10>20>50>100>200</span>
+            <span class="badge">Price > SMA30</span>
           </div>
-        </header>
-        <main class="main">
-          <div class="filters-box">
-            <div class="filters-label">${icons.filter} Active Filters</div>
-            <div class="badges">
-              <span class="badge">${c.mcap}</span>
-              <span class="badge">${c.price}</span>
-              <span class="badge">AvgVol 60/90d > 500K</span>
-              <span class="badge">${c.value}</span>
-              <span class="badge">${icons.trend} SMA 10&gt;20&gt;50&gt;100&gt;200</span>
-              <span class="badge">Price &gt; SMA30</span>
+        </div>
+        <div class="toolbar">
+          <div class="toolbar-left">
+            <div class="search-wrap">
+              ${icons.search}
+              <input type="search" class="search-input" placeholder="Search ticker or name..." value="${search}" id="search-input" />
+            </div>
+            <div class="filter-group">
+              <span class="filter-label">Daily Chg%</span>
+              <select class="filter-select" id="filter-daily">
+                <option value="none" ${minDailyChg==='none'?'selected':''}>Any</option>
+                ${chgOptions}
+              </select>
+            </div>
+            <div class="filter-group">
+              <span class="filter-label">5D Chg%</span>
+              <select class="filter-select" id="filter-5d">
+                <option value="none" ${min5dChg==='none'?'selected':''}>Any</option>
+                ${chg5dOptions}
+              </select>
             </div>
           </div>
-          <div class="toolbar">
-            <div class="toolbar-left">
-              <div class="search-wrap">
-                ${icons.search}
-                <input type="search" class="search-input" placeholder="Search ticker or name..." value="${search}" id="search-input" />
-              </div>
-              <div class="filter-group">
-                <span class="filter-label">Daily Chg%</span>
-                <select class="filter-select" id="filter-daily">
-                  <option value="none" ${minDailyChg==='none'?'selected':''}>Any</option>
-                  ${chgOptions}
-                </select>
-              </div>
-              <div class="filter-group">
-                <span class="filter-label">5D Chg%</span>
-                <select class="filter-select" id="filter-5d">
-                  <option value="none" ${min5dChg==='none'?'selected':''}>Any</option>
-                  ${chg5dOptions}
-                </select>
-              </div>
+          <div class="toolbar-right">
+            <div class="stats">
+              ${icons.chart}
+              <span><span class="stats-num">${filtered.length}</span> stocks</span>
+              ${lastUpdated ? `<span>Updated ${new Date(lastUpdated).toLocaleString([], {month:'short',day:'numeric',hour:'2-digit',minute:'2-digit'})}</span>` : ''}
             </div>
-            <div class="toolbar-right">
-              <div class="stats">
-                ${icons.chart}
-                <span><span class="stats-num">${filtered.length}</span> stocks</span>
-                ${lastUpdated ? `<span>Updated ${new Date(lastUpdated).toLocaleString([], {month:'short',day:'numeric',hour:'2-digit',minute:'2-digit'})}</span>` : ''}
-              </div>
-              <button class="btn ${copied?'copied':''}" id="copy-btn">
-                ${copied ? icons.check : icons.copy}
-                ${copied ? 'Copied!' : `Copy ${tickers.length} Tickers`}
-              </button>
-              <button class="btn" id="csv-btn">${icons.download} CSV</button>
-            </div>
+            <button class="btn ${copied?'copied':''}" id="copy-btn">
+              ${copied ? icons.check : icons.copy}
+              ${copied ? 'Copied!' : `Copy ${filtered.length} Tickers`}
+            </button>
           </div>
-          <div class="table-wrap">
-            <div class="table-scroll">
-              <table>
-                <thead><tr>
-                  <th style="width:36px">#</th>
-                  ${th('ticker','Ticker')}
-                  ${th('name','Name')}
-                  ${th('sector','Sector')}
-                  ${th('price','Price')}
-                  ${th('changePercent','Chg%')}
-                  ${th('change5dPercent','5D Chg%')}
-                  ${th('marketCap','Mkt Cap')}
-                  ${th('avgVolume60d','Avg 60d')}
-                  ${th('avgVolume90d','Avg 90d')}
-                  ${th('avgTradingValue','Avg Value')}
-                  ${th('sma10','SMA10')}
-                  ${th('sma20','SMA20')}
-                  ${th('sma50','SMA50')}
-                  ${th('sma100','SMA100')}
-                  ${th('sma200','SMA200')}
-                </tr></thead>
-                <tbody>${tableRows}</tbody>
-              </table>
-            </div>
+        </div>
+        <div class="table-wrap">
+          <div class="table-scroll">
+            <table>
+              <thead><tr>
+                <th style="width:36px">#</th>
+                ${th('ticker','Ticker')}
+                ${th('name','Name')}
+                ${th('sector','Sector')}
+                ${th('price','Price')}
+                ${th('changePercent','Chg%')}
+                ${th('change5dPercent','5D Chg%')}
+                ${th('marketCap','Mkt Cap')}
+                ${th('avgVolume60d','Avg 60d')}
+                ${th('avgVolume90d','Avg 90d')}
+                ${th('avgTradingValue','Avg Value')}
+                ${th('sma10','SMA10')}
+                ${th('sma20','SMA20')}
+                ${th('sma50','SMA50')}
+                ${th('sma100','SMA100')}
+                ${th('sma200','SMA200')}
+              </tr></thead>
+              <tbody>${tableRows}</tbody>
+            </table>
           </div>
-          <div class="footer">
-            <a href="https://github.com" target="_blank">Open Source Equity Screener</a>
-          </div>
-        </main>
-      `;
-
-      // ─── Event Binding ───────────────────────────────
-      document.querySelectorAll('.market-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-          market = btn.dataset.market;
-          search = ''; minDailyChg = 'none'; min5dChg = 'none';
-          loadData(market);
-          render();
-        });
-      });
-      document.getElementById('theme-toggle').addEventListener('click', () => { isDark = !isDark; render(); });
-      document.getElementById('search-input').addEventListener('input', e => { search = e.target.value; render(); });
-      document.getElementById('search-input').focus();
-      // Restore cursor position
-      const si = document.getElementById('search-input');
-      si.setSelectionRange(si.value.length, si.value.length);
-
-      document.getElementById('filter-daily').addEventListener('change', e => { minDailyChg = e.target.value; render(); });
-      document.getElementById('filter-5d').addEventListener('change', e => { min5dChg = e.target.value; render(); });
-      document.getElementById('copy-btn').addEventListener('click', () => copyTickers(tickers));
-      document.getElementById('csv-btn').addEventListener('click', () => exportCSV(filtered));
-
-      document.querySelectorAll('th[data-sort]').forEach(th => {
-        th.addEventListener('click', () => {
-          const field = th.dataset.sort;
-          if (sortField === field) sortDir = sortDir === 'asc' ? 'desc' : 'asc';
-          else { sortField = field; sortDir = 'desc'; }
-          render();
-        });
-      });
+        </div>`;
     }
 
     // ─── Init ──────────────────────────────────────────
     loadData('us');
+    loadPoolData('us');
+    loadAlertData('us');
     render();
   })();
   </script>

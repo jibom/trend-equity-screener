@@ -55,6 +55,8 @@ ROOT_DIR = os.path.dirname(SCRIPT_DIR)
 OUTPUT_FILE = os.path.join(ROOT_DIR, "public", "data", "hk.json")
 POOL_FILE = os.path.join(ROOT_DIR, "data", "pools_hk.json")
 ALERT_FILE = os.path.join(ROOT_DIR, "data", "alerts_hk.json")
+POOL_FILE_PUBLIC = os.path.join(ROOT_DIR, "public", "data", "pools_hk.json")
+ALERT_FILE_PUBLIC = os.path.join(ROOT_DIR, "public", "data", "alerts_hk.json")
 THEME_FILE = os.path.join(ROOT_DIR, "data", "themes_hk.json")
 
 os.makedirs(os.path.dirname(OUTPUT_FILE), exist_ok=True)
@@ -465,9 +467,11 @@ def main():
     pools_data, alerts = run_pool_system(eod_df, today_str, prev_pools, themes, name_map, bootstrap=bootstrap)
 
     save_pools(POOL_FILE, pools_data)
+    save_pools(POOL_FILE_PUBLIC, pools_data)
     print(f"[Done] Pool: {POOL_FILE} ({len(pools_data)} entries)", file=sys.stderr)
 
     save_alerts(ALERT_FILE, alerts)
+    save_alerts(ALERT_FILE_PUBLIC, alerts)
     print(f"[Done] Alerts: {ALERT_FILE} ({len(alerts)} alerts)", file=sys.stderr)
 
 
