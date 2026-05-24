@@ -4,9 +4,13 @@ US Stock Screener using EODHD API + yfinance for market cap.
 
 Strategy:
   Phase 1 — EODHD bulk: symbol list + last-day OHLCV
-             Filter by exchange, type, daily turnover ≥ $200M
+             Filter by exchange, type, daily turnover >= $200M
   Phase 2 — EODHD EOD: 2y daily history (parallel), compute SMAs + volume
-  Phase 3 — yfinance: market cap for survivors (亿 USD)
+  Phase 3 — yfinance: market cap for survivors
+
+Pool System (new):
+  After Phase 2, also run pool state machine on all stocks with history data.
+  Output: public/data/us.json (original), data/pools_us.json + data/alerts_us.json (new)
 """
 
 import json
@@ -38,11 +42,25 @@ except ImportError:
     subprocess.run([sys.executable, "-m", "pip", "install", "pandas", "-q"])
     import pandas as pd
 
+# Import pool manager
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from pool_manager import (
+    calc_sma, resample_to_weekly, check_6m_high, check_from_bottom,
+    check_weekly_alignment, check_daily_alignment, rate_trend_stock,
+    determine_status_change, count_trading_days_since,
+    run_pool_state_machine, load_pools, save_pools, load_themes,
+    generate_alerts, save_alerts,
+)
+
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 ROOT_DIR = os.path.dirname(SCRIPT_DIR)
 OUTPUT_FILE = os.path.join(ROOT_DIR, "public", "data", "us.json")
+POOL_FILE = os.path.join(ROOT_DIR, "data", "pools_us.json")
+ALERT_FILE = os.path.join(ROOT_DIR, "data", "alerts_us.json")
+THEME_FILE = os.path.join(ROOT_DIR, "data", "themes_us.json")
 
 os.makedirs(os.path.dirname(OUTPUT_FILE), exist_ok=True)
+os.makedirs(os.path.dirname(POOL_FILE), exist_ok=True)
 
 # ── EODHD API ──
 EODHD_API_KEY = "6a10e8411d06d1.41490389"
@@ -55,12 +73,6 @@ KEEP_TYPES = {"Common Stock", "ADR", "ETF", "ETN"}
 MIN_DAILY_DOLLAR_VOL = 200_000_000  # Phase 1: $200M USD daily turnover
 LOOKBACK_DAYS = 730                 # 2y for SMA200
 US_WORKERS = 20                     # parallel EODHD downloads
-
-
-def calc_sma(prices, period):
-    if len(prices) < period:
-        return None
-    return sum(prices[-period:]) / period
 
 
 # ── EODHD helpers ──
@@ -150,6 +162,7 @@ def fetch_histories_parallel(codes, start_date, end_date):
 
 
 def analyze_from_history(code, df):
+    """Original SMA alignment analysis for public/data/us.json output."""
     if len(df) < 200:
         return None
 
@@ -177,24 +190,18 @@ def analyze_from_history(code, df):
     if last_price <= sma30:
         return None
 
-    avg_vol_10 = calc_sma(volumes, 10)
     avg_vol_60 = calc_sma(volumes, 60)
     avg_vol_90 = calc_sma(volumes, 90)
-    daily_volume = volumes[-1]
 
-    if not all([avg_vol_10, avg_vol_60, avg_vol_90]):
-        return None
-    if daily_volume < 500_000:
-        return None
-    if avg_vol_10 < 500_000:
+    if not all([avg_vol_60, avg_vol_90]):
         return None
     if avg_vol_60 < 500_000:
         return None
     if avg_vol_90 < 500_000:
         return None
 
-    recent_closes = closes[-20:]
-    recent_volumes = volumes[-20:]
+    recent_closes = closes[-60:]
+    recent_volumes = volumes[-60:]
     avg_trading_value = sum(c * v for c, v in zip(recent_closes, recent_volumes)) / len(recent_closes)
 
     if avg_trading_value < 100_000_000:
@@ -217,8 +224,6 @@ def analyze_from_history(code, df):
         "changePercent": round(change_pct, 2),
         "change5dPercent": round(change_5d_pct, 2),
         "marketCap": 0,
-        "volume": int(daily_volume),
-        "avgVolume10d": int(avg_vol_10),
         "avgVolume60d": int(avg_vol_60),
         "avgVolume90d": int(avg_vol_90),
         "avgTradingValue": int(avg_trading_value),
@@ -271,9 +276,69 @@ def fetch_market_cap_yfinance(ticker, retries=3):
     return {"market_cap": 0, "name": ticker, "sector": ""}
 
 
+def run_pool_system(histories, today_str, prev_pools, themes, bootstrap=False):
+    """Run pool state machine on all stocks with history data.
+
+    Args:
+        histories: dict of {code: DataFrame} from EODHD
+        today_str: today's date string YYYY-MM-DD
+        prev_pools: dict of previous pool entries keyed by ticker
+        themes: dict of theme info keyed by ticker
+        bootstrap: if True, fill pools from scratch (first run)
+
+    Returns:
+        (pools_data, alerts) tuple
+    """
+    print(f"[Pool] Running pool state machine for {len(histories)} stocks (bootstrap={bootstrap}) ...", file=sys.stderr)
+    t0 = time.time()
+    pools_data = {}
+
+    for code, df in histories.items():
+        ticker = f"{code}.US"
+        closes = df["adjusted_close"].tolist()
+        dates = df["date"].tolist()
+        # Convert dates to ISO strings for pool_manager
+        date_strs = [d.strftime("%Y-%m-%d") if hasattr(d, "strftime") else str(d)[:10]
+                     for d in dates]
+
+        weekly = resample_to_weekly(date_strs, closes)
+
+        prev_entry = prev_pools.get(ticker)
+        themes_info = themes.get(ticker, {})
+
+        result = run_pool_state_machine(
+            ticker=ticker, market="US",
+            closes=closes, dates=date_strs, weekly_closes=weekly,
+            prev_entry=prev_entry, today_str=today_str,
+            themes_info=themes_info, bootstrap=bootstrap,
+        )
+        if result:
+            pools_data[ticker] = result
+
+    # Keep pool stocks that weren't in this scan's history (still in pool but no data today)
+    for ticker, entry in prev_pools.items():
+        if ticker not in pools_data and entry.get("pool") in ("breakout", "trend"):
+            entry["last_update_date"] = today_str
+            pools_data[ticker] = entry
+
+    alerts = generate_alerts(pools_data, today_str)
+
+    elapsed = time.time() - t0
+    breakout_count = sum(1 for e in pools_data.values() if e.get("pool") == "breakout")
+    trend_count = sum(1 for e in pools_data.values() if e.get("pool") == "trend")
+    print(f"[Pool] Breakout: {breakout_count}, Trend: {trend_count}, Alerts: {len(alerts)} ({elapsed:.0f}s)", file=sys.stderr)
+
+    return pools_data, alerts
+
+
 def main():
     print("[US Screener] Starting EODHD + yfinance scan ...", file=sys.stderr)
     start_time = time.time()
+
+    # ── Load pool state and themes ──
+    prev_pools = load_pools(POOL_FILE)
+    themes = load_themes(THEME_FILE)
+    print(f"[Pool] Loaded {len(prev_pools)} pool entries, {len(themes)} theme entries", file=sys.stderr)
 
     # ─── Phase 1: Bulk data + turnover filter ───
     try:
@@ -297,12 +362,26 @@ def main():
     # ─── Phase 2: 2y history + technical filters ───
     latest_date = pd.to_datetime(pool_df["date"].iloc[0]).date()
     start_date = latest_date - dt.timedelta(days=LOOKBACK_DAYS)
-    codes = pool_df["code"].tolist()
 
-    histories = fetch_histories_parallel(codes, start_date, latest_date)
+    # Include pool stocks in the history fetch
+    codes_from_screening = pool_df["code"].tolist()
+    # Pool tickers are in "CODE.US" format; strip ".US" for EODHD fetch
+    pool_codes = set()
+    for ticker in prev_pools:
+        if ticker.endswith(".US"):
+            pool_codes.add(ticker[:-3])
+    all_codes = list(set(codes_from_screening) | pool_codes)
 
+    if len(all_codes) > len(codes_from_screening):
+        print(f"  Including {len(pool_codes)} pool stocks in history fetch (total: {len(all_codes)})", file=sys.stderr)
+
+    histories = fetch_histories_parallel(all_codes, start_date, latest_date)
+
+    # ── Original SMA analysis for public/data/us.json ──
     technical_passers = []
     for code, df in histories.items():
+        if code not in codes_from_screening and code not in set(c["code"] if "code" in pool_df.columns else "" for _, c in pool_df.iterrows()):
+            continue  # Skip pool-only stocks for original output
         result = analyze_from_history(code, df)
         if result:
             if not result["name"]:
@@ -312,7 +391,7 @@ def main():
     elapsed = time.time() - start_time
     print(f"[Phase 2] Complete: {len(technical_passers)} pass technical filters ({elapsed:.0f}s)", file=sys.stderr)
 
-    # ─── Phase 3: Market cap via yfinance ───
+    # ── Phase 3: Market cap via yfinance ──
     print(f"[Phase 3] Fetching market cap (yfinance) for {len(technical_passers)} stocks ...", file=sys.stderr)
 
     passing = []
@@ -342,10 +421,11 @@ def main():
     passing.sort(key=lambda x: x["marketCap"], reverse=True)
 
     elapsed = time.time() - start_time
-    print(f"\n[US Screener] ═══════════════════════════════════════", file=sys.stderr)
+    print(f"\n[US Screener] ========================================", file=sys.stderr)
     print(f"[US Screener] Complete. {len(passing)} stocks pass all filters.", file=sys.stderr)
     print(f"[US Screener] Total time: {elapsed:.0f}s ({elapsed/60:.1f}min)", file=sys.stderr)
 
+    # ── Save original output ──
     output = {
         "stocks": passing,
         "totalUniverse": total_universe,
@@ -356,6 +436,18 @@ def main():
     with open(OUTPUT_FILE, "w") as f:
         json.dump(output, f)
     print(f"[Done] Output: {OUTPUT_FILE}", file=sys.stderr)
+
+    # ── Run pool system ──
+    today_str = latest_date.isoformat()
+    # Bootstrap mode: first run with empty pool → fill from scratch
+    bootstrap = len(prev_pools) == 0
+    pools_data, alerts = run_pool_system(histories, today_str, prev_pools, themes, bootstrap=bootstrap)
+
+    save_pools(POOL_FILE, pools_data)
+    print(f"[Done] Pool: {POOL_FILE} ({len(pools_data)} entries)", file=sys.stderr)
+
+    save_alerts(ALERT_FILE, alerts)
+    print(f"[Done] Alerts: {ALERT_FILE} ({len(alerts)} alerts)", file=sys.stderr)
 
 
 if __name__ == "__main__":

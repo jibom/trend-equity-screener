@@ -59,6 +59,17 @@ VOL_PCT_THRESHOLD = 0.20          # Volume top 20%
 LOOKBACK_DAYS = 500               # ~2y for SMA200
 VOL_LOOKBACK_DAYS = 90            # ~60 trading days for volume calc
 
+# ── SW Level 1 industry index codes (2021 revision, 31 categories) ──
+SW_LEVEL1_CODES = [
+    '801010.SI', '801030.SI', '801040.SI', '801050.SI', '801080.SI',
+    '801110.SI', '801120.SI', '801130.SI', '801140.SI', '801150.SI',
+    '801160.SI', '801170.SI', '801180.SI', '801191.SI', '801200.SI',
+    '801230.SI', '801710.SI', '801720.SI', '801730.SI', '801740.SI',
+    '801750.SI', '801760.SI', '801770.SI', '801780.SI', '801790.SI',
+    '801880.SI', '801890.SI', '801950.SI', '801960.SI', '801970.SI',
+    '801980.SI',
+]
+
 
 def calc_sma(prices, period):
     if len(prices) < period:
@@ -68,6 +79,26 @@ def calc_sma(prices, period):
 
 def get_db_connection():
     return pymysql.connect(**DB_CONFIG)
+
+
+def fetch_sw_industries(conn):
+    """Fetch 申万一级行业 classification for all A-shares via swindexmembers."""
+    print("[Phase 1] Fetching 申万一级行业 classification ...", file=sys.stderr)
+    cur = conn.cursor()
+    placeholders = ','.join(['%s'] * len(SW_LEVEL1_CODES))
+    cur.execute(f"""
+        SELECT m.S_CON_WINDCODE, REPLACE(REPLACE(d.S_INFO_NAME, '(申万)', ''), 'Ⅱ', '')
+        FROM swindexmembers m
+        JOIN aindexdescription d ON m.S_INFO_WINDCODE = d.S_INFO_WINDCODE
+        WHERE m.CUR_SIGN = 1
+          AND m.S_INFO_WINDCODE IN ({placeholders})
+          AND m.S_CON_WINDCODE LIKE '%%.S%%'
+    """, SW_LEVEL1_CODES)
+    rows = cur.fetchall()
+    cur.close()
+    sector_map = dict(rows)
+    print(f"  申万一级行业: {len(sector_map)} stocks mapped", file=sys.stderr)
+    return sector_map
 
 
 def fetch_cn_stock_list(conn):
@@ -243,24 +274,18 @@ def analyze_from_wind(code, group_df):
     if last_price <= sma30:
         return None
 
-    avg_vol_10 = calc_sma(volumes, 10)
     avg_vol_60 = calc_sma(volumes, 60)
     avg_vol_90 = calc_sma(volumes, 90)
-    daily_volume = volumes[-1]
 
-    if not all([avg_vol_10, avg_vol_60, avg_vol_90]):
-        return None
-    if daily_volume < 500_000:
-        return None
-    if avg_vol_10 < 500_000:
+    if not all([avg_vol_60, avg_vol_90]):
         return None
     if avg_vol_60 < 500_000:
         return None
     if avg_vol_90 < 500_000:
         return None
 
-    recent_closes = closes[-20:]
-    recent_volumes = volumes[-20:]
+    recent_closes = closes[-60:]
+    recent_volumes = volumes[-60:]
     avg_trading_value = sum(c * v for c, v in zip(recent_closes, recent_volumes)) / len(recent_closes)
 
     change = last_price - prev_close
@@ -280,8 +305,6 @@ def analyze_from_wind(code, group_df):
         "changePercent": round(change_pct, 2),
         "change5dPercent": round(change_5d_pct, 2),
         "marketCap": 0,
-        "volume": int(daily_volume),
-        "avgVolume10d": int(avg_vol_10),
         "avgVolume60d": int(avg_vol_60),
         "avgVolume90d": int(avg_vol_90),
         "avgTradingValue": int(avg_trading_value),
@@ -313,6 +336,8 @@ def main():
         all_codes = desc_df["S_INFO_WINDCODE"].tolist()
         total_universe = len(all_codes)
 
+        sector_map = fetch_sw_industries(conn)
+
         mcap_map = filter_by_market_cap(conn, all_codes)
         if not mcap_map:
             print("[CN Screener] No stocks pass market cap filter", file=sys.stderr)
@@ -336,9 +361,11 @@ def main():
             if result:
                 result["name"] = name_map.get(code, code)
                 mcap = mcap_map.get(code, 0)
-                result["marketCap"] = int(mcap)
+                result["marketCap"] = int(float(mcap))
+                if sector_map.get(code):
+                    result["sector"] = sector_map[code].strip()
                 passing.append(result)
-                print(f"  [Pass] {code} ({result['name']}) ¥{result['price']:.2f} MCap={mcap/1e8:.1f}亿", file=sys.stderr)
+                print(f"  [Pass] {code} ({result['name']}) ¥{result['price']:.2f} MCap={float(mcap)/1e8:.1f}亿 {result['sector']}", file=sys.stderr)
 
     finally:
         conn.close()

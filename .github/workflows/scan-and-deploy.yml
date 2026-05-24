@@ -106,7 +106,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add public/data/*.json
+          git add public/data/*.json data/*.json
           git diff --staged --quiet || git commit -m "Update scan data $(date -u +'%Y-%m-%d %H:%M UTC')"
           git push
 

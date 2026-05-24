@@ -3,9 +3,13 @@
 Hong Kong Stock Screener using Wind Database + yfinance for market cap.
 
 Strategy (optimized — filter early, fetch EOD last):
-  Phase 1 — Wind DB: fetch 60d EOD for all ORD, liquidity filter (avg value ≥ HK$5000万)
+  Phase 1 — Wind DB: fetch 60d EOD for all ORD, liquidity filter (avg value >= HK$5000万)
   Phase 2 — Wind DB: fetch 2y EOD only for liquid survivors, compute SMA alignment
-  Phase 3 — yfinance: market cap for SMA survivors (亿 HKD)
+  Phase 3 — yfinance: market cap for SMA survivors
+
+Pool System (new):
+  After Phase 2, also run pool state machine on all stocks with history data.
+  Output: public/data/hk.json (original), data/pools_hk.json + data/alerts_hk.json (new)
 """
 
 import json
@@ -36,11 +40,25 @@ except ImportError:
     subprocess.run([sys.executable, "-m", "pip", "install", "pandas", "-q"])
     import pandas as pd
 
+# Import pool manager
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from pool_manager import (
+    calc_sma, resample_to_weekly, check_6m_high, check_from_bottom,
+    check_weekly_alignment, check_daily_alignment, rate_trend_stock,
+    determine_status_change, count_trading_days_since,
+    run_pool_state_machine, load_pools, save_pools, load_themes,
+    generate_alerts, save_alerts,
+)
+
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 ROOT_DIR = os.path.dirname(SCRIPT_DIR)
 OUTPUT_FILE = os.path.join(ROOT_DIR, "public", "data", "hk.json")
+POOL_FILE = os.path.join(ROOT_DIR, "data", "pools_hk.json")
+ALERT_FILE = os.path.join(ROOT_DIR, "data", "alerts_hk.json")
+THEME_FILE = os.path.join(ROOT_DIR, "data", "themes_hk.json")
 
 os.makedirs(os.path.dirname(OUTPUT_FILE), exist_ok=True)
+os.makedirs(os.path.dirname(POOL_FILE), exist_ok=True)
 
 # ── Wind DB ──
 DB_CONFIG = {
@@ -58,11 +76,33 @@ LOOKBACK_DAYS = 500               # ~2y for SMA200
 VOL_LOOKBACK_DAYS = 90            # ~60 trading days for volume calc
 
 
-def calc_sma(prices, period):
-    if len(prices) < period:
-        return None
-    return sum(prices[-period:]) / period
+# ── Ticker format conversion ──
 
+def wind_to_pool_ticker(wind_code):
+    """Convert Wind code to pool ticker format: 00700.HK -> 0700.HK"""
+    parts = wind_code.split(".")
+    if len(parts) != 2:
+        return wind_code
+    code = parts[0]
+    # Wind 5-digit -> Yahoo 4-digit: 00700 -> 0700
+    if len(code) == 5 and code.startswith("0"):
+        return f"{code[1:]}.{parts[1]}"
+    return wind_code
+
+
+def pool_to_wind_ticker(pool_ticker):
+    """Convert pool ticker format back to Wind code: 0700.HK -> 00700.HK"""
+    parts = pool_ticker.split(".")
+    if len(parts) != 2:
+        return pool_ticker
+    code = parts[0]
+    # Pad to 5 digits: 0700 -> 00700
+    if code.isdigit():
+        return f"{code.zfill(5)}.{parts[1]}"
+    return pool_ticker
+
+
+# ── Wind DB helpers ──
 
 def get_db_connection():
     return pymysql.connect(**DB_CONFIG)
@@ -80,8 +120,8 @@ def fetch_hk_stock_list(conn):
 
 
 def filter_by_liquidity(conn, ord_codes):
-    """Phase 1: Fetch 60d EOD, filter by avg trading value ≥ HK$5000万."""
-    print(f"[Phase 1] Filtering by liquidity (avg value ≥ HK${MIN_AVG_VALUE/1e6:.0f}M) ...", file=sys.stderr)
+    """Phase 1: Fetch 60d EOD, filter by avg trading value >= HK$5000万."""
+    print(f"[Phase 1] Filtering by liquidity (avg value >= HK${MIN_AVG_VALUE/1e6:.0f}M) ...", file=sys.stderr)
     t0 = time.time()
 
     start_dt = (dt.date.today() - dt.timedelta(days=VOL_LOOKBACK_DAYS)).strftime("%Y%m%d")
@@ -120,7 +160,7 @@ def filter_by_liquidity(conn, ord_codes):
 
 
 def fetch_eod_for_sma(conn, codes):
-    """Phase 2: Fetch 2y EOD only for liquid survivors."""
+    """Phase 2: Fetch 2y EOD for survivors."""
     print(f"[Phase 2] Fetching 2y EOD for {len(codes)} survivors ...", file=sys.stderr)
     t0 = time.time()
 
@@ -162,7 +202,7 @@ def fetch_eod_for_sma(conn, codes):
 
 
 def analyze_from_wind(code, group_df):
-    """Compute SMA and volume filters from Wind DB DataFrame"""
+    """Original SMA alignment analysis for public/data/hk.json output."""
     g = group_df.sort_values("trade_dt").reset_index(drop=True)
     if len(g) < 200:
         return None
@@ -191,24 +231,18 @@ def analyze_from_wind(code, group_df):
     if last_price <= sma30:
         return None
 
-    avg_vol_10 = calc_sma(volumes, 10)
     avg_vol_60 = calc_sma(volumes, 60)
     avg_vol_90 = calc_sma(volumes, 90)
-    daily_volume = volumes[-1]
 
-    if not all([avg_vol_10, avg_vol_60, avg_vol_90]):
-        return None
-    if daily_volume < 500_000:
-        return None
-    if avg_vol_10 < 500_000:
+    if not all([avg_vol_60, avg_vol_90]):
         return None
     if avg_vol_60 < 500_000:
         return None
     if avg_vol_90 < 500_000:
         return None
 
-    recent_closes = closes[-20:]
-    recent_volumes = volumes[-20:]
+    recent_closes = closes[-60:]
+    recent_volumes = volumes[-60:]
     avg_trading_value = sum(c * v for c, v in zip(recent_closes, recent_volumes)) / len(recent_closes)
 
     if avg_trading_value < MIN_AVG_VALUE:
@@ -231,8 +265,6 @@ def analyze_from_wind(code, group_df):
         "changePercent": round(change_pct, 2),
         "change5dPercent": round(change_5d_pct, 2),
         "marketCap": 0,
-        "volume": int(daily_volume),
-        "avgVolume10d": int(avg_vol_10),
         "avgVolume60d": int(avg_vol_60),
         "avgVolume90d": int(avg_vol_90),
         "avgTradingValue": int(avg_trading_value),
@@ -248,15 +280,16 @@ def analyze_from_wind(code, group_df):
 
 
 def fetch_market_caps_yfinance(windcodes):
-    """Phase 3: Fetch market cap via yfinance. Wind: 00700.HK → Yahoo: 0700.HK."""
-    print(f"[Phase 3] Fetching market cap (yfinance) for {len(windcodes)} stocks ...", file=sys.stderr)
+    """Phase 3: Fetch market cap + sector via yfinance. Wind: 00700.HK -> Yahoo: 0700.HK."""
+    print(f"[Phase 3] Fetching market cap + sector (yfinance) for {len(windcodes)} stocks ...", file=sys.stderr)
     t0 = time.time()
 
     mcap_map = {}
+    sector_map = {}
     for wc in windcodes:
         parts = wc.split(".")
         code = parts[0]
-        # Wind 5-digit → Yahoo 4-digit: 00700.HK → 0700.HK
+        # Wind 5-digit -> Yahoo 4-digit: 00700.HK -> 0700.HK
         if len(code) == 5 and code.startswith("0"):
             yf_ticker = f"{code[1:]}.{parts[1]}"
         else:
@@ -266,18 +299,83 @@ def fetch_market_caps_yfinance(windcodes):
             fi = tk.fast_info
             mcap = getattr(fi, "market_cap", 0) or 0
             mcap_map[wc] = mcap
+            try:
+                sector_map[wc] = tk.info.get("sector", "") or ""
+            except Exception:
+                sector_map[wc] = ""
         except Exception:
             mcap_map[wc] = 0
+            sector_map[wc] = ""
         time.sleep(0.2)
 
     found = sum(1 for v in mcap_map.values() if v > 0)
     print(f"  Market cap fetched: {found}/{len(windcodes)} ({time.time()-t0:.0f}s)", file=sys.stderr)
-    return mcap_map
+    return mcap_map, sector_map
+
+
+def run_pool_system(eod_df, today_str, prev_pools, themes, name_map, bootstrap=False):
+    """Run pool state machine on all stocks with history data.
+
+    Args:
+        eod_df: DataFrame with EOD data for all stocks
+        today_str: today's date string YYYY-MM-DD
+        prev_pools: dict of previous pool entries keyed by pool ticker
+        themes: dict of theme info keyed by pool ticker
+        name_map: dict of Wind code -> stock name
+        bootstrap: if True, fill pools from scratch (first run)
+
+    Returns:
+        (pools_data, alerts) tuple
+    """
+    print(f"[Pool] Running pool state machine for {eod_df['code'].nunique()} stocks (bootstrap={bootstrap}) ...", file=sys.stderr)
+    t0 = time.time()
+    pools_data = {}
+
+    for code, group in eod_df.groupby("code"):
+        g = group.sort_values("trade_dt").reset_index(drop=True)
+        closes = g["adj_close"].tolist()
+        dates = g["trade_dt"].tolist()
+        date_strs = [d.strftime("%Y-%m-%d") if hasattr(d, "strftime") else str(d)[:10]
+                     for d in dates]
+
+        weekly = resample_to_weekly(date_strs, closes)
+
+        ticker = wind_to_pool_ticker(code)
+        prev_entry = prev_pools.get(ticker)
+        themes_info = themes.get(ticker, {})
+
+        result = run_pool_state_machine(
+            ticker=ticker, market="HK",
+            closes=closes, dates=date_strs, weekly_closes=weekly,
+            prev_entry=prev_entry, today_str=today_str,
+            themes_info=themes_info, bootstrap=bootstrap,
+        )
+        if result:
+            pools_data[ticker] = result
+
+    # Keep pool stocks that weren't in this scan's EOD data (still in pool but no data today)
+    for ticker, entry in prev_pools.items():
+        if ticker not in pools_data and entry.get("pool") in ("breakout", "trend"):
+            entry["last_update_date"] = today_str
+
+    alerts = generate_alerts(pools_data, today_str)
+
+    elapsed = time.time() - t0
+    breakout_count = sum(1 for e in pools_data.values() if e.get("pool") == "breakout")
+    trend_count = sum(1 for e in pools_data.values() if e.get("pool") == "trend")
+    print(f"[Pool] Breakout: {breakout_count}, Trend: {trend_count}, Alerts: {len(alerts)} ({elapsed:.0f}s)", file=sys.stderr)
+
+    return pools_data, alerts
 
 
 def main():
     print("[HK Screener] Starting Wind DB + yfinance scan ...", file=sys.stderr)
     start_time = time.time()
+
+    # ── Load pool state and themes ──
+    prev_pools = load_pools(POOL_FILE)
+    themes = load_themes(THEME_FILE)
+    print(f"[Pool] Loaded {len(prev_pools)} pool entries, {len(themes)} theme entries", file=sys.stderr)
 
     try:
         conn = get_db_connection()
@@ -296,14 +394,27 @@ def main():
             print("[HK Screener] No stocks pass liquidity filter", file=sys.stderr)
             return
 
+        # Include pool stocks in EOD fetch
+        pool_wind_codes = set()
+        for ticker in prev_pools:
+            wind_code = pool_to_wind_ticker(ticker)
+            pool_wind_codes.add(wind_code)
+        all_codes = liquid_codes | pool_wind_codes
+
+        if len(all_codes) > len(liquid_codes):
+            print(f"  Including {len(pool_wind_codes)} pool stocks in EOD fetch (total: {len(all_codes)})", file=sys.stderr)
+
         # ─── Phase 2: SMA computation (Wind DB 2y EOD) ───
-        eod_df = fetch_eod_for_sma(conn, liquid_codes)
+        eod_df = fetch_eod_for_sma(conn, all_codes)
         if eod_df.empty:
             print("[HK Screener] No EOD data returned", file=sys.stderr)
             return
 
+        # Original SMA analysis for public/data/hk.json
         sma_passers = []
         for code, group in eod_df.groupby("code"):
+            if code not in liquid_codes:
+                continue  # Skip pool-only stocks for original output
             result = analyze_from_wind(code, group)
             if result:
                 result["name"] = name_map.get(code, code)
@@ -313,15 +424,17 @@ def main():
 
         # ─── Phase 3: Market cap (yfinance) ───
         windcodes = [item["ticker"] for item in sma_passers]
-        mcap_map = fetch_market_caps_yfinance(windcodes)
+        mcap_map, sector_map = fetch_market_caps_yfinance(windcodes)
 
         passing = []
         for item in sma_passers:
             mcap = mcap_map.get(item["ticker"], 0)
             if mcap > 0:
                 item["marketCap"] = int(mcap)
+                if sector_map.get(item["ticker"]):
+                    item["sector"] = sector_map[item["ticker"]]
                 passing.append(item)
-                print(f"  [Pass] {item['ticker']} ({item['name']}) HK${item['price']:.2f} MCap={mcap/1e8:.1f}亿HKD", file=sys.stderr)
+                print(f"  [Pass] {item['ticker']} ({item['name']}) HK${item['price']:.2f} MCap={float(mcap)/1e8:.1f}亿HKD", file=sys.stderr)
 
     finally:
         conn.close()
@@ -329,10 +442,11 @@ def main():
     passing.sort(key=lambda x: x["marketCap"], reverse=True)
 
     elapsed = time.time() - start_time
-    print(f"\n[HK Screener] ═══════════════════════════════════════", file=sys.stderr)
+    print(f"\n[HK Screener] ========================================", file=sys.stderr)
     print(f"[HK Screener] Complete. {len(passing)} stocks pass all filters.", file=sys.stderr)
     print(f"[HK Screener] Total time: {elapsed:.0f}s ({elapsed/60:.1f}min)", file=sys.stderr)
 
+    # ── Save original output ──
     output = {
         "stocks": passing,
         "totalUniverse": total_universe,
@@ -343,6 +457,18 @@ def main():
     with open(OUTPUT_FILE, "w") as f:
         json.dump(output, f)
     print(f"[Done] Output: {OUTPUT_FILE}", file=sys.stderr)
+
+    # ── Run pool system ──
+    today_str = dt.date.today().isoformat()
+    # Bootstrap mode: first run with empty pool → fill from scratch
+    bootstrap = len(prev_pools) == 0
+    pools_data, alerts = run_pool_system(eod_df, today_str, prev_pools, themes, name_map, bootstrap=bootstrap)
+
+    save_pools(POOL_FILE, pools_data)
+    print(f"[Done] Pool: {POOL_FILE} ({len(pools_data)} entries)", file=sys.stderr)
+
+    save_alerts(ALERT_FILE, alerts)
+    print(f"[Done] Alerts: {ALERT_FILE} ({len(alerts)} alerts)", file=sys.stderr)
 
 
 if __name__ == "__main__":

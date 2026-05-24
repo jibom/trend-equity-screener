@@ -315,8 +315,8 @@
 
     // ─── Export CSV ────────────────────────────────────
     function exportCSV(stocks) {
-      const h = ['Ticker','Name','Price','Change','Change%','5D Chg%','Sector','MarketCap','Volume','AvgVol10d','AvgVol60d','AvgVol90d','AvgTradingValue','SMA10','SMA20','SMA30','SMA50','SMA100','SMA200'];
-      const rows = stocks.map(s => [s.ticker,`"${s.name}"`,s.price,s.change,s.changePercent,s.change5dPercent??0,`"${s.sector||''}"`,s.marketCap,s.volume,s.avgVolume10d,s.avgVolume60d,s.avgVolume90d,s.avgTradingValue,s.sma10,s.sma20,s.sma30,s.sma50,s.sma100,s.sma200].join(','));
+      const h = ['Ticker','Name','Price','Change','Change%','5D Chg%','Sector','MarketCap','AvgVol60d','AvgVol90d','AvgTradingValue','SMA10','SMA20','SMA30','SMA50','SMA100','SMA200'];
+      const rows = stocks.map(s => [s.ticker,`"${s.name}"`,s.price,s.change,s.changePercent,s.change5dPercent??0,`"${s.sector||''}"`,s.marketCap,s.avgVolume60d,s.avgVolume90d,s.avgTradingValue,s.sma10,s.sma20,s.sma30,s.sma50,s.sma100,s.sma200].join(','));
       const csv = [h.join(','), ...rows].join('\n');
       const a = document.createElement('a');
       a.href = URL.createObjectURL(new Blob([csv], {type:'text/csv'}));
@@ -373,8 +373,8 @@
             <td><span class="chg-badge ${chgCls}">${s.changePercent>=0?'+':''}${s.changePercent.toFixed(2)}%</span></td>
             <td><span class="chg-badge ${chg5dCls}">${(s.change5dPercent??0)>=0?'+':''}${(s.change5dPercent??0).toFixed(2)}%</span></td>
             <td class="muted-val">${fmt.mcap(s.marketCap)}</td>
-            <td class="muted-val">${fmt.vol(s.volume)}</td>
-            <td class="muted-val">${fmt.vol(s.avgVolume10d)}</td>
+            <td class="muted-val">${fmt.vol(s.avgVolume60d)}</td>
+            <td class="muted-val">${fmt.vol(s.avgVolume90d)}</td>
             <td class="muted-val">${fmt.val(s.avgTradingValue)}</td>
             <td class="sma-primary">${fmt.price(s.sma10)}</td>
             <td class="sma-val">${fmt.price(s.sma20)}</td>
@@ -414,8 +414,7 @@
             <div class="badges">
               <span class="badge">${c.mcap}</span>
               <span class="badge">${c.price}</span>
-              <span class="badge">Vol > 500K</span>
-              <span class="badge">AvgVol 10/60/90d > 500K</span>
+              <span class="badge">AvgVol 60/90d > 500K</span>
               <span class="badge">${c.value}</span>
               <span class="badge">${icons.trend} SMA 10&gt;20&gt;50&gt;100&gt;200</span>
               <span class="badge">Price &gt; SMA30</span>
@@ -467,8 +466,8 @@
                   ${th('changePercent','Chg%')}
                   ${th('change5dPercent','5D Chg%')}
                   ${th('marketCap','Mkt Cap')}
-                  ${th('volume','Volume')}
-                  ${th('avgVolume10d','Avg 10d')}
+                  ${th('avgVolume60d','Avg 60d')}
+                  ${th('avgVolume90d','Avg 90d')}
                   ${th('avgTradingValue','Avg Value')}
                   ${th('sma10','SMA10')}
                   ${th('sma20','SMA20')}
