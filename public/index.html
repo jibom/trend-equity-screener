@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Equity Screener — SMA Trend Alignment</title>
-  <meta name="description" content="US & HK equity screener with SMA trend alignment filters. Free, open-source." />
+  <meta name="description" content="US, HK & A-Share equity screener with SMA trend alignment filters. Free, open-source." />
   <style>
     :root {
       --bg: #ffffff;
@@ -189,7 +189,7 @@
   (function() {
     // ─── State ─────────────────────────────────────────
     let market = 'us';
-    let data = { us: null, hk: null };
+    let data = { us: null, hk: null, cn: null };
     let search = '';
     let sortField = 'marketCap';
     let sortDir = 'desc';
@@ -199,8 +199,9 @@
     let copied = false;
 
     const CONFIG = {
-      us: { title: 'US Equity Screener', currency: '$', mcap: 'MCap > $3B', price: 'Price > $10', value: 'AvgValue > $50M' },
-      hk: { title: 'HK Equity Screener', currency: 'HK$', mcap: 'MCap > HK$10B', price: 'Price > HK$10', value: 'AvgValue > HK$50M' },
+      us: { title: 'US Equity Screener', currency: '$', mcap: 'MCap > $3B', price: 'Price > $10', value: 'AvgValue > $100M' },
+      hk: { title: 'HK Equity Screener', currency: 'HK$', mcap: 'MCap > HK$1B', price: 'Price > HK$10', value: 'AvgValue > HK$50M' },
+      cn: { title: 'A-Share Equity Screener', currency: '¥', mcap: 'MCap > ¥100亿', price: 'Price > ¥10', value: 'Vol Top 20%' },
     };
 
     // ─── Data Loading ──────────────────────────────────
@@ -245,33 +246,52 @@
     // ─── Format Helpers ────────────────────────────────
     const fmt = {
       mcap(v) {
-        const p = market === 'hk' ? 'HK$' : '$';
-        if (v >= 1e12) return p + (v/1e12).toFixed(1) + 'T';
-        if (v >= 1e9) return p + (v/1e9).toFixed(1) + 'B';
-        if (v >= 1e6) return p + (v/1e6).toFixed(0) + 'M';
-        return p + v.toLocaleString();
+        const c = CONFIG[market].currency;
+        if (market === 'cn') {
+          if (v >= 1e12) return '¥' + (v/1e12).toFixed(1) + '万亿';
+          if (v >= 1e8) return '¥' + (v/1e8).toFixed(1) + '亿';
+          if (v >= 1e4) return '¥' + (v/1e4).toFixed(0) + '万';
+          return '¥' + v.toLocaleString();
+        }
+        if (v >= 1e12) return c + (v/1e12).toFixed(1) + 'T';
+        if (v >= 1e9) return c + (v/1e9).toFixed(1) + 'B';
+        if (v >= 1e6) return c + (v/1e6).toFixed(0) + 'M';
+        return c + v.toLocaleString();
       },
       vol(v) {
+        if (v >= 1e8) return (v/1e8).toFixed(1) + '亿';
+        if (v >= 1e4) return (v/1e4).toFixed(0) + '万';
         if (v >= 1e6) return (v/1e6).toFixed(1) + 'M';
         if (v >= 1e3) return (v/1e3).toFixed(0) + 'K';
         return v.toLocaleString();
       },
       price(v) { return v.toFixed(2); },
       val(v) {
-        const p = market === 'hk' ? 'HK$' : '$';
-        if (v >= 1e9) return p + (v/1e9).toFixed(1) + 'B';
-        if (v >= 1e6) return p + (v/1e6).toFixed(0) + 'M';
-        return p + v.toLocaleString();
+        const c = CONFIG[market].currency;
+        if (market === 'cn') {
+          if (v >= 1e8) return '¥' + (v/1e8).toFixed(1) + '亿';
+          if (v >= 1e4) return '¥' + (v/1e4).toFixed(0) + '万';
+          return '¥' + v.toLocaleString();
+        }
+        if (v >= 1e9) return c + (v/1e9).toFixed(1) + 'B';
+        if (v >= 1e6) return c + (v/1e6).toFixed(0) + 'M';
+        return c + v.toLocaleString();
       },
     };
 
-    function toTVHK(ticker) {
-      return 'HKEX:' + ticker.replace('.HK', '').replace(/^0+/, '');
+    function toTV(ticker) {
+      if (market === 'hk') return 'HKEX:' + ticker.replace('.HK', '').replace(/^0+/, '');
+      if (market === 'cn') {
+        const [code, exchange] = ticker.split('.');
+        const prefix = exchange === 'SH' ? 'SSE' : 'SZSE';
+        return prefix + ':' + code;
+      }
+      return ticker;
     }
 
     // ─── Copy Tickers ──────────────────────────────────
     function copyTickers(tickers) {
-      const formatted = market === 'hk' ? tickers.map(toTVHK) : tickers;
+      const formatted = tickers.map(toTV);
       const text = formatted.join(', ');
       try { navigator.clipboard.writeText(text); } catch {
         const ta = document.createElement('textarea');
@@ -370,8 +390,9 @@
                 <div class="subtitle">SMA Trend Alignment</div>
               </div>
               <div class="market-toggle">
-                <button class="market-btn ${market==='us'?'active':''}" data-market="us">🇺🇸 US</button>
-                <button class="market-btn ${market==='hk'?'active':''}" data-market="hk">🇭🇰 HK</button>
+                <button class="market-btn ${market==='us'?'active':''}" data-market="us">US</button>
+                <button class="market-btn ${market==='hk'?'active':''}" data-market="hk">HK</button>
+                <button class="market-btn ${market==='cn'?'active':''}" data-market="cn">CN</button>
               </div>
             </div>
             <button class="icon-btn" id="theme-toggle">${isDark ? icons.sun : icons.moon}</button>
@@ -383,8 +404,8 @@
             <div class="badges">
               <span class="badge">${c.mcap}</span>
               <span class="badge">${c.price}</span>
-              <span class="badge">Vol &gt; 500K</span>
-              <span class="badge">AvgVol 10/60/90d &gt; 500K</span>
+              <span class="badge">Vol > 500K</span>
+              <span class="badge">AvgVol 10/60/90d > 500K</span>
               <span class="badge">${c.value}</span>
               <span class="badge">${icons.trend} SMA 10&gt;20&gt;50&gt;100&gt;200</span>
               <span class="badge">Price &gt; SMA30</span>

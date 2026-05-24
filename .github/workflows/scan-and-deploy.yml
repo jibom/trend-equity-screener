@@ -3,9 +3,9 @@ name: Scan & Deploy
 on:
   # 每天 5 次 (UTC 时间)
   # HKT 05:00 = UTC 21:00 (前一天) — 美股收盘后
-  # HKT 08:00 = UTC 00:00 — 港股开盘前
-  # HKT 16:30 = UTC 08:30 — 港股收盘后
-  # HKT 22:00 = UTC 14:00 — 美股盘中/港股最终
+  # HKT 08:00 = UTC 00:00 — 港股/A股开盘前
+  # HKT 16:30 = UTC 08:30 — 港股/A股收盘后
+  # HKT 22:00 = UTC 14:00 — 美股盘中
   # HKT 23:00 = UTC 15:00 — 美股开盘后30分钟 (夏令时)
   schedule:
     - cron: '0 21 * * 1-5'   # HKT 05:00 (Mon-Fri)
@@ -20,12 +20,13 @@ on:
       market:
         description: 'Which market to scan'
         required: false
-        default: 'both'
+        default: 'all'
         type: choice
         options:
-          - both
+          - all
           - us
           - hk
+          - cn
 
 # 确保同一时间只跑一个 workflow
 concurrency:
@@ -52,40 +53,53 @@ jobs:
           python-version: '3.11'
 
       - name: Install dependencies
-        run: pip install yfinance pandas requests
+        run: pip install yfinance pandas requests pymysql
 
       - name: Determine which markets to scan
         id: markets
         run: |
-          MARKET="${{ github.event.inputs.market || 'both' }}"
+          MARKET="${{ github.event.inputs.market || 'all' }}"
           HOUR=$(date -u +%H)
-          MINUTE=$(date -u +%M)
 
-          if [ "$MARKET" = "both" ]; then
+          if [ "$MARKET" = "all" ]; then
             # Auto-detect based on schedule time
             # UTC 21:00 (HKT 05:00) → US (美股刚收盘)
-            # UTC 00:00 (HKT 08:00) → both
-            # UTC 08:30 (HKT 16:30) → HK (港股刚收盘)
-            # UTC 14:00 (HKT 22:00) → both
-            if [ "$HOUR" = "21" ] || [ "$HOUR" = "15" ]; then
+            # UTC 00:00 (HKT 08:00) → hk+cn (港股/A股开盘前)
+            # UTC 08:30 (HKT 16:30) → hk+cn (港股/A股收盘后)
+            # UTC 14:00 (HKT 22:00) → all
+            # UTC 15:00 (HKT 23:00) → us
+            if [ "$HOUR" = "21" ]; then
               MARKET="us"
-            elif [ "$HOUR" = "08" ]; then
-              MARKET="hk"
+            elif [ "$HOUR" = "15" ]; then
+              MARKET="us"
+            elif [ "$HOUR" = "00" ] || [ "$HOUR" = "08" ]; then
+              MARKET="hkcn"
             else
-              MARKET="both"
+              MARKET="all"
             fi
           fi
           echo "market=$MARKET" >> $GITHUB_OUTPUT
           echo "Scanning: $MARKET"
 
       - name: Run US scanner
-        if: steps.markets.outputs.market == 'us' || steps.markets.outputs.market == 'both'
+        if: steps.markets.outputs.market == 'us' || steps.markets.outputs.market == 'all'
         run: python scripts/scan_us.py
+        env:
+          PYTHONIOENCODING: utf-8
         continue-on-error: true
 
       - name: Run HK scanner
-        if: steps.markets.outputs.market == 'hk' || steps.markets.outputs.market == 'both'
+        if: steps.markets.outputs.market == 'hkcn' || steps.markets.outputs.market == 'all'
         run: python scripts/scan_hk.py
+        env:
+          PYTHONIOENCODING: utf-8
+        continue-on-error: true
+
+      - name: Run CN scanner
+        if: steps.markets.outputs.market == 'hkcn' || steps.markets.outputs.market == 'all'
+        run: python scripts/scan_cn.py
+        env:
+          PYTHONIOENCODING: utf-8
         continue-on-error: true
 
       - name: Commit updated data

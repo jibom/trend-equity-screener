@@ -1,26 +1,29 @@
 #!/usr/bin/env python3
 """
-Hong Kong Stock Screener using yfinance.
-Two-phase approach (same as US scanner):
-  Phase 1 — Batch download 2y OHLCV for all tickers, compute SMAs/volume in bulk.
-  Phase 2 — Only fetch metadata (market_cap, name, sector) for survivors (~30-50 tickers).
+Hong Kong Stock Screener using Wind Database (Aliyun MySQL).
+Replaces yfinance batch downloads with Wind DB for EOD data.
+Market cap from Wind DB derivative indicator table, yfinance fallback.
+
+Strategy:
+  Phase 1 — Wind DB: stock descriptions + 2y EOD prices (one SQL query)
+             Filter by security type (ORD), compute SMAs + volume
+  Phase 2 — Market cap: Wind DB derivative indicator / yfinance fallback
+             Apply market cap filter
 """
 
 import json
 import sys
 import os
 import time
+import datetime as dt
 from datetime import datetime
-from concurrent.futures import ThreadPoolExecutor, as_completed
-import threading
 
-"jibo test"
 try:
-    import yfinance as yf
+    import pymysql
 except ImportError:
     import subprocess
-    subprocess.run([sys.executable, "-m", "pip", "install", "yfinance", "-q"])
-    import yfinance as yf
+    subprocess.run([sys.executable, "-m", "pip", "install", "pymysql", "-q"])
+    import pymysql
 
 try:
     import pandas as pd
@@ -32,12 +35,22 @@ except ImportError:
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 ROOT_DIR = os.path.dirname(SCRIPT_DIR)
 OUTPUT_FILE = os.path.join(ROOT_DIR, "public", "data", "hk.json")
-UNIVERSE_FILE = os.path.join(SCRIPT_DIR, "hk_universe.txt")
 
 os.makedirs(os.path.dirname(OUTPUT_FILE), exist_ok=True)
 
-# Market cap threshold: HK$1 billion
-MCAP_THRESHOLD = 1_000_000_000
+# ── Wind DB ──
+DB_CONFIG = {
+    "host": "rm-uf62imd2xjxj647jho.mysql.rds.aliyuncs.com",
+    "user": "yangdong_gf",
+    "password": "4S7Q4pNUzh",
+    "database": "jianxin",
+    "port": 3306,
+    "charset": "utf8mb4",
+}
+
+# ── Screener params ──
+MCAP_THRESHOLD = 1_000_000_000   # HK$1B
+LOOKBACK_DAYS = 500               # ~2y for SMA200
 
 
 def calc_sma(prices, period):
@@ -46,18 +59,64 @@ def calc_sma(prices, period):
     return sum(prices[-period:]) / period
 
 
-_print_lock = threading.Lock()
-_pass_count = [0]
-_fail_count = [0]
+def get_db_connection():
+    return pymysql.connect(**DB_CONFIG)
 
 
-def analyze_from_batch(ticker, closes, volumes):
-    """
-    Phase 1: Analyze a ticker using pre-downloaded close/volume arrays.
-    Returns dict with technical data if all SMA/volume filters pass, else None.
-    """
-    if len(closes) < 200:
+def fetch_hk_stock_list(conn):
+    print("[Phase 1] Fetching HK stock list ...", file=sys.stderr)
+    cur = conn.cursor()
+    cur.execute("SELECT S_INFO_WINDCODE, S_INFO_NAME FROM hksharedescription WHERE SECURITYTYPE='ORD'")
+    rows = cur.fetchall()
+    cur.close()
+    df = pd.DataFrame(rows, columns=["S_INFO_WINDCODE", "S_INFO_NAME"])
+    print(f"  ORD stocks: {len(df)}", file=sys.stderr)
+    return df
+
+
+def fetch_hk_eod_prices(conn, ord_codes):
+    """Fetch 2y EOD prices for all ORD stocks (single query)"""
+    start_dt = (dt.date.today() - dt.timedelta(days=LOOKBACK_DAYS)).strftime("%Y%m%d")
+    end_dt = dt.date.today().strftime("%Y%m%d")
+    print(f"[Phase 1] Fetching EOD prices {start_dt} ~ {end_dt} ...", file=sys.stderr)
+    t0 = time.time()
+
+    placeholders = ",".join(["%s"] * len(ord_codes))
+    sql = (
+        "SELECT S_INFO_WINDCODE, TRADE_DT, S_DQ_OPEN, S_DQ_HIGH, S_DQ_LOW, S_DQ_CLOSE, "
+        "S_DQ_VOLUME, S_DQ_AMOUNT, S_DQ_ADJCLOSE_BACKWARD "
+        "FROM hkshareeodprices "
+        f"WHERE TRADE_DT >= %s AND S_INFO_WINDCODE IN ({placeholders})"
+    )
+    cur = conn.cursor()
+    cur.execute(sql, [start_dt] + ord_codes)
+    rows = cur.fetchall()
+    cur.close()
+
+    df = pd.DataFrame(rows, columns=[
+        "code", "trade_dt", "open", "high", "low", "close",
+        "volume", "amount", "adj_close",
+    ])
+    if df.empty:
+        return df
+
+    df["trade_dt"] = pd.to_datetime(df["trade_dt"], format="%Y%m%d")
+    for c in ["open", "high", "low", "close", "volume", "amount", "adj_close"]:
+        df[c] = pd.to_numeric(df[c], errors="coerce")
+    df = df.dropna(subset=["close", "adj_close"]).copy()
+
+    print(f"  EOD rows: {len(df):,} ({time.time()-t0:.0f}s)", file=sys.stderr)
+    return df
+
+
+def analyze_from_wind(code, group_df):
+    """Compute SMA and volume filters from Wind DB DataFrame"""
+    g = group_df.sort_values("trade_dt").reset_index(drop=True)
+    if len(g) < 200:
         return None
+
+    closes = g["adj_close"].tolist()
+    volumes = g["volume"].tolist()
 
     last_price = closes[-1]
     prev_close = closes[-2] if len(closes) >= 2 else last_price
@@ -75,13 +134,11 @@ def analyze_from_batch(ticker, closes, volumes):
     if not all([sma10, sma20, sma30, sma50, sma100, sma200]):
         return None
 
-    # SMA trend alignment: 10 > 20 > 50 > 100 > 200
     if sma10 <= sma20 or sma20 <= sma50 or sma50 <= sma100 or sma100 <= sma200:
         return None
     if last_price <= sma30:
         return None
 
-    # Volume
     avg_vol_10 = calc_sma(volumes, 10)
     avg_vol_60 = calc_sma(volumes, 60)
     avg_vol_90 = calc_sma(volumes, 90)
@@ -89,7 +146,6 @@ def analyze_from_batch(ticker, closes, volumes):
 
     if not all([avg_vol_10, avg_vol_60, avg_vol_90]):
         return None
-
     if daily_volume < 500_000:
         return None
     if avg_vol_10 < 500_000:
@@ -99,7 +155,6 @@ def analyze_from_batch(ticker, closes, volumes):
     if avg_vol_90 < 500_000:
         return None
 
-    # Average trading value (last 20 days)
     recent_closes = closes[-20:]
     recent_volumes = volumes[-20:]
     avg_trading_value = sum(c * v for c, v in zip(recent_closes, recent_volumes)) / len(recent_closes)
@@ -117,13 +172,13 @@ def analyze_from_batch(ticker, closes, volumes):
         change_5d_pct = 0
 
     return {
-        "ticker": ticker,
-        "name": ticker,  # filled in Phase 2
+        "ticker": code,
+        "name": "",
         "price": round(last_price, 2),
         "change": round(change, 2),
         "changePercent": round(change_pct, 2),
         "change5dPercent": round(change_5d_pct, 2),
-        "marketCap": 0,  # filled in Phase 2
+        "marketCap": 0,
         "volume": int(daily_volume),
         "avgVolume10d": int(avg_vol_10),
         "avgVolume60d": int(avg_vol_60),
@@ -140,176 +195,123 @@ def analyze_from_batch(ticker, closes, volumes):
     }
 
 
-def fetch_metadata(ticker_code, retries=3):
-    """Phase 2: Fetch market cap, name, sector for a single ticker with retry."""
-    for attempt in range(retries):
+def fetch_market_caps(conn, windcodes):
+    """Get latest market cap. Try Wind DB first, fall back to yfinance."""
+    print(f"[Phase 2] Fetching market cap for {len(windcodes)} stocks ...", file=sys.stderr)
+
+    # Try Wind DB derivative indicator table
+    try:
+        placeholders = ",".join(["%s"] * len(windcodes))
+        cur = conn.cursor()
+        cur.execute(f"""
+            SELECT S_INFO_WINDCODE, S_VAL_MV
+            FROM hkshareeodderivativeindicator
+            WHERE TRADE_DT = (SELECT MAX(TRADE_DT) FROM hkshareeodderivativeindicator)
+              AND S_INFO_WINDCODE IN ({placeholders})
+        """, windcodes)
+        rows = cur.fetchall()
+        cur.close()
+        if rows:
+            mcap_map = {r[0]: r[1] for r in rows if r[1]}
+            if mcap_map:
+                # Check unit: if max mcap < 1T (1e12), likely in HKD
+                max_mcap = max(mcap_map.values())
+                print(f"  Wind DB market cap: {len(mcap_map)} stocks, max={max_mcap/1e9:.1f}B", file=sys.stderr)
+                return mcap_map
+    except Exception as e:
+        print(f"  Wind DB market cap failed: {e}", file=sys.stderr)
+
+    # Fallback to yfinance
+    print("  Falling back to yfinance ...", file=sys.stderr)
+    try:
+        import yfinance as yf
+    except ImportError:
+        print("  yfinance not available, skipping market cap", file=sys.stderr)
+        return {}
+
+    mcap_map = {}
+    for wc in windcodes:
+        parts = wc.split(".")
+        # Wind: 00700.HK → Yahoo: 0700.HK
+        code = parts[0]
+        if len(code) == 5 and code.startswith("0"):
+            yf_ticker = f"{code[1:]}.{parts[1]}"
+        else:
+            yf_ticker = wc
         try:
-            tk = yf.Ticker(ticker_code)
-            market_cap = 0
-            name = ticker_code
-            sector = ''
+            tk = yf.Ticker(yf_ticker)
+            fi = tk.fast_info
+            mcap = getattr(fi, "market_cap", 0) or 0
+            mcap_map[wc] = mcap
+        except Exception:
+            mcap_map[wc] = 0
+        time.sleep(0.3)
 
-            try:
-                fi = tk.fast_info
-                market_cap = getattr(fi, 'market_cap', 0) or 0
-            except:
-                pass
-
-            try:
-                info = tk.info
-                name = info.get('shortName', '') or info.get('longName', ticker_code)
-                sector = info.get('sector', '') or ''
-            except:
-                pass
-
-            # If we got at least market_cap or name, return
-            if market_cap > 0 or name != ticker_code:
-                return {"market_cap": market_cap, "name": name, "sector": sector}
-
-            # If first attempt got nothing, retry
-            if attempt < retries - 1:
-                time.sleep(2)
-                continue
-
-            return {"market_cap": market_cap, "name": name, "sector": sector}
-        except:
-            if attempt < retries - 1:
-                time.sleep(2)
-            else:
-                return {"market_cap": 0, "name": ticker_code, "sector": ""}
-
-    return {"market_cap": 0, "name": ticker_code, "sector": ""}
+    return mcap_map
 
 
 def main():
-    print("[HK Screener] Starting yfinance-based scan...", file=sys.stderr)
+    print("[HK Screener] Starting Wind DB-based scan ...", file=sys.stderr)
     start_time = time.time()
 
-    if not os.path.exists(UNIVERSE_FILE):
-        print(f"[HK Screener] ERROR: Universe file not found: {UNIVERSE_FILE}", file=sys.stderr)
+    try:
+        conn = get_db_connection()
+    except Exception as e:
+        print(f"[HK Screener] ERROR: Cannot connect to Wind DB: {e}", file=sys.stderr)
         return
 
-    with open(UNIVERSE_FILE) as f:
-        tickers = [line.strip() for line in f if line.strip()]
+    try:
+        # ─── Phase 1: Stock list + EOD data ───
+        desc_df = fetch_hk_stock_list(conn)
+        name_map = dict(zip(desc_df["S_INFO_WINDCODE"], desc_df["S_INFO_NAME"]))
+        ord_codes = desc_df["S_INFO_WINDCODE"].tolist()
+        total_universe = len(ord_codes)
 
-    print(f"[HK Screener] Universe: {len(tickers)} tickers", file=sys.stderr)
+        eod_df = fetch_hk_eod_prices(conn, ord_codes)
+        if eod_df.empty:
+            print("[HK Screener] No EOD data returned", file=sys.stderr)
+            return
 
-    # ─── Phase 1: Batch download 2y history and compute all technicals ───
-    print("[HK Screener] Phase 1: Batch downloading 2y history...", file=sys.stderr)
-
-    chunk_size = 100
-    technical_passers = []
-
-    for i in range(0, len(tickers), chunk_size):
-        chunk = tickers[i:i + chunk_size]
-        chunk_num = i // chunk_size + 1
-        total_chunks = (len(tickers) + chunk_size - 1) // chunk_size
-
-        try:
-            data = yf.download(chunk, period="2y", group_by="ticker", progress=False, threads=True)
-
-            for t in chunk:
-                try:
-                    if len(chunk) == 1:
-                        ticker_data = data
-                    else:
-                        if t not in data.columns.get_level_values(0):
-                            continue
-                        ticker_data = data[t]
-
-                    ticker_data = ticker_data.dropna(subset=["Close", "Volume"])
-                    if len(ticker_data) < 200:
-                        continue
-
-                    closes = ticker_data["Close"].tolist()
-                    volumes = ticker_data["Volume"].tolist()
-
-                    result = analyze_from_batch(t, closes, volumes)
-                    if result:
-                        technical_passers.append(result)
-                except:
-                    pass
-
-        except Exception as e:
-            print(f"  [Batch Error] chunk {chunk_num}: {e}", file=sys.stderr)
+        # Compute SMAs
+        technical_passers = []
+        for code, group in eod_df.groupby("code"):
+            result = analyze_from_wind(code, group)
+            if result:
+                result["name"] = name_map.get(code, code)
+                technical_passers.append(result)
 
         elapsed = time.time() - start_time
-        print(f"  [Phase 1] Chunk {chunk_num}/{total_chunks}, {len(technical_passers)} technical passers ({elapsed:.0f}s)", file=sys.stderr)
+        print(f"[Phase 1] Complete: {len(technical_passers)} pass technical filters ({elapsed:.0f}s)", file=sys.stderr)
 
-    elapsed = time.time() - start_time
-    print(f"[HK Screener] Phase 1 complete: {len(technical_passers)} pass all technical filters ({elapsed:.0f}s)", file=sys.stderr)
+        # ─── Phase 2: Market cap ───
+        windcodes = [item["ticker"] for item in technical_passers]
+        mcap_map = fetch_market_caps(conn, windcodes)
 
-    # ─── Phase 2: Fetch metadata only for survivors ──────────────
-    print(f"[HK Screener] Phase 2: Fetching metadata for {len(technical_passers)} stocks...", file=sys.stderr)
-
-    passing = []
-
-    # Use sequential with delays to avoid rate limiting (only ~30-50 tickers)
-    for idx, item in enumerate(technical_passers):
-        try:
-            meta = fetch_metadata(item["ticker"])
-            market_cap = meta["market_cap"]
-
-            # Market cap filter — skip if 0 (likely ETF/fund) or below threshold
-            if market_cap == 0:
-                print(f"  [Skip] {item['ticker']} — no market cap data (likely ETF)", file=sys.stderr)
+        passing = []
+        for item in technical_passers:
+            wc = item["ticker"]
+            mcap = mcap_map.get(wc, 0)
+            if mcap == 0:
                 continue
-            if market_cap < MCAP_THRESHOLD:
-                print(f"  [Skip] {item['ticker']} — MCap HK${market_cap/1e9:.1f}B < HK$1B", file=sys.stderr)
+            if mcap < MCAP_THRESHOLD:
                 continue
-
-            item["marketCap"] = int(market_cap)
-            item["name"] = meta["name"]
-            item["sector"] = meta["sector"]
+            item["marketCap"] = int(mcap)
             passing.append(item)
+            print(f"  [Pass] {item['ticker']} ({item['name']}) HK${item['price']:.2f} MCap={mcap/1e9:.1f}B", file=sys.stderr)
 
-            with _print_lock:
-                _pass_count[0] += 1
-                print(f"[Pass] {item['ticker']} ({meta['name']}) HK${item['price']:.2f} MCap={market_cap/1e9:.1f}B Sector={meta['sector']}", file=sys.stderr)
-        except:
-            _fail_count[0] += 1
+    finally:
+        conn.close()
 
-        # Small delay between metadata calls to avoid rate limits
-        if (idx + 1) % 5 == 0:
-            time.sleep(1.5)
-        else:
-            time.sleep(0.3)
-
-        if (idx + 1) % 10 == 0:
-            elapsed = time.time() - start_time
-            print(f"  [Phase 2] {idx+1}/{len(technical_passers)} metadata fetched ({elapsed:.0f}s)", file=sys.stderr)
-
-    # ─── Phase 3: Retry missing sectors ──────────────
-    no_sector = [s for s in passing if not s.get("sector")]
-    if no_sector:
-        print(f"[HK Screener] Phase 3: Retrying sectors for {len(no_sector)} stocks...", file=sys.stderr)
-        for idx, stock in enumerate(no_sector):
-            try:
-                tk = yf.Ticker(stock["ticker"])
-                info = tk.info
-                stock["sector"] = info.get("sector", "") or ""
-                if not stock["name"] or stock["name"] == stock["ticker"]:
-                    stock["name"] = info.get("shortName", "") or info.get("longName", stock["ticker"])
-            except:
-                pass
-            if (idx + 1) % 5 == 0:
-                print(f"  [Phase 3] {idx+1}/{len(no_sector)} sectors retried", file=sys.stderr)
-                time.sleep(2)
-            else:
-                time.sleep(0.8)
-
-    # Sort by market cap descending
     passing.sort(key=lambda x: x["marketCap"], reverse=True)
 
     elapsed = time.time() - start_time
     print(f"\n[HK Screener] ═══════════════════════════════════════", file=sys.stderr)
     print(f"[HK Screener] Complete. {len(passing)} stocks pass all filters.", file=sys.stderr)
     print(f"[HK Screener] Total time: {elapsed:.0f}s ({elapsed/60:.1f}min)", file=sys.stderr)
-    print(f"[HK Screener] Passed: {_pass_count[0]}, Failed: {_fail_count[0]}", file=sys.stderr)
 
     output = {
         "stocks": passing,
-        "totalUniverse": len(tickers),
+        "totalUniverse": total_universe,
         "totalPassing": len(passing),
         "lastUpdated": datetime.now().isoformat(),
     }
