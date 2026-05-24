@@ -53,7 +53,7 @@ jobs:
           python-version: '3.11'
 
       - name: Install dependencies
-        run: pip install yfinance pandas requests pymysql
+        run: pip install yfinance pandas requests pymysql && pip list | grep -iE "yfinance|pymysql|requests|pandas"
 
       - name: Determine which markets to scan
         id: markets

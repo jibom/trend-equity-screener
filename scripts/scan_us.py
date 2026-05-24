@@ -1,13 +1,12 @@
 #!/usr/bin/env python3
 """
-US Stock Screener using EODHD API.
-Replaces yfinance batch downloads with EODHD for more reliable data access.
+US Stock Screener using EODHD API + yfinance for market cap.
 
 Strategy:
   Phase 1 — EODHD bulk: symbol list + last-day OHLCV
-             Filter by exchange, type, turnover to reduce universe
+             Filter by exchange, type, daily turnover ≥ $200M
   Phase 2 — EODHD EOD: 2y daily history (parallel), compute SMAs + volume
-  Phase 3 — EODHD fundamentals: market cap filter, fill name/sector
+  Phase 3 — yfinance: market cap for survivors (亿 USD)
 """
 
 import json
@@ -24,6 +23,13 @@ except ImportError:
     import subprocess
     subprocess.run([sys.executable, "-m", "pip", "install", "requests", "-q"])
     import requests
+
+try:
+    import yfinance as yf
+except ImportError:
+    import subprocess
+    subprocess.run([sys.executable, "-m", "pip", "install", "yfinance", "-q"])
+    import yfinance as yf
 
 try:
     import pandas as pd
@@ -46,8 +52,7 @@ KEEP_EXCHANGES = {"NASDAQ", "NYSE", "NYSE ARCA", "BATS", "AMEX", "NYSE MKT"}
 KEEP_TYPES = {"Common Stock", "ADR", "ETF", "ETN"}
 
 # ── Screener params ──
-MCAP_THRESHOLD = 3_000_000_000
-MIN_DAILY_DOLLAR_VOL = 100_000_000  # Phase 1 rough filter ($100M USD)
+MIN_DAILY_DOLLAR_VOL = 200_000_000  # Phase 1: $200M USD daily turnover
 LOOKBACK_DAYS = 730                 # 2y for SMA200
 US_WORKERS = 20                     # parallel EODHD downloads
 
@@ -228,36 +233,49 @@ def analyze_from_history(code, df):
     }
 
 
-def fetch_fundamentals(code, retries=2):
-    url = f"{EODHD_BASE_URL}/fundamentals/{code}.US?api_token={EODHD_API_KEY}"
+def fetch_market_cap_yfinance(ticker, retries=3):
+    """Fetch market cap + name + sector via yfinance"""
     for attempt in range(retries):
         try:
-            data = _eodhd_get(url, timeout=15)
-            if not data:
-                if attempt < retries - 1:
-                    time.sleep(1)
-                    continue
-                return {"market_cap": 0, "sector": "", "name": ""}
+            tk = yf.Ticker(ticker)
+            market_cap = 0
+            name = ticker
+            sector = ''
 
-            highlights = data.get("Highlights", {})
-            general = data.get("General", {})
+            try:
+                fi = tk.fast_info
+                market_cap = getattr(fi, 'market_cap', 0) or 0
+            except Exception:
+                pass
 
-            market_cap = highlights.get("MarketCapitalization", 0) or 0
-            sector = general.get("Sector", "") or ""
-            name = general.get("Name", "") or ""
+            try:
+                info = tk.info
+                name = info.get('shortName', '') or info.get('longName', ticker)
+                sector = info.get('sector', '') or ''
+            except Exception:
+                pass
 
-            return {"market_cap": market_cap, "sector": sector, "name": name}
+            if market_cap > 0 or name != ticker:
+                return {"market_cap": market_cap, "name": name, "sector": sector}
+
+            if attempt < retries - 1:
+                time.sleep(2)
+                continue
+            return {"market_cap": market_cap, "name": name, "sector": sector}
         except Exception:
             if attempt < retries - 1:
-                time.sleep(1)
-    return {"market_cap": 0, "sector": "", "name": ""}
+                time.sleep(2)
+            else:
+                return {"market_cap": 0, "name": ticker, "sector": ""}
+
+    return {"market_cap": 0, "name": ticker, "sector": ""}
 
 
 def main():
-    print("[US Screener] Starting EODHD-based scan ...", file=sys.stderr)
+    print("[US Screener] Starting EODHD + yfinance scan ...", file=sys.stderr)
     start_time = time.time()
 
-    # ─── Phase 1: Bulk data + volume filter ───
+    # ─── Phase 1: Bulk data + turnover filter ───
     try:
         meta_df = fetch_us_symbol_list()
         bulk_df = fetch_us_bulk_last_day()
@@ -294,29 +312,27 @@ def main():
     elapsed = time.time() - start_time
     print(f"[Phase 2] Complete: {len(technical_passers)} pass technical filters ({elapsed:.0f}s)", file=sys.stderr)
 
-    # ─── Phase 3: Market cap filter via EODHD fundamentals ───
-    print(f"[Phase 3] Fetching market cap for {len(technical_passers)} stocks ...", file=sys.stderr)
+    # ─── Phase 3: Market cap via yfinance ───
+    print(f"[Phase 3] Fetching market cap (yfinance) for {len(technical_passers)} stocks ...", file=sys.stderr)
 
     passing = []
 
     for idx, item in enumerate(technical_passers):
         code = item["ticker"]
-        fund = fetch_fundamentals(code)
-        market_cap = fund["market_cap"]
+        meta = fetch_market_cap_yfinance(code)
+        market_cap = meta["market_cap"]
 
         if market_cap == 0:
             continue
-        if market_cap < MCAP_THRESHOLD:
-            continue
 
         item["marketCap"] = int(market_cap)
-        if fund.get("name"):
-            item["name"] = fund["name"]
-        if fund.get("sector"):
-            item["sector"] = fund["sector"]
+        if meta.get("name"):
+            item["name"] = meta["name"]
+        if meta.get("sector"):
+            item["sector"] = meta["sector"]
         passing.append(item)
 
-        print(f"  [Pass] {item['ticker']} ({item['name']}) ${item['price']:.2f} MCap={market_cap/1e9:.1f}B Sector={item['sector']}", file=sys.stderr)
+        print(f"  [Pass] {item['ticker']} ({item['name']}) ${item['price']:.2f} MCap={market_cap/1e8:.1f}亿USD Sector={item['sector']}", file=sys.stderr)
 
         if (idx + 1) % 20 == 0:
             elapsed = time.time() - start_time

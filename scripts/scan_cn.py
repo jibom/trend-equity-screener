@@ -9,11 +9,11 @@ Criteria:
   - SMA trend alignment: 10 > 20 > 50 > 100 > 200
   - Price > SMA30
 
-Strategy:
-  Phase 1 — Wind DB: stock descriptions + 2y EOD prices (one SQL query)
-             Compute avg volume, find top 20% threshold, filter
-  Phase 2 — Compute SMAs for top 20% volume stocks
-  Phase 3 — Market cap filter from Wind DB derivative indicator table
+Strategy (optimized — filter early, fetch EOD last):
+  Phase 1 — Market cap: filter all stocks by S_VAL_MV ≥ ¥100亿
+  Phase 2 — Liquidity: fetch 60d volume for ALL stocks (need full market for top 20%),
+             filter by volume percentile
+  Phase 3 — SMA: fetch 2y EOD only for final survivors, compute trend alignment
 """
 
 import json
@@ -57,6 +57,7 @@ DB_CONFIG = {
 MCAP_THRESHOLD = 10_000_000_000   # 100亿 RMB
 VOL_PCT_THRESHOLD = 0.20          # Volume top 20%
 LOOKBACK_DAYS = 500               # ~2y for SMA200
+VOL_LOOKBACK_DAYS = 90            # ~60 trading days for volume calc
 
 
 def calc_sma(prices, period):
@@ -70,7 +71,6 @@ def get_db_connection():
 
 
 def fetch_cn_stock_list(conn):
-    """Get A-share common stock descriptions"""
     print("[Phase 1] Fetching A-share stock list ...", file=sys.stderr)
     cur = conn.cursor()
     cur.execute("""
@@ -85,18 +85,102 @@ def fetch_cn_stock_list(conn):
     return df
 
 
-def fetch_cn_eod_prices(conn, stock_codes):
-    """Fetch 2y EOD prices for all A-share stocks (single query)"""
-    start_dt = (dt.date.today() - dt.timedelta(days=LOOKBACK_DAYS)).strftime("%Y%m%d")
-    print(f"[Phase 1] Fetching EOD prices from {start_dt} ...", file=sys.stderr)
+def filter_by_market_cap(conn, stock_codes):
+    """Phase 1: Get market cap from derivative indicator, filter ≥ 100亿 RMB."""
+    print(f"[Phase 1] Filtering by market cap ≥ ¥{MCAP_THRESHOLD/1e8:.0f}亿 ...", file=sys.stderr)
     t0 = time.time()
 
-    # Process in chunks to avoid MySQL packet size issues
-    chunk_size = 2000
-    all_dfs = []
+    chunk_size = 1000
+    mcap_map = {}
 
     for i in range(0, len(stock_codes), chunk_size):
         chunk = stock_codes[i:i + chunk_size]
+        placeholders = ",".join(["%s"] * len(chunk))
+        cur = conn.cursor()
+        cur.execute(f"""
+            SELECT S_INFO_WINDCODE, S_VAL_MV
+            FROM ashareeodderivativeindicator
+            WHERE TRADE_DT = (SELECT MAX(TRADE_DT) FROM ashareeodderivativeindicator)
+              AND S_INFO_WINDCODE IN ({placeholders})
+        """, chunk)
+        rows = cur.fetchall()
+        cur.close()
+        for r in rows:
+            if r[1]:
+                mcap_map[r[0]] = r[1]
+
+    # Auto-detect unit: if max mcap < 10T (1e13), likely in 万元 → convert to 元
+    if mcap_map:
+        max_mv = max(mcap_map.values())
+        if max_mv < 1e10:
+            mcap_map = {k: v * 10_000 for k, v in mcap_map.items()}
+            print(f"  Unit auto-detected: 万元 → 元", file=sys.stderr)
+        else:
+            print(f"  Unit: 元", file=sys.stderr)
+
+    # Apply threshold
+    qualified = {k: v for k, v in mcap_map.items() if v >= MCAP_THRESHOLD}
+    print(f"  After market cap filter: {len(qualified)} / {len(mcap_map)} stocks ({time.time()-t0:.0f}s)", file=sys.stderr)
+    return qualified
+
+
+def filter_by_volume_top20(conn, mcap_qualified_codes, all_stock_codes):
+    """Phase 2: Fetch 60d volume for ALL stocks, compute top 20%, filter.
+    Returns set of codes that pass both mcap AND volume top 20%."""
+    print(f"[Phase 2] Computing volume top {int(VOL_PCT_THRESHOLD*100)}% ...", file=sys.stderr)
+    t0 = time.time()
+
+    start_dt = (dt.date.today() - dt.timedelta(days=VOL_LOOKBACK_DAYS)).strftime("%Y%m%d")
+
+    # Fetch 60d close+volume for ALL stocks (need full market for percentile)
+    chunk_size = 2000
+    all_rows = []
+
+    for i in range(0, len(all_stock_codes), chunk_size):
+        chunk = all_stock_codes[i:i + chunk_size]
+        placeholders = ",".join(["%s"] * len(chunk))
+        sql = (
+            "SELECT S_INFO_WINDCODE, S_DQ_VOLUME "
+            "FROM ashareeodprices "
+            f"WHERE TRADE_DT >= %s AND S_INFO_WINDCODE IN ({placeholders})"
+        )
+        cur = conn.cursor()
+        cur.execute(sql, [start_dt] + chunk)
+        rows = cur.fetchall()
+        cur.close()
+        all_rows.extend(rows)
+
+    if not all_rows:
+        return set()
+
+    df = pd.DataFrame(all_rows, columns=["code", "volume"])
+    df["volume"] = pd.to_numeric(df["volume"], errors="coerce")
+    df = df.dropna(subset=["volume"])
+
+    # Average volume per stock
+    avg_vol = df.groupby("code")["volume"].mean()
+    cutoff = avg_vol.quantile(1 - VOL_PCT_THRESHOLD)
+    top20_codes = set(avg_vol[avg_vol >= cutoff].index)
+
+    # Intersect with market-cap-qualified
+    result = set(mcap_qualified_codes) & top20_codes
+
+    print(f"  Market cap qualified: {len(mcap_qualified_codes)}, Volume top 20%: {len(top20_codes)}, Intersection: {len(result)} ({time.time()-t0:.0f}s)", file=sys.stderr)
+    return result
+
+
+def fetch_eod_for_sma(conn, codes):
+    """Phase 3: Fetch 2y EOD only for the final small set of survivors."""
+    print(f"[Phase 3] Fetching 2y EOD for {len(codes)} survivors ...", file=sys.stderr)
+    t0 = time.time()
+
+    start_dt = (dt.date.today() - dt.timedelta(days=LOOKBACK_DAYS)).strftime("%Y%m%d")
+    codes_list = list(codes)
+    chunk_size = 500
+    all_dfs = []
+
+    for i in range(0, len(codes_list), chunk_size):
+        chunk = codes_list[i:i + chunk_size]
         placeholders = ",".join(["%s"] * len(chunk))
         sql = (
             "SELECT S_INFO_WINDCODE, TRADE_DT, S_DQ_OPEN, S_DQ_HIGH, S_DQ_LOW, S_DQ_CLOSE, "
@@ -116,8 +200,6 @@ def fetch_cn_eod_prices(conn, stock_codes):
             ])
             all_dfs.append(chunk_df)
 
-        print(f"  Chunk {i//chunk_size+1}: {len(rows):,} rows ({time.time()-t0:.0f}s)", file=sys.stderr)
-
     if not all_dfs:
         return pd.DataFrame()
 
@@ -127,22 +209,8 @@ def fetch_cn_eod_prices(conn, stock_codes):
         df[c] = pd.to_numeric(df[c], errors="coerce")
     df = df.dropna(subset=["close", "adj_close"]).copy()
 
-    print(f"  EOD total: {len(df):,} rows, {df['code'].nunique()} stocks ({time.time()-t0:.0f}s)", file=sys.stderr)
+    print(f"  EOD rows: {len(df):,} ({time.time()-t0:.0f}s)", file=sys.stderr)
     return df
-
-
-def compute_volume_threshold(eod_df, pct=VOL_PCT_THRESHOLD):
-    """Compute average daily volume per stock, find top 20% threshold"""
-    print("[Phase 1] Computing volume percentiles ...", file=sys.stderr)
-    # Use last 60 trading days for average volume
-    latest_dt = eod_df["trade_dt"].max()
-    recent = eod_df[eod_df["trade_dt"] >= (latest_dt - pd.Timedelta(days=90))]
-
-    avg_vol = recent.groupby("code")["volume"].mean()
-    cutoff = avg_vol.quantile(1 - pct)
-    top_codes = set(avg_vol[avg_vol >= cutoff].index)
-    print(f"  Volume top {int(pct*100)}%: {len(top_codes)} stocks (cutoff: {cutoff:,.0f} shares)", file=sys.stderr)
-    return top_codes
 
 
 def analyze_from_wind(code, group_df):
@@ -228,49 +296,6 @@ def analyze_from_wind(code, group_df):
     }
 
 
-def fetch_market_caps(conn, windcodes):
-    """Get latest market cap from ashareeodderivativeindicator.
-    S_VAL_MV: total market value. Unit is likely 万元 — multiply by 10,000 to get 元."""
-    print(f"[Phase 3] Fetching market cap for {len(windcodes)} stocks ...", file=sys.stderr)
-    t0 = time.time()
-
-    # Query in chunks to avoid MySQL packet limits
-    chunk_size = 500
-    mcap_map = {}
-
-    for i in range(0, len(windcodes), chunk_size):
-        chunk = windcodes[i:i + chunk_size]
-        placeholders = ",".join(["%s"] * len(chunk))
-        cur = conn.cursor()
-        cur.execute(f"""
-            SELECT S_INFO_WINDCODE, S_VAL_MV
-            FROM ashareeodderivativeindicator
-            WHERE TRADE_DT = (SELECT MAX(TRADE_DT) FROM ashareeodderivativeindicator)
-              AND S_INFO_WINDCODE IN ({placeholders})
-        """, chunk)
-        rows = cur.fetchall()
-        cur.close()
-        for r in rows:
-            if r[1]:
-                mcap_map[r[0]] = r[1]
-
-    print(f"  Market cap fetched: {len(mcap_map)} stocks ({time.time()-t0:.0f}s)", file=sys.stderr)
-
-    # Auto-detect unit: if max mcap < 10T (1e13), likely in 万元 → convert to 元
-    if mcap_map:
-        max_mv = max(mcap_map.values())
-        # 贵州茅台 total mcap ~2万亿 = 2e12 元
-        # If in 万元: ~2e8 万元, if in 元: ~2e12 元
-        if max_mv < 1e10:
-            # Values are in 万元, convert to 元
-            mcap_map = {k: v * 10_000 for k, v in mcap_map.items()}
-            print(f"  Unit auto-detected: 万元 → converted to 元 (max={max_mv/1e4:.0f}亿)", file=sys.stderr)
-        else:
-            print(f"  Unit: 元 (max={max_mv/1e8:.0f}亿)", file=sys.stderr)
-
-    return mcap_map
-
-
 def main():
     print("[CN Screener] Starting Wind DB-based scan ...", file=sys.stderr)
     start_time = time.time()
@@ -282,48 +307,38 @@ def main():
         return
 
     try:
-        # ─── Phase 1: Stock list + EOD data ───
+        # ─── Phase 1: Market cap filter ───
         desc_df = fetch_cn_stock_list(conn)
         name_map = dict(zip(desc_df["S_INFO_WINDCODE"], desc_df["S_INFO_NAME"]))
-        stock_codes = desc_df["S_INFO_WINDCODE"].tolist()
-        total_universe = len(stock_codes)
+        all_codes = desc_df["S_INFO_WINDCODE"].tolist()
+        total_universe = len(all_codes)
 
-        eod_df = fetch_cn_eod_prices(conn, stock_codes)
+        mcap_map = filter_by_market_cap(conn, all_codes)
+        if not mcap_map:
+            print("[CN Screener] No stocks pass market cap filter", file=sys.stderr)
+            return
+
+        # ─── Phase 2: Volume top 20% filter ───
+        final_codes = filter_by_volume_top20(conn, list(mcap_map.keys()), all_codes)
+        if not final_codes:
+            print("[CN Screener] No stocks pass volume filter", file=sys.stderr)
+            return
+
+        # ─── Phase 3: SMA computation ───
+        eod_df = fetch_eod_for_sma(conn, final_codes)
         if eod_df.empty:
             print("[CN Screener] No EOD data returned", file=sys.stderr)
             return
 
-        # Volume top 20% filter
-        top_codes = compute_volume_threshold(eod_df)
-        eod_top = eod_df[eod_df["code"].isin(top_codes)]
-
-        # ─── Phase 2: Compute SMAs for top 20% volume stocks ───
-        print(f"[Phase 2] Computing SMAs for {len(top_codes)} top-volume stocks ...", file=sys.stderr)
-        technical_passers = []
-        for code, group in eod_top.groupby("code"):
+        passing = []
+        for code, group in eod_df.groupby("code"):
             result = analyze_from_wind(code, group)
             if result:
                 result["name"] = name_map.get(code, code)
-                technical_passers.append(result)
-
-        elapsed = time.time() - start_time
-        print(f"[Phase 2] Complete: {len(technical_passers)} pass technical filters ({elapsed:.0f}s)", file=sys.stderr)
-
-        # ─── Phase 3: Market cap filter ───
-        windcodes = [item["ticker"] for item in technical_passers]
-        mcap_map = fetch_market_caps(conn, windcodes)
-
-        passing = []
-        for item in technical_passers:
-            wc = item["ticker"]
-            mcap = mcap_map.get(wc, 0)
-            if mcap == 0:
-                continue
-            if mcap < MCAP_THRESHOLD:
-                continue
-            item["marketCap"] = int(mcap)
-            passing.append(item)
-            print(f"  [Pass] {item['ticker']} ({item['name']}) ¥{item['price']:.2f} MCap={mcap/1e8:.1f}亿", file=sys.stderr)
+                mcap = mcap_map.get(code, 0)
+                result["marketCap"] = int(mcap)
+                passing.append(result)
+                print(f"  [Pass] {code} ({result['name']}) ¥{result['price']:.2f} MCap={mcap/1e8:.1f}亿", file=sys.stderr)
 
     finally:
         conn.close()

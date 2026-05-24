@@ -199,8 +199,8 @@
     let copied = false;
 
     const CONFIG = {
-      us: { title: 'US Equity Screener', currency: '$', mcap: 'MCap > $3B', price: 'Price > $10', value: 'AvgValue > $100M' },
-      hk: { title: 'HK Equity Screener', currency: 'HK$', mcap: 'MCap > HK$1B', price: 'Price > HK$10', value: 'AvgValue > HK$50M' },
+      us: { title: 'US Equity Screener', currency: '$', mcap: 'Turnover ≥ $200M', price: 'Price > $10', value: 'AvgValue > $100M' },
+      hk: { title: 'HK Equity Screener', currency: 'HK$', mcap: 'AvgValue ≥ HK$5000万', price: 'Price > HK$10', value: 'Vol > 500K' },
       cn: { title: 'A-Share Equity Screener', currency: '¥', mcap: 'MCap > ¥100亿', price: 'Price > ¥10', value: 'Vol Top 20%' },
     };
 
@@ -246,17 +246,20 @@
     // ─── Format Helpers ────────────────────────────────
     const fmt = {
       mcap(v) {
+        if (v === 0) return '—';
         const c = CONFIG[market].currency;
+        const yi = Math.round(v / 1e8);
         if (market === 'cn') {
-          if (v >= 1e12) return '¥' + (v/1e12).toFixed(1) + '万亿';
-          if (v >= 1e8) return '¥' + (v/1e8).toFixed(1) + '亿';
-          if (v >= 1e4) return '¥' + (v/1e4).toFixed(0) + '万';
-          return '¥' + v.toLocaleString();
+          if (yi >= 10000) return '¥' + Math.round(yi/10000).toLocaleString() + '万亿';
+          return '¥' + yi.toLocaleString() + '亿';
         }
-        if (v >= 1e12) return c + (v/1e12).toFixed(1) + 'T';
-        if (v >= 1e9) return c + (v/1e9).toFixed(1) + 'B';
-        if (v >= 1e6) return c + (v/1e6).toFixed(0) + 'M';
-        return c + v.toLocaleString();
+        if (market === 'us') {
+          return '$' + yi.toLocaleString() + '亿';
+        }
+        if (market === 'hk') {
+          return 'HK$' + yi.toLocaleString() + '亿';
+        }
+        return c + yi.toLocaleString() + '亿';
       },
       vol(v) {
         if (v >= 1e8) return (v/1e8).toFixed(1) + '亿';
@@ -267,15 +270,22 @@
       },
       price(v) { return v.toFixed(2); },
       val(v) {
+        if (v === 0) return '—';
         const c = CONFIG[market].currency;
+        const yi = Math.round(v / 1e8);
         if (market === 'cn') {
-          if (v >= 1e8) return '¥' + (v/1e8).toFixed(1) + '亿';
-          if (v >= 1e4) return '¥' + (v/1e4).toFixed(0) + '万';
-          return '¥' + v.toLocaleString();
+          if (yi >= 1) return '¥' + yi.toLocaleString() + '亿';
+          return '¥' + Math.round(v/1e4).toLocaleString() + '万';
         }
-        if (v >= 1e9) return c + (v/1e9).toFixed(1) + 'B';
-        if (v >= 1e6) return c + (v/1e6).toFixed(0) + 'M';
-        return c + v.toLocaleString();
+        if (market === 'us') {
+          if (yi >= 1) return '$' + yi.toLocaleString() + '亿';
+          return '$' + Math.round(v/1e6).toLocaleString() + 'M';
+        }
+        if (market === 'hk') {
+          if (yi >= 1) return 'HK$' + yi.toLocaleString() + '亿';
+          return 'HK$' + Math.round(v/1e6).toLocaleString() + 'M';
+        }
+        return c + yi.toLocaleString() + '亿';
       },
     };
 
