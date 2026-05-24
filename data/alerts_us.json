@@ -1,9 +1,9 @@
 [
   {
     "ticker": "CGBL.US",
-    "event": "upgrade",
-    "from": "WATCHING",
-    "to": "PULLBACK",
+    "event": "downgrade",
+    "from": "PULLBACK",
+    "to": "WATCHING",
     "date": "2026-05-22"
   }
 ]

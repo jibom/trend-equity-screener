@@ -225,10 +225,61 @@
       .header-inner, .main { padding-left: 12px; padding-right: 12px; }
       .search-input { width: 160px; }
     }
+    /* Chart Modal */
+    #chart-modal { display: none; position: fixed; inset: 0; z-index: 100; }
+    #chart-modal.open { display: flex; align-items: center; justify-content: center; }
+    .modal-backdrop { position: absolute; inset: 0; background: rgba(0,0,0,0.5); }
+    .modal-content {
+      position: relative; z-index: 1;
+      width: 90vw; height: 80vh;
+      border-radius: 12px; overflow: hidden;
+      background: var(--bg-card); border: 1px solid var(--border);
+      display: flex; flex-direction: column;
+    }
+    .modal-header {
+      display: flex; align-items: center; gap: 10px;
+      padding: 10px 16px; border-bottom: 1px solid var(--border);
+      background: var(--bg-muted); flex-shrink: 0;
+    }
+    #modal-ticker { font-weight: 700; font-size: 15px; }
+    .interval-btn {
+      padding: 4px 14px; border-radius: 6px; font-size: 12px; font-weight: 600;
+      cursor: pointer; border: 1px solid var(--border); background: var(--bg);
+      color: var(--text-muted); transition: all 0.15s;
+    }
+    .interval-btn.active { background: var(--primary); color: white; border-color: var(--primary); }
+    .close-btn {
+      margin-left: auto; width: 36px; height: 36px; border-radius: 6px; border: none;
+      background: none; color: var(--text-muted); cursor: pointer; font-size: 18px;
+      display: flex; align-items: center; justify-content: center; transition: background 0.15s;
+    }
+    .close-btn:hover { background: var(--hover); }
+    #tv-chart-container { flex: 1; min-height: 0; }
+    .ticker a { color: var(--primary); text-decoration: none; cursor: pointer; }
+    .ticker a:hover { text-decoration: underline; }
+    .alert-ticker a { color: var(--text); text-decoration: none; cursor: pointer; }
+    .alert-ticker a:hover { text-decoration: underline; color: var(--primary); }
+    @media (max-width: 640px) {
+      .modal-content { width: 100vw; height: 100vh; border-radius: 0; }
+      .close-btn { width: 44px; height: 44px; }
+    }
   </style>
 </head>
 <body>
   <div id="app"></div>
+  <div id="chart-modal">
+    <div class="modal-backdrop" onclick="closeChart()"></div>
+    <div class="modal-content">
+      <div class="modal-header">
+        <span id="modal-ticker"></span>
+        <button id="btn-daily" class="interval-btn active" onclick="switchInterval('D')">Daily</button>
+        <button id="btn-weekly" class="interval-btn" onclick="switchInterval('W')">Weekly</button>
+        <button class="close-btn" onclick="closeChart()">✕</button>
+      </div>
+      <div id="tv-chart-container"></div>
+    </div>
+  </div>
+  <script src="https://s3.tradingview.com/tv.js"></script>
   <script>
   (function() {
     // ─── State ─────────────────────────────────────────
@@ -270,7 +321,6 @@
     }
 
     async function loadPoolData(m) {
-      if (poolData[m] && poolData[m].length > 0) return;
       try {
         const resp = await fetch(`data/pools_${m}.json`);
         const arr = await resp.json();
@@ -278,18 +328,15 @@
       } catch(e) {
         poolData[m] = [];
       }
-      render();
     }
 
     async function loadAlertData(m) {
-      if (alertData[m] && alertData[m].length > 0) return;
       try {
         const resp = await fetch(`data/alerts_${m}.json`);
         alertData[m] = await resp.json();
       } catch(e) {
         alertData[m] = [];
       }
-      render();
     }
 
     // ─── Filtering & Sorting ───────────────────────────
@@ -471,12 +518,11 @@
 
       // ─── Event Binding ───────────────────────────────
       document.querySelectorAll('.market-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
+        btn.addEventListener('click', async () => {
           market = btn.dataset.market;
           search = '';
-          loadData(market);
-          loadPoolData(market);
-          loadAlertData(market);
+          await Promise.all([loadData(market), loadPoolData(market), loadAlertData(market)]);
+          render();
         });
       });
       document.querySelectorAll('.tab-btn').forEach(btn => {
@@ -541,7 +587,7 @@
 
           rows += `<tr>
             <td class="row-num">${i+1}</td>
-            <td class="ticker">${e.ticker}</td>
+            <td class="ticker"><a href="#" onclick="showChart('${e.ticker}'); return false;">${e.ticker}</a></td>
             <td class="sector">${e.sector || '-'}</td>
             <td class="theme">${e.theme || ''}</td>
             <td>${statusBadge}${fbIcon}</td>
@@ -587,8 +633,8 @@
                 ${th('pool_status','Status')}
                 <th style="width:32px">Chg</th>
                 ${th('last_close','Price')}
-                <th style="width:40px">W-Al</th>
-                <th style="width:40px">D-Al</th>
+                <th style="width:50px">周线</th>
+                <th style="width:50px">日线</th>
                 ${th('ma_10d','MA10')}
                 ${th('ma_20d','MA20')}
                 ${th('ma_50d','MA50')}
@@ -626,7 +672,7 @@
           detail = a.reason || '';
         }
         cards += `<div class="alert-card">
-          <div class="alert-ticker">${a.ticker}</div>
+          <div class="alert-ticker"><a href="#" onclick="showChart('${a.ticker}'); return false;">${a.ticker}</a></div>
           <div>${badge}</div>
           <div class="alert-detail">${detail}</div>
           <div class="alert-date">${a.date}</div>
@@ -676,7 +722,7 @@
           const chg5dCls = (s.change5dPercent??0) >= 0 ? 'chg-pos' : 'chg-neg';
           tableRows += `<tr>
             <td class="row-num">${i+1}</td>
-            <td class="ticker">${s.ticker}</td>
+            <td class="ticker"><a href="#" onclick="showChart('${s.ticker}'); return false;">${s.ticker}</a></td>
             <td class="name">${s.name}</td>
             <td class="sector">${s.sector||'-'}</td>
             <td class="price">${c.currency}${fmt.price(s.price)}</td>
@@ -766,11 +812,81 @@
     }
 
     // ─── Init ──────────────────────────────────────────
-    loadData('us');
-    loadPoolData('us');
-    loadAlertData('us');
-    render();
+    (async () => {
+      await Promise.all([loadData('us'), loadPoolData('us'), loadAlertData('us')]);
+      render();
+    })();
   })();
+
+  // ─── Chart Modal ──────────────────────────────────
+  let _chartTicker = '';
+  let _chartInterval = 'D';
+
+  function mapTickerToTV(ticker) {
+    if (ticker.endsWith('.HK')) return 'HKEX:' + ticker.replace('.HK', '').replace(/^0+/, '');
+    if (ticker.endsWith('.US')) return ticker.replace('.US', '');
+    if (ticker.endsWith('.T'))  return 'TSE:' + ticker.replace('.T', '');
+    if (ticker.endsWith('.SH')) return 'SSE:' + ticker.replace('.SH', '');
+    if (ticker.endsWith('.SZ')) return 'SZSE:' + ticker.replace('.SZ', '');
+    return ticker;
+  }
+
+  function showChart(ticker) {
+    _chartTicker = ticker;
+    _chartInterval = 'D';
+    document.getElementById('chart-modal').classList.add('open');
+    document.getElementById('modal-ticker').textContent = ticker;
+    _updateIntervalBtns();
+    _initTVWidget();
+    document.body.style.overflow = 'hidden';
+  }
+
+  function switchInterval(iv) {
+    _chartInterval = iv;
+    _updateIntervalBtns();
+    _initTVWidget();
+  }
+
+  function closeChart() {
+    document.getElementById('chart-modal').classList.remove('open');
+    document.getElementById('tv-chart-container').innerHTML = '';
+    document.body.style.overflow = '';
+  }
+
+  function _updateIntervalBtns() {
+    document.getElementById('btn-daily').classList.toggle('active', _chartInterval === 'D');
+    document.getElementById('btn-weekly').classList.toggle('active', _chartInterval === 'W');
+  }
+
+  function _initTVWidget() {
+    const c = document.getElementById('tv-chart-container');
+    c.innerHTML = '';
+    if (typeof TradingView === 'undefined') return;
+    new TradingView.widget({
+      container_id: 'tv-chart-container',
+      symbol: mapTickerToTV(_chartTicker),
+      interval: _chartInterval,
+      timezone: 'Asia/Hong_Kong',
+      theme: document.documentElement.classList.contains('dark') ? 'dark' : 'light',
+      style: '1',
+      locale: 'zh_CN',
+      enable_publishing: false,
+      hide_side_toolbar: false,
+      studies: [
+        'MASimple@tv-basicstudies',
+        'MACD@tv-basicstudies',
+        'Stochastic@tv-basicstudies',
+        'Volume@tv-basicstudies'
+      ],
+      width: '100%',
+      height: '100%',
+      autosize: true
+    });
+  }
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeChart();
+  });
   </script>
 </body>
 </html>
