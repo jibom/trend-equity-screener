@@ -1,29 +1,29 @@
 #!/usr/bin/env python3
 """
-US Stock Screener using yfinance (Yahoo Finance).
-Free data source replacement for Polygon-based scanner.
+US Stock Screener using EODHD API.
+Replaces yfinance batch downloads with EODHD for more reliable data access.
 
-Strategy: 
-  Phase 1 — Batch download 2y data for all tickers (yf.download handles batch efficiently)
-             Compute SMAs and volume filters entirely from batch data.
-  Phase 2 — Only fetch market_cap, name, sector for the ~100-200 survivors.
-             This minimizes per-ticker API calls and avoids rate limits.
+Strategy:
+  Phase 1 — EODHD bulk: symbol list + last-day OHLCV
+             Filter by exchange, type, turnover to reduce universe
+  Phase 2 — EODHD EOD: 2y daily history (parallel), compute SMAs + volume
+  Phase 3 — EODHD fundamentals: market cap filter, fill name/sector
 """
 
 import json
 import sys
 import os
 import time
+import datetime as dt
 from datetime import datetime
 from concurrent.futures import ThreadPoolExecutor, as_completed
-import threading
 
 try:
-    import yfinance as yf
+    import requests
 except ImportError:
     import subprocess
-    subprocess.run([sys.executable, "-m", "pip", "install", "yfinance", "-q"])
-    import yfinance as yf
+    subprocess.run([sys.executable, "-m", "pip", "install", "requests", "-q"])
+    import requests
 
 try:
     import pandas as pd
@@ -35,11 +35,20 @@ except ImportError:
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 ROOT_DIR = os.path.dirname(SCRIPT_DIR)
 OUTPUT_FILE = os.path.join(ROOT_DIR, "public", "data", "us.json")
-UNIVERSE_FILE = os.path.join(SCRIPT_DIR, "us_universe.txt")
 
 os.makedirs(os.path.dirname(OUTPUT_FILE), exist_ok=True)
 
+# ── EODHD API ──
+EODHD_API_KEY = "6a10e8411d06d1.41490389"
+EODHD_BASE_URL = "https://eodhd.com/api"
+EODHD_MAX_RETRIES = 3
+KEEP_EXCHANGES = {"NASDAQ", "NYSE", "NYSE ARCA", "BATS", "AMEX", "NYSE MKT"}
+
+# ── Screener params ──
 MCAP_THRESHOLD = 3_000_000_000
+MIN_DAILY_DOLLAR_VOL = 20_000_000   # Phase 1 rough filter (conservative for 20d avg ≥ $50M)
+LOOKBACK_DAYS = 730                 # 2y for SMA200
+US_WORKERS = 20                     # parallel EODHD downloads
 
 
 def calc_sma(prices, period):
@@ -48,18 +57,98 @@ def calc_sma(prices, period):
     return sum(prices[-period:]) / period
 
 
-_print_lock = threading.Lock()
-_pass_count = [0]
-_fail_count = [0]
+# ── EODHD helpers ──
+
+def _eodhd_get(url, timeout=30):
+    for attempt in range(EODHD_MAX_RETRIES):
+        try:
+            r = requests.get(url, timeout=timeout)
+            if r.status_code == 200:
+                return r.json()
+            if r.status_code in (429, 500, 502, 503):
+                time.sleep(2 ** attempt)
+                continue
+            return None
+        except requests.RequestException:
+            time.sleep(2 ** attempt)
+    return None
 
 
-def analyze_from_batch(ticker, closes, volumes):
-    """
-    Analyze a ticker using pre-downloaded close/volume arrays.
-    Returns dict with technical data if all SMA/volume filters pass, else None.
-    """
-    if len(closes) < 200:
+def fetch_us_symbol_list():
+    print("[Phase 1] Fetching US symbol list ...", file=sys.stderr)
+    url = f"{EODHD_BASE_URL}/exchange-symbol-list/US?api_token={EODHD_API_KEY}&fmt=json"
+    data = _eodhd_get(url, timeout=60)
+    if not data:
+        raise RuntimeError("Failed to fetch US symbol list from EODHD")
+    df = pd.DataFrame(data)
+    df = df[df["Type"].isin({"Common Stock"}) & df["Exchange"].isin(KEEP_EXCHANGES)]
+    df = df[~df["Code"].str.contains(r"-WS|-WT|\.WS", regex=True, na=False)]
+    print(f"  Common Stock (major exchanges): {len(df)}", file=sys.stderr)
+    return df
+
+
+def fetch_us_bulk_last_day():
+    print("[Phase 1] Fetching bulk last-day data ...", file=sys.stderr)
+    url = f"{EODHD_BASE_URL}/eod-bulk-last-day/US?api_token={EODHD_API_KEY}&fmt=json"
+    data = _eodhd_get(url, timeout=60)
+    if not data:
+        raise RuntimeError("Failed to fetch bulk last-day data from EODHD")
+    df = pd.DataFrame(data)
+    df = df[(df["close"] > 0) & (df["volume"] > 0)].copy()
+    df["dollar_vol"] = df["close"] * df["volume"]
+    print(f"  Bulk last-day: {len(df)} tickers", file=sys.stderr)
+    return df
+
+
+def build_initial_pool(meta_df, bulk_df):
+    pool = bulk_df.merge(
+        meta_df[["Code", "Name", "Exchange", "Type"]],
+        left_on="code", right_on="Code", how="inner",
+    )
+    pool = pool[pool["dollar_vol"] >= MIN_DAILY_DOLLAR_VOL]
+    pool = pool.sort_values("dollar_vol", ascending=False).reset_index(drop=True)
+    print(f"  After turnover filter (>=${MIN_DAILY_DOLLAR_VOL/1e6:.0f}M): {len(pool)}", file=sys.stderr)
+    if not pool.empty:
+        print(f"  Latest trade date: {pool['date'].iloc[0]}", file=sys.stderr)
+    return pool
+
+
+def _fetch_eod_history(code, start_date, end_date):
+    url = (
+        f"{EODHD_BASE_URL}/eod/{code}.US?api_token={EODHD_API_KEY}"
+        f"&from={start_date}&to={end_date}&period=d&fmt=json"
+    )
+    data = _eodhd_get(url, timeout=30)
+    if not data or len(data) < 200:
         return None
+    df = pd.DataFrame(data)
+    df["date"] = pd.to_datetime(df["date"])
+    return df.sort_values("date").reset_index(drop=True)
+
+
+def fetch_histories_parallel(codes, start_date, end_date):
+    print(f"[Phase 2] Fetching 2y history for {len(codes)} tickers ...", file=sys.stderr)
+    t0 = time.time()
+    histories = {}
+    with ThreadPoolExecutor(max_workers=US_WORKERS) as ex:
+        futs = {ex.submit(_fetch_eod_history, c, start_date, end_date): c for c in codes}
+        for n, f in enumerate(as_completed(futs), 1):
+            code = futs[f]
+            df = f.result()
+            if df is not None:
+                histories[code] = df
+            if n % 100 == 0:
+                print(f"  {n}/{len(codes)} done ({time.time()-t0:.0f}s)", file=sys.stderr)
+    print(f"  History fetched: {len(histories)} tickers ({time.time()-t0:.0f}s)", file=sys.stderr)
+    return histories
+
+
+def analyze_from_history(code, df):
+    if len(df) < 200:
+        return None
+
+    closes = df["adjusted_close"].tolist()
+    volumes = df["volume"].tolist()
 
     last_price = closes[-1]
     prev_close = closes[-2] if len(closes) >= 2 else last_price
@@ -77,13 +166,11 @@ def analyze_from_batch(ticker, closes, volumes):
     if not all([sma10, sma20, sma30, sma50, sma100, sma200]):
         return None
 
-    # SMA trend
     if sma10 <= sma20 or sma20 <= sma50 or sma50 <= sma100 or sma100 <= sma200:
         return None
     if last_price <= sma30:
         return None
 
-    # Volume
     avg_vol_10 = calc_sma(volumes, 10)
     avg_vol_60 = calc_sma(volumes, 60)
     avg_vol_90 = calc_sma(volumes, 90)
@@ -91,7 +178,6 @@ def analyze_from_batch(ticker, closes, volumes):
 
     if not all([avg_vol_10, avg_vol_60, avg_vol_90]):
         return None
-
     if daily_volume < 500_000:
         return None
     if avg_vol_10 < 500_000:
@@ -118,13 +204,13 @@ def analyze_from_batch(ticker, closes, volumes):
         change_5d_pct = 0
 
     return {
-        "ticker": ticker,
-        "name": ticker,  # will be filled in Phase 2
+        "ticker": code,
+        "name": "",
         "price": round(last_price, 2),
         "change": round(change, 2),
         "changePercent": round(change_pct, 2),
         "change5dPercent": round(change_5d_pct, 2),
-        "marketCap": 0,  # will be filled in Phase 2
+        "marketCap": 0,
         "volume": int(daily_volume),
         "avgVolume10d": int(avg_vol_10),
         "avgVolume60d": int(avg_vol_60),
@@ -141,166 +227,101 @@ def analyze_from_batch(ticker, closes, volumes):
     }
 
 
-def fetch_metadata(ticker_code, retries=3):
-    """Phase 2: Fetch market cap, name, sector for a single ticker with retry."""
+def fetch_fundamentals(code, retries=2):
+    url = f"{EODHD_BASE_URL}/fundamentals/{code}.US?api_token={EODHD_API_KEY}"
     for attempt in range(retries):
         try:
-            tk = yf.Ticker(ticker_code)
-            market_cap = 0
-            name = ticker_code
-            sector = ''
+            data = _eodhd_get(url, timeout=15)
+            if not data:
+                if attempt < retries - 1:
+                    time.sleep(1)
+                    continue
+                return {"market_cap": 0, "sector": "", "name": ""}
 
-            try:
-                fi = tk.fast_info
-                market_cap = getattr(fi, 'market_cap', 0) or 0
-            except:
-                pass
+            highlights = data.get("Highlights", {})
+            general = data.get("General", {})
 
-            try:
-                info = tk.info
-                name = info.get('shortName', '') or info.get('longName', ticker_code)
-                sector = info.get('sector', '') or ''
-            except:
-                pass
+            market_cap = highlights.get("MarketCapitalization", 0) or 0
+            sector = general.get("Sector", "") or ""
+            name = general.get("Name", "") or ""
 
-            # If we got meaningful data, return
-            if market_cap > 0 or name != ticker_code:
-                return {"market_cap": market_cap, "name": name, "sector": sector}
-
-            # Retry if got nothing
+            return {"market_cap": market_cap, "sector": sector, "name": name}
+        except Exception:
             if attempt < retries - 1:
-                time.sleep(2)
-                continue
-
-            return {"market_cap": market_cap, "name": name, "sector": sector}
-        except:
-            if attempt < retries - 1:
-                time.sleep(2)
-            else:
-                return {"market_cap": 0, "name": ticker_code, "sector": ""}
-
-    return {"market_cap": 0, "name": ticker_code, "sector": ""}
+                time.sleep(1)
+    return {"market_cap": 0, "sector": "", "name": ""}
 
 
 def main():
-    print("[US Screener] Starting yfinance-based scan...", file=sys.stderr)
+    print("[US Screener] Starting EODHD-based scan ...", file=sys.stderr)
     start_time = time.time()
 
-    if not os.path.exists(UNIVERSE_FILE):
-        print(f"[US Screener] ERROR: Universe file not found: {UNIVERSE_FILE}", file=sys.stderr)
+    # ─── Phase 1: Bulk data + volume filter ───
+    try:
+        meta_df = fetch_us_symbol_list()
+        bulk_df = fetch_us_bulk_last_day()
+        pool_df = build_initial_pool(meta_df, bulk_df)
+    except Exception as e:
+        print(f"[US Screener] ERROR in Phase 1: {e}", file=sys.stderr)
         return
 
-    with open(UNIVERSE_FILE) as f:
-        tickers = [line.strip() for line in f if line.strip()]
+    if pool_df.empty:
+        print("[US Screener] No stocks pass initial filter", file=sys.stderr)
+        return
 
-    print(f"[US Screener] Universe: {len(tickers)} tickers", file=sys.stderr)
+    total_universe = len(meta_df)
 
-    # ─── Phase 1: Batch download 2y history and compute all technicals ───
-    print("[US Screener] Phase 1: Batch downloading 2y history...", file=sys.stderr)
+    name_map = {}
+    for _, row in pool_df.iterrows():
+        name_map[row["code"]] = row.get("Name", "")
 
-    chunk_size = 200  # yfinance handles large batches well
-    technical_passers = []  # list of result dicts
+    # ─── Phase 2: 2y history + technical filters ───
+    latest_date = pd.to_datetime(pool_df["date"].iloc[0]).date()
+    start_date = latest_date - dt.timedelta(days=LOOKBACK_DAYS)
+    codes = pool_df["code"].tolist()
 
-    for i in range(0, len(tickers), chunk_size):
-        chunk = tickers[i:i + chunk_size]
-        chunk_num = i // chunk_size + 1
-        total_chunks = (len(tickers) + chunk_size - 1) // chunk_size
+    histories = fetch_histories_parallel(codes, start_date, latest_date)
 
-        try:
-            # Download 2 years for the whole chunk at once
-            data = yf.download(chunk, period="2y", group_by="ticker", progress=False, threads=True)
-
-            for t in chunk:
-                try:
-                    if len(chunk) == 1:
-                        ticker_data = data
-                    else:
-                        if t not in data.columns.get_level_values(0):
-                            continue
-                        ticker_data = data[t]
-
-                    # Drop NaN rows
-                    ticker_data = ticker_data.dropna(subset=["Close", "Volume"])
-                    if len(ticker_data) < 200:
-                        continue
-
-                    closes = ticker_data["Close"].tolist()
-                    volumes = ticker_data["Volume"].tolist()
-
-                    result = analyze_from_batch(t, closes, volumes)
-                    if result:
-                        technical_passers.append(result)
-                        # Skip if looks like ETF (ticker > 4 chars and typically 3-4 letter ETFs)
-                        # Real ETF filtering happens in Phase 2 via market_cap check
-                except:
-                    pass
-
-        except Exception as e:
-            print(f"  [Batch Error] chunk {chunk_num}: {e}", file=sys.stderr)
-
-        elapsed = time.time() - start_time
-        if chunk_num % 3 == 0 or chunk_num == total_chunks:
-            print(f"  [Phase 1] Chunk {chunk_num}/{total_chunks}, {len(technical_passers)} technical passers ({elapsed:.0f}s)", file=sys.stderr)
+    technical_passers = []
+    for code, df in histories.items():
+        result = analyze_from_history(code, df)
+        if result:
+            if not result["name"]:
+                result["name"] = name_map.get(code, code)
+            technical_passers.append(result)
 
     elapsed = time.time() - start_time
-    print(f"[US Screener] Phase 1 complete: {len(technical_passers)} pass all technical filters ({elapsed:.0f}s)", file=sys.stderr)
+    print(f"[Phase 2] Complete: {len(technical_passers)} pass technical filters ({elapsed:.0f}s)", file=sys.stderr)
 
-    # ─── Phase 2: Fetch metadata only for survivors (sequential with delays) ──
-    print(f"[US Screener] Phase 2: Fetching metadata for {len(technical_passers)} stocks...", file=sys.stderr)
+    # ─── Phase 3: Market cap filter via EODHD fundamentals ───
+    print(f"[Phase 3] Fetching market cap for {len(technical_passers)} stocks ...", file=sys.stderr)
 
     passing = []
 
     for idx, item in enumerate(technical_passers):
-        try:
-            meta = fetch_metadata(item["ticker"])
-            market_cap = meta["market_cap"]
+        code = item["ticker"]
+        fund = fetch_fundamentals(code)
+        market_cap = fund["market_cap"]
 
-            # Market cap filter — also skip ETFs (market_cap = 0 usually means ETF/fund)
-            if market_cap == 0:
-                continue
-            if market_cap < MCAP_THRESHOLD:
-                continue
+        if market_cap == 0:
+            continue
+        if market_cap < MCAP_THRESHOLD:
+            continue
 
-            item["marketCap"] = int(market_cap)
-            item["name"] = meta["name"]
-            item["sector"] = meta["sector"]
-            passing.append(item)
+        item["marketCap"] = int(market_cap)
+        if fund.get("name"):
+            item["name"] = fund["name"]
+        if fund.get("sector"):
+            item["sector"] = fund["sector"]
+        passing.append(item)
 
-            _pass_count[0] += 1
-            print(f"[Pass] {item['ticker']} ({meta['name']}) ${item['price']:.2f} MCap={market_cap/1e9:.1f}B Sector={meta['sector']}", file=sys.stderr)
-        except:
-            _fail_count[0] += 1
-
-        # Small delay to avoid rate limits
-        if (idx + 1) % 5 == 0:
-            time.sleep(1.0)
-        else:
-            time.sleep(0.2)
+        print(f"  [Pass] {item['ticker']} ({item['name']}) ${item['price']:.2f} MCap={market_cap/1e9:.1f}B Sector={item['sector']}", file=sys.stderr)
 
         if (idx + 1) % 20 == 0:
             elapsed = time.time() - start_time
-            print(f"  [Phase 2] {idx+1}/{len(technical_passers)} metadata fetched ({elapsed:.0f}s)", file=sys.stderr)
+            print(f"  [Phase 3] {idx+1}/{len(technical_passers)} ({elapsed:.0f}s)", file=sys.stderr)
+        time.sleep(0.15)
 
-    # ─── Phase 3: Fetch sectors sequentially with delays ──────
-    no_sector = [s for s in passing if not s.get("sector")]
-    if no_sector:
-        print(f"[US Screener] Phase 3: Fetching sectors for {len(no_sector)} stocks...", file=sys.stderr)
-        for idx, stock in enumerate(no_sector):
-            try:
-                tk = yf.Ticker(stock["ticker"])
-                info = tk.info
-                stock["sector"] = info.get("sector", "") or ""
-                if not stock["name"] or stock["name"] == stock["ticker"]:
-                    stock["name"] = info.get("shortName", "") or info.get("longName", stock["ticker"])
-            except:
-                pass
-            if (idx + 1) % 10 == 0:
-                print(f"  [Phase 3] {idx+1}/{len(no_sector)} sectors fetched", file=sys.stderr)
-                time.sleep(2)  # pause every 10 to avoid rate limit
-            else:
-                time.sleep(0.5)
-
-    # Sort by market cap descending
     passing.sort(key=lambda x: x["marketCap"], reverse=True)
 
     elapsed = time.time() - start_time
@@ -310,7 +331,7 @@ def main():
 
     output = {
         "stocks": passing,
-        "totalUniverse": len(tickers),
+        "totalUniverse": total_universe,
         "totalPassing": len(passing),
         "lastUpdated": datetime.now().isoformat(),
     }
