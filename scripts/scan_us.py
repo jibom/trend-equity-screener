@@ -445,6 +445,16 @@ def main():
     bootstrap = len(prev_pools) == 0
     pools_data, alerts = run_pool_system(histories, today_str, prev_pools, themes, bootstrap=bootstrap)
 
+    # Enrich pool entries with sector/name from yfinance Phase 3 results
+    sector_map = {item["ticker"]: item.get("sector", "") for item in passing}
+    name_map_phase3 = {item["ticker"]: item.get("name", "") for item in passing}
+    for ticker, entry in pools_data.items():
+        code = ticker.replace(".US", "")
+        if not entry.get("sector") and sector_map.get(code):
+            entry["sector"] = sector_map[code]
+        if not entry.get("theme") and themes.get(ticker, {}).get("theme"):
+            entry["theme"] = themes[ticker]["theme"]
+
     save_pools(POOL_FILE, pools_data)
     save_pools(POOL_FILE_PUBLIC, pools_data)
     print(f"[Done] Pool: {POOL_FILE} ({len(pools_data)} entries)", file=sys.stderr)

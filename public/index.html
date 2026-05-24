@@ -304,12 +304,25 @@
         const q = search.toLowerCase();
         pool = pool.filter(e => e.ticker.toLowerCase().includes(q) || (e.sector||'').toLowerCase().includes(q) || (e.theme||'').toLowerCase().includes(q));
       }
-      if (sortField) {
+      // Sort: in trend/breakout tab, default sort by status rank then by sortField
+      if (sortField && sortField !== 'pool_status') {
         pool.sort((a, b) => {
+          // Primary: status rank (STRONGEST first)
+          const rankA = POOL_STATUS_ORDER[a.pool_status] ?? 99;
+          const rankB = POOL_STATUS_ORDER[b.pool_status] ?? 99;
+          if (rankA !== rankB) return rankA - rankB;
+          // Secondary: user sort field
           const av = a[sortField] ?? 0, bv = b[sortField] ?? 0;
           if (typeof av === 'string' && typeof bv === 'string')
             return sortDir === 'asc' ? av.localeCompare(bv) : bv.localeCompare(av);
           return sortDir === 'asc' ? Number(av) - Number(bv) : Number(bv) - Number(av);
+        });
+      } else {
+        // Sort by status rank only
+        pool.sort((a, b) => {
+          const rankA = POOL_STATUS_ORDER[a.pool_status] ?? 99;
+          const rankB = POOL_STATUS_ORDER[b.pool_status] ?? 99;
+          return rankA - rankB;
         });
       }
       return pool;
