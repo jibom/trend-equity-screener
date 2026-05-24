@@ -1,14 +1,9 @@
 [
   {
-    "ticker": "HPQ.US",
-    "event": "NEW",
-    "from_bottom": true,
-    "date": "2026-05-22"
-  },
-  {
-    "ticker": "SMCI.US",
-    "event": "NEW",
-    "from_bottom": true,
+    "ticker": "CGBL.US",
+    "event": "upgrade",
+    "from": "WATCHING",
+    "to": "PULLBACK",
     "date": "2026-05-22"
   }
 ]
