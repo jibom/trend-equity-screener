@@ -1,0 +1,374 @@
+{
+  "0836.HK": {
+    "name": "CHINA RES POWER",
+    "sector": "Utilities",
+    "marketCap": 104473026773.11264,
+    "mcapDate": "2026-05-25"
+  },
+  "2338.HK": {
+    "name": "WEICHAI POWER",
+    "sector": "Consumer Cyclical",
+    "marketCap": 358253759281.6759,
+    "mcapDate": "2026-05-25"
+  },
+  "1286.HK": {
+    "name": "IMPRO PRECISION",
+    "sector": "Industrials",
+    "marketCap": 19891990837.105766,
+    "mcapDate": "2026-05-25"
+  },
+  "1308.HK": {
+    "name": "SITC",
+    "sector": "Industrials",
+    "marketCap": 92342341396.72559,
+    "mcapDate": "2026-05-25"
+  },
+  "2628.HK": {
+    "name": "CHINA LIFE",
+    "sector": "Financial Services",
+    "marketCap": 817415270756.4259,
+    "mcapDate": "2026-05-25"
+  },
+  "0083.HK": {
+    "name": "SINO LAND",
+    "sector": "Real Estate",
+    "marketCap": 118005402773.07495,
+    "mcapDate": "2026-05-25"
+  },
+  "0001.HK": {
+    "name": "CKH HOLDINGS",
+    "sector": "Industrials",
+    "marketCap": 275954717913.3682,
+    "mcapDate": "2026-05-25"
+  },
+  "0290.HK": {
+    "name": "GOFINTECH-500",
+    "sector": "Financial Services",
+    "marketCap": 86346286084.50235,
+    "mcapDate": "2026-05-25"
+  },
+  "1208.HK": {
+    "name": "MMG",
+    "sector": "Basic Materials",
+    "marketCap": 110964452170.36034,
+    "mcapDate": "2026-05-25"
+  },
+  "0826.HK": {
+    "name": "TIANGONG INT'L",
+    "sector": "Basic Materials",
+    "marketCap": 10573000311.851501,
+    "mcapDate": "2026-05-25"
+  },
+  "1651.HK": {
+    "name": "TSUGAMI CHINA",
+    "sector": "Industrials",
+    "marketCap": 22282716581.230164,
+    "mcapDate": "2026-05-25"
+  },
+  "3988.HK": {
+    "name": "BANK OF CHINA",
+    "sector": "Financial Services",
+    "marketCap": 1685170919932.934,
+    "mcapDate": "2026-05-25"
+  },
+  "6680.HK": {
+    "name": "JLMAG",
+    "sector": "Industrials",
+    "marketCap": 53312314176.71297,
+    "mcapDate": "2026-05-25"
+  },
+  "0003.HK": {
+    "name": "HK & CHINA GAS",
+    "sector": "Utilities",
+    "marketCap": 136217055274.48778,
+    "mcapDate": "2026-05-25"
+  },
+  "0669.HK": {
+    "name": "TECHTRONIC IND",
+    "sector": "Industrials",
+    "marketCap": 217373110574.72314,
+    "mcapDate": "2026-05-25"
+  },
+  "0522.HK": {
+    "name": "ASMPT",
+    "sector": "Technology",
+    "marketCap": 77129165291.95737,
+    "mcapDate": "2026-05-25"
+  },
+  "0257.HK": {
+    "name": "EB ENVIRONMENT",
+    "sector": "Industrials",
+    "marketCap": 34462092208.295685,
+    "mcapDate": "2026-05-25"
+  },
+  "0868.HK": {
+    "name": "XINYI GLASS",
+    "sector": "Basic Materials",
+    "marketCap": 45656802002.509125,
+    "mcapDate": "2026-05-25"
+  },
+  "0148.HK": {
+    "name": "KINGBOARD HLDG",
+    "sector": "Industrials",
+    "marketCap": 64614573363.22525,
+    "mcapDate": "2026-05-25"
+  },
+  "0012.HK": {
+    "name": "HENDERSON LAND",
+    "sector": "Real Estate",
+    "marketCap": 157151417684.95782,
+    "mcapDate": "2026-05-25"
+  },
+  "3360.HK": {
+    "name": "FE HORIZON",
+    "sector": "Financial Services",
+    "marketCap": 34990155227.94881,
+    "mcapDate": "2026-05-25"
+  },
+  "9888.HK": {
+    "name": "BIDU-SW",
+    "sector": "Communication Services",
+    "marketCap": 348963118763.4503,
+    "mcapDate": "2026-05-25"
+  },
+  "2727.HK": {
+    "name": "SH ELECTRIC",
+    "sector": "Industrials",
+    "marketCap": 80187025270.52562,
+    "mcapDate": "2026-05-25"
+  },
+  "3698.HK": {
+    "name": "HUISHANG BANK",
+    "sector": "Financial Services",
+    "marketCap": 69726801814.29306,
+    "mcapDate": "2026-05-25"
+  },
+  "1288.HK": {
+    "name": "ABC",
+    "sector": "Financial Services",
+    "marketCap": 2071899587229.7463,
+    "mcapDate": "2026-05-25"
+  },
+  "1888.HK": {
+    "name": "KB LAMINATES",
+    "sector": "Technology",
+    "marketCap": 160215102715.87372,
+    "mcapDate": "2026-05-25"
+  },
+  "1258.HK": {
+    "name": "CHINFMINING",
+    "sector": "Basic Materials",
+    "marketCap": 54979687835.40344,
+    "mcapDate": "2026-05-25"
+  },
+  "1347.HK": {
+    "name": "HUA HONG SEMI",
+    "sector": "Technology",
+    "marketCap": 226063617114.85538,
+    "mcapDate": "2026-05-25"
+  },
+  "2722.HK": {
+    "name": "CHONGQING M&E",
+    "sector": "Industrials",
+    "marketCap": 11496076858.806398,
+    "mcapDate": "2026-05-25"
+  },
+  "1396.HK": {
+    "name": "GBA AI COMP",
+    "sector": "Real Estate",
+    "marketCap": 19060942516.12561,
+    "mcapDate": "2026-05-25"
+  },
+  "0489.HK": {
+    "name": "",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "6088.HK": {
+    "name": "FIT HON TENG",
+    "sector": "Technology",
+    "marketCap": 64495619087.22367,
+    "mcapDate": "2026-05-25"
+  },
+  "2382.HK": {
+    "name": "SUNNY OPTICAL",
+    "sector": "Technology",
+    "marketCap": 78683304100.0,
+    "mcapDate": "2026-05-25"
+  },
+  "0016.HK": {
+    "name": "SHK PPT",
+    "sector": "Real Estate",
+    "marketCap": 401632363663.0472,
+    "mcapDate": "2026-05-25"
+  },
+  "0006.HK": {
+    "name": "POWER ASSETS",
+    "sector": "Utilities",
+    "marketCap": 137562844194.3168,
+    "mcapDate": "2026-05-25"
+  },
+  "1299.HK": {
+    "name": "AIA",
+    "sector": "Financial Services",
+    "marketCap": 893046695291.6436,
+    "mcapDate": "2026-05-25"
+  },
+  "0005.HK": {
+    "name": "HSBC HOLDINGS",
+    "sector": "Financial Services",
+    "marketCap": 2467626766508.3555,
+    "mcapDate": "2026-05-25"
+  },
+  "2888.HK": {
+    "name": "STANCHART",
+    "sector": "Financial Services",
+    "marketCap": 446690701608.0,
+    "mcapDate": "2026-05-25"
+  },
+  "6869.HK": {
+    "name": "YOFC",
+    "sector": "Technology",
+    "marketCap": 324024754755.7238,
+    "mcapDate": "2026-05-25"
+  },
+  "1398.HK": {
+    "name": "ICBC",
+    "sector": "Financial Services",
+    "marketCap": 2441382827070.1006,
+    "mcapDate": "2026-05-25"
+  },
+  "1070.HK": {
+    "name": "TCL ELECTRONICS",
+    "sector": "Technology",
+    "marketCap": 39123094977.45886,
+    "mcapDate": "2026-05-25"
+  },
+  "0293.HK": {
+    "name": "CATHAY PAC AIR",
+    "sector": "Industrials",
+    "marketCap": 76622215598.56625,
+    "mcapDate": "2026-05-25"
+  },
+  "0317.HK": {
+    "name": "COMEC",
+    "sector": "Industrials",
+    "marketCap": 21372216273.59703,
+    "mcapDate": "2026-05-25"
+  },
+  "2388.HK": {
+    "name": "BOC HONG KONG",
+    "sector": "Financial Services",
+    "marketCap": 509185095997.28174,
+    "mcapDate": "2026-05-25"
+  },
+  "1138.HK": {
+    "name": "COSCO SHIP ENGY",
+    "sector": "Energy",
+    "marketCap": 104986887313.63089,
+    "mcapDate": "2026-05-25"
+  },
+  "0991.HK": {
+    "name": "DATANG POWER",
+    "sector": "Utilities",
+    "marketCap": 51263587743.092514,
+    "mcapDate": "2026-05-25"
+  },
+  "1729.HK": {
+    "name": "TIME INTERCON",
+    "sector": "Industrials",
+    "marketCap": 44453101737.93615,
+    "mcapDate": "2026-05-25"
+  },
+  "0267.HK": {
+    "name": "CITIC",
+    "sector": "Industrials",
+    "marketCap": 383991461167.4727,
+    "mcapDate": "2026-05-25"
+  },
+  "0270.HK": {
+    "name": "GUANGDONG INV",
+    "sector": "Utilities",
+    "marketCap": 54852324126.18286,
+    "mcapDate": "2026-05-25"
+  },
+  "0002.HK": {
+    "name": "CLP HOLDINGS",
+    "sector": "Utilities",
+    "marketCap": 194536693890.0,
+    "mcapDate": "2026-05-25"
+  },
+  "0902.HK": {
+    "name": "HUANENG POWER",
+    "sector": "Utilities",
+    "marketCap": 102822514495.62369,
+    "mcapDate": "2026-05-25"
+  },
+  "2343.HK": {
+    "name": "PACIFIC BASIN",
+    "sector": "Industrials",
+    "marketCap": 16779060359.75,
+    "mcapDate": "2026-05-25"
+  },
+  "2359.HK": {
+    "name": "WUXI APPTEC",
+    "sector": "Healthcare",
+    "marketCap": 387888430150.0,
+    "mcapDate": "2026-05-25"
+  },
+  "0425.HK": {
+    "name": "MINTH GROUP",
+    "sector": "Consumer Cyclical",
+    "marketCap": 45271760753.29666,
+    "mcapDate": "2026-05-25"
+  },
+  "1113.HK": {
+    "name": "CK ASSET",
+    "sector": "Real Estate",
+    "marketCap": 179013667073.18793,
+    "mcapDate": "2026-05-25"
+  },
+  "0189.HK": {
+    "name": "DONGYUE GROUP",
+    "sector": "Basic Materials",
+    "marketCap": 23564878924.177032,
+    "mcapDate": "2026-05-25"
+  },
+  "1997.HK": {
+    "name": "WHARF REIC",
+    "sector": "Real Estate",
+    "marketCap": 74630467466.01424,
+    "mcapDate": "2026-05-25"
+  },
+  "0817.HK": {
+    "name": "CHINA JINMAO",
+    "sector": "Real Estate",
+    "marketCap": 22565818221.267857,
+    "mcapDate": "2026-05-25"
+  },
+  "0371.HK": {
+    "name": "BJ ENT WATER",
+    "sector": "Utilities",
+    "marketCap": 28078708577.422436,
+    "mcapDate": "2026-05-25"
+  },
+  "1109.HK": {
+    "name": "CHINA RES LAND",
+    "sector": "Real Estate",
+    "marketCap": 248869802188.0503,
+    "mcapDate": "2026-05-25"
+  },
+  "0981.HK": {
+    "name": "SMIC",
+    "sector": "Technology",
+    "marketCap": 639847991794.0922,
+    "mcapDate": "2026-05-25"
+  },
+  "0300.HK": {
+    "name": "MIDEA GROUP",
+    "sector": "Consumer Cyclical",
+    "marketCap": 677708342493.0231,
+    "mcapDate": "2026-05-25"
+  }
+}
