@@ -10,7 +10,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 72.05,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -26,11 +26,13 @@
     "ma_30d": 67.98,
     "ma_40d": 66.09,
     "ma_50d": 64.77,
-    "sector": "",
+    "sector": "Industrials",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-24"
+    "last_update_date": "2026-05-25",
+    "name": "CKH HOLDINGS",
+    "marketCap": 275954717913.3682
   },
   {
     "ticker": "0002.HK",
@@ -43,7 +45,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 77.0,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -59,11 +61,13 @@
     "ma_30d": 75.53,
     "ma_40d": 75.05,
     "ma_50d": 74.71,
-    "sector": "",
+    "sector": "Utilities",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-24"
+    "last_update_date": "2026-05-25",
+    "name": "CLP HOLDINGS",
+    "marketCap": 194536693890.0
   },
   {
     "ticker": "0003.HK",
@@ -76,7 +80,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 7.3,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -92,11 +96,13 @@
     "ma_30d": 7.3,
     "ma_40d": 7.27,
     "ma_50d": 7.29,
-    "sector": "",
+    "sector": "Utilities",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-24"
+    "last_update_date": "2026-05-25",
+    "name": "HK & CHINA GAS",
+    "marketCap": 136217055274.48778
   },
   {
     "ticker": "0005.HK",
@@ -109,7 +115,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 143.9,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -125,11 +131,13 @@
     "ma_30d": 140.76,
     "ma_40d": 137.71,
     "ma_50d": 135.46,
-    "sector": "",
+    "sector": "Financial Services",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-24"
+    "last_update_date": "2026-05-25",
+    "name": "HSBC HOLDINGS",
+    "marketCap": 2467626766508.3555
   },
   {
     "ticker": "0006.HK",
@@ -142,7 +150,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 64.55,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -158,11 +166,13 @@
     "ma_30d": 64.69,
     "ma_40d": 64.02,
     "ma_50d": 63.59,
-    "sector": "",
+    "sector": "Utilities",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-24"
+    "last_update_date": "2026-05-25",
+    "name": "POWER ASSETS",
+    "marketCap": 137562844194.3168
   },
   {
     "ticker": "0012.HK",
@@ -175,7 +185,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 32.46,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -191,11 +201,13 @@
     "ma_30d": 31.9,
     "ma_40d": 31.37,
     "ma_50d": 31.4,
-    "sector": "",
+    "sector": "Real Estate",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-24"
+    "last_update_date": "2026-05-25",
+    "name": "HENDERSON LAND",
+    "marketCap": 157151417684.95782
   },
   {
     "ticker": "0016.HK",
@@ -208,7 +220,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 138.6,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -224,11 +236,13 @@
     "ma_30d": 138.64,
     "ma_40d": 137.03,
     "ma_50d": 136.31,
-    "sector": "",
+    "sector": "Real Estate",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-24"
+    "last_update_date": "2026-05-25",
+    "name": "SHK PPT",
+    "marketCap": 401632363663.0472
   },
   {
     "ticker": "0083.HK",
@@ -241,7 +255,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 12.31,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -257,11 +271,13 @@
     "ma_30d": 12.41,
     "ma_40d": 12.21,
     "ma_50d": 12.07,
-    "sector": "",
+    "sector": "Real Estate",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-24"
+    "last_update_date": "2026-05-25",
+    "name": "SINO LAND",
+    "marketCap": 118005402773.07495
   },
   {
     "ticker": "0148.HK",
@@ -271,10 +287,10 @@
     "prev_pool_status": "STRONGEST",
     "status_change": "none",
     "first_breakout_date": "",
-    "last_breakout_date": "2026-05-24",
+    "last_breakout_date": "2026-05-25",
     "breakout_count_60d": 1,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 58.3,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -290,13 +306,15 @@
     "ma_30d": 47.91,
     "ma_40d": 44.54,
     "ma_50d": 43.1,
-    "sector": "",
+    "sector": "Industrials",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [
       "2026-05-24"
     ],
-    "last_update_date": "2026-05-24"
+    "last_update_date": "2026-05-25",
+    "name": "KINGBOARD HLDG",
+    "marketCap": 64614573363.22525
   },
   {
     "ticker": "0189.HK",
@@ -309,7 +327,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 13.6,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -325,11 +343,13 @@
     "ma_30d": 12.3,
     "ma_40d": 12.05,
     "ma_50d": 12.08,
-    "sector": "",
+    "sector": "Basic Materials",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-24"
+    "last_update_date": "2026-05-25",
+    "name": "DONGYUE GROUP",
+    "marketCap": 23564878924.177032
   },
   {
     "ticker": "0257.HK",
@@ -342,7 +362,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 5.61,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -358,11 +378,13 @@
     "ma_30d": 5.62,
     "ma_40d": 5.59,
     "ma_50d": 5.49,
-    "sector": "",
+    "sector": "Industrials",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-24"
+    "last_update_date": "2026-05-25",
+    "name": "EB ENVIRONMENT",
+    "marketCap": 34462092208.295685
   },
   {
     "ticker": "0267.HK",
@@ -375,7 +397,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 13.2,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -391,11 +413,13 @@
     "ma_30d": 13.1,
     "ma_40d": 12.81,
     "ma_50d": 12.53,
-    "sector": "",
+    "sector": "Industrials",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-24"
+    "last_update_date": "2026-05-25",
+    "name": "CITIC",
+    "marketCap": 383991461167.4727
   },
   {
     "ticker": "0270.HK",
@@ -408,7 +432,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 8.39,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -424,11 +448,13 @@
     "ma_30d": 8.26,
     "ma_40d": 8.15,
     "ma_50d": 8.0,
-    "sector": "",
+    "sector": "Utilities",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-24"
+    "last_update_date": "2026-05-25",
+    "name": "GUANGDONG INV",
+    "marketCap": 54852324126.18286
   },
   {
     "ticker": "0290.HK",
@@ -441,7 +467,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 8.38,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -457,11 +483,13 @@
     "ma_30d": 7.75,
     "ma_40d": 7.02,
     "ma_50d": 6.43,
-    "sector": "",
+    "sector": "Financial Services",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-24"
+    "last_update_date": "2026-05-25",
+    "name": "GOFINTECH-500",
+    "marketCap": 86346286084.50235
   },
   {
     "ticker": "0293.HK",
@@ -474,7 +502,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 12.6,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -490,11 +518,13 @@
     "ma_30d": 12.01,
     "ma_40d": 11.99,
     "ma_50d": 12.1,
-    "sector": "",
+    "sector": "Industrials",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-24"
+    "last_update_date": "2026-05-25",
+    "name": "CATHAY PAC AIR",
+    "marketCap": 76622215598.56625
   },
   {
     "ticker": "0300.HK",
@@ -507,7 +537,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 89.05,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -523,11 +553,13 @@
     "ma_30d": 88.42,
     "ma_40d": 87.06,
     "ma_50d": 86.64,
-    "sector": "",
+    "sector": "Consumer Cyclical",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-24"
+    "last_update_date": "2026-05-25",
+    "name": "MIDEA GROUP",
+    "marketCap": 677708342493.0231
   },
   {
     "ticker": "0317.HK",
@@ -540,7 +572,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 15.12,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -556,11 +588,13 @@
     "ma_30d": 15.42,
     "ma_40d": 14.9,
     "ma_50d": 15.04,
-    "sector": "",
+    "sector": "Industrials",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-24"
+    "last_update_date": "2026-05-25",
+    "name": "COMEC",
+    "marketCap": 21372216273.59703
   },
   {
     "ticker": "0371.HK",
@@ -573,7 +607,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 2.8,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -589,11 +623,13 @@
     "ma_30d": 2.81,
     "ma_40d": 2.8,
     "ma_50d": 2.8,
-    "sector": "",
+    "sector": "Utilities",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-24"
+    "last_update_date": "2026-05-25",
+    "name": "BJ ENT WATER",
+    "marketCap": 28078708577.422436
   },
   {
     "ticker": "0425.HK",
@@ -606,7 +642,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 38.62,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -622,11 +658,13 @@
     "ma_30d": 37.1,
     "ma_40d": 36.69,
     "ma_50d": 36.73,
-    "sector": "",
+    "sector": "Consumer Cyclical",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-24"
+    "last_update_date": "2026-05-25",
+    "name": "MINTH GROUP",
+    "marketCap": 45271760753.29666
   },
   {
     "ticker": "0489.HK",
@@ -639,7 +677,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 9.54,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -659,7 +697,7 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-24"
+    "last_update_date": "2026-05-25"
   },
   {
     "ticker": "0522.HK",
@@ -669,10 +707,10 @@
     "prev_pool_status": "STRONGEST",
     "status_change": "none",
     "first_breakout_date": "",
-    "last_breakout_date": "2026-05-24",
+    "last_breakout_date": "2026-05-25",
     "breakout_count_60d": 1,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 184.6,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -688,13 +726,15 @@
     "ma_30d": 159.51,
     "ma_40d": 145.99,
     "ma_50d": 138.3,
-    "sector": "",
+    "sector": "Technology",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [
       "2026-05-24"
     ],
-    "last_update_date": "2026-05-24"
+    "last_update_date": "2026-05-25",
+    "name": "ASMPT",
+    "marketCap": 77129165291.95737
   },
   {
     "ticker": "0669.HK",
@@ -707,7 +747,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 118.8,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -723,11 +763,13 @@
     "ma_30d": 115.6,
     "ma_40d": 113.48,
     "ma_50d": 113.06,
-    "sector": "",
+    "sector": "Industrials",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-24"
+    "last_update_date": "2026-05-25",
+    "name": "TECHTRONIC IND",
+    "marketCap": 217373110574.72314
   },
   {
     "ticker": "0817.HK",
@@ -740,7 +782,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 1.67,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -756,11 +798,13 @@
     "ma_30d": 1.68,
     "ma_40d": 1.6,
     "ma_50d": 1.56,
-    "sector": "",
+    "sector": "Real Estate",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-24"
+    "last_update_date": "2026-05-25",
+    "name": "CHINA JINMAO",
+    "marketCap": 22565818221.267857
   },
   {
     "ticker": "0826.HK",
@@ -773,7 +817,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 3.88,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -789,11 +833,13 @@
     "ma_30d": 3.54,
     "ma_40d": 3.49,
     "ma_50d": 3.5,
-    "sector": "",
+    "sector": "Basic Materials",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-24"
+    "last_update_date": "2026-05-25",
+    "name": "TIANGONG INT'L",
+    "marketCap": 10573000311.851501
   },
   {
     "ticker": "0868.HK",
@@ -806,7 +852,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 10.32,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -822,11 +868,13 @@
     "ma_30d": 10.12,
     "ma_40d": 10.13,
     "ma_50d": 10.21,
-    "sector": "",
+    "sector": "Basic Materials",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-24"
+    "last_update_date": "2026-05-25",
+    "name": "XINYI GLASS",
+    "marketCap": 45656802002.509125
   },
   {
     "ticker": "0902.HK",
@@ -839,7 +887,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 6.55,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -855,11 +903,13 @@
     "ma_30d": 6.42,
     "ma_40d": 6.32,
     "ma_50d": 6.26,
-    "sector": "",
+    "sector": "Utilities",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-24"
+    "last_update_date": "2026-05-25",
+    "name": "HUANENG POWER",
+    "marketCap": 102822514495.62369
   },
   {
     "ticker": "0981.HK",
@@ -869,7 +919,7 @@
     "prev_pool_status": "NEW",
     "status_change": "none",
     "first_breakout_date": "2026-05-24",
-    "last_breakout_date": "2026-05-24",
+    "last_breakout_date": "2026-05-25",
     "breakout_count_60d": 1,
     "from_bottom": true,
     "days_in_trend": 0,
@@ -888,13 +938,15 @@
     "ma_30d": 67.64,
     "ma_40d": 64.11,
     "ma_50d": 63.49,
-    "sector": "",
+    "sector": "Technology",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [
       "2026-05-24"
     ],
-    "last_update_date": "2026-05-24"
+    "last_update_date": "2026-05-25",
+    "name": "SMIC",
+    "marketCap": 639847991794.0922
   },
   {
     "ticker": "0991.HK",
@@ -907,7 +959,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 2.77,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -923,11 +975,13 @@
     "ma_30d": 2.79,
     "ma_40d": 2.75,
     "ma_50d": 2.73,
-    "sector": "",
+    "sector": "Utilities",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-24"
+    "last_update_date": "2026-05-25",
+    "name": "DATANG POWER",
+    "marketCap": 51263587743.092514
   },
   {
     "ticker": "1070.HK",
@@ -940,7 +994,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 15.52,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -956,11 +1010,13 @@
     "ma_30d": 14.85,
     "ma_40d": 14.31,
     "ma_50d": 13.76,
-    "sector": "",
+    "sector": "Technology",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-24"
+    "last_update_date": "2026-05-25",
+    "name": "TCL ELECTRONICS",
+    "marketCap": 39123094977.45886
   },
   {
     "ticker": "1109.HK",
@@ -973,7 +1029,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 34.9,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -989,11 +1045,13 @@
     "ma_30d": 33.7,
     "ma_40d": 32.45,
     "ma_50d": 31.98,
-    "sector": "",
+    "sector": "Real Estate",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-24"
+    "last_update_date": "2026-05-25",
+    "name": "CHINA RES LAND",
+    "marketCap": 248869802188.0503
   },
   {
     "ticker": "1113.HK",
@@ -1006,7 +1064,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 51.15,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -1022,11 +1080,13 @@
     "ma_30d": 49.61,
     "ma_40d": 48.49,
     "ma_50d": 48.09,
-    "sector": "",
+    "sector": "Real Estate",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-24"
+    "last_update_date": "2026-05-25",
+    "name": "CK ASSET",
+    "marketCap": 179013667073.18793
   },
   {
     "ticker": "1138.HK",
@@ -1039,7 +1099,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 19.21,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -1055,11 +1115,13 @@
     "ma_30d": 18.64,
     "ma_40d": 18.88,
     "ma_50d": 18.85,
-    "sector": "",
+    "sector": "Energy",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-24"
+    "last_update_date": "2026-05-25",
+    "name": "COSCO SHIP ENGY",
+    "marketCap": 104986887313.63089
   },
   {
     "ticker": "1208.HK",
@@ -1072,7 +1134,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 9.14,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -1088,11 +1150,13 @@
     "ma_30d": 9.0,
     "ma_40d": 8.68,
     "ma_50d": 8.6,
-    "sector": "",
+    "sector": "Basic Materials",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-24"
+    "last_update_date": "2026-05-25",
+    "name": "MMG",
+    "marketCap": 110964452170.36034
   },
   {
     "ticker": "1258.HK",
@@ -1105,7 +1169,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 14.09,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -1121,11 +1185,13 @@
     "ma_30d": 13.67,
     "ma_40d": 13.23,
     "ma_50d": 13.02,
-    "sector": "",
+    "sector": "Basic Materials",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-24"
+    "last_update_date": "2026-05-25",
+    "name": "CHINFMINING",
+    "marketCap": 54979687835.40344
   },
   {
     "ticker": "1288.HK",
@@ -1138,7 +1204,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 5.92,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -1154,11 +1220,13 @@
     "ma_30d": 6.04,
     "ma_40d": 5.91,
     "ma_50d": 5.77,
-    "sector": "",
+    "sector": "Financial Services",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-24"
+    "last_update_date": "2026-05-25",
+    "name": "ABC",
+    "marketCap": 2071899587229.7463
   },
   {
     "ticker": "1299.HK",
@@ -1171,7 +1239,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 86.05,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -1187,11 +1255,13 @@
     "ma_30d": 85.35,
     "ma_40d": 85.64,
     "ma_50d": 85.26,
-    "sector": "",
+    "sector": "Financial Services",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-24"
+    "last_update_date": "2026-05-25",
+    "name": "AIA",
+    "marketCap": 893046695291.6436
   },
   {
     "ticker": "1308.HK",
@@ -1204,7 +1274,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 34.32,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -1220,11 +1290,13 @@
     "ma_30d": 33.97,
     "ma_40d": 34.11,
     "ma_50d": 34.12,
-    "sector": "",
+    "sector": "Industrials",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-24"
+    "last_update_date": "2026-05-25",
+    "name": "SITC",
+    "marketCap": 92342341396.72559
   },
   {
     "ticker": "1347.HK",
@@ -1237,7 +1309,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 130.1,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -1253,11 +1325,13 @@
     "ma_30d": 112.91,
     "ma_40d": 105.82,
     "ma_50d": 102.8,
-    "sector": "",
+    "sector": "Technology",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-24"
+    "last_update_date": "2026-05-25",
+    "name": "HUA HONG SEMI",
+    "marketCap": 226063617114.85538
   },
   {
     "ticker": "1396.HK",
@@ -1270,7 +1344,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 16.1,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -1286,11 +1360,13 @@
     "ma_30d": 12.16,
     "ma_40d": 10.58,
     "ma_50d": 9.77,
-    "sector": "",
+    "sector": "Real Estate",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-24"
+    "last_update_date": "2026-05-25",
+    "name": "GBA AI COMP",
+    "marketCap": 19060942516.12561
   },
   {
     "ticker": "1398.HK",
@@ -1303,7 +1379,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 6.85,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -1319,11 +1395,13 @@
     "ma_30d": 7.02,
     "ma_40d": 6.95,
     "ma_50d": 6.85,
-    "sector": "",
+    "sector": "Financial Services",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-24"
+    "last_update_date": "2026-05-25",
+    "name": "ICBC",
+    "marketCap": 2441382827070.1006
   },
   {
     "ticker": "1651.HK",
@@ -1336,7 +1414,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 60.45,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -1352,11 +1430,13 @@
     "ma_30d": 50.81,
     "ma_40d": 47.09,
     "ma_50d": 44.88,
-    "sector": "",
+    "sector": "Industrials",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-24"
+    "last_update_date": "2026-05-25",
+    "name": "TSUGAMI CHINA",
+    "marketCap": 22282716581.230164
   },
   {
     "ticker": "1729.HK",
@@ -1369,7 +1449,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 19.92,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -1385,11 +1465,13 @@
     "ma_30d": 21.1,
     "ma_40d": 19.93,
     "ma_50d": 19.14,
-    "sector": "",
+    "sector": "Industrials",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-24"
+    "last_update_date": "2026-05-25",
+    "name": "TIME INTERCON",
+    "marketCap": 44453101737.93615
   },
   {
     "ticker": "1888.HK",
@@ -1399,10 +1481,10 @@
     "prev_pool_status": "STRONGEST",
     "status_change": "none",
     "first_breakout_date": "",
-    "last_breakout_date": "2026-05-24",
+    "last_breakout_date": "2026-05-25",
     "breakout_count_60d": 1,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 51.1,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -1418,13 +1500,15 @@
     "ma_30d": 36.58,
     "ma_40d": 32.56,
     "ma_50d": 30.36,
-    "sector": "",
+    "sector": "Technology",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [
       "2026-05-24"
     ],
-    "last_update_date": "2026-05-24"
+    "last_update_date": "2026-05-25",
+    "name": "KB LAMINATES",
+    "marketCap": 160215102715.87372
   },
   {
     "ticker": "1997.HK",
@@ -1437,7 +1521,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 24.58,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -1453,11 +1537,13 @@
     "ma_30d": 24.67,
     "ma_40d": 24.26,
     "ma_50d": 24.39,
-    "sector": "",
+    "sector": "Real Estate",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-24"
+    "last_update_date": "2026-05-25",
+    "name": "WHARF REIC",
+    "marketCap": 74630467466.01424
   },
   {
     "ticker": "2338.HK",
@@ -1470,7 +1556,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 41.12,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -1486,11 +1572,13 @@
     "ma_30d": 37.64,
     "ma_40d": 35.35,
     "ma_50d": 33.95,
-    "sector": "",
+    "sector": "Consumer Cyclical",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-24"
+    "last_update_date": "2026-05-25",
+    "name": "WEICHAI POWER",
+    "marketCap": 358253759281.6759
   },
   {
     "ticker": "2343.HK",
@@ -1503,7 +1591,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 3.25,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -1519,11 +1607,13 @@
     "ma_30d": 3.18,
     "ma_40d": 3.12,
     "ma_50d": 3.1,
-    "sector": "",
+    "sector": "Industrials",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-24"
+    "last_update_date": "2026-05-25",
+    "name": "PACIFIC BASIN",
+    "marketCap": 16779060359.75
   },
   {
     "ticker": "2359.HK",
@@ -1536,7 +1626,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 130.0,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -1552,11 +1642,13 @@
     "ma_30d": 130.96,
     "ma_40d": 127.94,
     "ma_50d": 123.91,
-    "sector": "",
+    "sector": "Healthcare",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-24"
+    "last_update_date": "2026-05-25",
+    "name": "WUXI APPTEC",
+    "marketCap": 387888430150.0
   },
   {
     "ticker": "2382.HK",
@@ -1566,7 +1658,7 @@
     "prev_pool_status": "NEW",
     "status_change": "none",
     "first_breakout_date": "2026-05-24",
-    "last_breakout_date": "2026-05-24",
+    "last_breakout_date": "2026-05-25",
     "breakout_count_60d": 1,
     "from_bottom": true,
     "days_in_trend": 0,
@@ -1585,13 +1677,15 @@
     "ma_30d": 64.84,
     "ma_40d": 62.68,
     "ma_50d": 61.39,
-    "sector": "",
+    "sector": "Technology",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [
       "2026-05-24"
     ],
-    "last_update_date": "2026-05-24"
+    "last_update_date": "2026-05-25",
+    "name": "SUNNY OPTICAL",
+    "marketCap": 78683304100.0
   },
   {
     "ticker": "2388.HK",
@@ -1601,10 +1695,10 @@
     "prev_pool_status": "STRONGEST",
     "status_change": "none",
     "first_breakout_date": "",
-    "last_breakout_date": "2026-05-24",
+    "last_breakout_date": "2026-05-25",
     "breakout_count_60d": 1,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 48.16,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -1620,13 +1714,15 @@
     "ma_30d": 45.18,
     "ma_40d": 44.46,
     "ma_50d": 43.82,
-    "sector": "",
+    "sector": "Financial Services",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [
       "2026-05-24"
     ],
-    "last_update_date": "2026-05-24"
+    "last_update_date": "2026-05-25",
+    "name": "BOC HONG KONG",
+    "marketCap": 509185095997.28174
   },
   {
     "ticker": "2628.HK",
@@ -1639,7 +1735,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 28.92,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -1655,11 +1751,13 @@
     "ma_30d": 28.61,
     "ma_40d": 27.86,
     "ma_50d": 27.95,
-    "sector": "",
+    "sector": "Financial Services",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-24"
+    "last_update_date": "2026-05-25",
+    "name": "CHINA LIFE",
+    "marketCap": 817415270756.4259
   },
   {
     "ticker": "2722.HK",
@@ -1672,7 +1770,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 3.12,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -1688,11 +1786,13 @@
     "ma_30d": 3.06,
     "ma_40d": 2.93,
     "ma_50d": 2.91,
-    "sector": "",
+    "sector": "Industrials",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-24"
+    "last_update_date": "2026-05-25",
+    "name": "CHONGQING M&E",
+    "marketCap": 11496076858.806398
   },
   {
     "ticker": "2727.HK",
@@ -1705,7 +1805,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 5.16,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -1721,11 +1821,13 @@
     "ma_30d": 4.17,
     "ma_40d": 4.12,
     "ma_50d": 4.19,
-    "sector": "",
+    "sector": "Industrials",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-24"
+    "last_update_date": "2026-05-25",
+    "name": "SH ELECTRIC",
+    "marketCap": 80187025270.52562
   },
   {
     "ticker": "2888.HK",
@@ -1738,7 +1840,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 204.0,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -1754,11 +1856,13 @@
     "ma_30d": 192.89,
     "ma_40d": 186.4,
     "ma_50d": 182.48,
-    "sector": "",
+    "sector": "Financial Services",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-24"
+    "last_update_date": "2026-05-25",
+    "name": "STANCHART",
+    "marketCap": 446690701608.0
   },
   {
     "ticker": "3360.HK",
@@ -1771,7 +1875,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 7.38,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -1787,11 +1891,13 @@
     "ma_30d": 7.47,
     "ma_40d": 7.39,
     "ma_50d": 7.37,
-    "sector": "",
+    "sector": "Financial Services",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-24"
+    "last_update_date": "2026-05-25",
+    "name": "FE HORIZON",
+    "marketCap": 34990155227.94881
   },
   {
     "ticker": "3698.HK",
@@ -1804,7 +1910,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 5.02,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -1820,11 +1926,13 @@
     "ma_30d": 5.03,
     "ma_40d": 4.92,
     "ma_50d": 4.78,
-    "sector": "",
+    "sector": "Financial Services",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-24"
+    "last_update_date": "2026-05-25",
+    "name": "HUISHANG BANK",
+    "marketCap": 69726801814.29306
   },
   {
     "ticker": "3988.HK",
@@ -1837,7 +1945,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 5.23,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -1853,11 +1961,13 @@
     "ma_30d": 5.16,
     "ma_40d": 5.1,
     "ma_50d": 5.0,
-    "sector": "",
+    "sector": "Financial Services",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-24"
+    "last_update_date": "2026-05-25",
+    "name": "BANK OF CHINA",
+    "marketCap": 1685170919932.934
   },
   {
     "ticker": "6088.HK",
@@ -1870,7 +1980,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 9.07,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -1886,11 +1996,13 @@
     "ma_30d": 8.42,
     "ma_40d": 8.18,
     "ma_50d": 7.77,
-    "sector": "",
+    "sector": "Technology",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-24"
+    "last_update_date": "2026-05-25",
+    "name": "FIT HON TENG",
+    "marketCap": 64495619087.22367
   },
   {
     "ticker": "6680.HK",
@@ -1903,7 +2015,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 20.66,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -1919,11 +2031,13 @@
     "ma_30d": 20.26,
     "ma_40d": 20.09,
     "ma_50d": 20.2,
-    "sector": "",
+    "sector": "Industrials",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-24"
+    "last_update_date": "2026-05-25",
+    "name": "JLMAG",
+    "marketCap": 53312314176.71297
   },
   {
     "ticker": "6869.HK",
@@ -1936,7 +2050,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 227.6,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -1952,11 +2066,13 @@
     "ma_30d": 228.8,
     "ma_40d": 219.68,
     "ma_50d": 206.93,
-    "sector": "",
+    "sector": "Technology",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-24"
+    "last_update_date": "2026-05-25",
+    "name": "YOFC",
+    "marketCap": 324024754755.7238
   },
   {
     "ticker": "9888.HK",
@@ -1969,7 +2085,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 128.2,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -1985,10 +2101,12 @@
     "ma_30d": 126.74,
     "ma_40d": 122.39,
     "ma_50d": 121.76,
-    "sector": "",
+    "sector": "Communication Services",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-24"
+    "last_update_date": "2026-05-25",
+    "name": "BIDU-SW",
+    "marketCap": 348963118763.4503
   }
 ]
