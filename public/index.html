@@ -826,11 +826,16 @@
   let _chartInterval = 'D';
 
   function mapTickerToTV(ticker) {
-    if (ticker.endsWith('.HK')) return 'HKEX:' + ticker.replace('.HK', '').replace(/^0+/, '');
+    if (!ticker) return ticker;
+    if (ticker.endsWith('.HK')) {
+      const code = ticker.replace('.HK', '');
+      const stripped = String(parseInt(code, 10));
+      return `HKEX:${stripped}`;
+    }
     if (ticker.endsWith('.US')) return ticker.replace('.US', '');
-    if (ticker.endsWith('.T'))  return 'TSE:' + ticker.replace('.T', '');
-    if (ticker.endsWith('.SH')) return 'SSE:' + ticker.replace('.SH', '');
-    if (ticker.endsWith('.SZ')) return 'SZSE:' + ticker.replace('.SZ', '');
+    if (ticker.endsWith('.T'))  return `TSE:${ticker.replace('.T', '')}`;
+    if (ticker.endsWith('.SH')) return `SSE:${ticker.replace('.SH', '')}`;
+    if (ticker.endsWith('.SZ')) return `SZSE:${ticker.replace('.SZ', '')}`;
     return ticker;
   }
 
