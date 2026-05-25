@@ -26,11 +26,13 @@
     "ma_30d": 65.82,
     "ma_40d": 66.68,
     "ma_50d": 65.4,
-    "sector": "",
+    "sector": "Basic Materials",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Alcoa Corporation",
+    "marketCap": 18836458552.70481
   },
   {
     "ticker": "AAOI.US",
@@ -43,7 +45,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 181.49,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -63,7 +65,9 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Applied Optoelectronics, Inc.",
+    "marketCap": 14563260223.616684
   },
   {
     "ticker": "AAPL.US",
@@ -76,7 +80,7 @@
     "last_breakout_date": "2026-05-22",
     "breakout_count_60d": 1,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 308.82,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -98,7 +102,9 @@
     "breakout_dates": [
       "2026-05-22"
     ],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Apple Inc.",
+    "marketCap": 4535749387493.408
   },
   {
     "ticker": "ACWI.US",
@@ -111,7 +117,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 155.99,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -131,7 +137,8 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "iShares MSCI ACWI ETF"
   },
   {
     "ticker": "ADI.US",
@@ -144,7 +151,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 397.07,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -164,7 +171,9 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Analog Devices, Inc.",
+    "marketCap": 193407654540.33203
   },
   {
     "ticker": "AEE.US",
@@ -177,7 +186,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 111.29,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -193,11 +202,13 @@
     "ma_30d": 110.59,
     "ma_40d": 110.8,
     "ma_50d": 110.53,
-    "sector": "",
+    "sector": "Utilities",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Ameren Corporation",
+    "marketCap": 30799687598.01367
   },
   {
     "ticker": "AEP.US",
@@ -210,7 +221,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 3,
+    "days_in_trend": 4,
     "last_close": 131.59,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -226,11 +237,13 @@
     "ma_30d": 131.9,
     "ma_40d": 131.94,
     "ma_50d": 131.37,
-    "sector": "",
+    "sector": "Utilities",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "American Electric Power Company",
+    "marketCap": 71598779168.30786
   },
   {
     "ticker": "AFL.US",
@@ -243,7 +256,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 3,
+    "days_in_trend": 4,
     "last_close": 117.86,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -263,7 +276,9 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "AFLAC Incorporated",
+    "marketCap": 59988961096.09973
   },
   {
     "ticker": "AKAM.US",
@@ -276,7 +291,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 147.23,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -296,7 +311,9 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Akamai Technologies, Inc.",
+    "marketCap": 21405099329.57634
   },
   {
     "ticker": "ALL.US",
@@ -309,7 +326,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 216.6,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -329,7 +346,9 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Allstate Corporation (The)",
+    "marketCap": 55757375009.17267
   },
   {
     "ticker": "AMAT.US",
@@ -342,7 +361,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 432.16,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -362,7 +381,9 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Applied Materials, Inc.",
+    "marketCap": 343117510176.3663
   },
   {
     "ticker": "AMD.US",
@@ -375,7 +396,7 @@
     "last_breakout_date": "2026-05-22",
     "breakout_count_60d": 1,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 467.51,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -397,7 +418,9 @@
     "breakout_dates": [
       "2026-05-22"
     ],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Advanced Micro Devices, Inc.",
+    "marketCap": 762322120662.7244
   },
   {
     "ticker": "AMDL.US",
@@ -410,7 +433,7 @@
     "last_breakout_date": "2026-05-22",
     "breakout_count_60d": 1,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 57.88,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -432,7 +455,8 @@
     "breakout_dates": [
       "2026-05-22"
     ],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "GraniteShares 2x Long AMD Daily"
   },
   {
     "ticker": "AMKR.US",
@@ -445,7 +469,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 3,
+    "days_in_trend": 4,
     "last_close": 65.75,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -461,11 +485,13 @@
     "ma_30d": 70.19,
     "ma_40d": 64.75,
     "ma_50d": 61.12,
-    "sector": "",
+    "sector": "Technology",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Amkor Technology, Inc.",
+    "marketCap": 16297618058.5
   },
   {
     "ticker": "AMZN.US",
@@ -478,7 +504,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 266.32,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -494,11 +520,13 @@
     "ma_30d": 261.74,
     "ma_40d": 250.02,
     "ma_50d": 241.92,
-    "sector": "",
+    "sector": "Consumer Cyclical",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Amazon.com, Inc.",
+    "marketCap": 2864833463782.9424
   },
   {
     "ticker": "ANET.US",
@@ -511,7 +539,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 154.03,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -527,11 +555,13 @@
     "ma_30d": 157.13,
     "ma_40d": 150.59,
     "ma_50d": 147.07,
-    "sector": "",
+    "sector": "Technology",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Arista Networks, Inc.",
+    "marketCap": 193949866998.06793
   },
   {
     "ticker": "APLD.US",
@@ -544,7 +574,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 45.87,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -564,7 +594,9 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Applied Digital Corporation",
+    "marketCap": 13108248448.695202
   },
   {
     "ticker": "ASML.US",
@@ -577,7 +609,7 @@
     "last_breakout_date": "2026-05-22",
     "breakout_count_60d": 1,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 1632.9,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -599,7 +631,9 @@
     "breakout_dates": [
       "2026-05-22"
     ],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "ASML Holding N.V. - New York Re",
+    "marketCap": 629348514588.111
   },
   {
     "ticker": "ASTS.US",
@@ -612,7 +646,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 105.86,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -628,11 +662,13 @@
     "ma_30d": 80.75,
     "ma_40d": 82.62,
     "ma_50d": 84.2,
-    "sector": "",
+    "sector": "Technology",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "AST SpaceMobile, Inc.",
+    "marketCap": 31625292286.72032
   },
   {
     "ticker": "ASX.US",
@@ -645,7 +681,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 34.81,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -665,7 +701,9 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "ASE Technology Holding Co., Ltd",
+    "marketCap": 76371255928.01604
   },
   {
     "ticker": "ATI.US",
@@ -678,7 +716,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 162.29,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -698,7 +736,9 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "ATI Inc.",
+    "marketCap": 22147784681.58568
   },
   {
     "ticker": "AVGO.US",
@@ -711,7 +751,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 414.14,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -731,7 +771,9 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Broadcom Inc.",
+    "marketCap": 1960815551077.251
   },
   {
     "ticker": "AXTI.US",
@@ -744,7 +786,7 @@
     "last_breakout_date": "2026-05-22",
     "breakout_count_60d": 1,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 140.83,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -766,7 +808,9 @@
     "breakout_dates": [
       "2026-05-22"
     ],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "AXT Inc",
+    "marketCap": 9213547122.513428
   },
   {
     "ticker": "BB.US",
@@ -779,7 +823,7 @@
     "last_breakout_date": "2026-05-22",
     "breakout_count_60d": 1,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 7.91,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -795,13 +839,15 @@
     "ma_30d": 5.63,
     "ma_40d": 5.09,
     "ma_50d": 4.73,
-    "sector": "",
+    "sector": "Technology",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [
       "2026-05-22"
     ],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "BlackBerry Limited",
+    "marketCap": 4635745639.944126
   },
   {
     "ticker": "BE.US",
@@ -814,7 +860,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 302.49,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -834,7 +880,9 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Bloom Energy Corporation",
+    "marketCap": 86041422853.54785
   },
   {
     "ticker": "BIDU.US",
@@ -847,7 +895,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 127.79,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -863,11 +911,13 @@
     "ma_30d": 130.47,
     "ma_40d": 125.37,
     "ma_50d": 123.79,
-    "sector": "",
+    "sector": "Communication Services",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Baidu, Inc.",
+    "marketCap": 43480887605.12061
   },
   {
     "ticker": "BIL.US",
@@ -880,7 +930,7 @@
     "last_breakout_date": "2026-05-22",
     "breakout_count_60d": 1,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 91.59,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -902,7 +952,8 @@
     "breakout_dates": [
       "2026-05-22"
     ],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "State Street SPDR Bloomberg 1-3"
   },
   {
     "ticker": "BK.US",
@@ -915,7 +966,7 @@
     "last_breakout_date": "2026-05-22",
     "breakout_count_60d": 1,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 139.15,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -937,7 +988,9 @@
     "breakout_dates": [
       "2026-05-22"
     ],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "The Bank of New York Mellon Cor",
+    "marketCap": 95509633660.67505
   },
   {
     "ticker": "BKR.US",
@@ -950,7 +1003,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 66.06,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -966,11 +1019,13 @@
     "ma_30d": 64.84,
     "ma_40d": 64.01,
     "ma_50d": 63.09,
-    "sector": "",
+    "sector": "Energy",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Baker Hughes Company",
+    "marketCap": 65536055701.77728
   },
   {
     "ticker": "BMY.US",
@@ -983,7 +1038,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 59.46,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -999,11 +1054,13 @@
     "ma_30d": 57.98,
     "ma_40d": 58.29,
     "ma_50d": 58.24,
-    "sector": "",
+    "sector": "Healthcare",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Bristol-Myers Squibb Company",
+    "marketCap": 121421554477.04794
   },
   {
     "ticker": "BNO.US",
@@ -1016,7 +1073,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 55.0,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -1036,7 +1093,8 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "United States Brent Oil Fund, L"
   },
   {
     "ticker": "BOXX.US",
@@ -1049,7 +1107,7 @@
     "last_breakout_date": "2026-05-22",
     "breakout_count_60d": 1,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 116.87,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -1071,7 +1129,8 @@
     "breakout_dates": [
       "2026-05-22"
     ],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Alpha Architect 1-3 Month Box E"
   },
   {
     "ticker": "BURL.US",
@@ -1084,7 +1143,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 324.51,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -1100,11 +1159,13 @@
     "ma_30d": 317.06,
     "ma_40d": 319.86,
     "ma_50d": 318.36,
-    "sector": "",
+    "sector": "Consumer Cyclical",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Burlington Stores, Inc.",
+    "marketCap": 20389051855.786865
   },
   {
     "ticker": "BWA.US",
@@ -1117,7 +1178,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 65.82,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -1137,7 +1198,9 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "BorgWarner Inc.",
+    "marketCap": 13500665354.023888
   },
   {
     "ticker": "C.US",
@@ -1150,7 +1213,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 125.09,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -1166,11 +1229,13 @@
     "ma_30d": 126.99,
     "ma_40d": 124.25,
     "ma_50d": 121.32,
-    "sector": "",
+    "sector": "Financial Services",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Citigroup, Inc.",
+    "marketCap": 213350615054.94064
   },
   {
     "ticker": "CASY.US",
@@ -1183,7 +1248,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 825.02,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -1203,7 +1268,9 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Caseys General Stores, Inc.",
+    "marketCap": 30580961787.623535
   },
   {
     "ticker": "CAT.US",
@@ -1216,7 +1283,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 879.89,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -1236,7 +1303,9 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Caterpillar, Inc.",
+    "marketCap": 405270286668.8229
   },
   {
     "ticker": "CB.US",
@@ -1249,7 +1318,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 327.89,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -1265,24 +1334,26 @@
     "ma_30d": 326.0,
     "ma_40d": 326.34,
     "ma_50d": 326.34,
-    "sector": "",
+    "sector": "Financial Services",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Chubb Limited",
+    "marketCap": 127175455837.88452
   },
   {
     "ticker": "CGBL.US",
     "market": "US",
     "pool": "trend",
     "pool_status": "PULLBACK",
-    "prev_pool_status": "WATCHING",
-    "status_change": "upgrade",
+    "prev_pool_status": "PULLBACK",
+    "status_change": "none",
     "first_breakout_date": "",
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 37.12,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -1302,7 +1373,8 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Capital Group Core Balanced ETF"
   },
   {
     "ticker": "CHRW.US",
@@ -1315,7 +1387,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 174.23,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -1331,11 +1403,13 @@
     "ma_30d": 174.78,
     "ma_40d": 172.76,
     "ma_50d": 172.2,
-    "sector": "",
+    "sector": "Industrials",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "C.H. Robinson Worldwide, Inc.",
+    "marketCap": 20537019604.052032
   },
   {
     "ticker": "CIEN.US",
@@ -1348,7 +1422,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 583.74,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -1368,7 +1442,9 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Ciena Corporation",
+    "marketCap": 82539916396.13599
   },
   {
     "ticker": "CIFR.US",
@@ -1381,7 +1457,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 21.97,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -1401,7 +1477,9 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Cipher Digital Inc.",
+    "marketCap": 8986810577.218206
   },
   {
     "ticker": "CLS.US",
@@ -1414,7 +1492,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 367.37,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -1430,11 +1508,13 @@
     "ma_30d": 384.59,
     "ma_40d": 363.26,
     "ma_50d": 346.75,
-    "sector": "",
+    "sector": "Technology",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Celestica, Inc.",
+    "marketCap": 42237669757.197876
   },
   {
     "ticker": "CMI.US",
@@ -1447,7 +1527,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 3,
+    "days_in_trend": 4,
     "last_close": 639.55,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -1463,11 +1543,13 @@
     "ma_30d": 657.99,
     "ma_40d": 633.18,
     "ma_50d": 614.76,
-    "sector": "",
+    "sector": "Industrials",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Cummins Inc.",
+    "marketCap": 88250906115.41315
   },
   {
     "ticker": "CNP.US",
@@ -1480,7 +1562,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 42.83,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -1496,11 +1578,13 @@
     "ma_30d": 42.4,
     "ma_40d": 42.59,
     "ma_50d": 42.59,
-    "sector": "",
+    "sector": "Utilities",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "CenterPoint Energy, Inc (Holdin",
+    "marketCap": 28018080026.220093
   },
   {
     "ticker": "CNQ.US",
@@ -1513,7 +1597,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 48.61,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -1529,11 +1613,13 @@
     "ma_30d": 46.41,
     "ma_40d": 46.76,
     "ma_50d": 47.17,
-    "sector": "",
+    "sector": "Energy",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Canadian Natural Resources Limi",
+    "marketCap": 101386364373.01636
   },
   {
     "ticker": "COHR.US",
@@ -1566,7 +1652,9 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Coherent Corp.",
+    "marketCap": 73867539862.87518
   },
   {
     "ticker": "CORZ.US",
@@ -1579,7 +1667,7 @@
     "last_breakout_date": "2026-05-22",
     "breakout_count_60d": 1,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 25.26,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -1601,7 +1689,9 @@
     "breakout_dates": [
       "2026-05-22"
     ],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Core Scientific, Inc.",
+    "marketCap": 8029782548.678169
   },
   {
     "ticker": "CRS.US",
@@ -1614,7 +1704,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 434.12,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -1630,11 +1720,13 @@
     "ma_30d": 430.27,
     "ma_40d": 423.17,
     "ma_50d": 414.82,
-    "sector": "",
+    "sector": "Industrials",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Carpenter Technology Corporatio",
+    "marketCap": 21569517638.834473
   },
   {
     "ticker": "CSCO.US",
@@ -1647,7 +1739,7 @@
     "last_breakout_date": "2026-05-22",
     "breakout_count_60d": 1,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 120.41,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -1669,7 +1761,9 @@
     "breakout_dates": [
       "2026-05-22"
     ],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Cisco Systems, Inc.",
+    "marketCap": 474588162446.61487
   },
   {
     "ticker": "CSX.US",
@@ -1682,7 +1776,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 3,
+    "days_in_trend": 4,
     "last_close": 45.52,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -1702,7 +1796,9 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "CSX Corporation",
+    "marketCap": 84582481575.70847
   },
   {
     "ticker": "CVE.US",
@@ -1715,7 +1811,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 3,
+    "days_in_trend": 4,
     "last_close": 30.05,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -1735,7 +1831,9 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Cenovus Energy Inc",
+    "marketCap": 56037809527.25601
   },
   {
     "ticker": "CVS.US",
@@ -1748,7 +1846,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 93.26,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -1768,7 +1866,9 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "CVS Health Corporation",
+    "marketCap": 118992983376.49478
   },
   {
     "ticker": "D.US",
@@ -1781,7 +1881,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 67.67,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -1801,7 +1901,9 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Dominion Energy, Inc.",
+    "marketCap": 59516608181.84454
   },
   {
     "ticker": "DAL.US",
@@ -1814,7 +1916,7 @@
     "last_breakout_date": "2026-05-22",
     "breakout_count_60d": 1,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 76.14,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -1836,7 +1938,9 @@
     "breakout_dates": [
       "2026-05-22"
     ],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Delta Air Lines, Inc.",
+    "marketCap": 50023548646.60248
   },
   {
     "ticker": "DELL.US",
@@ -1849,7 +1953,7 @@
     "last_breakout_date": "2026-05-22",
     "breakout_count_60d": 1,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 295.19,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -1871,7 +1975,9 @@
     "breakout_dates": [
       "2026-05-22"
     ],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Dell Technologies Inc.",
+    "marketCap": 191746064225.39008
   },
   {
     "ticker": "DIA.US",
@@ -1906,7 +2012,8 @@
     "breakout_dates": [
       "2026-05-22"
     ],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "State Street SPDR Dow Jones Ind"
   },
   {
     "ticker": "DLR.US",
@@ -1919,7 +2026,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 3,
+    "days_in_trend": 4,
     "last_close": 192.03,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -1935,11 +2042,13 @@
     "ma_30d": 196.07,
     "ma_40d": 192.55,
     "ma_50d": 189.55,
-    "sector": "",
+    "sector": "Real Estate",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Digital Realty Trust, Inc.",
+    "marketCap": 67480507193.13751
   },
   {
     "ticker": "DOCN.US",
@@ -1952,7 +2061,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 158.46,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -1972,7 +2081,9 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "DigitalOcean Holdings, Inc.",
+    "marketCap": 16537548821.94725
   },
   {
     "ticker": "EBAY.US",
@@ -1985,7 +2096,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 115.75,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -2005,7 +2116,9 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "eBay Inc.",
+    "marketCap": 51393000000.0
   },
   {
     "ticker": "EEM.US",
@@ -2018,7 +2131,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 65.88,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -2038,7 +2151,8 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "iShares MSCI Emerging Index Fun"
   },
   {
     "ticker": "EFA.US",
@@ -2051,7 +2165,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 103.98,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -2071,7 +2185,8 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "iShares MSCI EAFE ETF"
   },
   {
     "ticker": "EMB.US",
@@ -2084,7 +2199,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 95.17,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -2104,7 +2219,8 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "iShares J.P. Morgan USD Emergin"
   },
   {
     "ticker": "EME.US",
@@ -2117,7 +2233,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 848.91,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -2133,11 +2249,13 @@
     "ma_30d": 873.84,
     "ma_40d": 844.99,
     "ma_50d": 823.44,
-    "sector": "",
+    "sector": "Industrials",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "EMCOR Group, Inc.",
+    "marketCap": 37804140256.02704
   },
   {
     "ticker": "EMR.US",
@@ -2150,7 +2268,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 136.42,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -2166,11 +2284,13 @@
     "ma_30d": 139.06,
     "ma_40d": 137.71,
     "ma_50d": 136.12,
-    "sector": "",
+    "sector": "Industrials",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Emerson Electric Company",
+    "marketCap": 76408840974.42627
   },
   {
     "ticker": "EMXC.US",
@@ -2183,7 +2303,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 95.6,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -2203,7 +2323,8 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "iShares MSCI Emerging Markets e"
   },
   {
     "ticker": "ENB.US",
@@ -2216,7 +2337,7 @@
     "last_breakout_date": "2026-05-22",
     "breakout_count_60d": 1,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 58.04,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -2238,7 +2359,9 @@
     "breakout_dates": [
       "2026-05-22"
     ],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Enbridge Inc",
+    "marketCap": 126741741925.83377
   },
   {
     "ticker": "ENTG.US",
@@ -2251,7 +2374,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 135.28,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -2267,11 +2390,13 @@
     "ma_30d": 142.5,
     "ma_40d": 137.02,
     "ma_50d": 132.75,
-    "sector": "",
+    "sector": "Technology",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Entegris, Inc.",
+    "marketCap": 20603143814.086914
   },
   {
     "ticker": "EOG.US",
@@ -2284,7 +2409,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 141.22,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -2304,7 +2429,9 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "EOG Resources, Inc.",
+    "marketCap": 75217801656.78131
   },
   {
     "ticker": "EQIX.US",
@@ -2317,7 +2444,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 1079.79,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -2333,11 +2460,13 @@
     "ma_30d": 1074.57,
     "ma_40d": 1054.86,
     "ma_50d": 1036.92,
-    "sector": "",
+    "sector": "Real Estate",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Equinix, Inc.",
+    "marketCap": 106493480600.42969
   },
   {
     "ticker": "ETN.US",
@@ -2350,7 +2479,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 391.35,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -2366,11 +2495,13 @@
     "ma_30d": 405.1,
     "ma_40d": 396.25,
     "ma_50d": 389.27,
-    "sector": "",
+    "sector": "Industrials",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Eaton Corporation, PLC",
+    "marketCap": 151961207369.99512
   },
   {
     "ticker": "ETR.US",
@@ -2399,11 +2530,13 @@
     "ma_30d": 113.13,
     "ma_40d": 113.16,
     "ma_50d": 111.13,
-    "sector": "",
+    "sector": "Utilities",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Entergy Corporation",
+    "marketCap": 51466482301.47988
   },
   {
     "ticker": "EW.US",
@@ -2416,7 +2549,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 85.78,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -2432,11 +2565,13 @@
     "ma_30d": 81.51,
     "ma_40d": 81.18,
     "ma_50d": 81.46,
-    "sector": "",
+    "sector": "Healthcare",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Edwards Lifesciences Corporatio",
+    "marketCap": 49392123297.11914
   },
   {
     "ticker": "EWJ.US",
@@ -2449,7 +2584,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 91.61,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -2469,7 +2604,8 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "iShares MSCI Japan Index Fund"
   },
   {
     "ticker": "EWT.US",
@@ -2482,7 +2618,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 96.84,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -2502,7 +2638,8 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "iShares MSCI Taiwan ETF"
   },
   {
     "ticker": "EWY.US",
@@ -2515,7 +2652,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 182.03,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -2535,7 +2672,8 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "iShares MSCI South Korea ETF"
   },
   {
     "ticker": "F.US",
@@ -2548,7 +2686,7 @@
     "last_breakout_date": "2026-05-22",
     "breakout_count_60d": 1,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 14.93,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -2564,13 +2702,15 @@
     "ma_30d": 12.57,
     "ma_40d": 12.32,
     "ma_50d": 12.17,
-    "sector": "",
+    "sector": "Consumer Cyclical",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [
       "2026-05-22"
     ],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Ford Motor Company",
+    "marketCap": 59491462181.93169
   },
   {
     "ticker": "FANG.US",
@@ -2583,7 +2723,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 200.71,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -2603,7 +2743,9 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Diamondback Energy, Inc.",
+    "marketCap": 56462393729.570114
   },
   {
     "ticker": "FCEL.US",
@@ -2616,7 +2758,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 25.01,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -2632,11 +2774,13 @@
     "ma_30d": 13.94,
     "ma_40d": 12.07,
     "ma_50d": 11.03,
-    "sector": "",
+    "sector": "Industrials",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "FuelCell Energy, Inc.",
+    "marketCap": 1324976440.7856712
   },
   {
     "ticker": "FCX.US",
@@ -2649,7 +2793,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 61.99,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -2665,11 +2809,13 @@
     "ma_30d": 63.05,
     "ma_40d": 62.59,
     "ma_50d": 61.2,
-    "sector": "",
+    "sector": "Basic Materials",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Freeport-McMoRan, Inc.",
+    "marketCap": 89114338444.2465
   },
   {
     "ticker": "FDX.US",
@@ -2682,7 +2828,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 394.2,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -2698,11 +2844,13 @@
     "ma_30d": 381.55,
     "ma_40d": 376.24,
     "ma_50d": 371.92,
-    "sector": "",
+    "sector": "Industrials",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "FedEx Corporation",
+    "marketCap": 94058786127.88013
   },
   {
     "ticker": "FIX.US",
@@ -2715,7 +2863,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 1828.25,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -2731,11 +2879,13 @@
     "ma_30d": 1825.11,
     "ma_40d": 1729.09,
     "ma_50d": 1665.71,
-    "sector": "",
+    "sector": "Industrials",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Comfort Systems USA, Inc.",
+    "marketCap": 64325087667.75
   },
   {
     "ticker": "FLEX.US",
@@ -2748,7 +2898,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 132.47,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -2768,7 +2918,9 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Flex Ltd.",
+    "marketCap": 48534083907.048676
   },
   {
     "ticker": "FLNC.US",
@@ -2781,7 +2933,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 21.49,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -2797,11 +2949,13 @@
     "ma_30d": 16.33,
     "ma_40d": 15.6,
     "ma_50d": 15.68,
-    "sector": "",
+    "sector": "Utilities",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Fluence Energy, Inc.",
+    "marketCap": 2854118889.7018623
   },
   {
     "ticker": "FN.US",
@@ -2814,7 +2968,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 703.86,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -2834,7 +2988,9 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Fabrinet",
+    "marketCap": 25219120271.550293
   },
   {
     "ticker": "FTAI.US",
@@ -2847,7 +3003,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 252.13,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -2863,11 +3019,13 @@
     "ma_30d": 248.65,
     "ma_40d": 247.87,
     "ma_50d": 245.84,
-    "sector": "",
+    "sector": "Industrials",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "FTAI Aviation Ltd.",
+    "marketCap": 25864245231.253418
   },
   {
     "ticker": "GD.US",
@@ -2880,7 +3038,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 342.89,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -2896,11 +3054,13 @@
     "ma_30d": 336.92,
     "ma_40d": 338.81,
     "ma_50d": 340.97,
-    "sector": "",
+    "sector": "Industrials",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "General Dynamics Corporation",
+    "marketCap": 92727810781.8097
   },
   {
     "ticker": "GE.US",
@@ -2913,7 +3073,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 302.84,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -2929,11 +3089,13 @@
     "ma_30d": 294.28,
     "ma_40d": 293.72,
     "ma_50d": 293.96,
-    "sector": "",
+    "sector": "Industrials",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "GE Aerospace",
+    "marketCap": 316416193146.23975
   },
   {
     "ticker": "GEV.US",
@@ -2946,7 +3108,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 1038.74,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -2962,11 +3124,13 @@
     "ma_30d": 1054.15,
     "ma_40d": 1016.62,
     "ma_50d": 986.34,
-    "sector": "",
+    "sector": "Industrials",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "GE Vernova Inc.",
+    "marketCap": 279130204982.0813
   },
   {
     "ticker": "GFS.US",
@@ -2979,7 +3143,7 @@
     "last_breakout_date": "2026-05-22",
     "breakout_count_60d": 1,
     "from_bottom": false,
-    "days_in_trend": 3,
+    "days_in_trend": 4,
     "last_close": 85.64,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -3001,7 +3165,9 @@
     "breakout_dates": [
       "2026-05-22"
     ],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "GlobalFoundries Inc.",
+    "marketCap": 46966383586.87317
   },
   {
     "ticker": "GH.US",
@@ -3014,7 +3180,7 @@
     "last_breakout_date": "2026-05-22",
     "breakout_count_60d": 1,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 118.95,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -3030,13 +3196,15 @@
     "ma_30d": 93.41,
     "ma_40d": 92.3,
     "ma_50d": 91.17,
-    "sector": "",
+    "sector": "Healthcare",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [
       "2026-05-22"
     ],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Guardant Health, Inc.",
+    "marketCap": 15772761149.88713
   },
   {
     "ticker": "GLW.US",
@@ -3049,7 +3217,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 194.05,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -3069,7 +3237,9 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Corning Incorporated",
+    "marketCap": 167006772567.7082
   },
   {
     "ticker": "GM.US",
@@ -3082,7 +3252,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 78.79,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -3098,11 +3268,13 @@
     "ma_30d": 77.35,
     "ma_40d": 76.61,
     "ma_50d": 76.17,
-    "sector": "",
+    "sector": "Consumer Cyclical",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "General Motors Company",
+    "marketCap": 71042201539.54913
   },
   {
     "ticker": "GNRC.US",
@@ -3115,7 +3287,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 270.14,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -3135,7 +3307,9 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Generac Holdlings Inc.",
+    "marketCap": 15902786347.674194
   },
   {
     "ticker": "GOOG.US",
@@ -3148,7 +3322,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 379.38,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -3168,7 +3342,9 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Alphabet Inc.",
+    "marketCap": 4596357262301.962
   },
   {
     "ticker": "GOOGL.US",
@@ -3181,7 +3357,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 382.97,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -3201,7 +3377,9 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Alphabet Inc.",
+    "marketCap": 4639851662446.74
   },
   {
     "ticker": "GS.US",
@@ -3214,7 +3392,7 @@
     "last_breakout_date": "2026-05-22",
     "breakout_count_60d": 1,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 996.73,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -3230,13 +3408,15 @@
     "ma_30d": 934.41,
     "ma_40d": 916.49,
     "ma_50d": 896.07,
-    "sector": "",
+    "sector": "Financial Services",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [
       "2026-05-22"
     ],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Goldman Sachs Group, Inc. (The)",
+    "marketCap": 294042740971.4663
   },
   {
     "ticker": "GTLS.US",
@@ -3249,7 +3429,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 3,
+    "days_in_trend": 4,
     "last_close": 207.96,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -3265,11 +3445,13 @@
     "ma_30d": 207.74,
     "ma_40d": 207.62,
     "ma_50d": 207.51,
-    "sector": "",
+    "sector": "Industrials",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Chart Industries, Inc.",
+    "marketCap": 9954853366.346619
   },
   {
     "ticker": "GWW.US",
@@ -3282,7 +3464,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 1247.79,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -3298,11 +3480,13 @@
     "ma_30d": 1190.44,
     "ma_40d": 1170.93,
     "ma_50d": 1148.16,
-    "sector": "",
+    "sector": "Industrials",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "W.W. Grainger, Inc.",
+    "marketCap": 58912059601.27246
   },
   {
     "ticker": "HAL.US",
@@ -3315,7 +3499,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 3,
+    "days_in_trend": 4,
     "last_close": 41.47,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -3335,7 +3519,9 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Halliburton Company",
+    "marketCap": 34643945090.222626
   },
   {
     "ticker": "HLT.US",
@@ -3348,7 +3534,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 321.08,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -3364,11 +3550,13 @@
     "ma_30d": 323.71,
     "ma_40d": 319.73,
     "ma_50d": 315.35,
-    "sector": "",
+    "sector": "Consumer Cyclical",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Hilton Worldwide Holdings Inc.",
+    "marketCap": 73093336224.95813
   },
   {
     "ticker": "HON.US",
@@ -3381,7 +3569,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 227.92,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -3397,11 +3585,13 @@
     "ma_30d": 218.32,
     "ma_40d": 220.57,
     "ma_50d": 221.74,
-    "sector": "",
+    "sector": "Industrials",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Honeywell International Inc.",
+    "marketCap": 144422217722.2265
   },
   {
     "ticker": "HPE.US",
@@ -3414,7 +3604,7 @@
     "last_breakout_date": "2026-05-22",
     "breakout_count_60d": 1,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 37.58,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -3436,7 +3626,9 @@
     "breakout_dates": [
       "2026-05-22"
     ],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Hewlett Packard Enterprise Comp",
+    "marketCap": 49863179094.1624
   },
   {
     "ticker": "HPQ.US",
@@ -3465,13 +3657,15 @@
     "ma_30d": 20.74,
     "ma_40d": 20.28,
     "ma_50d": 19.98,
-    "sector": "",
+    "sector": "Technology",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [
       "2026-05-22"
     ],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "HP Inc.",
+    "marketCap": 23169929175.650017
   },
   {
     "ticker": "HUT.US",
@@ -3484,7 +3678,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 105.9,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -3504,7 +3698,9 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Hut 8 Corp.",
+    "marketCap": 11923716632.60498
   },
   {
     "ticker": "HWM.US",
@@ -3517,7 +3713,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 3,
+    "days_in_trend": 4,
     "last_close": 256.55,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -3537,7 +3733,9 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Howmet Aerospace Inc.",
+    "marketCap": 102647569879.52545
   },
   {
     "ticker": "HYG.US",
@@ -3550,7 +3748,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 2,
+    "days_in_trend": 3,
     "last_close": 79.91,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -3570,7 +3768,8 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "iShares iBoxx $ High Yield Corp"
   },
   {
     "ticker": "IBKR.US",
@@ -3583,7 +3782,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 81.35,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -3599,11 +3798,13 @@
     "ma_30d": 81.51,
     "ma_40d": 78.2,
     "ma_50d": 76.03,
-    "sector": "",
+    "sector": "Financial Services",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Interactive Brokers Group, Inc.",
+    "marketCap": 36240184871.644196
   },
   {
     "ticker": "IEFA.US",
@@ -3616,7 +3817,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 97.22,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -3636,7 +3837,8 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "iShares Core MSCI EAFE ETF"
   },
   {
     "ticker": "IEMG.US",
@@ -3649,7 +3851,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 80.57,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -3669,7 +3871,8 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "iShares Core MSCI Emerging Mark"
   },
   {
     "ticker": "IJH.US",
@@ -3682,7 +3885,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 73.5,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -3702,7 +3905,8 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "iShares Core S&P Mid-Cap ETF"
   },
   {
     "ticker": "IJR.US",
@@ -3715,7 +3919,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 137.4,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -3735,7 +3939,8 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "iShares Core S&P Small-Cap ETF"
   },
   {
     "ticker": "IJS.US",
@@ -3748,7 +3953,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 129.44,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -3768,7 +3973,8 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "iShares S&P SmallCap 600 Value "
   },
   {
     "ticker": "INTC.US",
@@ -3781,7 +3987,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 119.84,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -3801,7 +4007,9 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Intel Corporation",
+    "marketCap": 602315821594.2383
   },
   {
     "ticker": "IREN.US",
@@ -3814,7 +4022,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 56.83,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -3830,11 +4038,13 @@
     "ma_30d": 51.14,
     "ma_40d": 47.2,
     "ma_50d": 46.1,
-    "sector": "",
+    "sector": "Financial Services",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "IREN LIMITED",
+    "marketCap": 20309830697.799896
   },
   {
     "ticker": "ITOT.US",
@@ -3847,7 +4057,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 162.93,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -3867,7 +4077,8 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "iShares Core S&P Total U.S. Sto"
   },
   {
     "ticker": "IVV.US",
@@ -3880,7 +4091,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 749.14,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -3900,7 +4111,8 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "iShares Core S&P 500 ETF"
   },
   {
     "ticker": "IVW.US",
@@ -3913,7 +4125,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 136.62,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -3933,7 +4145,8 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "iShares S&P 500 Growth ETF"
   },
   {
     "ticker": "IWD.US",
@@ -3946,7 +4159,7 @@
     "last_breakout_date": "2026-05-22",
     "breakout_count_60d": 1,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 236.32,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -3968,7 +4181,8 @@
     "breakout_dates": [
       "2026-05-22"
     ],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "iShares Russell 1000 Value ETF"
   },
   {
     "ticker": "IWM.US",
@@ -3981,7 +4195,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 285.12,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -4001,7 +4215,8 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "iShares Russell 2000 Index Fund"
   },
   {
     "ticker": "IWR.US",
@@ -4014,7 +4229,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 3,
+    "days_in_trend": 4,
     "last_close": 105.92,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -4026,7 +4241,7 @@
     "ma_20w_slope_2nd": 0.1374,
     "ma_10d": 104.62,
     "ma_15d": 104.76,
-    "ma_20d": 104.45,
+    "ma_20d": 104.46,
     "ma_30d": 104.09,
     "ma_40d": 102.67,
     "ma_50d": 101.6,
@@ -4034,7 +4249,8 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "iShares Russell Mid-Cap ETF"
   },
   {
     "ticker": "IYM.US",
@@ -4047,7 +4263,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 181.64,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -4067,7 +4283,8 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "iShares U.S. Basic Materials ET"
   },
   {
     "ticker": "IYR.US",
@@ -4080,7 +4297,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 102.72,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -4100,7 +4317,8 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "iShares U.S. Real Estate ETF"
   },
   {
     "ticker": "JBHT.US",
@@ -4113,7 +4331,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 258.77,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -4133,7 +4351,9 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "J.B. Hunt Transport Services, I",
+    "marketCap": 24401803724.308014
   },
   {
     "ticker": "JBL.US",
@@ -4146,7 +4366,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 364.35,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -4166,7 +4386,9 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Jabil Inc.",
+    "marketCap": 38439880969.6369
   },
   {
     "ticker": "JCI.US",
@@ -4179,7 +4401,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 138.36,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -4195,11 +4417,13 @@
     "ma_30d": 141.08,
     "ma_40d": 139.48,
     "ma_50d": 138.17,
-    "sector": "",
+    "sector": "Industrials",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Johnson Controls International ",
+    "marketCap": 84415595203.46501
   },
   {
     "ticker": "JEPQ.US",
@@ -4212,7 +4436,7 @@
     "last_breakout_date": "2026-05-22",
     "breakout_count_60d": 1,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 60.21,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -4234,7 +4458,8 @@
     "breakout_dates": [
       "2026-05-22"
     ],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "JPMorgan Nasdaq Equity Premium "
   },
   {
     "ticker": "JNJ.US",
@@ -4247,7 +4472,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 234.34,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -4263,11 +4488,13 @@
     "ma_30d": 229.01,
     "ma_40d": 232.13,
     "ma_50d": 233.36,
-    "sector": "",
+    "sector": "Healthcare",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Johnson & Johnson",
+    "marketCap": 564107216168.6482
   },
   {
     "ticker": "JPST.US",
@@ -4280,7 +4507,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 50.53,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -4300,7 +4527,8 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "JPMorgan Ultra-Short Income ETF"
   },
   {
     "ticker": "KEYS.US",
@@ -4313,7 +4541,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 3,
+    "days_in_trend": 4,
     "last_close": 346.56,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -4333,7 +4561,9 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Keysight Technologies Inc.",
+    "marketCap": 59171132410.35797
   },
   {
     "ticker": "KLAC.US",
@@ -4346,7 +4576,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 1888.38,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -4366,7 +4596,9 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "KLA Corporation",
+    "marketCap": 246674398743.8097
   },
   {
     "ticker": "KMI.US",
@@ -4379,7 +4611,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 33.79,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -4399,7 +4631,9 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Kinder Morgan, Inc.",
+    "marketCap": 75176864365.91882
   },
   {
     "ticker": "KO.US",
@@ -4412,7 +4646,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 81.48,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -4432,7 +4666,9 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Coca-Cola Company (The)",
+    "marketCap": 350566281861.7878
   },
   {
     "ticker": "KORU.US",
@@ -4445,7 +4681,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 780.35,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -4465,7 +4701,8 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Direxion Daily South Korea Bull"
   },
   {
     "ticker": "KRE.US",
@@ -4478,7 +4715,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 69.37,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -4498,7 +4735,8 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "State Street SPDR S&P Regional "
   },
   {
     "ticker": "LITE.US",
@@ -4511,7 +4749,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 946.9,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -4531,7 +4769,9 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Lumentum Holdings Inc.",
+    "marketCap": 73668821899.41406
   },
   {
     "ticker": "LLY.US",
@@ -4544,7 +4784,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 1065.0,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -4560,11 +4800,13 @@
     "ma_30d": 952.45,
     "ma_40d": 945.96,
     "ma_50d": 941.92,
-    "sector": "",
+    "sector": "Healthcare",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Eli Lilly and Company",
+    "marketCap": 949704597390.0
   },
   {
     "ticker": "LRCX.US",
@@ -4577,7 +4819,7 @@
     "last_breakout_date": "2026-05-22",
     "breakout_count_60d": 1,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 305.35,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -4599,7 +4841,9 @@
     "breakout_dates": [
       "2026-05-22"
     ],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Lam Research Corporation",
+    "marketCap": 381852091282.6843
   },
   {
     "ticker": "LSCC.US",
@@ -4612,7 +4856,7 @@
     "last_breakout_date": "2026-05-22",
     "breakout_count_60d": 1,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 143.22,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -4634,7 +4878,9 @@
     "breakout_dates": [
       "2026-05-22"
     ],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Lattice Semiconductor Corporati",
+    "marketCap": 19622265446.78592
   },
   {
     "ticker": "LUNR.US",
@@ -4647,7 +4893,7 @@
     "last_breakout_date": "2026-05-22",
     "breakout_count_60d": 1,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 38.26,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -4669,7 +4915,9 @@
     "breakout_dates": [
       "2026-05-22"
     ],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Intuitive Machines, Inc.",
+    "marketCap": 6138905073.026127
   },
   {
     "ticker": "LUV.US",
@@ -4682,7 +4930,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 40.86,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -4698,11 +4946,13 @@
     "ma_30d": 39.71,
     "ma_40d": 39.36,
     "ma_50d": 39.5,
-    "sector": "",
+    "sector": "Industrials",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Southwest Airlines Company",
+    "marketCap": 19971294211.5038
   },
   {
     "ticker": "LYV.US",
@@ -4715,7 +4965,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 165.55,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -4735,7 +4985,9 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Live Nation Entertainment, Inc.",
+    "marketCap": 38525604584.6331
   },
   {
     "ticker": "MAR.US",
@@ -4748,7 +5000,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 369.15,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -4768,7 +5020,9 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Marriott International",
+    "marketCap": 97340653571.02237
   },
   {
     "ticker": "MCHP.US",
@@ -4781,7 +5035,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 93.43,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -4801,7 +5055,9 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Microchip Technology Incorporat",
+    "marketCap": 50646467389.25947
   },
   {
     "ticker": "MDY.US",
@@ -4814,7 +5070,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 670.65,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -4834,7 +5090,8 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "State Street SPDR S&P MIDCAP 40"
   },
   {
     "ticker": "MKSI.US",
@@ -4847,7 +5104,7 @@
     "last_breakout_date": "2026-05-22",
     "breakout_count_60d": 1,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 320.62,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -4869,7 +5126,9 @@
     "breakout_dates": [
       "2026-05-22"
     ],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "MKS Inc.",
+    "marketCap": 21655998310.174683
   },
   {
     "ticker": "MNST.US",
@@ -4882,7 +5141,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 86.79,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -4898,11 +5157,13 @@
     "ma_30d": 80.1,
     "ma_40d": 78.44,
     "ma_50d": 77.66,
-    "sector": "",
+    "sector": "Consumer Defensive",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Monster Beverage Corporation",
+    "marketCap": 84881324762.29317
   },
   {
     "ticker": "MO.US",
@@ -4915,7 +5176,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 73.9,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -4935,7 +5196,9 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Altria Group, Inc.",
+    "marketCap": 123404964814.55182
   },
   {
     "ticker": "MOD.US",
@@ -4948,7 +5211,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 260.52,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -4968,7 +5231,9 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Modine Manufacturing Company",
+    "marketCap": 13737530863.117767
   },
   {
     "ticker": "MPC.US",
@@ -4981,7 +5246,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 254.65,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -5001,7 +5266,9 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Marathon Petroleum Corporation",
+    "marketCap": 74341662320.91019
   },
   {
     "ticker": "MPWR.US",
@@ -5014,7 +5281,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 1589.81,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -5030,11 +5297,13 @@
     "ma_30d": 1542.19,
     "ma_40d": 1450.51,
     "ma_50d": 1375.75,
-    "sector": "",
+    "sector": "Technology",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Monolithic Power Systems, Inc.",
+    "marketCap": 78106202847.93799
   },
   {
     "ticker": "MRAM.US",
@@ -5047,7 +5316,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 3,
+    "days_in_trend": 4,
     "last_close": 33.68,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -5063,11 +5332,13 @@
     "ma_30d": 22.49,
     "ma_40d": 19.2,
     "ma_50d": 17.2,
-    "sector": "",
+    "sector": "Technology",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Everspin Technologies, Inc.",
+    "marketCap": 789714400.5156326
   },
   {
     "ticker": "MRK.US",
@@ -5080,7 +5351,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 122.41,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -5096,11 +5367,13 @@
     "ma_30d": 113.92,
     "ma_40d": 115.62,
     "ma_50d": 115.68,
-    "sector": "",
+    "sector": "Healthcare",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Merck & Company, Inc.",
+    "marketCap": 302331215684.9171
   },
   {
     "ticker": "MRVL.US",
@@ -5113,7 +5386,7 @@
     "last_breakout_date": "2026-05-22",
     "breakout_count_60d": 1,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 196.33,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -5135,7 +5408,9 @@
     "breakout_dates": [
       "2026-05-22"
     ],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Marvell Technology, Inc.",
+    "marketCap": 171897356058.27576
   },
   {
     "ticker": "MS.US",
@@ -5148,7 +5423,7 @@
     "last_breakout_date": "2026-05-22",
     "breakout_count_60d": 1,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 201.03,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -5170,7 +5445,9 @@
     "breakout_dates": [
       "2026-05-22"
     ],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Morgan Stanley",
+    "marketCap": 317081564836.1135
   },
   {
     "ticker": "MSCI.US",
@@ -5183,7 +5460,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 3,
+    "days_in_trend": 4,
     "last_close": 588.55,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -5199,11 +5476,13 @@
     "ma_30d": 579.03,
     "ma_40d": 569.02,
     "ma_50d": 564.4,
-    "sector": "",
+    "sector": "Financial Services",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "MSCI Inc.",
+    "marketCap": 42803823383.81201
   },
   {
     "ticker": "MTSI.US",
@@ -5216,7 +5495,7 @@
     "last_breakout_date": "2026-05-22",
     "breakout_count_60d": 1,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 385.98,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -5238,7 +5517,9 @@
     "breakout_dates": [
       "2026-05-22"
     ],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "MACOM Technology Solutions Hold",
+    "marketCap": 29448643686.730408
   },
   {
     "ticker": "MTUM.US",
@@ -5251,7 +5532,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 3,
+    "days_in_trend": 4,
     "last_close": 303.6,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -5271,7 +5552,8 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "iShares MSCI USA Momentum Facto"
   },
   {
     "ticker": "MTZ.US",
@@ -5284,7 +5566,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 382.11,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -5300,11 +5582,13 @@
     "ma_30d": 393.69,
     "ma_40d": 379.16,
     "ma_50d": 364.82,
-    "sector": "",
+    "sector": "Industrials",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "MasTec, Inc.",
+    "marketCap": 30193779275.66162
   },
   {
     "ticker": "MU.US",
@@ -5317,7 +5601,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 751.0,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -5337,7 +5621,9 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Micron Technology, Inc.",
+    "marketCap": 846928272301.0
   },
   {
     "ticker": "MUU.US",
@@ -5350,7 +5636,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 3,
+    "days_in_trend": 4,
     "last_close": 534.37,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -5370,7 +5656,8 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Direxion Daily MU Bull 2X ETF"
   },
   {
     "ticker": "MXL.US",
@@ -5383,7 +5670,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 99.16,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -5403,7 +5690,9 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "MaxLinear, Inc",
+    "marketCap": 8879377622.367096
   },
   {
     "ticker": "NBIS.US",
@@ -5416,7 +5705,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 214.77,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -5436,7 +5725,9 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Nebius Group N.V.",
+    "marketCap": 54529716210.150116
   },
   {
     "ticker": "NOK.US",
@@ -5449,7 +5740,7 @@
     "last_breakout_date": "2026-05-22",
     "breakout_count_60d": 1,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 15.47,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -5471,7 +5762,9 @@
     "breakout_dates": [
       "2026-05-22"
     ],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Nokia Corporation Sponsored",
+    "marketCap": 86361805116.06744
   },
   {
     "ticker": "NSC.US",
@@ -5484,7 +5777,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 314.53,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -5504,7 +5797,9 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Norfolk Southern Corporation",
+    "marketCap": 70641550860.3674
   },
   {
     "ticker": "NTRA.US",
@@ -5517,7 +5812,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 203.19,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -5533,11 +5828,13 @@
     "ma_30d": 203.22,
     "ma_40d": 202.46,
     "ma_50d": 201.32,
-    "sector": "",
+    "sector": "Healthcare",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Natera, Inc.",
+    "marketCap": 29099933818.22693
   },
   {
     "ticker": "NUE.US",
@@ -5550,7 +5847,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 232.0,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -5570,7 +5867,9 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Nucor Corporation",
+    "marketCap": 52835900400.0
   },
   {
     "ticker": "NVDA.US",
@@ -5583,7 +5882,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 215.33,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -5603,7 +5902,9 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "NVIDIA Corporation",
+    "marketCap": 5215507974349.976
   },
   {
     "ticker": "NVDL.US",
@@ -5616,7 +5917,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 106.79,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -5636,7 +5937,8 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "GraniteShares 2x Long NVDA Dail"
   },
   {
     "ticker": "NVS.US",
@@ -5649,7 +5951,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 3,
+    "days_in_trend": 4,
     "last_close": 152.01,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -5665,11 +5967,13 @@
     "ma_30d": 148.42,
     "ma_40d": 149.51,
     "ma_50d": 149.7,
-    "sector": "",
+    "sector": "Healthcare",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Novartis AG",
+    "marketCap": 290049049118.1878
   },
   {
     "ticker": "NVT.US",
@@ -5682,7 +5986,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 164.66,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -5702,7 +6006,9 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "nVent Electric plc",
+    "marketCap": 26628890218.557983
   },
   {
     "ticker": "NVTS.US",
@@ -5715,7 +6021,7 @@
     "last_breakout_date": "2026-05-22",
     "breakout_count_60d": 1,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 29.25,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -5737,7 +6043,9 @@
     "breakout_dates": [
       "2026-05-22"
     ],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Navitas Semiconductor Corporati",
+    "marketCap": 6836110105.5
   },
   {
     "ticker": "NXPI.US",
@@ -5750,7 +6058,7 @@
     "last_breakout_date": "2026-05-22",
     "breakout_count_60d": 1,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 316.47,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -5772,7 +6080,9 @@
     "breakout_dates": [
       "2026-05-22"
     ],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "NXP Semiconductors N.V.",
+    "marketCap": 79899522679.32224
   },
   {
     "ticker": "NXT.US",
@@ -5785,7 +6095,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 130.5,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -5805,7 +6115,9 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Nextpower Inc.",
+    "marketCap": 19610818596.0
   },
   {
     "ticker": "ODFL.US",
@@ -5818,7 +6130,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 210.47,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -5834,11 +6146,13 @@
     "ma_30d": 207.81,
     "ma_40d": 205.8,
     "ma_50d": 201.56,
-    "sector": "",
+    "sector": "Industrials",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Old Dominion Freight Line, Inc.",
+    "marketCap": 43771084776.87753
   },
   {
     "ticker": "ON.US",
@@ -5851,7 +6165,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 116.2,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -5871,7 +6185,9 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "ON Semiconductor Corporation",
+    "marketCap": 45178929607.666824
   },
   {
     "ticker": "ONTO.US",
@@ -5884,7 +6200,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 262.25,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -5900,11 +6216,13 @@
     "ma_30d": 280.17,
     "ma_40d": 265.39,
     "ma_50d": 253.26,
-    "sector": "",
+    "sector": "Technology",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Onto Innovation Inc.",
+    "marketCap": 13045250445.75
   },
   {
     "ticker": "PL.US",
@@ -5917,7 +6235,7 @@
     "last_breakout_date": "2026-05-22",
     "breakout_count_60d": 1,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 44.35,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -5939,7 +6257,9 @@
     "breakout_dates": [
       "2026-05-22"
     ],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Planet Labs PBC",
+    "marketCap": 15806037698.78714
   },
   {
     "ticker": "PLD.US",
@@ -5952,7 +6272,7 @@
     "last_breakout_date": "2026-05-22",
     "breakout_count_60d": 1,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 145.9,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -5974,7 +6294,9 @@
     "breakout_dates": [
       "2026-05-22"
     ],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Prologis, Inc.",
+    "marketCap": 136028108509.46045
   },
   {
     "ticker": "PLUG.US",
@@ -5987,7 +6309,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 3.78,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -6003,11 +6325,13 @@
     "ma_30d": 3.27,
     "ma_40d": 3.07,
     "ma_50d": 2.91,
-    "sector": "",
+    "sector": "Industrials",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Plug Power, Inc.",
+    "marketCap": 5273361090.046753
   },
   {
     "ticker": "PNC.US",
@@ -6020,7 +6344,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 219.23,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -6036,11 +6360,13 @@
     "ma_30d": 219.49,
     "ma_40d": 217.35,
     "ma_50d": 214.22,
-    "sector": "",
+    "sector": "Financial Services",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "PNC Financial Services Group, I",
+    "marketCap": 88035012557.6908
   },
   {
     "ticker": "POET.US",
@@ -6053,12 +6379,12 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 3,
+    "days_in_trend": 4,
     "last_close": 14.59,
     "weekly_aligned": true,
     "daily_aligned": true,
     "ma_5w": 12.78,
-    "ma_20w": 8.0,
+    "ma_20w": 8.01,
     "ma_40w": 7.0,
     "ma_50w": 6.7,
     "ma_60w": 6.28,
@@ -6073,7 +6399,9 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "POET Technologies Inc.",
+    "marketCap": 2518166999.875969
   },
   {
     "ticker": "PSX.US",
@@ -6086,7 +6414,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 177.69,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -6106,7 +6434,9 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Phillips 66",
+    "marketCap": 71242144682.64526
   },
   {
     "ticker": "PWR.US",
@@ -6119,7 +6449,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 723.44,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -6139,7 +6469,9 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Quanta Services, Inc.",
+    "marketCap": 108559514558.91779
   },
   {
     "ticker": "QLD.US",
@@ -6152,7 +6484,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 93.1,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -6172,7 +6504,8 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "ProShares Ultra QQQ"
   },
   {
     "ticker": "QQQ.US",
@@ -6185,7 +6518,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 717.54,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -6205,7 +6538,8 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Invesco QQQ Trust, Series 1"
   },
   {
     "ticker": "QQQI.US",
@@ -6218,7 +6552,7 @@
     "last_breakout_date": "2026-05-22",
     "breakout_count_60d": 1,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 56.3,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -6240,7 +6574,8 @@
     "breakout_dates": [
       "2026-05-22"
     ],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "NEOS Nasdaq 100 High Income ETF"
   },
   {
     "ticker": "QQQM.US",
@@ -6253,7 +6588,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 295.44,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -6273,7 +6608,8 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Invesco NASDAQ 100 ETF"
   },
   {
     "ticker": "QTUM.US",
@@ -6286,7 +6622,7 @@
     "last_breakout_date": "2026-05-22",
     "breakout_count_60d": 1,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 153.44,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -6308,7 +6644,8 @@
     "breakout_dates": [
       "2026-05-22"
     ],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Defiance Quantum ETF"
   },
   {
     "ticker": "RF.US",
@@ -6321,7 +6658,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 27.83,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -6337,11 +6674,13 @@
     "ma_30d": 27.74,
     "ma_40d": 27.45,
     "ma_50d": 27.04,
-    "sector": "",
+    "sector": "Financial Services",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Regions Financial Corporation",
+    "marketCap": 23749552477.43231
   },
   {
     "ticker": "RIG.US",
@@ -6354,7 +6693,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 6.81,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -6370,11 +6709,13 @@
     "ma_30d": 6.56,
     "ma_40d": 6.58,
     "ma_50d": 6.56,
-    "sector": "",
+    "sector": "Energy",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Transocean Ltd (Switzerland)",
+    "marketCap": 7602964344.6767235
   },
   {
     "ticker": "RIO.US",
@@ -6387,7 +6728,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 104.23,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -6407,7 +6748,9 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Rio Tinto Plc",
+    "marketCap": 169504207329.92856
   },
   {
     "ticker": "RIOT.US",
@@ -6420,7 +6763,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 24.49,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -6440,7 +6783,9 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Riot Platforms, Inc.",
+    "marketCap": 9260923536.148052
   },
   {
     "ticker": "RKLB.US",
@@ -6453,7 +6798,7 @@
     "last_breakout_date": "2026-05-22",
     "breakout_count_60d": 1,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 135.76,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -6475,7 +6820,9 @@
     "breakout_dates": [
       "2026-05-22"
     ],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Rocket Lab Corporation",
+    "marketCap": 78587045226.18599
   },
   {
     "ticker": "RKLX.US",
@@ -6488,7 +6835,7 @@
     "last_breakout_date": "2026-05-22",
     "breakout_count_60d": 1,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 93.32,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -6510,7 +6857,8 @@
     "breakout_dates": [
       "2026-05-22"
     ],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Defiance Daily Target 2X Long R"
   },
   {
     "ticker": "RL.US",
@@ -6523,7 +6871,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 377.78,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -6539,11 +6887,13 @@
     "ma_30d": 359.57,
     "ma_40d": 358.38,
     "ma_50d": 354.38,
-    "sector": "",
+    "sector": "Consumer Cyclical",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Ralph Lauren Corporation",
+    "marketCap": 22484085119.22821
   },
   {
     "ticker": "RMBS.US",
@@ -6556,7 +6906,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 142.98,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -6576,7 +6926,9 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Rambus, Inc.",
+    "marketCap": 15461423079.649033
   },
   {
     "ticker": "ROK.US",
@@ -6589,7 +6941,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 452.29,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -6605,11 +6957,13 @@
     "ma_30d": 423.99,
     "ma_40d": 410.46,
     "ma_50d": 399.8,
-    "sector": "",
+    "sector": "Industrials",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Rockwell Automation, Inc.",
+    "marketCap": 50328097153.197235
   },
   {
     "ticker": "ROKU.US",
@@ -6622,7 +6976,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 125.55,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -6642,7 +6996,9 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Roku, Inc.",
+    "marketCap": 18542950888.77556
   },
   {
     "ticker": "ROST.US",
@@ -6655,7 +7011,7 @@
     "last_breakout_date": "2026-05-22",
     "breakout_count_60d": 1,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 234.81,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -6671,13 +7027,15 @@
     "ma_30d": 222.71,
     "ma_40d": 221.66,
     "ma_50d": 219.56,
-    "sector": "",
+    "sector": "Consumer Cyclical",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [
       "2026-05-22"
     ],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Ross Stores, Inc.",
+    "marketCap": 75948102754.01953
   },
   {
     "ticker": "RSP.US",
@@ -6690,7 +7048,7 @@
     "last_breakout_date": "2026-05-22",
     "breakout_count_60d": 1,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 206.58,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -6712,7 +7070,8 @@
     "breakout_dates": [
       "2026-05-22"
     ],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Invesco S&P 500 Equal Weight ET"
   },
   {
     "ticker": "RVMD.US",
@@ -6725,7 +7084,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 151.56,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -6745,7 +7104,9 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Revolution Medicines, Inc.",
+    "marketCap": 32221119261.68567
   },
   {
     "ticker": "SAN.US",
@@ -6758,7 +7119,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 12.04,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -6774,11 +7135,13 @@
     "ma_30d": 12.07,
     "ma_40d": 11.9,
     "ma_50d": 11.67,
-    "sector": "",
+    "sector": "Financial Services",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Banco Santander, S.A. Sponsored",
+    "marketCap": 173380079987.27066
   },
   {
     "ticker": "SATS.US",
@@ -6791,7 +7154,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 124.2,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -6807,11 +7170,13 @@
     "ma_30d": 127.65,
     "ma_40d": 126.17,
     "ma_50d": 123.18,
-    "sector": "",
+    "sector": "Communication Services",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "EchoStar Corporation",
+    "marketCap": 35994834325.159424
   },
   {
     "ticker": "SCHB.US",
@@ -6824,7 +7189,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 28.73,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -6844,7 +7209,8 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Schwab U.S. Broad Market ETF"
   },
   {
     "ticker": "SCHD.US",
@@ -6857,7 +7223,7 @@
     "last_breakout_date": "2026-05-22",
     "breakout_count_60d": 1,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 32.83,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -6879,7 +7245,8 @@
     "breakout_dates": [
       "2026-05-22"
     ],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Schwab US Dividend Equity ETF"
   },
   {
     "ticker": "SCHX.US",
@@ -6892,7 +7259,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 29.33,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -6912,7 +7279,8 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Schwab U.S. Large-Cap ETF"
   },
   {
     "ticker": "SEDG.US",
@@ -6925,7 +7293,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 61.95,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -6945,7 +7313,9 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "SolarEdge Technologies, Inc.",
+    "marketCap": 3767687660.300606
   },
   {
     "ticker": "SGOV.US",
@@ -6958,7 +7328,7 @@
     "last_breakout_date": "2026-05-22",
     "breakout_count_60d": 1,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 100.63,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -6980,7 +7350,8 @@
     "breakout_dates": [
       "2026-05-22"
     ],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "iShares 0-3 Month Treasury Bond"
   },
   {
     "ticker": "SIDU.US",
@@ -6993,7 +7364,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 5.12,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -7009,11 +7380,13 @@
     "ma_30d": 3.87,
     "ma_40d": 3.67,
     "ma_50d": 3.41,
-    "sector": "",
+    "sector": "Industrials",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Sidus Space, Inc.",
+    "marketCap": 414028043.2257519
   },
   {
     "ticker": "SIMO.US",
@@ -7026,7 +7399,7 @@
     "last_breakout_date": "2026-05-22",
     "breakout_count_60d": 1,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 276.14,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -7048,7 +7421,9 @@
     "breakout_dates": [
       "2026-05-22"
     ],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Silicon Motion Technology Corpo",
+    "marketCap": 9363310053.596802
   },
   {
     "ticker": "SITM.US",
@@ -7061,7 +7436,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 728.56,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -7077,11 +7452,13 @@
     "ma_30d": 629.52,
     "ma_40d": 563.2,
     "ma_50d": 519.14,
-    "sector": "",
+    "sector": "Technology",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "SiTime Corporation",
+    "marketCap": 19231672943.23462
   },
   {
     "ticker": "SLB.US",
@@ -7094,7 +7471,7 @@
     "last_breakout_date": "2026-05-22",
     "breakout_count_60d": 1,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 57.28,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -7116,7 +7493,9 @@
     "breakout_dates": [
       "2026-05-22"
     ],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "SLB Limited",
+    "marketCap": 85636900997.05844
   },
   {
     "ticker": "SMCI.US",
@@ -7145,13 +7524,15 @@
     "ma_30d": 30.04,
     "ma_40d": 28.23,
     "ma_50d": 27.9,
-    "sector": "",
+    "sector": "Technology",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [
       "2026-05-22"
     ],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Super Micro Computer, Inc.",
+    "marketCap": 21398470690.79013
   },
   {
     "ticker": "SMH.US",
@@ -7164,7 +7545,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 576.32,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -7184,7 +7565,8 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "VanEck Semiconductor ETF"
   },
   {
     "ticker": "SMTC.US",
@@ -7197,7 +7579,7 @@
     "last_breakout_date": "2026-05-22",
     "breakout_count_60d": 1,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 156.78,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -7219,7 +7601,9 @@
     "breakout_dates": [
       "2026-05-22"
     ],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Semtech Corporation",
+    "marketCap": 14598491353.114838
   },
   {
     "ticker": "SNDK.US",
@@ -7232,7 +7616,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 1478.69,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -7252,7 +7636,9 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Sandisk Corporation",
+    "marketCap": 218978835579.88574
   },
   {
     "ticker": "SO.US",
@@ -7265,7 +7651,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 94.55,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -7281,11 +7667,13 @@
     "ma_30d": 93.41,
     "ma_40d": 94.08,
     "ma_50d": 94.3,
-    "sector": "",
+    "sector": "Utilities",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Southern Company (The)",
+    "marketCap": 106586322256.14993
   },
   {
     "ticker": "SOXL.US",
@@ -7298,7 +7686,7 @@
     "last_breakout_date": "2026-05-22",
     "breakout_count_60d": 1,
     "from_bottom": false,
-    "days_in_trend": 3,
+    "days_in_trend": 4,
     "last_close": 190.56,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -7320,7 +7708,8 @@
     "breakout_dates": [
       "2026-05-22"
     ],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Direxion Daily Semiconductor Bu"
   },
   {
     "ticker": "SOXX.US",
@@ -7333,7 +7722,7 @@
     "last_breakout_date": "2026-05-22",
     "breakout_count_60d": 1,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 537.33,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -7355,7 +7744,8 @@
     "breakout_dates": [
       "2026-05-22"
     ],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "iShares PHLX SOX Semiconductor "
   },
   {
     "ticker": "SPG.US",
@@ -7368,7 +7758,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 3,
+    "days_in_trend": 4,
     "last_close": 204.41,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -7388,7 +7778,9 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Simon Property Group, Inc.",
+    "marketCap": 66288102099.50513
   },
   {
     "ticker": "SPMO.US",
@@ -7401,7 +7793,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 144.94,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -7421,7 +7813,8 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Invesco S&P 500 Momentum ETF"
   },
   {
     "ticker": "SPXL.US",
@@ -7434,7 +7827,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 273.08,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -7454,7 +7847,8 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Direxion Daily S&P 500 Bull 3X "
   },
   {
     "ticker": "SPY.US",
@@ -7467,7 +7861,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 745.64,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -7487,7 +7881,8 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "State Street SPDR S&P 500 ETF T"
   },
   {
     "ticker": "SPYD.US",
@@ -7500,7 +7895,7 @@
     "last_breakout_date": "2026-05-22",
     "breakout_count_60d": 1,
     "from_bottom": false,
-    "days_in_trend": 3,
+    "days_in_trend": 4,
     "last_close": 47.71,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -7522,7 +7917,8 @@
     "breakout_dates": [
       "2026-05-22"
     ],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "State Street SPDR Portfolio S&P"
   },
   {
     "ticker": "SPYM.US",
@@ -7535,7 +7931,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 87.75,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -7555,7 +7951,8 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "State Street SPDR Portfolio S&P"
   },
   {
     "ticker": "SSO.US",
@@ -7568,7 +7965,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 67.51,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -7588,7 +7985,8 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "ProShares Ultra S&P500"
   },
   {
     "ticker": "STLD.US",
@@ -7601,7 +7999,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 240.03,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -7621,7 +8019,9 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Steel Dynamics, Inc.",
+    "marketCap": 34615393647.38901
   },
   {
     "ticker": "STM.US",
@@ -7634,7 +8034,7 @@
     "last_breakout_date": "2026-05-22",
     "breakout_count_60d": 1,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 66.86,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -7656,7 +8056,9 @@
     "breakout_dates": [
       "2026-05-22"
     ],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "STMicroelectronics N.V.",
+    "marketCap": 59424776074.276886
   },
   {
     "ticker": "STRL.US",
@@ -7669,7 +8071,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 732.94,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -7689,7 +8091,9 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Sterling Infrastructure, Inc.",
+    "marketCap": 22490963199.67688
   },
   {
     "ticker": "STT.US",
@@ -7702,7 +8106,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 3,
+    "days_in_trend": 4,
     "last_close": 153.95,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -7722,7 +8126,9 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "State Street Corporation",
+    "marketCap": 42608283885.724045
   },
   {
     "ticker": "STX.US",
@@ -7735,7 +8141,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 812.73,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -7755,7 +8161,9 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Seagate Technology Holdings PLC",
+    "marketCap": 182237624288.6875
   },
   {
     "ticker": "SYY.US",
@@ -7768,7 +8176,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 3,
+    "days_in_trend": 4,
     "last_close": 76.29,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -7784,11 +8192,13 @@
     "ma_30d": 74.27,
     "ma_40d": 74.03,
     "ma_50d": 75.68,
-    "sector": "",
+    "sector": "Consumer Defensive",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Sysco Corporation",
+    "marketCap": 36480551602.10925
   },
   {
     "ticker": "TE.US",
@@ -7801,7 +8211,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 8.08,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -7817,11 +8227,13 @@
     "ma_30d": 5.73,
     "ma_40d": 5.43,
     "ma_50d": 5.77,
-    "sector": "",
+    "sector": "Industrials",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "T1 Energy Inc.",
+    "marketCap": 2256512729.0932846
   },
   {
     "ticker": "TECL.US",
@@ -7834,7 +8246,7 @@
     "last_breakout_date": "2026-05-22",
     "breakout_count_60d": 1,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 207.85,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -7856,7 +8268,8 @@
     "breakout_dates": [
       "2026-05-22"
     ],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Direxion Daily Technology Bull "
   },
   {
     "ticker": "TER.US",
@@ -7869,7 +8282,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 358.44,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -7885,11 +8298,13 @@
     "ma_30d": 361.75,
     "ma_40d": 351.7,
     "ma_50d": 341.78,
-    "sector": "",
+    "sector": "Technology",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Teradyne, Inc.",
+    "marketCap": 56110972929.46301
   },
   {
     "ticker": "TFC.US",
@@ -7902,7 +8317,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 48.38,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -7918,11 +8333,13 @@
     "ma_30d": 49.1,
     "ma_40d": 48.55,
     "ma_50d": 47.65,
-    "sector": "",
+    "sector": "Financial Services",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Truist Financial Corporation",
+    "marketCap": 60275640655.24263
   },
   {
     "ticker": "TGT.US",
@@ -7935,7 +8352,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 125.6,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -7951,11 +8368,13 @@
     "ma_30d": 125.02,
     "ma_40d": 123.77,
     "ma_50d": 121.96,
-    "sector": "",
+    "sector": "Consumer Defensive",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Target Corporation",
+    "marketCap": 57044647462.98069
   },
   {
     "ticker": "TJX.US",
@@ -7968,7 +8387,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 158.27,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -7984,11 +8403,13 @@
     "ma_30d": 155.1,
     "ma_40d": 156.24,
     "ma_50d": 156.12,
-    "sector": "",
+    "sector": "Consumer Cyclical",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "TJX Companies, Inc. (The)",
+    "marketCap": 175017228129.55823
   },
   {
     "ticker": "TNA.US",
@@ -8001,7 +8422,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 65.17,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -8021,7 +8442,8 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Direxion Small Cap Bull 3X ETF"
   },
   {
     "ticker": "TQQQ.US",
@@ -8034,7 +8456,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 77.84,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -8054,7 +8476,8 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "ProShares UltraPro QQQ"
   },
   {
     "ticker": "TRGP.US",
@@ -8067,7 +8490,7 @@
     "last_breakout_date": "2026-05-22",
     "breakout_count_60d": 1,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 276.75,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -8089,7 +8512,9 @@
     "breakout_dates": [
       "2026-05-22"
     ],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Targa Resources, Inc.",
+    "marketCap": 59402700155.25
   },
   {
     "ticker": "TRP.US",
@@ -8102,7 +8527,7 @@
     "last_breakout_date": "2026-05-22",
     "breakout_count_60d": 1,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 70.91,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -8124,7 +8549,9 @@
     "breakout_dates": [
       "2026-05-22"
     ],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "TC Energy Corporation",
+    "marketCap": 73871694410.42432
   },
   {
     "ticker": "TRV.US",
@@ -8137,7 +8564,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 306.46,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -8153,11 +8580,13 @@
     "ma_30d": 302.06,
     "ma_40d": 300.19,
     "ma_50d": 299.68,
-    "sector": "",
+    "sector": "Financial Services",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "The Travelers Companies, Inc.",
+    "marketCap": 65167090799.74771
   },
   {
     "ticker": "TSEM.US",
@@ -8170,7 +8599,7 @@
     "last_breakout_date": "2026-05-22",
     "breakout_count_60d": 1,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 283.43,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -8192,7 +8621,9 @@
     "breakout_dates": [
       "2026-05-22"
     ],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Tower Semiconductor Ltd.",
+    "marketCap": 33612304647.992065
   },
   {
     "ticker": "TSM.US",
@@ -8205,7 +8636,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 3,
+    "days_in_trend": 4,
     "last_close": 404.52,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -8221,11 +8652,13 @@
     "ma_30d": 393.9,
     "ma_40d": 381.7,
     "ma_50d": 373.08,
-    "sector": "",
+    "sector": "Technology",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Taiwan Semiconductor Manufactur",
+    "marketCap": 2098032405499.6948
   },
   {
     "ticker": "TTMI.US",
@@ -8238,7 +8671,7 @@
     "last_breakout_date": "2026-05-22",
     "breakout_count_60d": 1,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 189.92,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -8260,7 +8693,9 @@
     "breakout_dates": [
       "2026-05-22"
     ],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "TTM Technologies, Inc.",
+    "marketCap": 19723203015.124863
   },
   {
     "ticker": "TWLO.US",
@@ -8273,7 +8708,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 187.88,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -8293,7 +8728,9 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Twilio Inc.",
+    "marketCap": 28515273557.8833
   },
   {
     "ticker": "TXN.US",
@@ -8306,7 +8743,7 @@
     "last_breakout_date": "2026-05-22",
     "breakout_count_60d": 1,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 309.21,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -8328,7 +8765,9 @@
     "breakout_dates": [
       "2026-05-22"
     ],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Texas Instruments Incorporated",
+    "marketCap": 281409784128.43823
   },
   {
     "ticker": "UNP.US",
@@ -8341,7 +8780,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 265.88,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -8361,7 +8800,9 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Union Pacific Corporation",
+    "marketCap": 157856471971.4303
   },
   {
     "ticker": "UPRO.US",
@@ -8374,7 +8815,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 143.08,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -8394,7 +8835,8 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "ProShares UltraPro S&P 500"
   },
   {
     "ticker": "UPS.US",
@@ -8407,7 +8849,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 101.02,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -8423,11 +8865,13 @@
     "ma_30d": 100.87,
     "ma_40d": 99.81,
     "ma_50d": 99.0,
-    "sector": "",
+    "sector": "Industrials",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "United Parcel Service, Inc.",
+    "marketCap": 85867631451.16537
   },
   {
     "ticker": "URTH.US",
@@ -8440,7 +8884,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 202.54,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -8460,7 +8904,8 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "iShares MSCI World ETF"
   },
   {
     "ticker": "USAR.US",
@@ -8473,7 +8918,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 25.3,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -8489,11 +8934,13 @@
     "ma_30d": 23.39,
     "ma_40d": 21.42,
     "ma_50d": 20.69,
-    "sector": "",
+    "sector": "Basic Materials",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "USA Rare Earth, Inc.",
+    "marketCap": 5642794589.63752
   },
   {
     "ticker": "USB.US",
@@ -8506,7 +8953,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 54.83,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -8522,11 +8969,13 @@
     "ma_30d": 55.4,
     "ma_40d": 54.87,
     "ma_50d": 54.09,
-    "sector": "",
+    "sector": "Financial Services",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "U.S. Bancorp",
+    "marketCap": 85112597860.69572
   },
   {
     "ticker": "USHY.US",
@@ -8539,7 +8988,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 36.99,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -8559,7 +9008,8 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "iShares Broad USD High Yield Co"
   },
   {
     "ticker": "USMV.US",
@@ -8572,7 +9022,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 96.88,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -8592,7 +9042,8 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "iShares MSCI USA Min Vol Factor"
   },
   {
     "ticker": "USO.US",
@@ -8605,7 +9056,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 140.92,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -8625,7 +9076,8 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "United States Oil Fund"
   },
   {
     "ticker": "VALE.US",
@@ -8638,7 +9090,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 16.48,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -8654,11 +9106,13 @@
     "ma_30d": 16.8,
     "ma_40d": 16.62,
     "ma_50d": 16.26,
-    "sector": "",
+    "sector": "Basic Materials",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "VALE S.A.",
+    "marketCap": 70256725951.68436
   },
   {
     "ticker": "VBIL.US",
@@ -8671,7 +9125,7 @@
     "last_breakout_date": "2026-05-22",
     "breakout_count_60d": 1,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 75.63,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -8693,7 +9147,8 @@
     "breakout_dates": [
       "2026-05-22"
     ],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Vanguard 0-3 Month Treasury Bil"
   },
   {
     "ticker": "VCLT.US",
@@ -8706,7 +9161,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 74.48,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -8726,7 +9181,8 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Vanguard Long-Term Corporate Bo"
   },
   {
     "ticker": "VEA.US",
@@ -8739,7 +9195,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 70.46,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -8759,7 +9215,8 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Vanguard FTSE Developed Markets"
   },
   {
     "ticker": "VEU.US",
@@ -8772,7 +9229,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 82.44,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -8792,7 +9249,8 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Vanguard FTSE All World Ex US E"
   },
   {
     "ticker": "VGT.US",
@@ -8805,7 +9263,7 @@
     "last_breakout_date": "2026-05-22",
     "breakout_count_60d": 1,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 115.75,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -8827,7 +9285,8 @@
     "breakout_dates": [
       "2026-05-22"
     ],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Vanguard Information Tech ETF"
   },
   {
     "ticker": "VIAV.US",
@@ -8840,7 +9299,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 49.51,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -8860,7 +9319,9 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Viavi Solutions Inc.",
+    "marketCap": 12213405968.916332
   },
   {
     "ticker": "VIK.US",
@@ -8873,7 +9334,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 3,
+    "days_in_trend": 4,
     "last_close": 84.23,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -8893,7 +9354,9 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Viking Holdings Ltd",
+    "marketCap": 37579816052.23984
   },
   {
     "ticker": "VLO.US",
@@ -8906,7 +9369,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 246.96,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -8926,7 +9389,9 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Valero Energy Corporation",
+    "marketCap": 73330521836.28726
   },
   {
     "ticker": "VNQ.US",
@@ -8939,7 +9404,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 96.77,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -8959,7 +9424,8 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Vanguard Real Estate ETF"
   },
   {
     "ticker": "VOO.US",
@@ -8972,7 +9438,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 685.55,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -8992,7 +9458,8 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Vanguard S&P 500 ETF"
   },
   {
     "ticker": "VRT.US",
@@ -9005,7 +9472,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 327.46,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -9021,11 +9488,13 @@
     "ma_30d": 329.09,
     "ma_40d": 312.85,
     "ma_50d": 303.02,
-    "sector": "",
+    "sector": "Industrials",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Vertiv Holdings, LLC",
+    "marketCap": 125780269605.18018
   },
   {
     "ticker": "VSH.US",
@@ -9038,7 +9507,7 @@
     "last_breakout_date": "2026-05-22",
     "breakout_count_60d": 1,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 47.25,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -9054,13 +9523,15 @@
     "ma_30d": 31.58,
     "ma_40d": 28.45,
     "ma_50d": 26.27,
-    "sector": "",
+    "sector": "Technology",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [
       "2026-05-22"
     ],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Vishay Intertechnology, Inc.",
+    "marketCap": 6431000325.75
   },
   {
     "ticker": "VT.US",
@@ -9073,7 +9544,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 155.57,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -9093,7 +9564,8 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Vanguard Total World Stock Inde"
   },
   {
     "ticker": "VTI.US",
@@ -9106,7 +9578,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 366.79,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -9126,7 +9598,8 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Vanguard Total Stock Market ETF"
   },
   {
     "ticker": "VTR.US",
@@ -9139,7 +9612,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 88.18,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -9159,7 +9632,9 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Ventas, Inc.",
+    "marketCap": 42870446322.507225
   },
   {
     "ticker": "VTV.US",
@@ -9172,7 +9647,7 @@
     "last_breakout_date": "2026-05-22",
     "breakout_count_60d": 1,
     "from_bottom": false,
-    "days_in_trend": 3,
+    "days_in_trend": 4,
     "last_close": 210.9,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -9194,7 +9669,8 @@
     "breakout_dates": [
       "2026-05-22"
     ],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Vanguard Value ETF"
   },
   {
     "ticker": "VWO.US",
@@ -9207,7 +9683,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 58.98,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -9227,7 +9703,8 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Vanguard FTSE Emerging Markets "
   },
   {
     "ticker": "VXUS.US",
@@ -9240,7 +9717,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 84.46,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -9260,7 +9737,8 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Vanguard Total International St"
   },
   {
     "ticker": "VZ.US",
@@ -9273,7 +9751,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 48.35,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -9289,11 +9767,13 @@
     "ma_30d": 47.0,
     "ma_40d": 47.32,
     "ma_50d": 47.79,
-    "sector": "",
+    "sector": "Communication Services",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Verizon Communications Inc.",
+    "marketCap": 201888266927.10272
   },
   {
     "ticker": "WBS.US",
@@ -9306,7 +9786,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 71.8,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -9322,11 +9802,13 @@
     "ma_30d": 71.93,
     "ma_40d": 71.37,
     "ma_50d": 70.71,
-    "sector": "",
+    "sector": "Financial Services",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Webster Financial Corporation",
+    "marketCap": 11633503050.865631
   },
   {
     "ticker": "WDC.US",
@@ -9339,7 +9821,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 484.28,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -9359,7 +9841,9 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Western Digital Corporation",
+    "marketCap": 166922661979.92545
   },
   {
     "ticker": "WELL.US",
@@ -9372,7 +9856,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 216.17,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -9392,7 +9876,9 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Welltower Inc.",
+    "marketCap": 152597525363.93204
   },
   {
     "ticker": "WMB.US",
@@ -9405,7 +9891,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 78.47,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -9425,7 +9911,9 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Williams Companies, Inc. (The)",
+    "marketCap": 95968675347.4678
   },
   {
     "ticker": "WULF.US",
@@ -9438,7 +9926,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 22.82,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -9458,7 +9946,9 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "TeraWulf Inc.",
+    "marketCap": 11308054807.675438
   },
   {
     "ticker": "XBI.US",
@@ -9471,7 +9961,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 131.66,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -9491,7 +9981,8 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "State Street SPDR S&P Biotech E"
   },
   {
     "ticker": "XEL.US",
@@ -9504,7 +9995,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 81.08,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -9520,11 +10011,13 @@
     "ma_30d": 80.03,
     "ma_40d": 80.14,
     "ma_50d": 79.95,
-    "sector": "",
+    "sector": "Utilities",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Xcel Energy Inc.",
+    "marketCap": 50615777067.871704
   },
   {
     "ticker": "XLC.US",
@@ -9537,7 +10030,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 115.46,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -9557,7 +10050,8 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "State Street Communication Serv"
   },
   {
     "ticker": "XLE.US",
@@ -9570,7 +10064,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 59.49,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -9590,7 +10084,8 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "State Street Energy Select Sect"
   },
   {
     "ticker": "XLI.US",
@@ -9603,7 +10098,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 171.77,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -9623,7 +10118,8 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "State Street Industrial Select "
   },
   {
     "ticker": "XLK.US",
@@ -9636,7 +10132,7 @@
     "last_breakout_date": "2026-05-22",
     "breakout_count_60d": 1,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 180.39,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -9658,7 +10154,8 @@
     "breakout_dates": [
       "2026-05-22"
     ],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "State Street Technology Select "
   },
   {
     "ticker": "XLP.US",
@@ -9671,7 +10168,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 84.8,
     "weekly_aligned": true,
     "daily_aligned": true,
@@ -9691,7 +10188,8 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "State Street Consumer Staples S"
   },
   {
     "ticker": "XLV.US",
@@ -9704,7 +10202,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 149.89,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -9724,7 +10222,8 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "State Street Health Care Select"
   },
   {
     "ticker": "XOM.US",
@@ -9737,7 +10236,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 154.92,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -9753,11 +10252,13 @@
     "ma_30d": 151.03,
     "ma_40d": 153.62,
     "ma_50d": 154.73,
-    "sector": "",
+    "sector": "Energy",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Exxon Mobil Corporation",
+    "marketCap": 642135206747.415
   },
   {
     "ticker": "XRT.US",
@@ -9770,7 +10271,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 82.54,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -9790,7 +10291,8 @@
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "State Street SPDR S&P Retail ET"
   },
   {
     "ticker": "ZM.US",
@@ -9803,7 +10305,7 @@
     "last_breakout_date": "",
     "breakout_count_60d": 0,
     "from_bottom": false,
-    "days_in_trend": 4,
+    "days_in_trend": 5,
     "last_close": 105.64,
     "weekly_aligned": true,
     "daily_aligned": false,
@@ -9819,10 +10321,12 @@
     "ma_30d": 97.0,
     "ma_40d": 93.08,
     "ma_50d": 89.79,
-    "sector": "",
+    "sector": "Technology",
     "theme": "",
     "broken_date": "",
     "breakout_dates": [],
-    "last_update_date": "2026-05-22"
+    "last_update_date": "2026-05-22",
+    "name": "Zoom Communications, Inc.",
+    "marketCap": 31136496528.264038
   }
 ]

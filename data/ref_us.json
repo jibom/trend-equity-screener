@@ -1,0 +1,1826 @@
+{
+  "RSP.US": {
+    "name": "Invesco S&P 500 Equal Weight ET",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "PLUG.US": {
+    "name": "Plug Power, Inc.",
+    "sector": "Industrials",
+    "marketCap": 5273361090.046753,
+    "mcapDate": "2026-05-25"
+  },
+  "ENB.US": {
+    "name": "Enbridge Inc",
+    "sector": "Energy",
+    "marketCap": 126741741925.83377,
+    "mcapDate": "2026-05-25"
+  },
+  "EWJ.US": {
+    "name": "iShares MSCI Japan Index Fund",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "TTMI.US": {
+    "name": "TTM Technologies, Inc.",
+    "sector": "Technology",
+    "marketCap": 19723203015.124863,
+    "mcapDate": "2026-05-25"
+  },
+  "DXYZ.US": {
+    "name": "Destiny Tech100 Inc.",
+    "sector": "Financial Services",
+    "marketCap": 2005741230.7495422,
+    "mcapDate": "2026-05-25"
+  },
+  "TRP.US": {
+    "name": "TC Energy Corporation",
+    "sector": "Energy",
+    "marketCap": 73871694410.42432,
+    "mcapDate": "2026-05-25"
+  },
+  "VXUS.US": {
+    "name": "Vanguard Total International St",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "SOXX.US": {
+    "name": "iShares PHLX SOX Semiconductor ",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "CASY.US": {
+    "name": "Caseys General Stores, Inc.",
+    "sector": "Consumer Cyclical",
+    "marketCap": 30580961787.623535,
+    "mcapDate": "2026-05-25"
+  },
+  "EBAY.US": {
+    "name": "eBay Inc.",
+    "sector": "Consumer Cyclical",
+    "marketCap": 51393000000.0,
+    "mcapDate": "2026-05-25"
+  },
+  "MXL.US": {
+    "name": "MaxLinear, Inc",
+    "sector": "Technology",
+    "marketCap": 8879377622.367096,
+    "mcapDate": "2026-05-25"
+  },
+  "EW.US": {
+    "name": "Edwards Lifesciences Corporatio",
+    "sector": "Healthcare",
+    "marketCap": 49392123297.11914,
+    "mcapDate": "2026-05-25"
+  },
+  "RIG.US": {
+    "name": "Transocean Ltd (Switzerland)",
+    "sector": "Energy",
+    "marketCap": 7602964344.6767235,
+    "mcapDate": "2026-05-25"
+  },
+  "SGOV.US": {
+    "name": "iShares 0-3 Month Treasury Bond",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "ACWI.US": {
+    "name": "iShares MSCI ACWI ETF",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "BIL.US": {
+    "name": "State Street SPDR Bloomberg 1-3",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "ADI.US": {
+    "name": "Analog Devices, Inc.",
+    "sector": "Technology",
+    "marketCap": 193407654540.33203,
+    "mcapDate": "2026-05-25"
+  },
+  "HUT.US": {
+    "name": "Hut 8 Corp.",
+    "sector": "Financial Services",
+    "marketCap": 11923716632.60498,
+    "mcapDate": "2026-05-25"
+  },
+  "CB.US": {
+    "name": "Chubb Limited",
+    "sector": "Financial Services",
+    "marketCap": 127175455837.88452,
+    "mcapDate": "2026-05-25"
+  },
+  "WMB.US": {
+    "name": "Williams Companies, Inc. (The)",
+    "sector": "Energy",
+    "marketCap": 95968675347.4678,
+    "mcapDate": "2026-05-25"
+  },
+  "GD.US": {
+    "name": "General Dynamics Corporation",
+    "sector": "Industrials",
+    "marketCap": 92727810781.8097,
+    "mcapDate": "2026-05-25"
+  },
+  "BMY.US": {
+    "name": "Bristol-Myers Squibb Company",
+    "sector": "Healthcare",
+    "marketCap": 121421554477.04794,
+    "mcapDate": "2026-05-25"
+  },
+  "EEM.US": {
+    "name": "iShares MSCI Emerging Index Fun",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "AFL.US": {
+    "name": "AFLAC Incorporated",
+    "sector": "Financial Services",
+    "marketCap": 59988961096.09973,
+    "mcapDate": "2026-05-25"
+  },
+  "SSO.US": {
+    "name": "ProShares Ultra S&P500",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "MAR.US": {
+    "name": "Marriott International",
+    "sector": "Consumer Cyclical",
+    "marketCap": 97340653571.02237,
+    "mcapDate": "2026-05-25"
+  },
+  "IJR.US": {
+    "name": "iShares Core S&P Small-Cap ETF",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "MRK.US": {
+    "name": "Merck & Company, Inc.",
+    "sector": "Healthcare",
+    "marketCap": 302331215684.9171,
+    "mcapDate": "2026-05-25"
+  },
+  "ROK.US": {
+    "name": "Rockwell Automation, Inc.",
+    "sector": "Industrials",
+    "marketCap": 50328097153.197235,
+    "mcapDate": "2026-05-25"
+  },
+  "STLD.US": {
+    "name": "Steel Dynamics, Inc.",
+    "sector": "Basic Materials",
+    "marketCap": 34615393647.38901,
+    "mcapDate": "2026-05-25"
+  },
+  "SPYD.US": {
+    "name": "State Street SPDR Portfolio S&P",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "MOD.US": {
+    "name": "Modine Manufacturing Company",
+    "sector": "Consumer Cyclical",
+    "marketCap": 13737530863.117767,
+    "mcapDate": "2026-05-25"
+  },
+  "MNST.US": {
+    "name": "Monster Beverage Corporation",
+    "sector": "Consumer Defensive",
+    "marketCap": 84881324762.29317,
+    "mcapDate": "2026-05-25"
+  },
+  "RDW.US": {
+    "name": "Redwire Corporation",
+    "sector": "Industrials",
+    "marketCap": 3479088507.1911163,
+    "mcapDate": "2026-05-25"
+  },
+  "BK.US": {
+    "name": "The Bank of New York Mellon Cor",
+    "sector": "Financial Services",
+    "marketCap": 95509633660.67505,
+    "mcapDate": "2026-05-25"
+  },
+  "ROST.US": {
+    "name": "Ross Stores, Inc.",
+    "sector": "Consumer Cyclical",
+    "marketCap": 75948102754.01953,
+    "mcapDate": "2026-05-25"
+  },
+  "LRCX.US": {
+    "name": "Lam Research Corporation",
+    "sector": "Technology",
+    "marketCap": 381852091282.6843,
+    "mcapDate": "2026-05-25"
+  },
+  "ASTS.US": {
+    "name": "AST SpaceMobile, Inc.",
+    "sector": "Technology",
+    "marketCap": 31625292286.72032,
+    "mcapDate": "2026-05-25"
+  },
+  "AMZN.US": {
+    "name": "Amazon.com, Inc.",
+    "sector": "Consumer Cyclical",
+    "marketCap": 2864833463782.9424,
+    "mcapDate": "2026-05-25"
+  },
+  "GOOG.US": {
+    "name": "Alphabet Inc.",
+    "sector": "Communication Services",
+    "marketCap": 4596357262301.962,
+    "mcapDate": "2026-05-25"
+  },
+  "EMR.US": {
+    "name": "Emerson Electric Company",
+    "sector": "Industrials",
+    "marketCap": 76408840974.42627,
+    "mcapDate": "2026-05-25"
+  },
+  "IJH.US": {
+    "name": "iShares Core S&P Mid-Cap ETF",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "TFC.US": {
+    "name": "Truist Financial Corporation",
+    "sector": "Financial Services",
+    "marketCap": 60275640655.24263,
+    "mcapDate": "2026-05-25"
+  },
+  "STT.US": {
+    "name": "State Street Corporation",
+    "sector": "Financial Services",
+    "marketCap": 42608283885.724045,
+    "mcapDate": "2026-05-25"
+  },
+  "GNRC.US": {
+    "name": "Generac Holdlings Inc.",
+    "sector": "Industrials",
+    "marketCap": 15902786347.674194,
+    "mcapDate": "2026-05-25"
+  },
+  "IJS.US": {
+    "name": "iShares S&P SmallCap 600 Value ",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "IYR.US": {
+    "name": "iShares U.S. Real Estate ETF",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "AVGO.US": {
+    "name": "Broadcom Inc.",
+    "sector": "Technology",
+    "marketCap": 1960815551077.251,
+    "mcapDate": "2026-05-25"
+  },
+  "GS.US": {
+    "name": "Goldman Sachs Group, Inc. (The)",
+    "sector": "Financial Services",
+    "marketCap": 294042740971.4663,
+    "mcapDate": "2026-05-25"
+  },
+  "LYV.US": {
+    "name": "Live Nation Entertainment, Inc.",
+    "sector": "Communication Services",
+    "marketCap": 38525604584.6331,
+    "mcapDate": "2026-05-25"
+  },
+  "GTLS.US": {
+    "name": "Chart Industries, Inc.",
+    "sector": "Industrials",
+    "marketCap": 9954853366.346619,
+    "mcapDate": "2026-05-25"
+  },
+  "TSEM.US": {
+    "name": "Tower Semiconductor Ltd.",
+    "sector": "Technology",
+    "marketCap": 33612304647.992065,
+    "mcapDate": "2026-05-25"
+  },
+  "QQQM.US": {
+    "name": "Invesco NASDAQ 100 ETF",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "STRL.US": {
+    "name": "Sterling Infrastructure, Inc.",
+    "sector": "Industrials",
+    "marketCap": 22490963199.67688,
+    "mcapDate": "2026-05-25"
+  },
+  "BB.US": {
+    "name": "BlackBerry Limited",
+    "sector": "Technology",
+    "marketCap": 4635745639.944126,
+    "mcapDate": "2026-05-25"
+  },
+  "DELL.US": {
+    "name": "Dell Technologies Inc.",
+    "sector": "Technology",
+    "marketCap": 191746064225.39008,
+    "mcapDate": "2026-05-25"
+  },
+  "SCHB.US": {
+    "name": "Schwab U.S. Broad Market ETF",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "NVTS.US": {
+    "name": "Navitas Semiconductor Corporati",
+    "sector": "Technology",
+    "marketCap": 6836110105.5,
+    "mcapDate": "2026-05-25"
+  },
+  "GH.US": {
+    "name": "Guardant Health, Inc.",
+    "sector": "Healthcare",
+    "marketCap": 15772761149.88713,
+    "mcapDate": "2026-05-25"
+  },
+  "PL.US": {
+    "name": "Planet Labs PBC",
+    "sector": "Industrials",
+    "marketCap": 15806037698.78714,
+    "mcapDate": "2026-05-25"
+  },
+  "QQQI.US": {
+    "name": "NEOS Nasdaq 100 High Income ETF",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "MO.US": {
+    "name": "Altria Group, Inc.",
+    "sector": "Consumer Defensive",
+    "marketCap": 123404964814.55182,
+    "mcapDate": "2026-05-25"
+  },
+  "SO.US": {
+    "name": "Southern Company (The)",
+    "sector": "Utilities",
+    "marketCap": 106586322256.14993,
+    "mcapDate": "2026-05-25"
+  },
+  "TRGP.US": {
+    "name": "Targa Resources, Inc.",
+    "sector": "Energy",
+    "marketCap": 59402700155.25,
+    "mcapDate": "2026-05-25"
+  },
+  "XEL.US": {
+    "name": "Xcel Energy Inc.",
+    "sector": "Utilities",
+    "marketCap": 50615777067.871704,
+    "mcapDate": "2026-05-25"
+  },
+  "HYG.US": {
+    "name": "iShares iBoxx $ High Yield Corp",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "NVDA.US": {
+    "name": "NVIDIA Corporation",
+    "sector": "Technology",
+    "marketCap": 5215507974349.976,
+    "mcapDate": "2026-05-25"
+  },
+  "AEE.US": {
+    "name": "Ameren Corporation",
+    "sector": "Utilities",
+    "marketCap": 30799687598.01367,
+    "mcapDate": "2026-05-25"
+  },
+  "F.US": {
+    "name": "Ford Motor Company",
+    "sector": "Consumer Cyclical",
+    "marketCap": 59491462181.93169,
+    "mcapDate": "2026-05-25"
+  },
+  "FN.US": {
+    "name": "Fabrinet",
+    "sector": "Technology",
+    "marketCap": 25219120271.550293,
+    "mcapDate": "2026-05-25"
+  },
+  "USB.US": {
+    "name": "U.S. Bancorp",
+    "sector": "Financial Services",
+    "marketCap": 85112597860.69572,
+    "mcapDate": "2026-05-25"
+  },
+  "TER.US": {
+    "name": "Teradyne, Inc.",
+    "sector": "Technology",
+    "marketCap": 56110972929.46301,
+    "mcapDate": "2026-05-25"
+  },
+  "ASX.US": {
+    "name": "ASE Technology Holding Co., Ltd",
+    "sector": "Technology",
+    "marketCap": 76371255928.01604,
+    "mcapDate": "2026-05-25"
+  },
+  "BURL.US": {
+    "name": "Burlington Stores, Inc.",
+    "sector": "Consumer Cyclical",
+    "marketCap": 20389051855.786865,
+    "mcapDate": "2026-05-25"
+  },
+  "IYM.US": {
+    "name": "iShares U.S. Basic Materials ET",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "RVMD.US": {
+    "name": "Revolution Medicines, Inc.",
+    "sector": "Healthcare",
+    "marketCap": 32221119261.68567,
+    "mcapDate": "2026-05-25"
+  },
+  "COST.US": {
+    "name": "Costco Wholesale Corporation",
+    "sector": "Consumer Defensive",
+    "marketCap": 456181283397.05566,
+    "mcapDate": "2026-05-25"
+  },
+  "CVE.US": {
+    "name": "Cenovus Energy Inc",
+    "sector": "Energy",
+    "marketCap": 56037809527.25601,
+    "mcapDate": "2026-05-25"
+  },
+  "SBUX.US": {
+    "name": "Starbucks Corporation",
+    "sector": "Consumer Cyclical",
+    "marketCap": 117514467695.61768,
+    "mcapDate": "2026-05-25"
+  },
+  "ODFL.US": {
+    "name": "Old Dominion Freight Line, Inc.",
+    "sector": "Industrials",
+    "marketCap": 43771084776.87753,
+    "mcapDate": "2026-05-25"
+  },
+  "NXT.US": {
+    "name": "Nextpower Inc.",
+    "sector": "Technology",
+    "marketCap": 19610818596.0,
+    "mcapDate": "2026-05-25"
+  },
+  "XLK.US": {
+    "name": "State Street Technology Select ",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "ITOT.US": {
+    "name": "iShares Core S&P Total U.S. Sto",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "VLO.US": {
+    "name": "Valero Energy Corporation",
+    "sector": "Energy",
+    "marketCap": 73330521836.28726,
+    "mcapDate": "2026-05-25"
+  },
+  "FIX.US": {
+    "name": "Comfort Systems USA, Inc.",
+    "sector": "Industrials",
+    "marketCap": 64325087667.75,
+    "mcapDate": "2026-05-25"
+  },
+  "DLR.US": {
+    "name": "Digital Realty Trust, Inc.",
+    "sector": "Real Estate",
+    "marketCap": 67480507193.13751,
+    "mcapDate": "2026-05-25"
+  },
+  "QTUM.US": {
+    "name": "Defiance Quantum ETF",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "ASML.US": {
+    "name": "ASML Holding N.V. - New York Re",
+    "sector": "Technology",
+    "marketCap": 629348514588.111,
+    "mcapDate": "2026-05-25"
+  },
+  "SMCI.US": {
+    "name": "Super Micro Computer, Inc.",
+    "sector": "Technology",
+    "marketCap": 21398470690.79013,
+    "mcapDate": "2026-05-25"
+  },
+  "VALE.US": {
+    "name": "VALE S.A.",
+    "sector": "Basic Materials",
+    "marketCap": 70256725951.68436,
+    "mcapDate": "2026-05-25"
+  },
+  "NUE.US": {
+    "name": "Nucor Corporation",
+    "sector": "Basic Materials",
+    "marketCap": 52835900400.0,
+    "mcapDate": "2026-05-25"
+  },
+  "XLC.US": {
+    "name": "State Street Communication Serv",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "CHRW.US": {
+    "name": "C.H. Robinson Worldwide, Inc.",
+    "sector": "Industrials",
+    "marketCap": 20537019604.052032,
+    "mcapDate": "2026-05-25"
+  },
+  "TWLO.US": {
+    "name": "Twilio Inc.",
+    "sector": "Technology",
+    "marketCap": 28515273557.8833,
+    "mcapDate": "2026-05-25"
+  },
+  "ZM.US": {
+    "name": "Zoom Communications, Inc.",
+    "sector": "Technology",
+    "marketCap": 31136496528.264038,
+    "mcapDate": "2026-05-25"
+  },
+  "STX.US": {
+    "name": "Seagate Technology Holdings PLC",
+    "sector": "Technology",
+    "marketCap": 182237624288.6875,
+    "mcapDate": "2026-05-25"
+  },
+  "PWR.US": {
+    "name": "Quanta Services, Inc.",
+    "sector": "Industrials",
+    "marketCap": 108559514558.91779,
+    "mcapDate": "2026-05-25"
+  },
+  "CSX.US": {
+    "name": "CSX Corporation",
+    "sector": "Industrials",
+    "marketCap": 84582481575.70847,
+    "mcapDate": "2026-05-25"
+  },
+  "C.US": {
+    "name": "Citigroup, Inc.",
+    "sector": "Financial Services",
+    "marketCap": 213350615054.94064,
+    "mcapDate": "2026-05-25"
+  },
+  "GE.US": {
+    "name": "GE Aerospace",
+    "sector": "Industrials",
+    "marketCap": 316416193146.23975,
+    "mcapDate": "2026-05-25"
+  },
+  "AXTI.US": {
+    "name": "AXT Inc",
+    "sector": "Technology",
+    "marketCap": 9213547122.513428,
+    "mcapDate": "2026-05-25"
+  },
+  "SCHX.US": {
+    "name": "Schwab U.S. Large-Cap ETF",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "VGT.US": {
+    "name": "Vanguard Information Tech ETF",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "SPG.US": {
+    "name": "Simon Property Group, Inc.",
+    "sector": "Real Estate",
+    "marketCap": 66288102099.50513,
+    "mcapDate": "2026-05-25"
+  },
+  "CNQ.US": {
+    "name": "Canadian Natural Resources Limi",
+    "sector": "Energy",
+    "marketCap": 101386364373.01636,
+    "mcapDate": "2026-05-25"
+  },
+  "ON.US": {
+    "name": "ON Semiconductor Corporation",
+    "sector": "Technology",
+    "marketCap": 45178929607.666824,
+    "mcapDate": "2026-05-25"
+  },
+  "LUV.US": {
+    "name": "Southwest Airlines Company",
+    "sector": "Industrials",
+    "marketCap": 19971294211.5038,
+    "mcapDate": "2026-05-25"
+  },
+  "CIFR.US": {
+    "name": "Cipher Digital Inc.",
+    "sector": "Technology",
+    "marketCap": 8986810577.218206,
+    "mcapDate": "2026-05-25"
+  },
+  "HPE.US": {
+    "name": "Hewlett Packard Enterprise Comp",
+    "sector": "Technology",
+    "marketCap": 49863179094.1624,
+    "mcapDate": "2026-05-25"
+  },
+  "USMV.US": {
+    "name": "iShares MSCI USA Min Vol Factor",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "XLV.US": {
+    "name": "State Street Health Care Select",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "USHY.US": {
+    "name": "iShares Broad USD High Yield Co",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "XOM.US": {
+    "name": "Exxon Mobil Corporation",
+    "sector": "Energy",
+    "marketCap": 642135206747.415,
+    "mcapDate": "2026-05-25"
+  },
+  "AA.US": {
+    "name": "Alcoa Corporation",
+    "sector": "Basic Materials",
+    "marketCap": 18836458552.70481,
+    "mcapDate": "2026-05-25"
+  },
+  "XBI.US": {
+    "name": "State Street SPDR S&P Biotech E",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "KORU.US": {
+    "name": "Direxion Daily South Korea Bull",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "GFS.US": {
+    "name": "GlobalFoundries Inc.",
+    "sector": "Technology",
+    "marketCap": 46966383586.87317,
+    "mcapDate": "2026-05-25"
+  },
+  "FDX.US": {
+    "name": "FedEx Corporation",
+    "sector": "Industrials",
+    "marketCap": 94058786127.88013,
+    "mcapDate": "2026-05-25"
+  },
+  "IEFA.US": {
+    "name": "iShares Core MSCI EAFE ETF",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "EWY.US": {
+    "name": "iShares MSCI South Korea ETF",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "SITM.US": {
+    "name": "SiTime Corporation",
+    "sector": "Technology",
+    "marketCap": 19231672943.23462,
+    "mcapDate": "2026-05-25"
+  },
+  "SOXL.US": {
+    "name": "Direxion Daily Semiconductor Bu",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "MPC.US": {
+    "name": "Marathon Petroleum Corporation",
+    "sector": "Energy",
+    "marketCap": 74341662320.91019,
+    "mcapDate": "2026-05-25"
+  },
+  "TECL.US": {
+    "name": "Direxion Daily Technology Bull ",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "XRT.US": {
+    "name": "State Street SPDR S&P Retail ET",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "HWM.US": {
+    "name": "Howmet Aerospace Inc.",
+    "sector": "Industrials",
+    "marketCap": 102647569879.52545,
+    "mcapDate": "2026-05-25"
+  },
+  "WULF.US": {
+    "name": "TeraWulf Inc.",
+    "sector": "Financial Services",
+    "marketCap": 11308054807.675438,
+    "mcapDate": "2026-05-25"
+  },
+  "NSC.US": {
+    "name": "Norfolk Southern Corporation",
+    "sector": "Industrials",
+    "marketCap": 70641550860.3674,
+    "mcapDate": "2026-05-25"
+  },
+  "MSCI.US": {
+    "name": "MSCI Inc.",
+    "sector": "Financial Services",
+    "marketCap": 42803823383.81201,
+    "mcapDate": "2026-05-25"
+  },
+  "TQQQ.US": {
+    "name": "ProShares UltraPro QQQ",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "COHR.US": {
+    "name": "Coherent Corp.",
+    "sector": "Technology",
+    "marketCap": 73867539862.87518,
+    "mcapDate": "2026-05-25"
+  },
+  "QLD.US": {
+    "name": "ProShares Ultra QQQ",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "IREN.US": {
+    "name": "IREN LIMITED",
+    "sector": "Financial Services",
+    "marketCap": 20309830697.799896,
+    "mcapDate": "2026-05-25"
+  },
+  "SYY.US": {
+    "name": "Sysco Corporation",
+    "sector": "Consumer Defensive",
+    "marketCap": 36480551602.10925,
+    "mcapDate": "2026-05-25"
+  },
+  "PLD.US": {
+    "name": "Prologis, Inc.",
+    "sector": "Real Estate",
+    "marketCap": 136028108509.46045,
+    "mcapDate": "2026-05-25"
+  },
+  "TJX.US": {
+    "name": "TJX Companies, Inc. (The)",
+    "sector": "Consumer Cyclical",
+    "marketCap": 175017228129.55823,
+    "mcapDate": "2026-05-25"
+  },
+  "MDY.US": {
+    "name": "State Street SPDR S&P MIDCAP 40",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "JBHT.US": {
+    "name": "J.B. Hunt Transport Services, I",
+    "sector": "Industrials",
+    "marketCap": 24401803724.308014,
+    "mcapDate": "2026-05-25"
+  },
+  "RIOT.US": {
+    "name": "Riot Platforms, Inc.",
+    "sector": "Financial Services",
+    "marketCap": 9260923536.148052,
+    "mcapDate": "2026-05-25"
+  },
+  "SMH.US": {
+    "name": "VanEck Semiconductor ETF",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "EWT.US": {
+    "name": "iShares MSCI Taiwan ETF",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "AMKR.US": {
+    "name": "Amkor Technology, Inc.",
+    "sector": "Technology",
+    "marketCap": 16297618058.5,
+    "mcapDate": "2026-05-25"
+  },
+  "KMI.US": {
+    "name": "Kinder Morgan, Inc.",
+    "sector": "Energy",
+    "marketCap": 75176864365.91882,
+    "mcapDate": "2026-05-25"
+  },
+  "GOOGL.US": {
+    "name": "Alphabet Inc.",
+    "sector": "Communication Services",
+    "marketCap": 4639851662446.74,
+    "mcapDate": "2026-05-25"
+  },
+  "EMB.US": {
+    "name": "iShares J.P. Morgan USD Emergin",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "STM.US": {
+    "name": "STMicroelectronics N.V.",
+    "sector": "Technology",
+    "marketCap": 59424776074.276886,
+    "mcapDate": "2026-05-25"
+  },
+  "AAOI.US": {
+    "name": "Applied Optoelectronics, Inc.",
+    "sector": "Technology",
+    "marketCap": 14563260223.616684,
+    "mcapDate": "2026-05-25"
+  },
+  "AAPL.US": {
+    "name": "Apple Inc.",
+    "sector": "Technology",
+    "marketCap": 4535749387493.408,
+    "mcapDate": "2026-05-25"
+  },
+  "MU.US": {
+    "name": "Micron Technology, Inc.",
+    "sector": "Technology",
+    "marketCap": 846928272301.0,
+    "mcapDate": "2026-05-25"
+  },
+  "SPXL.US": {
+    "name": "Direxion Daily S&P 500 Bull 3X ",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "MTZ.US": {
+    "name": "MasTec, Inc.",
+    "sector": "Industrials",
+    "marketCap": 30193779275.66162,
+    "mcapDate": "2026-05-25"
+  },
+  "RIO.US": {
+    "name": "Rio Tinto Plc",
+    "sector": "Basic Materials",
+    "marketCap": 169504207329.92856,
+    "mcapDate": "2026-05-25"
+  },
+  "NOK.US": {
+    "name": "Nokia Corporation Sponsored",
+    "sector": "Technology",
+    "marketCap": 86361805116.06744,
+    "mcapDate": "2026-05-25"
+  },
+  "BNY.US": {
+    "name": "The Bank of New York Mellon Cor",
+    "sector": "Financial Services",
+    "marketCap": 95509633660.67505,
+    "mcapDate": "2026-05-25"
+  },
+  "SPYM.US": {
+    "name": "State Street SPDR Portfolio S&P",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "MCHP.US": {
+    "name": "Microchip Technology Incorporat",
+    "sector": "Technology",
+    "marketCap": 50646467389.25947,
+    "mcapDate": "2026-05-25"
+  },
+  "MRAM.US": {
+    "name": "Everspin Technologies, Inc.",
+    "sector": "Technology",
+    "marketCap": 789714400.5156326,
+    "mcapDate": "2026-05-25"
+  },
+  "ROKU.US": {
+    "name": "Roku, Inc.",
+    "sector": "Communication Services",
+    "marketCap": 18542950888.77556,
+    "mcapDate": "2026-05-25"
+  },
+  "HAL.US": {
+    "name": "Halliburton Company",
+    "sector": "Energy",
+    "marketCap": 34643945090.222626,
+    "mcapDate": "2026-05-25"
+  },
+  "IEMG.US": {
+    "name": "iShares Core MSCI Emerging Mark",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "WBS.US": {
+    "name": "Webster Financial Corporation",
+    "sector": "Financial Services",
+    "marketCap": 11633503050.865631,
+    "mcapDate": "2026-05-25"
+  },
+  "PSA.US": {
+    "name": "Public Storage",
+    "sector": "Real Estate",
+    "marketCap": 53585339577.0,
+    "mcapDate": "2026-05-25"
+  },
+  "MUU.US": {
+    "name": "Direxion Daily MU Bull 2X ETF",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "LSCC.US": {
+    "name": "Lattice Semiconductor Corporati",
+    "sector": "Technology",
+    "marketCap": 19622265446.78592,
+    "mcapDate": "2026-05-25"
+  },
+  "BNO.US": {
+    "name": "United States Brent Oil Fund, L",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "VTI.US": {
+    "name": "Vanguard Total Stock Market ETF",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "SCHD.US": {
+    "name": "Schwab US Dividend Equity ETF",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "ETN.US": {
+    "name": "Eaton Corporation, PLC",
+    "sector": "Industrials",
+    "marketCap": 151961207369.99512,
+    "mcapDate": "2026-05-25"
+  },
+  "HLT.US": {
+    "name": "Hilton Worldwide Holdings Inc.",
+    "sector": "Consumer Cyclical",
+    "marketCap": 73093336224.95813,
+    "mcapDate": "2026-05-25"
+  },
+  "CORZ.US": {
+    "name": "Core Scientific, Inc.",
+    "sector": "Technology",
+    "marketCap": 8029782548.678169,
+    "mcapDate": "2026-05-25"
+  },
+  "D.US": {
+    "name": "Dominion Energy, Inc.",
+    "sector": "Utilities",
+    "marketCap": 59516608181.84454,
+    "mcapDate": "2026-05-25"
+  },
+  "IWR.US": {
+    "name": "iShares Russell Mid-Cap ETF",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "RMBS.US": {
+    "name": "Rambus, Inc.",
+    "sector": "Technology",
+    "marketCap": 15461423079.649033,
+    "mcapDate": "2026-05-25"
+  },
+  "CLS.US": {
+    "name": "Celestica, Inc.",
+    "sector": "Technology",
+    "marketCap": 42237669757.197876,
+    "mcapDate": "2026-05-25"
+  },
+  "XLI.US": {
+    "name": "State Street Industrial Select ",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "ATI.US": {
+    "name": "ATI Inc.",
+    "sector": "Industrials",
+    "marketCap": 22147784681.58568,
+    "mcapDate": "2026-05-25"
+  },
+  "CMI.US": {
+    "name": "Cummins Inc.",
+    "sector": "Industrials",
+    "marketCap": 88250906115.41315,
+    "mcapDate": "2026-05-25"
+  },
+  "VIK.US": {
+    "name": "Viking Holdings Ltd",
+    "sector": "Consumer Cyclical",
+    "marketCap": 37579816052.23984,
+    "mcapDate": "2026-05-25"
+  },
+  "EFA.US": {
+    "name": "iShares MSCI EAFE ETF",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "PNC.US": {
+    "name": "PNC Financial Services Group, I",
+    "sector": "Financial Services",
+    "marketCap": 88035012557.6908,
+    "mcapDate": "2026-05-25"
+  },
+  "FTNT.US": {
+    "name": "Fortinet, Inc.",
+    "sector": "Technology",
+    "marketCap": 98123593640.55292,
+    "mcapDate": "2026-05-25"
+  },
+  "MKSI.US": {
+    "name": "MKS Inc.",
+    "sector": "Technology",
+    "marketCap": 21655998310.174683,
+    "mcapDate": "2026-05-25"
+  },
+  "POET.US": {
+    "name": "POET Technologies Inc.",
+    "sector": "Technology",
+    "marketCap": 2518166999.875969,
+    "mcapDate": "2026-05-25"
+  },
+  "SEDG.US": {
+    "name": "SolarEdge Technologies, Inc.",
+    "sector": "Technology",
+    "marketCap": 3767687660.300606,
+    "mcapDate": "2026-05-25"
+  },
+  "MS.US": {
+    "name": "Morgan Stanley",
+    "sector": "Financial Services",
+    "marketCap": 317081564836.1135,
+    "mcapDate": "2026-05-25"
+  },
+  "GWW.US": {
+    "name": "W.W. Grainger, Inc.",
+    "sector": "Industrials",
+    "marketCap": 58912059601.27246,
+    "mcapDate": "2026-05-25"
+  },
+  "VZ.US": {
+    "name": "Verizon Communications Inc.",
+    "sector": "Communication Services",
+    "marketCap": 201888266927.10272,
+    "mcapDate": "2026-05-25"
+  },
+  "USAR.US": {
+    "name": "USA Rare Earth, Inc.",
+    "sector": "Basic Materials",
+    "marketCap": 5642794589.63752,
+    "mcapDate": "2026-05-25"
+  },
+  "TGT.US": {
+    "name": "Target Corporation",
+    "sector": "Consumer Defensive",
+    "marketCap": 57044647462.98069,
+    "mcapDate": "2026-05-25"
+  },
+  "ANET.US": {
+    "name": "Arista Networks, Inc.",
+    "sector": "Technology",
+    "marketCap": 193949866998.06793,
+    "mcapDate": "2026-05-25"
+  },
+  "FCX.US": {
+    "name": "Freeport-McMoRan, Inc.",
+    "sector": "Basic Materials",
+    "marketCap": 89114338444.2465,
+    "mcapDate": "2026-05-25"
+  },
+  "LITE.US": {
+    "name": "Lumentum Holdings Inc.",
+    "sector": "Technology",
+    "marketCap": 73668821899.41406,
+    "mcapDate": "2026-05-25"
+  },
+  "VIAV.US": {
+    "name": "Viavi Solutions Inc.",
+    "sector": "Technology",
+    "marketCap": 12213405968.916332,
+    "mcapDate": "2026-05-25"
+  },
+  "JPST.US": {
+    "name": "JPMorgan Ultra-Short Income ETF",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "CSCO.US": {
+    "name": "Cisco Systems, Inc.",
+    "sector": "Technology",
+    "marketCap": 474588162446.61487,
+    "mcapDate": "2026-05-25"
+  },
+  "AMD.US": {
+    "name": "Advanced Micro Devices, Inc.",
+    "sector": "Technology",
+    "marketCap": 762322120662.7244,
+    "mcapDate": "2026-05-25"
+  },
+  "VEU.US": {
+    "name": "Vanguard FTSE All World Ex US E",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "VBIL.US": {
+    "name": "Vanguard 0-3 Month Treasury Bil",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "RF.US": {
+    "name": "Regions Financial Corporation",
+    "sector": "Financial Services",
+    "marketCap": 23749552477.43231,
+    "mcapDate": "2026-05-25"
+  },
+  "WDC.US": {
+    "name": "Western Digital Corporation",
+    "sector": "Technology",
+    "marketCap": 166922661979.92545,
+    "mcapDate": "2026-05-25"
+  },
+  "EMXC.US": {
+    "name": "iShares MSCI Emerging Markets e",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "DOCN.US": {
+    "name": "DigitalOcean Holdings, Inc.",
+    "sector": "Technology",
+    "marketCap": 16537548821.94725,
+    "mcapDate": "2026-05-25"
+  },
+  "VOO.US": {
+    "name": "Vanguard S&P 500 ETF",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "BE.US": {
+    "name": "Bloom Energy Corporation",
+    "sector": "Industrials",
+    "marketCap": 86041422853.54785,
+    "mcapDate": "2026-05-25"
+  },
+  "DAL.US": {
+    "name": "Delta Air Lines, Inc.",
+    "sector": "Industrials",
+    "marketCap": 50023548646.60248,
+    "mcapDate": "2026-05-25"
+  },
+  "BWA.US": {
+    "name": "BorgWarner Inc.",
+    "sector": "Consumer Cyclical",
+    "marketCap": 13500665354.023888,
+    "mcapDate": "2026-05-25"
+  },
+  "JEPQ.US": {
+    "name": "JPMorgan Nasdaq Equity Premium ",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "IVW.US": {
+    "name": "iShares S&P 500 Growth ETF",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "CIEN.US": {
+    "name": "Ciena Corporation",
+    "sector": "Technology",
+    "marketCap": 82539916396.13599,
+    "mcapDate": "2026-05-25"
+  },
+  "NBIS.US": {
+    "name": "Nebius Group N.V.",
+    "sector": "Communication Services",
+    "marketCap": 54529716210.150116,
+    "mcapDate": "2026-05-25"
+  },
+  "BKR.US": {
+    "name": "Baker Hughes Company",
+    "sector": "Energy",
+    "marketCap": 65536055701.77728,
+    "mcapDate": "2026-05-25"
+  },
+  "HON.US": {
+    "name": "Honeywell International Inc.",
+    "sector": "Industrials",
+    "marketCap": 144422217722.2265,
+    "mcapDate": "2026-05-25"
+  },
+  "RL.US": {
+    "name": "Ralph Lauren Corporation",
+    "sector": "Consumer Cyclical",
+    "marketCap": 22484085119.22821,
+    "mcapDate": "2026-05-25"
+  },
+  "SMTC.US": {
+    "name": "Semtech Corporation",
+    "sector": "Technology",
+    "marketCap": 14598491353.114838,
+    "mcapDate": "2026-05-25"
+  },
+  "TXN.US": {
+    "name": "Texas Instruments Incorporated",
+    "sector": "Technology",
+    "marketCap": 281409784128.43823,
+    "mcapDate": "2026-05-25"
+  },
+  "VT.US": {
+    "name": "Vanguard Total World Stock Inde",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "VNQ.US": {
+    "name": "Vanguard Real Estate ETF",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "IVV.US": {
+    "name": "iShares Core S&P 500 ETF",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "CNP.US": {
+    "name": "CenterPoint Energy, Inc (Holdin",
+    "sector": "Utilities",
+    "marketCap": 28018080026.220093,
+    "mcapDate": "2026-05-25"
+  },
+  "TNA.US": {
+    "name": "Direxion Small Cap Bull 3X ETF",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "SAN.US": {
+    "name": "Banco Santander, S.A. Sponsored",
+    "sector": "Financial Services",
+    "marketCap": 173380079987.27066,
+    "mcapDate": "2026-05-25"
+  },
+  "UPRO.US": {
+    "name": "ProShares UltraPro S&P 500",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "TSM.US": {
+    "name": "Taiwan Semiconductor Manufactur",
+    "sector": "Technology",
+    "marketCap": 2098032405499.6948,
+    "mcapDate": "2026-05-25"
+  },
+  "DIA.US": {
+    "name": "State Street SPDR Dow Jones Ind",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "FCEL.US": {
+    "name": "FuelCell Energy, Inc.",
+    "sector": "Industrials",
+    "marketCap": 1324976440.7856712,
+    "mcapDate": "2026-05-25"
+  },
+  "FLNC.US": {
+    "name": "Fluence Energy, Inc.",
+    "sector": "Utilities",
+    "marketCap": 2854118889.7018623,
+    "mcapDate": "2026-05-25"
+  },
+  "TRV.US": {
+    "name": "The Travelers Companies, Inc.",
+    "sector": "Financial Services",
+    "marketCap": 65167090799.74771,
+    "mcapDate": "2026-05-25"
+  },
+  "VCLT.US": {
+    "name": "Vanguard Long-Term Corporate Bo",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "VSH.US": {
+    "name": "Vishay Intertechnology, Inc.",
+    "sector": "Technology",
+    "marketCap": 6431000325.75,
+    "mcapDate": "2026-05-25"
+  },
+  "CAT.US": {
+    "name": "Caterpillar, Inc.",
+    "sector": "Industrials",
+    "marketCap": 405270286668.8229,
+    "mcapDate": "2026-05-25"
+  },
+  "IWM.US": {
+    "name": "iShares Russell 2000 Index Fund",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "MTUM.US": {
+    "name": "iShares MSCI USA Momentum Facto",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "AMDL.US": {
+    "name": "GraniteShares 2x Long AMD Daily",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "ALL.US": {
+    "name": "Allstate Corporation (The)",
+    "sector": "Financial Services",
+    "marketCap": 55757375009.17267,
+    "mcapDate": "2026-05-25"
+  },
+  "NVDL.US": {
+    "name": "GraniteShares 2x Long NVDA Dail",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "IWD.US": {
+    "name": "iShares Russell 1000 Value ETF",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "KRE.US": {
+    "name": "State Street SPDR S&P Regional ",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "VWO.US": {
+    "name": "Vanguard FTSE Emerging Markets ",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "CRS.US": {
+    "name": "Carpenter Technology Corporatio",
+    "sector": "Industrials",
+    "marketCap": 21569517638.834473,
+    "mcapDate": "2026-05-25"
+  },
+  "GM.US": {
+    "name": "General Motors Company",
+    "sector": "Consumer Cyclical",
+    "marketCap": 71042201539.54913,
+    "mcapDate": "2026-05-25"
+  },
+  "KEYS.US": {
+    "name": "Keysight Technologies Inc.",
+    "sector": "Technology",
+    "marketCap": 59171132410.35797,
+    "mcapDate": "2026-05-25"
+  },
+  "INTC.US": {
+    "name": "Intel Corporation",
+    "sector": "Technology",
+    "marketCap": 602315821594.2383,
+    "mcapDate": "2026-05-25"
+  },
+  "CGBL.US": {
+    "name": "Capital Group Core Balanced ETF",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "NVS.US": {
+    "name": "Novartis AG",
+    "sector": "Healthcare",
+    "marketCap": 290049049118.1878,
+    "mcapDate": "2026-05-25"
+  },
+  "XLP.US": {
+    "name": "State Street Consumer Staples S",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "ETR.US": {
+    "name": "Entergy Corporation",
+    "sector": "Utilities",
+    "marketCap": 51466482301.47988,
+    "mcapDate": "2026-05-25"
+  },
+  "NVT.US": {
+    "name": "nVent Electric plc",
+    "sector": "Industrials",
+    "marketCap": 26628890218.557983,
+    "mcapDate": "2026-05-25"
+  },
+  "LUNR.US": {
+    "name": "Intuitive Machines, Inc.",
+    "sector": "Industrials",
+    "marketCap": 6138905073.026127,
+    "mcapDate": "2026-05-25"
+  },
+  "EOG.US": {
+    "name": "EOG Resources, Inc.",
+    "sector": "Energy",
+    "marketCap": 75217801656.78131,
+    "mcapDate": "2026-05-25"
+  },
+  "KLAC.US": {
+    "name": "KLA Corporation",
+    "sector": "Technology",
+    "marketCap": 246674398743.8097,
+    "mcapDate": "2026-05-25"
+  },
+  "USO.US": {
+    "name": "United States Oil Fund",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "OKE.US": {
+    "name": "ONEOK, Inc.",
+    "sector": "Energy",
+    "marketCap": 59241988304.47693,
+    "mcapDate": "2026-05-25"
+  },
+  "WELL.US": {
+    "name": "Welltower Inc.",
+    "sector": "Real Estate",
+    "marketCap": 152597525363.93204,
+    "mcapDate": "2026-05-25"
+  },
+  "ONTO.US": {
+    "name": "Onto Innovation Inc.",
+    "sector": "Technology",
+    "marketCap": 13045250445.75,
+    "mcapDate": "2026-05-25"
+  },
+  "RKLX.US": {
+    "name": "Defiance Daily Target 2X Long R",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "EME.US": {
+    "name": "EMCOR Group, Inc.",
+    "sector": "Industrials",
+    "marketCap": 37804140256.02704,
+    "mcapDate": "2026-05-25"
+  },
+  "UPS.US": {
+    "name": "United Parcel Service, Inc.",
+    "sector": "Industrials",
+    "marketCap": 85867631451.16537,
+    "mcapDate": "2026-05-25"
+  },
+  "CVS.US": {
+    "name": "CVS Health Corporation",
+    "sector": "Healthcare",
+    "marketCap": 118992983376.49478,
+    "mcapDate": "2026-05-25"
+  },
+  "SLB.US": {
+    "name": "SLB Limited",
+    "sector": "Energy",
+    "marketCap": 85636900997.05844,
+    "mcapDate": "2026-05-25"
+  },
+  "ENTG.US": {
+    "name": "Entegris, Inc.",
+    "sector": "Technology",
+    "marketCap": 20603143814.086914,
+    "mcapDate": "2026-05-25"
+  },
+  "GEV.US": {
+    "name": "GE Vernova Inc.",
+    "sector": "Industrials",
+    "marketCap": 279130204982.0813,
+    "mcapDate": "2026-05-25"
+  },
+  "JBL.US": {
+    "name": "Jabil Inc.",
+    "sector": "Technology",
+    "marketCap": 38439880969.6369,
+    "mcapDate": "2026-05-25"
+  },
+  "BOXX.US": {
+    "name": "Alpha Architect 1-3 Month Box E",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "SPMO.US": {
+    "name": "Invesco S&P 500 Momentum ETF",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "MRVL.US": {
+    "name": "Marvell Technology, Inc.",
+    "sector": "Technology",
+    "marketCap": 171897356058.27576,
+    "mcapDate": "2026-05-25"
+  },
+  "HPQ.US": {
+    "name": "HP Inc.",
+    "sector": "Technology",
+    "marketCap": 23169929175.650017,
+    "mcapDate": "2026-05-25"
+  },
+  "VRT.US": {
+    "name": "Vertiv Holdings, LLC",
+    "sector": "Industrials",
+    "marketCap": 125780269605.18018,
+    "mcapDate": "2026-05-25"
+  },
+  "SIDU.US": {
+    "name": "Sidus Space, Inc.",
+    "sector": "Industrials",
+    "marketCap": 414028043.2257519,
+    "mcapDate": "2026-05-25"
+  },
+  "BIDU.US": {
+    "name": "Baidu, Inc.",
+    "sector": "Communication Services",
+    "marketCap": 43480887605.12061,
+    "mcapDate": "2026-05-25"
+  },
+  "AEP.US": {
+    "name": "American Electric Power Company",
+    "sector": "Utilities",
+    "marketCap": 71598779168.30786,
+    "mcapDate": "2026-05-25"
+  },
+  "FANG.US": {
+    "name": "Diamondback Energy, Inc.",
+    "sector": "Energy",
+    "marketCap": 56462393729.570114,
+    "mcapDate": "2026-05-25"
+  },
+  "JCI.US": {
+    "name": "Johnson Controls International ",
+    "sector": "Industrials",
+    "marketCap": 84415595203.46501,
+    "mcapDate": "2026-05-25"
+  },
+  "QQQ.US": {
+    "name": "Invesco QQQ Trust, Series 1",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "NTRA.US": {
+    "name": "Natera, Inc.",
+    "sector": "Healthcare",
+    "marketCap": 29099933818.22693,
+    "mcapDate": "2026-05-25"
+  },
+  "NXPI.US": {
+    "name": "NXP Semiconductors N.V.",
+    "sector": "Technology",
+    "marketCap": 79899522679.32224,
+    "mcapDate": "2026-05-25"
+  },
+  "UNP.US": {
+    "name": "Union Pacific Corporation",
+    "sector": "Industrials",
+    "marketCap": 157856471971.4303,
+    "mcapDate": "2026-05-25"
+  },
+  "MTSI.US": {
+    "name": "MACOM Technology Solutions Hold",
+    "sector": "Technology",
+    "marketCap": 29448643686.730408,
+    "mcapDate": "2026-05-25"
+  },
+  "SNDK.US": {
+    "name": "Sandisk Corporation",
+    "sector": "Technology",
+    "marketCap": 218978835579.88574,
+    "mcapDate": "2026-05-25"
+  },
+  "XLE.US": {
+    "name": "State Street Energy Select Sect",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "GLW.US": {
+    "name": "Corning Incorporated",
+    "sector": "Technology",
+    "marketCap": 167006772567.7082,
+    "mcapDate": "2026-05-25"
+  },
+  "JNJ.US": {
+    "name": "Johnson & Johnson",
+    "sector": "Healthcare",
+    "marketCap": 564107216168.6482,
+    "mcapDate": "2026-05-25"
+  },
+  "MPWR.US": {
+    "name": "Monolithic Power Systems, Inc.",
+    "sector": "Technology",
+    "marketCap": 78106202847.93799,
+    "mcapDate": "2026-05-25"
+  },
+  "TE.US": {
+    "name": "T1 Energy Inc.",
+    "sector": "Industrials",
+    "marketCap": 2256512729.0932846,
+    "mcapDate": "2026-05-25"
+  },
+  "VTR.US": {
+    "name": "Ventas, Inc.",
+    "sector": "Real Estate",
+    "marketCap": 42870446322.507225,
+    "mcapDate": "2026-05-25"
+  },
+  "EQIX.US": {
+    "name": "Equinix, Inc.",
+    "sector": "Real Estate",
+    "marketCap": 106493480600.42969,
+    "mcapDate": "2026-05-25"
+  },
+  "PSX.US": {
+    "name": "Phillips 66",
+    "sector": "Energy",
+    "marketCap": 71242144682.64526,
+    "mcapDate": "2026-05-25"
+  },
+  "RKLB.US": {
+    "name": "Rocket Lab Corporation",
+    "sector": "Industrials",
+    "marketCap": 78587045226.18599,
+    "mcapDate": "2026-05-25"
+  },
+  "URTH.US": {
+    "name": "iShares MSCI World ETF",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "SPY.US": {
+    "name": "State Street SPDR S&P 500 ETF T",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "VEA.US": {
+    "name": "Vanguard FTSE Developed Markets",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "AKAM.US": {
+    "name": "Akamai Technologies, Inc.",
+    "sector": "Technology",
+    "marketCap": 21405099329.57634,
+    "mcapDate": "2026-05-25"
+  },
+  "ARM.US": {
+    "name": "Arm Holdings plc",
+    "sector": "Technology",
+    "marketCap": 326126211774.801,
+    "mcapDate": "2026-05-25"
+  },
+  "FLEX.US": {
+    "name": "Flex Ltd.",
+    "sector": "Technology",
+    "marketCap": 48534083907.048676,
+    "mcapDate": "2026-05-25"
+  },
+  "FTAI.US": {
+    "name": "FTAI Aviation Ltd.",
+    "sector": "Industrials",
+    "marketCap": 25864245231.253418,
+    "mcapDate": "2026-05-25"
+  },
+  "AMAT.US": {
+    "name": "Applied Materials, Inc.",
+    "sector": "Technology",
+    "marketCap": 343117510176.3663,
+    "mcapDate": "2026-05-25"
+  },
+  "SIMO.US": {
+    "name": "Silicon Motion Technology Corpo",
+    "sector": "Technology",
+    "marketCap": 9363310053.596802,
+    "mcapDate": "2026-05-25"
+  },
+  "IBKR.US": {
+    "name": "Interactive Brokers Group, Inc.",
+    "sector": "Financial Services",
+    "marketCap": 36240184871.644196,
+    "mcapDate": "2026-05-25"
+  },
+  "SATS.US": {
+    "name": "EchoStar Corporation",
+    "sector": "Communication Services",
+    "marketCap": 35994834325.159424,
+    "mcapDate": "2026-05-25"
+  },
+  "LIN.US": {
+    "name": "Linde plc",
+    "sector": "Basic Materials",
+    "marketCap": 239301728611.2433,
+    "mcapDate": "2026-05-25"
+  },
+  "LLY.US": {
+    "name": "Eli Lilly and Company",
+    "sector": "Healthcare",
+    "marketCap": 949704597390.0,
+    "mcapDate": "2026-05-25"
+  },
+  "VTV.US": {
+    "name": "Vanguard Value ETF",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "APLD.US": {
+    "name": "Applied Digital Corporation",
+    "sector": "Technology",
+    "marketCap": 13108248448.695202,
+    "mcapDate": "2026-05-25"
+  },
+  "KO.US": {
+    "name": "Coca-Cola Company (The)",
+    "sector": "Consumer Defensive",
+    "marketCap": 350566281861.7878,
+    "mcapDate": "2026-05-25"
+  }
+}
