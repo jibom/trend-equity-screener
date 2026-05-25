@@ -259,6 +259,7 @@
     .ticker a:hover { text-decoration: underline; }
     .alert-ticker a { color: var(--text); text-decoration: none; cursor: pointer; }
     .alert-ticker a:hover { text-decoration: underline; color: var(--primary); }
+    .alert-name { font-size: 13px; color: var(--text-muted); }
     @media (max-width: 640px) {
       .modal-content { width: 100vw; height: 100vh; border-radius: 0; }
       .close-btn { width: 44px; height: 44px; }
@@ -279,7 +280,6 @@
       <div id="tv-chart-container"></div>
     </div>
   </div>
-  <script src="https://s3.tradingview.com/tv.js"></script>
   <script>
   (function() {
     // ─── State ─────────────────────────────────────────
@@ -349,7 +349,7 @@
       }
       if (search.trim()) {
         const q = search.toLowerCase();
-        pool = pool.filter(e => e.ticker.toLowerCase().includes(q) || (e.sector||'').toLowerCase().includes(q) || (e.theme||'').toLowerCase().includes(q));
+        pool = pool.filter(e => e.ticker.toLowerCase().includes(q) || (e.name||'').toLowerCase().includes(q) || (e.sector||'').toLowerCase().includes(q) || (e.theme||'').toLowerCase().includes(q));
       }
       // Sort: in trend/breakout tab, default sort by status rank then by sortField
       if (sortField && sortField !== 'pool_status') {
@@ -575,7 +575,7 @@
 
       let rows = '';
       if (pool.length === 0) {
-        rows = `<tr><td colspan="14" class="empty-state">${icons.chart}<p>No stocks in ${tab} pool</p></td></tr>`;
+        rows = `<tr><td colspan="15" class="empty-state">${icons.chart}<p>No stocks in ${tab} pool</p></td></tr>`;
       } else {
         pool.forEach((e, i) => {
           const statusBadge = `<span class="pool-badge pool-${e.pool_status}">${e.pool_status}</span>`;
@@ -588,6 +588,7 @@
           rows += `<tr>
             <td class="row-num">${i+1}</td>
             <td class="ticker"><a href="#" onclick="showChart('${e.ticker}'); return false;">${e.ticker}</a></td>
+            <td class="name">${e.name || ''}</td>
             <td class="sector">${e.sector || '-'}</td>
             <td class="theme">${e.theme || ''}</td>
             <td>${statusBadge}${fbIcon}</td>
@@ -628,6 +629,7 @@
               <thead><tr>
                 <th style="width:36px">#</th>
                 ${th('ticker','Ticker')}
+                ${th('name','Name')}
                 ${th('sector','Sector')}
                 ${th('theme','Theme')}
                 ${th('pool_status','Status')}
@@ -673,6 +675,7 @@
         }
         cards += `<div class="alert-card">
           <div class="alert-ticker"><a href="#" onclick="showChart('${a.ticker}'); return false;">${a.ticker}</a></div>
+          <div class="alert-name">${a.name || ''}</div>
           <div>${badge}</div>
           <div class="alert-detail">${detail}</div>
           <div class="alert-date">${a.date}</div>
@@ -861,27 +864,53 @@
   function _initTVWidget() {
     const c = document.getElementById('tv-chart-container');
     c.innerHTML = '';
-    if (typeof TradingView === 'undefined') return;
-    new TradingView.widget({
-      container_id: 'tv-chart-container',
-      symbol: mapTickerToTV(_chartTicker),
-      interval: _chartInterval,
-      timezone: 'Asia/Hong_Kong',
-      theme: document.documentElement.classList.contains('dark') ? 'dark' : 'light',
-      style: '1',
-      locale: 'zh_CN',
-      enable_publishing: false,
-      hide_side_toolbar: false,
-      studies: [
-        'MASimple@tv-basicstudies',
-        'MACD@tv-basicstudies',
-        'Stochastic@tv-basicstudies',
-        'Volume@tv-basicstudies'
-      ],
-      width: '100%',
-      height: '100%',
-      autosize: true
-    });
+    const symbol = mapTickerToTV(_chartTicker);
+    const isDark = document.documentElement.classList.contains('dark');
+    const theme = isDark ? 'dark' : 'light';
+
+    // Fast MAs (5/10/15/20/25) + Slow MAs (40/50/60/70)
+    const studies = [
+      {"id":"MASimple@tv-basicstudies","inputs":{"length":5}},
+      {"id":"MASimple@tv-basicstudies","inputs":{"length":10}},
+      {"id":"MASimple@tv-basicstudies","inputs":{"length":15}},
+      {"id":"MASimple@tv-basicstudies","inputs":{"length":20}},
+      {"id":"MASimple@tv-basicstudies","inputs":{"length":25}},
+      {"id":"MASimple@tv-basicstudies","inputs":{"length":40}},
+      {"id":"MASimple@tv-basicstudies","inputs":{"length":50}},
+      {"id":"MASimple@tv-basicstudies","inputs":{"length":60}},
+      {"id":"MASimple@tv-basicstudies","inputs":{"length":70}},
+      {"id":"MACD@tv-basicstudies"},
+      {"id":"Volume@tv-basicstudies","inputs":{"showMA":true,"length":5}},
+      {"id":"Volume@tv-basicstudies","inputs":{"showMA":true,"length":30}}
+    ];
+
+    // Fast MAs = warm palette; Slow MAs = cool palette; Volume MAs colored
+    const overrides = {
+      "MASimple.0.plot.color":"#EF5350","MASimple.1.plot.color":"#FF7043",
+      "MASimple.2.plot.color":"#FFA726","MASimple.3.plot.color":"#FFCA28",
+      "MASimple.4.plot.color":"#CDDC39",
+      "MASimple.5.plot.color":"#42A5F5","MASimple.6.plot.color":"#29B6F6",
+      "MASimple.7.plot.color":"#26C6DA","MASimple.8.plot.color":"#80DEEA",
+      "Volume.0.ma.color":"#FF6B6B",
+      "Volume.1.ma.color":"#42A5F5","Volume.1.volume.transparency":100
+    };
+
+    const p = {
+      frameElementId:'tv-'+Date.now(), symbol, interval:_chartInterval,
+      timezone:'Asia/Hong_Kong', theme, style:'1', locale:'zh_CN',
+      enable_publishing:'false', hide_side_toolbar:'false',
+      allow_symbol_change:'true', save_image:'false',
+      studies:JSON.stringify(studies),
+      studies_overrides:JSON.stringify(overrides),
+      autosize:'true'
+    };
+    const qs = Object.entries(p)
+      .map(([k,v])=>encodeURIComponent(k)+'='+encodeURIComponent(v)).join('&');
+
+    const iframe = document.createElement('iframe');
+    iframe.src = 'https://s.tradingview.com/widgetembed/?'+qs;
+    iframe.style.cssText = 'width:100%;height:100%;border:none;';
+    c.appendChild(iframe);
   }
 
   document.addEventListener('keydown', function(e) {

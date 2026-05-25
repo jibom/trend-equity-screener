@@ -49,6 +49,7 @@ from pool_manager import (
     run_pool_state_machine, load_pools, save_pools, load_themes,
     generate_alerts, save_alerts,
 )
+from ref_data import load_ref, save_ref, batch_fetch
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 ROOT_DIR = os.path.dirname(SCRIPT_DIR)
@@ -424,19 +425,31 @@ def main():
 
         print(f"[Phase 2] SMA passers: {len(sma_passers)}", file=sys.stderr)
 
-        # ─── Phase 3: Market cap (yfinance) ───
-        windcodes = [item["ticker"] for item in sma_passers]
-        mcap_map, sector_map = fetch_market_caps_yfinance(windcodes)
+        # ─── Phase 3: Market cap via ref data cache (yfinance fallback) ───
+        print(f"[Phase 3] Resolving market cap for {len(sma_passers)} stocks (ref cache) ...", file=sys.stderr)
+        ref = load_ref("hk")
+
+        # Build list of all tickers needing ref data (screener + pool)
+        screener_tickers = [wind_to_pool_ticker(item["ticker"]) for item in sma_passers]
+        pool_tickers_list = list(prev_pools.keys())
+        all_ref_tickers = list(set(screener_tickers + pool_tickers_list))
+        ref = batch_fetch(all_ref_tickers, ref)
 
         passing = []
         for item in sma_passers:
-            mcap = mcap_map.get(item["ticker"], 0)
+            pool_ticker = wind_to_pool_ticker(item["ticker"])
+            entry = ref.get(pool_ticker, {})
+            mcap = entry.get("marketCap", 0)
             if mcap > 0:
                 item["marketCap"] = int(mcap)
-                if sector_map.get(item["ticker"]):
-                    item["sector"] = sector_map[item["ticker"]]
+                if entry.get("sector"):
+                    item["sector"] = entry["sector"]
+                if entry.get("name"):
+                    item["name"] = entry["name"]
                 passing.append(item)
                 print(f"  [Pass] {item['ticker']} ({item['name']}) HK${item['price']:.2f} MCap={float(mcap)/1e8:.1f}亿HKD", file=sys.stderr)
+
+        save_ref("hk", ref)
 
     finally:
         conn.close()
@@ -466,15 +479,15 @@ def main():
     bootstrap = len(prev_pools) == 0
     pools_data, alerts = run_pool_system(eod_df, today_str, prev_pools, themes, name_map, bootstrap=bootstrap)
 
-    # Enrich pool entries with sector from yfinance Phase 3 results
-    sector_map = {}
-    for item in passing:
-        windcode = item["ticker"]
-        sector_map[windcode] = item.get("sector", "")
+    # Enrich pool entries with name/sector/marketCap from ref data
     for ticker, entry in pools_data.items():
-        windcode = pool_to_wind_ticker(ticker)
-        if not entry.get("sector") and sector_map.get(windcode):
-            entry["sector"] = sector_map[windcode]
+        ref_entry = ref.get(ticker, {})
+        if ref_entry.get("name") and not entry.get("name"):
+            entry["name"] = ref_entry["name"]
+        if ref_entry.get("sector") and not entry.get("sector"):
+            entry["sector"] = ref_entry["sector"]
+        if ref_entry.get("marketCap") and not entry.get("marketCap"):
+            entry["marketCap"] = ref_entry["marketCap"]
         if not entry.get("theme") and themes.get(ticker, {}).get("theme"):
             entry["theme"] = themes[ticker]["theme"]
 

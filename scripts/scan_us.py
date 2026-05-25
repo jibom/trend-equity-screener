@@ -51,6 +51,7 @@ from pool_manager import (
     run_pool_state_machine, load_pools, save_pools, load_themes,
     generate_alerts, save_alerts,
 )
+from ref_data import load_ref, save_ref, batch_fetch
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 ROOT_DIR = os.path.dirname(SCRIPT_DIR)
@@ -393,32 +394,32 @@ def main():
     elapsed = time.time() - start_time
     print(f"[Phase 2] Complete: {len(technical_passers)} pass technical filters ({elapsed:.0f}s)", file=sys.stderr)
 
-    # ── Phase 3: Market cap via yfinance ──
-    print(f"[Phase 3] Fetching market cap (yfinance) for {len(technical_passers)} stocks ...", file=sys.stderr)
+    # ── Phase 3: Market cap via ref data cache (yfinance fallback) ──
+    print(f"[Phase 3] Resolving market cap for {len(technical_passers)} stocks (ref cache) ...", file=sys.stderr)
+
+    ref = load_ref("us")
+    # Build list of all tickers needing ref data (screener + pool)
+    screener_tickers = [f"{item['ticker']}.US" for item in technical_passers]
+    pool_tickers_list = list(prev_pools.keys())
+    all_ref_tickers = list(set(screener_tickers + pool_tickers_list))
+    ref = batch_fetch(all_ref_tickers, ref)
 
     passing = []
-
-    for idx, item in enumerate(technical_passers):
-        code = item["ticker"]
-        meta = fetch_market_cap_yfinance(code)
-        market_cap = meta["market_cap"]
-
-        if market_cap == 0:
+    for item in technical_passers:
+        ticker_key = f"{item['ticker']}.US"
+        entry = ref.get(ticker_key, {})
+        mcap = entry.get("marketCap", 0)
+        if mcap == 0:
             continue
-
-        item["marketCap"] = int(market_cap)
-        if meta.get("name"):
-            item["name"] = meta["name"]
-        if meta.get("sector"):
-            item["sector"] = meta["sector"]
+        item["marketCap"] = int(mcap)
+        if entry.get("name"):
+            item["name"] = entry["name"]
+        if entry.get("sector"):
+            item["sector"] = entry["sector"]
         passing.append(item)
+        print(f"  [Pass] {item['ticker']} ({item['name']}) ${item['price']:.2f} MCap={mcap/1e8:.1f}亿USD Sector={item['sector']}", file=sys.stderr)
 
-        print(f"  [Pass] {item['ticker']} ({item['name']}) ${item['price']:.2f} MCap={market_cap/1e8:.1f}亿USD Sector={item['sector']}", file=sys.stderr)
-
-        if (idx + 1) % 20 == 0:
-            elapsed = time.time() - start_time
-            print(f"  [Phase 3] {idx+1}/{len(technical_passers)} ({elapsed:.0f}s)", file=sys.stderr)
-        time.sleep(0.15)
+    save_ref("us", ref)
 
     passing.sort(key=lambda x: x["marketCap"], reverse=True)
 
@@ -445,13 +446,15 @@ def main():
     bootstrap = len(prev_pools) == 0
     pools_data, alerts = run_pool_system(histories, today_str, prev_pools, themes, bootstrap=bootstrap)
 
-    # Enrich pool entries with sector/name from yfinance Phase 3 results
-    sector_map = {item["ticker"]: item.get("sector", "") for item in passing}
-    name_map_phase3 = {item["ticker"]: item.get("name", "") for item in passing}
+    # Enrich pool entries with name/sector/marketCap from ref data
     for ticker, entry in pools_data.items():
-        code = ticker.replace(".US", "")
-        if not entry.get("sector") and sector_map.get(code):
-            entry["sector"] = sector_map[code]
+        ref_entry = ref.get(ticker, {})
+        if ref_entry.get("name") and not entry.get("name"):
+            entry["name"] = ref_entry["name"]
+        if ref_entry.get("sector") and not entry.get("sector"):
+            entry["sector"] = ref_entry["sector"]
+        if ref_entry.get("marketCap") and not entry.get("marketCap"):
+            entry["marketCap"] = ref_entry["marketCap"]
         if not entry.get("theme") and themes.get(ticker, {}).get("theme"):
             entry["theme"] = themes[ticker]["theme"]
 
