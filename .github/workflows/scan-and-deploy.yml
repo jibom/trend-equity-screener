@@ -102,11 +102,16 @@ jobs:
           PYTHONIOENCODING: utf-8
         continue-on-error: true
 
+      - name: Build chart data
+        run: python scripts/build_chartdata.py
+        env:
+          PYTHONIOENCODING: utf-8
+
       - name: Commit updated data
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add public/data/*.json data/*.json
+          git add public/data/*.json data/*.json public/data/chartdata/
           git diff --staged --quiet || git commit -m "Update scan data $(date -u +'%Y-%m-%d %H:%M UTC')"
           git push
 

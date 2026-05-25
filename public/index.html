@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Equity Screener — Breakout & Trend Pools</title>
   <meta name="description" content="US & HK equity screener with Breakout Pool and Trend Pool." />
+  <script src="https://unpkg.com/lightweight-charts@4.1.3/dist/lightweight-charts.standalone.production.js" defer></script>
   <style>
     :root {
       --bg: #ffffff;
@@ -254,7 +255,10 @@
       display: flex; align-items: center; justify-content: center; transition: background 0.15s;
     }
     .close-btn:hover { background: var(--hover); }
-    #tv-chart-container { flex: 1; min-height: 0; }
+    #chart-panes { flex: 1; display: flex; flex-direction: column; min-height: 0; gap: 1px; background: var(--border); }
+    #chart-main { flex: 5; min-height: 0; background: var(--bg-card); }
+    .chart-sub { flex: 1.5; min-height: 0; position: relative; background: var(--bg-card); }
+    .chart-sub-label { position: absolute; top: 4px; left: 8px; font-size: 10px; font-weight: 700; color: var(--text-muted); z-index: 2; pointer-events: none; text-transform: uppercase; letter-spacing: 0.05em; }
     .ticker a { color: var(--primary); text-decoration: none; cursor: pointer; }
     .ticker a:hover { text-decoration: underline; }
     .alert-ticker a { color: var(--text); text-decoration: none; cursor: pointer; }
@@ -277,7 +281,11 @@
         <button id="btn-weekly" class="interval-btn" onclick="switchInterval('W')">Weekly</button>
         <button class="close-btn" onclick="closeChart()">✕</button>
       </div>
-      <div id="tv-chart-container"></div>
+      <div id="chart-panes">
+        <div id="chart-main"></div>
+        <div id="chart-macd" class="chart-sub"><span class="chart-sub-label">MACD</span></div>
+        <div id="chart-kdj" class="chart-sub"><span class="chart-sub-label">KDJ</span></div>
+      </div>
     </div>
   </div>
   <script>
@@ -822,100 +830,238 @@
   })();
 
   // ─── Chart Modal ──────────────────────────────────
+  // ─── Chart Modal (Lightweight Charts) ─────────────
   let _chartTicker = '';
   let _chartInterval = 'D';
+  let _chartData = null;   // loaded chartdata for current ticker
+  let _charts = null;      // array of LC chart instances
 
-  function mapTickerToTV(ticker) {
-    if (!ticker) return ticker;
-    if (ticker.endsWith('.HK')) {
-      const code = ticker.replace('.HK', '');
-      const stripped = String(parseInt(code, 10));
-      return `HKEX:${stripped}`;
+  // ── Indicator calculations (pure functions) ───────
+
+  function calcMA(data, period) {
+    const out = [];
+    for (let i = period - 1; i < data.length; i++) {
+      let sum = 0;
+      for (let j = i - period + 1; j <= i; j++) sum += data[j][4];
+      out.push({ time: data[i][0], value: +(sum / period).toFixed(2) });
     }
-    if (ticker.endsWith('.US')) return ticker.replace('.US', '');
-    if (ticker.endsWith('.T'))  return `TSE:${ticker.replace('.T', '')}`;
-    if (ticker.endsWith('.SH')) return `SSE:${ticker.replace('.SH', '')}`;
-    if (ticker.endsWith('.SZ')) return `SZSE:${ticker.replace('.SZ', '')}`;
-    return ticker;
+    return out;
   }
 
-  function showChart(ticker) {
+  function _ema(values, period) {
+    const out = new Array(values.length).fill(null);
+    if (values.length < period) return out;
+    let sum = 0;
+    for (let i = 0; i < period; i++) {
+      if (values[i] === null) return out;
+      sum += values[i];
+    }
+    let e = sum / period;
+    out[period - 1] = e;
+    const k = 2 / (period + 1);
+    for (let i = period; i < values.length; i++) {
+      if (values[i] === null) break;
+      e = values[i] * k + e * (1 - k);
+      out[i] = e;
+    }
+    return out;
+  }
+
+  function calcMACD(data, fast, slow, signal) {
+    fast = fast || 12; slow = slow || 26; signal = signal || 9;
+    const c = data.map(d => d[4]), t = data.map(d => d[0]);
+    const ef = _ema(c, fast), es = _ema(c, slow);
+    const dif = c.map((_, i) => (ef[i] !== null && es[i] !== null) ? ef[i] - es[i] : null);
+    const dea = _ema(dif, signal);
+    const difD = [], deaD = [], histD = [];
+    for (let i = 0; i < c.length; i++) {
+      if (dif[i] === null || dea[i] === null) continue;
+      const h = 2 * (dif[i] - dea[i]);
+      difD.push({ time: t[i], value: +dif[i].toFixed(4) });
+      deaD.push({ time: t[i], value: +dea[i].toFixed(4) });
+      histD.push({ time: t[i], value: +h.toFixed(4), color: h >= 0 ? 'rgba(38,166,154,0.7)' : 'rgba(239,83,80,0.7)' });
+    }
+    return { dif: difD, dea: deaD, hist: histD };
+  }
+
+  function calcKDJ(data, n, kn, dn) {
+    n = n || 9; kn = kn || 3; dn = dn || 3;
+    const kD = [], dD = [], jD = [];
+    let pk = 50, pd = 50;
+    for (let i = n - 1; i < data.length; i++) {
+      let hi = -Infinity, lo = Infinity;
+      for (let j = i - n + 1; j <= i; j++) {
+        hi = Math.max(hi, data[j][2]);
+        lo = Math.min(lo, data[j][3]);
+      }
+      const rsv = hi === lo ? 50 : (data[i][4] - lo) / (hi - lo) * 100;
+      const k = (2 / kn) * pk + (1 / kn) * rsv;
+      const d = (2 / dn) * pd + (1 / dn) * k;
+      const j = 3 * k - 2 * d;
+      pk = k; pd = d;
+      kD.push({ time: data[i][0], value: +k.toFixed(2) });
+      dD.push({ time: data[i][0], value: +d.toFixed(2) });
+      jD.push({ time: data[i][0], value: +j.toFixed(2) });
+    }
+    return { k: kD, d: dD, j: jD };
+  }
+
+  // ── Theme helper ──────────────────────────────────
+
+  function _lcTheme() {
+    const dark = document.documentElement.classList.contains('dark');
+    return {
+      layout: {
+        background: { color: dark ? '#1a1d27' : '#ffffff' },
+        textColor: dark ? '#d1d5db' : '#374151',
+      },
+      grid: {
+        vertLines: { color: dark ? '#2d3039' : '#e5e7eb' },
+        horzLines: { color: dark ? '#2d3039' : '#e5e7eb' },
+      },
+      crosshair: { mode: 0 },
+      rightPriceScale: { borderColor: dark ? '#2d3039' : '#e5e7eb' },
+      timeScale: { borderColor: dark ? '#2d3039' : '#e5e7eb', timeVisible: false },
+    };
+  }
+
+  // ── Render ────────────────────────────────────────
+
+  function renderChart() {
+    // destroy previous
+    if (_charts) { _charts.forEach(c => c.remove()); _charts = null; }
+    if (!_chartData) return;
+    if (typeof LightweightCharts === 'undefined') {
+      document.getElementById('chart-main').innerHTML =
+        '<div style="display:flex;align-items:center;justify-content:center;height:100%;color:var(--text-muted)">Chart library loading, please retry...</div>';
+      return;
+    }
+
+    const rows = _chartInterval === 'W' ? _chartData.weekly : _chartData.daily;
+    if (!rows || rows.length < 10) return;
+
+    const theme = _lcTheme();
+    _charts = [];
+
+    // indicators
+    const ma10 = calcMA(rows, 10), ma20 = calcMA(rows, 20);
+    const ma50 = calcMA(rows, 50), ma200 = calcMA(rows, 200);
+    const macd = calcMACD(rows);
+    const kdj = calcKDJ(rows);
+
+    // candle data
+    const candles = rows.map(r => ({ time: r[0], open: r[1], high: r[2], low: r[3], close: r[4] }));
+    const vols = rows.map(r => ({
+      time: r[0], value: r[5],
+      color: r[4] >= r[1] ? 'rgba(38,166,154,0.4)' : 'rgba(239,83,80,0.4)',
+    }));
+
+    // Helper: create chart with auto-resize
+    function mkChart(el) {
+      return LightweightCharts.createChart(el, { ...theme, autosize: true });
+    }
+
+    // ── Main chart ──
+    const mainChart = mkChart(document.getElementById('chart-main'));
+    const cs = mainChart.addCandlestickSeries({
+      upColor: '#26a69a', downColor: '#ef5350',
+      borderUpColor: '#26a69a', borderDownColor: '#ef5350',
+      wickUpColor: '#26a69a', wickDownColor: '#ef5350',
+    });
+    cs.setData(candles);
+
+    // MA lines on main chart
+    const maOpts = (color) => ({ color, lineWidth: 1, priceLineVisible: false, lastValueVisible: false });
+    if (ma10.length) mainChart.addLineSeries(maOpts('#FF6B6B')).setData(ma10);
+    if (ma20.length) mainChart.addLineSeries(maOpts('#FFA726')).setData(ma20);
+    if (ma50.length) mainChart.addLineSeries(maOpts('#42A5F5')).setData(ma50);
+    if (ma200.length) mainChart.addLineSeries(maOpts('#AB47BC')).setData(ma200);
+
+    // Volume overlay at bottom of main
+    const vs = mainChart.addHistogramSeries({
+      priceFormat: { type: 'volume' }, priceScaleId: 'vol',
+    });
+    vs.setData(vols);
+    mainChart.priceScale('vol').applyOptions({ scaleMargins: { top: 0.82, bottom: 0 } });
+
+    mainChart.timeScale().fitContent();
+    _charts.push(mainChart);
+
+    // ── MACD chart ──
+    const macdChart = mkChart(document.getElementById('chart-macd'));
+    if (macd.hist.length) macdChart.addHistogramSeries({ priceFormat: { type: 'price', precision: 3 } }).setData(macd.hist);
+    if (macd.dif.length) macdChart.addLineSeries({ color: '#2196F3', lineWidth: 1, priceLineVisible: false, lastValueVisible: false }).setData(macd.dif);
+    if (macd.dea.length) macdChart.addLineSeries({ color: '#FF6B6B', lineWidth: 1, priceLineVisible: false, lastValueVisible: false }).setData(macd.dea);
+    macdChart.timeScale().fitContent();
+    _charts.push(macdChart);
+
+    // ── KDJ chart ──
+    const kdjChart = mkChart(document.getElementById('chart-kdj'));
+    if (kdj.k.length) kdjChart.addLineSeries({ color: '#2196F3', lineWidth: 1, priceLineVisible: false, lastValueVisible: false }).setData(kdj.k);
+    if (kdj.d.length) kdjChart.addLineSeries({ color: '#FF6B6B', lineWidth: 1, priceLineVisible: false, lastValueVisible: false }).setData(kdj.d);
+    if (kdj.j.length) kdjChart.addLineSeries({ color: '#9C27B0', lineWidth: 1, priceLineVisible: false, lastValueVisible: false }).setData(kdj.j);
+    kdjChart.timeScale().fitContent();
+    _charts.push(kdjChart);
+
+    // sync time scales across panes
+    _syncScales(mainChart, macdChart, kdjChart);
+  }
+
+  function _syncScales(main, ...subs) {
+    let syncing = false;
+    const set = (src) => (range) => {
+      if (syncing || !range) return;
+      syncing = true;
+      const others = [main, ...subs].filter(c => c !== src);
+      others.forEach(c => { try { c.timeScale().setVisibleLogicalRange(range); } catch(e){} });
+      syncing = false;
+    };
+    main.timeScale().subscribeVisibleLogicalRangeChange(set(main));
+    subs.forEach(s => s.timeScale().subscribeVisibleLogicalRangeChange(set(s)));
+  }
+
+  // ── Modal control ─────────────────────────────────
+
+  async function showChart(ticker) {
     _chartTicker = ticker;
     _chartInterval = 'D';
+    _chartData = null;
     document.getElementById('chart-modal').classList.add('open');
     document.getElementById('modal-ticker').textContent = ticker;
     _updateIntervalBtns();
-    _initTVWidget();
     document.body.style.overflow = 'hidden';
+
+    const market = ticker.endsWith('.HK') ? 'hk' : 'us';
+    const code = ticker.replace('.HK', '').replace('.US', '');
+
+    try {
+      const res = await fetch(`./data/chartdata/${market}/${code}.json`);
+      if (!res.ok) throw new Error(res.status);
+      _chartData = await res.json();
+      // Wait for browser to layout modal before rendering chart
+      requestAnimationFrame(() => requestAnimationFrame(() => renderChart()));
+    } catch (e) {
+      document.getElementById('chart-main').innerHTML =
+        '<div style="display:flex;align-items:center;justify-content:center;height:100%;color:var(--text-muted)">Chart data unavailable for ' + ticker + '</div>';
+    }
   }
 
   function switchInterval(iv) {
     _chartInterval = iv;
     _updateIntervalBtns();
-    _initTVWidget();
+    requestAnimationFrame(() => renderChart());
   }
 
   function closeChart() {
+    if (_charts) { _charts.forEach(c => c.remove()); _charts = null; }
+    _chartData = null;
     document.getElementById('chart-modal').classList.remove('open');
-    document.getElementById('tv-chart-container').innerHTML = '';
     document.body.style.overflow = '';
   }
 
   function _updateIntervalBtns() {
     document.getElementById('btn-daily').classList.toggle('active', _chartInterval === 'D');
     document.getElementById('btn-weekly').classList.toggle('active', _chartInterval === 'W');
-  }
-
-  function _initTVWidget() {
-    const c = document.getElementById('tv-chart-container');
-    c.innerHTML = '';
-    const symbol = mapTickerToTV(_chartTicker);
-    const isDark = document.documentElement.classList.contains('dark');
-    const theme = isDark ? 'dark' : 'light';
-
-    // Fast MAs (5/10/15/20/25) + Slow MAs (40/50/60/70)
-    const studies = [
-      {"id":"MASimple@tv-basicstudies","inputs":{"length":5}},
-      {"id":"MASimple@tv-basicstudies","inputs":{"length":10}},
-      {"id":"MASimple@tv-basicstudies","inputs":{"length":15}},
-      {"id":"MASimple@tv-basicstudies","inputs":{"length":20}},
-      {"id":"MASimple@tv-basicstudies","inputs":{"length":25}},
-      {"id":"MASimple@tv-basicstudies","inputs":{"length":40}},
-      {"id":"MASimple@tv-basicstudies","inputs":{"length":50}},
-      {"id":"MASimple@tv-basicstudies","inputs":{"length":60}},
-      {"id":"MASimple@tv-basicstudies","inputs":{"length":70}},
-      {"id":"MACD@tv-basicstudies"},
-      {"id":"Volume@tv-basicstudies","inputs":{"showMA":true,"length":5}},
-      {"id":"Volume@tv-basicstudies","inputs":{"showMA":true,"length":30}}
-    ];
-
-    // Fast MAs = warm palette; Slow MAs = cool palette; Volume MAs colored
-    const overrides = {
-      "MASimple.0.plot.color":"#EF5350","MASimple.1.plot.color":"#FF7043",
-      "MASimple.2.plot.color":"#FFA726","MASimple.3.plot.color":"#FFCA28",
-      "MASimple.4.plot.color":"#CDDC39",
-      "MASimple.5.plot.color":"#42A5F5","MASimple.6.plot.color":"#29B6F6",
-      "MASimple.7.plot.color":"#26C6DA","MASimple.8.plot.color":"#80DEEA",
-      "Volume.0.ma.color":"#FF6B6B",
-      "Volume.1.ma.color":"#42A5F5","Volume.1.volume.transparency":100
-    };
-
-    const p = {
-      frameElementId:'tv-'+Date.now(), symbol, interval:_chartInterval,
-      timezone:'Asia/Hong_Kong', theme, style:'1', locale:'zh_CN',
-      enable_publishing:'false', hide_side_toolbar:'false',
-      allow_symbol_change:'true', save_image:'false',
-      studies:JSON.stringify(studies),
-      studies_overrides:JSON.stringify(overrides),
-      autosize:'true'
-    };
-    const qs = Object.entries(p)
-      .map(([k,v])=>encodeURIComponent(k)+'='+encodeURIComponent(v)).join('&');
-
-    const iframe = document.createElement('iframe');
-    iframe.src = 'https://s.tradingview.com/widgetembed/?'+qs;
-    iframe.style.cssText = 'width:100%;height:100%;border:none;';
-    c.appendChild(iframe);
   }
 
   document.addEventListener('keydown', function(e) {
