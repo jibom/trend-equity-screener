@@ -1822,5 +1822,161 @@
     "sector": "Consumer Defensive",
     "marketCap": 350566281861.7878,
     "mcapDate": "2026-05-25"
+  },
+  "ELV.US": {
+    "name": "Elevance Health, Inc.",
+    "sector": "Healthcare",
+    "marketCap": 84226430408.45398,
+    "mcapDate": "2026-05-26"
+  },
+  "MINT.US": {
+    "name": "PIMCO Enhanced Short Maturity A",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "VLUE.US": {
+    "name": "iShares MSCI USA Value Factor E",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "CP.US": {
+    "name": "Canadian Pacific Kansas City Li",
+    "sector": "Industrials",
+    "marketCap": 79115070762.72086,
+    "mcapDate": "2026-05-26"
+  },
+  "MDLZ.US": {
+    "name": "Mondelez International, Inc.",
+    "sector": "Consumer Defensive",
+    "marketCap": 78610713824.4035,
+    "mcapDate": "2026-05-26"
+  },
+  "USFR.US": {
+    "name": "WisdomTree Floating Rate Treasu",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "IWB.US": {
+    "name": "iShares Russell 1000 ETF",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "INTW.US": {
+    "name": "GraniteShares 2x Long INTC Dail",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "AVEM.US": {
+    "name": "Avantis Emerging Markets Equity",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "ET.US": {
+    "name": "Energy Transfer LP",
+    "sector": "Energy",
+    "marketCap": 67446723141.89809,
+    "mcapDate": "2026-05-26"
+  },
+  "ADM.US": {
+    "name": "Archer-Daniels-Midland Company",
+    "sector": "Consumer Defensive",
+    "marketCap": 37597429700.84022,
+    "mcapDate": "2026-05-26"
+  },
+  "TECK.US": {
+    "name": "Teck Resources Ltd",
+    "sector": "Basic Materials",
+    "marketCap": 31946006463.22838,
+    "mcapDate": "2026-05-26"
+  },
+  "JAAA.US": {
+    "name": "Janus Henderson AAA CLO ETF",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "SANM.US": {
+    "name": "Sanmina Corporation",
+    "sector": "Technology",
+    "marketCap": 13933803233.376923,
+    "mcapDate": "2026-05-26"
+  },
+  "CNC.US": {
+    "name": "Centene Corporation",
+    "sector": "Healthcare",
+    "marketCap": 28250125917.915344,
+    "mcapDate": "2026-05-26"
+  },
+  "SHV.US": {
+    "name": "iShares 0-1 Year Treasury Bond ",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "BTI.US": {
+    "name": "British American Tobacco  Indus",
+    "sector": "Consumer Defensive",
+    "marketCap": 140433288307.08105,
+    "mcapDate": "2026-05-26"
+  },
+  "SOXQ.US": {
+    "name": "Invesco PHLX Semiconductor ETF",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "VICR.US": {
+    "name": "Vicor Corporation",
+    "sector": "Technology",
+    "marketCap": 15176330017.06366,
+    "mcapDate": "2026-05-26"
+  },
+  "LUMN.US": {
+    "name": "Lumen Technologies, Inc.",
+    "sector": "Communication Services",
+    "marketCap": 10478263660.506496,
+    "mcapDate": "2026-05-26"
+  },
+  "AAXJ.US": {
+    "name": "iShares MSCI All Country Asia e",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "VYM.US": {
+    "name": "Vanguard High Dividend Yield ET",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "WFRD.US": {
+    "name": "Weatherford International plc",
+    "sector": "Energy",
+    "marketCap": 7828352871.481567,
+    "mcapDate": "2026-05-26"
+  },
+  "UMC.US": {
+    "name": "United Microelectronics Corpora",
+    "sector": "Technology",
+    "marketCap": 52895765004.47661,
+    "mcapDate": "2026-05-26"
+  },
+  "AEHR.US": {
+    "name": "Aehr Test Systems",
+    "sector": "Technology",
+    "marketCap": 3457341622.087372,
+    "mcapDate": "2026-05-26"
+  },
+  "BKLN.US": {
+    "name": "Invesco Senior Loan ETF",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
   }
 }
