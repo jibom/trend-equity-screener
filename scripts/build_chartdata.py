@@ -75,7 +75,10 @@ def to_rows(df):
         return []
     out = []
     for idx, r in df.iterrows():
-        ts = int(idx.timestamp()) if hasattr(idx, "timestamp") else int(idx)
+        # Use the local trading date as UTC midnight so Lightweight Charts
+        # displays the correct day regardless of exchange timezone.
+        d = idx.date() if hasattr(idx, "date") else idx
+        ts = int(pd.Timestamp(d).timestamp())
         o, h, l = round(float(r.get("Open", 0) or 0), 2), round(float(r.get("High", 0) or 0), 2), round(float(r.get("Low", 0) or 0), 2)
         c, v = round(float(r.get("Close", 0) or 0), 2), int(r.get("Volume", 0) or 0)
         if c > 0:

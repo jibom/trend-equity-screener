@@ -257,7 +257,7 @@
     .close-btn:hover { background: var(--hover); }
     #chart-panes { flex: 1; display: flex; flex-direction: column; min-height: 0; gap: 1px; background: var(--border); }
     #chart-main { flex: 5; min-height: 0; background: var(--bg-card); }
-    .chart-sub { flex: 1.5; min-height: 0; position: relative; background: var(--bg-card); }
+    .chart-sub { flex: 1.5; min-height: 80px; position: relative; background: var(--bg-card); }
     .chart-sub-label { position: absolute; top: 4px; left: 8px; font-size: 10px; font-weight: 700; color: var(--text-muted); z-index: 2; pointer-events: none; text-transform: uppercase; letter-spacing: 0.05em; }
     .ticker a { color: var(--primary); text-decoration: none; cursor: pointer; }
     .ticker a:hover { text-decoration: underline; }
@@ -848,6 +848,16 @@
     return out;
   }
 
+  function calcVolMA(data, period) {
+    const out = [];
+    for (let i = period - 1; i < data.length; i++) {
+      let sum = 0;
+      for (let j = i - period + 1; j <= i; j++) sum += data[j][5];
+      out.push({ time: data[i][0], value: +(sum / period).toFixed(0) });
+    }
+    return out;
+  }
+
   function _ema(values, period) {
     const out = new Array(values.length).fill(null);
     if (values.length < period) return out;
@@ -958,7 +968,13 @@
 
     // Helper: create chart with auto-resize
     function mkChart(el) {
-      return LightweightCharts.createChart(el, { ...theme, autosize: true });
+      const rect = el.getBoundingClientRect();
+      return LightweightCharts.createChart(el, {
+        ...theme,
+        width: rect.width || el.clientWidth || 600,
+        height: rect.height || el.clientHeight || 150,
+        autosize: true,
+      });
     }
 
     // ── Main chart ──
@@ -984,7 +1000,11 @@
     vs.setData(vols);
     mainChart.priceScale('vol').applyOptions({ scaleMargins: { top: 0.82, bottom: 0 } });
 
-    mainChart.timeScale().fitContent();
+    // Volume MA lines
+    const volMA5 = calcVolMA(rows, 5), volMA20 = calcVolMA(rows, 20);
+    if (volMA5.length) mainChart.addLineSeries({ color: '#FFEB3B', lineWidth: 1, priceLineVisible: false, lastValueVisible: false, priceScaleId: 'vol' }).setData(volMA5);
+    if (volMA20.length) mainChart.addLineSeries({ color: '#E91E63', lineWidth: 1, priceLineVisible: false, lastValueVisible: false, priceScaleId: 'vol' }).setData(volMA20);
+
     _charts.push(mainChart);
 
     // ── MACD chart ──
@@ -992,7 +1012,6 @@
     if (macd.hist.length) macdChart.addHistogramSeries({ priceFormat: { type: 'price', precision: 3 } }).setData(macd.hist);
     if (macd.dif.length) macdChart.addLineSeries({ color: '#2196F3', lineWidth: 1, priceLineVisible: false, lastValueVisible: false }).setData(macd.dif);
     if (macd.dea.length) macdChart.addLineSeries({ color: '#FF6B6B', lineWidth: 1, priceLineVisible: false, lastValueVisible: false }).setData(macd.dea);
-    macdChart.timeScale().fitContent();
     _charts.push(macdChart);
 
     // ── KDJ chart ──
@@ -1000,11 +1019,18 @@
     if (kdj.k.length) kdjChart.addLineSeries({ color: '#2196F3', lineWidth: 1, priceLineVisible: false, lastValueVisible: false }).setData(kdj.k);
     if (kdj.d.length) kdjChart.addLineSeries({ color: '#FF6B6B', lineWidth: 1, priceLineVisible: false, lastValueVisible: false }).setData(kdj.d);
     if (kdj.j.length) kdjChart.addLineSeries({ color: '#9C27B0', lineWidth: 1, priceLineVisible: false, lastValueVisible: false }).setData(kdj.j);
-    kdjChart.timeScale().fitContent();
     _charts.push(kdjChart);
 
     // sync time scales across panes
     _syncScales(mainChart, macdChart, kdjChart);
+
+    // Fit main chart first, then sync its visible range to sub-charts
+    mainChart.timeScale().fitContent();
+    const mainRange = mainChart.timeScale().getVisibleLogicalRange();
+    if (mainRange) {
+      macdChart.timeScale().setVisibleLogicalRange(mainRange);
+      kdjChart.timeScale().setVisibleLogicalRange(mainRange);
+    }
   }
 
   function _syncScales(main, ...subs) {
