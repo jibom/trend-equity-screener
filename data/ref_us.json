@@ -1978,5 +1978,23 @@
     "sector": "",
     "marketCap": 0,
     "mcapDate": ""
+  },
+  "SNPS.US": {
+    "name": "Synopsys, Inc.",
+    "sector": "Technology",
+    "marketCap": 102401396685.43927,
+    "mcapDate": "2026-05-26"
+  },
+  "CPSH.US": {
+    "name": "CPS Technologies Corp.",
+    "sector": "Technology",
+    "marketCap": 200237426.49926662,
+    "mcapDate": "2026-05-26"
+  },
+  "SPYG.US": {
+    "name": "State Street SPDR Portfolio S&P",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
   }
 }
