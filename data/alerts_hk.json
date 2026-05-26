@@ -10,5 +10,200 @@
     "event": "NEW",
     "from_bottom": true,
     "date": "2026-05-24"
+  },
+  {
+    "ticker": "2718.HK",
+    "event": "NEW",
+    "from_bottom": true,
+    "date": "2026-05-26"
+  },
+  {
+    "ticker": "0371.HK",
+    "event": "upgrade",
+    "from": "WATCHING",
+    "to": "PULLBACK",
+    "date": "2026-05-26"
+  },
+  {
+    "ticker": "0425.HK",
+    "event": "upgrade",
+    "from": "PULLBACK",
+    "to": "STRONGEST",
+    "date": "2026-05-26"
+  },
+  {
+    "ticker": "0817.HK",
+    "event": "upgrade",
+    "from": "WATCHING",
+    "to": "PULLBACK",
+    "date": "2026-05-26"
+  },
+  {
+    "ticker": "0991.HK",
+    "event": "upgrade",
+    "from": "WATCHING",
+    "to": "PULLBACK",
+    "date": "2026-05-26"
+  },
+  {
+    "ticker": "1208.HK",
+    "event": "upgrade",
+    "from": "PULLBACK",
+    "to": "STRONGEST",
+    "date": "2026-05-26"
+  },
+  {
+    "ticker": "0012.HK",
+    "event": "downgrade",
+    "from": "PULLBACK",
+    "to": "WATCHING",
+    "date": "2026-05-26"
+  },
+  {
+    "ticker": "0293.HK",
+    "event": "downgrade",
+    "from": "STRONGEST",
+    "to": "WATCHING",
+    "date": "2026-05-26"
+  },
+  {
+    "ticker": "0300.HK",
+    "event": "downgrade",
+    "from": "PULLBACK",
+    "to": "WATCHING",
+    "date": "2026-05-26"
+  },
+  {
+    "ticker": "1070.HK",
+    "event": "downgrade",
+    "from": "PULLBACK",
+    "to": "WATCHING",
+    "date": "2026-05-26"
+  },
+  {
+    "ticker": "1113.HK",
+    "event": "downgrade",
+    "from": "STRONGEST",
+    "to": "WATCHING",
+    "date": "2026-05-26"
+  },
+  {
+    "ticker": "1651.HK",
+    "event": "downgrade",
+    "from": "STRONGEST",
+    "to": "PULLBACK",
+    "date": "2026-05-26"
+  },
+  {
+    "ticker": "2338.HK",
+    "event": "downgrade",
+    "from": "PULLBACK",
+    "to": "WATCHING",
+    "date": "2026-05-26"
+  },
+  {
+    "ticker": "2343.HK",
+    "event": "downgrade",
+    "from": "PULLBACK",
+    "to": "WATCHING",
+    "date": "2026-05-26"
+  },
+  {
+    "ticker": "2888.HK",
+    "event": "downgrade",
+    "from": "STRONGEST",
+    "to": "WATCHING",
+    "date": "2026-05-26"
+  },
+  {
+    "ticker": "3988.HK",
+    "event": "downgrade",
+    "from": "STRONGEST",
+    "to": "PULLBACK",
+    "date": "2026-05-26"
+  },
+  {
+    "ticker": "0003.HK",
+    "event": "BROKEN",
+    "reason": "跌破 50D",
+    "date": "2026-05-26"
+  },
+  {
+    "ticker": "0006.HK",
+    "event": "BROKEN",
+    "reason": "跌破 50D",
+    "date": "2026-05-26"
+  },
+  {
+    "ticker": "0016.HK",
+    "event": "BROKEN",
+    "reason": "跌破 50D",
+    "date": "2026-05-26"
+  },
+  {
+    "ticker": "0083.HK",
+    "event": "BROKEN",
+    "reason": "跌破 50D",
+    "date": "2026-05-26"
+  },
+  {
+    "ticker": "0290.HK",
+    "event": "BROKEN",
+    "reason": "跌破 50D",
+    "date": "2026-05-26"
+  },
+  {
+    "ticker": "0317.HK",
+    "event": "BROKEN",
+    "reason": "跌破 50D",
+    "date": "2026-05-26"
+  },
+  {
+    "ticker": "1138.HK",
+    "event": "BROKEN",
+    "reason": "跌破 50D",
+    "date": "2026-05-26"
+  },
+  {
+    "ticker": "1258.HK",
+    "event": "BROKEN",
+    "reason": "周线多头排列破坏",
+    "date": "2026-05-26"
+  },
+  {
+    "ticker": "1288.HK",
+    "event": "BROKEN",
+    "reason": "跌破 50D",
+    "date": "2026-05-26"
+  },
+  {
+    "ticker": "1299.HK",
+    "event": "BROKEN",
+    "reason": "跌破 50D",
+    "date": "2026-05-26"
+  },
+  {
+    "ticker": "1308.HK",
+    "event": "BROKEN",
+    "reason": "跌破 50D",
+    "date": "2026-05-26"
+  },
+  {
+    "ticker": "1398.HK",
+    "event": "BROKEN",
+    "reason": "跌破 50D",
+    "date": "2026-05-26"
+  },
+  {
+    "ticker": "1729.HK",
+    "event": "BROKEN",
+    "reason": "跌破 50D",
+    "date": "2026-05-26"
+  },
+  {
+    "ticker": "3360.HK",
+    "event": "BROKEN",
+    "reason": "周线多头排列破坏",
+    "date": "2026-05-26"
   }
 ]
