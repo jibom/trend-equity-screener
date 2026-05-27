@@ -2014,5 +2014,77 @@
     "sector": "Real Estate",
     "marketCap": 16026174914.139288,
     "mcapDate": "2026-05-27"
+  },
+  "IYW.US": {
+    "name": "iShares U.S. Technology ETF",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "ARW.US": {
+    "name": "Arrow Electronics, Inc.",
+    "sector": "Technology",
+    "marketCap": 11122144313.572845,
+    "mcapDate": "2026-05-27"
+  },
+  "SNX.US": {
+    "name": "TD SYNNEX Corporation",
+    "sector": "Technology",
+    "marketCap": 19895367553.506012,
+    "mcapDate": "2026-05-27"
+  },
+  "RY.US": {
+    "name": "Royal Bank Of Canada",
+    "sector": "Financial Services",
+    "marketCap": 262988392623.76135,
+    "mcapDate": "2026-05-27"
+  },
+  "YPF.US": {
+    "name": "YPF Sociedad Anonima",
+    "sector": "Energy",
+    "marketCap": 21767691150.292362,
+    "mcapDate": "2026-05-27"
+  },
+  "KNX.US": {
+    "name": "Knight-Swift Transportation Hol",
+    "sector": "Industrials",
+    "marketCap": 12053804969.589233,
+    "mcapDate": "2026-05-27"
+  },
+  "VTWO.US": {
+    "name": "Vanguard Russell 2000 ETF",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "CBOE.US": {
+    "name": "Cboe Global Markets, Inc.",
+    "sector": "Financial Services",
+    "marketCap": 36387074414.4624,
+    "mcapDate": "2026-05-27"
+  },
+  "CROX.US": {
+    "name": "Crocs, Inc.",
+    "sector": "Consumer Cyclical",
+    "marketCap": 5882757396.391846,
+    "mcapDate": "2026-05-27"
+  },
+  "VSAT.US": {
+    "name": "ViaSat, Inc.",
+    "sector": "Technology",
+    "marketCap": 11623092942.117546,
+    "mcapDate": "2026-05-27"
+  },
+  "DD.US": {
+    "name": "DuPont de Nemours, Inc.",
+    "sector": "Basic Materials",
+    "marketCap": 19536849381.410973,
+    "mcapDate": "2026-05-27"
+  },
+  "BHP.US": {
+    "name": "BHP Group Limited",
+    "sector": "Basic Materials",
+    "marketCap": 223118514081.8708,
+    "mcapDate": "2026-05-27"
   }
 }

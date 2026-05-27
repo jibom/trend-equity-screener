@@ -11,5 +11,300 @@
     "event": "NEW",
     "from_bottom": true,
     "date": "2026-05-26"
+  },
+  {
+    "ticker": "APPS.US",
+    "event": "NEW",
+    "from_bottom": true,
+    "date": "2026-05-27"
+  },
+  {
+    "ticker": "ASTC.US",
+    "event": "NEW",
+    "from_bottom": true,
+    "date": "2026-05-27"
+  },
+  {
+    "ticker": "CP.US",
+    "event": "NEW",
+    "from_bottom": false,
+    "date": "2026-05-27"
+  },
+  {
+    "ticker": "MDLZ.US",
+    "event": "NEW",
+    "from_bottom": false,
+    "date": "2026-05-27"
+  },
+  {
+    "ticker": "MNTS.US",
+    "event": "NEW",
+    "from_bottom": true,
+    "date": "2026-05-27"
+  },
+  {
+    "ticker": "QTTB.US",
+    "event": "NEW",
+    "from_bottom": false,
+    "date": "2026-05-27"
+  },
+  {
+    "ticker": "URI.US",
+    "event": "NEW",
+    "from_bottom": false,
+    "date": "2026-05-27"
+  },
+  {
+    "ticker": "ASX.US",
+    "event": "upgrade",
+    "from": "WATCHING",
+    "to": "STRONGEST",
+    "date": "2026-05-27"
+  },
+  {
+    "ticker": "CIFR.US",
+    "event": "upgrade",
+    "from": "WATCHING",
+    "to": "STRONGEST",
+    "date": "2026-05-27"
+  },
+  {
+    "ticker": "DOCN.US",
+    "event": "upgrade",
+    "from": "WATCHING",
+    "to": "PULLBACK",
+    "date": "2026-05-27"
+  },
+  {
+    "ticker": "FN.US",
+    "event": "upgrade",
+    "from": "WATCHING",
+    "to": "PULLBACK",
+    "date": "2026-05-27"
+  },
+  {
+    "ticker": "GD.US",
+    "event": "upgrade",
+    "from": "WATCHING",
+    "to": "PULLBACK",
+    "date": "2026-05-27"
+  },
+  {
+    "ticker": "KEYS.US",
+    "event": "upgrade",
+    "from": "WATCHING",
+    "to": "PULLBACK",
+    "date": "2026-05-27"
+  },
+  {
+    "ticker": "KO.US",
+    "event": "upgrade",
+    "from": "PULLBACK",
+    "to": "STRONGEST",
+    "date": "2026-05-27"
+  },
+  {
+    "ticker": "NTRA.US",
+    "event": "upgrade",
+    "from": "BROKEN",
+    "to": "WATCHING",
+    "date": "2026-05-27"
+  },
+  {
+    "ticker": "NUE.US",
+    "event": "upgrade",
+    "from": "WATCHING",
+    "to": "STRONGEST",
+    "date": "2026-05-27"
+  },
+  {
+    "ticker": "NXT.US",
+    "event": "upgrade",
+    "from": "PULLBACK",
+    "to": "STRONGEST",
+    "date": "2026-05-27"
+  },
+  {
+    "ticker": "RSP.US",
+    "event": "upgrade",
+    "from": "WATCHING",
+    "to": "STRONGEST",
+    "date": "2026-05-27"
+  },
+  {
+    "ticker": "SLB.US",
+    "event": "upgrade",
+    "from": "WATCHING",
+    "to": "PULLBACK",
+    "date": "2026-05-27"
+  },
+  {
+    "ticker": "STLD.US",
+    "event": "upgrade",
+    "from": "WATCHING",
+    "to": "STRONGEST",
+    "date": "2026-05-27"
+  },
+  {
+    "ticker": "XLP.US",
+    "event": "upgrade",
+    "from": "WATCHING",
+    "to": "PULLBACK",
+    "date": "2026-05-27"
+  },
+  {
+    "ticker": "AFL.US",
+    "event": "downgrade",
+    "from": "STRONGEST",
+    "to": "PULLBACK",
+    "date": "2026-05-27"
+  },
+  {
+    "ticker": "AMZN.US",
+    "event": "downgrade",
+    "from": "PULLBACK",
+    "to": "WATCHING",
+    "date": "2026-05-27"
+  },
+  {
+    "ticker": "BE.US",
+    "event": "downgrade",
+    "from": "STRONGEST",
+    "to": "WATCHING",
+    "date": "2026-05-27"
+  },
+  {
+    "ticker": "CVE.US",
+    "event": "downgrade",
+    "from": "PULLBACK",
+    "to": "WATCHING",
+    "date": "2026-05-27"
+  },
+  {
+    "ticker": "EBAY.US",
+    "event": "downgrade",
+    "from": "STRONGEST",
+    "to": "PULLBACK",
+    "date": "2026-05-27"
+  },
+  {
+    "ticker": "ENB.US",
+    "event": "downgrade",
+    "from": "STRONGEST",
+    "to": "PULLBACK",
+    "date": "2026-05-27"
+  },
+  {
+    "ticker": "EWJ.US",
+    "event": "downgrade",
+    "from": "STRONGEST",
+    "to": "WATCHING",
+    "date": "2026-05-27"
+  },
+  {
+    "ticker": "FLEX.US",
+    "event": "downgrade",
+    "from": "STRONGEST",
+    "to": "WATCHING",
+    "date": "2026-05-27"
+  },
+  {
+    "ticker": "FLNC.US",
+    "event": "downgrade",
+    "from": "STRONGEST",
+    "to": "WATCHING",
+    "date": "2026-05-27"
+  },
+  {
+    "ticker": "HAL.US",
+    "event": "downgrade",
+    "from": "PULLBACK",
+    "to": "WATCHING",
+    "date": "2026-05-27"
+  },
+  {
+    "ticker": "IBKR.US",
+    "event": "downgrade",
+    "from": "PULLBACK",
+    "to": "WATCHING",
+    "date": "2026-05-27"
+  },
+  {
+    "ticker": "NBIS.US",
+    "event": "downgrade",
+    "from": "STRONGEST",
+    "to": "PULLBACK",
+    "date": "2026-05-27"
+  },
+  {
+    "ticker": "NVDL.US",
+    "event": "downgrade",
+    "from": "PULLBACK",
+    "to": "WATCHING",
+    "date": "2026-05-27"
+  },
+  {
+    "ticker": "RIO.US",
+    "event": "downgrade",
+    "from": "STRONGEST",
+    "to": "WATCHING",
+    "date": "2026-05-27"
+  },
+  {
+    "ticker": "TRGP.US",
+    "event": "downgrade",
+    "from": "STRONGEST",
+    "to": "PULLBACK",
+    "date": "2026-05-27"
+  },
+  {
+    "ticker": "TRP.US",
+    "event": "downgrade",
+    "from": "STRONGEST",
+    "to": "PULLBACK",
+    "date": "2026-05-27"
+  },
+  {
+    "ticker": "WELL.US",
+    "event": "downgrade",
+    "from": "STRONGEST",
+    "to": "PULLBACK",
+    "date": "2026-05-27"
+  },
+  {
+    "ticker": "BKR.US",
+    "event": "BROKEN",
+    "reason": "跌破 50D",
+    "date": "2026-05-27"
+  },
+  {
+    "ticker": "BNO.US",
+    "event": "BROKEN",
+    "reason": "跌破 50D",
+    "date": "2026-05-27"
+  },
+  {
+    "ticker": "FANG.US",
+    "event": "BROKEN",
+    "reason": "跌破 50D",
+    "date": "2026-05-27"
+  },
+  {
+    "ticker": "JCI.US",
+    "event": "BROKEN",
+    "reason": "跌破 50D",
+    "date": "2026-05-27"
+  },
+  {
+    "ticker": "KMI.US",
+    "event": "BROKEN",
+    "reason": "跌破 50D",
+    "date": "2026-05-27"
+  },
+  {
+    "ticker": "USO.US",
+    "event": "BROKEN",
+    "reason": "跌破 50D",
+    "date": "2026-05-27"
   }
 ]
