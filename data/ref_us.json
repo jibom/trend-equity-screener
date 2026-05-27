@@ -2008,5 +2008,11 @@
     "sector": "Financial Services",
     "marketCap": 99007268143.01865,
     "mcapDate": "2026-05-27"
+  },
+  "HST.US": {
+    "name": "Host Hotels & Resorts, Inc.",
+    "sector": "Real Estate",
+    "marketCap": 16026174914.139288,
+    "mcapDate": "2026-05-27"
   }
 }
