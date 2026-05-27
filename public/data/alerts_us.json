@@ -7,31 +7,9 @@
     "date": "2026-05-22"
   },
   {
-    "ticker": "KMI.US",
-    "event": "upgrade",
-    "from": "WATCHING",
-    "to": "PULLBACK",
-    "date": "2026-05-26"
-  },
-  {
-    "ticker": "CASY.US",
-    "event": "downgrade",
-    "from": "PULLBACK",
-    "to": "WATCHING",
-    "date": "2026-05-26"
-  },
-  {
-    "ticker": "LITE.US",
-    "event": "downgrade",
-    "from": "PULLBACK",
-    "to": "WATCHING",
-    "date": "2026-05-26"
-  },
-  {
-    "ticker": "MOD.US",
-    "event": "downgrade",
-    "from": "PULLBACK",
-    "to": "WATCHING",
+    "ticker": "IINN.US",
+    "event": "NEW",
+    "from_bottom": true,
     "date": "2026-05-26"
   }
 ]
