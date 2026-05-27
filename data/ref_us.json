@@ -1996,5 +1996,17 @@
     "sector": "",
     "marketCap": 0,
     "mcapDate": ""
+  },
+  "IINN.US": {
+    "name": "Inspira Technologies Oxy B.H.N.",
+    "sector": "Healthcare",
+    "marketCap": 66240474.36879158,
+    "mcapDate": "2026-05-27"
+  },
+  "BNS.US": {
+    "name": "Bank Nova Scotia Halifax Pfd 3",
+    "sector": "Financial Services",
+    "marketCap": 99007268143.01865,
+    "mcapDate": "2026-05-27"
   }
 }

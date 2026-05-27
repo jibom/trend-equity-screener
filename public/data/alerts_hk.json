@@ -205,5 +205,138 @@
     "event": "BROKEN",
     "reason": "周线多头排列破坏",
     "date": "2026-05-26"
+  },
+  {
+    "ticker": "1288.HK",
+    "event": "upgrade",
+    "from": "BROKEN",
+    "to": "WATCHING",
+    "date": "2026-05-27"
+  },
+  {
+    "ticker": "1308.HK",
+    "event": "upgrade",
+    "from": "BROKEN",
+    "to": "WATCHING",
+    "date": "2026-05-27"
+  },
+  {
+    "ticker": "2343.HK",
+    "event": "upgrade",
+    "from": "WATCHING",
+    "to": "PULLBACK",
+    "date": "2026-05-27"
+  },
+  {
+    "ticker": "2888.HK",
+    "event": "upgrade",
+    "from": "WATCHING",
+    "to": "STRONGEST",
+    "date": "2026-05-27"
+  },
+  {
+    "ticker": "0001.HK",
+    "event": "downgrade",
+    "from": "PULLBACK",
+    "to": "WATCHING",
+    "date": "2026-05-27"
+  },
+  {
+    "ticker": "0371.HK",
+    "event": "downgrade",
+    "from": "PULLBACK",
+    "to": "WATCHING",
+    "date": "2026-05-27"
+  },
+  {
+    "ticker": "0425.HK",
+    "event": "downgrade",
+    "from": "STRONGEST",
+    "to": "WATCHING",
+    "date": "2026-05-27"
+  },
+  {
+    "ticker": "0817.HK",
+    "event": "downgrade",
+    "from": "PULLBACK",
+    "to": "WATCHING",
+    "date": "2026-05-27"
+  },
+  {
+    "ticker": "0826.HK",
+    "event": "downgrade",
+    "from": "STRONGEST",
+    "to": "PULLBACK",
+    "date": "2026-05-27"
+  },
+  {
+    "ticker": "0902.HK",
+    "event": "downgrade",
+    "from": "PULLBACK",
+    "to": "WATCHING",
+    "date": "2026-05-27"
+  },
+  {
+    "ticker": "1208.HK",
+    "event": "downgrade",
+    "from": "STRONGEST",
+    "to": "PULLBACK",
+    "date": "2026-05-27"
+  },
+  {
+    "ticker": "2722.HK",
+    "event": "downgrade",
+    "from": "PULLBACK",
+    "to": "WATCHING",
+    "date": "2026-05-27"
+  },
+  {
+    "ticker": "2727.HK",
+    "event": "downgrade",
+    "from": "STRONGEST",
+    "to": "PULLBACK",
+    "date": "2026-05-27"
+  },
+  {
+    "ticker": "0012.HK",
+    "event": "BROKEN",
+    "reason": "跌破 50D",
+    "date": "2026-05-27"
+  },
+  {
+    "ticker": "0257.HK",
+    "event": "BROKEN",
+    "reason": "跌破 50D",
+    "date": "2026-05-27"
+  },
+  {
+    "ticker": "0868.HK",
+    "event": "BROKEN",
+    "reason": "跌破 50D",
+    "date": "2026-05-27"
+  },
+  {
+    "ticker": "1113.HK",
+    "event": "BROKEN",
+    "reason": "跌破 50D",
+    "date": "2026-05-27"
+  },
+  {
+    "ticker": "1997.HK",
+    "event": "BROKEN",
+    "reason": "跌破 50D",
+    "date": "2026-05-27"
+  },
+  {
+    "ticker": "6680.HK",
+    "event": "BROKEN",
+    "reason": "跌破 50D",
+    "date": "2026-05-27"
+  },
+  {
+    "ticker": "6869.HK",
+    "event": "BROKEN",
+    "reason": "跌破 50D",
+    "date": "2026-05-27"
   }
 ]
