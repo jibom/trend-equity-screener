@@ -338,5 +338,128 @@
     "event": "BROKEN",
     "reason": "跌破 50D",
     "date": "2026-05-27"
+  },
+  {
+    "ticker": "0001.HK",
+    "event": "upgrade",
+    "from": "WATCHING",
+    "to": "PULLBACK",
+    "date": "2026-05-28"
+  },
+  {
+    "ticker": "0189.HK",
+    "event": "upgrade",
+    "from": "WATCHING",
+    "to": "STRONGEST",
+    "date": "2026-05-28"
+  },
+  {
+    "ticker": "0425.HK",
+    "event": "upgrade",
+    "from": "WATCHING",
+    "to": "PULLBACK",
+    "date": "2026-05-28"
+  },
+  {
+    "ticker": "1308.HK",
+    "event": "upgrade",
+    "from": "WATCHING",
+    "to": "PULLBACK",
+    "date": "2026-05-28"
+  },
+  {
+    "ticker": "1347.HK",
+    "event": "upgrade",
+    "from": "WATCHING",
+    "to": "STRONGEST",
+    "date": "2026-05-28"
+  },
+  {
+    "ticker": "6869.HK",
+    "event": "upgrade",
+    "from": "BROKEN",
+    "to": "WATCHING",
+    "date": "2026-05-28"
+  },
+  {
+    "ticker": "0002.HK",
+    "event": "downgrade",
+    "from": "STRONGEST",
+    "to": "PULLBACK",
+    "date": "2026-05-28"
+  },
+  {
+    "ticker": "0669.HK",
+    "event": "downgrade",
+    "from": "PULLBACK",
+    "to": "WATCHING",
+    "date": "2026-05-28"
+  },
+  {
+    "ticker": "0826.HK",
+    "event": "downgrade",
+    "from": "PULLBACK",
+    "to": "WATCHING",
+    "date": "2026-05-28"
+  },
+  {
+    "ticker": "1208.HK",
+    "event": "downgrade",
+    "from": "PULLBACK",
+    "to": "WATCHING",
+    "date": "2026-05-28"
+  },
+  {
+    "ticker": "2343.HK",
+    "event": "downgrade",
+    "from": "PULLBACK",
+    "to": "WATCHING",
+    "date": "2026-05-28"
+  },
+  {
+    "ticker": "2628.HK",
+    "event": "downgrade",
+    "from": "PULLBACK",
+    "to": "WATCHING",
+    "date": "2026-05-28"
+  },
+  {
+    "ticker": "3988.HK",
+    "event": "downgrade",
+    "from": "PULLBACK",
+    "to": "WATCHING",
+    "date": "2026-05-28"
+  },
+  {
+    "ticker": "6088.HK",
+    "event": "downgrade",
+    "from": "PULLBACK",
+    "to": "WATCHING",
+    "date": "2026-05-28"
+  },
+  {
+    "ticker": "9888.HK",
+    "event": "downgrade",
+    "from": "PULLBACK",
+    "to": "WATCHING",
+    "date": "2026-05-28"
+  },
+  {
+    "ticker": "0300.HK",
+    "event": "BROKEN",
+    "reason": "跌破 50D",
+    "date": "2026-05-28"
+  },
+  {
+    "ticker": "0371.HK",
+    "event": "BROKEN",
+    "reason": "跌破 50D",
+    "date": "2026-05-28"
+  },
+  {
+    "ticker": "1288.HK",
+    "event": "BROKEN",
+    "reason": "跌破 50D",
+    "date": "2026-05-28"
   }
 ]
