@@ -2086,5 +2086,41 @@
     "sector": "Basic Materials",
     "marketCap": 223118514081.8708,
     "mcapDate": "2026-05-27"
+  },
+  "MNTS.US": {
+    "name": "Momentus Inc.",
+    "sector": "Industrials",
+    "marketCap": 194851761.0,
+    "mcapDate": "2026-05-28"
+  },
+  "URI.US": {
+    "name": "United Rentals, Inc.",
+    "sector": "Industrials",
+    "marketCap": 61909832877.89722,
+    "mcapDate": "2026-05-28"
+  },
+  "APPS.US": {
+    "name": "Digital Turbine, Inc.",
+    "sector": "Technology",
+    "marketCap": 806021999.0069985,
+    "mcapDate": "2026-05-28"
+  },
+  "QTTB.US": {
+    "name": "Q32 Bio Inc.",
+    "sector": "Healthcare",
+    "marketCap": 217889939.218359,
+    "mcapDate": "2026-05-28"
+  },
+  "ASTC.US": {
+    "name": "Astrotech Corporation",
+    "sector": "Technology",
+    "marketCap": 24291155.47808647,
+    "mcapDate": "2026-05-28"
+  },
+  "FFIV.US": {
+    "name": "F5, Inc.",
+    "sector": "Technology",
+    "marketCap": 21899130378.694244,
+    "mcapDate": "2026-05-28"
   }
 }
