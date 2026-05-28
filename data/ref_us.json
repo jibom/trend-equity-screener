@@ -2122,5 +2122,89 @@
     "sector": "Technology",
     "marketCap": 21899130378.694244,
     "mcapDate": "2026-05-28"
+  },
+  "QUAL.US": {
+    "name": "iShares MSCI USA Quality Factor",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "MT.US": {
+    "name": "Arcelor Mittal NY Registry Shar",
+    "sector": "Basic Materials",
+    "marketCap": 52864939424.17431,
+    "mcapDate": "2026-05-28"
+  },
+  "BAI.US": {
+    "name": "iShares A.I. Innovation and Tec",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "EFV.US": {
+    "name": "iShares MSCI EAFE Value ETF",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "VIG.US": {
+    "name": "Vanguard Div Appreciation ETF",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "ICLN.US": {
+    "name": "iShares Global Clean Energy ETF",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "TD.US": {
+    "name": "Toronto Dominion Bank (The)",
+    "sector": "Financial Services",
+    "marketCap": 190038393551.56174,
+    "mcapDate": "2026-05-28"
+  },
+  "SCHF.US": {
+    "name": "Schwab International Equity ETF",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "CZR.US": {
+    "name": "Caesars Entertainment, Inc.",
+    "sector": "Consumer Cyclical",
+    "marketCap": 5922925108.860683,
+    "mcapDate": "2026-05-28"
+  },
+  "ILMN.US": {
+    "name": "Illumina, Inc.",
+    "sector": "Healthcare",
+    "marketCap": 24011309538.269043,
+    "mcapDate": "2026-05-28"
+  },
+  "MGM.US": {
+    "name": "MGM Resorts International",
+    "sector": "Consumer Cyclical",
+    "marketCap": 10983693596.6296,
+    "mcapDate": "2026-05-28"
+  },
+  "SPYV.US": {
+    "name": "State Street SPDR Portfolio S&P",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "CORO.US": {
+    "name": "iShares International Country R",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "DYNF.US": {
+    "name": "iShares U.S. Equity Factor Rota",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
   }
 }
