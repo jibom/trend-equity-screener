@@ -2206,5 +2206,41 @@
     "sector": "",
     "marketCap": 0,
     "mcapDate": ""
+  },
+  "SCO.US": {
+    "name": "ProShares UltraShort Bloomberg ",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "BRKR.US": {
+    "name": "Bruker Corporation",
+    "sector": "Healthcare",
+    "marketCap": 8279551596.448853,
+    "mcapDate": "2026-05-29"
+  },
+  "UMAC.US": {
+    "name": "Unusual Machines, Inc.",
+    "sector": "Technology",
+    "marketCap": 1414700139.0319347,
+    "mcapDate": "2026-05-29"
+  },
+  "IVE.US": {
+    "name": "iShares S&P 500 Value ETF",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "BTDR.US": {
+    "name": "Bitdeer Technologies Group",
+    "sector": "Technology",
+    "marketCap": 4472104737.943056,
+    "mcapDate": "2026-05-29"
+  },
+  "OKTA.US": {
+    "name": "Okta, Inc.",
+    "sector": "Technology",
+    "marketCap": 16608815105.565948,
+    "mcapDate": "2026-05-29"
   }
 }
