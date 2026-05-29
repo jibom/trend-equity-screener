@@ -2248,5 +2248,107 @@
     "sector": "Technology",
     "marketCap": 32599201791.614624,
     "mcapDate": "2026-05-29"
+  },
+  "IXUS.US": {
+    "name": "iShares Core MSCI Total Interna",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "H.US": {
+    "name": "Hyatt Hotels Corporation",
+    "sector": "Consumer Cyclical",
+    "marketCap": 17077148921.631683,
+    "mcapDate": "2026-05-29"
+  },
+  "DOC.US": {
+    "name": "Healthpeak Properties, Inc.",
+    "sector": "Real Estate",
+    "marketCap": 13202387030.307255,
+    "mcapDate": "2026-05-29"
+  },
+  "ROIV.US": {
+    "name": "Roivant Sciences Ltd.",
+    "sector": "Healthcare",
+    "marketCap": 21570918681.52207,
+    "mcapDate": "2026-05-29"
+  },
+  "MAGS.US": {
+    "name": "Roundhill Magnificent Seven ETF",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "RPRX.US": {
+    "name": "Royalty Pharma plc",
+    "sector": "Healthcare",
+    "marketCap": 24716963295.019135,
+    "mcapDate": "2026-05-29"
+  },
+  "VUG.US": {
+    "name": "Vanguard Growth ETF",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "AXSM.US": {
+    "name": "Axsome Therapeutics, Inc.",
+    "sector": "Healthcare",
+    "marketCap": 12066285711.82016,
+    "mcapDate": "2026-05-29"
+  },
+  "TIGO.US": {
+    "name": "Millicom International Cellular",
+    "sector": "Communication Services",
+    "marketCap": 14301337762.099182,
+    "mcapDate": "2026-05-29"
+  },
+  "FLY.US": {
+    "name": "Firefly Aerospace Inc.",
+    "sector": "Industrials",
+    "marketCap": 7449335507.279491,
+    "mcapDate": "2026-05-29"
+  },
+  "NTRS.US": {
+    "name": "Northern Trust Corporation",
+    "sector": "Financial Services",
+    "marketCap": 30616068271.380585,
+    "mcapDate": "2026-05-29"
+  },
+  "SCZ.US": {
+    "name": "iShares MSCI EAFE Small-Cap ETF",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "MGK.US": {
+    "name": "Vanguard Mega Cap Growth ETF",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "JAZZ.US": {
+    "name": "Jazz Pharmaceuticals plc",
+    "sector": "Healthcare",
+    "marketCap": 14838049846.456604,
+    "mcapDate": "2026-05-29"
+  },
+  "JHG.US": {
+    "name": "Janus Henderson Group plc",
+    "sector": "Financial Services",
+    "marketCap": 7967249600.329567,
+    "mcapDate": "2026-05-29"
+  },
+  "WST.US": {
+    "name": "West Pharmaceutical Services, I",
+    "sector": "Healthcare",
+    "marketCap": 22805749969.47052,
+    "mcapDate": "2026-05-29"
+  },
+  "STRC.US": {
+    "name": "Strategy Inc - Variable Rate Se",
+    "sector": "Technology",
+    "marketCap": 0,
+    "mcapDate": ""
   }
 }
