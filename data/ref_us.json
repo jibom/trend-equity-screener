@@ -2350,5 +2350,23 @@
     "sector": "Technology",
     "marketCap": 0,
     "mcapDate": ""
+  },
+  "SPCE.US": {
+    "name": "Virgin Galactic Holdings, Inc.",
+    "sector": "Industrials",
+    "marketCap": 645513181.3896303,
+    "mcapDate": "2026-05-30"
+  },
+  "LOGI.US": {
+    "name": "Logitech International S.A. - R",
+    "sector": "Technology",
+    "marketCap": 17492682138.18226,
+    "mcapDate": "2026-05-30"
+  },
+  "ORCL.US": {
+    "name": "Oracle Corporation",
+    "sector": "Technology",
+    "marketCap": 649353662369.2017,
+    "mcapDate": "2026-05-30"
   }
 }
