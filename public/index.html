@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Equity Screener — Breakout & Trend Pools</title>
-  <meta name="description" content="US & HK equity screener with Breakout Pool and Trend Pool." />
+  <title>Wyckoff v5.4 — 港股趋势扫描</title>
+  <meta name="description" content="Wyckoff v5.4 港股趋势扫描器 — 进场候选 / Trending / 警报" />
   <script src="https://unpkg.com/lightweight-charts@4.1.3/dist/lightweight-charts.standalone.production.js" defer></script>
   <style>
     :root {
@@ -21,18 +21,24 @@
       --negative: #dc2626;
       --negative-bg: rgba(220,38,38,0.08);
       --hover: rgba(0,0,0,0.03);
-      --pool-new: #f59e0b;
-      --pool-new-bg: rgba(245,158,11,0.12);
-      --pool-strongest: #16a34a;
-      --pool-strongest-bg: rgba(22,163,74,0.12);
-      --pool-pullback: #2563eb;
-      --pool-pullback-bg: rgba(37,99,235,0.10);
-      --pool-watching: #8b5cf6;
-      --pool-watching-bg: rgba(139,92,246,0.10);
-      --pool-broken: #dc2626;
-      --pool-broken-bg: rgba(220,38,38,0.10);
-      --pool-exited: #9ca3af;
-      --pool-exited-bg: rgba(156,163,175,0.10);
+      --state-strong: #16a34a;
+      --state-strong-bg: rgba(22,163,74,0.12);
+      --state-mid: #2563eb;
+      --state-mid-bg: rgba(37,99,235,0.10);
+      --state-early: #8b5cf6;
+      --state-early-bg: rgba(139,92,246,0.10);
+      --state-new: #f59e0b;
+      --state-new-bg: rgba(245,158,11,0.12);
+      --state-pullback: #ea580c;
+      --state-pullback-bg: rgba(234,88,12,0.10);
+      --state-exit: #9ca3af;
+      --state-exit-bg: rgba(156,163,175,0.10);
+      --state-pool: #d1d5db;
+      --state-pool-bg: rgba(209,213,219,0.10);
+      --state-setup-ok: #0ea5e9;
+      --state-setup-ok-bg: rgba(14,165,233,0.10);
+      --state-entangled: #a3a3a3;
+      --state-entangled-bg: rgba(163,163,163,0.10);
     }
     .dark {
       --bg: #0f1117;
@@ -48,18 +54,24 @@
       --negative: #f87171;
       --negative-bg: rgba(248,113,113,0.1);
       --hover: rgba(255,255,255,0.03);
-      --pool-new: #fbbf24;
-      --pool-new-bg: rgba(251,191,36,0.15);
-      --pool-strongest: #4ade80;
-      --pool-strongest-bg: rgba(74,222,128,0.12);
-      --pool-pullback: #60a5fa;
-      --pool-pullback-bg: rgba(96,165,250,0.12);
-      --pool-watching: #a78bfa;
-      --pool-watching-bg: rgba(167,139,250,0.12);
-      --pool-broken: #f87171;
-      --pool-broken-bg: rgba(248,113,113,0.12);
-      --pool-exited: #64748b;
-      --pool-exited-bg: rgba(100,116,139,0.10);
+      --state-strong: #4ade80;
+      --state-strong-bg: rgba(74,222,128,0.12);
+      --state-mid: #60a5fa;
+      --state-mid-bg: rgba(96,165,250,0.12);
+      --state-early: #a78bfa;
+      --state-early-bg: rgba(167,139,250,0.12);
+      --state-new: #fbbf24;
+      --state-new-bg: rgba(251,191,36,0.15);
+      --state-pullback: #fb923c;
+      --state-pullback-bg: rgba(251,146,60,0.12);
+      --state-exit: #64748b;
+      --state-exit-bg: rgba(100,116,139,0.10);
+      --state-pool: #4b5563;
+      --state-pool-bg: rgba(75,85,99,0.10);
+      --state-setup-ok: #38bdf8;
+      --state-setup-ok-bg: rgba(56,189,248,0.12);
+      --state-entangled: #737373;
+      --state-entangled-bg: rgba(115,115,115,0.10);
     }
     * { margin:0; padding:0; box-sizing:border-box; }
     body {
@@ -85,16 +97,16 @@
     .logo { color: var(--primary); flex-shrink: 0; }
     .title { font-size: 15px; font-weight: 600; letter-spacing: -0.02em; line-height: 1; }
     .subtitle { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
-    .market-toggle, .tab-toggle {
+    .tab-toggle {
       display: inline-flex; border-radius: 8px; border: 1px solid var(--border);
       background: var(--bg-muted); padding: 2px;
     }
-    .market-btn, .tab-btn {
+    .tab-btn {
       padding: 4px 12px; border-radius: 6px; font-size: 12px; font-weight: 600;
       cursor: pointer; border: none; background: none; color: var(--text-muted);
       transition: all 0.15s;
     }
-    .market-btn.active, .tab-btn.active {
+    .tab-btn.active {
       background: var(--bg); color: var(--text);
       box-shadow: 0 1px 2px rgba(0,0,0,0.06);
     }
@@ -120,20 +132,33 @@
       color: var(--text-muted); white-space: nowrap; gap: 3px;
     }
     .badges { display: flex; flex-wrap: wrap; gap: 6px; }
-    .pool-badge {
+    .state-badge {
       display: inline-flex; align-items: center; padding: 2px 7px;
       border-radius: 4px; font-size: 11px; font-weight: 600;
       white-space: nowrap; gap: 3px;
     }
-    .pool-NEW { color: var(--pool-new); background: var(--pool-new-bg); }
-    .pool-STRONGEST { color: var(--pool-strongest); background: var(--pool-strongest-bg); }
-    .pool-PULLBACK { color: var(--pool-pullback); background: var(--pool-pullback-bg); }
-    .pool-WATCHING { color: var(--pool-watching); background: var(--pool-watching-bg); }
-    .pool-BROKEN { color: var(--pool-broken); background: var(--pool-broken-bg); }
-    .pool-EXITED { color: var(--pool-exited); background: var(--pool-exited-bg); }
-    .from-bottom { font-size: 13px; }
-    .upgrade { color: var(--positive); font-weight: 600; font-size: 11px; }
-    .downgrade { color: var(--negative); font-weight: 600; font-size: 11px; }
+    .state-STRONG { color: var(--state-strong); background: var(--state-strong-bg); }
+    .state-MID { color: var(--state-mid); background: var(--state-mid-bg); }
+    .state-EARLY { color: var(--state-early); background: var(--state-early-bg); }
+    .state-NEW { color: var(--state-new); background: var(--state-new-bg); }
+    .state-PULLBACK { color: var(--state-pullback); background: var(--state-pullback-bg); }
+    .state-EXIT { color: var(--state-exit); background: var(--state-exit-bg); }
+    .state-POOL { color: var(--state-pool); background: var(--state-pool-bg); }
+    .state-SETUP_OK { color: var(--state-setup-ok); background: var(--state-setup-ok-bg); }
+    .state-ENTANGLED { color: var(--state-entangled); background: var(--state-entangled-bg); }
+    .sos-badge {
+      display: inline-flex; align-items: center; padding: 1px 5px;
+      border-radius: 3px; font-size: 10px; font-weight: 700;
+      color: #fff; margin-left: 4px;
+    }
+    .sos-A { background: #15803d; }
+    .sos-B { background: #4ade80; color: #166534; }
+    .sos-C { background: #93c5fd; color: #1e3a5f; }
+    .bear-badge {
+      display: inline-flex; align-items: center; padding: 1px 5px;
+      border-radius: 3px; font-size: 10px; font-weight: 700;
+      color: #fff; background: #6b7280; margin-left: 4px;
+    }
     .toolbar {
       display: flex; align-items: center; justify-content: space-between;
       gap: 12px; margin-bottom: 10px; flex-wrap: wrap;
@@ -147,13 +172,6 @@
       color: var(--text); font-size: 13px; width: 220px; outline: none;
     }
     .search-input:focus { border-color: var(--primary); }
-    .filter-group { display: flex; align-items: center; gap: 6px; }
-    .filter-label { font-size: 12px; color: var(--text-muted); white-space: nowrap; }
-    .filter-select {
-      height: 32px; padding: 0 8px; border-radius: 6px;
-      border: 1px solid var(--border); background: var(--bg);
-      color: var(--text); font-size: 12px; cursor: pointer; outline: none;
-    }
     .btn {
       height: 32px; padding: 0 12px; border-radius: 6px; border: 1px solid var(--border);
       background: var(--bg); color: var(--text); font-size: 12px; font-weight: 500;
@@ -169,7 +187,7 @@
       background: var(--bg-card); overflow: hidden;
     }
     .table-scroll { overflow-x: auto; }
-    table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    table { width: 100%; border-collapse: collapse; font-size: 13px; table-layout: fixed; }
     thead { background: var(--bg-muted); position: sticky; top: 0; z-index: 10; }
     th {
       padding: 8px 12px; text-align: left; font-size: 11px; font-weight: 600;
@@ -184,44 +202,66 @@
     tr { border-top: 1px solid var(--border); transition: background 0.1s; }
     thead tr { border-top: none; }
     tbody tr:hover { background: var(--hover); }
-    .ticker { font-weight: 600; font-size: 13px; letter-spacing: -0.01em; }
-    .name { font-size: 12px; color: var(--text-muted); max-width: 180px; overflow: hidden; text-overflow: ellipsis; }
-    .sector { font-size: 12px; color: var(--text-muted); }
-    .theme { font-size: 11px; color: var(--text-xs); }
+    .ticker { font-weight: 600; font-size: 13px; letter-spacing: -0.01em; width: 7%; overflow: hidden; text-overflow: ellipsis; }
+    .ticker a { color: var(--primary); text-decoration: none; cursor: pointer; }
+    .ticker a:hover { text-decoration: underline; }
+    .name { font-size: 12px; color: var(--text-muted); width: 12%; overflow: hidden; text-overflow: ellipsis; }
+    .sector { font-size: 12px; color: var(--text-muted); width: 10%; overflow: hidden; text-overflow: ellipsis; }
     .price { font-weight: 500; }
-    .chg-badge {
-      display: inline-flex; padding: 2px 6px; border-radius: 4px;
-      font-size: 11px; font-weight: 600;
-    }
-    .chg-pos { color: var(--positive); background: var(--positive-bg); }
-    .chg-neg { color: var(--negative); background: var(--negative-bg); }
     .muted-val { font-size: 12px; color: var(--text-muted); }
-    .sma-val { font-size: 12px; }
-    .row-num { font-size: 11px; color: var(--text-xs); }
     .empty-state { padding: 48px 12px; text-align: center; color: var(--text-muted); }
-    .empty-state svg { opacity: 0.3; margin-bottom: 8px; }
     .empty-state p { font-size: 13px; }
-    .filters-box {
-      margin-bottom: 12px; padding: 12px; border-radius: 8px;
-      background: var(--bg-card); border: 1px solid var(--border);
-    }
-    .filters-label {
-      font-size: 11px; font-weight: 600; text-transform: uppercase;
-      letter-spacing: 0.05em; color: var(--text-muted); margin-bottom: 8px;
-      display: flex; align-items: center; gap: 6px;
-    }
     .alert-card {
       padding: 10px 14px; border-radius: 8px; border: 1px solid var(--border);
       background: var(--bg-card); margin-bottom: 8px; display: flex;
       align-items: center; gap: 12px;
     }
     .alert-card .alert-ticker { font-weight: 700; font-size: 14px; min-width: 80px; }
-    .alert-card .alert-date { font-size: 12px; color: var(--text-muted); margin-left: auto; }
+    .alert-card .alert-ticker a { color: var(--text); text-decoration: none; cursor: pointer; }
+    .alert-card .alert-ticker a:hover { color: var(--primary); text-decoration: underline; }
+    .alert-card .alert-name { font-size: 13px; color: var(--text-muted); min-width: 100px; }
     .alert-card .alert-detail { font-size: 13px; color: var(--text-muted); }
+    .alert-card .alert-sector { font-size: 12px; color: var(--text-xs); }
+    .alert-card .alert-date { font-size: 12px; color: var(--text-muted); margin-left: auto; }
     .footer { margin-top: 24px; padding-bottom: 16px; text-align: center; }
     .footer a { font-size: 12px; color: var(--text-xs); text-decoration: none; }
     .footer a:hover { color: var(--text-muted); }
+    .group-header {
+      padding: 8px 12px; background: var(--bg-muted); font-size: 13px; font-weight: 700;
+      color: var(--text); border-top: 2px solid var(--primary);
+      display: flex; align-items: center; gap: 10px;
+    }
+    .group-header .group-count {
+      font-size: 11px; font-weight: 600; color: var(--primary);
+      background: var(--bg); padding: 1px 7px; border-radius: 8px;
+    }
+    .btn.active { background: var(--primary); color: white; border-color: var(--primary); }
     .main { max-width: 1600px; margin: 0 auto; padding: 16px 20px; }
+    .summary-bar {
+      display: flex; gap: 16px; margin-bottom: 12px; flex-wrap: wrap;
+    }
+    .summary-item {
+      display: flex; align-items: center; gap: 6px; padding: 6px 12px;
+      border-radius: 6px; background: var(--bg-muted); font-size: 12px;
+    }
+    .summary-item .summary-label { color: var(--text-muted); }
+    .summary-item .summary-val { font-weight: 700; font-variant-numeric: tabular-nums; }
+    .section-divider {
+      margin: 16px 0 8px; padding: 6px 12px; background: var(--bg-muted);
+      border-radius: 6px; font-size: 13px; font-weight: 600; color: var(--text-muted);
+      display: flex; align-items: center; gap: 8px;
+    }
+    .section-divider .section-count {
+      font-size: 11px; font-weight: 700; color: var(--primary);
+      background: var(--bg); padding: 1px 6px; border-radius: 8px;
+    }
+    .tier-badge-STRONG { color: var(--state-strong); background: var(--state-strong-bg); }
+    .tier-badge-STRONG-NEW { color: var(--state-new); background: var(--state-new-bg); }
+    .tier-badge-MID { color: var(--state-mid); background: var(--state-mid-bg); }
+    .tier-badge-EARLY { color: var(--state-early); background: var(--state-early-bg); }
+    .chg-badge { font-size: 12px; font-weight: 600; }
+    .chg-pos { color: var(--positive); }
+    .chg-neg { color: var(--negative); }
     @media (max-width: 640px) {
       .header-inner, .main { padding-left: 12px; padding-right: 12px; }
       .search-input { width: 160px; }
@@ -259,11 +299,6 @@
     #chart-main { flex: 5; min-height: 0; background: var(--bg-card); }
     .chart-sub { flex: 1.5; min-height: 80px; position: relative; background: var(--bg-card); }
     .chart-sub-label { position: absolute; top: 4px; left: 8px; font-size: 10px; font-weight: 700; color: var(--text-muted); z-index: 2; pointer-events: none; text-transform: uppercase; letter-spacing: 0.05em; }
-    .ticker a { color: var(--primary); text-decoration: none; cursor: pointer; }
-    .ticker a:hover { text-decoration: underline; }
-    .alert-ticker a { color: var(--text); text-decoration: none; cursor: pointer; }
-    .alert-ticker a:hover { text-decoration: underline; color: var(--primary); }
-    .alert-name { font-size: 13px; color: var(--text-muted); }
     @media (max-width: 640px) {
       .modal-content { width: 100vw; height: 100vh; border-radius: 0; }
       .close-btn { width: 44px; height: 44px; }
@@ -279,7 +314,7 @@
         <span id="modal-ticker"></span>
         <button id="btn-daily" class="interval-btn active" onclick="switchInterval('D')">Daily</button>
         <button id="btn-weekly" class="interval-btn" onclick="switchInterval('W')">Weekly</button>
-        <button class="close-btn" onclick="closeChart()">✕</button>
+        <button class="close-btn" onclick="closeChart()">&#10005;</button>
       </div>
       <div id="chart-panes">
         <div id="chart-main"></div>
@@ -291,161 +326,66 @@
   <script>
   (function() {
     // ─── State ─────────────────────────────────────────
-    let market = 'us';
-    let data = { us: null, hk: null, cn: null };
-    let poolData = { us: [], hk: [] };
-    let alertData = { us: [], hk: [] };
+    let tabData = { date: '', tab1: { sos_section: [], pool_section: [] }, tab2: [], tab3: [] };
     let search = '';
-    let sortField = 'last_close';
+    let sortField = 'ma10_slope_pct';
     let sortDir = 'desc';
-    let tab = 'breakout'; // 'screener' | 'breakout' | 'trend' | 'alerts'
-    let minDailyChg = 'none';
-    let min5dChg = 'none';
+    let tab = 'entry'; // 'entry' | 'hold' | 'alerts'
+    let groupMode = true;
     let isDark = true;
     let copied = false;
 
-    const CONFIG = {
-      us: { title: 'US Equity Screener', currency: '$', mcap: 'Turnover >= $200M', price: 'Price > $10', value: 'AvgValue > $100M' },
-      hk: { title: 'HK Equity Screener', currency: 'HK$', mcap: 'AvgValue >= HK$5000wan', price: 'Price > HK$10', value: 'Vol > 500K' },
-      cn: { title: 'A-Share Equity Screener', currency: 'CNY', mcap: 'MCap > CNY 100yi', price: 'Price > CNY 10', value: 'Vol Top 20%' },
-    };
-
-    const POOL_STATUS_ORDER = { STRONGEST: 0, PULLBACK: 1, WATCHING: 2, BROKEN: 3, NEW: 4 };
-    const POOL_STATUS_LABEL = {
-      NEW: 'NEW', STRONGEST: 'STRONGEST', PULLBACK: 'PULLBACK',
-      WATCHING: 'WATCHING', BROKEN: 'BROKEN', EXITED: 'EXITED'
-    };
+    const TIER_ORDER = { 'STRONG': 0, 'STRONG NEW': 1, 'MID': 2, 'EARLY': 3, '': 4 };
 
     // ─── Data Loading ──────────────────────────────────
-    async function loadData(m) {
-      if (data[m]) return;
+    let loadError = '';
+    async function loadData() {
       try {
-        const resp = await fetch(`data/${m}.json`);
-        data[m] = await resp.json();
+        const resp = await fetch('data/three_tabs_hk.json');
+        if (!resp.ok) throw new Error('HTTP ' + resp.status);
+        const text = await resp.text();
+        tabData = JSON.parse(text);
       } catch(e) {
-        data[m] = { stocks: [], totalPassing: 0, lastUpdated: null };
-      }
-      render();
-    }
-
-    async function loadPoolData(m) {
-      try {
-        const resp = await fetch(`data/pools_${m}.json`);
-        const arr = await resp.json();
-        poolData[m] = Array.isArray(arr) ? arr : Object.values(arr);
-      } catch(e) {
-        poolData[m] = [];
+        loadError = e.message || String(e);
+        tabData = { date: '', tab1: { sos_section: [], pool_section: [] }, tab2: [], tab3: [] };
       }
     }
 
-    async function loadAlertData(m) {
-      try {
-        const resp = await fetch(`data/alerts_${m}.json`);
-        alertData[m] = await resp.json();
-      } catch(e) {
-        alertData[m] = [];
-      }
-    }
-
-    // ─── Filtering & Sorting ───────────────────────────
-    function getPoolFiltered() {
-      let pool = poolData[market] || [];
-      if (tab === 'breakout') {
-        pool = pool.filter(e => e.pool === 'breakout');
-      } else if (tab === 'trend') {
-        pool = pool.filter(e => e.pool === 'trend');
-      }
+    // ─── Filtering & Sorting ────────────────────────────
+    function filterAndSort(list) {
+      let pool = list;
       if (search.trim()) {
         const q = search.toLowerCase();
-        pool = pool.filter(e => e.ticker.toLowerCase().includes(q) || (e.name||'').toLowerCase().includes(q) || (e.sector||'').toLowerCase().includes(q) || (e.theme||'').toLowerCase().includes(q));
+        pool = pool.filter(e =>
+          (e.ticker||'').toLowerCase().includes(q) ||
+          (e.name_cn||e.name||'').toLowerCase().includes(q) ||
+          (e.gics_sector||'').toLowerCase().includes(q)
+        );
       }
-      // Sort: in trend/breakout tab, default sort by status rank then by sortField
-      if (sortField && sortField !== 'pool_status') {
-        pool.sort((a, b) => {
-          // Primary: status rank (STRONGEST first)
-          const rankA = POOL_STATUS_ORDER[a.pool_status] ?? 99;
-          const rankB = POOL_STATUS_ORDER[b.pool_status] ?? 99;
-          if (rankA !== rankB) return rankA - rankB;
-          // Secondary: user sort field
-          const av = a[sortField] ?? 0, bv = b[sortField] ?? 0;
-          if (typeof av === 'string' && typeof bv === 'string')
-            return sortDir === 'asc' ? av.localeCompare(bv) : bv.localeCompare(av);
-          return sortDir === 'asc' ? Number(av) - Number(bv) : Number(bv) - Number(av);
-        });
-      } else {
-        // Sort by status rank only
-        pool.sort((a, b) => {
-          const rankA = POOL_STATUS_ORDER[a.pool_status] ?? 99;
-          const rankB = POOL_STATUS_ORDER[b.pool_status] ?? 99;
-          return rankA - rankB;
-        });
-      }
-      return pool;
-    }
-
-    function getFiltered() {
-      const stocks = data[market]?.stocks || [];
-      let result = [...stocks];
-      if (search.trim()) {
-        const q = search.toLowerCase();
-        result = result.filter(s => s.ticker.toLowerCase().includes(q) || s.name.toLowerCase().includes(q));
-      }
-      if (minDailyChg !== 'none') {
-        const t = parseFloat(minDailyChg);
-        result = result.filter(s => s.changePercent >= t);
-      }
-      if (min5dChg !== 'none') {
-        const t = parseFloat(min5dChg);
-        result = result.filter(s => (s.change5dPercent ?? 0) >= t);
-      }
-      if (sortField) {
-        result.sort((a, b) => {
-          const av = a[sortField] ?? 0, bv = b[sortField] ?? 0;
-          if (typeof av === 'string' && typeof bv === 'string')
-            return sortDir === 'asc' ? av.localeCompare(bv) : bv.localeCompare(av);
-          return sortDir === 'asc' ? Number(av) - Number(bv) : Number(bv) - Number(av);
-        });
-      }
-      return result;
+      if (!sortField) return pool;
+      return pool.slice().sort((a, b) => {
+        let av = a[sortField], bv = b[sortField];
+        if (av == null && bv == null) return 0;
+        if (av == null) return 1;
+        if (bv == null) return -1;
+        if (typeof av === 'string') return sortDir === 'asc' ? av.localeCompare(bv) : bv.localeCompare(av);
+        return sortDir === 'asc' ? Number(av) - Number(bv) : Number(bv) - Number(av);
+      });
     }
 
     // ─── Format Helpers ────────────────────────────────
     const fmt = {
-      mcap(v) {
-        if (v === 0) return '-';
-        const c = CONFIG[market].currency;
-        const yi = Math.round(v / 1e8);
-        if (market === 'cn') {
-          if (yi >= 10000) return 'CNY' + Math.round(yi/10000).toLocaleString() + 'wanyi';
-          return 'CNY' + yi.toLocaleString() + 'yi';
-        }
-        if (market === 'us') return '$' + yi.toLocaleString() + 'yi';
-        if (market === 'hk') return 'HK$' + yi.toLocaleString() + 'yi';
-        return c + yi.toLocaleString() + 'yi';
-      },
-      vol(v) {
-        if (v >= 1e8) return (v/1e8).toFixed(1) + 'yi';
-        if (v >= 1e4) return (v/1e4).toFixed(0) + 'wan';
-        if (v >= 1e6) return (v/1e6).toFixed(1) + 'M';
-        if (v >= 1e3) return (v/1e3).toFixed(0) + 'K';
-        return v.toLocaleString();
-      },
       price(v) { return v != null ? v.toFixed(2) : '-'; },
+      pct(v) { return v != null ? v.toFixed(1) + '%' : '-'; },
+      slope(v) { return v != null ? (v >= 0 ? '+' : '') + v.toFixed(1) + '%' : '-'; },
     };
 
     function toTV(ticker) {
-      if (market === 'hk') return 'HKEX:' + ticker.replace('.HK', '').replace(/^0+/, '');
-      if (market === 'cn') {
-        const [code, exchange] = ticker.split('.');
-        const prefix = exchange === 'SH' ? 'SSE' : 'SZSE';
-        return prefix + ':' + code;
-      }
-      return ticker;
+      return 'HKEX:' + ticker.replace('.HK', '').replace(/^0+/, '');
     }
 
     function copyTickers(tickers) {
-      const formatted = tickers.map(toTV);
-      const text = formatted.join(', ');
+      const text = tickers.map(toTV).join(', ');
       try { navigator.clipboard.writeText(text); } catch {
         const ta = document.createElement('textarea');
         ta.value = text; ta.style.cssText = 'position:fixed;opacity:0';
@@ -467,26 +407,26 @@
       chart: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>',
       copy: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>',
       check: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>',
-      rocket: '🚀',
     };
 
     // ─── Render ────────────────────────────────────────
     function render() {
       document.documentElement.className = isDark ? 'dark' : '';
-      const c = CONFIG[market];
 
-      const breakoutCount = (poolData[market] || []).filter(e => e.pool === 'breakout').length;
-      const trendCount = (poolData[market] || []).filter(e => e.pool === 'trend').length;
-      const alertCount = (alertData[market] || []).length;
+      const sosCount = (tabData.tab1?.sos_section || []).length;
+      const poolCount = (tabData.tab1?.pool_section || []).length;
+      const holdCount = (tabData.tab2 || []).length;
+      const alertCount = (tabData.tab3 || []).length;
+      const entryTotal = sosCount + poolCount;
 
       let mainContent = '';
-      if (tab === 'breakout' || tab === 'trend') {
-        mainContent = renderPoolTable();
-      } else if (tab === 'alerts') {
+      if (tab === 'alerts') {
         mainContent = renderAlerts();
       } else {
-        mainContent = renderScreenerTable();
+        mainContent = renderTable();
       }
+
+      const errorBanner = loadError ? `<div style="padding:12px;margin:8px 0;border-radius:6px;background:#fef2f2;color:#dc2626;font-size:13px">Data load error: ${loadError}</div>` : '';
 
       document.getElementById('app').innerHTML = `
         <header class="header">
@@ -499,44 +439,35 @@
                 <rect x="26" y="2" width="4" height="28" rx="1" fill="currentColor"/>
               </svg>
               <div>
-                <div class="title">${c.title}</div>
-                <div class="subtitle">Breakout & Trend Pools</div>
-              </div>
-              <div class="market-toggle">
-                <button class="market-btn ${market==='us'?'active':''}" data-market="us">US</button>
-                <button class="market-btn ${market==='hk'?'active':''}" data-market="hk">HK</button>
+                <div class="title">Wyckoff v5.4 扫描器</div>
+                <div class="subtitle">港股趋势扫描 · ${tabData.date || ''}</div>
               </div>
               <div class="tab-toggle">
-                <button class="tab-btn ${tab==='breakout'?'active':''}" data-tab="breakout">Breakout<span class="tab-count">${breakoutCount}</span></button>
-                <button class="tab-btn ${tab==='trend'?'active':''}" data-tab="trend">Trend<span class="tab-count">${trendCount}</span></button>
-                <button class="tab-btn ${tab==='alerts'?'active':''}" data-tab="alerts">Alerts<span class="tab-count">${alertCount}</span></button>
-                <button class="tab-btn ${tab==='screener'?'active':''}" data-tab="screener">Screener</button>
+                <button class="tab-btn ${tab==='entry'?'active':''}" data-tab="entry">进场候选<span class="tab-count">${entryTotal}</span></button>
+                <button class="tab-btn ${tab==='hold'?'active':''}" data-tab="hold">Trending<span class="tab-count">${holdCount}</span></button>
+                <button class="tab-btn ${tab==='alerts'?'active':''}" data-tab="alerts">警报<span class="tab-count">${alertCount}</span></button>
               </div>
             </div>
             <button class="icon-btn" id="theme-toggle">${isDark ? icons.sun : icons.moon}</button>
           </div>
         </header>
         <main class="main">
+          <div class="summary-bar">
+            ${renderSummary(sosCount, poolCount, holdCount, alertCount)}
+          </div>
+          ${errorBanner}
           ${mainContent}
           <div class="footer">
-            <a href="https://github.com" target="_blank">Open Source Equity Screener</a>
+            <a href="https://github.com/jibom/trend-equity-screener" target="_blank">Wyckoff v5.4 Trend Equity Screener</a>
           </div>
         </main>
       `;
 
-      // ─── Event Binding ───────────────────────────────
-      document.querySelectorAll('.market-btn').forEach(btn => {
-        btn.addEventListener('click', async () => {
-          market = btn.dataset.market;
-          search = '';
-          await Promise.all([loadData(market), loadPoolData(market), loadAlertData(market)]);
-          render();
-        });
-      });
+      // Event Binding
       document.querySelectorAll('.tab-btn').forEach(btn => {
         btn.addEventListener('click', () => {
           tab = btn.dataset.tab;
-          search = ''; sortField = tab === 'screener' ? 'marketCap' : 'last_close'; sortDir = 'desc';
+          search = ''; sortField = 'ma10_slope_pct'; sortDir = 'desc'; groupMode = true;
           render();
         });
       });
@@ -559,134 +490,314 @@
       });
 
       const cb = document.getElementById('copy-btn');
-      if (cb) cb.addEventListener('click', () => copyTickers(currentTickers));
+      if (cb) cb.addEventListener('click', () => {
+        const tickers = getCurrentTickers();
+        copyTickers(tickers);
+      });
 
-      const fd = document.getElementById('filter-daily');
-      if (fd) fd.addEventListener('change', e => { minDailyChg = e.target.value; render(); });
-      const f5 = document.getElementById('filter-5d');
-      if (f5) f5.addEventListener('change', e => { min5dChg = e.target.value; render(); });
+      const gb = document.getElementById('group-btn');
+      if (gb) gb.addEventListener('click', () => { groupMode = !groupMode; render(); });
     }
 
-    let currentTickers = [];
-
-    // ─── Pool Table ────────────────────────────────────
-    function renderPoolTable() {
-      const pool = getPoolFiltered();
-      currentTickers = pool.map(e => e.ticker);
-      const c = CONFIG[market];
-
-      function th(field, label) {
-        const active = sortField === field;
-        const icon = active ? (sortDir === 'desc' ? icons.sortDown : icons.sortUp) : icons.sort;
-        return `<th class="${active?'active':''}" data-sort="${field}">${label}<span class="sort-icon">${icon}</span></th>`;
-      }
-
-      let rows = '';
-      if (pool.length === 0) {
-        rows = `<tr><td colspan="15" class="empty-state">${icons.chart}<p>No stocks in ${tab} pool</p></td></tr>`;
+    function getCurrentTickers() {
+      if (tab === 'entry') {
+        const sos = filterAndSort(tabData.tab1?.sos_section || []);
+        const pool = filterAndSort(tabData.tab1?.pool_section || []);
+        return [...sos, ...pool].map(e => e.ticker);
+      } else if (tab === 'hold') {
+        return filterAndSort(tabData.tab2 || []).map(e => e.ticker);
       } else {
-        pool.forEach((e, i) => {
-          const statusBadge = `<span class="pool-badge pool-${e.pool_status}">${e.pool_status}</span>`;
-          const fbIcon = e.from_bottom ? `<span class="from-bottom">${icons.rocket}</span>` : '';
-          const changeIcon = e.status_change === 'upgrade' ? '<span class="upgrade">&#9650;</span>' :
-                            e.status_change === 'downgrade' ? '<span class="downgrade">&#9660;</span>' : '';
-          const wAlign = e.weekly_aligned ? '<span style="color:var(--positive)">&#10003;</span>' : '<span style="color:var(--text-xs)">&#10007;</span>';
-          const dAlign = e.daily_aligned ? '<span style="color:var(--positive)">&#10003;</span>' : '<span style="color:var(--text-xs)">&#10007;</span>';
-
-          rows += `<tr>
-            <td class="row-num">${i+1}</td>
-            <td class="ticker"><a href="#" onclick="showChart('${e.ticker}'); return false;">${e.ticker}</a></td>
-            <td class="name">${e.name || ''}</td>
-            <td class="sector">${e.sector || '-'}</td>
-            <td class="theme">${e.theme || ''}</td>
-            <td>${statusBadge}${fbIcon}</td>
-            <td>${changeIcon}</td>
-            <td class="price">${c.currency}${fmt.price(e.last_close)}</td>
-            <td>${wAlign}</td>
-            <td>${dAlign}</td>
-            <td class="muted-val">${fmt.price(e.ma_10d)}</td>
-            <td class="muted-val">${fmt.price(e.ma_20d)}</td>
-            <td class="muted-val">${fmt.price(e.ma_50d)}</td>
-            <td class="muted-val">${e.days_in_trend}</td>
-          </tr>`;
-        });
+        return (tabData.tab3 || []).map(e => e.ticker);
       }
+    }
+
+    // ─── Summary Bar ──────────────────────────────────
+    function renderSummary(sosCount, poolCount, holdCount, alertCount) {
+      const hold = tabData.tab2 || [];
+      const strongCount = hold.filter(e => e.display_tier === 'STRONG').length;
+      const strongNewCount = hold.filter(e => e.display_tier === 'STRONG NEW').length;
+      const midCount = hold.filter(e => e.display_tier === 'MID').length;
+      const earlyCount = hold.filter(e => e.display_tier === 'EARLY').length;
+      const alerts = tabData.tab3 || [];
+      const aCount = alerts.filter(e => e.alert_type === 'A_PULLBACK').length;
+      const bCount = alerts.filter(e => e.alert_type === 'B_EXIT').length;
+      const cCount = alerts.filter(e => e.alert_type === 'C_PULLBACK').length;
+
+      return `
+        <div class="summary-item"><span class="state-badge state-SETUP_OK">进场</span><span class="summary-val">${sosCount} SOS</span><span class="summary-val">${poolCount} 池</span></div>
+        <div class="summary-item"><span class="state-badge state-STRONG">STRONG</span><span class="summary-val">${strongCount}</span></div>
+        <div class="summary-item"><span class="state-badge state-NEW">STRONG NEW</span><span class="summary-val">${strongNewCount}</span></div>
+        <div class="summary-item"><span class="state-badge state-MID">MID</span><span class="summary-val">${midCount}</span></div>
+        <div class="summary-item"><span class="state-badge state-EARLY">EARLY</span><span class="summary-val">${earlyCount}</span></div>
+        <div class="summary-item"><span style="color:#eab308">🟡</span><span class="summary-val">${aCount}</span> <span style="color:#ef4444">🔴</span><span class="summary-val">${bCount}</span> <span style="color:#f97316">🟠</span><span class="summary-val">${cCount}</span></div>
+      `;
+    }
+
+    // ─── Table Rendering ───────────────────────────────
+    function th(field, label) {
+      const active = sortField === field;
+      const icon = active ? (sortDir === 'desc' ? icons.sortDown : icons.sortUp) : icons.sort;
+      return `<th class="${active?'active':''}" data-sort="${field}">${label}<span class="sort-icon">${icon}</span></th>`;
+    }
+
+    function tierBadge(tier) {
+      const cls = tier === 'STRONG NEW' ? 'tier-badge-STRONG-NEW' :
+                  tier === 'STRONG' ? 'tier-badge-STRONG' :
+                  tier === 'MID' ? 'tier-badge-MID' :
+                  tier === 'EARLY' ? 'tier-badge-EARLY' : 'state-badge';
+      return `<span class="state-badge ${cls}">${tier || '-'}</span>`;
+    }
+
+    function renderRow(e, showSos) {
+      const stateBadge = `<span class="state-badge state-${e.state}">${e.state}</span>`;
+      const sosBadge = showSos && e.sos_setup_recent ? `<span class="sos-badge sos-${e.sos_setup_recent.slice(-1)}">${e.sos_setup_recent}</span>` : '';
+      const slopeVal = e.ma10_slope_pct != null ? e.ma10_slope_pct : null;
+      const slopeClass = slopeVal != null ? (slopeVal >= 0 ? 'chg-pos' : 'chg-neg') : '';
+      const slopeDisplay = slopeVal != null ? `<span class="chg-badge ${slopeClass}">${slopeVal >= 0 ? '+' : ''}${slopeVal.toFixed(1)}%</span>` : '<span class="muted-val">-</span>';
+      const displayName = e.name_cn || e.name || '';
+      const sectorTd = groupMode ? '' : `<td class="sector">${e.gics_sector || '-'}</td>`;
+
+      return `<tr>
+        <td class="ticker"><a href="#" onclick="showChart('${e.ticker}'); return false;">${e.ticker}</a></td>
+        <td class="name">${displayName}</td>
+        ${sectorTd}
+        <td class="sector">${e.sub_industry || '-'}</td>
+        <td>${stateBadge}${sosBadge}</td>
+        <td class="price">${fmt.price(e.last_close)}</td>
+        <td class="muted-val">${fmt.price(e.ma10)}</td>
+        <td>${slopeDisplay}</td>
+        <td class="muted-val">${fmt.slope(e.ma200_slope)}</td>
+      </tr>`;
+    }
+
+    function renderHoldRow(e) {
+      const tier = e.display_tier || e.substate || '';
+      const slopeVal = e.ma10_slope_pct != null ? e.ma10_slope_pct : null;
+      const slopeClass = slopeVal != null ? (slopeVal >= 0 ? 'chg-pos' : 'chg-neg') : '';
+      const slopeDisplay = slopeVal != null ? `<span class="chg-badge ${slopeClass}">${slopeVal >= 0 ? '+' : ''}${slopeVal.toFixed(1)}%</span>` : '<span class="muted-val">-</span>';
+      const displayName = e.name_cn || e.name || '';
+      const sectorTd = groupMode ? '' : `<td class="sector">${e.gics_sector || '-'}</td>`;
+
+      return `<tr>
+        <td class="ticker"><a href="#" onclick="showChart('${e.ticker}'); return false;">${e.ticker}</a></td>
+        <td class="name">${displayName}</td>
+        ${sectorTd}
+        <td class="sector">${e.sub_industry || '-'}</td>
+        <td>${tierBadge(tier)}</td>
+        <td class="price">${fmt.price(e.last_close)}</td>
+        <td class="muted-val">${fmt.price(e.ma10)}</td>
+        <td>${slopeDisplay}</td>
+        <td class="muted-val">${fmt.price(e.ma60)}</td>
+        <td class="muted-val">${fmt.slope(e.ma200_slope)}</td>
+        <td class="muted-val">${e.days_in_state || '-'}</td>
+      </tr>`;
+    }
+
+    function renderTable() {
+      if (tab === 'entry') {
+        return renderEntryTab();
+      } else if (tab === 'hold') {
+        return renderHoldTab();
+      }
+      return '';
+    }
+
+    function renderGroupedRows(list, colCount, rowFn) {
+      if (list.length === 0) {
+        return `<tr><td colspan="${colCount}" class="empty-state"><p>暂无数据</p></td></tr>`;
+      }
+      if (!groupMode) {
+        return list.map(rowFn).join('');
+      }
+      const sm = {};
+      list.forEach(e => {
+        const sector = e.gics_sector || 'Other';
+        if (!sm[sector]) sm[sector] = [];
+        sm[sector].push(e);
+      });
+      const gs = Object.entries(sm)
+        .map(([name, stocks]) => ({ name, count: stocks.length, stocks }))
+        .sort((a, b) => b.count - a.count);
+      let rows = '';
+      gs.forEach(g => {
+        rows += `<tr><td colspan="${colCount}" class="group-header">${g.name}<span class="group-count">${g.count}</span></td></tr>`;
+        g.stocks.forEach(e => { rows += rowFn(e); });
+      });
+      return rows;
+    }
+
+    function renderEntryTab() {
+      const sosList = filterAndSort(tabData.tab1?.sos_section || []);
+      const poolList = filterAndSort(tabData.tab1?.pool_section || []);
+      const entryColCount = groupMode ? 8 : 9;
+      const entrySectorTh = groupMode ? '' : th('gics_sector','行业');
+
+      const sosRowsGrouped = renderGroupedRows(sosList, entryColCount, e => renderRow(e, true));
+
+      const poolRowsGrouped = renderGroupedRows(poolList, entryColCount, e => renderRow(e, false));
+
+      const entryHeaders = `
+        ${th('ticker','代码')}
+        ${th('name_cn','名称')}
+        ${entrySectorTh}
+        ${th('sub_industry','子行业')}
+        <th>状态</th>
+        ${th('last_close','收盘价')}
+        ${th('ma10','MA10')}
+        ${th('ma10_slope_pct','MA10斜率')}
+        ${th('ma200_slope','200D斜率')}
+      `;
 
       return `
         <div class="toolbar">
           <div class="toolbar-left">
             <div class="search-wrap">
               ${icons.search}
-              <input type="search" class="search-input" placeholder="Search ticker or sector..." value="${search}" id="search-input" />
+              <input type="search" class="search-input" placeholder="搜索代码或名称..." value="${search}" id="search-input" />
             </div>
+            <button class="btn ${groupMode?'active':''}" id="group-btn">行业分组</button>
           </div>
           <div class="toolbar-right">
             <div class="stats">
               ${icons.chart}
-              <span><span class="stats-num">${pool.length}</span> stocks</span>
+              <span><span class="stats-num">${sosList.length + poolList.length}</span> 只</span>
             </div>
             <button class="btn ${copied?'copied':''}" id="copy-btn">
               ${copied ? icons.check : icons.copy}
-              ${copied ? 'Copied!' : `Copy ${pool.length} Tickers`}
+              ${copied ? '已复制!' : `复制代码`}
             </button>
           </div>
         </div>
+
+        <div style="margin-bottom:12px;padding:8px 14px;border-radius:6px;border:1px solid var(--border);background:var(--bg-muted);font-size:12px;color:var(--text-muted);line-height:1.7">
+          <b style="color:var(--text)">关键词</b>
+          <span class="sos-badge sos-A">SOS-A</span> 放量+大阳线+60日新高(JOC)
+          <span class="sos-badge sos-B">SOS-B</span> 放量+大阳线(无新高,Spring)
+          <span class="sos-badge sos-C">SOS-C</span> 60日新高+缩量
+          | <b>SETUP_OK</b> SOS触发后等待突破确认 | <b>ENTANGLED</b> 周线短均纠缠(≤8%) | <b>MA10斜率</b>=(MA10_今/MA10_10日前-1)×100
+        </div>
+
+        <div class="section-divider">SOS 信号 <span class="section-count">${sosList.length}</span></div>
         <div class="table-wrap">
           <div class="table-scroll">
             <table>
-              <thead><tr>
-                <th style="width:36px">#</th>
-                ${th('ticker','Ticker')}
-                ${th('name','Name')}
-                ${th('sector','Sector')}
-                ${th('theme','Theme')}
-                ${th('pool_status','Status')}
-                <th style="width:32px">Chg</th>
-                ${th('last_close','Price')}
-                <th style="width:50px">周线</th>
-                <th style="width:50px">日线</th>
-                ${th('ma_10d','MA10')}
-                ${th('ma_20d','MA20')}
-                ${th('ma_50d','MA50')}
-                ${th('days_in_trend','Days')}
-              </tr></thead>
-              <tbody>${rows}</tbody>
+              <thead><tr>${entryHeaders}</tr></thead>
+              <tbody>${sosRowsGrouped}</tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="section-divider">候选池 (SETUP_OK/ENTANGLED, 去重) <span class="section-count">${poolList.length}</span></div>
+        <div class="table-wrap">
+          <div class="table-scroll">
+            <table>
+              <thead><tr>${entryHeaders}</tr></thead>
+              <tbody>${poolRowsGrouped}</tbody>
             </table>
           </div>
         </div>`;
     }
 
-    // ─── Alerts ────────────────────────────────────────
-    function renderAlerts() {
-      const alerts = alertData[market] || [];
-      currentTickers = alerts.map(a => a.ticker);
+    function renderHoldTab() {
+      const list = filterAndSort(tabData.tab2 || []);
+      const colCount = groupMode ? 10 : 11;
+      const sectorTh = groupMode ? '' : th('gics_sector','行业');
 
-      if (alerts.length === 0) {
-        return `<div class="empty-state"><p>No alerts today</p></div>`;
+      const holdHeaders = `
+        ${th('ticker','代码')}
+        ${th('name_cn','名称')}
+        ${sectorTh}
+        ${th('sub_industry','子行业')}
+        ${th('display_tier','显示等级')}
+        ${th('last_close','收盘价')}
+        ${th('ma10','MA10')}
+        ${th('ma10_slope_pct','MA10斜率')}
+        ${th('ma60','MA60')}
+        ${th('ma200_slope','200D斜率')}
+        ${th('days_in_state','天数')}
+      `;
+
+      return `
+        <div class="toolbar">
+          <div class="toolbar-left">
+            <div class="search-wrap">
+              ${icons.search}
+              <input type="search" class="search-input" placeholder="搜索代码或名称..." value="${search}" id="search-input" />
+            </div>
+            <button class="btn ${groupMode?'active':''}" id="group-btn">行业分组</button>
+          </div>
+          <div class="toolbar-right">
+            <div class="stats">
+              ${icons.chart}
+              <span><span class="stats-num">${list.length}</span> 只</span>
+            </div>
+            <button class="btn ${copied?'copied':''}" id="copy-btn">
+              ${copied ? icons.check : icons.copy}
+              ${copied ? '已复制!' : `复制代码`}
+            </button>
+          </div>
+        </div>
+
+        <div style="margin-bottom:12px;padding:8px 14px;border-radius:6px;border:1px solid var(--border);background:var(--bg-muted);font-size:12px;color:var(--text-muted);line-height:1.7">
+          <b style="color:var(--text)">关键词</b>
+          <span class="state-badge state-STRONG">STRONG</span> 周线长+短均齐+容忍
+          <span class="state-badge state-MID">MID</span> 周线长均齐+短不齐
+          <span class="state-badge state-EARLY">EARLY</span> 日线齐+MA10斜率>5%+周线纠缠
+          <span class="state-badge state-NEW">NEW</span> 新股(上市<490天)+日线齐
+          | <b>显示等级升级</b> MID/EARLY+近5日60日新高→显示为STRONG (仅输出层)
+          | <b>排序</b> GICS行业入选数→显示等级→MA10斜率%
+        </div>
+
+        <div class="table-wrap">
+          <div class="table-scroll">
+            <table>
+              <thead><tr>${holdHeaders}</tr></thead>
+              <tbody>${renderGroupedRows(list, colCount, renderHoldRow)}</tbody>
+            </table>
+          </div>
+        </div>`;
+    }
+
+    // ─── Alerts Tab ────────────────────────────────────
+    function renderAlerts() {
+      const alerts = tabData.tab3 || [];
+      const filtered = search.trim() ? alerts.filter(a => {
+        const q = search.toLowerCase();
+        return (a.ticker||'').toLowerCase().includes(q) || (a.name_cn||'').toLowerCase().includes(q);
+      }) : alerts;
+
+      if (filtered.length === 0) {
+        return `<div class="toolbar">
+          <div class="toolbar-left">
+            <div class="search-wrap">
+              ${icons.search}
+              <input type="search" class="search-input" placeholder="搜索代码..." value="${search}" id="search-input" />
+            </div>
+          </div>
+        </div>
+        <div class="empty-state"><p>暂无警报</p></div>`;
       }
 
       let cards = '';
-      alerts.forEach(a => {
+      filtered.forEach(a => {
         let badge = '', detail = '';
-        if (a.event === 'NEW') {
-          badge = `<span class="pool-badge pool-NEW">NEW</span>`;
-          detail = a.from_bottom ? `${icons.rocket} from_bottom` : '';
-        } else if (a.event === 'upgrade') {
-          badge = `<span class="upgrade">&#9650; upgrade</span>`;
-          detail = `${a.from} &rarr; <span class="pool-badge pool-${a.to}">${a.to}</span>`;
-        } else if (a.event === 'downgrade') {
-          badge = `<span class="downgrade">&#9660; downgrade</span>`;
-          detail = `${a.from} &rarr; <span class="pool-badge pool-${a.to}">${a.to}</span>`;
-        } else if (a.event === 'BROKEN') {
-          badge = `<span class="pool-badge pool-BROKEN">BROKEN</span>`;
-          detail = a.reason || '';
+        const emoji = a.emoji || '';
+        if (a.alert_type === 'A_PULLBACK') {
+          badge = `<span class="state-badge state-PULLBACK">${a.label} ${emoji}</span>`;
+          detail = a.pullback_dd_pct != null ? `${a.pullback_dd_pct.toFixed(1)}% · ${a.days_in_pullback}天前` : '';
+        } else if (a.alert_type === 'B_EXIT') {
+          badge = `<span class="state-badge state-EXIT">${a.label} ${emoji}</span>`;
+          detail = `${a.days_in_state || 0}天前`;
+        } else if (a.alert_type === 'C_PULLBACK') {
+          badge = `<span class="state-badge state-PULLBACK">${a.label} ${emoji}</span>`;
+          detail = a.pullback_dd_pct != null ? `${a.pullback_dd_pct.toFixed(1)}% · 回调${a.days_in_pullback}天` : '';
         }
         cards += `<div class="alert-card">
           <div class="alert-ticker"><a href="#" onclick="showChart('${a.ticker}'); return false;">${a.ticker}</a></div>
-          <div class="alert-name">${a.name || ''}</div>
+          <div class="alert-name">${a.name_cn || ''}</div>
           <div>${badge}</div>
           <div class="alert-detail">${detail}</div>
-          <div class="alert-date">${a.date}</div>
+          <div class="alert-sector">${a.gics_sector || ''}</div>
         </div>`;
       });
 
@@ -695,148 +806,44 @@
           <div class="toolbar-left">
             <div class="search-wrap">
               ${icons.search}
-              <input type="search" class="search-input" placeholder="Search ticker..." value="${search}" id="search-input" />
+              <input type="search" class="search-input" placeholder="搜索代码..." value="${search}" id="search-input" />
             </div>
           </div>
           <div class="toolbar-right">
             <div class="stats">
               ${icons.chart}
-              <span><span class="stats-num">${alerts.length}</span> alerts</span>
+              <span><span class="stats-num">${filtered.length}</span> 条警报</span>
             </div>
           </div>
         </div>
+
+        <div style="margin-bottom:12px;padding:8px 14px;border-radius:6px;border:1px solid var(--border);background:var(--bg-muted);font-size:12px;color:var(--text-muted);line-height:1.7">
+          <b style="color:var(--text)">关键词</b>
+          🟡 <b>A·PULLBACK</b> 近5日 TRENDING→PULLBACK (刚进入回调)
+          🔴 <b>B·EXIT</b> 近5日触发EXIT (跌破MA60+斜率负)
+          🟠 <b>C·PULLBACK</b> 仍PULLBACK且≥10日未修复 (非A类)
+          | 本页只关注PULL/EXIT, 不关注trend内部强弱变化
+        </div>
+
         ${cards}`;
     }
 
-    // ─── Screener Table (original) ─────────────────────
-    function renderScreenerTable() {
-      const c = CONFIG[market];
-      const filtered = getFiltered();
-      currentTickers = filtered.map(s => s.ticker);
-      const lastUpdated = data[market]?.lastUpdated;
-
-      const chgOptions = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15].map(v => `<option value="${v}" ${minDailyChg===String(v)?'selected':''}>&ge; ${v}%</option>`).join('');
-      const chg5dOptions = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15].map(v => `<option value="${v}" ${min5dChg===String(v)?'selected':''}>&ge; ${v}%</option>`).join('');
-
-      function th(field, label) {
-        const active = sortField === field;
-        const icon = active ? (sortDir === 'desc' ? icons.sortDown : icons.sortUp) : icons.sort;
-        return `<th class="${active?'active':''}" data-sort="${field}">${label}<span class="sort-icon">${icon}</span></th>`;
-      }
-
-      let tableRows = '';
-      if (filtered.length === 0) {
-        tableRows = `<tr><td colspan="16" class="empty-state">${icons.chart}<p>No results</p></td></tr>`;
-      } else {
-        filtered.forEach((s, i) => {
-          const chgCls = s.changePercent >= 0 ? 'chg-pos' : 'chg-neg';
-          const chg5dCls = (s.change5dPercent??0) >= 0 ? 'chg-pos' : 'chg-neg';
-          tableRows += `<tr>
-            <td class="row-num">${i+1}</td>
-            <td class="ticker"><a href="#" onclick="showChart('${s.ticker}'); return false;">${s.ticker}</a></td>
-            <td class="name">${s.name}</td>
-            <td class="sector">${s.sector||'-'}</td>
-            <td class="price">${c.currency}${fmt.price(s.price)}</td>
-            <td><span class="chg-badge ${chgCls}">${s.changePercent>=0?'+':''}${s.changePercent.toFixed(2)}%</span></td>
-            <td><span class="chg-badge ${chg5dCls}">${(s.change5dPercent??0)>=0?'+':''}${(s.change5dPercent??0).toFixed(2)}%</span></td>
-            <td class="muted-val">${fmt.mcap(s.marketCap)}</td>
-            <td class="muted-val">${fmt.vol(s.avgVolume60d)}</td>
-            <td class="muted-val">${fmt.vol(s.avgVolume90d)}</td>
-            <td class="muted-val">${fmt.vol(s.avgTradingValue)}</td>
-            <td class="sma-val">${fmt.price(s.sma10)}</td>
-            <td class="sma-val">${fmt.price(s.sma20)}</td>
-            <td class="sma-val">${fmt.price(s.sma50)}</td>
-            <td class="sma-val">${fmt.price(s.sma100)}</td>
-            <td class="sma-val">${fmt.price(s.sma200)}</td>
-          </tr>`;
-        });
-      }
-
-      return `
-        <div class="filters-box">
-          <div class="filters-label">Active Filters</div>
-          <div class="badges">
-            <span class="badge">${c.mcap}</span>
-            <span class="badge">${c.price}</span>
-            <span class="badge">SMA 10>20>50>100>200</span>
-            <span class="badge">Price > SMA30</span>
-          </div>
-        </div>
-        <div class="toolbar">
-          <div class="toolbar-left">
-            <div class="search-wrap">
-              ${icons.search}
-              <input type="search" class="search-input" placeholder="Search ticker or name..." value="${search}" id="search-input" />
-            </div>
-            <div class="filter-group">
-              <span class="filter-label">Daily Chg%</span>
-              <select class="filter-select" id="filter-daily">
-                <option value="none" ${minDailyChg==='none'?'selected':''}>Any</option>
-                ${chgOptions}
-              </select>
-            </div>
-            <div class="filter-group">
-              <span class="filter-label">5D Chg%</span>
-              <select class="filter-select" id="filter-5d">
-                <option value="none" ${min5dChg==='none'?'selected':''}>Any</option>
-                ${chg5dOptions}
-              </select>
-            </div>
-          </div>
-          <div class="toolbar-right">
-            <div class="stats">
-              ${icons.chart}
-              <span><span class="stats-num">${filtered.length}</span> stocks</span>
-              ${lastUpdated ? `<span>Updated ${new Date(lastUpdated).toLocaleString([], {month:'short',day:'numeric',hour:'2-digit',minute:'2-digit'})}</span>` : ''}
-            </div>
-            <button class="btn ${copied?'copied':''}" id="copy-btn">
-              ${copied ? icons.check : icons.copy}
-              ${copied ? 'Copied!' : `Copy ${filtered.length} Tickers`}
-            </button>
-          </div>
-        </div>
-        <div class="table-wrap">
-          <div class="table-scroll">
-            <table>
-              <thead><tr>
-                <th style="width:36px">#</th>
-                ${th('ticker','Ticker')}
-                ${th('name','Name')}
-                ${th('sector','Sector')}
-                ${th('price','Price')}
-                ${th('changePercent','Chg%')}
-                ${th('change5dPercent','5D Chg%')}
-                ${th('marketCap','Mkt Cap')}
-                ${th('avgVolume60d','Avg 60d')}
-                ${th('avgVolume90d','Avg 90d')}
-                ${th('avgTradingValue','Avg Value')}
-                ${th('sma10','SMA10')}
-                ${th('sma20','SMA20')}
-                ${th('sma50','SMA50')}
-                ${th('sma100','SMA100')}
-                ${th('sma200','SMA200')}
-              </tr></thead>
-              <tbody>${tableRows}</tbody>
-            </table>
-          </div>
-        </div>`;
-    }
-
     // ─── Init ──────────────────────────────────────────
+    window.onerror = function(msg, url, line, col, err) {
+      const el = document.getElementById('app');
+      if (el) el.innerHTML = '<div style="padding:20px;color:red;font-size:14px">JS Error: ' + msg + ' (line ' + line + ')</div>' + el.innerHTML;
+    };
     (async () => {
-      await Promise.all([loadData('us'), loadPoolData('us'), loadAlertData('us')]);
+      await loadData();
       render();
     })();
   })();
 
-  // ─── Chart Modal ──────────────────────────────────
   // ─── Chart Modal (Lightweight Charts) ─────────────
   let _chartTicker = '';
   let _chartInterval = 'D';
-  let _chartData = null;   // loaded chartdata for current ticker
-  let _charts = null;      // array of LC chart instances
-
-  // ── Indicator calculations (pure functions) ───────
+  let _chartData = null;
+  let _charts = null;
 
   function calcMA(data, period) {
     const out = [];
@@ -862,10 +869,7 @@
     const out = new Array(values.length).fill(null);
     if (values.length < period) return out;
     let sum = 0;
-    for (let i = 0; i < period; i++) {
-      if (values[i] === null) return out;
-      sum += values[i];
-    }
+    for (let i = 0; i < period; i++) { if (values[i] === null) return out; sum += values[i]; }
     let e = sum / period;
     out[period - 1] = e;
     const k = 2 / (period + 1);
@@ -900,10 +904,7 @@
     let pk = 50, pd = 50;
     for (let i = n - 1; i < data.length; i++) {
       let hi = -Infinity, lo = Infinity;
-      for (let j = i - n + 1; j <= i; j++) {
-        hi = Math.max(hi, data[j][2]);
-        lo = Math.min(lo, data[j][3]);
-      }
+      for (let j = i - n + 1; j <= i; j++) { hi = Math.max(hi, data[j][2]); lo = Math.min(lo, data[j][3]); }
       const rsv = hi === lo ? 50 : (data[i][4] - lo) / (hi - lo) * 100;
       const k = (2 / kn) * pk + (1 / kn) * rsv;
       const d = (2 / dn) * pd + (1 / dn) * k;
@@ -916,57 +917,41 @@
     return { k: kD, d: dD, j: jD };
   }
 
-  // ── Theme helper ──────────────────────────────────
-
   function _lcTheme() {
     const dark = document.documentElement.classList.contains('dark');
     return {
-      layout: {
-        background: { color: dark ? '#1a1d27' : '#ffffff' },
-        textColor: dark ? '#d1d5db' : '#374151',
-      },
-      grid: {
-        vertLines: { color: dark ? '#2d3039' : '#e5e7eb' },
-        horzLines: { color: dark ? '#2d3039' : '#e5e7eb' },
-      },
+      layout: { background: { color: dark ? '#1a1d27' : '#ffffff' }, textColor: dark ? '#d1d5db' : '#374151' },
+      grid: { vertLines: { color: dark ? '#2d3039' : '#e5e7eb' }, horLines: { color: dark ? '#2d3039' : '#e5e7eb' } },
       crosshair: { mode: 0 },
       rightPriceScale: { borderColor: dark ? '#2d3039' : '#e5e7eb' },
       timeScale: { borderColor: dark ? '#2d3039' : '#e5e7eb', timeVisible: false },
     };
   }
 
-  // ── Render ────────────────────────────────────────
-
   function renderChart() {
-    // destroy previous
     if (_charts) { _charts.forEach(c => c.remove()); _charts = null; }
     if (!_chartData) return;
     if (typeof LightweightCharts === 'undefined') {
-      document.getElementById('chart-main').innerHTML =
-        '<div style="display:flex;align-items:center;justify-content:center;height:100%;color:var(--text-muted)">Chart library loading, please retry...</div>';
+      document.getElementById('chart-main').innerHTML = '<div style="display:flex;align-items:center;justify-content:center;height:100%;color:var(--text-muted)">Chart library loading...</div>';
       return;
     }
 
     const rows = _chartInterval === 'W' ? _chartData.weekly : _chartData.daily;
     if (!rows || rows.length < 10) return;
 
-    const theme = _lcTheme();
+    const theme = _lc_theme();
     _charts = [];
 
-    // indicators
-    const ma10 = calcMA(rows, 10), ma20 = calcMA(rows, 20);
-    const ma50 = calcMA(rows, 50), ma200 = calcMA(rows, 200);
+    const ma10 = calcMA(rows, 10), ma20 = calcMA(rows, 20), ma50 = calcMA(rows, 50), ma200 = calcMA(rows, 200);
     const macd = calcMACD(rows);
     const kdj = calcKDJ(rows);
 
-    // candle data
     const candles = rows.map(r => ({ time: r[0], open: r[1], high: r[2], low: r[3], close: r[4] }));
     const vols = rows.map(r => ({
       time: r[0], value: r[5],
       color: r[4] >= r[1] ? 'rgba(38,166,154,0.4)' : 'rgba(239,83,80,0.4)',
     }));
 
-    // Helper: create chart with auto-resize
     function mkChart(el) {
       const rect = el.getBoundingClientRect();
       return LightweightCharts.createChart(el, {
@@ -977,7 +962,6 @@
       });
     }
 
-    // ── Main chart ──
     const mainChart = mkChart(document.getElementById('chart-main'));
     const cs = mainChart.addCandlestickSeries({
       upColor: '#26a69a', downColor: '#ef5350',
@@ -986,45 +970,35 @@
     });
     cs.setData(candles);
 
-    // MA lines on main chart
     const maOpts = (color) => ({ color, lineWidth: 1, priceLineVisible: false, lastValueVisible: false });
     if (ma10.length) mainChart.addLineSeries(maOpts('#FF6B6B')).setData(ma10);
     if (ma20.length) mainChart.addLineSeries(maOpts('#FFA726')).setData(ma20);
     if (ma50.length) mainChart.addLineSeries(maOpts('#42A5F5')).setData(ma50);
     if (ma200.length) mainChart.addLineSeries(maOpts('#AB47BC')).setData(ma200);
 
-    // Volume overlay at bottom of main
-    const vs = mainChart.addHistogramSeries({
-      priceFormat: { type: 'volume' }, priceScaleId: 'vol',
-    });
+    const vs = mainChart.addHistogramSeries({ priceFormat: { type: 'volume' }, priceScaleId: 'vol' });
     vs.setData(vols);
     mainChart.priceScale('vol').applyOptions({ scaleMargins: { top: 0.82, bottom: 0 } });
 
-    // Volume MA lines
     const volMA5 = calcVolMA(rows, 5), volMA20 = calcVolMA(rows, 20);
     if (volMA5.length) mainChart.addLineSeries({ color: '#FFEB3B', lineWidth: 1, priceLineVisible: false, lastValueVisible: false, priceScaleId: 'vol' }).setData(volMA5);
     if (volMA20.length) mainChart.addLineSeries({ color: '#E91E63', lineWidth: 1, priceLineVisible: false, lastValueVisible: false, priceScaleId: 'vol' }).setData(volMA20);
 
     _charts.push(mainChart);
 
-    // ── MACD chart ──
     const macdChart = mkChart(document.getElementById('chart-macd'));
     if (macd.hist.length) macdChart.addHistogramSeries({ priceFormat: { type: 'price', precision: 3 } }).setData(macd.hist);
     if (macd.dif.length) macdChart.addLineSeries({ color: '#2196F3', lineWidth: 1, priceLineVisible: false, lastValueVisible: false }).setData(macd.dif);
     if (macd.dea.length) macdChart.addLineSeries({ color: '#FF6B6B', lineWidth: 1, priceLineVisible: false, lastValueVisible: false }).setData(macd.dea);
     _charts.push(macdChart);
 
-    // ── KDJ chart ──
     const kdjChart = mkChart(document.getElementById('chart-kdj'));
     if (kdj.k.length) kdjChart.addLineSeries({ color: '#2196F3', lineWidth: 1, priceLineVisible: false, lastValueVisible: false }).setData(kdj.k);
     if (kdj.d.length) kdjChart.addLineSeries({ color: '#FF6B6B', lineWidth: 1, priceLineVisible: false, lastValueVisible: false }).setData(kdj.d);
     if (kdj.j.length) kdjChart.addLineSeries({ color: '#9C27B0', lineWidth: 1, priceLineVisible: false, lastValueVisible: false }).setData(kdj.j);
     _charts.push(kdjChart);
 
-    // sync time scales across panes
     _syncScales(mainChart, macdChart, kdjChart);
-
-    // Fit main chart first, then sync its visible range to sub-charts
     mainChart.timeScale().fitContent();
     const mainRange = mainChart.timeScale().getVisibleLogicalRange();
     if (mainRange) {
@@ -1038,15 +1012,12 @@
     const set = (src) => (range) => {
       if (syncing || !range) return;
       syncing = true;
-      const others = [main, ...subs].filter(c => c !== src);
-      others.forEach(c => { try { c.timeScale().setVisibleLogicalRange(range); } catch(e){} });
+      [main, ...subs].filter(c => c !== src).forEach(c => { try { c.timeScale().setVisibleLogicalRange(range); } catch(e){} });
       syncing = false;
     };
     main.timeScale().subscribeVisibleLogicalRangeChange(set(main));
     subs.forEach(s => s.timeScale().subscribeVisibleLogicalRangeChange(set(s)));
   }
-
-  // ── Modal control ─────────────────────────────────
 
   async function showChart(ticker) {
     _chartTicker = ticker;
@@ -1057,14 +1028,11 @@
     _updateIntervalBtns();
     document.body.style.overflow = 'hidden';
 
-    const market = ticker.endsWith('.HK') ? 'hk' : 'us';
-    const code = ticker.replace('.HK', '').replace('.US', '');
-
+    const code = ticker.replace('.HK', '');
     try {
-      const res = await fetch(`./data/chartdata/${market}/${code}.json`);
+      const res = await fetch(`./data/chartdata/hk/${code}.json`);
       if (!res.ok) throw new Error(res.status);
       _chartData = await res.json();
-      // Wait for browser to layout modal before rendering chart
       requestAnimationFrame(() => requestAnimationFrame(() => renderChart()));
     } catch (e) {
       document.getElementById('chart-main').innerHTML =
@@ -1090,9 +1058,7 @@
     document.getElementById('btn-weekly').classList.toggle('active', _chartInterval === 'W');
   }
 
-  document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') closeChart();
-  });
+  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeChart(); });
   </script>
 </body>
 </html>

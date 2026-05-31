@@ -15,9 +15,20 @@ venv/
 *.swo
 *~
 
+# Output
+backtest/*.csv
+output/
+
+# Data
+data/*.csv
+data/*.parquet
+
 # OS
 .DS_Store
 Thumbs.db
 
 # Logs
 *.log
+
+# Secrets
+.env

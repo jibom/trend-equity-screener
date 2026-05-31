@@ -3,8 +3,8 @@ name: Scan & Deploy
 on:
   # 每天 5 次 (UTC 时间)
   # HKT 05:00 = UTC 21:00 (前一天) — 美股收盘后
-  # HKT 08:00 = UTC 00:00 — 港股/A股开盘前
-  # HKT 16:30 = UTC 08:30 — 港股/A股收盘后
+  # HKT 08:00 = UTC 00:00 — 港股开盘前
+  # HKT 16:30 = UTC 08:30 — 港股收盘后
   # HKT 22:00 = UTC 14:00 — 美股盘中
   # HKT 23:00 = UTC 15:00 — 美股开盘后30分钟 (夏令时)
   schedule:
@@ -26,7 +26,6 @@ on:
           - all
           - us
           - hk
-          - cn
 
 # 确保同一时间只跑一个 workflow
 concurrency:
@@ -53,7 +52,7 @@ jobs:
           python-version: '3.11'
 
       - name: Install dependencies
-        run: pip install yfinance pandas requests pymysql && pip list | grep -iE "yfinance|pymysql|requests|pandas"
+        run: pip install yfinance pandas requests anthropic pymysql openpyxl && pip list | grep -iE "yfinance|anthropic|requests|pandas|pymysql|openpyxl"
 
       - name: Determine which markets to scan
         id: markets
@@ -64,8 +63,8 @@ jobs:
           if [ "$MARKET" = "all" ]; then
             # Auto-detect based on schedule time
             # UTC 21:00 (HKT 05:00) → US (美股刚收盘)
-            # UTC 00:00 (HKT 08:00) → hk+cn (港股/A股开盘前)
-            # UTC 08:30 (HKT 16:30) → hk+cn (港股/A股收盘后)
+            # UTC 00:00 (HKT 08:00) → HK (港股开盘前)
+            # UTC 08:30 (HKT 16:30) → HK (港股收盘后)
             # UTC 14:00 (HKT 22:00) → all
             # UTC 15:00 (HKT 23:00) → us
             if [ "$HOUR" = "21" ]; then
@@ -73,7 +72,7 @@ jobs:
             elif [ "$HOUR" = "15" ]; then
               MARKET="us"
             elif [ "$HOUR" = "00" ] || [ "$HOUR" = "08" ]; then
-              MARKET="hkcn"
+              MARKET="hk"
             else
               MARKET="all"
             fi
@@ -88,30 +87,25 @@ jobs:
           PYTHONIOENCODING: utf-8
         continue-on-error: true
 
-      - name: Run HK scanner
-        if: steps.markets.outputs.market == 'hkcn' || steps.markets.outputs.market == 'all'
-        run: python scripts/scan_hk.py
+      - name: Run HK scanner (v5.4)
+        if: steps.markets.outputs.market == 'hk' || steps.markets.outputs.market == 'all'
+        run: python scripts/scan_hk_v54.py
         env:
           PYTHONIOENCODING: utf-8
         continue-on-error: true
 
-      - name: Run CN scanner
-        if: steps.markets.outputs.market == 'hkcn' || steps.markets.outputs.market == 'all'
-        run: python scripts/scan_cn.py
+      - name: Classify stocks
+        run: python scripts/classify_stocks.py --market all
         env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           PYTHONIOENCODING: utf-8
         continue-on-error: true
-
-      - name: Build chart data
-        run: python scripts/build_chartdata.py
-        env:
-          PYTHONIOENCODING: utf-8
 
       - name: Commit updated data
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add public/data/*.json data/*.json public/data/chartdata/
+          git add public/data/*.json data/*.json
           git diff --staged --quiet || git commit -m "Update scan data $(date -u +'%Y-%m-%d %H:%M UTC')"
           git push
 
