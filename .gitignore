@@ -15,13 +15,15 @@ venv/
 *.swo
 *~
 
+# Testing
+.pytest_cache/
+
 # Output
 backtest/*.csv
 output/
 
-# Data
-data/*.csv
-data/*.parquet
+# Data (intermediate — public/data/ is the canonical frontend source)
+data/
 
 # OS
 .DS_Store

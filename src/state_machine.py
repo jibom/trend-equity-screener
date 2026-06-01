@@ -1,4 +1,4 @@
-"""Core state machine and backtest runner for Wyckoff v5.3.
+"""Core state machine and backtest runner for Wyckoff v5.4.
 
 State machine (6 main states):
   POOL ⇄ ENTANGLED ⇄ SETUP_OK → TRENDING ⇄ PULLBACK
@@ -6,13 +6,6 @@ State machine (6 main states):
                                   EXIT ←───────┘
                                     ↓
                               (cooldown 5d) → POOL/ENTANGLED/SETUP_OK/TRENDING
-
-Key v5.3 changes from v5.2:
-- SOS-B no longer requires new high (Wyckoff Type 1/2 Spring/Test)
-- SOS-C = new high with weak volume
-- New state ENTANGLED: weekly short 4-line dispersion ≤ 8%
-- New state SETUP_OK: SOS-B/C triggered, waiting for breakout confirmation
-- close_loc threshold: 0.70 → 0.60
 """
 from __future__ import annotations
 
@@ -59,50 +52,24 @@ def make_rec(row, state, substate, days_in_state, consec_below_ma10,
     )
 
 
-def run_one(code, asof='2026-05-29', months=12, label=None, cfg=None):
-    """Run backtest for a single stock (v5.3 state machine)."""
-    if cfg is None:
-        cfg = load_config()
-    label = label or code.replace('.HK', '').lstrip('0') or '0'
+def run_state_machine(df, weekly_df, weekly_dates, cfg, listing_first_day):
+    """Core state machine loop with v5.4 event tracking.
 
-    f = WindFetcher(lookback_days=cfg['lookback_days'])
-    df_full = f.fetch(code, asof=asof)
-    df_full = forward_adjust(df_full).sort_values('date').reset_index(drop=True)
+    Args:
+        df: Daily DataFrame with pre-computed sos_raw and is_new_high columns.
+        weekly_df: Weekly indicator DataFrame.
+        weekly_dates: List of weekly period end dates.
+        cfg: Configuration dict.
+        listing_first_day: First listing date of the stock.
 
-    if df_full.empty:
-        return pd.DataFrame()
-
-    listing_first_day = df_full['date'].min()
-
-    # Daily indicators
-    df_full = compute_daily_mas(df_full)
-    df_full = compute_ma60_slope(df_full, cfg.get('exit_ma60_slope_lookback', 5))
-
-    # Weekly indicators
-    all_weekly_mas = tuple(set(cfg['weekly_long_mas'] + cfg['weekly_short_mas'] + [cfg.get('weekly_fast_ma', 5)]))
-    weekly_df = compute_weekly_mas(df_full, mas=all_weekly_mas)
-    weekly_df = weekly_df.sort_index()
-    weekly_dates = list(weekly_df.index)
-
-    # Backtest window
-    cutoff = pd.to_datetime(asof) - pd.DateOffset(months=months)
-    df = df_full[df_full['date'] >= cutoff].reset_index(drop=True)
-
-    if df.empty:
-        return pd.DataFrame()
-
-    # Pre-compute SOS (v5.3: classify_sos needs is_new_high)
-    df['high60'] = df['fwd_close'].rolling(60, min_periods=10).max().shift(1)
-    df['is_new_high'] = df['fwd_close'] > df['high60']
-    df['sos_raw'] = df.apply(
-        lambda r: classify_sos(r, cfg, is_new_high=bool(r.get('is_new_high', False))), axis=1
-    )
-
-    # Entangled config
+    Returns (records, recent_events, recent_new_highs):
+      records: list of daily state record dicts
+      recent_events: list of (day_index, event_type, detail, state_at_time)
+      recent_new_highs: list of day_index values
+    """
     entangled_disp = cfg.get('entangled_disp', 0.08)
     setup_idle_days = cfg.get('setup_idle_days', 5)
 
-    # State machine
     state = 'POOL'
     substate = ''
     days_in_state = 0
@@ -111,16 +78,18 @@ def run_one(code, asof='2026-05-29', months=12, label=None, cfg=None):
     days_in_pullback = 0
     base_max = None
     days_in_exit = 0
-    setup_idle = 0  # days since last SOS in SETUP_OK
-
+    setup_idle = 0
     recs = []
+
+    # v5.4 event tracking
+    recent_events = []
+    recent_new_highs = []
 
     for i, row in df.iterrows():
         days_in_state += 1
         days_listed_real = (row['date'] - listing_first_day).days
         is_new_stock = days_listed_real < cfg['new_stock_days']
 
-        # Map date to week index
         date_period_end = pd.Timestamp(row['date']).to_period('W-FRI').end_time.normalize()
         try:
             week_idx = weekly_dates.index(date_period_end)
@@ -129,7 +98,6 @@ def run_one(code, asof='2026-05-29', months=12, label=None, cfg=None):
 
         sub_today = trending_substate(df, i, weekly_df, week_idx, days_listed_real, cfg)
 
-        # SOS event (v5.3: all SOS types are events, not just at new highs)
         sos_today = df.at[i, 'sos_raw']
         new_high_today = bool(df.at[i, 'is_new_high'])
         bear = is_bear_market(weekly_df, week_idx, cfg)
@@ -137,16 +105,27 @@ def run_one(code, asof='2026-05-29', months=12, label=None, cfg=None):
                                  mas=tuple(cfg['weekly_short_mas']),
                                  max_disp=entangled_disp)
 
-        # ── EXIT trigger: broke MA60 with negative slope ──
+        # v5.4: track SOS from SETUP_OK/ENTANGLED and new highs for TRENDING
+        if sos_today and state in ('SETUP_OK', 'ENTANGLED'):
+            recent_events.append((i, 'sos_from_setup', sos_today, state))
+        if state == 'TRENDING' and new_high_today:
+            recent_new_highs.append(i)
+        sos_caused_setup = (sos_today in ('SOS-B', 'SOS-C') and not bear
+                            and state in ('POOL', 'ENTANGLED', 'EXIT'))
+
         broke_ma60 = (
             pd.notna(row.get('ma60')) and row['fwd_close'] < row['ma60']
             and pd.notna(row.get('ma60_slope5')) and row['ma60_slope5'] < 0
         )
+
+        # ── EXIT trigger ──
         if state in ('TRENDING', 'PULLBACK', 'SETUP_OK', 'ENTANGLED') and broke_ma60:
+            prev_state = state
             state = 'EXIT'; substate = ''
             days_in_state = 1; days_in_exit = 1
             consec_below_ma10 = 0; pullback_peak = None; base_max = None
             setup_idle = 0
+            recent_events.append((i, 'to_EXIT', prev_state, prev_state))
             recs.append(make_rec(row, state, substate, days_in_state,
                                  consec_below_ma10, days_in_pullback,
                                  pullback_peak, base_max,
@@ -154,7 +133,7 @@ def run_one(code, asof='2026-05-29', months=12, label=None, cfg=None):
                                  sub_today, bear, setup_idle))
             continue
 
-        # ── EXIT state: cooldown + potential re-entry ──
+        # ── EXIT ──
         if state == 'EXIT':
             days_in_exit += 1
             if days_in_exit < cfg['exit_cooldown_days']:
@@ -164,27 +143,24 @@ def run_one(code, asof='2026-05-29', months=12, label=None, cfg=None):
                                      sos_today, new_high_today, is_new_stock,
                                      sub_today, bear, setup_idle))
                 continue
-            # Cooldown done — decide where to go
             can_trending = bool(sub_today) or (sos_today == 'SOS-A' and not bear)
             can_setup = sos_today in ('SOS-B', 'SOS-C') and not bear
             if can_trending:
                 state = 'TRENDING'
                 substate = 'NEW' if is_new_stock else sub_today
                 days_in_state = 1; days_in_exit = 0
-                base_max = row['fwd_close']; consec_below_ma10 = 0
-                setup_idle = 0
+                base_max = row['fwd_close']; consec_below_ma10 = 0; setup_idle = 0
             elif can_setup:
                 state = 'SETUP_OK'; substate = ''
-                days_in_state = 1; days_in_exit = 0
-                setup_idle = 0
+                days_in_state = 1; days_in_exit = 0; setup_idle = 0
+                if sos_caused_setup:
+                    recent_events.append((i, 'sos_from_setup', sos_today, 'SETUP_OK'))
             elif entangled:
                 state = 'ENTANGLED'; substate = ''
-                days_in_state = 1; days_in_exit = 0
-                setup_idle = 0
+                days_in_state = 1; days_in_exit = 0; setup_idle = 0
             else:
                 state = 'POOL'; substate = ''
-                days_in_state = 1; days_in_exit = 0
-                setup_idle = 0
+                days_in_state = 1; days_in_exit = 0; setup_idle = 0
             recs.append(make_rec(row, state, substate, days_in_state,
                                  consec_below_ma10, days_in_pullback,
                                  pullback_peak, base_max,
@@ -200,11 +176,12 @@ def run_one(code, asof='2026-05-29', months=12, label=None, cfg=None):
                 state = 'TRENDING'
                 substate = 'NEW' if is_new_stock else sub_today
                 days_in_state = 1
-                base_max = row['fwd_close']; consec_below_ma10 = 0
-                setup_idle = 0
+                base_max = row['fwd_close']; consec_below_ma10 = 0; setup_idle = 0
             elif can_setup:
                 state = 'SETUP_OK'; substate = ''
                 days_in_state = 1; setup_idle = 0
+                if sos_caused_setup:
+                    recent_events.append((i, 'sos_from_setup', sos_today, 'SETUP_OK'))
             elif entangled:
                 state = 'ENTANGLED'; substate = ''
                 days_in_state = 1; setup_idle = 0
@@ -223,11 +200,12 @@ def run_one(code, asof='2026-05-29', months=12, label=None, cfg=None):
                 state = 'TRENDING'
                 substate = 'NEW' if is_new_stock else sub_today
                 days_in_state = 1
-                base_max = row['fwd_close']; consec_below_ma10 = 0
-                setup_idle = 0
+                base_max = row['fwd_close']; consec_below_ma10 = 0; setup_idle = 0
             elif can_setup:
                 state = 'SETUP_OK'; substate = ''
                 days_in_state = 1; setup_idle = 0
+                if sos_caused_setup:
+                    recent_events.append((i, 'sos_from_setup', sos_today, 'SETUP_OK'))
             elif not entangled:
                 state = 'POOL'; substate = ''
                 days_in_state = 1; setup_idle = 0
@@ -240,14 +218,12 @@ def run_one(code, asof='2026-05-29', months=12, label=None, cfg=None):
 
         # ── SETUP_OK ──
         if state == 'SETUP_OK':
-            # Upgrade to TRENDING?
             can_trending = bool(sub_today) or (sos_today == 'SOS-A' and not bear)
             if can_trending:
                 state = 'TRENDING'
                 substate = 'NEW' if is_new_stock else sub_today
                 days_in_state = 1
-                base_max = row['fwd_close']; consec_below_ma10 = 0
-                setup_idle = 0
+                base_max = row['fwd_close']; consec_below_ma10 = 0; setup_idle = 0
                 recs.append(make_rec(row, state, substate, days_in_state,
                                      consec_below_ma10, days_in_pullback,
                                      pullback_peak, base_max,
@@ -255,13 +231,11 @@ def run_one(code, asof='2026-05-29', months=12, label=None, cfg=None):
                                      sub_today, bear, setup_idle))
                 continue
 
-            # Track idle days since last SOS
             if sos_today in ('SOS-A', 'SOS-B', 'SOS-C'):
                 setup_idle = 0
             else:
                 setup_idle += 1
 
-            # Idle timeout → downgrade
             if setup_idle >= setup_idle_days:
                 if entangled:
                     state = 'ENTANGLED'; substate = ''
@@ -288,11 +262,11 @@ def run_one(code, asof='2026-05-29', months=12, label=None, cfg=None):
             else:
                 consec_below_ma10 = 0
 
-            # PULLBACK trigger
             if consec_below_ma10 >= cfg['exit_consec_below_ma10']:
                 state = 'PULLBACK'
                 pullback_peak = max(df['fwd_close'].iloc[max(0, i - 60):i + 1])
                 days_in_pullback = 0; days_in_state = 1
+                recent_events.append((i, 'TRENDING_to_PULLBACK', None, 'TRENDING'))
                 recs.append(make_rec(row, state, substate, days_in_state,
                                      consec_below_ma10, days_in_pullback,
                                      pullback_peak, base_max,
@@ -313,19 +287,17 @@ def run_one(code, asof='2026-05-29', months=12, label=None, cfg=None):
         # ── PULLBACK ──
         if state == 'PULLBACK':
             days_in_pullback += 1
-            # Timeout → EXIT
             if days_in_pullback >= cfg['pullback_max_days']:
                 state = 'EXIT'; substate = ''
                 days_in_state = 1; days_in_exit = 1
-                consec_below_ma10 = 0; pullback_peak = None; base_max = None
-                setup_idle = 0
+                consec_below_ma10 = 0; pullback_peak = None; base_max = None; setup_idle = 0
+                recent_events.append((i, 'to_EXIT', 'PULLBACK', 'PULLBACK'))
                 recs.append(make_rec(row, state, substate, days_in_state,
                                      consec_below_ma10, days_in_pullback,
                                      pullback_peak, base_max,
                                      sos_today, new_high_today, is_new_stock,
                                      sub_today, bear, setup_idle))
                 continue
-            # Recovery: close >= MA10
             if pd.notna(row.get('ma10')) and row['fwd_close'] >= row['ma10']:
                 state = 'TRENDING'
                 if is_new_stock:
@@ -334,13 +306,57 @@ def run_one(code, asof='2026-05-29', months=12, label=None, cfg=None):
                     substate = sub_today
                 days_in_state = 1; consec_below_ma10 = 0
                 base_max = row['fwd_close']
-                days_in_pullback = 0; pullback_peak = None
-                setup_idle = 0
+                days_in_pullback = 0; pullback_peak = None; setup_idle = 0
             recs.append(make_rec(row, state, substate, days_in_state,
                                  consec_below_ma10, days_in_pullback,
                                  pullback_peak, base_max,
                                  sos_today, new_high_today, is_new_stock,
                                  sub_today, bear, setup_idle))
+
+    return recs, recent_events, recent_new_highs
+
+
+def run_one(code, asof='2026-05-29', months=12, label=None, cfg=None):
+    """Run backtest for a single stock (v5.4 state machine)."""
+    if cfg is None:
+        cfg = load_config()
+    label = label or code.replace('.HK', '').lstrip('0') or '0'
+
+    f = WindFetcher(lookback_days=cfg['lookback_days'])
+    df_full = f.fetch(code, asof=asof)
+    df_full = forward_adjust(df_full).sort_values('date').reset_index(drop=True)
+    f.close()
+
+    if df_full.empty:
+        return pd.DataFrame()
+
+    listing_first_day = df_full['date'].min()
+
+    # Daily indicators
+    df_full = compute_daily_mas(df_full)
+    df_full = compute_ma60_slope(df_full, cfg.get('exit_ma60_slope_lookback', 5))
+
+    # Weekly indicators
+    all_weekly_mas = tuple(set(cfg['weekly_long_mas'] + cfg['weekly_short_mas'] + [cfg.get('weekly_fast_ma', 5)]))
+    weekly_df = compute_weekly_mas(df_full, mas=all_weekly_mas)
+    weekly_df = weekly_df.sort_index()
+    weekly_dates = list(weekly_df.index)
+
+    # Backtest window
+    cutoff = pd.to_datetime(asof) - pd.DateOffset(months=months)
+    df = df_full[df_full['date'] >= cutoff].reset_index(drop=True)
+
+    if df.empty:
+        return pd.DataFrame()
+
+    # Pre-compute SOS
+    df['high60'] = df['fwd_close'].rolling(60, min_periods=10).max().shift(1)
+    df['is_new_high'] = df['fwd_close'] > df['high60']
+    df['sos_raw'] = df.apply(
+        lambda r: classify_sos(r, cfg, is_new_high=bool(r.get('is_new_high', False))), axis=1
+    )
+
+    recs, _, _ = run_state_machine(df, weekly_df, weekly_dates, cfg, listing_first_day)
 
     out = pd.DataFrame(recs)
     out_path = os.path.join(os.path.dirname(os.path.abspath(__file__)),
@@ -374,7 +390,7 @@ def print_summary(label, df, months):
 if __name__ == '__main__':
     import argparse
 
-    parser = argparse.ArgumentParser(description='Wyckoff v5.3 backtest')
+    parser = argparse.ArgumentParser(description='Wyckoff v5.4 backtest')
     parser.add_argument('--asof', default='2026-05-29')
     parser.add_argument('--months', type=int, default=12)
     parser.add_argument('--stock', default=None, help='Single stock, e.g. 0992.HK')
