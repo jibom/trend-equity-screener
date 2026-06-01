@@ -2026,16 +2026,6 @@
       "last_close": 82.25
     },
     {
-      "ticker": "2601.HK",
-      "name_cn": "中国太保",
-      "gics_sector": "Financials",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 1,
-      "last_close": 31.42
-    },
-    {
       "ticker": "1336.HK",
       "name_cn": "新华保险",
       "gics_sector": "Financials",
@@ -2044,6 +2034,16 @@
       "emoji": "🔴",
       "days_in_state": 3,
       "last_close": 48.46
+    },
+    {
+      "ticker": "2601.HK",
+      "name_cn": "中国太保",
+      "gics_sector": "Financials",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 1,
+      "last_close": 31.42
     },
     {
       "ticker": "0388.HK",
@@ -2306,16 +2306,6 @@
       "last_close": 5.29
     },
     {
-      "ticker": "2331.HK",
-      "name_cn": "李宁",
-      "gics_sector": "Consumer Discretionary",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 4,
-      "last_close": 18.2
-    },
-    {
       "ticker": "2020.HK",
       "name_cn": "安踏体育",
       "gics_sector": "Consumer Discretionary",
@@ -2324,6 +2314,16 @@
       "emoji": "🔴",
       "days_in_state": 4,
       "last_close": 75.8
+    },
+    {
+      "ticker": "2331.HK",
+      "name_cn": "李宁",
+      "gics_sector": "Consumer Discretionary",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 4,
+      "last_close": 18.2
     },
     {
       "ticker": "3998.HK",
@@ -2376,6 +2376,16 @@
       "last_close": 332.4
     },
     {
+      "ticker": "1128.HK",
+      "name_cn": "永利澳门",
+      "gics_sector": "Consumer Discretionary",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 3,
+      "last_close": 5.65
+    },
+    {
       "ticker": "9901.HK",
       "name_cn": "新东方-S",
       "gics_sector": "Consumer Discretionary",
@@ -2404,16 +2414,6 @@
       "emoji": "🔴",
       "days_in_state": 2,
       "last_close": 12.76
-    },
-    {
-      "ticker": "1128.HK",
-      "name_cn": "永利澳门",
-      "gics_sector": "Consumer Discretionary",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 3,
-      "last_close": 5.65
     },
     {
       "ticker": "2689.HK",
@@ -2616,16 +2616,6 @@
       "last_close": 21.56
     },
     {
-      "ticker": "3993.HK",
-      "name_cn": "洛阳钼业",
-      "gics_sector": "Materials",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 2,
-      "last_close": 18.25
-    },
-    {
       "ticker": "2899.HK",
       "name_cn": "紫金矿业",
       "gics_sector": "Materials",
@@ -2634,6 +2624,16 @@
       "emoji": "🔴",
       "days_in_state": 3,
       "last_close": 32.78
+    },
+    {
+      "ticker": "3993.HK",
+      "name_cn": "洛阳钼业",
+      "gics_sector": "Materials",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 2,
+      "last_close": 18.25
     },
     {
       "ticker": "2600.HK",
