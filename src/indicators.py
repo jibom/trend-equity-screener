@@ -123,6 +123,211 @@ def is_bear_market(weekly_df: pd.DataFrame, week_idx: int, cfg: dict) -> bool:
     return roc < cfg['bear_gate_wma40_roc30']
 
 
+# ── KDJ ────────────────────────────────────────────────────────────
+
+def compute_kdj(df: pd.DataFrame, n: int = 9,
+                high_col: str = 'fwd_high',
+                low_col: str = 'fwd_low',
+                close_col: str = 'fwd_close') -> pd.DataFrame:
+    """Compute KDJ indicator.
+
+    RSV(n) = (Close - Low_n) / (High_n - Low_n) * 100
+    K = 2/3 * K_prev + 1/3 * RSV   (initial K = 50)
+    D = 2/3 * D_prev + 1/3 * K     (initial D = 50)
+    J = 3*K - 2*D
+
+    Adds columns: k, d, j, kd_golden_cross, kd_death_cross
+    """
+    df = df.copy()
+    low_n = df[low_col].rolling(n, min_periods=1).min()
+    high_n = df[high_col].rolling(n, min_periods=1).max()
+    denom = high_n - low_n
+    rsv = pd.Series(50.0, index=df.index, dtype=float)
+    valid = denom > 0
+    rsv[valid] = ((df.loc[valid, close_col] - low_n[valid]) / denom[valid] * 100)
+
+    k = pd.Series(50.0, index=df.index, dtype=float)
+    d = pd.Series(50.0, index=df.index, dtype=float)
+    for i in range(1, len(df)):
+        k.iloc[i] = 2 / 3 * k.iloc[i - 1] + 1 / 3 * rsv.iloc[i]
+        d.iloc[i] = 2 / 3 * d.iloc[i - 1] + 1 / 3 * k.iloc[i]
+
+    df['k'] = k.round(2)
+    df['d'] = d.round(2)
+    df['j'] = (3 * k - 2 * d).round(2)
+
+    # Cross detection
+    df['kd_golden_cross'] = (k.shift(1) <= d.shift(1)) & (k > d)
+    df['kd_death_cross'] = (k.shift(1) >= d.shift(1)) & (k < d)
+
+    return df
+
+
+def compute_weekly_kdj(daily_df: pd.DataFrame, n: int = 9) -> pd.DataFrame:
+    """Resample daily to weekly (Fri) and compute KDJ."""
+    w = daily_df.set_index('date')[['fwd_open', 'fwd_high', 'fwd_low', 'fwd_close', 'volume']].resample('W-FRI').agg({
+        'fwd_open': 'first',
+        'fwd_high': 'max',
+        'fwd_low': 'min',
+        'fwd_close': 'last',
+        'volume': 'sum',
+    }).dropna()
+    w = compute_kdj(w, n=n)
+    return w
+
+
+def detect_kdj_divergence(df: pd.DataFrame, lookback: int = 15,
+                          close_col: str = 'fwd_close') -> dict:
+    """Detect bullish KDJ divergence (底背离) within lookback window.
+
+    Precondition: J must have dropped below 0 at some point in the window.
+    Only then do we check for divergence: price makes lower low,
+    but J makes higher low (J diverging upward from oversold).
+
+    Counts how many divergence events occurred in the window.
+
+    Returns dict:
+      bullish_divergence: bool
+      divergence_count: int  (number of divergence events)
+      detail: str
+      j_trending_up: bool  (last J > J 3 bars ago)
+      j_below_zero: bool   (J dropped below 0 in the window)
+    """
+    if len(df) < lookback or 'j' not in df.columns:
+        return dict(bullish_divergence=False, divergence_count=0,
+                    detail='insufficient data',
+                    j_trending_up=False, j_below_zero=False)
+
+    window = df.tail(lookback).reset_index(drop=True)
+    closes = window[close_col].values
+    js = window['j'].values
+
+    j_below_zero = bool(np.any(js < 0))
+    j_trending_up = js[-1] > js[-3] if len(js) >= 3 else False
+
+    # J must have been below 0 in the window — otherwise no oversold condition
+    if not j_below_zero:
+        return dict(bullish_divergence=False, divergence_count=0,
+                    detail='J never below 0',
+                    j_trending_up=j_trending_up, j_below_zero=False)
+
+    # Find all local price lows
+    lows = []  # (window_index, close, j)
+    for i in range(1, len(closes) - 1):
+        if closes[i] <= closes[i - 1] and closes[i] <= closes[i + 1]:
+            lows.append((i, closes[i], js[i]))
+    if closes[0] <= closes[1]:
+        lows.insert(0, (0, closes[0], js[0]))
+    if closes[-1] <= closes[-2]:
+        lows.append((len(closes) - 1, closes[-1], js[-1]))
+
+    # Count divergence events between consecutive low pairs
+    div_count = 0
+    last_detail = ''
+    for k in range(len(lows) - 1):
+        _, p1, j1 = lows[k]
+        _, p2, j2 = lows[k + 1]
+        if p2 < p1 and j2 > j1:
+            div_count += 1
+            last_detail = (f'price {p1:.1f}->{p2:.1f} (lower low), '
+                           f'J {j1:.1f}->{j2:.1f} (higher low)')
+
+    # Also check: current bar at price low but J not at J low
+    min_close_idx = int(np.argmin(closes))
+    min_j_idx = int(np.argmin(js))
+    if min_close_idx == len(closes) - 1 and min_j_idx != len(closes) - 1:
+        div_count += 1
+        min_j = js[min_j_idx]
+        last_detail = (f'current price at window low {closes[-1]:.1f}, '
+                       f'but J {js[-1]:.1f} > window J low {min_j:.1f}')
+
+    if div_count > 0 and not last_detail and div_count > 0:
+        last_detail = f'{div_count} divergence(s)'
+
+    return dict(bullish_divergence=div_count > 0, divergence_count=div_count,
+                detail=last_detail if last_detail else 'no divergence',
+                j_trending_up=j_trending_up, j_below_zero=True)
+
+
+# ── MACD ──────────────────────────────────────────────────────────
+
+def compute_macd(df: pd.DataFrame, fast: int = 12, slow: int = 26,
+                 signal: int = 9,
+                 close_col: str = 'fwd_close') -> pd.DataFrame:
+    """Compute MACD indicator.
+
+    DIF  = EMA(fast) - EMA(slow)
+    DEA  = EMA(signal) of DIF
+    MACD = 2 * (DIF - DEA)
+
+    Adds columns: dif, dea, macd, macd_golden_cross, macd_death_cross
+    """
+    df = df.copy()
+    ema_fast = df[close_col].ewm(span=fast, adjust=False).mean()
+    ema_slow = df[close_col].ewm(span=slow, adjust=False).mean()
+    df['dif'] = (ema_fast - ema_slow).round(4)
+    df['dea'] = df['dif'].ewm(span=signal, adjust=False).mean().round(4)
+    df['macd'] = (2 * (df['dif'] - df['dea'])).round(4)
+
+    df['macd_golden_cross'] = (df['dif'].shift(1) <= df['dea'].shift(1)) & (df['dif'] > df['dea'])
+    df['macd_death_cross'] = (df['dif'].shift(1) >= df['dea'].shift(1)) & (df['dif'] < df['dea'])
+
+    return df
+
+
+def compute_weekly_macd(daily_df: pd.DataFrame, fast: int = 12,
+                        slow: int = 26, signal: int = 9) -> pd.DataFrame:
+    """Resample daily to weekly (Fri) and compute MACD."""
+    w = daily_df.set_index('date')[['fwd_open', 'fwd_high', 'fwd_low', 'fwd_close', 'volume']].resample('W-FRI').agg({
+        'fwd_open': 'first',
+        'fwd_high': 'max',
+        'fwd_low': 'min',
+        'fwd_close': 'last',
+        'volume': 'sum',
+    }).dropna()
+    return compute_macd(w, fast=fast, slow=slow, signal=signal)
+
+
+def detect_macd_golden_cross(df: pd.DataFrame, lookback: int = 10) -> dict:
+    """Check if MACD golden cross occurred within lookback window.
+
+    Also checks: DIF is below 0 (MACD below zero line = bearish context,
+    golden cross below zero = early reversal signal).
+
+    Returns dict:
+      golden_cross: bool   (any golden cross in the window)
+      recent_golden: bool   (golden cross in last 3 bars)
+      dif_below_zero: bool  (DIF < 0 at golden cross = stronger signal)
+      detail: str
+    """
+    if len(df) < lookback or 'dif' not in df.columns:
+        return dict(golden_cross=False, recent_golden=False,
+                    dif_below_zero=False, detail='insufficient data')
+
+    window = df.tail(lookback)
+    gc = window['macd_golden_cross']
+    has_gc = bool(gc.any())
+
+    if not has_gc:
+        return dict(golden_cross=False, recent_golden=False,
+                    dif_below_zero=False, detail='no golden cross')
+
+    # Find the most recent golden cross
+    gc_bars = window[gc]
+    last_gc = gc_bars.iloc[-1]
+    dif_at_gc = last_gc['dif']
+    dif_below_zero = dif_at_gc < 0
+
+    # Is it in the last 3 bars?
+    recent = gc.iloc[-3:].any() if len(gc) >= 3 else gc.any()
+
+    context = 'below zero' if dif_below_zero else 'above zero'
+    detail = f'DIF={dif_at_gc:.4f} ({context})'
+
+    return dict(golden_cross=True, recent_golden=bool(recent),
+                dif_below_zero=dif_below_zero, detail=detail)
+
+
 def no_weekly_cross_down(weekly_row: pd.Series, fast_ma: int, slow_ma: int) -> bool:
     """Check that fast weekly MA is above slow weekly MA (no cross-down).
 
