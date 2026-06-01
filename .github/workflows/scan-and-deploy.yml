@@ -52,7 +52,7 @@ jobs:
           python-version: '3.11'
 
       - name: Install dependencies
-        run: pip install yfinance pandas requests anthropic pymysql openpyxl && pip list | grep -iE "yfinance|anthropic|requests|pandas|pymysql|openpyxl"
+        run: pip install yfinance pandas requests anthropic pymysql sqlalchemy openpyxl && pip list | grep -iE "yfinance|anthropic|requests|pandas|pymysql|sqlalchemy|openpyxl"
 
       - name: Determine which markets to scan
         id: markets

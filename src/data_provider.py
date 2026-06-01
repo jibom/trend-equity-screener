@@ -9,7 +9,7 @@ import os
 from datetime import datetime, timedelta
 
 import pandas as pd
-import pymysql
+from sqlalchemy import create_engine
 
 
 REQUIRED_COLS = [
@@ -29,11 +29,13 @@ class WindFetcher:
         password=os.getenv('WIND_PASSWORD', '4S7Q4pNUzh'),
         database=os.getenv('WIND_DB', 'jianxin'),
         port=int(os.getenv('WIND_PORT', '3306')),
-        charset='utf8mb4',
     )
 
     def __init__(self, db: dict | None = None, lookback_days: int = 420):
-        self._conn = pymysql.connect(**(db or self.DEFAULT_DB))
+        cfg = db or self.DEFAULT_DB
+        url = (f"mysql+pymysql://{cfg['user']}:{cfg['password']}"
+               f"@{cfg['host']}:{cfg['port']}/{cfg['database']}")
+        self._engine = create_engine(url)
         self.lookback_days = lookback_days
 
     def fetch(self, code: str, asof: str) -> pd.DataFrame:
@@ -44,13 +46,10 @@ class WindFetcher:
                   FROM hkshareeodprices
                   WHERE S_INFO_WINDCODE=%s AND TRADE_DT BETWEEN %s AND %s
                   ORDER BY TRADE_DT"""
-        return pd.read_sql(sql, self._conn, params=(code, start, end))
+        return pd.read_sql(sql, self._engine, params=(code, start, end))
 
     def close(self):
-        try:
-            self._conn.close()
-        except Exception:
-            pass
+        self._engine.dispose()
 
 
 def forward_adjust(df: pd.DataFrame) -> pd.DataFrame:
