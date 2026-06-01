@@ -33,30 +33,9 @@
     "date": "2026-05-28"
   },
   {
-    "ticker": "IREN.US",
-    "event": "upgrade",
-    "from": "WATCHING",
-    "to": "STRONGEST",
-    "date": "2026-05-29"
-  },
-  {
-    "ticker": "MTSI.US",
-    "event": "downgrade",
-    "from": "STRONGEST",
-    "to": "PULLBACK",
-    "date": "2026-05-29"
-  },
-  {
-    "ticker": "VEA.US",
-    "event": "downgrade",
-    "from": "STRONGEST",
-    "to": "WATCHING",
-    "date": "2026-05-29"
-  },
-  {
-    "ticker": "DLR.US",
-    "event": "BROKEN",
-    "reason": "跌破 50D",
+    "ticker": "CPAY.US",
+    "event": "NEW",
+    "from_bottom": false,
     "date": "2026-05-29"
   }
 ]

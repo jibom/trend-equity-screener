@@ -2368,5 +2368,23 @@
     "sector": "Technology",
     "marketCap": 649353662369.2017,
     "mcapDate": "2026-05-30"
+  },
+  "EQR.US": {
+    "name": "Equity Residential",
+    "sector": "Real Estate",
+    "marketCap": 24524908681.269287,
+    "mcapDate": "2026-06-01"
+  },
+  "VB.US": {
+    "name": "Vanguard Small-Cap ETF",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "PFG.US": {
+    "name": "Principal Financial Group Inc",
+    "sector": "Financial Services",
+    "marketCap": 22383203823.375732,
+    "mcapDate": "2026-06-01"
   }
 }
