@@ -1978,5 +1978,413 @@
     "sector": "",
     "marketCap": 0,
     "mcapDate": ""
+  },
+  "SNPS.US": {
+    "name": "Synopsys, Inc.",
+    "sector": "Technology",
+    "marketCap": 102401396685.43927,
+    "mcapDate": "2026-05-26"
+  },
+  "CPSH.US": {
+    "name": "CPS Technologies Corp.",
+    "sector": "Technology",
+    "marketCap": 200237426.49926662,
+    "mcapDate": "2026-05-26"
+  },
+  "SPYG.US": {
+    "name": "State Street SPDR Portfolio S&P",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "IINN.US": {
+    "name": "Inspira Technologies Oxy B.H.N.",
+    "sector": "Healthcare",
+    "marketCap": 66240474.36879158,
+    "mcapDate": "2026-05-27"
+  },
+  "BNS.US": {
+    "name": "Bank Nova Scotia Halifax Pfd 3",
+    "sector": "Financial Services",
+    "marketCap": 99007268143.01865,
+    "mcapDate": "2026-05-27"
+  },
+  "HST.US": {
+    "name": "Host Hotels & Resorts, Inc.",
+    "sector": "Real Estate",
+    "marketCap": 16026174914.139288,
+    "mcapDate": "2026-05-27"
+  },
+  "IYW.US": {
+    "name": "iShares U.S. Technology ETF",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "ARW.US": {
+    "name": "Arrow Electronics, Inc.",
+    "sector": "Technology",
+    "marketCap": 11122144313.572845,
+    "mcapDate": "2026-05-27"
+  },
+  "SNX.US": {
+    "name": "TD SYNNEX Corporation",
+    "sector": "Technology",
+    "marketCap": 19895367553.506012,
+    "mcapDate": "2026-05-27"
+  },
+  "RY.US": {
+    "name": "Royal Bank Of Canada",
+    "sector": "Financial Services",
+    "marketCap": 262988392623.76135,
+    "mcapDate": "2026-05-27"
+  },
+  "YPF.US": {
+    "name": "YPF Sociedad Anonima",
+    "sector": "Energy",
+    "marketCap": 21767691150.292362,
+    "mcapDate": "2026-05-27"
+  },
+  "KNX.US": {
+    "name": "Knight-Swift Transportation Hol",
+    "sector": "Industrials",
+    "marketCap": 12053804969.589233,
+    "mcapDate": "2026-05-27"
+  },
+  "VTWO.US": {
+    "name": "Vanguard Russell 2000 ETF",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "CBOE.US": {
+    "name": "Cboe Global Markets, Inc.",
+    "sector": "Financial Services",
+    "marketCap": 36387074414.4624,
+    "mcapDate": "2026-05-27"
+  },
+  "CROX.US": {
+    "name": "Crocs, Inc.",
+    "sector": "Consumer Cyclical",
+    "marketCap": 5882757396.391846,
+    "mcapDate": "2026-05-27"
+  },
+  "VSAT.US": {
+    "name": "ViaSat, Inc.",
+    "sector": "Technology",
+    "marketCap": 11623092942.117546,
+    "mcapDate": "2026-05-27"
+  },
+  "DD.US": {
+    "name": "DuPont de Nemours, Inc.",
+    "sector": "Basic Materials",
+    "marketCap": 19536849381.410973,
+    "mcapDate": "2026-05-27"
+  },
+  "BHP.US": {
+    "name": "BHP Group Limited",
+    "sector": "Basic Materials",
+    "marketCap": 223118514081.8708,
+    "mcapDate": "2026-05-27"
+  },
+  "MNTS.US": {
+    "name": "Momentus Inc.",
+    "sector": "Industrials",
+    "marketCap": 194851761.0,
+    "mcapDate": "2026-05-28"
+  },
+  "URI.US": {
+    "name": "United Rentals, Inc.",
+    "sector": "Industrials",
+    "marketCap": 61909832877.89722,
+    "mcapDate": "2026-05-28"
+  },
+  "APPS.US": {
+    "name": "Digital Turbine, Inc.",
+    "sector": "Technology",
+    "marketCap": 806021999.0069985,
+    "mcapDate": "2026-05-28"
+  },
+  "QTTB.US": {
+    "name": "Q32 Bio Inc.",
+    "sector": "Healthcare",
+    "marketCap": 217889939.218359,
+    "mcapDate": "2026-05-28"
+  },
+  "ASTC.US": {
+    "name": "Astrotech Corporation",
+    "sector": "Technology",
+    "marketCap": 24291155.47808647,
+    "mcapDate": "2026-05-28"
+  },
+  "FFIV.US": {
+    "name": "F5, Inc.",
+    "sector": "Technology",
+    "marketCap": 21899130378.694244,
+    "mcapDate": "2026-05-28"
+  },
+  "QUAL.US": {
+    "name": "iShares MSCI USA Quality Factor",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "MT.US": {
+    "name": "Arcelor Mittal NY Registry Shar",
+    "sector": "Basic Materials",
+    "marketCap": 52864939424.17431,
+    "mcapDate": "2026-05-28"
+  },
+  "BAI.US": {
+    "name": "iShares A.I. Innovation and Tec",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "EFV.US": {
+    "name": "iShares MSCI EAFE Value ETF",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "VIG.US": {
+    "name": "Vanguard Div Appreciation ETF",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "ICLN.US": {
+    "name": "iShares Global Clean Energy ETF",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "TD.US": {
+    "name": "Toronto Dominion Bank (The)",
+    "sector": "Financial Services",
+    "marketCap": 190038393551.56174,
+    "mcapDate": "2026-05-28"
+  },
+  "SCHF.US": {
+    "name": "Schwab International Equity ETF",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "CZR.US": {
+    "name": "Caesars Entertainment, Inc.",
+    "sector": "Consumer Cyclical",
+    "marketCap": 5922925108.860683,
+    "mcapDate": "2026-05-28"
+  },
+  "ILMN.US": {
+    "name": "Illumina, Inc.",
+    "sector": "Healthcare",
+    "marketCap": 24011309538.269043,
+    "mcapDate": "2026-05-28"
+  },
+  "MGM.US": {
+    "name": "MGM Resorts International",
+    "sector": "Consumer Cyclical",
+    "marketCap": 10983693596.6296,
+    "mcapDate": "2026-05-28"
+  },
+  "SPYV.US": {
+    "name": "State Street SPDR Portfolio S&P",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "CORO.US": {
+    "name": "iShares International Country R",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "DYNF.US": {
+    "name": "iShares U.S. Equity Factor Rota",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "SCO.US": {
+    "name": "ProShares UltraShort Bloomberg ",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "BRKR.US": {
+    "name": "Bruker Corporation",
+    "sector": "Healthcare",
+    "marketCap": 8279551596.448853,
+    "mcapDate": "2026-05-29"
+  },
+  "UMAC.US": {
+    "name": "Unusual Machines, Inc.",
+    "sector": "Technology",
+    "marketCap": 1414700139.0319347,
+    "mcapDate": "2026-05-29"
+  },
+  "IVE.US": {
+    "name": "iShares S&P 500 Value ETF",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "BTDR.US": {
+    "name": "Bitdeer Technologies Group",
+    "sector": "Technology",
+    "marketCap": 4472104737.943056,
+    "mcapDate": "2026-05-29"
+  },
+  "OKTA.US": {
+    "name": "Okta, Inc.",
+    "sector": "Technology",
+    "marketCap": 16608815105.565948,
+    "mcapDate": "2026-05-29"
+  },
+  "FSLR.US": {
+    "name": "First Solar, Inc.",
+    "sector": "Technology",
+    "marketCap": 32599201791.614624,
+    "mcapDate": "2026-05-29"
+  },
+  "IXUS.US": {
+    "name": "iShares Core MSCI Total Interna",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "H.US": {
+    "name": "Hyatt Hotels Corporation",
+    "sector": "Consumer Cyclical",
+    "marketCap": 17077148921.631683,
+    "mcapDate": "2026-05-29"
+  },
+  "DOC.US": {
+    "name": "Healthpeak Properties, Inc.",
+    "sector": "Real Estate",
+    "marketCap": 13202387030.307255,
+    "mcapDate": "2026-05-29"
+  },
+  "ROIV.US": {
+    "name": "Roivant Sciences Ltd.",
+    "sector": "Healthcare",
+    "marketCap": 21570918681.52207,
+    "mcapDate": "2026-05-29"
+  },
+  "MAGS.US": {
+    "name": "Roundhill Magnificent Seven ETF",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "RPRX.US": {
+    "name": "Royalty Pharma plc",
+    "sector": "Healthcare",
+    "marketCap": 24716963295.019135,
+    "mcapDate": "2026-05-29"
+  },
+  "VUG.US": {
+    "name": "Vanguard Growth ETF",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "AXSM.US": {
+    "name": "Axsome Therapeutics, Inc.",
+    "sector": "Healthcare",
+    "marketCap": 12066285711.82016,
+    "mcapDate": "2026-05-29"
+  },
+  "TIGO.US": {
+    "name": "Millicom International Cellular",
+    "sector": "Communication Services",
+    "marketCap": 14301337762.099182,
+    "mcapDate": "2026-05-29"
+  },
+  "FLY.US": {
+    "name": "Firefly Aerospace Inc.",
+    "sector": "Industrials",
+    "marketCap": 7449335507.279491,
+    "mcapDate": "2026-05-29"
+  },
+  "NTRS.US": {
+    "name": "Northern Trust Corporation",
+    "sector": "Financial Services",
+    "marketCap": 30616068271.380585,
+    "mcapDate": "2026-05-29"
+  },
+  "SCZ.US": {
+    "name": "iShares MSCI EAFE Small-Cap ETF",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "MGK.US": {
+    "name": "Vanguard Mega Cap Growth ETF",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "JAZZ.US": {
+    "name": "Jazz Pharmaceuticals plc",
+    "sector": "Healthcare",
+    "marketCap": 14838049846.456604,
+    "mcapDate": "2026-05-29"
+  },
+  "JHG.US": {
+    "name": "Janus Henderson Group plc",
+    "sector": "Financial Services",
+    "marketCap": 7967249600.329567,
+    "mcapDate": "2026-05-29"
+  },
+  "WST.US": {
+    "name": "West Pharmaceutical Services, I",
+    "sector": "Healthcare",
+    "marketCap": 22805749969.47052,
+    "mcapDate": "2026-05-29"
+  },
+  "STRC.US": {
+    "name": "Strategy Inc - Variable Rate Se",
+    "sector": "Technology",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "SPCE.US": {
+    "name": "Virgin Galactic Holdings, Inc.",
+    "sector": "Industrials",
+    "marketCap": 645513181.3896303,
+    "mcapDate": "2026-05-30"
+  },
+  "LOGI.US": {
+    "name": "Logitech International S.A. - R",
+    "sector": "Technology",
+    "marketCap": 17492682138.18226,
+    "mcapDate": "2026-05-30"
+  },
+  "ORCL.US": {
+    "name": "Oracle Corporation",
+    "sector": "Technology",
+    "marketCap": 649353662369.2017,
+    "mcapDate": "2026-05-30"
+  },
+  "EQR.US": {
+    "name": "Equity Residential",
+    "sector": "Real Estate",
+    "marketCap": 24524908681.269287,
+    "mcapDate": "2026-06-01"
+  },
+  "VB.US": {
+    "name": "Vanguard Small-Cap ETF",
+    "sector": "",
+    "marketCap": 0,
+    "mcapDate": ""
+  },
+  "PFG.US": {
+    "name": "Principal Financial Group Inc",
+    "sector": "Financial Services",
+    "marketCap": 22383203823.375732,
+    "mcapDate": "2026-06-01"
   }
 }
