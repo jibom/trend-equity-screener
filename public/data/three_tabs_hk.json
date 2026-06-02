@@ -2782,14 +2782,14 @@
       "last_close": 24.1
     },
     {
-      "ticker": "0392.HK",
-      "name_cn": "北京控股",
+      "ticker": "0135.HK",
+      "name_cn": "昆仑能源",
       "gics_sector": "Utilities",
       "alert_type": "B_EXIT",
       "label": "B·EXIT",
       "emoji": "🔴",
-      "days_in_state": 4,
-      "last_close": 30.46
+      "days_in_state": 2,
+      "last_close": 7.14
     },
     {
       "ticker": "2688.HK",
@@ -2802,14 +2802,14 @@
       "last_close": 53.95
     },
     {
-      "ticker": "0135.HK",
-      "name_cn": "昆仑能源",
+      "ticker": "0392.HK",
+      "name_cn": "北京控股",
       "gics_sector": "Utilities",
       "alert_type": "B_EXIT",
       "label": "B·EXIT",
       "emoji": "🔴",
-      "days_in_state": 2,
-      "last_close": 7.14
+      "days_in_state": 4,
+      "last_close": 30.46
     },
     {
       "ticker": "0384.HK",
