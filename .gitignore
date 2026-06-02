@@ -23,7 +23,7 @@ backtest/*.csv
 output/
 
 # Data (intermediate — public/data/ is the canonical frontend source)
-data/
+/data/
 
 # OS
 .DS_Store
