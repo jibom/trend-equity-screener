@@ -2507,16 +2507,6 @@
       "last_close": 10.54
     },
     {
-      "ticker": "1816.HK",
-      "name_cn": "中广核电力",
-      "gics_sector": "Utilities",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 3,
-      "last_close": 3.18
-    },
-    {
       "ticker": "1038.HK",
       "name_cn": "长江基建集团",
       "gics_sector": "Utilities",
@@ -2525,6 +2515,16 @@
       "emoji": "🔴",
       "days_in_state": 4,
       "last_close": 58.75
+    },
+    {
+      "ticker": "1816.HK",
+      "name_cn": "中广核电力",
+      "gics_sector": "Utilities",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 3,
+      "last_close": 3.18
     },
     {
       "ticker": "0006.HK",
@@ -2667,16 +2667,6 @@
       "last_close": 26.14
     },
     {
-      "ticker": "1880.HK",
-      "name_cn": "中国中免",
-      "gics_sector": "Consumer Discretionary",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 1,
-      "last_close": 57.1
-    },
-    {
       "ticker": "1768.HK",
       "name_cn": "鸣鸣很忙",
       "gics_sector": "Consumer Staples",
@@ -2685,6 +2675,16 @@
       "emoji": "🔴",
       "days_in_state": 4,
       "last_close": 360.2
+    },
+    {
+      "ticker": "1880.HK",
+      "name_cn": "中国中免",
+      "gics_sector": "Consumer Discretionary",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 1,
+      "last_close": 57.1
     },
     {
       "ticker": "2282.HK",
@@ -2707,16 +2707,6 @@
       "last_close": 5.66
     },
     {
-      "ticker": "9987.HK",
-      "name_cn": "百胜中国",
-      "gics_sector": "Consumer Discretionary",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 2,
-      "last_close": 339.2
-    },
-    {
       "ticker": "9901.HK",
       "name_cn": "新东方-S",
       "gics_sector": "Consumer Discretionary",
@@ -2735,6 +2725,16 @@
       "emoji": "🔴",
       "days_in_state": 3,
       "last_close": 13.16
+    },
+    {
+      "ticker": "9987.HK",
+      "name_cn": "百胜中国",
+      "gics_sector": "Consumer Discretionary",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 2,
+      "last_close": 339.2
     },
     {
       "ticker": "2689.HK",
@@ -2887,16 +2887,6 @@
       "last_close": 14.24
     },
     {
-      "ticker": "0390.HK",
-      "name_cn": "中国中铁",
-      "gics_sector": "Industrials",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 3,
-      "last_close": 3.58
-    },
-    {
       "ticker": "3311.HK",
       "name_cn": "中国建筑国际",
       "gics_sector": "Industrials",
@@ -2905,6 +2895,16 @@
       "emoji": "🔴",
       "days_in_state": 3,
       "last_close": 8.82
+    },
+    {
+      "ticker": "0390.HK",
+      "name_cn": "中国中铁",
+      "gics_sector": "Industrials",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 3,
+      "last_close": 3.58
     },
     {
       "ticker": "2507.HK",
@@ -2917,16 +2917,6 @@
       "last_close": 39.18
     },
     {
-      "ticker": "1882.HK",
-      "name_cn": "海天国际",
-      "gics_sector": "Industrials",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 1,
-      "last_close": 19.83
-    },
-    {
       "ticker": "1818.HK",
       "name_cn": "招金矿业",
       "gics_sector": "Materials",
@@ -2935,6 +2925,16 @@
       "emoji": "🔴",
       "days_in_state": 4,
       "last_close": 21.76
+    },
+    {
+      "ticker": "1882.HK",
+      "name_cn": "海天国际",
+      "gics_sector": "Industrials",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 1,
+      "last_close": 19.83
     },
     {
       "ticker": "2899.HK",
@@ -3057,16 +3057,6 @@
       "last_close": 171.5
     },
     {
-      "ticker": "3692.HK",
-      "name_cn": "翰森制药",
-      "gics_sector": "Health Care",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 2,
-      "last_close": 31.14
-    },
-    {
       "ticker": "1093.HK",
       "name_cn": "石药集团",
       "gics_sector": "Health Care",
@@ -3075,6 +3065,16 @@
       "emoji": "🔴",
       "days_in_state": 2,
       "last_close": 7.58
+    },
+    {
+      "ticker": "3692.HK",
+      "name_cn": "翰森制药",
+      "gics_sector": "Health Care",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 2,
+      "last_close": 31.14
     },
     {
       "ticker": "2269.HK",
@@ -3087,16 +3087,6 @@
       "last_close": 34.62
     },
     {
-      "ticker": "2050.HK",
-      "name_cn": "三花智控",
-      "gics_sector": "Industrials",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 2,
-      "last_close": 30.72
-    },
-    {
       "ticker": "2432.HK",
       "name_cn": "越疆",
       "gics_sector": "Industrials",
@@ -3105,6 +3095,16 @@
       "emoji": "🔴",
       "days_in_state": 4,
       "last_close": 31.34
+    },
+    {
+      "ticker": "2050.HK",
+      "name_cn": "三花智控",
+      "gics_sector": "Industrials",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 2,
+      "last_close": 30.72
     },
     {
       "ticker": "9880.HK",
