@@ -2782,16 +2782,6 @@
       "last_close": 24.1
     },
     {
-      "ticker": "0135.HK",
-      "name_cn": "昆仑能源",
-      "gics_sector": "Utilities",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 2,
-      "last_close": 7.14
-    },
-    {
       "ticker": "0392.HK",
       "name_cn": "北京控股",
       "gics_sector": "Utilities",
@@ -2810,6 +2800,16 @@
       "emoji": "🔴",
       "days_in_state": 3,
       "last_close": 53.95
+    },
+    {
+      "ticker": "0135.HK",
+      "name_cn": "昆仑能源",
+      "gics_sector": "Utilities",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 2,
+      "last_close": 7.14
     },
     {
       "ticker": "0384.HK",
@@ -2992,16 +2992,6 @@
       "last_close": 11.83
     },
     {
-      "ticker": "6862.HK",
-      "name_cn": "海底捞",
-      "gics_sector": "Consumer Discretionary",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 4,
-      "last_close": 12.96
-    },
-    {
       "ticker": "9987.HK",
       "name_cn": "百胜中国",
       "gics_sector": "Consumer Discretionary",
@@ -3020,6 +3010,16 @@
       "emoji": "🔴",
       "days_in_state": 1,
       "last_close": 285.0
+    },
+    {
+      "ticker": "6862.HK",
+      "name_cn": "海底捞",
+      "gics_sector": "Consumer Discretionary",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 4,
+      "last_close": 12.96
     },
     {
       "ticker": "1364.HK",
@@ -3122,16 +3122,6 @@
       "last_close": 141.5
     },
     {
-      "ticker": "2208.HK",
-      "name_cn": "金风科技",
-      "gics_sector": "Industrials",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 4,
-      "last_close": 13.46
-    },
-    {
       "ticker": "0066.HK",
       "name_cn": "港铁公司",
       "gics_sector": "Industrials",
@@ -3140,6 +3130,16 @@
       "emoji": "🔴",
       "days_in_state": 1,
       "last_close": 31.6
+    },
+    {
+      "ticker": "2208.HK",
+      "name_cn": "金风科技",
+      "gics_sector": "Industrials",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 4,
+      "last_close": 13.46
     },
     {
       "ticker": "1072.HK",
@@ -3312,16 +3312,6 @@
       "last_close": 207.6
     },
     {
-      "ticker": "3692.HK",
-      "name_cn": "翰森制药",
-      "gics_sector": "Health Care",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 3,
-      "last_close": 31.02
-    },
-    {
       "ticker": "1093.HK",
       "name_cn": "石药集团",
       "gics_sector": "Health Care",
@@ -3330,6 +3320,16 @@
       "emoji": "🔴",
       "days_in_state": 3,
       "last_close": 7.57
+    },
+    {
+      "ticker": "3692.HK",
+      "name_cn": "翰森制药",
+      "gics_sector": "Health Care",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 3,
+      "last_close": 31.02
     },
     {
       "ticker": "2050.HK",
