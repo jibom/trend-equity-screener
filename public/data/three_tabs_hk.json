@@ -2632,16 +2632,6 @@
       "last_close": 58.6
     },
     {
-      "ticker": "2601.HK",
-      "name_cn": "中国太保",
-      "gics_sector": "Financials",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 3,
-      "last_close": 31.94
-    },
-    {
       "ticker": "1299.HK",
       "name_cn": "友邦保险",
       "gics_sector": "Financials",
@@ -2650,6 +2640,16 @@
       "emoji": "🔴",
       "days_in_state": 3,
       "last_close": 82.1
+    },
+    {
+      "ticker": "2601.HK",
+      "name_cn": "中国太保",
+      "gics_sector": "Financials",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 3,
+      "last_close": 31.94
     },
     {
       "ticker": "0388.HK",
@@ -2742,16 +2742,6 @@
       "last_close": 8.0
     },
     {
-      "ticker": "0012.HK",
-      "name_cn": "恒基地产",
-      "gics_sector": "Real Estate",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 1,
-      "last_close": 30.6
-    },
-    {
       "ticker": "0083.HK",
       "name_cn": "信和置业",
       "gics_sector": "Real Estate",
@@ -2760,6 +2750,16 @@
       "emoji": "🔴",
       "days_in_state": 1,
       "last_close": 11.81
+    },
+    {
+      "ticker": "0012.HK",
+      "name_cn": "恒基地产",
+      "gics_sector": "Real Estate",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 1,
+      "last_close": 30.6
     },
     {
       "ticker": "0004.HK",
@@ -3032,16 +3032,6 @@
       "last_close": 23.98
     },
     {
-      "ticker": "2689.HK",
-      "name_cn": "玖龙纸业",
-      "gics_sector": "Materials",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 4,
-      "last_close": 6.92
-    },
-    {
       "ticker": "9633.HK",
       "name_cn": "农夫山泉",
       "gics_sector": "Consumer Staples",
@@ -3050,6 +3040,16 @@
       "emoji": "🔴",
       "days_in_state": 4,
       "last_close": 44.04
+    },
+    {
+      "ticker": "2689.HK",
+      "name_cn": "玖龙纸业",
+      "gics_sector": "Materials",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 4,
+      "last_close": 6.92
     },
     {
       "ticker": "0322.HK",
@@ -3312,16 +3312,6 @@
       "last_close": 207.6
     },
     {
-      "ticker": "1093.HK",
-      "name_cn": "石药集团",
-      "gics_sector": "Health Care",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 3,
-      "last_close": 7.57
-    },
-    {
       "ticker": "3692.HK",
       "name_cn": "翰森制药",
       "gics_sector": "Health Care",
@@ -3330,6 +3320,16 @@
       "emoji": "🔴",
       "days_in_state": 3,
       "last_close": 31.02
+    },
+    {
+      "ticker": "1093.HK",
+      "name_cn": "石药集团",
+      "gics_sector": "Health Care",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 3,
+      "last_close": 7.57
     },
     {
       "ticker": "2050.HK",
