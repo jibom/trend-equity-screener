@@ -2732,16 +2732,6 @@
       "last_close": 22.68
     },
     {
-      "ticker": "0101.HK",
-      "name_cn": "恒隆地产",
-      "gics_sector": "Real Estate",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 4,
-      "last_close": 8.0
-    },
-    {
       "ticker": "0083.HK",
       "name_cn": "信和置业",
       "gics_sector": "Real Estate",
@@ -2750,6 +2740,16 @@
       "emoji": "🔴",
       "days_in_state": 1,
       "last_close": 11.81
+    },
+    {
+      "ticker": "0101.HK",
+      "name_cn": "恒隆地产",
+      "gics_sector": "Real Estate",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 4,
+      "last_close": 8.0
     },
     {
       "ticker": "0012.HK",
@@ -2782,14 +2782,14 @@
       "last_close": 24.1
     },
     {
-      "ticker": "0135.HK",
-      "name_cn": "昆仑能源",
+      "ticker": "2688.HK",
+      "name_cn": "新奥能源",
       "gics_sector": "Utilities",
       "alert_type": "B_EXIT",
       "label": "B·EXIT",
       "emoji": "🔴",
-      "days_in_state": 2,
-      "last_close": 7.14
+      "days_in_state": 3,
+      "last_close": 53.95
     },
     {
       "ticker": "0392.HK",
@@ -2802,14 +2802,14 @@
       "last_close": 30.46
     },
     {
-      "ticker": "2688.HK",
-      "name_cn": "新奥能源",
+      "ticker": "0135.HK",
+      "name_cn": "昆仑能源",
       "gics_sector": "Utilities",
       "alert_type": "B_EXIT",
       "label": "B·EXIT",
       "emoji": "🔴",
-      "days_in_state": 3,
-      "last_close": 53.95
+      "days_in_state": 2,
+      "last_close": 7.14
     },
     {
       "ticker": "0384.HK",
@@ -3312,16 +3312,6 @@
       "last_close": 207.6
     },
     {
-      "ticker": "3692.HK",
-      "name_cn": "翰森制药",
-      "gics_sector": "Health Care",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 3,
-      "last_close": 31.02
-    },
-    {
       "ticker": "1093.HK",
       "name_cn": "石药集团",
       "gics_sector": "Health Care",
@@ -3330,6 +3320,16 @@
       "emoji": "🔴",
       "days_in_state": 3,
       "last_close": 7.57
+    },
+    {
+      "ticker": "3692.HK",
+      "name_cn": "翰森制药",
+      "gics_sector": "Health Care",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 3,
+      "last_close": 31.02
     },
     {
       "ticker": "2050.HK",
