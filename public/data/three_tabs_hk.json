@@ -2245,16 +2245,6 @@
       "last_close": 123.7
     },
     {
-      "ticker": "0392.HK",
-      "name_cn": "北京控股",
-      "gics_sector": "Utilities",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 1,
-      "last_close": 29.46
-    },
-    {
       "ticker": "0135.HK",
       "name_cn": "昆仑能源",
       "gics_sector": "Utilities",
@@ -2263,6 +2253,16 @@
       "emoji": "🔴",
       "days_in_state": 4,
       "last_close": 7.02
+    },
+    {
+      "ticker": "0392.HK",
+      "name_cn": "北京控股",
+      "gics_sector": "Utilities",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 1,
+      "last_close": 29.46
     },
     {
       "ticker": "0384.HK",
@@ -2425,6 +2425,16 @@
       "last_close": 80.75
     },
     {
+      "ticker": "6110.HK",
+      "name_cn": "滔搏",
+      "gics_sector": "Consumer Discretionary",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 2,
+      "last_close": 2.9
+    },
+    {
       "ticker": "2020.HK",
       "name_cn": "安踏体育",
       "gics_sector": "Consumer Discretionary",
@@ -2443,16 +2453,6 @@
       "emoji": "🔴",
       "days_in_state": 3,
       "last_close": 17.87
-    },
-    {
-      "ticker": "6110.HK",
-      "name_cn": "滔搏",
-      "gics_sector": "Consumer Discretionary",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 2,
-      "last_close": 2.9
     },
     {
       "ticker": "1361.HK",
@@ -2555,16 +2555,6 @@
       "last_close": 36.78
     },
     {
-      "ticker": "6862.HK",
-      "name_cn": "海底捞",
-      "gics_sector": "Consumer Discretionary",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 1,
-      "last_close": 12.58
-    },
-    {
       "ticker": "2097.HK",
       "name_cn": "蜜雪集团",
       "gics_sector": "Consumer Discretionary",
@@ -2573,6 +2563,16 @@
       "emoji": "🔴",
       "days_in_state": 3,
       "last_close": 265.4
+    },
+    {
+      "ticker": "6862.HK",
+      "name_cn": "海底捞",
+      "gics_sector": "Consumer Discretionary",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 1,
+      "last_close": 12.58
     },
     {
       "ticker": "1364.HK",
@@ -2595,16 +2595,6 @@
       "last_close": 42.82
     },
     {
-      "ticker": "0168.HK",
-      "name_cn": "青岛啤酒股份",
-      "gics_sector": "Consumer Staples",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 2,
-      "last_close": 48.1
-    },
-    {
       "ticker": "0291.HK",
       "name_cn": "华润啤酒",
       "gics_sector": "Consumer Staples",
@@ -2613,6 +2603,16 @@
       "emoji": "🔴",
       "days_in_state": 3,
       "last_close": 23.9
+    },
+    {
+      "ticker": "0168.HK",
+      "name_cn": "青岛啤酒股份",
+      "gics_sector": "Consumer Staples",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 2,
+      "last_close": 48.1
     },
     {
       "ticker": "1876.HK",
@@ -2645,16 +2645,6 @@
       "last_close": 67.6
     },
     {
-      "ticker": "3288.HK",
-      "name_cn": "海天味业",
-      "gics_sector": "Consumer Staples",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 2,
-      "last_close": 30.44
-    },
-    {
       "ticker": "1579.HK",
       "name_cn": "颐海国际",
       "gics_sector": "Consumer Staples",
@@ -2663,6 +2653,16 @@
       "emoji": "🔴",
       "days_in_state": 4,
       "last_close": 13.6
+    },
+    {
+      "ticker": "3288.HK",
+      "name_cn": "海天味业",
+      "gics_sector": "Consumer Staples",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 2,
+      "last_close": 30.44
     },
     {
       "ticker": "1318.HK",
@@ -2735,16 +2735,6 @@
       "last_close": 14.02
     },
     {
-      "ticker": "2208.HK",
-      "name_cn": "金风科技",
-      "gics_sector": "Industrials",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 1,
-      "last_close": 12.82
-    },
-    {
       "ticker": "0066.HK",
       "name_cn": "港铁公司",
       "gics_sector": "Industrials",
@@ -2753,6 +2743,16 @@
       "emoji": "🔴",
       "days_in_state": 3,
       "last_close": 31.64
+    },
+    {
+      "ticker": "2208.HK",
+      "name_cn": "金风科技",
+      "gics_sector": "Industrials",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 1,
+      "last_close": 12.82
     },
     {
       "ticker": "1072.HK",
@@ -2905,6 +2905,16 @@
       "last_close": 34.32
     },
     {
+      "ticker": "1801.HK",
+      "name_cn": "信达生物",
+      "gics_sector": "Health Care",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 3,
+      "last_close": 76.4
+    },
+    {
       "ticker": "9995.HK",
       "name_cn": "荣昌生物",
       "gics_sector": "Health Care",
@@ -2925,14 +2935,14 @@
       "last_close": 60.1
     },
     {
-      "ticker": "1801.HK",
-      "name_cn": "信达生物",
+      "ticker": "6160.HK",
+      "name_cn": "百济神州",
       "gics_sector": "Health Care",
       "alert_type": "B_EXIT",
       "label": "B·EXIT",
       "emoji": "🔴",
-      "days_in_state": 3,
-      "last_close": 76.4
+      "days_in_state": 2,
+      "last_close": 167.9
     },
     {
       "ticker": "9969.HK",
@@ -2943,16 +2953,6 @@
       "emoji": "🔴",
       "days_in_state": 2,
       "last_close": 10.76
-    },
-    {
-      "ticker": "6160.HK",
-      "name_cn": "百济神州",
-      "gics_sector": "Health Care",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 2,
-      "last_close": 167.9
     },
     {
       "ticker": "9606.HK",
