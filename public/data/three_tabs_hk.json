@@ -2351,16 +2351,6 @@
       "last_close": 42.26
     },
     {
-      "ticker": "0291.HK",
-      "name_cn": "华润啤酒",
-      "gics_sector": "Consumer Staples",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 1,
-      "last_close": 23.32
-    },
-    {
       "ticker": "0322.HK",
       "name_cn": "康师傅控股",
       "gics_sector": "Consumer Staples",
@@ -2369,6 +2359,16 @@
       "emoji": "🔴",
       "days_in_state": 3,
       "last_close": 11.75
+    },
+    {
+      "ticker": "0291.HK",
+      "name_cn": "华润啤酒",
+      "gics_sector": "Consumer Staples",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 1,
+      "last_close": 23.32
     },
     {
       "ticker": "6936.HK",
@@ -2471,16 +2471,6 @@
       "last_close": 16.6
     },
     {
-      "ticker": "0358.HK",
-      "name_cn": "江西铜业股份",
-      "gics_sector": "Materials",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 4,
-      "last_close": 33.3
-    },
-    {
       "ticker": "1208.HK",
       "name_cn": "五矿资源",
       "gics_sector": "Materials",
@@ -2489,6 +2479,16 @@
       "emoji": "🔴",
       "days_in_state": 1,
       "last_close": 8.27
+    },
+    {
+      "ticker": "0358.HK",
+      "name_cn": "江西铜业股份",
+      "gics_sector": "Materials",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 4,
+      "last_close": 33.3
     },
     {
       "ticker": "1378.HK",
