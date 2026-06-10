@@ -2003,14 +2003,14 @@
       "last_close": 6.9
     },
     {
-      "ticker": "0257.HK",
-      "name_cn": "光大环境",
-      "gics_sector": "Industrials",
+      "ticker": "1816.HK",
+      "name_cn": "中广核电力",
+      "gics_sector": "Utilities",
       "alert_type": "B_EXIT",
       "label": "B·EXIT",
       "emoji": "🔴",
       "days_in_state": 2,
-      "last_close": 4.95
+      "last_close": 3.03
     },
     {
       "ticker": "0586.HK",
@@ -2023,14 +2023,14 @@
       "last_close": 10.86
     },
     {
-      "ticker": "1816.HK",
-      "name_cn": "中广核电力",
-      "gics_sector": "Utilities",
+      "ticker": "0257.HK",
+      "name_cn": "光大环境",
+      "gics_sector": "Industrials",
       "alert_type": "B_EXIT",
       "label": "B·EXIT",
       "emoji": "🔴",
       "days_in_state": 2,
-      "last_close": 3.03
+      "last_close": 4.95
     },
     {
       "ticker": "1038.HK",
@@ -2063,16 +2063,6 @@
       "last_close": 7.51
     },
     {
-      "ticker": "1211.HK",
-      "name_cn": "比亚迪股份",
-      "gics_sector": "Consumer Discretionary",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 1,
-      "last_close": 86.6
-    },
-    {
       "ticker": "9868.HK",
       "name_cn": "小鹏汽车-W",
       "gics_sector": "Consumer Discretionary",
@@ -2081,6 +2071,16 @@
       "emoji": "🔴",
       "days_in_state": 2,
       "last_close": 59.55
+    },
+    {
+      "ticker": "1211.HK",
+      "name_cn": "比亚迪股份",
+      "gics_sector": "Consumer Discretionary",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 1,
+      "last_close": 86.6
     },
     {
       "ticker": "0175.HK",
@@ -2103,16 +2103,6 @@
       "last_close": 29.86
     },
     {
-      "ticker": "2331.HK",
-      "name_cn": "李宁",
-      "gics_sector": "Consumer Discretionary",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 2,
-      "last_close": 17.73
-    },
-    {
       "ticker": "2020.HK",
       "name_cn": "安踏体育",
       "gics_sector": "Consumer Discretionary",
@@ -2121,6 +2111,16 @@
       "emoji": "🔴",
       "days_in_state": 2,
       "last_close": 75.35
+    },
+    {
+      "ticker": "2331.HK",
+      "name_cn": "李宁",
+      "gics_sector": "Consumer Discretionary",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 2,
+      "last_close": 17.73
     },
     {
       "ticker": "6110.HK",
@@ -2453,16 +2453,6 @@
       "last_close": 163.0
     },
     {
-      "ticker": "3692.HK",
-      "name_cn": "翰森制药",
-      "gics_sector": "Health Care",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 4,
-      "last_close": 29.3
-    },
-    {
       "ticker": "1093.HK",
       "name_cn": "石药集团",
       "gics_sector": "Health Care",
@@ -2471,6 +2461,16 @@
       "emoji": "🔴",
       "days_in_state": 4,
       "last_close": 7.26
+    },
+    {
+      "ticker": "3692.HK",
+      "name_cn": "翰森制药",
+      "gics_sector": "Health Care",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 4,
+      "last_close": 29.3
     },
     {
       "ticker": "2269.HK",
