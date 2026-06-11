@@ -1844,16 +1844,6 @@
       "last_close": 113.1
     },
     {
-      "ticker": "9868.HK",
-      "name_cn": "小鹏汽车-W",
-      "gics_sector": "Consumer Discretionary",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 3,
-      "last_close": 56.2
-    },
-    {
       "ticker": "1211.HK",
       "name_cn": "比亚迪股份",
       "gics_sector": "Consumer Discretionary",
@@ -1864,6 +1854,16 @@
       "last_close": 84.95
     },
     {
+      "ticker": "9868.HK",
+      "name_cn": "小鹏汽车-W",
+      "gics_sector": "Consumer Discretionary",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 3,
+      "last_close": 56.2
+    },
+    {
       "ticker": "0425.HK",
       "name_cn": "敏实集团",
       "gics_sector": "Consumer Discretionary",
@@ -1872,6 +1872,16 @@
       "emoji": "🔴",
       "days_in_state": 4,
       "last_close": 29.6
+    },
+    {
+      "ticker": "2331.HK",
+      "name_cn": "李宁",
+      "gics_sector": "Consumer Discretionary",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 3,
+      "last_close": 17.58
     },
     {
       "ticker": "2020.HK",
@@ -1892,16 +1902,6 @@
       "emoji": "🔴",
       "days_in_state": 2,
       "last_close": 2.69
-    },
-    {
-      "ticker": "2331.HK",
-      "name_cn": "李宁",
-      "gics_sector": "Consumer Discretionary",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 3,
-      "last_close": 17.58
     },
     {
       "ticker": "3998.HK",
@@ -2074,16 +2074,6 @@
       "last_close": 128.7
     },
     {
-      "ticker": "2208.HK",
-      "name_cn": "金风科技",
-      "gics_sector": "Industrials",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 1,
-      "last_close": 10.95
-    },
-    {
       "ticker": "0066.HK",
       "name_cn": "港铁公司",
       "gics_sector": "Industrials",
@@ -2092,6 +2082,16 @@
       "emoji": "🔴",
       "days_in_state": 3,
       "last_close": 31.14
+    },
+    {
+      "ticker": "2208.HK",
+      "name_cn": "金风科技",
+      "gics_sector": "Industrials",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 1,
+      "last_close": 10.95
     },
     {
       "ticker": "0317.HK",
