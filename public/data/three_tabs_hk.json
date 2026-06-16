@@ -2397,16 +2397,6 @@
       "last_close": 9.79
     },
     {
-      "ticker": "1088.HK",
-      "name_cn": "中国神华",
-      "gics_sector": "Energy",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 4,
-      "last_close": 43.2
-    },
-    {
       "ticker": "3668.HK",
       "name_cn": "兖煤澳大利亚",
       "gics_sector": "Energy",
@@ -2415,6 +2405,16 @@
       "emoji": "🔴",
       "days_in_state": 4,
       "last_close": 33.4
+    },
+    {
+      "ticker": "1088.HK",
+      "name_cn": "中国神华",
+      "gics_sector": "Energy",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 4,
+      "last_close": 43.2
     },
     {
       "ticker": "1171.HK",
@@ -2457,16 +2457,6 @@
       "last_close": 21.22
     },
     {
-      "ticker": "0101.HK",
-      "name_cn": "恒隆地产",
-      "gics_sector": "Real Estate",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 4,
-      "last_close": 7.69
-    },
-    {
       "ticker": "0083.HK",
       "name_cn": "信和置业",
       "gics_sector": "Real Estate",
@@ -2475,6 +2465,16 @@
       "emoji": "🔴",
       "days_in_state": 1,
       "last_close": 11.12
+    },
+    {
+      "ticker": "0101.HK",
+      "name_cn": "恒隆地产",
+      "gics_sector": "Real Estate",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 4,
+      "last_close": 7.69
     },
     {
       "ticker": "0012.HK",
@@ -2947,16 +2947,6 @@
       "last_close": 140.4
     },
     {
-      "ticker": "1801.HK",
-      "name_cn": "信达生物",
-      "gics_sector": "Health Care",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 1,
-      "last_close": 76.4
-    },
-    {
       "ticker": "9995.HK",
       "name_cn": "荣昌生物",
       "gics_sector": "Health Care",
@@ -2965,6 +2955,16 @@
       "emoji": "🔴",
       "days_in_state": 4,
       "last_close": 68.4
+    },
+    {
+      "ticker": "1801.HK",
+      "name_cn": "信达生物",
+      "gics_sector": "Health Care",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 1,
+      "last_close": 76.4
     },
     {
       "ticker": "2696.HK",
