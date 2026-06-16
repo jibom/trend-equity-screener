@@ -2377,6 +2377,16 @@
       "last_close": 386.0
     },
     {
+      "ticker": "0386.HK",
+      "name_cn": "中国石油化工股份",
+      "gics_sector": "Energy",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 4,
+      "last_close": 4.28
+    },
+    {
       "ticker": "0857.HK",
       "name_cn": "中国石油股份",
       "gics_sector": "Energy",
@@ -2387,14 +2397,14 @@
       "last_close": 9.79
     },
     {
-      "ticker": "0386.HK",
-      "name_cn": "中国石油化工股份",
+      "ticker": "3668.HK",
+      "name_cn": "兖煤澳大利亚",
       "gics_sector": "Energy",
       "alert_type": "B_EXIT",
       "label": "B·EXIT",
       "emoji": "🔴",
       "days_in_state": 4,
-      "last_close": 4.28
+      "last_close": 33.4
     },
     {
       "ticker": "1088.HK",
@@ -2415,16 +2425,6 @@
       "emoji": "🔴",
       "days_in_state": 4,
       "last_close": 12.88
-    },
-    {
-      "ticker": "3668.HK",
-      "name_cn": "兖煤澳大利亚",
-      "gics_sector": "Energy",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 4,
-      "last_close": 33.4
     },
     {
       "ticker": "1209.HK",
@@ -2547,16 +2547,6 @@
       "last_close": 2.41
     },
     {
-      "ticker": "0257.HK",
-      "name_cn": "光大环境",
-      "gics_sector": "Industrials",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 1,
-      "last_close": 4.88
-    },
-    {
       "ticker": "1816.HK",
       "name_cn": "中广核电力",
       "gics_sector": "Utilities",
@@ -2565,6 +2555,16 @@
       "emoji": "🔴",
       "days_in_state": 1,
       "last_close": 2.94
+    },
+    {
+      "ticker": "0257.HK",
+      "name_cn": "光大环境",
+      "gics_sector": "Industrials",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 1,
+      "last_close": 4.88
     },
     {
       "ticker": "0006.HK",
