@@ -2667,16 +2667,6 @@
       "last_close": 12.1
     },
     {
-      "ticker": "0019.HK",
-      "name_cn": "太古股份公司A",
-      "gics_sector": "Industrials",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 1,
-      "last_close": 82.55
-    },
-    {
       "ticker": "0066.HK",
       "name_cn": "港铁公司",
       "gics_sector": "Industrials",
@@ -2685,6 +2675,16 @@
       "emoji": "🔴",
       "days_in_state": 2,
       "last_close": 31.42
+    },
+    {
+      "ticker": "0019.HK",
+      "name_cn": "太古股份公司A",
+      "gics_sector": "Industrials",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 1,
+      "last_close": 82.55
     },
     {
       "ticker": "1882.HK",
