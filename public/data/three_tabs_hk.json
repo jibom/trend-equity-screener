@@ -2387,14 +2387,14 @@
       "last_close": 6.41
     },
     {
-      "ticker": "1816.HK",
-      "name_cn": "中广核电力",
-      "gics_sector": "Utilities",
+      "ticker": "0257.HK",
+      "name_cn": "光大环境",
+      "gics_sector": "Industrials",
       "alert_type": "B_EXIT",
       "label": "B·EXIT",
       "emoji": "🔴",
       "days_in_state": 2,
-      "last_close": 2.9
+      "last_close": 4.84
     },
     {
       "ticker": "0586.HK",
@@ -2407,14 +2407,14 @@
       "last_close": 10.54
     },
     {
-      "ticker": "0257.HK",
-      "name_cn": "光大环境",
-      "gics_sector": "Industrials",
+      "ticker": "1816.HK",
+      "name_cn": "中广核电力",
+      "gics_sector": "Utilities",
       "alert_type": "B_EXIT",
       "label": "B·EXIT",
       "emoji": "🔴",
       "days_in_state": 2,
-      "last_close": 4.84
+      "last_close": 2.9
     },
     {
       "ticker": "1038.HK",
@@ -2557,16 +2557,6 @@
       "last_close": 10.26
     },
     {
-      "ticker": "0168.HK",
-      "name_cn": "青岛啤酒股份",
-      "gics_sector": "Consumer Staples",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 1,
-      "last_close": 46.88
-    },
-    {
       "ticker": "0291.HK",
       "name_cn": "华润啤酒",
       "gics_sector": "Consumer Staples",
@@ -2575,6 +2565,16 @@
       "emoji": "🔴",
       "days_in_state": 2,
       "last_close": 22.12
+    },
+    {
+      "ticker": "0168.HK",
+      "name_cn": "青岛啤酒股份",
+      "gics_sector": "Consumer Staples",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 1,
+      "last_close": 46.88
     },
     {
       "ticker": "1876.HK",
@@ -2667,16 +2667,6 @@
       "last_close": 12.1
     },
     {
-      "ticker": "0066.HK",
-      "name_cn": "港铁公司",
-      "gics_sector": "Industrials",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 2,
-      "last_close": 31.42
-    },
-    {
       "ticker": "0019.HK",
       "name_cn": "太古股份公司A",
       "gics_sector": "Industrials",
@@ -2685,6 +2675,16 @@
       "emoji": "🔴",
       "days_in_state": 1,
       "last_close": 82.55
+    },
+    {
+      "ticker": "0066.HK",
+      "name_cn": "港铁公司",
+      "gics_sector": "Industrials",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 2,
+      "last_close": 31.42
     },
     {
       "ticker": "1882.HK",
