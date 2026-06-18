@@ -1931,16 +1931,6 @@
       "last_close": 28.5
     },
     {
-      "ticker": "0388.HK",
-      "name_cn": "香港交易所",
-      "gics_sector": "Financials",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 4,
-      "last_close": 374.8
-    },
-    {
       "ticker": "0966.HK",
       "name_cn": "中国太平",
       "gics_sector": "Financials",
@@ -1949,6 +1939,16 @@
       "emoji": "🔴",
       "days_in_state": 2,
       "last_close": 19.49
+    },
+    {
+      "ticker": "0388.HK",
+      "name_cn": "香港交易所",
+      "gics_sector": "Financials",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 4,
+      "last_close": 374.8
     },
     {
       "ticker": "6060.HK",
@@ -1961,16 +1961,6 @@
       "last_close": 10.15
     },
     {
-      "ticker": "0857.HK",
-      "name_cn": "中国石油股份",
-      "gics_sector": "Energy",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 1,
-      "last_close": 9.18
-    },
-    {
       "ticker": "0386.HK",
       "name_cn": "中国石油化工股份",
       "gics_sector": "Energy",
@@ -1979,6 +1969,16 @@
       "emoji": "🔴",
       "days_in_state": 1,
       "last_close": 4.14
+    },
+    {
+      "ticker": "0857.HK",
+      "name_cn": "中国石油股份",
+      "gics_sector": "Energy",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 1,
+      "last_close": 9.18
     },
     {
       "ticker": "1088.HK",
@@ -2291,16 +2291,6 @@
       "last_close": 35.4
     },
     {
-      "ticker": "0168.HK",
-      "name_cn": "青岛啤酒股份",
-      "gics_sector": "Consumer Staples",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 2,
-      "last_close": 45.4
-    },
-    {
       "ticker": "0291.HK",
       "name_cn": "华润啤酒",
       "gics_sector": "Consumer Staples",
@@ -2309,6 +2299,16 @@
       "emoji": "🔴",
       "days_in_state": 3,
       "last_close": 21.86
+    },
+    {
+      "ticker": "0168.HK",
+      "name_cn": "青岛啤酒股份",
+      "gics_sector": "Consumer Staples",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 2,
+      "last_close": 45.4
     },
     {
       "ticker": "1876.HK",
@@ -2381,16 +2381,6 @@
       "last_close": 13.38
     },
     {
-      "ticker": "0316.HK",
-      "name_cn": "东方海外国际",
-      "gics_sector": "Industrials",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 1,
-      "last_close": 123.2
-    },
-    {
       "ticker": "1138.HK",
       "name_cn": "中远海能",
       "gics_sector": "Energy",
@@ -2399,6 +2389,16 @@
       "emoji": "🔴",
       "days_in_state": 4,
       "last_close": 15.93
+    },
+    {
+      "ticker": "0316.HK",
+      "name_cn": "东方海外国际",
+      "gics_sector": "Industrials",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 1,
+      "last_close": 123.2
     },
     {
       "ticker": "0293.HK",
@@ -2411,16 +2411,6 @@
       "last_close": 12.02
     },
     {
-      "ticker": "0019.HK",
-      "name_cn": "太古股份公司A",
-      "gics_sector": "Industrials",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 2,
-      "last_close": 83.05
-    },
-    {
       "ticker": "0066.HK",
       "name_cn": "港铁公司",
       "gics_sector": "Industrials",
@@ -2429,6 +2419,16 @@
       "emoji": "🔴",
       "days_in_state": 3,
       "last_close": 31.52
+    },
+    {
+      "ticker": "0019.HK",
+      "name_cn": "太古股份公司A",
+      "gics_sector": "Industrials",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 2,
+      "last_close": 83.05
     },
     {
       "ticker": "2208.HK",
@@ -2561,16 +2561,6 @@
       "last_close": 68.5
     },
     {
-      "ticker": "1801.HK",
-      "name_cn": "信达生物",
-      "gics_sector": "Health Care",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 3,
-      "last_close": 76.15
-    },
-    {
       "ticker": "2696.HK",
       "name_cn": "复宏汉霖",
       "gics_sector": "Health Care",
@@ -2579,6 +2569,16 @@
       "emoji": "🔴",
       "days_in_state": 3,
       "last_close": 63.0
+    },
+    {
+      "ticker": "1801.HK",
+      "name_cn": "信达生物",
+      "gics_sector": "Health Care",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 3,
+      "last_close": 76.15
     },
     {
       "ticker": "9926.HK",
