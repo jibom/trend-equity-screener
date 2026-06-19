@@ -2024,16 +2024,6 @@
       "last_close": 10.95
     },
     {
-      "ticker": "0012.HK",
-      "name_cn": "恒基地产",
-      "gics_sector": "Real Estate",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 3,
-      "last_close": 25.84
-    },
-    {
       "ticker": "0004.HK",
       "name_cn": "九龙仓集团",
       "gics_sector": "Real Estate",
@@ -2042,6 +2032,16 @@
       "emoji": "🔴",
       "days_in_state": 4,
       "last_close": 18.72
+    },
+    {
+      "ticker": "0012.HK",
+      "name_cn": "恒基地产",
+      "gics_sector": "Real Estate",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 3,
+      "last_close": 25.84
     },
     {
       "ticker": "0392.HK",
@@ -2084,16 +2084,6 @@
       "last_close": 2.36
     },
     {
-      "ticker": "1816.HK",
-      "name_cn": "中广核电力",
-      "gics_sector": "Utilities",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 3,
-      "last_close": 2.87
-    },
-    {
       "ticker": "0586.HK",
       "name_cn": "海螺创业",
       "gics_sector": "Industrials",
@@ -2102,6 +2092,16 @@
       "emoji": "🔴",
       "days_in_state": 2,
       "last_close": 10.33
+    },
+    {
+      "ticker": "1816.HK",
+      "name_cn": "中广核电力",
+      "gics_sector": "Utilities",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 3,
+      "last_close": 2.87
     },
     {
       "ticker": "0257.HK",
@@ -2564,16 +2564,6 @@
       "last_close": 87.55
     },
     {
-      "ticker": "6990.HK",
-      "name_cn": "科伦博泰生物-B",
-      "gics_sector": "Health Care",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 1,
-      "last_close": 415.8
-    },
-    {
       "ticker": "9969.HK",
       "name_cn": "诺诚健华",
       "gics_sector": "Health Care",
@@ -2582,6 +2572,16 @@
       "emoji": "🔴",
       "days_in_state": 2,
       "last_close": 10.84
+    },
+    {
+      "ticker": "6990.HK",
+      "name_cn": "科伦博泰生物-B",
+      "gics_sector": "Health Care",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 1,
+      "last_close": 415.8
     },
     {
       "ticker": "6160.HK",
