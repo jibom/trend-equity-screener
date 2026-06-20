@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Wyckoff v5.4 — 港股趋势扫描</title>
+  <title>CPG扫描</title>
   <meta name="description" content="Wyckoff v5.4 港股趋势扫描器 — 进场候选 / Trending / 警报" />
-  <script src="https://unpkg.com/lightweight-charts@4.1.3/dist/lightweight-charts.standalone.production.js" defer></script>
+  <script src="lib/lightweight-charts.standalone.js" defer></script>
   <style>
     :root {
       --bg: #ffffff;
@@ -205,6 +205,14 @@
     .ticker { font-weight: 600; font-size: 13px; letter-spacing: -0.01em; width: 7%; overflow: hidden; text-overflow: ellipsis; }
     .ticker a { color: var(--primary); text-decoration: none; cursor: pointer; }
     .ticker a:hover { text-decoration: underline; }
+    .tk-link { color: var(--primary); text-decoration: none; cursor: pointer; font-weight: 600; }
+    .tk-link:hover { text-decoration: underline; }
+    .rot-banner { display:flex; gap:10px; margin:8px 0 12px; flex-wrap:wrap; }
+    .rot-box { flex:1; min-width:280px; border-radius:8px; padding:10px 12px; font-size:13px; font-weight:600; }
+    .rot-lose { background: rgba(239,68,68,0.12); border:1px solid rgba(239,68,68,0.45); }
+    .rot-gain { background: rgba(34,197,94,0.12); border:1px solid rgba(34,197,94,0.45); }
+    .rot-list { margin-top:6px; display:flex; flex-wrap:wrap; gap:6px 12px; font-weight:400; }
+    .rot-item { font-size:12px; white-space:nowrap; }
     .name { font-size: 12px; color: var(--text-muted); width: 12%; overflow: hidden; text-overflow: ellipsis; }
     .sector { font-size: 12px; color: var(--text-muted); width: 10%; overflow: hidden; text-overflow: ellipsis; }
     .price { font-weight: 500; }
@@ -269,6 +277,8 @@
     /* Chart Modal */
     #chart-modal { display: none; position: fixed; inset: 0; z-index: 100; }
     #chart-modal.open { display: flex; align-items: center; justify-content: center; }
+    #sector-modal { display: none; position: fixed; inset: 0; z-index: 101; }
+    #sector-modal.open { display: flex; align-items: center; justify-content: center; }
     .modal-backdrop { position: absolute; inset: 0; background: rgba(0,0,0,0.5); }
     .modal-content {
       position: relative; z-index: 1;
@@ -323,14 +333,25 @@
       </div>
     </div>
   </div>
+  <div id="sector-modal">
+    <div class="modal-backdrop" onclick="closeSector()"></div>
+    <div class="modal-content" style="max-width:900px;height:auto;max-height:85vh;overflow:auto">
+      <div class="modal-header">
+        <span id="sector-title"></span>
+        <button class="close-btn" onclick="closeSector()">&#10005;</button>
+      </div>
+      <div id="sector-content" style="padding:12px 16px"></div>
+    </div>
+  </div>
   <script>
   (function() {
     // ─── State ─────────────────────────────────────────
     let tabData = { date: '', tab1: { sos_section: [], pool_section: [] }, tab2: [], tab3: [] };
+    let trendData = null;   // 港股-趋势 (Part1-4), 来自 data/trend_hotspot_hk.json
     let search = '';
     let sortField = 'ma10_slope_pct';
     let sortDir = 'desc';
-    let tab = 'entry'; // 'entry' | 'hold' | 'alerts'
+    let tab = 'trend'; // 'trend' | 'entry' | 'hold' | 'alerts'  (默认港股-趋势)
     let groupMode = true;
     let isDark = true;
     let copied = false;
@@ -349,6 +370,12 @@
         loadError = e.message || String(e);
         tabData = { date: '', tab1: { sos_section: [], pool_section: [] }, tab2: [], tab3: [] };
       }
+      // 港股-趋势 (Part1-4): 失败不阻塞原 tab
+      try {
+        const r2 = await fetch('data/trend_hotspot_hk.json');
+        if (r2.ok) trendData = JSON.parse(await r2.text());
+      } catch(e) { trendData = null; }
+      window.trendData = trendData;   // 暴露给全局 showChart (图表切换用)
     }
 
     // ─── Filtering & Sorting ────────────────────────────
@@ -418,9 +445,12 @@
       const holdCount = (tabData.tab2 || []).length;
       const alertCount = (tabData.tab3 || []).length;
       const entryTotal = sosCount + poolCount;
+      const trendCount = (trendData?.part4 || []).length;
 
       let mainContent = '';
-      if (tab === 'alerts') {
+      if (tab === 'trend') {
+        mainContent = renderTrend();
+      } else if (tab === 'alerts') {
         mainContent = renderAlerts();
       } else {
         mainContent = renderTable();
@@ -439,10 +469,11 @@
                 <rect x="26" y="2" width="4" height="28" rx="1" fill="currentColor"/>
               </svg>
               <div>
-                <div class="title">Wyckoff v5.4 扫描器</div>
-                <div class="subtitle">港股趋势扫描 · ${tabData.date || ''}</div>
+                <div class="title">CPG扫描</div>
+                <div class="subtitle">更新日期：${(tab === 'trend' ? (trendData && trendData.date) : tabData.date) || '-'}</div>
               </div>
               <div class="tab-toggle">
+                <button class="tab-btn ${tab==='trend'?'active':''}" data-tab="trend">港股-趋势<span class="tab-count">${trendCount}</span></button>
                 <button class="tab-btn ${tab==='entry'?'active':''}" data-tab="entry">进场候选<span class="tab-count">${entryTotal}</span></button>
                 <button class="tab-btn ${tab==='hold'?'active':''}" data-tab="hold">Trending<span class="tab-count">${holdCount}</span></button>
                 <button class="tab-btn ${tab==='alerts'?'active':''}" data-tab="alerts">警报<span class="tab-count">${alertCount}</span></button>
@@ -453,7 +484,7 @@
         </header>
         <main class="main">
           <div class="summary-bar">
-            ${renderSummary(sosCount, poolCount, holdCount, alertCount)}
+            ${tab === 'trend' ? renderTrendSummary() : renderSummary(sosCount, poolCount, holdCount, alertCount)}
           </div>
           ${errorBanner}
           ${mainContent}
@@ -532,6 +563,186 @@
         <div class="summary-item"><span style="color:#eab308">🟡</span><span class="summary-val">${aCount}</span> <span style="color:#ef4444">🔴</span><span class="summary-val">${bCount}</span> <span style="color:#f97316">🟠</span><span class="summary-val">${cCount}</span></div>
       `;
     }
+
+    // ─── 港股-趋势 (Part1-4) 渲染 ──────────────────────
+    const pctR  = v => v != null ? (v * 100).toFixed(1) + '%' : '-';        // 比值→%
+    const pctRaw = v => v != null ? Number(v).toFixed(1) + '%' : '-';       // 已是%→%
+    const signedR = v => v != null ? (v >= 0 ? '+' : '') + (v * 100).toFixed(1) + '%' : '-';
+    const num2 = v => v != null ? Number(v).toFixed(2) : '-';
+    const yn = v => v ? '<span style="color:#22c55e">✓</span>' : '<span class="muted-val">·</span>';
+
+    function trendTable(headers, rows) {
+      const ths = headers.map(h => `<th>${h}</th>`).join('');
+      const trs = rows.length ? rows.map(r => `<tr>${r.map(c => `<td>${c}</td>`).join('')}</tr>`).join('')
+                               : `<tr><td colspan="${headers.length}" class="empty-state"><p>暂无数据</p></td></tr>`;
+      return `<div class="table-wrap"><div class="table-scroll"><table><thead><tr>${ths}</tr></thead><tbody>${trs}</tbody></table></div></div>`;
+    }
+    function trendSection(title, count, body) {
+      return `<div class="section-divider">${title}<span class="section-count">${count}</span></div>${body}`;
+    }
+    function tk(t, screen) { return `<a class="tk-link" href="#" onclick="showChart('${t}'${screen ? `, '${screen}'` : ''}); return false;">${t}</a>`; }
+
+    function renderTrendSummary() {
+      const d = trendData;
+      if (!d) return `<div class="summary-item"><span class="summary-val">趋势数据未加载</span></div>`;
+      const top = (d.part1 && d.part1.sub_industries && d.part1.sub_industries[0]) || {};
+      return `
+        <div class="summary-item"><span class="state-badge state-STRONG">最热细分</span><span class="summary-val">${d.hottest_sub || '-'} ${top.composite != null ? '(' + top.composite + ')' : ''}</span></div>
+        <div class="summary-item"><span class="state-badge state-SETUP_OK">最热个股</span><span class="summary-val">${(d.part2 || []).length}</span></div>
+        <div class="summary-item"><span class="state-badge state-EARLY">回调买点</span><span class="summary-val">${(d.part4 || []).length}</span></div>
+      `;
+    }
+
+    function renderTrend() {
+      const d = trendData;
+      if (!d) return `<div class="empty-state"><p>趋势数据未加载 (public/data/trend_hotspot_hk.json)</p></div>`;
+      let html = `<div class="subtitle" style="padding:4px 0 10px">港股趋势四部曲 · ${d.date || ''}　最热细分行业：${d.hottest_sub || '-'}</div>`;
+
+      // ── Part 1: 行业热度 (仅显示 60日涨幅>10% 的强势行业) ──
+      const subsAll = (d.part1 && d.part1.sub_industries || []);
+      const subs = subsAll.filter(s => (s.ret_60 || 0) > 0.10).slice(0, 15);
+      const subRows = subs.map(s => [
+        `<a class="tk-link" href="#" onclick="showSubIndustry('${s.sub_industry}'); return false;">${s.sub_industry}</a>`,
+        s.n, pctRaw(s.breadth_250), pctRaw(s.breadth_60),
+        num2(s.amt_surge) + 'x', num2(s.amt_1d_yi), num2(s.amt_5d_yi),
+        pctRaw(s.share_1d), pctRaw(s.share_5d), pctRaw(s.share5_pctile200), signedR(s.ret_60),
+        `<b>${num2(s.composite)}</b>`]);
+      html += trendSection(`Part 1 · 市场最热行业 — 细分行业热度 (60日涨幅>10%, ${subs.length}/${subsAll.length})`, subs.length,
+        trendTable(['细分行业','n','新高广度250','新高广度60','量放','成交额1日(亿)','5日(亿)','占比1日','占比5日','5日占比200日分位','60日涨幅','综合分'], subRows));
+
+      const secs = (d.part1 && d.part1.sectors || []);
+      const secRows = secs.map(s => [
+        `<a class="tk-link" href="#" onclick="showSector('${s.sector}'); return false;">${s.sector}</a>`,
+        s.n, pctRaw(s.breadth_250), num2(s.amt_surge) + 'x',
+        pctRaw(s.share_1d), pctRaw(s.share_5d), pctRaw(s.share5_pctile200), signedR(s.ret_60), `<b>${num2(s.composite)}</b>`]);
+      html += trendSection('Part 1 · GICS 板块热度 (全量)', secs.length,
+        trendTable(['板块','n','新高广度250','量放','占比1日','占比5日','5日占比200日分位','60日涨幅','综合分'], secRows));
+
+      // ── Part 2: 最热个股 top30 ──
+      const p2 = d.part2 || [];
+      const p2Rows = p2.map(e => [
+        tk(e.ticker, 'part2'), e.name, e.sub_industry, num2(e.close), pctR(e.pct_high_250),
+        num2(e.amt_surge) + 'x', num2(e.amt_rank), signedR(e.ret_60), yn(e.ma_aligned), `<b>${num2(e.hotness)}</b>`]);
+      html += trendSection('Part 2 · 趋势个股 (60日涨幅>10%, hotness 排序, ≤20)', p2.length,
+        trendTable(['代码','名称','细分行业','收盘','距250高','量放','5日均额排','60日涨幅','多头','热度分'], p2Rows));
+
+      // ── Part 3: 异动放量个股 (单日>4%+放量 或 3日>10%+放量, 排除Part2/4) ──
+      const p3 = d.part3 || [];
+      const trigBadge = t => t === '单日+3日' ? '<span class="chg-badge chg-pos">单日+3日</span>'
+                            : t === '3日' ? '<span class="chg-badge" style="background:#a855f7;color:#fff">3日</span>'
+                            : '<span class="chg-badge chg-pos">单日</span>';
+      const p3Rows = p3.map(e => [
+        tk(e.ticker, 'part3'), e.name, e.sub_industry, num2(e.close),
+        e.ret_1d != null ? `<span class="chg-pos">+${e.ret_1d}%</span>` : '-',
+        e.ret_3d != null ? `<span class="chg-pos">+${e.ret_3d}%</span>` : '-',
+        num2(e.vol_ratio) + 'x', trigBadge(e.trigger), num2(e.hotness)]);
+      html += trendSection('Part 3 · 异动放量个股 (单日>4%+放量 或 3日>10%+放量, 已排除Part2/4)', p3.length,
+        trendTable(['代码','名称','细分行业','收盘','单日异动','3日涨幅','量比','触发','热度分'], p3Rows));
+
+      // ── Part 4: 回调买点 ──
+      const p4 = d.part4 || [];
+      const sigStr = e => ['doji','shrink','entangle','kdj_div','at_support']
+        .map((k,i) => `<span style="color:${e[k]?'#22c55e':'var(--text-muted)'}">${'DSEKP'[i]}</span>`).join(' ');
+      const p4Rows = p4.map(e => [
+        tk(e.ticker, 'part4'), e.name, e.sub_industry, pctRaw(e.retrace), num2(e.ind_comp),
+        num2(e.hotness), sigStr(e), `<b>${e.nsig}</b>`]);
+      html += trendSection('Part 4 · 趋势股回调买点 (行业综合分→个股综合分)', p4.length,
+        trendTable(['代码','名称','细分行业','回撤','行业综合分','个股综合分','信号(D S E K P)','数'], p4Rows));
+
+      // ── Part 5: 资金轮动信号 ──
+      const ra = d.rotation_alerts || {lose:[], gain:[]};
+      const loseBox = (ra.lose||[]).map(p => `<span class="rot-item">${p.sub_industry} ${p.pctile_ago}→${p.pctile_now} <b>(${p.delta10})</b></span>`).join('') || '<span class="rot-item muted-val">无</span>';
+      const gainBox = (ra.gain||[]).map(p => `<span class="rot-item">${p.sub_industry} ${p.pctile_ago}→${p.pctile_now} <b>(+${p.delta10})</b> 量${p.amt5_chg_pct>=0?'+':''}${p.amt5_chg_pct}%</span>`).join('') || '<span class="rot-item muted-val">无</span>';
+      const banner = `
+        <div class="rot-banner">
+          <div class="rot-box rot-lose">🔻 高位失宠 (高水位显著下行)<div class="rot-list">${loseBox}</div></div>
+          <div class="rot-box rot-gain">🔺 资金涌入 (分位显著上行 + 量能匹配)<div class="rot-list">${gainBox}</div></div>
+        </div>`;
+      const p5All = d.part5 || [];
+      const p5 = p5All.filter(p => p.flag === 'lose' || p.flag === 'gain');
+      const flagBadge = f => f === 'lose' ? '<span class="chg-badge chg-neg">🔻高位失宠</span>'
+                              : f === 'gain' ? '<span class="chg-badge chg-pos">🔺低位突破</span>'
+                              : '<span class="muted-val">·</span>';
+      const p5Rows = p5.map(p => [
+        p.sub_industry, p.n, num2(p.pctile_ago), num2(p.pctile_now),
+        `<b style="color:${p.delta10>=0?'#22c55e':'#ef4444'}">${p.delta10>0?'+':''}${p.delta10}</b>`,
+        num2(p.amt5_now_yi), (p.amt5_chg_pct != null ? (p.amt5_chg_pct>=0?'+':'') + p.amt5_chg_pct + '%' : '-'),
+        flagBadge(p.flag)]);
+      html += trendSection(`Part 5 · 资金轮动信号 (仅高位失宠 + 低位放量突破, ${p5.length})`, p5.length,
+        banner + trendTable(['细分行业','n','分位(10天前)','分位(今)','Δ10','5日均额(亿)','5日均额变化','标识'], p5Rows));
+
+      return html;
+    }
+
+    // ─── GICS sector 钻取弹窗 ───────────────────────
+    let _sectorList = [], _sectorIdx = -1;
+    let _subIndList = [], _subIndIdx = -1;
+    let _detailMode = null;   // 'sector' | 'subindustry' (弹窗当前模式, 决定方向键翻谁)
+    function showSector(sectorName) {
+      const d = trendData;
+      if (!d) return;
+      _detailMode = 'sector';
+      _sectorList = (d.part1 && d.part1.sectors || []).map(s => s.sector);
+      _sectorIdx = _sectorList.indexOf(sectorName);
+      const subs = (d.part1 && d.part1.sub_industries || [])
+        .filter(s => s.sector === sectorName)
+        .sort((a, b) => (b.composite || 0) - (a.composite || 0));
+      document.getElementById('sector-title').textContent = sectorName + ' · 子行业明细 (按综合分降序)' + (_sectorIdx >= 0 ? `   (${_sectorIdx + 1}/${_sectorList.length}) ←→翻页` : '');
+      const rows = subs.map(s => [
+        `<a class="tk-link" href="#" onclick="showSubIndustry('${s.sub_industry}'); return false;">${s.sub_industry}</a>`,
+        s.n, pctRaw(s.breadth_250), num2(s.amt_surge) + 'x',
+        pctRaw(s.share_1d), pctRaw(s.share_5d), pctRaw(s.share5_pctile200),
+        signedR(s.ret_60), `<b>${num2(s.composite)}</b>`]);
+      document.getElementById('sector-content').innerHTML = (subs.length
+        ? trendTable(['子行业','n','新高广度250','量放','占比1日','占比5日','5日占比200日分位','60日涨幅','综合分'], rows)
+        : '<p class="empty-state">该板块无子行业数据</p>');
+      document.getElementById('sector-modal').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function showSubIndustry(name) {
+      const d = trendData;
+      if (!d || !d.all_stocks) return;
+      _detailMode = 'subindustry';
+      _subIndList = (d.part1 && d.part1.sub_industries || []).map(s => s.sub_industry);
+      _subIndIdx = _subIndList.indexOf(name);
+      const stocks = d.all_stocks.filter(s => s.sub_industry === name)
+        .sort((a, b) => (b.hotness || 0) - (a.hotness || 0));
+      _detailStockList = stocks.map(s => s.ticker);   // 供个股图方向键用
+      document.getElementById('sector-title').textContent = name + ' · 成分股 (按热度分降序)' + (_subIndIdx >= 0 ? `   (${_subIndIdx + 1}/${_subIndList.length}) ←→翻页` : '');
+      const rows = stocks.map(s => [
+        `<a class="tk-link" href="#" onclick="openStockFromDetail('${s.ticker}'); return false;">${s.ticker}</a>`,
+        s.name, num2(s.close), signedR(s.ret_60), pctR(s.pct_high_250),
+        yn(s.ma_aligned), `<b>${num2(s.hotness)}</b>`]);
+      document.getElementById('sector-content').innerHTML = (stocks.length
+        ? trendTable(['代码','名称','收盘','60日涨幅','距250高','多头','热度分'], rows)
+        : '<p class="empty-state">该子行业无成分股</p>');
+      document.getElementById('sector-modal').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function navSector(dir) {
+      if (!_sectorList.length || _sectorIdx < 0) return;
+      const ni = _sectorIdx + dir;
+      if (ni < 0 || ni >= _sectorList.length) return;
+      showSector(_sectorList[ni]);
+    }
+    function navSubIndustry(dir) {
+      if (!_subIndList.length || _subIndIdx < 0) return;
+      const ni = _subIndIdx + dir;
+      if (ni < 0 || ni >= _subIndList.length) return;
+      showSubIndustry(_subIndList[ni]);
+    }
+    function navDetail(dir) {
+      if (_detailMode === 'subindustry') navSubIndustry(dir);
+      else navSector(dir);
+    }
+    function closeSector() {
+      document.getElementById('sector-modal').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    window.showSector = showSector;
+    window.showSubIndustry = showSubIndustry;
+    window.navDetail = navDetail;
+    window.closeSector = closeSector;
 
     // ─── Table Rendering ───────────────────────────────
     function th(field, label) {
@@ -844,6 +1055,10 @@
   let _chartInterval = 'D';
   let _chartData = null;
   let _charts = null;
+  let _chartScreen = null;   // 当前 ticker 所属 screen ('part2'/'part3'/'part4')
+  let _chartList = [];       // 该 screen 的 ticker 列表
+  let _chartIdx = -1;        // 当前 ticker 在列表中的索引
+  let _detailStockList = []; // 钻取弹窗(子行业成分股)的 ticker 列表, 供个股图方向键用
 
   function calcMA(data, period) {
     const out = [];
@@ -867,13 +1082,15 @@
 
   function _ema(values, period) {
     const out = new Array(values.length).fill(null);
-    if (values.length < period) return out;
+    let start = 0;
+    while (start < values.length && values[start] === null) start++;   // 跳过前导 null (如 dif)
+    if (start + period > values.length) return out;
     let sum = 0;
-    for (let i = 0; i < period; i++) { if (values[i] === null) return out; sum += values[i]; }
+    for (let i = start; i < start + period; i++) sum += values[i];
     let e = sum / period;
-    out[period - 1] = e;
+    out[start + period - 1] = e;
     const k = 2 / (period + 1);
-    for (let i = period; i < values.length; i++) {
+    for (let i = start + period; i < values.length; i++) {
       if (values[i] === null) break;
       e = values[i] * k + e * (1 - k);
       out[i] = e;
@@ -889,11 +1106,15 @@
     const dea = _ema(dif, signal);
     const difD = [], deaD = [], histD = [];
     for (let i = 0; i < c.length; i++) {
-      if (dif[i] === null || dea[i] === null) continue;
-      const h = 2 * (dif[i] - dea[i]);
-      difD.push({ time: t[i], value: +dif[i].toFixed(4) });
-      deaD.push({ time: t[i], value: +dea[i].toFixed(4) });
-      histD.push({ time: t[i], value: +h.toFixed(4), color: h >= 0 ? 'rgba(38,166,154,0.7)' : 'rgba(239,83,80,0.7)' });
+      const time = t[i];
+      if (dif[i] === null) { difD.push({ time }); }              // whitespace 补齐 → 与主图同时间戳范围
+      else difD.push({ time, value: +dif[i].toFixed(4) });
+      if (dea[i] === null) { deaD.push({ time }); histD.push({ time }); }
+      else {
+        deaD.push({ time, value: +dea[i].toFixed(4) });
+        const h = 2 * (dif[i] - dea[i]);
+        histD.push({ time, value: +h.toFixed(4), color: h >= 0 ? 'rgba(38,166,154,0.7)' : 'rgba(239,83,80,0.7)' });
+      }
     }
     return { dif: difD, dea: deaD, hist: histD };
   }
@@ -902,7 +1123,9 @@
     n = n || 9; kn = kn || 3; dn = dn || 3;
     const kD = [], dD = [], jD = [];
     let pk = 50, pd = 50;
-    for (let i = n - 1; i < data.length; i++) {
+    for (let i = 0; i < data.length; i++) {
+      const t = data[i][0];
+      if (i < n - 1) { kD.push({ time: t }); dD.push({ time: t }); jD.push({ time: t }); continue; }  // whitespace 补齐
       let hi = -Infinity, lo = Infinity;
       for (let j = i - n + 1; j <= i; j++) { hi = Math.max(hi, data[j][2]); lo = Math.min(lo, data[j][3]); }
       const rsv = hi === lo ? 50 : (data[i][4] - lo) / (hi - lo) * 100;
@@ -910,9 +1133,9 @@
       const d = (2 / dn) * pd + (1 / dn) * k;
       const j = 3 * k - 2 * d;
       pk = k; pd = d;
-      kD.push({ time: data[i][0], value: +k.toFixed(2) });
-      dD.push({ time: data[i][0], value: +d.toFixed(2) });
-      jD.push({ time: data[i][0], value: +j.toFixed(2) });
+      kD.push({ time: t, value: +k.toFixed(2) });
+      dD.push({ time: t, value: +d.toFixed(2) });
+      jD.push({ time: t, value: +j.toFixed(2) });
     }
     return { k: kD, d: dD, j: jD };
   }
@@ -921,7 +1144,7 @@
     const dark = document.documentElement.classList.contains('dark');
     return {
       layout: { background: { color: dark ? '#1a1d27' : '#ffffff' }, textColor: dark ? '#d1d5db' : '#374151' },
-      grid: { vertLines: { color: dark ? '#2d3039' : '#e5e7eb' }, horLines: { color: dark ? '#2d3039' : '#e5e7eb' } },
+      grid: { vertLines: { color: dark ? '#2d3039' : '#e5e7eb' }, horzLines: { visible: false, color: 'rgba(0,0,0,0)' } },
       crosshair: { mode: 0 },
       rightPriceScale: { borderColor: dark ? '#2d3039' : '#e5e7eb' },
       timeScale: { borderColor: dark ? '#2d3039' : '#e5e7eb', timeVisible: false },
@@ -939,10 +1162,10 @@
     const rows = _chartInterval === 'W' ? _chartData.weekly : _chartData.daily;
     if (!rows || rows.length < 10) return;
 
-    const theme = _lc_theme();
+    const theme = _lcTheme();
     _charts = [];
 
-    const ma10 = calcMA(rows, 10), ma20 = calcMA(rows, 20), ma50 = calcMA(rows, 50), ma200 = calcMA(rows, 200);
+    const ma10 = calcMA(rows, 10), ma20 = calcMA(rows, 20), ma50 = calcMA(rows, 50), ma100 = calcMA(rows, 100);
     const macd = calcMACD(rows);
     const kdj = calcKDJ(rows);
 
@@ -962,43 +1185,68 @@
       });
     }
 
+    const allSeries = [];
+    const addSer = (chart, opts, data) => { const s = chart.addLineSeries ? chart.addLineSeries(opts) : chart.addHistogramSeries(opts); s.setData(data); allSeries.push(s); return s; };
+
     const mainChart = mkChart(document.getElementById('chart-main'));
     const cs = mainChart.addCandlestickSeries({
       upColor: '#26a69a', downColor: '#ef5350',
       borderUpColor: '#26a69a', borderDownColor: '#ef5350',
       wickUpColor: '#26a69a', wickDownColor: '#ef5350',
     });
-    cs.setData(candles);
+    cs.setData(candles); allSeries.push(cs);
 
     const maOpts = (color) => ({ color, lineWidth: 1, priceLineVisible: false, lastValueVisible: false });
-    if (ma10.length) mainChart.addLineSeries(maOpts('#FF6B6B')).setData(ma10);
-    if (ma20.length) mainChart.addLineSeries(maOpts('#FFA726')).setData(ma20);
-    if (ma50.length) mainChart.addLineSeries(maOpts('#42A5F5')).setData(ma50);
-    if (ma200.length) mainChart.addLineSeries(maOpts('#AB47BC')).setData(ma200);
+    [['#FF6B6B', ma10], ['#FFA726', ma20], ['#42A5F5', ma50], ['#AB47BC', ma100]]
+      .forEach(([c, arr]) => { if (arr.length) addSer(mainChart, maOpts(c), arr); });
 
     const vs = mainChart.addHistogramSeries({ priceFormat: { type: 'volume' }, priceScaleId: 'vol' });
-    vs.setData(vols);
+    vs.setData(vols); allSeries.push(vs);
     mainChart.priceScale('vol').applyOptions({ scaleMargins: { top: 0.82, bottom: 0 } });
 
-    const volMA5 = calcVolMA(rows, 5), volMA20 = calcVolMA(rows, 20);
-    if (volMA5.length) mainChart.addLineSeries({ color: '#FFEB3B', lineWidth: 1, priceLineVisible: false, lastValueVisible: false, priceScaleId: 'vol' }).setData(volMA5);
-    if (volMA20.length) mainChart.addLineSeries({ color: '#E91E63', lineWidth: 1, priceLineVisible: false, lastValueVisible: false, priceScaleId: 'vol' }).setData(volMA20);
+    const volMA30 = calcVolMA(rows, 30);
+    if (volMA30.length) addSer(mainChart, { color: '#FFEB3B', lineWidth: 1, priceLineVisible: false, lastValueVisible: false, priceScaleId: 'vol' }, volMA30);
 
     _charts.push(mainChart);
 
     const macdChart = mkChart(document.getElementById('chart-macd'));
-    if (macd.hist.length) macdChart.addHistogramSeries({ priceFormat: { type: 'price', precision: 3 } }).setData(macd.hist);
-    if (macd.dif.length) macdChart.addLineSeries({ color: '#2196F3', lineWidth: 1, priceLineVisible: false, lastValueVisible: false }).setData(macd.dif);
-    if (macd.dea.length) macdChart.addLineSeries({ color: '#FF6B6B', lineWidth: 1, priceLineVisible: false, lastValueVisible: false }).setData(macd.dea);
+    if (macd.hist.length) { const s = macdChart.addHistogramSeries({ priceFormat: { type: 'price', precision: 3 } }); s.setData(macd.hist); allSeries.push(s); }
+    if (macd.dif.length) addSer(macdChart, { color: '#2196F3', lineWidth: 1, priceLineVisible: false, lastValueVisible: false }, macd.dif);
+    if (macd.dea.length) addSer(macdChart, { color: '#FF6B6B', lineWidth: 1, priceLineVisible: false, lastValueVisible: false }, macd.dea);
     _charts.push(macdChart);
 
     const kdjChart = mkChart(document.getElementById('chart-kdj'));
-    if (kdj.k.length) kdjChart.addLineSeries({ color: '#2196F3', lineWidth: 1, priceLineVisible: false, lastValueVisible: false }).setData(kdj.k);
-    if (kdj.d.length) kdjChart.addLineSeries({ color: '#FF6B6B', lineWidth: 1, priceLineVisible: false, lastValueVisible: false }).setData(kdj.d);
-    if (kdj.j.length) kdjChart.addLineSeries({ color: '#9C27B0', lineWidth: 1, priceLineVisible: false, lastValueVisible: false }).setData(kdj.j);
+    let kdjSer = null;
+    [['#2196F3', kdj.k], ['#FF6B6B', kdj.d], ['#9C27B0', kdj.j]]
+      .forEach(([c, arr], i) => { if (arr.length) { const s = addSer(kdjChart, { color: c, lineWidth: 1, priceLineVisible: false, lastValueVisible: false }, arr); if (i === 0) kdjSer = s; } });
     _charts.push(kdjChart);
+    // KDJ 超买(90)/超卖(10) 参考线
+    if (kdjSer) {
+      try {
+        kdjSer.createPriceLine({ price: 90, color: 'rgba(160,160,160,0.55)', lineStyle: 2, lineWidth: 1, title: '', axisLabelVisible: false });
+        kdjSer.createPriceLine({ price: 10, color: 'rgba(160,160,160,0.55)', lineStyle: 2, lineWidth: 1, title: '', axisLabelVisible: false });
+      } catch (e) {}
+    }
+
+    // 强制关闭所有 series 的 price line (最后值横线) + 透明, v4.1.3 创建时设置未必生效
+    allSeries.forEach(s => { try { s.applyOptions({ priceLineVisible: false, lastValueVisible: false, priceLineColor: 'rgba(0,0,0,0)' }); } catch (e) {} });
+
+    // 显式关闭网格横线/竖线 + 右轴/时间轴边框 (白线来源)
+    [mainChart, macdChart, kdjChart].forEach(c => {
+      try {
+        c.applyOptions({
+          grid: { vertLines: { visible: false, color: 'rgba(0,0,0,0)' }, horzLines: { visible: false, color: 'rgba(0,0,0,0)' } },
+          rightPriceScale: { borderVisible: false, ticksVisible: false },
+          timeScale: { borderVisible: false },
+        });
+      } catch (e) {}
+    });
+    // 只保留主图(K线)x轴日期, MACD/KDJ 隐藏 x 轴 (timeScale 仍在, 不影响对齐同步)
+    [macdChart, kdjChart].forEach(c => { try { c.applyOptions({ timeScale: { visible: false } }); } catch (e) {} });
 
     _syncScales(mainChart, macdChart, kdjChart);
+    // 统一 rightOffset (留右侧空间) + 主图 fitContent, 子图同步同 range (同宽→同 barSpacing→对齐)
+    [mainChart, macdChart, kdjChart].forEach(c => c.timeScale().applyOptions({ rightOffset: 6 }));
     mainChart.timeScale().fitContent();
     const mainRange = mainChart.timeScale().getVisibleLogicalRange();
     if (mainRange) {
@@ -1019,12 +1267,25 @@
     subs.forEach(s => s.timeScale().subscribeVisibleLogicalRangeChange(set(s)));
   }
 
-  async function showChart(ticker) {
+  function openStockFromDetail(ticker) {
+    closeSector();                                    // 关闭成分股表, 只显个股图
+    showChart(ticker, null, _detailStockList);        // 图的方向键在该子行业成分股内切换
+  }
+  async function showChart(ticker, screen, list) {
     _chartTicker = ticker;
     _chartInterval = 'D';
     _chartData = null;
+    _chartScreen = screen || null;
+    const td = window.trendData;
+    if (Array.isArray(list)) {                       // 显式列表 (子行业成分股钻取)
+      _chartList = list; _chartIdx = list.indexOf(ticker);
+    } else if (_chartScreen && td && Array.isArray(td[_chartScreen])) {
+      _chartList = td[_chartScreen].map(p => p.ticker);
+      _chartIdx = _chartList.indexOf(ticker);
+    } else { _chartList = []; _chartIdx = -1; }
     document.getElementById('chart-modal').classList.add('open');
-    document.getElementById('modal-ticker').textContent = ticker;
+    document.getElementById('modal-ticker').textContent =
+      ticker + (_chartIdx >= 0 ? `   (${_chartIdx + 1}/${_chartList.length})  ←→切换 D/W日周` : '');
     _updateIntervalBtns();
     document.body.style.overflow = 'hidden';
 
@@ -1058,7 +1319,26 @@
     document.getElementById('btn-weekly').classList.toggle('active', _chartInterval === 'W');
   }
 
-  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeChart(); });
+  function navChart(dir) {
+    if (!_chartList.length || _chartIdx < 0) return;
+    const ni = _chartIdx + dir;
+    if (ni < 0 || ni >= _chartList.length) return;
+    showChart(_chartList[ni], _chartScreen, _chartList);
+  }
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') { closeChart(); closeSector(); return; }
+    const chartOpen = document.getElementById('chart-modal').classList.contains('open');
+    const sectorOpen = document.getElementById('sector-modal').classList.contains('open');
+    if (chartOpen) {
+      if (e.key === 'ArrowRight' || e.key === 'ArrowDown') { e.preventDefault(); navChart(1); }
+      else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') { e.preventDefault(); navChart(-1); }
+      else if (e.key === 'd' || e.key === 'D') { e.preventDefault(); switchInterval('D'); }
+      else if (e.key === 'w' || e.key === 'W') { e.preventDefault(); switchInterval('W'); }
+    } else if (sectorOpen) {
+      const dir = (e.key === 'ArrowRight' || e.key === 'ArrowDown') ? 1 : (e.key === 'ArrowLeft' || e.key === 'ArrowUp') ? -1 : 0;
+      if (dir) { e.preventDefault(); window.navDetail(dir); }
+    }
+  });
   </script>
 </body>
 </html>

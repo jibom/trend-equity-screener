@@ -94,6 +94,28 @@ jobs:
           PYTHONIOENCODING: utf-8
         continue-on-error: true
 
+      - name: Run HK KDJ divergence scanner
+        if: steps.markets.outputs.market == 'hk' || steps.markets.outputs.market == 'all'
+        run: python scripts/scan_kdj_divergence.py
+        env:
+          PYTHONIOENCODING: utf-8
+          KDJ_ASOF: ''
+        continue-on-error: true
+
+      - name: Export trend hotspot (Part1-4 → 港股-趋势 tab)
+        if: steps.markets.outputs.market == 'hk' || steps.markets.outputs.market == 'all'
+        run: python scripts/export_trend_hotspot.py
+        env:
+          PYTHONIOENCODING: utf-8
+        continue-on-error: true
+
+      - name: Export HK chartdata (1y daily+weekly for 港股-趋势 个股图)
+        if: steps.markets.outputs.market == 'hk' || steps.markets.outputs.market == 'all'
+        run: python scripts/export_chartdata.py
+        env:
+          PYTHONIOENCODING: utf-8
+        continue-on-error: true
+
       - name: Classify stocks
         run: python scripts/classify_stocks.py --market all
         env:
