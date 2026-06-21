@@ -348,6 +348,8 @@
     // ─── State ─────────────────────────────────────────
     let tabData = { date: '', tab1: { sos_section: [], pool_section: [] }, tab2: [], tab3: [] };
     let trendData = null;   // 港股-趋势 (Part1-4), 来自 data/trend_hotspot_hk.json
+    let usData = null;      // 美股-趋势 (Part1-5), 来自 data/trend_hotspot_us.json
+    let aData = null;       // A股-趋势 (Part1-4), 来自 data/trend_hotspot_a.json
     let search = '';
     let sortField = 'ma10_slope_pct';
     let sortDir = 'desc';
@@ -376,6 +378,18 @@
         if (r2.ok) trendData = JSON.parse(await r2.text());
       } catch(e) { trendData = null; }
       window.trendData = trendData;   // 暴露给全局 showChart (图表切换用)
+      // 美股-趋势 (Part1-5): 失败不阻塞
+      try {
+        const r3 = await fetch('data/trend_hotspot_us.json');
+        if (r3.ok) usData = JSON.parse(await r3.text());
+      } catch(e) { usData = null; }
+      window.usData = usData;
+      // A股-趋势 (Part1-4): 失败不阻塞
+      try {
+        const r4 = await fetch('data/trend_hotspot_a.json');
+        if (r4.ok) aData = JSON.parse(await r4.text());
+      } catch(e) { aData = null; }
+      window.aData = aData;
     }
 
     // ─── Filtering & Sorting ────────────────────────────
@@ -446,10 +460,16 @@
       const alertCount = (tabData.tab3 || []).length;
       const entryTotal = sosCount + poolCount;
       const trendCount = (trendData?.part4 || []).length;
+      const usCount = (usData?.part4 || []).length;
+      const aCount = (aData?.part2 || []).length;
 
       let mainContent = '';
       if (tab === 'trend') {
         mainContent = renderTrend();
+      } else if (tab === 'ustrend') {
+        mainContent = renderUs();
+      } else if (tab === 'atrend') {
+        mainContent = renderA();
       } else if (tab === 'alerts') {
         mainContent = renderAlerts();
       } else {
@@ -470,10 +490,12 @@
               </svg>
               <div>
                 <div class="title">CPG扫描</div>
-                <div class="subtitle">更新日期：${(tab === 'trend' ? (trendData && trendData.date) : tabData.date) || '-'}</div>
+                <div class="subtitle">更新日期：${(tab === 'trend' ? (trendData && trendData.date) : tab === 'ustrend' ? (usData && usData.date) : tab === 'atrend' ? (aData && aData.date) : tabData.date) || '-'}</div>
               </div>
               <div class="tab-toggle">
                 <button class="tab-btn ${tab==='trend'?'active':''}" data-tab="trend">港股-趋势<span class="tab-count">${trendCount}</span></button>
+                <button class="tab-btn ${tab==='ustrend'?'active':''}" data-tab="ustrend">美股-趋势<span class="tab-count">${usCount}</span></button>
+                <button class="tab-btn ${tab==='atrend'?'active':''}" data-tab="atrend">A股-趋势<span class="tab-count">${aCount}</span></button>
                 <button class="tab-btn ${tab==='entry'?'active':''}" data-tab="entry">进场候选<span class="tab-count">${entryTotal}</span></button>
                 <button class="tab-btn ${tab==='hold'?'active':''}" data-tab="hold">Trending<span class="tab-count">${holdCount}</span></button>
                 <button class="tab-btn ${tab==='alerts'?'active':''}" data-tab="alerts">警报<span class="tab-count">${alertCount}</span></button>
@@ -484,7 +506,7 @@
         </header>
         <main class="main">
           <div class="summary-bar">
-            ${tab === 'trend' ? renderTrendSummary() : renderSummary(sosCount, poolCount, holdCount, alertCount)}
+            ${tab === 'trend' ? renderTrendSummary() : tab === 'ustrend' ? renderUsSummary() : tab === 'atrend' ? renderASummary() : renderSummary(sosCount, poolCount, holdCount, alertCount)}
           </div>
           ${errorBanner}
           ${mainContent}
@@ -674,13 +696,151 @@
       return html;
     }
 
+    // ─── 美股-趋势 (Part1-5) 渲染 (复用 renderTrend 的 helper, 字段名同HK: sub_industry=Industry) ──
+    function renderUsSummary() {
+      const d = usData;
+      if (!d) return `<div class="summary-item"><span class="summary-val">美股趋势数据未加载</span></div>`;
+      const top = (d.part1 && d.part1.sub_industries && d.part1.sub_industries[0]) || {};
+      return `
+        <div class="summary-item"><span class="state-badge state-STRONG">最热行业</span><span class="summary-val">${d.hottest_sub || '-'} ${top.composite != null ? '(' + top.composite + ')' : ''}</span></div>
+        <div class="summary-item"><span class="state-badge state-SETUP_OK">趋势个股</span><span class="summary-val">${(d.part2 || []).length}</span></div>
+        <div class="summary-item"><span class="state-badge state-EARLY">回调买点</span><span class="summary-val">${(d.part4 || []).length}</span></div>
+      `;
+    }
+
+    function renderUs() {
+      const d = usData;
+      if (!d) return `<div class="empty-state"><p>美股趋势数据未加载 (public/data/trend_hotspot_us.json)</p></div>`;
+      let html = `<div class="subtitle" style="padding:4px 0 10px">美股趋势四部曲 · ${d.date || ''}　最热行业：${d.hottest_sub || '-'}</div>`;
+
+      const subsAll = (d.part1 && d.part1.sub_industries || []);
+      const subs = subsAll.slice(0, 10);
+      const subRows = subs.map(s => [
+        `<a class="tk-link" href="#" onclick="showSubIndustry('${s.sub_industry}','us'); return false;">${s.sub_industry}</a>`,
+        s.n, pctRaw(s.breadth_250), pctRaw(s.breadth_60),
+        num2(s.amt_surge) + 'x', num2(s.amt_1d_yi), num2(s.amt_5d_yi),
+        pctRaw(s.share_1d), pctRaw(s.share_5d), pctRaw(s.share5_pctile200), signedR(s.ret_60),
+        `<b>${num2(s.composite)}</b>`]);
+      html += trendSection(`Part 1 · 市场最热行业 (Top ${subs.length}, 综合分排序)`, subs.length,
+        trendTable(['行业','n','新高广度250','新高广度60','量放','成交1日(亿USD)','5日(亿USD)','占比1日','占比5日','5日占比200日分位','60日涨幅','综合分'], subRows));
+
+      const secs = (d.part1 && d.part1.sectors || []);
+      const secRows = secs.map(s => [
+        `<a class="tk-link" href="#" onclick="showSector('${s.sector}','us'); return false;">${s.sector}</a>`,
+        s.n, pctRaw(s.breadth_250), num2(s.amt_surge) + 'x',
+        pctRaw(s.share_1d), pctRaw(s.share_5d), pctRaw(s.share5_pctile200), signedR(s.ret_60), `<b>${num2(s.composite)}</b>`]);
+      html += trendSection('Part 1 · GICS Sector 热度 (全量)', secs.length,
+        trendTable(['Sector','n','新高广度250','量放','占比1日','占比5日','5日占比200日分位','60日涨幅','综合分'], secRows));
+
+      const p2 = d.part2 || [];
+      const p2Rows = p2.map(e => [
+        tk(e.ticker, 'part2'), e.name, e.sub_industry, num2(e.close), pctR(e.pct_high_250),
+        num2(e.amt_surge) + 'x', num2(e.amt_rank), signedR(e.ret_60),
+        signedR(e.sales_growth), signedR(e.earn_growth), pctR(e.roe),
+        yn(e.ma_aligned), `<b>${num2(e.hotness)}</b>`]);
+      html += trendSection('Part 2 · 趋势个股 (Top10行业内, 60日>10%, hotness 排序, ≤20)', p2.length,
+        trendTable(['代码','名称','行业','收盘','距250高','量放','5日均额排','60日涨幅','销售增长','盈利增长','ROE','多头','热度分'], p2Rows));
+
+      const p3 = d.part3 || [];
+      const trigBadge = t => t === '单日+3日' ? '<span class="chg-badge chg-pos">单日+3日</span>'
+                            : t === '3日' ? '<span class="chg-badge" style="background:#a855f7;color:#fff">3日</span>'
+                            : '<span class="chg-badge chg-pos">单日</span>';
+      const p3Rows = p3.map(e => [
+        tk(e.ticker, 'part3'), e.name, e.sub_industry, num2(e.close),
+        e.ret_1d != null ? `<span class="chg-pos">+${e.ret_1d}%</span>` : '-',
+        e.ret_3d != null ? `<span class="chg-pos">+${e.ret_3d}%</span>` : '-',
+        num2(e.vol_ratio) + 'x', trigBadge(e.trigger), num2(e.hotness)]);
+      html += trendSection('Part 3 · 异动放量个股 (Top10行业内, 单日>4%+放量 或 3日>10%+放量, 已排除Part2/4)', p3.length,
+        trendTable(['代码','名称','行业','收盘','单日异动','3日涨幅','量比','触发','热度分'], p3Rows));
+
+      const p4 = d.part4 || [];
+      const sigStr = e => ['doji','shrink','entangle','kdj_div','at_support']
+        .map((k,i) => `<span style="color:${e[k]?'#22c55e':'var(--text-muted)'}">${'DSEKP'[i]}</span>`).join(' ');
+      const p4Rows = p4.map(e => [
+        tk(e.ticker, 'part4'), e.name, e.sub_industry, pctRaw(e.retrace), num2(e.ind_comp),
+        num2(e.hotness), signedR(e.sales_growth), signedR(e.earn_growth), pctR(e.roe), sigStr(e), `<b>${e.nsig}</b>`]);
+      html += trendSection('Part 4 · 趋势股回调买点 (Top10行业内, 行业综合分→个股综合分)', p4.length,
+        trendTable(['代码','名称','行业','回撤','行业分','个股分','销售增长','盈利增长','ROE','信号(D S E K P)','数'], p4Rows));
+
+      return html;
+    }
+
+    // ─── A股-趋势 (Part1-4) 渲染 (申万三级=SubIndustry, 申万一级=Sector; 字段名同HK) ──
+    function renderASummary() {
+      const d = aData;
+      if (!d) return `<div class="summary-item"><span class="summary-val">A股趋势数据未加载</span></div>`;
+      const top = (d.part1 && d.part1.sub_industries && d.part1.sub_industries[0]) || {};
+      return `
+        <div class="summary-item"><span class="state-badge state-STRONG">最热申万三级</span><span class="summary-val">${d.hottest_sub || '-'} ${top.composite != null ? '(' + top.composite + ')' : ''}</span></div>
+        <div class="summary-item"><span class="state-badge state-SETUP_OK">趋势个股</span><span class="summary-val">${(d.part2 || []).length}</span></div>
+        <div class="summary-item"><span class="state-badge state-EARLY">回调买点</span><span class="summary-val">${(d.part4 || []).length}</span></div>
+      `;
+    }
+
+    function renderA() {
+      const d = aData;
+      if (!d) return `<div class="empty-state"><p>A股趋势数据未加载 (public/data/trend_hotspot_a.json)</p></div>`;
+      let html = `<div class="subtitle" style="padding:4px 0 10px">A股趋势四部曲 · ${d.date || ''}　最热申万三级：${d.hottest_sub || '-'}</div>`;
+
+      const subs = (d.part1 && d.part1.sub_industries || []).slice(0, 10);
+      const subRows = subs.map(s => [
+        `<a class="tk-link" href="#" onclick="showSubIndustry('${s.sub_industry}','a'); return false;">${s.sub_industry}</a>`,
+        s.n, pctRaw(s.breadth_250), pctRaw(s.breadth_60),
+        num2(s.amt_surge) + 'x', num2(s.amt_1d_yi), num2(s.amt_5d_yi),
+        pctRaw(s.share_1d), pctRaw(s.share_5d), pctRaw(s.share5_pctile200), signedR(s.ret_60),
+        `<b>${num2(s.composite)}</b>`]);
+      html += trendSection(`Part 1 · 最热申万三级 (Top ${subs.length}, 综合分排序)`, subs.length,
+        trendTable(['申万三级','n','新高广度250','新高广度60','量放','成交1日(亿)','5日(亿)','占比1日','占比5日','5日占比200日分位','60日涨幅','综合分'], subRows));
+
+      const secs = (d.part1 && d.part1.sectors || []);
+      const secRows = secs.map(s => [
+        `<a class="tk-link" href="#" onclick="showSector('${s.sector}','a'); return false;">${s.sector}</a>`,
+        s.n, pctRaw(s.breadth_250), num2(s.amt_surge) + 'x',
+        pctRaw(s.share_1d), pctRaw(s.share_5d), pctRaw(s.share5_pctile200), signedR(s.ret_60), `<b>${num2(s.composite)}</b>`]);
+      html += trendSection('Part 1 · 申万一级热度 (Top 10)', secs.length,
+        trendTable(['申万一级','n','新高广度250','量放','占比1日','占比5日','5日占比200日分位','60日涨幅','综合分'], secRows));
+
+      const p2 = d.part2 || [];
+      const p2Rows = p2.map(e => [
+        tk(e.ticker, 'part2'), e.name, e.sub_industry, num2(e.close), pctR(e.pct_high_250),
+        num2(e.amt_surge) + 'x', num2(e.amt_rank), signedR(e.ret_60), yn(e.ma_aligned), `<b>${num2(e.hotness)}</b>`]);
+      html += trendSection('Part 2 · 趋势个股 (Top10申万三级内, 60日>10%, hotness 排序, ≤30)', p2.length,
+        trendTable(['代码','名称','申万三级','收盘','距250高','量放','5日均额排','60日涨幅','多头','热度分'], p2Rows));
+
+      const p3 = d.part3 || [];
+      const trigBadge = t => t === '单日+3日' ? '<span class="chg-badge chg-pos">单日+3日</span>'
+                            : t === '3日' ? '<span class="chg-badge" style="background:#a855f7;color:#fff">3日</span>'
+                            : '<span class="chg-badge chg-pos">单日</span>';
+      const p3Rows = p3.map(e => [
+        tk(e.ticker, 'part3'), e.name, e.sub_industry, num2(e.close),
+        e.ret_1d != null ? `<span class="chg-pos">+${e.ret_1d}%</span>` : '-',
+        e.ret_3d != null ? `<span class="chg-pos">+${e.ret_3d}%</span>` : '-',
+        num2(e.vol_ratio) + 'x', trigBadge(e.trigger), num2(e.hotness)]);
+      html += trendSection('Part 3 · 异动放量个股 (Top10申万三级内, 单日>4%+放量 或 3日>10%+放量, 已排除Part2/4)', p3.length,
+        trendTable(['代码','名称','申万三级','收盘','单日异动','3日涨幅','量比','触发','热度分'], p3Rows));
+
+      const p4 = d.part4 || [];
+      const sigStr = e => ['doji','shrink','entangle','kdj_div','at_support']
+        .map((k,i) => `<span style="color:${e[k]?'#22c55e':'var(--text-muted)'}">${'DSEKP'[i]}</span>`).join(' ');
+      const p4Rows = p4.map(e => [
+        tk(e.ticker, 'part4'), e.name, e.sub_industry, pctRaw(e.retrace), num2(e.ind_comp),
+        num2(e.hotness), sigStr(e), `<b>${e.nsig}</b>`]);
+      html += trendSection('Part 4 · 趋势股回调买点 (Top10申万三级内, 行业综合分→个股综合分)', p4.length,
+        trendTable(['代码','名称','申万三级','回撤','行业综合分','个股综合分','信号(D S E K P)','数'], p4Rows));
+
+      return html;
+    }
+
     // ─── GICS sector 钻取弹窗 ───────────────────────
     let _sectorList = [], _sectorIdx = -1;
     let _subIndList = [], _subIndIdx = -1;
     let _detailMode = null;   // 'sector' | 'subindustry' (弹窗当前模式, 决定方向键翻谁)
-    function showSector(sectorName) {
-      const d = trendData;
+    let _detailMarket = 'hk'; // 'hk' | 'us' (钻取弹窗当前市场, 决定读 trendData/usData)
+    function showSector(sectorName, mkt) {
+      mkt = mkt || 'hk';
+      const d = mkt === 'us' ? usData : mkt === 'a' ? aData : trendData;
       if (!d) return;
+      _detailMarket = mkt;
       _detailMode = 'sector';
       _sectorList = (d.part1 && d.part1.sectors || []).map(s => s.sector);
       _sectorIdx = _sectorList.indexOf(sectorName);
@@ -699,9 +859,11 @@
       document.getElementById('sector-modal').classList.add('open');
       document.body.style.overflow = 'hidden';
     }
-    function showSubIndustry(name) {
-      const d = trendData;
+    function showSubIndustry(name, mkt) {
+      mkt = mkt || 'hk';
+      const d = mkt === 'us' ? usData : mkt === 'a' ? aData : trendData;
       if (!d || !d.all_stocks) return;
+      _detailMarket = mkt;
       _detailMode = 'subindustry';
       _subIndList = (d.part1 && d.part1.sub_industries || []).map(s => s.sub_industry);
       _subIndIdx = _subIndList.indexOf(name);
@@ -723,13 +885,13 @@
       if (!_sectorList.length || _sectorIdx < 0) return;
       const ni = _sectorIdx + dir;
       if (ni < 0 || ni >= _sectorList.length) return;
-      showSector(_sectorList[ni]);
+      showSector(_sectorList[ni], _detailMarket);
     }
     function navSubIndustry(dir) {
       if (!_subIndList.length || _subIndIdx < 0) return;
       const ni = _subIndIdx + dir;
       if (ni < 0 || ni >= _subIndList.length) return;
-      showSubIndustry(_subIndList[ni]);
+      showSubIndustry(_subIndList[ni], _detailMarket);
     }
     function navDetail(dir) {
       if (_detailMode === 'subindustry') navSubIndustry(dir);
@@ -1276,7 +1438,9 @@
     _chartInterval = 'D';
     _chartData = null;
     _chartScreen = screen || null;
-    const td = window.trendData;
+    const mkt = ticker.endsWith('.US') ? 'us'
+              : (/\.S[HZ]$|\.BJ$/.test(ticker) ? 'a' : 'hk');
+    const td = mkt === 'us' ? window.usData : mkt === 'a' ? window.aData : window.trendData;
     if (Array.isArray(list)) {                       // 显式列表 (子行业成分股钻取)
       _chartList = list; _chartIdx = list.indexOf(ticker);
     } else if (_chartScreen && td && Array.isArray(td[_chartScreen])) {
@@ -1289,9 +1453,9 @@
     _updateIntervalBtns();
     document.body.style.overflow = 'hidden';
 
-    const code = ticker.replace('.HK', '');
+    const code = ticker.replace(/\.(HK|US|SH|SZ|BJ)$/, '');
     try {
-      const res = await fetch(`./data/chartdata/hk/${code}.json`);
+      const res = await fetch(`./data/chartdata/${mkt}/${code}.json`);
       if (!res.ok) throw new Error(res.status);
       _chartData = await res.json();
       requestAnimationFrame(() => requestAnimationFrame(() => renderChart()));

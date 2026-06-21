@@ -24,6 +24,8 @@ output/
 
 # Data (intermediate — public/data/ is the canonical frontend source)
 /data/
+configs/*_partial.csv
+configs/eodhd_key.local
 
 # OS
 .DS_Store

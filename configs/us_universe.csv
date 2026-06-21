@@ -1,0 +1,601 @@
+Ticker,Code,Name,Exchange,ADR,Sector,Industry,MarketCap,Price,AvgVolume,AvgTurnoverUSD,LatestDate
+MU.US,MU,Micron Technology Inc,NASDAQ,False,Technology,Semiconductors,1278839095296.0,1133.98999,45499800,51596317747.0,2026-06-18
+SPCX.US,SPCX,Space Exploration Technologies Corp. Class A Common Stock,NASDAQ,False,Industrials,Aerospace & Defense,2437224595456.0,185.0,272126781,50343454485.0,2026-06-18
+NVDA.US,NVDA,NVIDIA Corporation,NASDAQ,False,Technology,Semiconductors,5103122644992.0,210.690002,128363508,27044907757.0,2026-06-18
+SNDK.US,SNDK,Sandisk Corp,NASDAQ,False,Technology,Computer Hardware,323539107840.0,2184.75,9588500,20948475375.0,2026-06-18
+TSLA.US,TSLA,Tesla Inc,NASDAQ,False,Consumer Cyclical,Auto Manufacturers,1504129843200.0,400.48999,45620500,18270553589.0,2026-06-18
+INTC.US,INTC,Intel Corporation,NASDAQ,False,Technology,Semiconductors,673433780224.0,133.990005,134507500,18022660598.0,2026-06-18
+MRVL.US,MRVL,Marvell Technology Group Ltd,NASDAQ,False,Technology,Semiconductors,271695364096.0,310.579987,54963600,17070594173.0,2026-06-18
+AMD.US,AMD,Advanced Micro Devices Inc,NASDAQ,False,Technology,Semiconductors,876235849728.0,537.369995,31553100,16955689189.0,2026-06-18
+AVGO.US,AVGO,Broadcom Inc,NASDAQ,False,Technology,Semiconductors,1957030658048.0,411.350006,32394200,13325354364.0,2026-06-18
+MSFT.US,MSFT,Microsoft Corporation,NASDAQ,False,Technology,Software - Infrastructure,2818348154880.0,379.399994,34865800,13228084311.0,2026-06-18
+AAPL.US,AAPL,Apple Inc,NASDAQ,False,Technology,Consumer Electronics,4376979046400.0,298.01001,42745100,12738467678.0,2026-06-18
+AMZN.US,AMZN,Amazon.com Inc,NASDAQ,False,Consumer Cyclical,Internet Retail,2628929978368.0,244.389999,44780800,10943979667.0,2026-06-18
+META.US,META,Meta Platforms Inc.,NASDAQ,False,Communication Services,Internet Content & Information,1465228591104.0,577.219971,17653300,10189837314.0,2026-06-18
+WDC.US,WDC,Western Digital Corporation,NASDAQ,False,Technology,Computer Hardware,257212153856.0,746.22998,13569100,10125669222.0,2026-06-18
+GOOGL.US,GOOGL,Alphabet Inc Class A,NASDAQ,False,Communication Services,Internet Content & Information,4490912595968.0,368.029999,24876100,9155151058.0,2026-06-18
+AMAT.US,AMAT,Applied Materials Inc,NASDAQ,False,Technology,Semiconductor Equipment & Materials,489960275968.0,617.109985,11045500,6816288339.0,2026-06-18
+GOOG.US,GOOG,Alphabet Inc Class C,NASDAQ,False,Communication Services,Internet Content & Information,4483957391360.0,367.459991,17268600,6345519601.0,2026-06-18
+STX.US,STX,Seagate Technology PLC,NASDAQ,False,Technology,Computer Hardware,242141790208.0,1070.22998,5774200,6179721951.0,2026-06-18
+ARM.US,ARM,Arm Holdings plc American Depositary Shares,NASDAQ,True,Technology,Semiconductors,469377908736.0,439.459991,14035500,6168040704.0,2026-06-18
+TSM.US,TSM,Taiwan Semiconductor Manufacturing,NYSE,False,Technology,Semiconductors,2396773416960.0,462.119995,10943500,5057210165.0,2026-06-18
+NBIS.US,NBIS,Nebius Group N.V.,NASDAQ,False,Communication Services,Internet Content & Information,72790073344.0,286.690002,17131300,4911372431.0,2026-06-18
+LRCX.US,LRCX,Lam Research Corp,NASDAQ,False,Technology,Semiconductor Equipment & Materials,486522159104.0,389.040009,12054900,4689838404.0,2026-06-18
+PLTR.US,PLTR,Palantir Technologies Inc.,NASDAQ,False,Technology,Software - Infrastructure,307982663680.0,128.470001,35378000,4545011695.0,2026-06-18
+ASML.US,ASML,ASML Holding NV ADR,NASDAQ,True,Technology,Semiconductor Equipment & Materials,743732805632.0,1929.680054,2339100,4513714614.0,2026-06-18
+LITE.US,LITE,Lumentum Holdings Inc,NASDAQ,False,Technology,Communication Equipment,66130001920.0,850.0,5266100,4476185000.0,2026-06-18
+CRWV.US,CRWV,"CoreWeave, Inc. Class A Common Stock",NASDAQ,False,Technology,Software - Infrastructure,64350023680.0,117.949997,36215900,4271665296.0,2026-06-18
+HOOD.US,HOOD,Robinhood Markets Inc,NASDAQ,False,Financial Services,Capital Markets,97389625344.0,108.150002,36576900,3955791808.0,2026-06-18
+NFLX.US,NFLX,Netflix Inc,NASDAQ,False,Communication Services,Entertainment,325831589888.0,77.379997,50338800,3895216193.0,2026-06-18
+GEV.US,GEV,GE Vernova LLC,NYSE,False,Industrials,Specialty Industrial Machinery,298206625792.0,1109.72998,3428200,3804376317.0,2026-06-18
+ORCL.US,ORCL,Oracle Corporation,NYSE,False,Technology,Software - Infrastructure,530026528768.0,184.289993,20279900,3737382629.0,2026-06-18
+KLAC.US,KLAC,KLA Corporation,NASDAQ,False,Technology,Semiconductor Equipment & Materials,339056787456.0,259.559998,14048560,3646444206.0,2026-06-18
+BE.US,BE,Bloom Energy Corp,NYSE,False,Industrials,Electrical Equipment & Parts,93556432896.0,328.910004,11015900,3623239713.0,2026-06-18
+JPM.US,JPM,JPMorgan Chase & Co,NYSE,False,Financial Services,Banks - Diversified,871430684672.0,325.220001,11094900,3608283389.0,2026-06-18
+QCOM.US,QCOM,Qualcomm Incorporated,NASDAQ,False,Technology,Semiconductors,238319943680.0,226.110001,14123700,3193509821.0,2026-06-18
+APP.US,APP,Applovin Corp,NASDAQ,False,Communication Services,Advertising Agencies,157794156544.0,469.709991,6734300,3163167992.0,2026-06-18
+RKLB.US,RKLB,Rocket Lab USA Inc.,NASDAQ,False,Industrials,Aerospace & Defense,67005562880.0,107.239998,28928300,3102270834.0,2026-06-18
+DELL.US,DELL,Dell Technologies Inc,NYSE,False,Technology,Computer Hardware,264595308544.0,409.5,7036583,2881480738.0,2026-06-18
+UNH.US,UNH,UnitedHealth Group Incorporated,NYSE,False,Healthcare,Healthcare Plans,364129550336.0,400.959991,6777900,2717666723.0,2026-06-18
+CAT.US,CAT,Caterpillar Inc,NYSE,False,Industrials,Farm & Heavy Construction Machinery,454060769280.0,985.820007,2743871,2704962928.0,2026-06-18
+LLY.US,LLY,Eli Lilly and Company,NYSE,False,Healthcare,Drug Manufacturers - General,979640254464.0,1098.569946,2438400,2678752956.0,2026-06-18
+BRK-B.US,BRK-B,Berkshire Hathaway Inc,NYSE,False,Financial Services,Insurance - Diversified,1055693602816.0,489.459991,5412000,2648957471.0,2026-06-18
+XOM.US,XOM,Exxon Mobil Corp,NYSE,False,Energy,Oil & Gas Integrated,571215183872.0,137.809998,18925400,2608109336.0,2026-06-18
+WMT.US,WMT,Walmart Inc.,NASDAQ,False,Consumer Defensive,Discount Stores,932527669248.0,117.18,21711100,2544106698.0,2026-06-18
+CRM.US,CRM,Salesforce.com Inc,NYSE,False,Technology,Software - Application,124307816448.0,151.779999,16385300,2486960818.0,2026-06-18
+NOW.US,NOW,ServiceNow Inc,NYSE,False,Technology,Software - Application,98015518720.0,95.040001,26049350,2475730250.0,2026-06-18
+ASTS.US,ASTS,Ast Spacemobile Inc,NASDAQ,False,Technology,Communication Equipment,31306129408.0,80.660004,30349600,2447998857.0,2026-06-18
+GS.US,GS,Goldman Sachs Group Inc,NYSE,False,Financial Services,Capital Markets,323493363712.0,1096.560059,2206000,2419011490.0,2026-06-18
+TXN.US,TXN,Texas Instruments Incorporated,NASDAQ,False,Technology,Semiconductors,293832556544.0,322.859985,7459200,2408277200.0,2026-06-18
+SATS.US,SATS,EchoStar Corporation,NASDAQ,False,Communication Services,Telecom Services,31638939648.0,109.169998,21699400,2368923455.0,2026-06-18
+V.US,V,Visa Inc. Class A,NYSE,False,Financial Services,Credit Services,622326579200.0,327.23999,6895200,2256385179.0,2026-06-18
+ALAB.US,ALAB,"Astera Labs, Inc.",NASDAQ,False,Technology,Semiconductors,71489110016.0,417.070007,5372900,2240875441.0,2026-06-18
+CSCO.US,CSCO,Cisco Systems Inc,NASDAQ,False,Technology,Communication Equipment,471159111680.0,119.540001,18472000,2208142898.0,2026-06-18
+COHR.US,COHR,Coherent Inc,NYSE,False,Technology,Scientific & Technical Instruments,76215214080.0,389.570007,5594400,2179410447.0,2026-06-18
+IREN.US,IREN,IREN Ltd,NASDAQ,False,Financial Services,Capital Markets,21428426752.0,59.959999,36100500,2164585944.0,2026-06-18
+GLW.US,GLW,Corning Incorporated,NYSE,False,Technology,Electronic Components,167755530240.0,194.919998,11093500,2162344998.0,2026-06-18
+CRDO.US,CRDO,Credo Technology Group Holding Ltd,NASDAQ,False,Technology,Semiconductors,50690285568.0,271.829987,7921300,2153246876.0,2026-06-18
+AAL.US,AAL,American Airlines Group,NASDAQ,False,Industrials,Airlines,10575548416.0,15.99,134505300,2150739747.0,2026-06-18
+AAOI.US,AAOI,Applied Opt,NASDAQ,False,Technology,Communication Equipment,12987292672.0,161.850006,13109800,2121821209.0,2026-06-18
+ROKU.US,ROKU,Roku Inc,NASDAQ,False,Communication Services,Entertainment,20481603584.0,138.070007,15208900,2099892929.0,2026-06-18
+ADBE.US,ADBE,Adobe Systems Incorporated,NASDAQ,False,Technology,Software - Application,77576101888.0,195.160004,10731500,2094359583.0,2026-06-18
+MSTR.US,MSTR,MicroStrategy Incorporated,NASDAQ,False,Technology,Software - Application,39954190336.0,112.529999,18052900,2031492819.0,2026-06-18
+MA.US,MA,Mastercard Inc,NYSE,False,Financial Services,Credit Services,432770547712.0,489.790009,3984200,1951421354.0,2026-06-18
+PANW.US,PANW,Palo Alto Networks Inc,NASDAQ,False,Technology,Software - Infrastructure,234540695552.0,287.779999,6773000,1949133933.0,2026-06-18
+SMCI.US,SMCI,Super Micro Computer Inc,NASDAQ,False,Technology,Computer Hardware,19833126912.0,30.66,61776800,1894076688.0,2026-06-18
+ADI.US,ADI,Analog Devices Inc,NASDAQ,False,Technology,Semiconductors,211619823616.0,434.459991,4350900,1890291975.0,2026-06-18
+C.US,C,Citigroup Inc.,NYSE,False,Financial Services,Banks - Diversified,243999834112.0,143.059998,13140300,1879851292.0,2026-06-18
+BAC.US,BAC,Bank of America Corp,NYSE,False,Financial Services,Banks - Diversified,398828404736.0,56.200001,33409800,1877630793.0,2026-06-18
+GE.US,GE,GE Aerospace,NYSE,False,Industrials,Aerospace & Defense,373672869888.0,357.640015,5210300,1863411770.0,2026-06-18
+AZO.US,AZO,AutoZone Inc,NYSE,False,Consumer Cyclical,Auto Parts,50028724224.0,3064.47998,596400,1827655860.0,2026-06-18
+COST.US,COST,Costco Wholesale Corp,NASDAQ,False,Consumer Defensive,Discount Stores,421947932672.0,951.450012,1893700,1801760888.0,2026-06-18
+VRT.US,VRT,Vertiv Holdings Co,NYSE,False,Industrials,Electrical Equipment & Parts,127927427072.0,333.049988,5346400,1780618456.0,2026-06-18
+JNJ.US,JNJ,Johnson & Johnson,NYSE,False,Healthcare,Drug Manufacturers - General,549784256512.0,228.389999,7732000,1765911472.0,2026-06-18
+TER.US,TER,Teradyne Inc,NASDAQ,False,Technology,Semiconductor Equipment & Materials,68552945664.0,437.920013,3977800,1741958228.0,2026-06-18
+HD.US,HD,The Home Depot Inc,NYSE,False,Consumer Cyclical,Home Improvement Retail,333316161536.0,334.279999,5131500,1715357815.0,2026-06-18
+CIEN.US,CIEN,Ciena Corp,NYSE,False,Technology,Communication Equipment,60615794688.0,428.220001,3955900,1693995502.0,2026-06-18
+NOK.US,NOK,Nokia Corp ADR,NYSE,True,Technology,Communication Equipment,75308384256.0,13.49,123976203,1672438978.0,2026-06-18
+MPWR.US,MPWR,Monolithic Power Systems Inc,NASDAQ,False,Technology,Semiconductors,76824576000.0,1563.699951,1039700,1625778839.0,2026-06-18
+CRWD.US,CRWD,Crowdstrike Holdings Inc,NASDAQ,False,Technology,Software - Infrastructure,174341259264.0,684.859985,2310900,1582642939.0,2026-06-18
+CVX.US,CVX,Chevron Corp,NYSE,False,Energy,Oil & Gas Integrated,345801129984.0,173.630005,8703400,1511171386.0,2026-06-18
+APH.US,APH,Amphenol Corporation,NYSE,False,Technology,Electronic Components,201709256704.0,163.960007,9036445,1481615585.0,2026-06-18
+SOFI.US,SOFI,SoFi Technologies Inc.,NASDAQ,False,Financial Services,Credit Services,22973894656.0,17.91,80961100,1450013301.0,2026-06-18
+HPE.US,HPE,Hewlett Packard Enterprise Co,NYSE,False,Technology,Communication Equipment,62780489728.0,47.41,30500700,1446038187.0,2026-06-18
+IBM.US,IBM,International Business Machines,NYSE,False,Technology,Information Technology Services,234125443072.0,249.100006,5748900,1432051024.0,2026-06-18
+SNOW.US,SNOW,Snowflake Inc.,NYSE,False,Technology,Software - Application,80511713280.0,232.289993,6155500,1429861052.0,2026-06-18
+BABA.US,BABA,Alibaba Group Holding Ltd,NYSE,False,Consumer Cyclical,Internet Retail,256947240960.0,107.099998,13280700,1422362943.0,2026-06-18
+UBER.US,UBER,Uber Technologies Inc,NYSE,False,Technology,Software - Application,145830313984.0,71.639999,19678100,1409739064.0,2026-06-18
+KO.US,KO,The Coca-Cola Company,NYSE,False,Consumer Defensive,Beverages - Non-Alcoholic,341574090752.0,79.389999,17565100,1394493271.0,2026-06-18
+HON.US,HON,Honeywell International Inc,NASDAQ,False,Industrials,Conglomerates,145112891392.0,229.009995,5988800,1371495058.0,2026-06-18
+COF.US,COF,Capital One Financial Corporation,NYSE,False,Financial Services,Credit Services,125410664448.0,201.529999,6765700,1363491514.0,2026-06-18
+INTU.US,INTU,Intuit Inc,NASDAQ,False,Technology,Software - Application,73034375168.0,267.0,5098600,1361326200.0,2026-06-18
+ON.US,ON,ON Semiconductor Corporation,NASDAQ,False,Technology,Semiconductors,47286247424.0,121.620003,11015800,1339741629.0,2026-06-18
+COIN.US,COIN,Coinbase Global Inc,NASDAQ,False,Financial Services,Financial Data & Stock Exchanges,43012603904.0,163.259995,8151500,1330813849.0,2026-06-18
+PEP.US,PEP,PepsiCo Inc,NASDAQ,False,Consumer Defensive,Beverages - Non-Alcoholic,194132951040.0,142.020004,9345200,1327205341.0,2026-06-18
+MS.US,MS,Morgan Stanley,NYSE,False,Financial Services,Capital Markets,352002670592.0,223.169998,5862500,1308334113.0,2026-06-18
+DDOG.US,DDOG,Datadog Inc,NASDAQ,False,Technology,Software - Application,79379120128.0,223.0,5754100,1283164300.0,2026-06-18
+PG.US,PG,Procter & Gamble Company,NYSE,False,Consumer Defensive,Household & Personal Products,350174740480.0,150.380005,8518945,1281078992.0,2026-06-18
+BKNG.US,BKNG,Booking Holdings Inc,NASDAQ,False,Consumer Cyclical,Travel Services,133108621312.0,171.779999,7444100,1278747491.0,2026-06-18
+LIN.US,LIN,Linde plc Ordinary Shares,NASDAQ,False,Basic Materials,Specialty Chemicals,236791185408.0,512.150024,2490600,1275560850.0,2026-06-18
+BA.US,BA,The Boeing Company,NYSE,False,Industrials,Aerospace & Defense,175570698240.0,222.720001,5665800,1261886982.0,2026-06-18
+MRK.US,MRK,Merck & Company Inc,NYSE,False,Healthcare,Drug Manufacturers - General,281238929408.0,113.870003,10926900,1244246136.0,2026-06-18
+IONQ.US,IONQ,IONQ Inc,NYSE,False,Technology,Computer Hardware,21108416512.0,56.549999,21916300,1239366743.0,2026-06-18
+AXP.US,AXP,American Express Company,NYSE,False,Financial Services,Credit Services,230626344960.0,338.0,3657300,1236167400.0,2026-06-18
+ANET.US,ANET,Arista Networks,NYSE,False,Technology,Computer Hardware,213643264000.0,169.669998,7240800,1228546522.0,2026-06-18
+ABBV.US,ABBV,AbbVie Inc,NYSE,False,Healthcare,Drug Manufacturers - General,382492999680.0,216.490005,5624200,1217583086.0,2026-06-18
+FOXA.US,FOXA,Fox Corp Class A,NASDAQ,False,Communication Services,Entertainment,21931409408.0,52.23,23228200,1213208886.0,2026-06-18
+WFC.US,WFC,Wells Fargo & Company,NYSE,False,Financial Services,Banks - Diversified,251547566080.0,82.199997,14526900,1194111136.0,2026-06-18
+AMGN.US,AMGN,Amgen Inc,NASDAQ,False,Healthcare,Drug Manufacturers - General,182205513728.0,337.600006,3516400,1187136661.0,2026-06-18
+CBRS.US,CBRS,Cerebras Systems Inc. Class A Common Stock,NASDAQ,False,Technology,Semiconductors,51544748032.0,234.710007,5006500,1175075650.0,2026-06-18
+MCHP.US,MCHP,Microchip Technology Inc,NASDAQ,False,Technology,Semiconductors,54083248128.0,99.769997,11611700,1158499274.0,2026-06-18
+ABT.US,ABT,Abbott Laboratories,NYSE,False,Healthcare,Medical Devices,153993707520.0,88.410004,13053000,1154015782.0,2026-06-18
+FCX.US,FCX,Freeport-McMoran Copper & Gold Inc,NYSE,False,Basic Materials,Copper,98731606016.0,68.68,16490300,1132553804.0,2026-06-18
+RTX.US,RTX,RTX Corporation,NYSE,False,Industrials,Aerospace & Defense,249944440832.0,185.600006,6073937,1127322744.0,2026-06-18
+MCD.US,MCD,McDonald’s Corporation,NYSE,False,Consumer Cyclical,Restaurants,197954027520.0,278.609985,4028800,1122463908.0,2026-06-18
+DIS.US,DIS,Walt Disney Company,NYSE,False,Communication Services,Entertainment,180406173696.0,103.889999,10694600,1111061983.0,2026-06-18
+SCHW.US,SCHW,Charles Schwab Corp,NYSE,False,Financial Services,Capital Markets,159478726656.0,91.699997,12107300,1110239374.0,2026-06-18
+NXPI.US,NXPI,NXP Semiconductors NV,NASDAQ,False,Technology,Semiconductors,79091613696.0,313.269989,3543800,1110166187.0,2026-06-18
+VZ.US,VZ,Verizon Communications Inc,NYSE,False,Communication Services,Telecom Services,189445095424.0,45.369999,24208500,1098339621.0,2026-06-18
+PM.US,PM,Philip Morris International Inc,NYSE,False,Consumer Defensive,Tobacco,278046900224.0,178.399994,6070500,1082977164.0,2026-06-18
+T.US,T,AT&T Inc.,NYSE,False,Communication Services,Telecom Services,152932941824.0,22.01,48293300,1062935533.0,2026-06-18
+CEG.US,CEG,Constellation Energy Corp,NASDAQ,False,Utilities,Utilities - Independent Power Producers,97867374592.0,274.059998,3798600,1041044308.0,2026-06-18
+CME.US,CME,CME Group Inc,NASDAQ,False,Financial Services,Financial Data & Stock Exchanges,89022701568.0,246.380005,4095693,1009096862.0,2026-06-18
+CRCL.US,CRCL,"Circle Internet Group, Inc.",NYSE,False,Financial Services,Capital Markets,21444732928.0,80.230003,12394300,994394726.0,2026-06-18
+TMUS.US,TMUS,T-Mobile US Inc,NASDAQ,False,Communication Services,Telecom Services,196604116992.0,181.669998,5430800,986613425.0,2026-06-18
+AXTI.US,AXTI,AXT Inc,NASDAQ,False,Technology,Semiconductor Equipment & Materials,5532838400.0,84.57,11495500,972174435.0,2026-06-18
+APLD.US,APLD,Applied Digital Corporation,NASDAQ,False,Technology,Information Technology Services,13314002944.0,46.59,20750359,966759226.0,2026-06-18
+CVNA.US,CVNA,Carvana Co,NYSE,False,Consumer Cyclical,Auto & Truck Dealerships,73005383680.0,66.559998,14501218,965201041.0,2026-06-18
+NEM.US,NEM,Newmont Goldcorp Corp,NYSE,False,Basic Materials,Gold,110801305600.0,103.790001,9216700,956601302.0,2026-06-18
+GILD.US,GILD,Gilead Sciences Inc,NASDAQ,False,Healthcare,Drug Manufacturers - General,153656688640.0,123.760002,7726700,956256407.0,2026-06-18
+SHOP.US,SHOP,Shopify Inc,NASDAQ,False,Technology,Software - Application,141249708032.0,108.849998,8775800,955245812.0,2026-06-18
+TMO.US,TMO,Thermo Fisher Scientific Inc,NYSE,False,Healthcare,Diagnostics & Research,172659048448.0,464.609985,2042500,948965894.0,2026-06-18
+ETN.US,ETN,Eaton Corporation PLC,NYSE,False,Industrials,Specialty Industrial Machinery,163773284352.0,421.769989,2242500,945819200.0,2026-06-18
+CMI.US,CMI,Cummins Inc,NYSE,False,Industrials,Specialty Industrial Machinery,98918842368.0,716.859985,1312562,940923176.0,2026-06-18
+DASH.US,DASH,"DoorDash, Inc. Class A Common Stock",NASDAQ,False,Consumer Cyclical,Internet Retail,75579768832.0,173.460007,5354900,928860991.0,2026-06-18
+WELL.US,WELL,Welltower Inc,NYSE,False,Real Estate,REIT - Healthcare Facilities,145877204992.0,206.649994,4469541,923630621.0,2026-06-18
+CCL.US,CCL,Carnival Corporation,NYSE,False,Consumer Cyclical,Travel Services,42759258112.0,30.870001,29553300,912310401.0,2026-06-18
+ISRG.US,ISRG,Intuitive Surgical Inc,NASDAQ,False,Healthcare,Medical Instruments & Supplies,144066363392.0,406.779999,2239400,910943130.0,2026-06-18
+TFC.US,TFC,Truist Financial Corp,NYSE,False,Financial Services,Banks - Regional,60213350400.0,48.330002,18836738,910379585.0,2026-06-18
+SPOT.US,SPOT,Spotify Technology SA,NYSE,False,Communication Services,Internet Content & Information,96246636544.0,468.079987,1944000,909947495.0,2026-06-18
+FIX.US,FIX,Comfort Systems USA Inc,NYSE,False,Industrials,Engineering & Construction,69221294080.0,1967.410034,458560,902175545.0,2026-06-18
+SYK.US,SYK,Stryker Corporation,NYSE,False,Healthcare,Medical Devices,117998436352.0,307.799988,2930400,901977085.0,2026-06-18
+STM.US,STM,STMicroelectronics NV ADR,NYSE,True,Technology,Semiconductors,69672566784.0,78.389999,11434200,896326927.0,2026-06-18
+NEE.US,NEE,Nextera Energy Inc,NYSE,False,Utilities,Utilities - Regulated Electric,180926267392.0,86.75,10284300,892163025.0,2026-06-18
+NKE.US,NKE,Nike Inc,NYSE,False,Consumer Cyclical,Footwear & Accessories,66936094720.0,45.200001,19591400,885531300.0,2026-06-18
+COP.US,COP,ConocoPhillips,NYSE,False,Energy,Oil & Gas E&P,131258990592.0,107.739998,8197500,883198634.0,2026-06-18
+SNPS.US,SNPS,Synopsys Inc,NASDAQ,False,Technology,Software - Infrastructure,87220748288.0,455.51001,1924900,876811218.0,2026-06-18
+FLEX.US,FLEX,Flex Ltd,NASDAQ,False,Technology,Electronic Components,54081044480.0,147.610001,5929000,875179696.0,2026-06-18
+MELI.US,MELI,MercadoLibre Inc.,NASDAQ,False,Consumer Cyclical,Internet Retail,82897502208.0,1635.150024,532507,870728834.0,2026-06-18
+DAL.US,DAL,Delta Air Lines Inc,NYSE,False,Industrials,Airlines,55305785344.0,84.18,10288300,866069094.0,2026-06-18
+PFE.US,PFE,Pfizer Inc,NYSE,False,Healthcare,Drug Manufacturers - General,143682977792.0,25.209999,34194100,862033227.0,2026-06-18
+TJX.US,TJX,The TJX Companies Inc,NYSE,False,Consumer Cyclical,Apparel Retail,180961624064.0,163.809998,5174900,847700359.0,2026-06-18
+RDDT.US,RDDT,"Reddit, Inc.",NYSE,False,Communication Services,Internet Content & Information,33681383424.0,174.960007,4844000,847506274.0,2026-06-18
+DE.US,DE,Deere & Company,NYSE,False,Industrials,Farm & Heavy Construction Machinery,159057936384.0,589.23999,1435997,846146858.0,2026-06-18
+PYPL.US,PYPL,PayPal Holdings Inc,NASDAQ,False,Financial Services,Credit Services,37498302464.0,42.509998,19507100,829246782.0,2026-06-18
+WULF.US,WULF,Terawulf Inc,NASDAQ,False,Financial Services,Capital Markets,14360536064.0,28.98,28272400,819334152.0,2026-06-18
+HIMS.US,HIMS,Hims Hers Health Inc,NYSE,False,Healthcare,Drug Manufacturers - Specialty & Generic,8209804800.0,35.470001,22980500,815118358.0,2026-06-18
+NU.US,NU,Nu Holdings Ltd,NYSE,False,Financial Services,Banks - Regional,61792727040.0,12.71,63823200,811192872.0,2026-06-18
+SPGI.US,SPGI,S&P Global Inc,NYSE,False,Financial Services,Financial Data & Stock Exchanges,121632325632.0,410.920013,1966900,808238574.0,2026-06-18
+MRNA.US,MRNA,Moderna Inc,NASDAQ,False,Healthcare,Biotechnology,25378449408.0,63.959999,12448000,796174068.0,2026-06-18
+SHW.US,SHW,Sherwin-Williams Co,NYSE,False,Basic Materials,Specialty Chemicals,79118237696.0,320.790009,2416800,775285294.0,2026-06-18
+ACN.US,ACN,Accenture plc,NYSE,False,Technology,Information Technology Services,78316347392.0,127.980003,6026500,771271488.0,2026-06-18
+PWR.US,PWR,Quanta Services Inc,NYSE,False,Industrials,Engineering & Construction,105379733504.0,702.25,1095800,769525550.0,2026-06-18
+BSX.US,BSX,Boston Scientific Corp,NYSE,False,Healthcare,Medical Devices,67317026816.0,45.290001,16762400,759169113.0,2026-06-18
+FTNT.US,FTNT,Fortinet Inc,NASDAQ,False,Technology,Software - Infrastructure,106036199424.0,144.729996,5207300,753652508.0,2026-06-18
+UAL.US,UAL,United Airlines Holdings Inc,NASDAQ,False,Industrials,Airlines,38403088384.0,118.32,6360100,752527032.0,2026-06-18
+HWM.US,HWM,Howmet Aerospace Inc,NYSE,False,Industrials,Aerospace & Defense,111093850112.0,277.660004,2701800,750181799.0,2026-06-18
+VST.US,VST,Vistra Corp.,NYSE,False,Utilities,Utilities - Independent Power Producers,55213629440.0,163.75,4573500,748910625.0,2026-06-18
+PH.US,PH,Parker-Hannifin Corporation,NYSE,False,Industrials,Specialty Industrial Machinery,120194375680.0,953.27002,784400,747745004.0,2026-06-18
+RGTI.US,RGTI,Rigetti Computing Inc,NASDAQ,False,Technology,Computer Hardware,7100039168.0,21.360001,34662800,740397443.0,2026-06-18
+SLB.US,SLB,Schlumberger NV,NYSE,False,Energy,Oil & Gas Equipment & Services,71897325568.0,48.09,15336500,737532285.0,2026-06-18
+EQIX.US,EQIX,Equinix Inc,NASDAQ,False,Real Estate,REIT - Specialty,107716411392.0,1092.189941,672800,734825392.0,2026-06-18
+FISV.US,FISV,"Fiserv, Inc. Common Stock",NASDAQ,False,,,25521534976.0,47.860001,15267700,730712137.0,2026-06-18
+CVS.US,CVS,CVS Health Corp,NYSE,False,Healthcare,Healthcare Plans,125449175040.0,98.32,7417100,729249272.0,2026-06-18
+QBTS.US,QBTS,D-Wave Quantum Inc.,NYSE,False,Technology,Computer Hardware,9146292224.0,24.690001,29431600,726666233.0,2026-06-18
+DVN.US,DVN,Devon Energy Corporation,NYSE,False,Energy,Oil & Gas E&P,48581337088.0,42.119999,17051200,718196527.0,2026-06-18
+CDNS.US,CDNS,Cadence Design Systems Inc,NASDAQ,False,Technology,Software - Application,106848362496.0,387.390015,1846672,715382294.0,2026-06-18
+MMM.US,MMM,3M Company,NYSE,False,Industrials,Conglomerates,83763707904.0,160.600006,4426200,710847747.0,2026-06-18
+BX.US,BX,Blackstone Group Inc,NYSE,False,Financial Services,Asset Management,151303815168.0,123.790001,5703200,705999134.0,2026-06-18
+VLO.US,VLO,Valero Energy Corporation,NYSE,False,Energy,Oil & Gas Refining & Marketing,70165217280.0,236.300003,2976200,703276069.0,2026-06-18
+WDAY.US,WDAY,Workday Inc,NASDAQ,False,Technology,Software - Application,28878608384.0,116.93,5995300,701030429.0,2026-06-18
+RBLX.US,RBLX,Roblox Corp,NYSE,False,Communication Services,Electronic Gaming & Multimedia,36894384128.0,51.529999,13594358,700517254.0,2026-06-18
+SBUX.US,SBUX,Starbucks Corporation,NASDAQ,False,Consumer Cyclical,Restaurants,114710806528.0,100.650002,6932300,697736009.0,2026-06-18
+RCL.US,RCL,Royal Caribbean Cruises Ltd,NYSE,False,Consumer Cyclical,Travel Services,83813613568.0,312.51001,2226400,695772286.0,2026-06-18
+PNC.US,PNC,PNC Financial Services Group Inc,NYSE,False,Financial Services,Banks - Regional,93179060224.0,232.039993,2970200,689205187.0,2026-06-18
+CIFR.US,CIFR,Cipher Mining Inc,NASDAQ,False,Technology,Information Technology Services,11936055296.0,29.18,23514466,686152118.0,2026-06-18
+SPG.US,SPG,Simon Property Group Inc,NYSE,False,Real Estate,REIT - Retail,80301096960.0,211.330002,3243022,685347846.0,2026-06-18
+CBOE.US,CBOE,Cboe Global Markets Inc,BATS,False,Financial Services,Financial Data & Stock Exchanges,26069258240.0,249.100006,2743134,683314696.0,2026-06-18
+AMKR.US,AMKR,Amkor Technology Inc,NASDAQ,False,Technology,Semiconductor Equipment & Materials,22422546432.0,90.459999,7539300,682005070.0,2026-06-18
+HCA.US,HCA,"HCA Healthcare, Inc.",NYSE,False,Healthcare,Medical Care Facilities,83227639808.0,375.170013,1811000,679432894.0,2026-06-18
+AEP.US,AEP,American Electric Power Co Inc,NASDAQ,False,Utilities,Utilities - Regulated Electric,69476769792.0,127.690002,5285800,674943813.0,2026-06-18
+VRTX.US,VRTX,Vertex Pharmaceuticals Inc,NASDAQ,False,Healthcare,Biotechnology,114626142208.0,451.630005,1486500,671348002.0,2026-06-18
+MDT.US,MDT,Medtronic PLC,NYSE,False,Healthcare,Medical Devices,101558779904.0,79.339996,8459400,671168762.0,2026-06-18
+F.US,F,Ford Motor Company,NYSE,False,Consumer Cyclical,Auto Manufacturers,56024780800.0,14.06,47490000,667709400.0,2026-06-18
+RDW.US,RDW,Redwire Corp,NYSE,False,Industrials,Aerospace & Defense,2854483712.0,14.35,46413200,666029420.0,2026-06-18
+SO.US,SO,Southern Company,NYSE,False,Utilities,Utilities - Regulated Electric,104940453888.0,93.089996,7127700,663517564.0,2026-06-18
+MAR.US,MAR,Marriott International Inc,NASDAQ,False,Consumer Cyclical,Lodging,104473436160.0,396.200012,1672000,662446420.0,2026-06-18
+TRV.US,TRV,The Travelers Companies Inc,NYSE,False,Financial Services,Insurance - Property & Casualty,65454161920.0,307.809998,2142800,659575264.0,2026-06-18
+UNP.US,UNP,Union Pacific Corporation,NYSE,False,Industrials,Railroads,152513052672.0,256.880005,2552700,655737589.0,2026-06-18
+MPC.US,MPC,Marathon Petroleum Corp,NYSE,False,Energy,Oil & Gas Refining & Marketing,70914326528.0,242.910004,2687400,652796345.0,2026-06-18
+CMCSA.US,CMCSA,Comcast Corp,NASDAQ,False,Communication Services,Telecom Services,80125091840.0,22.43,28797800,645934654.0,2026-06-18
+BMY.US,BMY,Bristol-Myers Squibb Company,NYSE,False,Healthcare,Drug Manufacturers - General,110271848448.0,54.0,11945700,645067800.0,2026-06-18
+ADSK.US,ADSK,Autodesk Inc,NASDAQ,False,Technology,Software - Application,40924172288.0,193.820007,3306900,640943381.0,2026-06-18
+TTWO.US,TTWO,Take-Two Interactive Software Inc,NASDAQ,False,Communication Services,Electronic Gaming & Multimedia,44426317824.0,239.279999,2674900,640050069.0,2026-06-18
+AEM.US,AEM,Agnico Eagle Mines Limited,NYSE,False,Basic Materials,Gold,83336036352.0,166.660004,3812300,635357933.0,2026-06-18
+CMG.US,CMG,Chipotle Mexican Grill Inc,NYSE,False,Consumer Cyclical,Restaurants,41676029952.0,32.490002,19527200,634438767.0,2026-06-18
+ICE.US,ICE,Intercontinental Exchange Inc,NYSE,False,Financial Services,Financial Data & Stock Exchanges,75710816256.0,133.880005,4735900,634042316.0,2026-06-18
+EOG.US,EOG,EOG Resources Inc,NYSE,False,Energy,Oil & Gas E&P,69231058944.0,129.979996,4867700,632703627.0,2026-06-18
+ENTG.US,ENTG,Entegris Inc,NASDAQ,False,Technology,Semiconductor Equipment & Materials,27226671104.0,178.770004,3536400,632202242.0,2026-06-18
+CSX.US,CSX,CSX Corporation,NASDAQ,False,Industrials,Railroads,84786880512.0,45.630001,13764800,628087838.0,2026-06-18
+TGT.US,TGT,Target Corporation,NYSE,False,Consumer Defensive,Discount Stores,59380948992.0,130.740005,4803300,627983466.0,2026-06-18
+GM.US,GM,General Motors Company,NYSE,False,Consumer Cyclical,Auto Manufacturers,71493033984.0,79.290001,7894200,625931126.0,2026-06-18
+MCK.US,MCK,McKesson Corporation,NYSE,False,Healthcare,Medical Distribution,87882063872.0,750.630005,824600,618969502.0,2026-06-18
+BMNR.US,BMNR,"BitMine Immersion Technologies, Inc.",NYSE,False,Financial Services,Capital Markets,9192969216.0,16.139999,38202000,616580242.0,2026-06-18
+REGN.US,REGN,Regeneron Pharmaceuticals Inc,NASDAQ,False,Healthcare,Biotechnology,63945519104.0,609.940002,1007500,614514552.0,2026-06-18
+RKT.US,RKT,Rocket Companies Inc,NYSE,False,Financial Services,Mortgage Finance,40800378880.0,14.42,42584500,614068490.0,2026-06-18
+CDE.US,CDE,Coeur Mining Inc,NYSE,False,Basic Materials,Gold,18044659712.0,17.51,34972000,612359720.0,2026-06-18
+HUM.US,HUM,Humana Inc,NYSE,False,Healthcare,Healthcare Plans,43300179968.0,360.649994,1697138,612072810.0,2026-06-18
+JBL.US,JBL,Jabil Circuit Inc,NYSE,False,Technology,Electronic Components,39234318336.0,371.880005,1643000,610998848.0,2026-06-18
+VRSK.US,VRSK,Verisk Analytics Inc,NASDAQ,False,Industrials,Consulting Services,22771595264.0,173.800003,3488200,606249170.0,2026-06-18
+PDD.US,PDD,PDD Holdings Inc.,NASDAQ,False,Consumer Cyclical,Internet Retail,113245421568.0,79.559998,7589400,603812649.0,2026-06-18
+NET.US,NET,Cloudflare Inc,NYSE,False,Technology,Software - Infrastructure,79527755776.0,224.059998,2690600,602855831.0,2026-06-18
+WBD.US,WBD,Warner Bros Discovery Inc,NASDAQ,False,Communication Services,Entertainment,65686986752.0,26.200001,22974500,601931923.0,2026-06-18
+DLR.US,DLR,Digital Realty Trust Inc,NYSE,False,Real Estate,REIT - Specialty,67301076992.0,188.149994,3187000,599634031.0,2026-06-18
+MDLZ.US,MDLZ,Mondelez International Inc,NASDAQ,False,Consumer Defensive,Confectioners,77173022720.0,60.119999,9967400,599240078.0,2026-06-18
+TT.US,TT,Trane Technologies plc,NYSE,False,Industrials,Building Products & Equipment,106858217472.0,483.399994,1232800,595935513.0,2026-06-18
+OKLO.US,OKLO,Oklo Inc.,NYSE,False,Utilities,Utilities - Independent Power Producers,10643028992.0,61.169998,9642900,589856174.0,2026-06-18
+CRH.US,CRH,CRH PLC ADR,NYSE,True,Basic Materials,Building Materials,74330587136.0,111.239998,5298100,589360633.0,2026-06-18
+LOW.US,LOW,Lowe's Companies Inc,NYSE,False,Consumer Cyclical,Home Improvement Retail,124589113344.0,222.199997,2647600,588296712.0,2026-06-18
+PLD.US,PLD,Prologis Inc,NYSE,False,Real Estate,REIT - Industrial,131692150784.0,140.539993,4177838,587153323.0,2026-06-18
+LMT.US,LMT,Lockheed Martin Corporation,NYSE,False,Industrials,Aerospace & Defense,117806481408.0,510.950012,1142300,583658199.0,2026-06-18
+MO.US,MO,Altria Group,NYSE,False,Consumer Defensive,Tobacco,115422887936.0,69.120003,8409138,581239644.0,2026-06-18
+MCO.US,MCO,Moodys Corporation,NYSE,False,Financial Services,Financial Data & Stock Exchanges,78721433600.0,450.670013,1285400,579291235.0,2026-06-18
+BLK.US,BLK,BlackRock Inc,NYSE,False,Financial Services,Asset Management,171005591552.0,1050.089966,549400,576919427.0,2026-06-18
+ADP.US,ADP,Automatic Data Processing Inc,NASDAQ,False,Technology,Software - Application,87305961472.0,218.410004,2615400,571229524.0,2026-06-18
+NUVL.US,NUVL,Nuvalent Inc,NASDAQ,False,Healthcare,Biotechnology,9766798336.0,123.43,4603600,568222348.0,2026-06-18
+ORLY.US,ORLY,O’Reilly Automotive Inc,NASDAQ,False,Consumer Cyclical,Auto Parts,71965614080.0,86.839996,6523200,566474662.0,2026-06-18
+MTSI.US,MTSI,MACOM Technology Solutions Holdings Inc,NASDAQ,False,Technology,Semiconductors,29862930432.0,391.410004,1444800,565509174.0,2026-06-18
+TDG.US,TDG,Transdigm Group Incorporated,NYSE,False,Industrials,Aerospace & Defense,74297139200.0,1328.310059,424500,563867620.0,2026-06-18
+NVTS.US,NVTS,Navitas Semiconductor Corp,NASDAQ,False,Technology,Semiconductors,5850193920.0,24.02,23356600,561025532.0,2026-06-18
+AON.US,AON,Aon PLC,NYSE,False,Financial Services,Insurance Brokers,67861934080.0,317.73999,1751080,556388142.0,2026-06-18
+SHEL.US,SHEL,Shell PLC ADR,NYSE,True,Energy,Oil & Gas Integrated,218461814784.0,78.809998,7012098,552623429.0,2026-06-18
+WM.US,WM,Waste Management Inc,NYSE,False,Industrials,Waste Management,86178160640.0,214.600006,2570900,551715155.0,2026-06-18
+ECL.US,ECL,Ecolab Inc,NYSE,False,Basic Materials,Specialty Chemicals,75740463104.0,269.119995,2046177,550667144.0,2026-06-18
+CPNG.US,CPNG,Coupang LLC,NYSE,False,Consumer Cyclical,Internet Retail,32311154688.0,18.0,30240800,544334400.0,2026-06-18
+USB.US,USB,U.S. Bancorp,NYSE,False,Financial Services,Banks - Regional,90566516736.0,58.139999,9352600,543760155.0,2026-06-18
+OXY.US,OXY,Occidental Petroleum Corporation,NYSE,False,Energy,Oil & Gas E&P,51541970944.0,51.82,10461000,542089020.0,2026-06-18
+FITB.US,FITB,Fifth Third Bancorp,NASDAQ,False,Financial Services,Banks - Regional,47798874112.0,52.740002,10265700,541413039.0,2026-06-18
+ROST.US,ROST,Ross Stores Inc,NASDAQ,False,Consumer Cyclical,Apparel Retail,74677837824.0,232.800003,2311700,538163767.0,2026-06-18
+LNG.US,LNG,Cheniere Energy Inc,NYSE,False,Energy,Oil & Gas Midstream,47574560768.0,227.029999,2353200,534246994.0,2026-06-18
+B.US,B,Barrick Mining Corporation,NYSE,False,Basic Materials,Gold,67752579072.0,40.34,13221400,533351276.0,2026-06-18
+CAH.US,CAH,Cardinal Health Inc,NYSE,False,Healthcare,Medical Distribution,51939831808.0,221.770004,2397334,531656771.0,2026-06-18
+MSI.US,MSI,Motorola Solutions Inc,NYSE,False,Technology,Communication Equipment,65596477440.0,395.170013,1339200,529211681.0,2026-06-18
+DHR.US,DHR,Danaher Corporation,NYSE,False,Healthcare,Diagnostics & Research,125395722240.0,177.169998,2980350,528028604.0,2026-06-18
+AMT.US,AMT,American Tower Corp,NYSE,False,Real Estate,REIT - Specialty,82020474880.0,176.050003,2985700,525632494.0,2026-06-18
+PGR.US,PGR,Progressive Corp,NYSE,False,Financial Services,Insurance - Property & Casualty,119275315200.0,204.869995,2565548,525603806.0,2026-06-18
+RIVN.US,RIVN,Rivian Automotive Inc,NASDAQ,False,Consumer Cyclical,Auto Manufacturers,22184153088.0,16.52,31711700,523877284.0,2026-06-18
+ABNB.US,ABNB,Airbnb Inc,NASDAQ,False,Consumer Cyclical,Travel Services,84521033728.0,142.410004,3672500,523000740.0,2026-06-18
+JCI.US,JCI,Johnson Controls International PLC,NYSE,False,Industrials,Building Products & Equipment,88356945920.0,144.820007,3602556,521722185.0,2026-06-18
+HLT.US,HLT,Hilton Worldwide Holdings Inc,NYSE,False,Consumer Cyclical,Lodging,79412854784.0,348.839996,1481042,516646685.0,2026-06-18
+ZTS.US,ZTS,Zoetis Inc,NYSE,False,Healthcare,Drug Manufacturers - Specialty & Generic,32997445632.0,78.709999,6557600,516148689.0,2026-06-18
+HSY.US,HSY,Hershey Co,NYSE,False,Consumer Defensive,Confectioners,35016851456.0,172.630005,2984100,515145198.0,2026-06-18
+UPS.US,UPS,United Parcel Service Inc,NYSE,False,Industrials,Integrated Freight & Logistics,89131655168.0,104.860001,4890000,512765405.0,2026-06-18
+ONDS.US,ONDS,Ondas Holdings Inc.,NASDAQ,False,Technology,Communication Equipment,4822415360.0,9.27,55086900,510655563.0,2026-06-18
+CTSH.US,CTSH,Cognizant Technology Solutions Corp Class A,NASDAQ,False,Technology,Information Technology Services,20670099456.0,43.700001,11623700,507955702.0,2026-06-18
+XEL.US,XEL,Xcel Energy Inc,NASDAQ,False,Utilities,Utilities - Regulated Electric,48324710400.0,77.410004,6542700,506470433.0,2026-06-18
+ONTO.US,ONTO,Onto Innovation Inc,NYSE,False,Technology,Semiconductor Equipment & Materials,16602414080.0,333.76001,1511964,504633120.0,2026-06-18
+CL.US,CL,Colgate-Palmolive Company,NYSE,False,Consumer Defensive,Household & Personal Products,71600939008.0,89.480003,5627100,503512925.0,2026-06-18
+PSX.US,PSX,Phillips 66,NYSE,False,Energy,Oil & Gas Refining & Marketing,66611343360.0,166.139999,3029300,503287899.0,2026-06-18
+VSH.US,VSH,Vishay Intertechnology Inc,NYSE,False,Technology,Semiconductors,8833267712.0,64.900002,7750481,503006232.0,2026-06-18
+ELV.US,ELV,Elevance Health Inc,NYSE,False,Healthcare,Healthcare Plans,84367589376.0,388.5,1288231,500477744.0,2026-06-18
+HL.US,HL,Hecla Mining Company,NYSE,False,Basic Materials,Other Precious Metals & Mining,10704569344.0,15.96,31164721,497388947.0,2026-06-18
+MARA.US,MARA,Marathon Digital Holdings Inc,NASDAQ,False,Financial Services,Capital Markets,5421666304.0,14.22,34567900,491555538.0,2026-06-18
+APD.US,APD,Air Products and Chemicals Inc,NYSE,False,Basic Materials,Specialty Chemicals,62397353984.0,280.209991,1748077,489828640.0,2026-06-18
+FSLR.US,FSLR,First Solar Inc,NASDAQ,False,Technology,Solar,27690731520.0,257.700012,1897300,488934233.0,2026-06-18
+PL.US,PL,Planet Labs PBC,NYSE,False,Industrials,Aerospace & Defense,10061243392.0,28.23,17232400,486470652.0,2026-06-18
+D.US,D,Dominion Energy Inc,NYSE,False,Utilities,Utilities - Regulated Electric,60167454720.0,68.410004,7105696,486100692.0,2026-06-18
+URI.US,URI,United Rentals Inc,NYSE,False,Industrials,Rental & Leasing Services,67458441216.0,1076.810059,450500,485102932.0,2026-06-18
+DOW.US,DOW,Dow Inc,NYSE,False,Basic Materials,Chemicals,22869125120.0,31.73,15288000,485088240.0,2026-06-18
+KDP.US,KDP,Keurig Dr Pepper Inc,NASDAQ,False,Consumer Defensive,Beverages - Non-Alcoholic,41850810368.0,30.76,15744700,484306972.0,2026-06-18
+FANG.US,FANG,Diamondback Energy Inc,NASDAQ,False,Energy,Oil & Gas E&P,51620990976.0,183.5,2616700,480164450.0,2026-06-18
+CNQ.US,CNQ,Canadian Natural Resources Ltd,NYSE,False,Energy,Oil & Gas E&P,85618393088.0,41.049999,11615400,476812158.0,2026-06-18
+CLS.US,CLS,Celestica Inc.,NYSE,False,Technology,Electronic Components,42833227776.0,372.549988,1279600,476714965.0,2026-06-18
+ZS.US,ZS,Zscaler Inc,NASDAQ,False,Technology,Software - Infrastructure,20189433856.0,124.849998,3815800,476402622.0,2026-06-18
+NUE.US,NUE,Nucor Corp,NYSE,False,Basic Materials,Steel,55530074112.0,243.830002,1953100,476224377.0,2026-06-18
+KEYS.US,KEYS,Keysight Technologies Inc,NYSE,False,Technology,Scientific & Technical Instruments,62149517312.0,363.670013,1307100,475353074.0,2026-06-18
+STRL.US,STRL,Sterling Construction Company Inc,NASDAQ,False,Industrials,Engineering & Construction,26447609856.0,861.880005,546200,470758859.0,2026-06-18
+GD.US,GD,General Dynamics Corporation,NYSE,False,Industrials,Aerospace & Defense,94653267968.0,350.01001,1341049,469380574.0,2026-06-18
+TEL.US,TEL,TE Connectivity Ltd,NYSE,False,Technology,Electronic Components,63528202240.0,217.639999,2148863,467678541.0,2026-06-18
+WOLF.US,WOLF,"Wolfspeed, Inc.",NYSE,False,Technology,Semiconductors,2983718144.0,57.41,8131600,466835156.0,2026-06-18
+ASX.US,ASX,ASE Industrial Holding Co Ltd ADR,NYSE,True,Technology,Semiconductors,88986443776.0,40.560001,11471500,465284051.0,2026-06-18
+CB.US,CB,Chubb Ltd,NYSE,False,Financial Services,Insurance - Property & Casualty,125433954304.0,323.399994,1432929,463409230.0,2026-06-18
+CRS.US,CRS,Carpenter Technology Corporation,NYSE,False,Industrials,Metal Fabrication,29139120128.0,586.469971,779500,457153342.0,2026-06-18
+XYZ.US,XYZ,"Block, Inc",NYSE,False,Technology,Software - Infrastructure,44507635712.0,74.779999,6103139,456392728.0,2026-06-18
+ALB.US,ALB,Albemarle Corp,NYSE,False,Basic Materials,Specialty Chemicals,18910822400.0,160.350006,2843400,455939207.0,2026-06-18
+TLN.US,TLN,Talen Energy Corporation,NASDAQ,False,Utilities,Utilities - Independent Power Producers,20852482048.0,436.290009,1041599,454439237.0,2026-06-18
+HUT.US,HUT,Hut 8 Corp. Common Stock,NASDAQ,False,Financial Services,Capital Markets,14011211776.0,124.440002,3643800,453434479.0,2026-06-18
+SRE.US,SRE,Sempra Energy,NYSE,False,Utilities,Utilities - Diversified,59284725760.0,90.690002,4969750,450706637.0,2026-06-18
+AFRM.US,AFRM,Affirm Holdings Inc,NASDAQ,False,Financial Services,Credit Services,24755701760.0,73.919998,6092500,450357588.0,2026-06-18
+JOBY.US,JOBY,Joby Aviation,NYSE,False,Industrials,Airports & Air Services,9836429312.0,10.0,44916500,449165000.0,2026-06-18
+SMTC.US,SMTC,Semtech Corporation,NASDAQ,False,Technology,Semiconductors,14739308544.0,158.229996,2838300,449104198.0,2026-06-18
+MDLN.US,MDLN,Medline Inc. Class A Common Stock,NASDAQ,False,Healthcare,Medical Instruments & Supplies,64036814848.0,35.939999,12484400,448689324.0,2026-06-18
+ITW.US,ITW,Illinois Tool Works Inc,NYSE,False,Industrials,Specialty Industrial Machinery,75978694656.0,264.089996,1698800,448636085.0,2026-06-18
+BNY.US,BNY,The Bank of New York Mellon Corporation,NYSE,False,Financial Services,Banks - Diversified,98584633344.0,143.630005,3118700,447938897.0,2026-06-18
+EMR.US,EMR,Emerson Electric Company,NYSE,False,Industrials,Specialty Industrial Machinery,84384661504.0,150.660004,2962300,446300130.0,2026-06-18
+FDX.US,FDX,FedEx Corporation,NYSE,False,Industrials,Integrated Freight & Logistics,77833527296.0,326.200012,1367100,445948036.0,2026-06-18
+TTD.US,TTD,Trade Desk Inc,NASDAQ,False,Communication Services,Advertising Agencies,8701705216.0,18.51,24055600,445269156.0,2026-06-18
+HBAN.US,HBAN,Huntington Bancshares Incorporated,NASDAQ,False,Financial Services,Banks - Regional,34177423360.0,16.860001,26327000,443873246.0,2026-06-18
+DOCN.US,DOCN,DigitalOcean Holdings Inc,NYSE,False,Technology,Software - Infrastructure,18083182592.0,173.270004,2556700,442999419.0,2026-06-18
+MKSI.US,MKSI,MKS Instruments Inc,NASDAQ,False,Technology,Scientific & Technical Instruments,27447906304.0,406.369995,1090100,442983932.0,2026-06-18
+CTAS.US,CTAS,Cintas Corporation,NASDAQ,False,Industrials,Specialty Business Services,68363390976.0,170.850006,2588600,442262326.0,2026-06-18
+DUK.US,DUK,Duke Energy Corporation,NYSE,False,Utilities,Utilities - Regulated Electric,96560791552.0,123.860001,3559554,440886362.0,2026-06-18
+IR.US,IR,Ingersoll Rand Inc,NYSE,False,Industrials,Specialty Industrial Machinery,30489053184.0,77.910004,5643900,439716272.0,2026-06-18
+EW.US,EW,Edwards Lifesciences Corp,NYSE,False,Healthcare,Medical Devices,50301886464.0,87.360001,5030000,439420805.0,2026-06-18
+APO.US,APO,Apollo Global Management LLC Class A,NYSE,False,Financial Services,Asset Management,79271157760.0,137.5,3186400,438130000.0,2026-06-18
+ODFL.US,ODFL,Old Dominion Freight Line Inc,NASDAQ,False,Industrials,Trucking,45969309696.0,221.039993,1980300,437725498.0,2026-06-18
+MNST.US,MNST,Monster Beverage Corp,NASDAQ,False,Consumer Defensive,Beverages - Non-Alcoholic,89331261440.0,91.339996,4758000,434595701.0,2026-06-18
+RMBS.US,RMBS,Rambus Inc,NASDAQ,False,Technology,Semiconductors,15265695744.0,141.169998,3075800,434210680.0,2026-06-18
+SMR.US,SMR,Nuscale Power Corp,NYSE,False,Industrials,Specialty Industrial Machinery,4063281920.0,11.74,36702400,430886176.0,2026-06-18
+KR.US,KR,Kroger Company,NYSE,False,Consumer Defensive,Grocery Stores,34701930496.0,56.610001,7603710,430446031.0,2026-06-18
+HAL.US,HAL,Halliburton Company,NYSE,False,Energy,Oil & Gas Equipment & Services,29180444672.0,34.93,12278400,428884512.0,2026-06-18
+WMB.US,WMB,Williams Companies Inc,NYSE,False,Energy,Oil & Gas Midstream,89425633280.0,73.120003,5835500,426691778.0,2026-06-18
+NVO.US,NVO,Novo Nordisk A/S,NYSE,False,Healthcare,Drug Manufacturers - General,191242321920.0,43.189999,9862800,425974322.0,2026-06-18
+CHTR.US,CHTR,Charter Communications Inc,NASDAQ,False,Communication Services,Telecom Services,19777511424.0,126.230003,3367400,425066912.0,2026-06-18
+TTMI.US,TTMI,TTM Technologies Inc,NASDAQ,False,Technology,Electronic Components,22477305856.0,216.440002,1958700,423941032.0,2026-06-18
+MDB.US,MDB,MongoDB,NASDAQ,False,Technology,Software - Infrastructure,26763724800.0,332.75,1269600,422459400.0,2026-06-18
+PATH.US,PATH,Uipath Inc,NYSE,False,Technology,Software - Infrastructure,5321095168.0,10.27,40796703,418982140.0,2026-06-18
+NOC.US,NOC,Northrop Grumman Corporation,NYSE,False,Industrials,Aerospace & Defense,74070458368.0,521.5,800971,417706376.0,2026-06-18
+BKR.US,BKR,Baker Hughes Co,NASDAQ,False,Energy,Oil & Gas Equipment & Services,57946730496.0,58.41,7098300,414611703.0,2026-06-18
+LHX.US,LHX,L3Harris Technologies Inc,NYSE,False,Industrials,Aerospace & Defense,54923476992.0,294.820007,1405473,414361560.0,2026-06-18
+KMB.US,KMB,Kimberly-Clark Corporation,NASDAQ,False,Consumer Defensive,Household & Personal Products,34043801600.0,102.559998,4038200,414157784.0,2026-06-18
+CASY.US,CASY,Caseys General Stores Inc,NASDAQ,False,Consumer Cyclical,Specialty Retail,31219623936.0,842.25,491100,413628975.0,2026-06-18
+WWD.US,WWD,Woodward Inc,NASDAQ,False,Industrials,Aerospace & Defense,25625395200.0,430.079987,959000,412446708.0,2026-06-18
+DG.US,DG,Dollar General Corporation,NYSE,False,Consumer Defensive,Discount Stores,25025554432.0,113.449997,3617899,410450631.0,2026-06-18
+TSEM.US,TSEM,Tower Semiconductor Ltd,NASDAQ,False,Technology,Semiconductors,34118912000.0,286.73999,1417900,406568632.0,2026-06-18
+W.US,W,Wayfair Inc,NYSE,False,Consumer Cyclical,Internet Retail,11684329472.0,88.519997,4588600,406182858.0,2026-06-18
+ETR.US,ETR,Entergy Corporation,NYSE,False,Utilities,Utilities - Regulated Electric,50875809792.0,111.110001,3650200,405573726.0,2026-06-18
+AFL.US,AFL,Aflac Incorporated,NYSE,False,Financial Services,Insurance - Life,58772488192.0,115.470001,3504400,404653072.0,2026-06-18
+TSCO.US,TSCO,Tractor Supply Company,NASDAQ,False,Consumer Cyclical,Specialty Retail,15859355648.0,30.24,13362500,404082000.0,2026-06-18
+NSC.US,NSC,Norfolk Southern Corporation,NYSE,False,Industrials,Railroads,67396165632.0,300.079987,1346401,404027995.0,2026-06-18
+TEAM.US,TEAM,Atlassian Corp Plc,NASDAQ,False,Technology,Software - Application,20991676416.0,82.720001,4881900,403830773.0,2026-06-18
+EXPE.US,EXPE,Expedia Group Inc.,NASDAQ,False,Consumer Cyclical,Travel Services,28913317888.0,240.899994,1675300,403579760.0,2026-06-18
+KEEL.US,KEEL,Bitfarms Ltd.,NASDAQ,False,Technology,Information Technology Services,3798082304.0,6.29,64073100,403019799.0,2026-06-18
+FN.US,FN,Fabrinet,NYSE,False,Technology,Electronic Components,20557672448.0,573.76001,701590,402544285.0,2026-06-18
+NCLH.US,NCLH,Norwegian Cruise Line Holdings Ltd,NYSE,False,Consumer Cyclical,Travel Services,9384211456.0,20.440001,19641100,401464104.0,2026-06-18
+IBKR.US,IBKR,Interactive Brokers Group Inc,NASDAQ,False,Financial Services,Capital Markets,162837331968.0,96.0,4181500,401424000.0,2026-06-18
+GWW.US,GWW,WW Grainger Inc,NYSE,False,Industrials,Industrial Distribution,64465268736.0,1365.410034,293400,400611304.0,2026-06-18
+ROP.US,ROP,Roper Technologies Inc,NASDAQ,False,Technology,Software - Application,33328463872.0,330.26001,1209854,399566394.0,2026-06-18
+STT.US,STT,State Street Corp,NYSE,False,Financial Services,Asset Management,46582661120.0,168.309998,2372500,399315470.0,2026-06-18
+COR.US,COR,Cencora Inc.,NYSE,False,Healthcare,Medical Distribution,52887527424.0,271.829987,1466300,398584310.0,2026-06-18
+NTAP.US,NTAP,NetApp Inc,NASDAQ,False,Technology,Software - Infrastructure,31290372096.0,159.710007,2494526,398400765.0,2026-06-18
+AXON.US,AXON,Axon Enterprise Inc.,NASDAQ,False,Industrials,Aerospace & Defense,34126919680.0,423.399994,940200,398080674.0,2026-06-18
+PINS.US,PINS,Pinterest Inc,NYSE,False,Communication Services,Internet Content & Information,11354388480.0,20.27,19613449,397564611.0,2026-06-18
+EQT.US,EQT,EQT Corporation,NYSE,False,Energy,Oil & Gas E&P,31724244992.0,50.720001,7826700,396970232.0,2026-06-18
+RY.US,RY,Royal Bank of Canada,NYSE,False,Financial Services,Banks - Diversified,280100339712.0,201.559998,1964500,395964616.0,2026-06-18
+ATI.US,ATI,Allegheny Technologies Incorporated,NYSE,False,Industrials,Metal Fabrication,27476957184.0,201.339996,1963100,395250546.0,2026-06-18
+PPL.US,PPL,PPL Corporation,NYSE,False,Utilities,Utilities - Regulated Electric,26618155008.0,35.380001,11166000,395053091.0,2026-06-18
+UMC.US,UMC,United Microelectronics,NYSE,False,Technology,Semiconductors,60423622656.0,24.08,16400400,394921632.0,2026-06-18
+KMX.US,KMX,CarMax Inc,NYSE,False,Consumer Cyclical,Auto & Truck Dealerships,7614842368.0,53.66,7335100,393601466.0,2026-06-18
+CPRT.US,CPRT,Copart Inc,NASDAQ,False,Industrials,Specialty Business Services,27987279872.0,30.23,12944450,391310724.0,2026-06-18
+TKO.US,TKO,"TKO Group Holdings, Inc.",NYSE,False,Communication Services,Entertainment,37992083456.0,198.779999,1968000,391199038.0,2026-06-18
+MRSH.US,MRSH,"Marsh & McLennan Companies, Inc.",NYSE,False,Financial Services,Insurance Brokers,78248247296.0,162.410004,2407600,391018326.0,2026-06-18
+FIG.US,FIG,"Figma, Inc.",NYSE,False,Technology,Software - Application,9975749632.0,18.879999,20673200,390309995.0,2026-06-18
+SAP.US,SAP,SAP SE ADR,NYSE,True,Technology,Software - Application,182993879040.0,155.220001,2504000,388670883.0,2026-06-18
+CARR.US,CARR,Carrier Global Corp,NYSE,False,Industrials,Building Products & Equipment,59643977728.0,71.809998,5412100,388642890.0,2026-06-18
+LEN.US,LEN,Lennar Corporation,NYSE,False,Consumer Cyclical,Residential Construction,22100346880.0,89.730003,4324413,388029591.0,2026-06-18
+KNX.US,KNX,Knight Transportation Inc,NYSE,False,Industrials,Trucking,12048930816.0,74.150002,5164700,382962515.0,2026-06-18
+KKR.US,KKR,KKR & Co. Inc.,NYSE,False,Financial Services,Asset Management,90456154112.0,97.010002,3937500,381976883.0,2026-06-18
+DHI.US,DHI,DR Horton Inc,NYSE,False,Consumer Cyclical,Residential Construction,44751699968.0,157.809998,2404000,379375235.0,2026-06-18
+CNC.US,CNC,Centene Corp,NYSE,False,Healthcare,Healthcare Plans,30131492864.0,61.02,6162900,376060158.0,2026-06-18
+RL.US,RL,Ralph Lauren Corp Class A,NYSE,False,Consumer Cyclical,Apparel Manufacturing,24580845568.0,413.01001,909200,375508701.0,2026-06-18
+LULU.US,LULU,Lululemon Athletica Inc.,NASDAQ,False,Consumer Cyclical,Apparel Retail,12691920896.0,111.769997,3344400,373803578.0,2026-06-18
+ULTA.US,ULTA,Ulta Beauty Inc,NASDAQ,False,Consumer Cyclical,Specialty Retail,19608715264.0,456.130005,812184,370461492.0,2026-06-18
+RSG.US,RSG,Republic Services Inc,NYSE,False,Industrials,Waste Management,63052681216.0,204.940002,1803900,369691270.0,2026-06-18
+MOD.US,MOD,Modine Manufacturing Company,NYSE,False,Consumer Cyclical,Auto Parts,15705829376.0,297.369995,1240100,368768531.0,2026-06-18
+SU.US,SU,Suncor Energy Inc,NYSE,False,Energy,Oil & Gas Integrated,65330634752.0,55.330002,6660400,368519945.0,2026-06-18
+ALNY.US,ALNY,Alnylam Pharmaceuticals Inc,NASDAQ,False,Healthcare,Biotechnology,37128511488.0,278.089996,1322200,367690593.0,2026-06-18
+SITM.US,SITM,Sitime Corporation,NASDAQ,False,Technology,Semiconductors,19244343296.0,729.039978,499900,364447085.0,2026-06-18
+ZM.US,ZM,Zoom Video Communications Inc,NASDAQ,False,Technology,Software - Application,25323534336.0,86.360001,4219600,364404660.0,2026-06-18
+RVMD.US,RVMD,Revolution Medicines Inc,NASDAQ,False,Healthcare,Biotechnology,34651099136.0,162.990005,2227400,363043937.0,2026-06-18
+INSM.US,INSM,Insmed Inc,NASDAQ,False,Healthcare,Biotechnology,20764884992.0,95.800003,3788600,362947891.0,2026-06-18
+LUNR.US,LUNR,Intuitive Machines Inc. ,NASDAQ,False,Industrials,Aerospace & Defense,3666335232.0,22.85,15835800,361848030.0,2026-06-18
+CCI.US,CCI,Crown Castle,NYSE,False,Real Estate,REIT - Specialty,35810885632.0,82.050003,4401200,361118473.0,2026-06-18
+FICO.US,FICO,Fair Isaac Corporation,NYSE,False,Technology,Software - Application,25428363264.0,1096.47998,328600,360303321.0,2026-06-18
+NDAQ.US,NDAQ,Nasdaq Inc,NASDAQ,False,Financial Services,Financial Data & Stock Exchanges,46510075904.0,82.239998,4369900,359380567.0,2026-06-18
+MET.US,MET,MetLife Inc,NYSE,False,Financial Services,Insurance - Life,55065321472.0,85.580002,4195000,359008108.0,2026-06-18
+MTZ.US,MTZ,MasTec Inc,NYSE,False,Industrials,Engineering & Construction,30000187392.0,379.660004,943900,358361078.0,2026-06-18
+WPM.US,WPM,Wheaton Precious Metals Corp,NYSE,False,Basic Materials,Gold,55662112768.0,122.57,2922400,358198568.0,2026-06-18
+VMC.US,VMC,Vulcan Materials Company,NYSE,False,Basic Materials,Building Materials,39294967808.0,302.839996,1178400,356866651.0,2026-06-18
+AKAM.US,AKAM,Akamai Technologies Inc,NASDAQ,False,Technology,Software - Infrastructure,18160097280.0,124.910004,2852400,356293295.0,2026-06-18
+PCG.US,PCG,PG&E Corp,NYSE,False,Utilities,Utilities - Regulated Electric,36292661248.0,16.48,21604100,356035568.0,2026-06-18
+HPQ.US,HPQ,HP Inc,NYSE,False,Technology,Computer Hardware,21491283968.0,23.5,15045700,353573950.0,2026-06-18
+PAYX.US,PAYX,Paychex Inc,NASDAQ,False,Technology,Software - Application,35198496768.0,98.239998,3594195,353093710.0,2026-06-18
+EBAY.US,EBAY,eBay Inc,NASDAQ,False,Consumer Cyclical,Internet Retail,48058560512.0,108.239998,3261100,352981457.0,2026-06-18
+USAR.US,USAR,"USA Rare Earth, Inc.",NASDAQ,False,Basic Materials,Other Industrial Metals & Mining,6028403200.0,24.639999,14307300,352531858.0,2026-06-18
+PBR.US,PBR,Petroleo Brasileiro Petrobras SA ADR,NYSE,True,Energy,Oil & Gas Integrated,107943133184.0,16.75,21046200,352523850.0,2026-06-18
+HUBB.US,HUBB,Hubbell Inc,NYSE,False,Industrials,Electrical Equipment & Parts,27672709120.0,523.690002,672152,351999282.0,2026-06-18
+OKTA.US,OKTA,Okta Inc,NASDAQ,False,Technology,Software - Infrastructure,20476243968.0,117.809998,2987500,351957369.0,2026-06-18
+XPO.US,XPO,XPO Logistics Inc,NYSE,False,Industrials,Trucking,23423291392.0,199.5,1749400,349005300.0,2026-06-18
+MLM.US,MLM,Martin Marietta Materials Inc,NYSE,False,Basic Materials,Building Materials,36575158272.0,609.119995,572803,348905760.0,2026-06-18
+WAT.US,WAT,Waters Corporation,NYSE,False,Healthcare,Diagnostics & Research,34899181568.0,355.440002,978700,347869130.0,2026-06-18
+O.US,O,Realty Income Corporation,NYSE,False,Real Estate,REIT - Retail,56173350912.0,60.240002,5768600,347500476.0,2026-06-18
+DXCM.US,DXCM,DexCom Inc,NASDAQ,False,Healthcare,Medical Devices,27964215296.0,72.470001,4773800,345957291.0,2026-06-18
+AJG.US,AJG,Arthur J Gallagher & Co,NYSE,False,Financial Services,Insurance Brokers,55001001984.0,214.059998,1614583,345617634.0,2026-06-18
+VEEV.US,VEEV,Veeva Systems Inc Class A,NYSE,False,Healthcare,Health Information Services,24902557696.0,153.300003,2247500,344541757.0,2026-06-18
+ENPH.US,ENPH,Enphase Energy Inc,NASDAQ,False,Technology,Solar,6890411008.0,52.279999,6581600,344086041.0,2026-06-18
+DKNG.US,DKNG,DraftKings Inc,NASDAQ,False,Consumer Cyclical,Gambling,13092839424.0,26.389999,12962400,342077723.0,2026-06-18
+PTC.US,PTC,PTC Inc,NASDAQ,False,Technology,Software - Application,13254289408.0,114.75,2978800,341817300.0,2026-06-18
+EA.US,EA,Electronic Arts Inc,NASDAQ,False,Communication Services,Electronic Gaming & Multimedia,50689413120.0,202.149994,1690400,341714350.0,2026-06-18
+LYB.US,LYB,LyondellBasell Industries NV,NYSE,False,Basic Materials,Specialty Chemicals,19389681664.0,60.07,5668800,340524816.0,2026-06-18
+TWLO.US,TWLO,Twilio Inc,NYSE,False,Technology,Software - Infrastructure,28255737856.0,186.169998,1826000,339946416.0,2026-06-18
+FERG.US,FERG,Ferguson Plc,NYSE,False,Industrials,Industrial Distribution,46225080320.0,238.350006,1425600,339791769.0,2026-06-18
+WSM.US,WSM,Williams-Sonoma Inc,NYSE,False,Consumer Cyclical,Specialty Retail,26719059968.0,226.919998,1489700,338042721.0,2026-06-18
+AME.US,AME,Ametek Inc,NYSE,False,Industrials,Specialty Industrial Machinery,54417379328.0,237.419998,1422100,337634979.0,2026-06-18
+PCAR.US,PCAR,PACCAR Inc,NASDAQ,False,Industrials,Farm & Heavy Construction Machinery,62601748480.0,118.949997,2834122,337118803.0,2026-06-18
+TPR.US,TPR,Tapestry Inc,NYSE,False,Consumer Cyclical,Luxury Goods,28993417216.0,143.5,2343451,336285218.0,2026-06-18
+YUM.US,YUM,Yum! Brands Inc,NYSE,False,Consumer Cyclical,Restaurants,41891672064.0,151.990005,2212100,336217090.0,2026-06-18
+RF.US,RF,Regions Financial Corporation,NYSE,False,Financial Services,Banks - Regional,24423723008.0,28.620001,11731500,335755542.0,2026-06-18
+EXC.US,EXC,Exelon Corporation,NASDAQ,False,Utilities,Utilities - Regulated Electric,46873165824.0,45.810001,7301109,334463811.0,2026-06-18
+CTVA.US,CTVA,Corteva Inc,NYSE,False,Basic Materials,Agricultural Inputs,52562558976.0,78.589996,4221400,331759809.0,2026-06-18
+CDW.US,CDW,CDW Corp,NASDAQ,False,Technology,Information Technology Services,16399709184.0,128.369995,2582600,331528349.0,2026-06-18
+KMI.US,KMI,Kinder Morgan Inc,NYSE,False,Energy,Oil & Gas Midstream,70282248192.0,31.59,10481000,331094790.0,2026-06-18
+CLSK.US,CLSK,CleanSpark Inc,NASDAQ,False,Financial Services,Capital Markets,4423932416.0,17.24,19158000,330283920.0,2026-06-18
+CORZ.US,CORZ,"Core Scientific, Inc. Common Stock",NASDAQ,False,Technology,Software - Infrastructure,9269534720.0,29.16,11319200,330067872.0,2026-06-18
+HUBS.US,HUBS,HubSpot Inc,NYSE,False,Technology,Software - Application,9011100672.0,176.029999,1862900,327926285.0,2026-06-18
+MOS.US,MOS,The Mosaic Company,NYSE,False,Basic Materials,Agricultural Inputs,7278688256.0,22.9,14295800,327373820.0,2026-06-18
+VALE.US,VALE,Vale SA ADR,NYSE,True,Basic Materials,Other Industrial Metals & Mining,65649217536.0,15.42,21213100,327106002.0,2026-06-18
+AZN.US,AZN,AstraZeneca PLC,NYSE,False,Healthcare,Drug Manufacturers - General,271292317696.0,174.929993,1868700,326891678.0,2026-06-18
+EME.US,EME,EMCOR Group Inc,NYSE,False,Industrials,Engineering & Construction,37255503872.0,836.590027,390666,326827279.0,2026-06-18
+LUV.US,LUV,Southwest Airlines Company,NYSE,False,Industrials,Airlines,23446476800.0,47.970001,6768900,324704140.0,2026-06-18
+EXE.US,EXE,Expand Energy Corporation,NASDAQ,False,Energy,Oil & Gas E&P,20808126464.0,86.980003,3725400,324035303.0,2026-06-18
+WCN.US,WCN,Waste Connections Inc,NYSE,False,Industrials,Waste Management,39120838656.0,153.970001,2102400,323706530.0,2026-06-18
+SE.US,SE,Sea Ltd,NYSE,False,Consumer Cyclical,Internet Retail,55907590144.0,91.279999,3538500,322994276.0,2026-06-18
+EL.US,EL,Estee Lauder Companies Inc,NYSE,False,Consumer Defensive,Household & Personal Products,30683826176.0,84.809998,3784500,320963437.0,2026-06-18
+AWK.US,AWK,American Water Works,NYSE,False,Utilities,Utilities - Regulated Water,24423735296.0,125.07,2555000,319553850.0,2026-06-18
+RIOT.US,RIOT,"Riot Platforms, Inc.",NASDAQ,False,Financial Services,Capital Markets,10626050048.0,28.1,11366000,319384600.0,2026-06-18
+NVMI.US,NVMI,Nova Ltd,NASDAQ,False,Technology,Semiconductor Equipment & Materials,18298402816.0,575.309998,555100,319354580.0,2026-06-18
+TRGP.US,TRGP,Targa Resources Inc,NYSE,False,Energy,Oil & Gas Midstream,55502618624.0,258.579987,1234000,319087704.0,2026-06-18
+NTRA.US,NTRA,Natera Inc,NASDAQ,False,Healthcare,Diagnostics & Research,33141471232.0,231.410004,1378800,319068114.0,2026-06-18
+VTR.US,VTR,Ventas Inc,NYSE,False,Real Estate,REIT - Healthcare Facilities,39671447552.0,81.599998,3909299,318998791.0,2026-06-18
+SIMO.US,SIMO,Silicon Motion Technology,NASDAQ,False,Technology,Semiconductors,10906795008.0,321.660004,989500,318282574.0,2026-06-18
+SWKS.US,SWKS,Skyworks Solutions Inc,NASDAQ,False,Technology,Semiconductors,10896912384.0,72.449997,4384200,317635277.0,2026-06-18
+OKE.US,OKE,ONEOK Inc,NYSE,False,Energy,Oil & Gas Midstream,53571690496.0,85.029999,3712300,315656865.0,2026-06-18
+AEIS.US,AEIS,Advanced Energy Industries Inc,NASDAQ,False,Industrials,Electrical Equipment & Parts,14907570176.0,372.589996,846400,315360173.0,2026-06-18
+CI.US,CI,Cigna Corp,NYSE,False,Healthcare,Healthcare Plans,73875963904.0,279.269989,1125096,314205548.0,2026-06-18
+MSCI.US,MSCI,MSCI Inc,NYSE,False,Financial Services,Financial Data & Stock Exchanges,42268549120.0,581.190002,539500,313552006.0,2026-06-18
+OTIS.US,OTIS,Otis Worldwide Corp,NYSE,False,Industrials,Specialty Industrial Machinery,28114874368.0,73.269997,4272700,313060716.0,2026-06-18
+IDXX.US,IDXX,IDEXX Laboratories Inc,NASDAQ,False,Healthcare,Diagnostics & Research,44339347456.0,562.090027,556869,313010511.0,2026-06-18
+TMHC.US,TMHC,Taylor Morn Home,NYSE,False,Consumer Cyclical,Residential Construction,6590718464.0,71.580002,4367800,312647133.0,2026-06-18
+EFX.US,EFX,Equifax Inc,NYSE,False,Industrials,Consulting Services,18569283584.0,153.929993,2027377,312074127.0,2026-06-18
+FDXF.US,FDXF,"FedEx Freight Holding Company, Inc.",NYSE,False,Industrials,Integrated Freight & Logistics,24249368576.0,162.850006,1914300,311743766.0,2026-06-18
+TEM.US,TEM,"Tempus AI, Inc. Class A Common Stock",NASDAQ,False,Healthcare,Health Information Services,9129072640.0,50.84,6109600,310612064.0,2026-06-18
+STLD.US,STLD,Steel Dynamics Inc,NASDAQ,False,Basic Materials,Steel,36040216576.0,249.910004,1239432,309746456.0,2026-06-18
+JBHT.US,JBHT,JB Hunt Transport Services Inc,NASDAQ,False,Industrials,Integrated Freight & Logistics,25575829504.0,271.220001,1141600,309624753.0,2026-06-18
+FDXF-WI.US,FDXF-WI,FEDEX FREIGHT HOLDING COMPANY WHEN,US,False,,,,160.37,1914447,307019865.0,2026-06-18
+AA.US,AA,Alcoa Corp,NYSE,False,Basic Materials,Aluminum,15667141632.0,59.369999,5159900,306343258.0,2026-06-18
+FTI.US,FTI,TechnipFMC PLC,NYSE,False,Energy,Oil & Gas Equipment & Services,25983401984.0,65.169998,4691300,305732012.0,2026-06-18
+AMP.US,AMP,Ameriprise Financial Inc,NYSE,False,Financial Services,Asset Management,42020593664.0,467.429993,648314,303041408.0,2026-06-18
+VIK.US,VIK,Viking Holdings Ltd,NYSE,False,Consumer Cyclical,Travel Services,43353088000.0,97.169998,3117200,302898318.0,2026-06-18
+SUNB.US,SUNB,"Sunbelt Rentals Holdings, Inc.",NYSE,False,Industrials,Rental & Leasing Services,35568578560.0,86.059998,3519000,302845133.0,2026-06-18
+SCCO.US,SCCO,Southern Copper Corporation,NYSE,False,Basic Materials,Copper,160967000064.0,192.929993,1569300,302765038.0,2026-06-18
+ROK.US,ROK,Rockwell Automation Inc,NYSE,False,Industrials,Specialty Industrial Machinery,52720488448.0,473.790009,636961,301785758.0,2026-06-18
+CFG.US,CFG,"Citizens Financial Group, Inc.",NYSE,False,Financial Services,Banks - Regional,28366921728.0,67.080002,4488700,301102005.0,2026-06-18
+TE.US,TE,T1 Energy Inc.,NYSE,False,Industrials,Electrical Equipment & Parts,2611187712.0,9.35,32150100,300603435.0,2026-06-18
+ARES.US,ARES,Ares Management LP,NYSE,False,Financial Services,Asset Management,42662363136.0,129.339996,2319700,300029989.0,2026-06-18
+POET.US,POET,POET Technologies Inc,NASDAQ,False,Technology,Semiconductors,2097034112.0,12.15,24676400,299818260.0,2026-06-18
+A.US,A,Agilent Technologies Inc,NYSE,False,Healthcare,Diagnostics & Research,35885801472.0,127.059998,2354600,299175471.0,2026-06-18
+PAAS.US,PAAS,Pan American Silver Corp.,NYSE,False,Basic Materials,Gold,20646150144.0,49.0,6062400,297057600.0,2026-06-18
+LYV.US,LYV,Live Nation Entertainment Inc,NYSE,False,Communication Services,Entertainment,39849742336.0,171.240005,1731600,296519193.0,2026-06-18
+KHC.US,KHC,Kraft Heinz Co,NASDAQ,False,Consumer Defensive,Packaged Foods,27059445760.0,22.82,12969700,295968554.0,2026-06-18
+WEC.US,WEC,WEC Energy Group Inc,NYSE,False,Utilities,Utilities - Regulated Electric,36536647680.0,112.169998,2634600,295523077.0,2026-06-18
+GTLS.US,GTLS,Chart Industries Inc,NYSE,False,Industrials,Specialty Industrial Machinery,9956289536.0,207.990005,1419406,295222261.0,2026-06-18
+BP.US,BP,BP PLC ADR,NYSE,True,Energy,Oil & Gas Integrated,100684980224.0,39.099998,7507300,293535415.0,2026-06-18
+HST.US,HST,Host Hotels & Resorts Inc,NASDAQ,False,Real Estate,REIT - Hotel & Motel,17351094272.0,25.01,11725500,293254755.0,2026-06-18
+FPS.US,FPS,"Forgent Power Solutions, Inc.",NYSE,False,Industrials,Electrical Equipment & Parts,19303835648.0,63.41,4619200,292903472.0,2026-06-18
+ARGX.US,ARGX,argenx NV ADR,NASDAQ,True,Healthcare,Biotechnology,54853083136.0,877.719971,333200,292456294.0,2026-06-18
+MP.US,MP,MP Materials Corp,NYSE,False,Basic Materials,Other Industrial Metals & Mining,10837991424.0,60.880001,4803100,292412733.0,2026-06-18
+IQV.US,IQV,IQVIA Holdings Inc,NYSE,False,Healthcare,Diagnostics & Research,28000813056.0,167.770004,1732243,290618415.0,2026-06-18
+SYY.US,SYY,Sysco Corporation,NYSE,False,Consumer Defensive,Food Distribution,37632966656.0,78.699997,3692482,290598322.0,2026-06-18
+RIO.US,RIO,Rio Tinto ADR,NYSE,True,Basic Materials,Other Industrial Metals & Mining,162755313664.0,100.080002,2900700,290302062.0,2026-06-18
+CF.US,CF,CF Industries Holdings Inc,NYSE,False,Basic Materials,Agricultural Inputs,15813061632.0,102.93,2819000,290159670.0,2026-06-18
+ALL.US,ALL,The Allstate Corporation,NYSE,False,Financial Services,Insurance - Property & Casualty,56933785600.0,221.169998,1310400,289821165.0,2026-06-18
+GIS.US,GIS,General Mills Inc,NYSE,False,Consumer Defensive,Packaged Foods,17835624448.0,33.419998,8660000,289417183.0,2026-06-18
+NVT.US,NVT,nVent Electric PLC,NYSE,False,Industrials,Electrical Equipment & Parts,28627755008.0,177.020004,1629100,288383289.0,2026-06-18
+RMD.US,RMD,ResMed Inc,NYSE,False,Healthcare,Medical Instruments & Supplies,27361986560.0,188.630005,1523766,287427988.0,2026-06-18
+ETSY.US,ETSY,"Etsy, Inc.",NYSE,False,Consumer Cyclical,Internet Retail,7017575936.0,73.949997,3876692,286681362.0,2026-06-18
+FTAI.US,FTAI,FTAI Aviation Ltd.,NASDAQ,False,Industrials,Aerospace & Defense,28324184064.0,276.109985,1033800,285442502.0,2026-06-18
+SMFTF.US,SMFTF,Smurfit Kappa Group Plc,PINK,False,,,,49.11,5811712,285413176.0,2026-06-18
+QXO.US,QXO,"QXO, Inc.",NYSE,False,Industrials,Industrial Distribution,12881423360.0,17.76,16051400,285072864.0,2026-06-18
+GEHC.US,GEHC,GE HealthCare Technologies Inc.,NASDAQ,False,Healthcare,Medical Devices,28016785408.0,61.59,4626079,284920206.0,2026-06-18
+DOV.US,DOV,Dover Corporation,NYSE,False,Industrials,Specialty Industrial Machinery,30106251264.0,223.570007,1271600,284291621.0,2026-06-18
+SNAP.US,SNAP,Snap Inc,NYSE,False,Communication Services,Internet Content & Information,7722370048.0,4.66,60953800,284044708.0,2026-06-18
+CELH.US,CELH,Celsius Holdings Inc,NASDAQ,False,Consumer Defensive,Beverages - Non-Alcoholic,7873722880.0,30.799999,9217400,283895911.0,2026-06-18
+BDX.US,BDX,Becton Dickinson and Company,NYSE,False,Healthcare,Medical Instruments & Supplies,39672307712.0,143.979996,1966900,283194254.0,2026-06-18
+BTI.US,BTI,British American Tobacco p.l.c.,NYSE,False,Consumer Defensive,Tobacco,127261483008.0,58.91,4803056,282948029.0,2026-06-18
+WBS.US,WBS,Webster Financial Corporation,NYSE,False,Financial Services,Banks - Regional,12252443648.0,75.620003,3728194,281926041.0,2026-06-18
+CAVA.US,CAVA,"CAVA Group, Inc.",NYSE,False,Consumer Cyclical,Restaurants,10387138560.0,89.18,3160700,281871226.0,2026-06-18
+STZ.US,STZ,Constellation Brands Inc Class A,NYSE,False,Consumer Defensive,Beverages - Brewers,24215013376.0,141.179993,1996200,281823502.0,2026-06-18
+GPN.US,GPN,Global Payments Inc,NYSE,False,Industrials,Specialty Business Services,18294589440.0,66.879997,4199773,280880806.0,2026-06-18
+VIAV.US,VIAV,Viavi Solutions Inc,NASDAQ,False,Technology,Communication Equipment,11636161536.0,47.169998,5926800,279567144.0,2026-06-18
+GH.US,GH,Guardant Health Inc,NASDAQ,False,Healthcare,Diagnostics & Research,17474019328.0,131.779999,2118855,279222710.0,2026-06-18
+PSA.US,PSA,Public Storage,NYSE,False,Real Estate,REIT - Industrial,55855394816.0,318.119995,876100,278704928.0,2026-06-18
+BBY.US,BBY,Best Buy Co. Inc,NYSE,False,Consumer Cyclical,Specialty Retail,15750627328.0,74.730003,3718900,277913408.0,2026-06-18
+JHX.US,JHX,James Hardie Industries PLC ADR,NYSE,True,Basic Materials,Building Materials,14432423936.0,24.870001,11164260,277655157.0,2026-06-18
+Q.US,Q,"Qnity Electronics, Inc",NYSE,False,Technology,Semiconductor Equipment & Materials,35374137344.0,168.979996,1637500,276704743.0,2026-06-18
+IP.US,IP,International Paper,NYSE,False,Consumer Cyclical,Packaging & Containers,19496814592.0,36.82,7483300,275535106.0,2026-06-18
+CCJ.US,CCJ,Cameco Corp,NYSE,False,Energy,Uranium,46379909120.0,106.489998,2575600,274275639.0,2026-06-18
+FAST.US,FAST,Fastenal Company,NASDAQ,False,Industrials,Industrial Distribution,52683329536.0,45.889999,5959700,273490627.0,2026-06-18
+AU.US,AU,AngloGold Ashanti plc,NYSE,False,Basic Materials,Gold,45946064896.0,90.870003,2997500,272382834.0,2026-06-18
+VICI.US,VICI,VICI Properties Inc,NYSE,False,Real Estate,REIT - Diversified,28297783296.0,26.280001,10362100,272315998.0,2026-06-18
+KEY.US,KEY,KeyCorp,NYSE,False,Financial Services,Banks - Regional,24382939136.0,22.59,12028500,271723815.0,2026-06-18
+LDOS.US,LDOS,Leidos Holdings Inc,NYSE,False,Technology,Information Technology Services,13474139136.0,107.120003,2530748,271093733.0,2026-06-18
+FOX.US,FOX,Fox Corp Class B,NASDAQ,False,Communication Services,Entertainment,19714334720.0,46.950001,5755900,270239511.0,2026-06-18
+BHP.US,BHP,BHP Group Limited,NYSE,False,Basic Materials,Other Industrial Metals & Mining,223220137984.0,87.870003,3065300,269347920.0,2026-06-18
+RBRK.US,RBRK,"Rubrik, Inc.",NYSE,False,Technology,Software - Infrastructure,14453281792.0,70.220001,3829400,268900472.0,2026-06-18
+BROS.US,BROS,Dutch Bros Inc,NYSE,False,Consumer Cyclical,Restaurants,12353610752.0,70.720001,3794309,268333536.0,2026-06-18
+KVUE.US,KVUE,Kenvue Inc.,NYSE,False,Consumer Defensive,Household & Personal Products,34790559744.0,18.120001,14702600,266411127.0,2026-06-18
+TOL.US,TOL,Toll Brothers Inc,NYSE,False,Consumer Cyclical,Residential Construction,14550630400.0,155.669998,1700711,264749678.0,2026-06-18
+BLD.US,BLD,Topbuild Corp,NYSE,False,Industrials,Engineering & Construction,12003937280.0,426.51001,620700,264734763.0,2026-06-18
+ACHR.US,ACHR,Archer Aviation Inc,NYSE,False,Industrials,Aerospace & Defense,4249157632.0,5.57,47480300,264465271.0,2026-06-18
+TD.US,TD,Toronto Dominion Bank,NYSE,False,Financial Services,Banks - Diversified,197073158144.0,119.290001,2212200,263893340.0,2026-06-18
+OMC.US,OMC,Omnicom Group Inc,NYSE,False,Communication Services,Advertising Agencies,20335192064.0,71.349998,3698500,263887968.0,2026-06-18
+CYTK.US,CYTK,Cytokinetics Inc,NASDAQ,False,Healthcare,Biotechnology,10696006656.0,78.779999,3340400,263156709.0,2026-06-18
+DPZ.US,DPZ,Domino's Pizza Inc Common Stock,NASDAQ,False,Consumer Cyclical,Restaurants,10393336832.0,312.470001,840500,262631036.0,2026-06-18
+FIS.US,FIS,Fidelity National Information Services Inc,NYSE,False,Technology,Information Technology Services,19749951488.0,38.209999,6870000,262502693.0,2026-06-18
+ATO.US,ATO,Atmos Energy Corporation,NYSE,False,Utilities,Utilities - Regulated Gas,28394731520.0,170.110001,1540700,262088479.0,2026-06-18
+GRAB.US,GRAB,Grab Holdings Ltd,NASDAQ,False,Technology,Software - Application,14601298944.0,3.57,73256700,261526419.0,2026-06-18
+SW.US,SW,Smurfit WestRock plc,NYSE,False,Consumer Cyclical,Packaging & Containers,23181312000.0,44.200001,5863200,259153446.0,2026-06-18
+ADM.US,ADM,Archer-Daniels-Midland Company,NYSE,False,Consumer Defensive,Farm Products,36194934784.0,75.099998,3450300,259117523.0,2026-06-18
+EOSE.US,EOSE,Eos Energy Enterprises Inc,NASDAQ,False,Industrials,Electrical Equipment & Parts,2597282304.0,7.65,33864900,259066485.0,2026-06-18
+ILMN.US,ILMN,Illumina Inc,NASDAQ,False,Healthcare,Diagnostics & Research,24500006912.0,161.929993,1592600,257889707.0,2026-06-18
+STRC.US,STRC,MicroStrategy Incorporated Variable Rate Series A Perpetual Stretch Preferred Stock,NASDAQ,False,Technology,Software - Application,,88.589996,2905900,257433669.0,2026-06-18
+NRG.US,NRG,NRG Energy Inc.,NYSE,False,Utilities,Utilities - Independent Power Producers,28495831040.0,135.059998,1904900,257275790.0,2026-06-18
+PR.US,PR,Permian Resources Corporation,NYSE,False,Energy,Oil & Gas E&P,15878111232.0,18.43,13940700,256927101.0,2026-06-18
+FCEL.US,FCEL,FuelCell Energy Inc,NASDAQ,False,Industrials,Electrical Equipment & Parts,1625300608.0,24.040001,10636400,255699067.0,2026-06-18
+NXT.US,NXT,Nextracker Inc. Class A Common Stock,NASDAQ,False,Technology,Solar,19159877632.0,125.900002,2029700,255539234.0,2026-06-18
+DRI.US,DRI,Darden Restaurants Inc,NYSE,False,Consumer Cyclical,Restaurants,24447496192.0,213.449997,1192805,254604224.0,2026-06-18
+AG.US,AG,First Majestic Silver Corp,NYSE,False,Basic Materials,Silver,8887852032.0,18.0,14101300,253823400.0,2026-06-18
+PTCT.US,PTCT,PTC Therapeutics Inc,NASDAQ,False,Healthcare,Biotechnology,6551339008.0,78.980003,3183591,251440027.0,2026-06-18
+USFD.US,USFD,US Foods Holding Corp,NYSE,False,Consumer Defensive,Food Distribution,20240574464.0,91.910004,2698900,248055910.0,2026-06-18
+DAVE.US,DAVE,Dave Inc,NASDAQ,False,Technology,Software - Application,3997867776.0,314.440002,787400,247590058.0,2026-06-18
+KGC.US,KGC,Kinross Gold Corporation,NYSE,False,Basic Materials,Gold,31846899712.0,26.67,9283300,247585611.0,2026-06-18
+MTB.US,MTB,M&T Bank Corporation,NYSE,False,Financial Services,Banks - Regional,32967710720.0,225.119995,1095200,246551419.0,2026-06-18
+THC.US,THC,Tenet Healthcare Corporation,NYSE,False,Healthcare,Medical Care Facilities,14864662528.0,172.570007,1427100,246274657.0,2026-06-18
+NVS.US,NVS,Novartis AG ADR,NYSE,True,Healthcare,Drug Manufacturers - General,280642158592.0,147.080002,1664900,244873495.0,2026-06-18
+FLY.US,FLY,Firefly Aerospace Inc. Common Stock,NASDAQ,False,Industrials,Aerospace & Defense,5083080192.0,30.950001,7902000,244566908.0,2026-06-18
+DLTR.US,DLTR,Dollar Tree Inc,NASDAQ,False,Consumer Defensive,Discount Stores,21456293888.0,111.650002,2188700,244368359.0,2026-06-18
+BRK-A.US,BRK-A,Berkshire Hathaway Inc,NYSE,False,Financial Services,Insurance - Diversified,1054860050432.0,733610.0,333,244292130.0,2026-06-18
+DKS.US,DKS,Dick’s Sporting Goods Inc,NYSE,False,Consumer Cyclical,Specialty Retail,20850511872.0,232.960007,1046620,243820603.0,2026-06-18
+GPC.US,GPC,Genuine Parts Co,NYSE,False,Consumer Cyclical,Auto Parts,15122573312.0,108.699997,2239900,243477123.0,2026-06-18
+UTHR.US,UTHR,United Therapeutics Corporation,NASDAQ,False,Healthcare,Drug Manufacturers - Specialty & Generic,22776494080.0,536.590027,451800,242431374.0,2026-06-18
+TOST.US,TOST,Toast Inc,NYSE,False,Technology,Software - Infrastructure,14302799872.0,24.66,9828600,242373276.0,2026-06-18
+CVE.US,CVE,Cenovus Energy Inc,NYSE,False,Energy,Oil & Gas Integrated,46918844416.0,25.16,9605900,241684444.0,2026-06-18
+AGX.US,AGX,Argan Inc,NYSE,False,Industrials,Engineering & Construction,10358120448.0,738.849976,323600,239091852.0,2026-06-18
+SYF.US,SYF,Synchrony Financial,NYSE,False,Financial Services,Credit Services,25315225600.0,75.260002,3175500,238988136.0,2026-06-18
+ED.US,ED,Consolidated Edison Inc,NYSE,False,Utilities,Utilities - Regulated Electric,39196819456.0,106.360001,2228400,237012626.0,2026-06-18
+GLXY.US,GLXY,Galaxy Digital Holdings Ltd,NASDAQ,False,Financial Services,Capital Markets,13334583296.0,34.200001,6929729,236996739.0,2026-06-18
+LSCC.US,LSCC,Lattice Semiconductor Corporation,NASDAQ,False,Technology,Semiconductors,21060847616.0,153.720001,1540100,236744174.0,2026-06-18
+EXPD.US,EXPD,"Expeditors International of Washington, Inc.",NYSE,False,Industrials,Integrated Freight & Logistics,21099227136.0,161.320007,1466928,236644835.0,2026-06-18
+FCNCA.US,FCNCA,"First Citizens BancShares, Inc.",NASDAQ,False,Financial Services,Banks - Regional,24003809280.0,2071.620117,113800,235750369.0,2026-06-18
+RJF.US,RJF,Raymond James Financial Inc.,NYSE,False,Financial Services,Asset Management,30374471680.0,155.860001,1512500,235738252.0,2026-06-18
+OWL.US,OWL,Blue Owl Capital Inc,NYSE,False,Financial Services,Asset Management,14857749504.0,9.53,24667700,235083181.0,2026-06-18
+ITT.US,ITT,ITT Inc,NYSE,False,Industrials,Specialty Industrial Machinery,17681375232.0,196.809998,1192700,234735285.0,2026-06-18
+PRU.US,PRU,"Prudential Financial, Inc.",NYSE,False,Financial Services,Insurance - Life,37000544256.0,106.529999,2198400,234195550.0,2026-06-18
+UL.US,UL,Unilever PLC ADR,NYSE,True,Consumer Defensive,Household & Personal Products,126461673472.0,58.400002,4002600,233751848.0,2026-06-18
+MXL.US,MXL,MaxLinear Inc,NASDAQ,False,Technology,Semiconductors,7948099584.0,88.760002,2617600,232338181.0,2026-06-18
+FNV.US,FNV,Franco-Nevada Corporation,NYSE,False,Basic Materials,Gold,42285502464.0,219.259995,1058900,232174409.0,2026-06-18
+CLX.US,CLX,The Clorox Company,NYSE,False,Consumer Defensive,Household & Personal Products,11584266240.0,95.800003,2422700,232094667.0,2026-06-18
+TXRH.US,TXRH,Texas Roadhouse Inc,NASDAQ,False,Consumer Cyclical,Restaurants,11683439616.0,177.75,1303500,231697125.0,2026-06-18
+APA.US,APA,APA Corporation,NASDAQ,False,Energy,Oil & Gas E&P,11675121664.0,33.029999,7011300,231583232.0,2026-06-18
+FLNC.US,FLNC,Fluence Energy Inc,NASDAQ,False,Utilities,Utilities - Renewable,4570905088.0,24.799999,9304100,230741671.0,2026-06-18
+P.US,P,"Everpure, Inc.",NYSE,False,Technology,Computer Hardware,24800731136.0,74.610001,3081800,229933101.0,2026-06-18
+TWST.US,TWST,Twist Bioscience Corp,NASDAQ,False,Healthcare,Diagnostics & Research,5452475904.0,87.559998,2612100,228715471.0,2026-06-18
+CNP.US,CNP,CenterPoint Energy Inc,NYSE,False,Utilities,Utilities - Regulated Electric,28011536384.0,42.82,5325900,228055038.0,2026-06-18
+EQR.US,EQR,Equity Residential,NYSE,False,Real Estate,REIT - Residential,24762836992.0,64.089996,3555900,227897617.0,2026-06-18
+FRMI.US,FRMI,Fermi Inc.,NASDAQ,False,Real Estate,REIT - Specialty,6061791744.0,9.5,23965300,227670350.0,2026-06-18
+MGM.US,MGM,MGM Resorts International,NYSE,False,Consumer Cyclical,Resorts & Casinos,11984071680.0,46.84,4814389,225505981.0,2026-06-18
+FLUT.US,FLUT,Flutter Entertainment plc,NYSE,False,Consumer Cyclical,Gambling,17657370624.0,101.830002,2214000,225451624.0,2026-06-18
+H.US,H,Hyatt Hotels Corporation,NYSE,False,Consumer Cyclical,Lodging,19029118976.0,202.089996,1113700,225067629.0,2026-06-18
+LPLA.US,LPLA,LPL Financial Holdings Inc,NASDAQ,False,Financial Services,Capital Markets,23510964224.0,293.950012,762900,224254464.0,2026-06-18
+RGLD.US,RGLD,Royal Gold Inc,NASDAQ,False,Basic Materials,Gold,18231044096.0,214.820007,1038500,223090577.0,2026-06-18
+CBRE.US,CBRE,CBRE Group Inc Class A,NYSE,False,Real Estate,Real Estate Services,38520020992.0,131.550003,1695760,223077233.0,2026-06-18
+CLF.US,CLF,Cleveland-Cliffs Inc,NYSE,False,Basic Materials,Steel,7004691968.0,12.28,18159300,222996204.0,2026-06-18
+DECK.US,DECK,Deckers Outdoor Corporation,NYSE,False,Consumer Cyclical,Footwear & Accessories,15153301504.0,109.110001,2038377,222407317.0,2026-06-18
+GNRC.US,GNRC,Generac Holdings Inc,NYSE,False,Industrials,Specialty Industrial Machinery,16433191936.0,279.149994,795900,222175480.0,2026-06-18
+VSAT.US,VSAT,ViaSat Inc,NASDAQ,False,Technology,Communication Equipment,8758166528.0,64.129997,3458300,221780769.0,2026-06-18
+LVS.US,LVS,Las Vegas Sands Corp,NYSE,False,Consumer Cyclical,Resorts & Casinos,32283691008.0,48.720001,4542700,221320349.0,2026-06-18
+ACMR.US,ACMR,Acm Research Inc,NASDAQ,False,Technology,Semiconductor Equipment & Materials,7593059840.0,109.870003,2013900,221267199.0,2026-06-18
+WST.US,WST,West Pharmaceutical Services Inc,NYSE,False,Healthcare,Medical Instruments & Supplies,23168878592.0,327.950012,670338,219837355.0,2026-06-18
+GDDY.US,GDDY,Godaddy Inc,NYSE,False,Technology,Software - Infrastructure,10200854528.0,77.040001,2842889,219016171.0,2026-06-18
+RRX.US,RRX,Regal Beloit Corporation,NYSE,False,Industrials,Specialty Industrial Machinery,15096647680.0,226.779999,964150,218649936.0,2026-06-18
+VG.US,VG,"Venture Global, Inc.",NYSE,False,Energy,Oil & Gas Midstream,27377627136.0,11.02,19832500,218554150.0,2026-06-18
+TYL.US,TYL,Tyler Technologies Inc,NYSE,False,Technology,Software - Application,11474512896.0,278.910004,782517,218251820.0,2026-06-18
+SAIA.US,SAIA,Saia Inc,NASDAQ,False,Industrials,Trucking,11575027712.0,435.119995,501300,218125653.0,2026-06-18
+BAP.US,BAP,Credicorp Ltd,NYSE,False,Financial Services,Banks - Regional,30409639936.0,382.76001,568800,217713894.0,2026-06-18
+KTOS.US,KTOS,Kratos Defense & Security Solutions,NASDAQ,False,Industrials,Aerospace & Defense,10165457920.0,54.209999,4014700,217636883.0,2026-06-18
+AUR.US,AUR,Aurora Innovation Inc,NASDAQ,False,Consumer Cyclical,Auto Parts,12316355584.0,6.28,34654800,217632144.0,2026-06-18
+TROW.US,TROW,T. Rowe Price Group Inc,NASDAQ,False,Financial Services,Asset Management,23065800704.0,107.650002,2020900,217549889.0,2026-06-18
+GPUS.US,GPUS,"Hyperscale Data, Inc.",AMEX,False,Industrials,Aerospace & Defense,124857560.0,0.36,603972400,217430064.0,2026-06-18
+QNT.US,QNT,Quantinuum Inc. Class A Common Stock,NASDAQ,False,Technology,Software - Application,2189130240.0,69.800003,3115000,217427009.0,2026-06-18
+ZBRA.US,ZBRA,Zebra Technologies Corporation,NASDAQ,False,Technology,Communication Equipment,11240527872.0,235.979996,917000,216393656.0,2026-06-18
+HDB.US,HDB,HDFC Bank Limited ADR,NYSE,True,Financial Services,Banks - Regional,128647200768.0,25.059999,8632700,216335453.0,2026-06-18
