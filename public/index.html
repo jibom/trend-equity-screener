@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CPG扫描</title>
-  <meta name="description" content="Wyckoff v5.4 港股趋势扫描器 — 进场候选 / Trending / 警报" />
+  <meta name="description" content="CPG扫描 — 港股/美股/A股 趋势热点扫描 (五部曲)" />
   <script src="lib/lightweight-charts.standalone.js" defer></script>
   <style>
     :root {
@@ -346,14 +346,14 @@
   <script>
   (function() {
     // ─── State ─────────────────────────────────────────
-    let tabData = { date: '', tab1: { sos_section: [], pool_section: [] }, tab2: [], tab3: [] };
+    let tabData = { date: '', tab1: { sos_section: [], pool_section: [] } };
     let trendData = null;   // 港股-趋势 (Part1-4), 来自 data/trend_hotspot_hk.json
     let usData = null;      // 美股-趋势 (Part1-5), 来自 data/trend_hotspot_us.json
     let aData = null;       // A股-趋势 (Part1-4), 来自 data/trend_hotspot_a.json
     let search = '';
     let sortField = 'ma10_slope_pct';
     let sortDir = 'desc';
-    let tab = 'trend'; // 'trend' | 'entry' | 'hold' | 'alerts'  (默认港股-趋势)
+    let tab = 'trend'; // 'trend' | 'ustrend' | 'atrend' | 'entry'  (默认港股-趋势)
     let groupMode = true;
     let isDark = true;
     let copied = false;
@@ -370,7 +370,7 @@
         tabData = JSON.parse(text);
       } catch(e) {
         loadError = e.message || String(e);
-        tabData = { date: '', tab1: { sos_section: [], pool_section: [] }, tab2: [], tab3: [] };
+        tabData = { date: '', tab1: { sos_section: [], pool_section: [] } };
       }
       // 港股-趋势 (Part1-4): 失败不阻塞原 tab
       try {
@@ -456,8 +456,6 @@
 
       const sosCount = (tabData.tab1?.sos_section || []).length;
       const poolCount = (tabData.tab1?.pool_section || []).length;
-      const holdCount = (tabData.tab2 || []).length;
-      const alertCount = (tabData.tab3 || []).length;
       const entryTotal = sosCount + poolCount;
       const trendCount = (trendData?.part4 || []).length;
       const usCount = (usData?.part4 || []).length;
@@ -470,8 +468,6 @@
         mainContent = renderUs();
       } else if (tab === 'atrend') {
         mainContent = renderA();
-      } else if (tab === 'alerts') {
-        mainContent = renderAlerts();
       } else {
         mainContent = renderTable();
       }
@@ -497,8 +493,6 @@
                 <button class="tab-btn ${tab==='ustrend'?'active':''}" data-tab="ustrend">美股-趋势<span class="tab-count">${usCount}</span></button>
                 <button class="tab-btn ${tab==='atrend'?'active':''}" data-tab="atrend">A股-趋势<span class="tab-count">${aCount}</span></button>
                 <button class="tab-btn ${tab==='entry'?'active':''}" data-tab="entry">进场候选<span class="tab-count">${entryTotal}</span></button>
-                <button class="tab-btn ${tab==='hold'?'active':''}" data-tab="hold">Trending<span class="tab-count">${holdCount}</span></button>
-                <button class="tab-btn ${tab==='alerts'?'active':''}" data-tab="alerts">警报<span class="tab-count">${alertCount}</span></button>
               </div>
             </div>
             <button class="icon-btn" id="theme-toggle">${isDark ? icons.sun : icons.moon}</button>
@@ -506,7 +500,7 @@
         </header>
         <main class="main">
           <div class="summary-bar">
-            ${tab === 'trend' ? renderTrendSummary() : tab === 'ustrend' ? renderUsSummary() : tab === 'atrend' ? renderASummary() : renderSummary(sosCount, poolCount, holdCount, alertCount)}
+            ${tab === 'trend' ? renderTrendSummary() : tab === 'ustrend' ? renderUsSummary() : tab === 'atrend' ? renderASummary() : renderSummary(sosCount, poolCount)}
           </div>
           ${errorBanner}
           ${mainContent}
@@ -553,36 +547,15 @@
     }
 
     function getCurrentTickers() {
-      if (tab === 'entry') {
-        const sos = filterAndSort(tabData.tab1?.sos_section || []);
-        const pool = filterAndSort(tabData.tab1?.pool_section || []);
-        return [...sos, ...pool].map(e => e.ticker);
-      } else if (tab === 'hold') {
-        return filterAndSort(tabData.tab2 || []).map(e => e.ticker);
-      } else {
-        return (tabData.tab3 || []).map(e => e.ticker);
-      }
+      const sos = filterAndSort(tabData.tab1?.sos_section || []);
+      const pool = filterAndSort(tabData.tab1?.pool_section || []);
+      return [...sos, ...pool].map(e => e.ticker);
     }
 
     // ─── Summary Bar ──────────────────────────────────
-    function renderSummary(sosCount, poolCount, holdCount, alertCount) {
-      const hold = tabData.tab2 || [];
-      const strongCount = hold.filter(e => e.display_tier === 'STRONG').length;
-      const strongNewCount = hold.filter(e => e.display_tier === 'STRONG NEW').length;
-      const midCount = hold.filter(e => e.display_tier === 'MID').length;
-      const earlyCount = hold.filter(e => e.display_tier === 'EARLY').length;
-      const alerts = tabData.tab3 || [];
-      const aCount = alerts.filter(e => e.alert_type === 'A_PULLBACK').length;
-      const bCount = alerts.filter(e => e.alert_type === 'B_EXIT').length;
-      const cCount = alerts.filter(e => e.alert_type === 'C_PULLBACK').length;
-
+    function renderSummary(sosCount, poolCount) {
       return `
         <div class="summary-item"><span class="state-badge state-SETUP_OK">进场</span><span class="summary-val">${sosCount} SOS</span><span class="summary-val">${poolCount} 池</span></div>
-        <div class="summary-item"><span class="state-badge state-STRONG">STRONG</span><span class="summary-val">${strongCount}</span></div>
-        <div class="summary-item"><span class="state-badge state-NEW">STRONG NEW</span><span class="summary-val">${strongNewCount}</span></div>
-        <div class="summary-item"><span class="state-badge state-MID">MID</span><span class="summary-val">${midCount}</span></div>
-        <div class="summary-item"><span class="state-badge state-EARLY">EARLY</span><span class="summary-val">${earlyCount}</span></div>
-        <div class="summary-item"><span style="color:#eab308">🟡</span><span class="summary-val">${aCount}</span> <span style="color:#ef4444">🔴</span><span class="summary-val">${bCount}</span> <span style="color:#f97316">🟠</span><span class="summary-val">${cCount}</span></div>
       `;
     }
 
@@ -913,14 +886,6 @@
       return `<th class="${active?'active':''}" data-sort="${field}">${label}<span class="sort-icon">${icon}</span></th>`;
     }
 
-    function tierBadge(tier) {
-      const cls = tier === 'STRONG NEW' ? 'tier-badge-STRONG-NEW' :
-                  tier === 'STRONG' ? 'tier-badge-STRONG' :
-                  tier === 'MID' ? 'tier-badge-MID' :
-                  tier === 'EARLY' ? 'tier-badge-EARLY' : 'state-badge';
-      return `<span class="state-badge ${cls}">${tier || '-'}</span>`;
-    }
-
     function renderRow(e, showSos) {
       const stateBadge = `<span class="state-badge state-${e.state}">${e.state}</span>`;
       const sosBadge = showSos && e.sos_setup_recent ? `<span class="sos-badge sos-${e.sos_setup_recent.slice(-1)}">${e.sos_setup_recent}</span>` : '';
@@ -943,34 +908,9 @@
       </tr>`;
     }
 
-    function renderHoldRow(e) {
-      const tier = e.display_tier || e.substate || '';
-      const slopeVal = e.ma10_slope_pct != null ? e.ma10_slope_pct : null;
-      const slopeClass = slopeVal != null ? (slopeVal >= 0 ? 'chg-pos' : 'chg-neg') : '';
-      const slopeDisplay = slopeVal != null ? `<span class="chg-badge ${slopeClass}">${slopeVal >= 0 ? '+' : ''}${slopeVal.toFixed(1)}%</span>` : '<span class="muted-val">-</span>';
-      const displayName = e.name_cn || e.name || '';
-      const sectorTd = groupMode ? '' : `<td class="sector">${e.gics_sector || '-'}</td>`;
-
-      return `<tr>
-        <td class="ticker"><a href="#" onclick="showChart('${e.ticker}'); return false;">${e.ticker}</a></td>
-        <td class="name">${displayName}</td>
-        ${sectorTd}
-        <td class="sector">${e.sub_industry || '-'}</td>
-        <td>${tierBadge(tier)}</td>
-        <td class="price">${fmt.price(e.last_close)}</td>
-        <td class="muted-val">${fmt.price(e.ma10)}</td>
-        <td>${slopeDisplay}</td>
-        <td class="muted-val">${fmt.price(e.ma60)}</td>
-        <td class="muted-val">${fmt.slope(e.ma200_slope)}</td>
-        <td class="muted-val">${e.days_in_state || '-'}</td>
-      </tr>`;
-    }
-
     function renderTable() {
       if (tab === 'entry') {
         return renderEntryTab();
-      } else if (tab === 'hold') {
-        return renderHoldTab();
       }
       return '';
     }
@@ -1069,136 +1009,6 @@
             </table>
           </div>
         </div>`;
-    }
-
-    function renderHoldTab() {
-      const list = filterAndSort(tabData.tab2 || []);
-      const colCount = groupMode ? 10 : 11;
-      const sectorTh = groupMode ? '' : th('gics_sector','行业');
-
-      const holdHeaders = `
-        ${th('ticker','代码')}
-        ${th('name_cn','名称')}
-        ${sectorTh}
-        ${th('sub_industry','子行业')}
-        ${th('display_tier','显示等级')}
-        ${th('last_close','收盘价')}
-        ${th('ma10','MA10')}
-        ${th('ma10_slope_pct','MA10斜率')}
-        ${th('ma60','MA60')}
-        ${th('ma200_slope','200D斜率')}
-        ${th('days_in_state','天数')}
-      `;
-
-      return `
-        <div class="toolbar">
-          <div class="toolbar-left">
-            <div class="search-wrap">
-              ${icons.search}
-              <input type="search" class="search-input" placeholder="搜索代码或名称..." value="${search}" id="search-input" />
-            </div>
-            <button class="btn ${groupMode?'active':''}" id="group-btn">行业分组</button>
-          </div>
-          <div class="toolbar-right">
-            <div class="stats">
-              ${icons.chart}
-              <span><span class="stats-num">${list.length}</span> 只</span>
-            </div>
-            <button class="btn ${copied?'copied':''}" id="copy-btn">
-              ${copied ? icons.check : icons.copy}
-              ${copied ? '已复制!' : `复制代码`}
-            </button>
-          </div>
-        </div>
-
-        <div style="margin-bottom:12px;padding:8px 14px;border-radius:6px;border:1px solid var(--border);background:var(--bg-muted);font-size:12px;color:var(--text-muted);line-height:1.7">
-          <b style="color:var(--text)">关键词</b>
-          <span class="state-badge state-STRONG">STRONG</span> 周线长+短均齐+容忍
-          <span class="state-badge state-MID">MID</span> 周线长均齐+短不齐
-          <span class="state-badge state-EARLY">EARLY</span> 日线齐+MA10斜率>5%+周线纠缠
-          <span class="state-badge state-NEW">NEW</span> 新股(上市<490天)+日线齐
-          | <b>显示等级升级</b> MID/EARLY+近5日60日新高→显示为STRONG (仅输出层)
-          | <b>排序</b> GICS行业入选数→显示等级→MA10斜率%
-        </div>
-
-        <div class="table-wrap">
-          <div class="table-scroll">
-            <table>
-              <thead><tr>${holdHeaders}</tr></thead>
-              <tbody>${renderGroupedRows(list, colCount, renderHoldRow)}</tbody>
-            </table>
-          </div>
-        </div>`;
-    }
-
-    // ─── Alerts Tab ────────────────────────────────────
-    function renderAlerts() {
-      const alerts = tabData.tab3 || [];
-      const filtered = search.trim() ? alerts.filter(a => {
-        const q = search.toLowerCase();
-        return (a.ticker||'').toLowerCase().includes(q) || (a.name_cn||'').toLowerCase().includes(q);
-      }) : alerts;
-
-      if (filtered.length === 0) {
-        return `<div class="toolbar">
-          <div class="toolbar-left">
-            <div class="search-wrap">
-              ${icons.search}
-              <input type="search" class="search-input" placeholder="搜索代码..." value="${search}" id="search-input" />
-            </div>
-          </div>
-        </div>
-        <div class="empty-state"><p>暂无警报</p></div>`;
-      }
-
-      let cards = '';
-      filtered.forEach(a => {
-        let badge = '', detail = '';
-        const emoji = a.emoji || '';
-        if (a.alert_type === 'A_PULLBACK') {
-          badge = `<span class="state-badge state-PULLBACK">${a.label} ${emoji}</span>`;
-          detail = a.pullback_dd_pct != null ? `${a.pullback_dd_pct.toFixed(1)}% · ${a.days_in_pullback}天前` : '';
-        } else if (a.alert_type === 'B_EXIT') {
-          badge = `<span class="state-badge state-EXIT">${a.label} ${emoji}</span>`;
-          detail = `${a.days_in_state || 0}天前`;
-        } else if (a.alert_type === 'C_PULLBACK') {
-          badge = `<span class="state-badge state-PULLBACK">${a.label} ${emoji}</span>`;
-          detail = a.pullback_dd_pct != null ? `${a.pullback_dd_pct.toFixed(1)}% · 回调${a.days_in_pullback}天` : '';
-        }
-        cards += `<div class="alert-card">
-          <div class="alert-ticker"><a href="#" onclick="showChart('${a.ticker}'); return false;">${a.ticker}</a></div>
-          <div class="alert-name">${a.name_cn || ''}</div>
-          <div>${badge}</div>
-          <div class="alert-detail">${detail}</div>
-          <div class="alert-sector">${a.gics_sector || ''}</div>
-        </div>`;
-      });
-
-      return `
-        <div class="toolbar">
-          <div class="toolbar-left">
-            <div class="search-wrap">
-              ${icons.search}
-              <input type="search" class="search-input" placeholder="搜索代码..." value="${search}" id="search-input" />
-            </div>
-          </div>
-          <div class="toolbar-right">
-            <div class="stats">
-              ${icons.chart}
-              <span><span class="stats-num">${filtered.length}</span> 条警报</span>
-            </div>
-          </div>
-        </div>
-
-        <div style="margin-bottom:12px;padding:8px 14px;border-radius:6px;border:1px solid var(--border);background:var(--bg-muted);font-size:12px;color:var(--text-muted);line-height:1.7">
-          <b style="color:var(--text)">关键词</b>
-          🟡 <b>A·PULLBACK</b> 近5日 TRENDING→PULLBACK (刚进入回调)
-          🔴 <b>B·EXIT</b> 近5日触发EXIT (跌破MA60+斜率负)
-          🟠 <b>C·PULLBACK</b> 仍PULLBACK且≥10日未修复 (非A类)
-          | 本页只关注PULL/EXIT, 不关注trend内部强弱变化
-        </div>
-
-        ${cards}`;
     }
 
     // ─── Init ──────────────────────────────────────────
