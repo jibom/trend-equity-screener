@@ -2075,6 +2075,16 @@
       "last_close": 6.07
     },
     {
+      "ticker": "0257.HK",
+      "name_cn": "光大环境",
+      "gics_sector": "Industrials",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 4,
+      "last_close": 4.74
+    },
+    {
       "ticker": "0371.HK",
       "name_cn": "北控水务集团",
       "gics_sector": "Utilities",
@@ -2093,16 +2103,6 @@
       "emoji": "🔴",
       "days_in_state": 3,
       "last_close": 9.79
-    },
-    {
-      "ticker": "0257.HK",
-      "name_cn": "光大环境",
-      "gics_sector": "Industrials",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 4,
-      "last_close": 4.74
     },
     {
       "ticker": "1816.HK",
@@ -2185,16 +2185,6 @@
       "last_close": 78.35
     },
     {
-      "ticker": "2331.HK",
-      "name_cn": "李宁",
-      "gics_sector": "Consumer Discretionary",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 4,
-      "last_close": 15.76
-    },
-    {
       "ticker": "2020.HK",
       "name_cn": "安踏体育",
       "gics_sector": "Consumer Discretionary",
@@ -2203,6 +2193,16 @@
       "emoji": "🔴",
       "days_in_state": 4,
       "last_close": 69.5
+    },
+    {
+      "ticker": "2331.HK",
+      "name_cn": "李宁",
+      "gics_sector": "Consumer Discretionary",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 4,
+      "last_close": 15.76
     },
     {
       "ticker": "6110.HK",
