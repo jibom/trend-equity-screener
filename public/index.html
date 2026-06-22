@@ -292,7 +292,8 @@
       padding: 10px 16px; border-bottom: 1px solid var(--border);
       background: var(--bg-muted); flex-shrink: 0;
     }
-    #modal-ticker { font-weight: 700; font-size: 15px; }
+    #modal-name { font-weight: 700; font-size: 15px; color: var(--text); }
+    #modal-ticker { font-size: 12px; color: var(--text-muted); }
     .interval-btn {
       padding: 4px 14px; border-radius: 6px; font-size: 12px; font-weight: 600;
       cursor: pointer; border: 1px solid var(--border); background: var(--bg);
@@ -321,6 +322,7 @@
     <div class="modal-backdrop" onclick="closeChart()"></div>
     <div class="modal-content">
       <div class="modal-header">
+        <span id="modal-name"></span>
         <span id="modal-ticker"></span>
         <button id="btn-daily" class="interval-btn active" onclick="switchInterval('D')">Daily</button>
         <button id="btn-weekly" class="interval-btn" onclick="switchInterval('W')">Weekly</button>
@@ -390,6 +392,7 @@
         if (r4.ok) aData = JSON.parse(await r4.text());
       } catch(e) { aData = null; }
       window.aData = aData;
+      window.tabData = tabData;   // 供全局 stockName() 查进场候选名称
     }
 
     // ─── Filtering & Sorting ────────────────────────────
@@ -1243,6 +1246,29 @@
     closeSector();                                    // 关闭成分股表, 只显个股图
     showChart(ticker, null, _detailStockList);        // 图的方向键在该子行业成分股内切换
   }
+  function stockName(ticker) {
+    // 从已加载的各市场数据 + 进场候选 查个股名称 (图表左上角显示用)
+    for (const d of [window.trendData, window.usData, window.aData]) {
+      if (!d) continue;
+      for (const k of ['all_stocks', 'part2', 'part3', 'part4']) {
+        const arr = d[k];
+        if (Array.isArray(arr)) {
+          const m = arr.find(e => e && e.ticker === ticker);
+          if (m && (m.name || m.name_cn)) return m.name || m.name_cn;
+        }
+      }
+    }
+    const t1 = (window.tabData && window.tabData.tab1) || {};
+    for (const k of ['sos_section', 'pool_section']) {
+      const arr = t1[k];
+      if (Array.isArray(arr)) {
+        const m = arr.find(e => e && e.ticker === ticker);
+        if (m && (m.name_cn || m.name)) return m.name_cn || m.name;
+      }
+    }
+    return '';
+  }
+
   async function showChart(ticker, screen, list) {
     _chartTicker = ticker;
     _chartInterval = 'D';
@@ -1258,6 +1284,7 @@
       _chartIdx = _chartList.indexOf(ticker);
     } else { _chartList = []; _chartIdx = -1; }
     document.getElementById('chart-modal').classList.add('open');
+    document.getElementById('modal-name').textContent = stockName(ticker);
     document.getElementById('modal-ticker').textContent =
       ticker + (_chartIdx >= 0 ? `   (${_chartIdx + 1}/${_chartList.length})  ←→切换 D/W日周` : '');
     _updateIntervalBtns();
