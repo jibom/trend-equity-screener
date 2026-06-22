@@ -2075,16 +2075,6 @@
       "last_close": 6.07
     },
     {
-      "ticker": "0257.HK",
-      "name_cn": "光大环境",
-      "gics_sector": "Industrials",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 4,
-      "last_close": 4.74
-    },
-    {
       "ticker": "0371.HK",
       "name_cn": "北控水务集团",
       "gics_sector": "Utilities",
@@ -2093,6 +2083,16 @@
       "emoji": "🔴",
       "days_in_state": 2,
       "last_close": 2.34
+    },
+    {
+      "ticker": "1816.HK",
+      "name_cn": "中广核电力",
+      "gics_sector": "Utilities",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 4,
+      "last_close": 2.82
     },
     {
       "ticker": "0586.HK",
@@ -2105,14 +2105,14 @@
       "last_close": 9.79
     },
     {
-      "ticker": "1816.HK",
-      "name_cn": "中广核电力",
-      "gics_sector": "Utilities",
+      "ticker": "0257.HK",
+      "name_cn": "光大环境",
+      "gics_sector": "Industrials",
       "alert_type": "B_EXIT",
       "label": "B·EXIT",
       "emoji": "🔴",
       "days_in_state": 4,
-      "last_close": 2.82
+      "last_close": 4.74
     },
     {
       "ticker": "1038.HK",
@@ -2275,14 +2275,14 @@
       "last_close": 9.99
     },
     {
-      "ticker": "0291.HK",
-      "name_cn": "华润啤酒",
+      "ticker": "1876.HK",
+      "name_cn": "百威亚太",
       "gics_sector": "Consumer Staples",
       "alert_type": "B_EXIT",
       "label": "B·EXIT",
       "emoji": "🔴",
-      "days_in_state": 4,
-      "last_close": 21.46
+      "days_in_state": 3,
+      "last_close": 6.46
     },
     {
       "ticker": "0168.HK",
@@ -2295,14 +2295,14 @@
       "last_close": 44.8
     },
     {
-      "ticker": "1876.HK",
-      "name_cn": "百威亚太",
+      "ticker": "0291.HK",
+      "name_cn": "华润啤酒",
       "gics_sector": "Consumer Staples",
       "alert_type": "B_EXIT",
       "label": "B·EXIT",
       "emoji": "🔴",
-      "days_in_state": 3,
-      "last_close": 6.46
+      "days_in_state": 4,
+      "last_close": 21.46
     },
     {
       "ticker": "0288.HK",
