@@ -2311,16 +2311,6 @@
       "last_close": 322.6
     },
     {
-      "ticker": "0322.HK",
-      "name_cn": "康师傅控股",
-      "gics_sector": "Consumer Staples",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 2,
-      "last_close": 9.79
-    },
-    {
       "ticker": "2689.HK",
       "name_cn": "玖龙纸业",
       "gics_sector": "Materials",
@@ -2331,14 +2321,14 @@
       "last_close": 6.42
     },
     {
-      "ticker": "1876.HK",
-      "name_cn": "百威亚太",
+      "ticker": "0322.HK",
+      "name_cn": "康师傅控股",
       "gics_sector": "Consumer Staples",
       "alert_type": "B_EXIT",
       "label": "B·EXIT",
       "emoji": "🔴",
-      "days_in_state": 4,
-      "last_close": 6.4
+      "days_in_state": 2,
+      "last_close": 9.79
     },
     {
       "ticker": "0168.HK",
@@ -2349,6 +2339,16 @@
       "emoji": "🔴",
       "days_in_state": 4,
       "last_close": 45.72
+    },
+    {
+      "ticker": "1876.HK",
+      "name_cn": "百威亚太",
+      "gics_sector": "Consumer Staples",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 4,
+      "last_close": 6.4
     },
     {
       "ticker": "3288.HK",
