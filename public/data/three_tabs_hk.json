@@ -2051,16 +2051,6 @@
       "last_close": 9.9
     },
     {
-      "ticker": "0386.HK",
-      "name_cn": "中国石油化工股份",
-      "gics_sector": "Energy",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 3,
-      "last_close": 4.11
-    },
-    {
       "ticker": "0857.HK",
       "name_cn": "中国石油股份",
       "gics_sector": "Energy",
@@ -2069,6 +2059,16 @@
       "emoji": "🔴",
       "days_in_state": 3,
       "last_close": 8.94
+    },
+    {
+      "ticker": "0386.HK",
+      "name_cn": "中国石油化工股份",
+      "gics_sector": "Energy",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 3,
+      "last_close": 4.11
     },
     {
       "ticker": "1088.HK",
@@ -2491,16 +2491,6 @@
       "last_close": 29.56
     },
     {
-      "ticker": "6680.HK",
-      "name_cn": "金力永磁",
-      "gics_sector": "Industrials",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 4,
-      "last_close": 18.9
-    },
-    {
       "ticker": "3858.HK",
       "name_cn": "佳鑫国际资源",
       "gics_sector": "Materials",
@@ -2509,6 +2499,16 @@
       "emoji": "🔴",
       "days_in_state": 1,
       "last_close": 72.8
+    },
+    {
+      "ticker": "6680.HK",
+      "name_cn": "金力永磁",
+      "gics_sector": "Industrials",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 4,
+      "last_close": 18.9
     },
     {
       "ticker": "0100.HK",
