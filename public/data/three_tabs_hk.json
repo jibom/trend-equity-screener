@@ -2011,16 +2011,6 @@
       "last_close": 72.95
     },
     {
-      "ticker": "0388.HK",
-      "name_cn": "香港交易所",
-      "gics_sector": "Financials",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 1,
-      "last_close": 371.0
-    },
-    {
       "ticker": "0966.HK",
       "name_cn": "中国太平",
       "gics_sector": "Financials",
@@ -2029,6 +2019,16 @@
       "emoji": "🔴",
       "days_in_state": 4,
       "last_close": 20.06
+    },
+    {
+      "ticker": "0388.HK",
+      "name_cn": "香港交易所",
+      "gics_sector": "Financials",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 1,
+      "last_close": 371.0
     },
     {
       "ticker": "6881.HK",
@@ -2041,16 +2041,6 @@
       "last_close": 7.7
     },
     {
-      "ticker": "0857.HK",
-      "name_cn": "中国石油股份",
-      "gics_sector": "Energy",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 3,
-      "last_close": 8.94
-    },
-    {
       "ticker": "6060.HK",
       "name_cn": "众安在线",
       "gics_sector": "Financials",
@@ -2059,6 +2049,16 @@
       "emoji": "🔴",
       "days_in_state": 4,
       "last_close": 9.9
+    },
+    {
+      "ticker": "0857.HK",
+      "name_cn": "中国石油股份",
+      "gics_sector": "Energy",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 3,
+      "last_close": 8.94
     },
     {
       "ticker": "0386.HK",
