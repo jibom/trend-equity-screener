@@ -1823,16 +1823,6 @@
       "last_close": 7.48
     },
     {
-      "ticker": "0386.HK",
-      "name_cn": "中国石油化工股份",
-      "gics_sector": "Energy",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 4,
-      "last_close": 4.15
-    },
-    {
       "ticker": "0857.HK",
       "name_cn": "中国石油股份",
       "gics_sector": "Energy",
@@ -1841,6 +1831,16 @@
       "emoji": "🔴",
       "days_in_state": 4,
       "last_close": 8.95
+    },
+    {
+      "ticker": "0386.HK",
+      "name_cn": "中国石油化工股份",
+      "gics_sector": "Energy",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 4,
+      "last_close": 4.15
     },
     {
       "ticker": "1088.HK",
@@ -1933,16 +1933,6 @@
       "last_close": 21.7
     },
     {
-      "ticker": "0392.HK",
-      "name_cn": "北京控股",
-      "gics_sector": "Utilities",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 4,
-      "last_close": 27.54
-    },
-    {
       "ticker": "0135.HK",
       "name_cn": "昆仑能源",
       "gics_sector": "Utilities",
@@ -1951,6 +1941,16 @@
       "emoji": "🔴",
       "days_in_state": 2,
       "last_close": 6.63
+    },
+    {
+      "ticker": "0392.HK",
+      "name_cn": "北京控股",
+      "gics_sector": "Utilities",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 4,
+      "last_close": 27.54
     },
     {
       "ticker": "0371.HK",
@@ -1963,16 +1963,6 @@
       "last_close": 2.32
     },
     {
-      "ticker": "1816.HK",
-      "name_cn": "中广核电力",
-      "gics_sector": "Utilities",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 1,
-      "last_close": 2.8
-    },
-    {
       "ticker": "0257.HK",
       "name_cn": "光大环境",
       "gics_sector": "Industrials",
@@ -1981,6 +1971,16 @@
       "emoji": "🔴",
       "days_in_state": 1,
       "last_close": 4.73
+    },
+    {
+      "ticker": "1816.HK",
+      "name_cn": "中广核电力",
+      "gics_sector": "Utilities",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 1,
+      "last_close": 2.8
     },
     {
       "ticker": "0006.HK",
@@ -2323,16 +2323,6 @@
       "last_close": 477.6
     },
     {
-      "ticker": "9995.HK",
-      "name_cn": "荣昌生物",
-      "gics_sector": "Health Care",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 4,
-      "last_close": 68.9
-    },
-    {
       "ticker": "1801.HK",
       "name_cn": "信达生物",
       "gics_sector": "Health Care",
@@ -2341,6 +2331,16 @@
       "emoji": "🔴",
       "days_in_state": 1,
       "last_close": 77.95
+    },
+    {
+      "ticker": "9995.HK",
+      "name_cn": "荣昌生物",
+      "gics_sector": "Health Care",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 4,
+      "last_close": 68.9
     },
     {
       "ticker": "2696.HK",
