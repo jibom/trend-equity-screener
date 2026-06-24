@@ -1903,16 +1903,6 @@
       "last_close": 10.56
     },
     {
-      "ticker": "0012.HK",
-      "name_cn": "恒基地产",
-      "gics_sector": "Real Estate",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 1,
-      "last_close": 25.32
-    },
-    {
       "ticker": "0004.HK",
       "name_cn": "九龙仓集团",
       "gics_sector": "Real Estate",
@@ -1921,6 +1911,16 @@
       "emoji": "🔴",
       "days_in_state": 2,
       "last_close": 18.54
+    },
+    {
+      "ticker": "0012.HK",
+      "name_cn": "恒基地产",
+      "gics_sector": "Real Estate",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 1,
+      "last_close": 25.32
     },
     {
       "ticker": "1997.HK",
@@ -2143,16 +2143,6 @@
       "last_close": 6.7
     },
     {
-      "ticker": "0322.HK",
-      "name_cn": "康师傅控股",
-      "gics_sector": "Consumer Staples",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 3,
-      "last_close": 9.52
-    },
-    {
       "ticker": "0291.HK",
       "name_cn": "华润啤酒",
       "gics_sector": "Consumer Staples",
@@ -2161,6 +2151,16 @@
       "emoji": "🔴",
       "days_in_state": 1,
       "last_close": 21.48
+    },
+    {
+      "ticker": "0322.HK",
+      "name_cn": "康师傅控股",
+      "gics_sector": "Consumer Staples",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 3,
+      "last_close": 9.52
     },
     {
       "ticker": "0288.HK",
@@ -2323,16 +2323,6 @@
       "last_close": 477.6
     },
     {
-      "ticker": "1801.HK",
-      "name_cn": "信达生物",
-      "gics_sector": "Health Care",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 1,
-      "last_close": 77.95
-    },
-    {
       "ticker": "9995.HK",
       "name_cn": "荣昌生物",
       "gics_sector": "Health Care",
@@ -2341,6 +2331,16 @@
       "emoji": "🔴",
       "days_in_state": 4,
       "last_close": 68.9
+    },
+    {
+      "ticker": "1801.HK",
+      "name_cn": "信达生物",
+      "gics_sector": "Health Care",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 1,
+      "last_close": 77.95
     },
     {
       "ticker": "2696.HK",
