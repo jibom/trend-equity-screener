@@ -1923,16 +1923,6 @@
       "last_close": 18.54
     },
     {
-      "ticker": "1997.HK",
-      "name_cn": "九龙仓置业",
-      "gics_sector": "Real Estate",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 3,
-      "last_close": 21.7
-    },
-    {
       "ticker": "0135.HK",
       "name_cn": "昆仑能源",
       "gics_sector": "Utilities",
@@ -1941,6 +1931,16 @@
       "emoji": "🔴",
       "days_in_state": 2,
       "last_close": 6.63
+    },
+    {
+      "ticker": "1997.HK",
+      "name_cn": "九龙仓置业",
+      "gics_sector": "Real Estate",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 3,
+      "last_close": 21.7
     },
     {
       "ticker": "0392.HK",
@@ -1963,16 +1963,6 @@
       "last_close": 5.74
     },
     {
-      "ticker": "0371.HK",
-      "name_cn": "北控水务集团",
-      "gics_sector": "Utilities",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 4,
-      "last_close": 2.32
-    },
-    {
       "ticker": "0257.HK",
       "name_cn": "光大环境",
       "gics_sector": "Industrials",
@@ -1981,6 +1971,16 @@
       "emoji": "🔴",
       "days_in_state": 1,
       "last_close": 4.73
+    },
+    {
+      "ticker": "0371.HK",
+      "name_cn": "北控水务集团",
+      "gics_sector": "Utilities",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 4,
+      "last_close": 2.32
     },
     {
       "ticker": "1816.HK",
@@ -2243,16 +2243,6 @@
       "last_close": 121.1
     },
     {
-      "ticker": "0066.HK",
-      "name_cn": "港铁公司",
-      "gics_sector": "Industrials",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 1,
-      "last_close": 31.02
-    },
-    {
       "ticker": "2208.HK",
       "name_cn": "金风科技",
       "gics_sector": "Industrials",
@@ -2261,6 +2251,16 @@
       "emoji": "🔴",
       "days_in_state": 4,
       "last_close": 10.13
+    },
+    {
+      "ticker": "0066.HK",
+      "name_cn": "港铁公司",
+      "gics_sector": "Industrials",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 1,
+      "last_close": 31.02
     },
     {
       "ticker": "0317.HK",
