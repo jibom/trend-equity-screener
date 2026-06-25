@@ -122,7 +122,6 @@ jobs:
         env:
           PYTHONIOENCODING: utf-8
           EODHD_KEY: ${{ secrets.EODHD_KEY }}
-        continue-on-error: true
 
       - name: Export US chartdata (1y daily+weekly for 美股-趋势 个股图)
         if: steps.markets.outputs.market == 'us' || steps.markets.outputs.market == 'all'
@@ -130,7 +129,6 @@ jobs:
         env:
           PYTHONIOENCODING: utf-8
           EODHD_KEY: ${{ secrets.EODHD_KEY }}
-        continue-on-error: true
 
       - name: Build A-share universe (top600 by 成交金额 + 申万一级/三级)
         if: steps.markets.outputs.market == 'hk' || steps.markets.outputs.market == 'all'

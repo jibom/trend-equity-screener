@@ -72,9 +72,14 @@ def fetch_eod(code: str, asof: str) -> pd.DataFrame | None:
                                      "period": "d", "fmt": "json"}, timeout=60)
             r.raise_for_status()
             d = r.json()
-            if not d:
+            # EODHD 正常返回 list[dict]; 限流/错误时返回 dict (如 {"error": ...}) — 直接跳过该票,
+            # 否则 pd.DataFrame(dict) 无 date 列会抛 KeyError 触发 3 次无意义重试 (每次 sleep 1s)。
+            if not isinstance(d, list) or not d:
                 return None
-            df = pd.DataFrame(d).sort_values("date").reset_index(drop=True)
+            df = pd.DataFrame(d)
+            if "date" not in df.columns:
+                return None
+            df = df.sort_values("date").reset_index(drop=True)
             for c in ("open", "high", "low", "close", "adjusted_close", "volume"):
                 df[c] = pd.to_numeric(df[c], errors="coerce")
             return df
