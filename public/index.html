@@ -1140,7 +1140,9 @@
     const theme = _lcTheme();
     _charts = [];
 
-    const ma10 = calcMA(rows, 10), ma20 = calcMA(rows, 20), ma50 = calcMA(rows, 50), ma100 = calcMA(rows, 100);
+    // 均线: 快线组 5/10/15/20 (暖色系), 慢线组 40/50/60/70 (冷色系) — 组内颜色一致渐变
+    const ma5  = calcMA(rows, 5),  ma10 = calcMA(rows, 10), ma15 = calcMA(rows, 15), ma20 = calcMA(rows, 20);
+    const ma40 = calcMA(rows, 40), ma50 = calcMA(rows, 50), ma60 = calcMA(rows, 60), ma70 = calcMA(rows, 70);
     const macd = calcMACD(rows);
     const kdj = calcKDJ(rows);
 
@@ -1171,9 +1173,11 @@
     });
     cs.setData(candles); allSeries.push(cs);
 
-    const maOpts = (color) => ({ color, lineWidth: 1, priceLineVisible: false, lastValueVisible: false });
-    [['#FF6B6B', ma10], ['#FFA726', ma20], ['#42A5F5', ma50], ['#AB47BC', ma100]]
-      .forEach(([c, arr]) => { if (arr.length) addSer(mainChart, maOpts(c), arr); });
+    const maOpts = (color, width) => ({ color, lineWidth: width || 1, priceLineVisible: false, lastValueVisible: false });
+    // 快线组 5/10/15/20 — 暖色渐变 (红→橙→琥珀); 慢线组 40/50/60/70 — 冷色渐变 (蓝→靛→紫)
+    [['#E53935', ma5, 1], ['#FF7043', ma10, 1], ['#FB8C00', ma15, 1], ['#FFB300', ma20, 1],
+     ['#42A5F5', ma40, 1], ['#5C6BC0', ma50, 1], ['#7E57C2', ma60, 1], ['#AB47BC', ma70, 1]]
+      .forEach(([c, arr, w]) => { if (arr.length) addSer(mainChart, maOpts(c, w), arr); });
 
     const vs = mainChart.addHistogramSeries({ priceFormat: { type: 'volume' }, priceScaleId: 'vol' });
     vs.setData(vols); allSeries.push(vs);
