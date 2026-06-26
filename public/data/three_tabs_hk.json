@@ -1383,6 +1383,16 @@
       "last_close": 44.7
     },
     {
+      "ticker": "0998.HK",
+      "name_cn": "中信银行",
+      "gics_sector": "Financials",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 2,
+      "last_close": 6.8
+    },
+    {
       "ticker": "1658.HK",
       "name_cn": "邮储银行",
       "gics_sector": "Financials",
@@ -1401,16 +1411,6 @@
       "emoji": "🔴",
       "days_in_state": 2,
       "last_close": 5.96
-    },
-    {
-      "ticker": "0998.HK",
-      "name_cn": "中信银行",
-      "gics_sector": "Financials",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 2,
-      "last_close": 6.8
     },
     {
       "ticker": "2601.HK",
@@ -1653,16 +1653,6 @@
       "last_close": 60.25
     },
     {
-      "ticker": "0003.HK",
-      "name_cn": "香港中华煤气",
-      "gics_sector": "Utilities",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 1,
-      "last_close": 6.66
-    },
-    {
       "ticker": "0006.HK",
       "name_cn": "电能实业",
       "gics_sector": "Utilities",
@@ -1671,6 +1661,16 @@
       "emoji": "🔴",
       "days_in_state": 3,
       "last_close": 57.55
+    },
+    {
+      "ticker": "0003.HK",
+      "name_cn": "香港中华煤气",
+      "gics_sector": "Utilities",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 1,
+      "last_close": 6.66
     },
     {
       "ticker": "0728.HK",
@@ -2083,16 +2083,6 @@
       "last_close": 4.28
     },
     {
-      "ticker": "9995.HK",
-      "name_cn": "荣昌生物",
-      "gics_sector": "Health Care",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 1,
-      "last_close": 69.65
-    },
-    {
       "ticker": "1801.HK",
       "name_cn": "信达生物",
       "gics_sector": "Health Care",
@@ -2101,6 +2091,16 @@
       "emoji": "🔴",
       "days_in_state": 3,
       "last_close": 75.15
+    },
+    {
+      "ticker": "9995.HK",
+      "name_cn": "荣昌生物",
+      "gics_sector": "Health Care",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 1,
+      "last_close": 69.65
     },
     {
       "ticker": "2696.HK",
