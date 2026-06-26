@@ -679,6 +679,7 @@
       const top = (d.part1 && d.part1.sub_industries && d.part1.sub_industries[0]) || {};
       return `
         <div class="summary-item"><span class="state-badge state-STRONG">最热行业</span><span class="summary-val">${d.hottest_sub || '-'} ${top.composite != null ? '(' + top.composite + ')' : ''}</span></div>
+        <div class="summary-item"><span class="state-badge state-SETUP_OK">3月新高</span><span class="summary-val">${(d.part1c || []).length}</span></div>
         <div class="summary-item"><span class="state-badge state-SETUP_OK">趋势个股</span><span class="summary-val">${(d.part2 || []).length}</span></div>
         <div class="summary-item"><span class="state-badge state-EARLY">回调买点</span><span class="summary-val">${(d.part4 || []).length}</span></div>
       `;
@@ -707,6 +708,15 @@
         pctRaw(s.share_1d), pctRaw(s.share_5d), pctRaw(s.share5_pctile200), signedR(s.ret_60), `<b>${num2(s.composite)}</b>`]);
       html += trendSection('Part 1 · GICS Sector 热度 (全量)', secs.length,
         trendTable(['Sector','n','新高广度250','量放','占比1日','占比5日','5日占比200日分位','60日涨幅','综合分'], secRows));
+
+      const p1c = d.part1c || [];
+      const p1cRows = p1c.map(e => [
+        tk(e.ticker, 'part1c'), e.name, e.sub_industry, num2(e.close), pctR(e.pct_high_250),
+        pctR(e.nh_ratio_60), num2(e.amt_surge) + 'x', num2(e.amt_rank), signedR(e.ret_60),
+        signedR(e.sales_growth), signedR(e.earn_growth), pctR(e.roe),
+        yn(e.ma_aligned), `<b>${num2(e.hotness)}</b>`]);
+      html += trendSection('Part 1c · 3个月新高个股 (全市场, 距60日高≤2%, hotness 排序, ≤20)', p1c.length,
+        trendTable(['代码','名称','行业','收盘','距250高','新高天数占比','量放','5日均额排','60日涨幅','销售增长','盈利增长','ROE','多头','热度分'], p1cRows));
 
       const p2 = d.part2 || [];
       const p2Rows = p2.map(e => [

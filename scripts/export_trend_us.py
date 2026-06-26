@@ -187,6 +187,10 @@ def main():
         "sectors": part1_records(sec_rank, "sector"),
     }
 
+    # Part1c: 3个月(60日)新高个股 (全市场, pct_high_60≥0.98 即距60日高≤2%, hotness 排序 ≤20)
+    nh = df_full[df_full["pct_high_60"] >= 0.98].sort_values("hotness", ascending=False).head(20)
+    part1c = [stock_record(r, with_nh=True) for _, r in nh.iterrows()]
+
     # Part2: 趋势个股 (60日>10%, 且在 Top10 行业内) hotness 排序 ≤20
     top = df_full[(df_full["ret_60"] > 0.10) & (df_full["Industry"].isin(top10_ind))]
     top = top.sort_values("hotness", ascending=False).head(20)
@@ -252,7 +256,7 @@ def main():
     payload = {
         "date": asof, "market": "US",
         "hottest_sub": hottest_ind,
-        "part1": part1, "part2": part2, "part3": part3, "part4": part4,
+        "part1": part1, "part1c": part1c, "part2": part2, "part3": part3, "part4": part4,
         "part5": part5, "rotation_alerts": rotation_alerts, "all_stocks": all_stocks,
     }
     os.makedirs(os.path.dirname(OUT_PATH), exist_ok=True)
@@ -260,7 +264,7 @@ def main():
         json.dump(payload, f, ensure_ascii=False, indent=2)
     print(f"\n[Export] -> {OUT_PATH}")
     print(f"  part1: {len(part1['sub_industries'])} 行业, {len(part1['sectors'])} GICS板块")
-    print(f"  part2: {len(part2)} 趋势个股 | part3: {len(part3)} 异动 | part4: {len(part4)} 回调买点")
+    print(f"  part1c: {len(part1c)} 3个月新高 | part2: {len(part2)} 趋势个股 | part3: {len(part3)} 异动 | part4: {len(part4)} 回调买点")
     print(f"  part5: {len(part5)} 行业轮动 (🔻lose={len(rotation_alerts['lose'])} 🔺gain={len(rotation_alerts['gain'])})")
     print(f"  all_stocks: {len(all_stocks)}")
 
