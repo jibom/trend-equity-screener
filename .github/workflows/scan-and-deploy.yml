@@ -178,7 +178,9 @@ jobs:
           git diff --staged --quiet || git commit -m "Update scan data $(date -u +'%Y-%m-%d %H:%M UTC')"
           # main 可能在 checkout 与 push 之间被别的 run/手动推送推进 (非 fast-forward)，
           # 先 rebase 再 push，避免 push 被拒导致整个 job 失败、deploy 被跳过。
-          git pull --rebase origin main
+          # --autostash: 扫描步骤会改一些没被 git add 的跟踪文件 (rebase 要求干净工作树),
+          # autostash 自动暂存并在 rebase 后恢复, 不阻塞 push。
+          git pull --rebase --autostash origin main
           git push
 
       - name: Upload Pages artifact
