@@ -18,7 +18,7 @@
         "share_5d": 0.61,
         "share5_pctile200": 95.0,
         "ret_60": 0.482,
-        "composite": 1.834,
+        "composite": 1.833,
         "sector": "Industrials"
       },
       {
@@ -29,13 +29,13 @@
         "breadth_60": 0.0,
         "amt_surge": 2.62,
         "amt_rank": 0.703,
-        "amt_1d_yi": 2577.17,
-        "amt_5d_yi": 2082.56,
-        "share_1d": 20.76,
-        "share_5d": 24.49,
-        "share5_pctile200": 86.5,
+        "amt_1d_yi": 2583.27,
+        "amt_5d_yi": 2086.66,
+        "share_1d": 20.75,
+        "share_5d": 24.51,
+        "share5_pctile200": 87.0,
         "ret_60": 1.081,
-        "composite": 1.332,
+        "composite": 1.336,
         "sector": "Tech"
       },
       {
@@ -52,24 +52,24 @@
         "share_5d": 0.62,
         "share5_pctile200": 61.5,
         "ret_60": 0.154,
-        "composite": 1.135,
+        "composite": 1.134,
         "sector": "Healthcare"
       },
       {
         "sub_industry": "Electronic Comp",
         "n": 8,
-        "pct_high_250": 0.859,
+        "pct_high_250": 0.86,
         "breadth_250": 25.0,
         "breadth_60": 12.5,
         "amt_surge": 2.018,
         "amt_rank": 0.734,
-        "amt_1d_yi": 208.15,
-        "amt_5d_yi": 120.71,
-        "share_1d": 1.68,
+        "amt_1d_yi": 208.37,
+        "amt_5d_yi": 120.79,
+        "share_1d": 1.67,
         "share_5d": 1.42,
         "share5_pctile200": 97.5,
         "ret_60": 0.455,
-        "composite": 1.04,
+        "composite": 1.039,
         "sector": "Tech"
       },
       {
@@ -80,9 +80,9 @@
         "breadth_60": 0.0,
         "amt_surge": 2.209,
         "amt_rank": 0.643,
-        "amt_1d_yi": 441.51,
-        "amt_5d_yi": 302.94,
-        "share_1d": 3.56,
+        "amt_1d_yi": 441.49,
+        "amt_5d_yi": 303.01,
+        "share_1d": 3.55,
         "share_5d": 3.56,
         "share5_pctile200": 100.0,
         "ret_60": 0.602,
@@ -99,12 +99,29 @@
         "amt_rank": 0.418,
         "amt_1d_yi": 209.4,
         "amt_5d_yi": 107.8,
-        "share_1d": 1.69,
+        "share_1d": 1.68,
         "share_5d": 1.27,
         "share5_pctile200": 97.5,
         "ret_60": 0.69,
-        "composite": 0.945,
+        "composite": 0.944,
         "sector": "Industrials"
+      },
+      {
+        "sub_industry": "Computer Hardware",
+        "n": 11,
+        "pct_high_250": 0.698,
+        "breadth_250": 0.0,
+        "breadth_60": 0.0,
+        "amt_surge": 1.881,
+        "amt_rank": 0.746,
+        "amt_1d_yi": 660.62,
+        "amt_5d_yi": 536.7,
+        "share_1d": 5.31,
+        "share_5d": 6.31,
+        "share5_pctile200": 97.0,
+        "ret_60": 0.8,
+        "composite": 0.92,
+        "sector": "Tech"
       },
       {
         "sub_industry": "Ins - Property & Casualt…",
@@ -118,27 +135,10 @@
         "amt_5d_yi": 29.51,
         "share_1d": 0.28,
         "share_5d": 0.35,
-        "share5_pctile200": 47.0,
+        "share5_pctile200": 46.5,
         "ret_60": 0.118,
-        "composite": 0.925,
+        "composite": 0.919,
         "sector": "Fin Svc"
-      },
-      {
-        "sub_industry": "Computer Hardware",
-        "n": 11,
-        "pct_high_250": 0.698,
-        "breadth_250": 0.0,
-        "breadth_60": 0.0,
-        "amt_surge": 1.881,
-        "amt_rank": 0.747,
-        "amt_1d_yi": 659.51,
-        "amt_5d_yi": 536.43,
-        "share_1d": 5.31,
-        "share_5d": 6.31,
-        "share5_pctile200": 97.0,
-        "ret_60": 0.8,
-        "composite": 0.921,
-        "sector": "Tech"
       },
       {
         "sub_industry": "Lodging",
@@ -152,9 +152,9 @@
         "amt_5d_yi": 24.22,
         "share_1d": 0.44,
         "share_5d": 0.28,
-        "share5_pctile200": 97.5,
+        "share5_pctile200": 97.0,
         "ret_60": 0.209,
-        "composite": 0.91,
+        "composite": 0.904,
         "sector": "Consumer Cyc"
       },
       {
@@ -164,7 +164,7 @@
         "breadth_250": 14.286,
         "breadth_60": 0.0,
         "amt_surge": 1.914,
-        "amt_rank": 0.577,
+        "amt_rank": 0.576,
         "amt_1d_yi": 87.45,
         "amt_5d_yi": 51.08,
         "share_1d": 0.7,
@@ -183,14 +183,14 @@
         "breadth_250": 5.0,
         "breadth_60": 3.571,
         "amt_surge": 1.915,
-        "amt_rank": 0.632,
-        "amt_1d_yi": 6462.16,
-        "amt_5d_yi": 4466.18,
-        "share_1d": 52.05,
+        "amt_rank": 0.631,
+        "amt_1d_yi": 6469.09,
+        "amt_5d_yi": 4470.97,
+        "share_1d": 51.96,
         "share_5d": 52.52,
         "share5_pctile200": 94.0,
         "ret_60": 0.513,
-        "composite": 0.919
+        "composite": 0.918
       },
       {
         "sector": "Real Estate",
@@ -216,9 +216,9 @@
         "breadth_60": 17.391,
         "amt_surge": 1.458,
         "amt_rank": 0.45,
-        "amt_1d_yi": 1143.79,
-        "amt_5d_yi": 712.44,
-        "share_1d": 9.21,
+        "amt_1d_yi": 1148.05,
+        "amt_5d_yi": 713.31,
+        "share_1d": 9.22,
         "share_5d": 8.38,
         "share5_pctile200": 76.0,
         "ret_60": 0.195,
@@ -231,14 +231,14 @@
         "breadth_250": 37.288,
         "breadth_60": 50.847,
         "amt_surge": 1.318,
-        "amt_rank": 0.517,
-        "amt_1d_yi": 792.22,
-        "amt_5d_yi": 489.16,
-        "share_1d": 6.38,
-        "share_5d": 5.75,
+        "amt_rank": 0.518,
+        "amt_1d_yi": 802.05,
+        "amt_5d_yi": 491.07,
+        "share_1d": 6.44,
+        "share_5d": 5.77,
         "share5_pctile200": 11.5,
         "ret_60": 0.152,
-        "composite": 0.333
+        "composite": 0.334
       },
       {
         "sector": "Utilities",
@@ -248,8 +248,8 @@
         "breadth_60": 31.818,
         "amt_surge": 1.31,
         "amt_rank": 0.414,
-        "amt_1d_yi": 125.76,
-        "amt_5d_yi": 110.78,
+        "amt_1d_yi": 125.99,
+        "amt_5d_yi": 110.83,
         "share_1d": 1.01,
         "share_5d": 1.3,
         "share5_pctile200": 0.5,
@@ -266,11 +266,11 @@
         "amt_rank": 0.506,
         "amt_1d_yi": 811.33,
         "amt_5d_yi": 631.62,
-        "share_1d": 6.54,
-        "share_5d": 7.43,
+        "share_1d": 6.52,
+        "share_5d": 7.42,
         "share5_pctile200": 0.5,
         "ret_60": 0.168,
-        "composite": 0.006
+        "composite": 0.007
       },
       {
         "sector": "Consumer Cyc",
@@ -280,10 +280,10 @@
         "breadth_60": 33.846,
         "amt_surge": 1.184,
         "amt_rank": 0.44,
-        "amt_1d_yi": 1284.36,
-        "amt_5d_yi": 798.16,
-        "share_1d": 10.35,
-        "share_5d": 9.39,
+        "amt_1d_yi": 1284.34,
+        "amt_5d_yi": 798.33,
+        "share_1d": 10.32,
+        "share_5d": 9.38,
         "share5_pctile200": 10.0,
         "ret_60": 0.099,
         "composite": -0.166
@@ -296,13 +296,13 @@
         "breadth_60": 41.379,
         "amt_surge": 1.113,
         "amt_rank": 0.468,
-        "amt_1d_yi": 313.25,
-        "amt_5d_yi": 213.64,
+        "amt_1d_yi": 313.64,
+        "amt_5d_yi": 213.7,
         "share_1d": 2.52,
         "share_5d": 2.51,
-        "share5_pctile200": 3.5,
+        "share5_pctile200": 3.0,
         "ret_60": 0.055,
-        "composite": -0.254
+        "composite": -0.258
       },
       {
         "sector": "Comm Svc",
@@ -310,15 +310,15 @@
         "pct_high_250": 0.714,
         "breadth_250": 10.714,
         "breadth_60": 14.286,
-        "amt_surge": 1.257,
+        "amt_surge": 1.259,
         "amt_rank": 0.616,
-        "amt_1d_yi": 1005.79,
-        "amt_5d_yi": 671.11,
-        "share_1d": 8.1,
-        "share_5d": 7.89,
-        "share5_pctile200": 17.5,
-        "ret_60": 0.037,
-        "composite": -0.495
+        "amt_1d_yi": 1020.6,
+        "amt_5d_yi": 671.1,
+        "share_1d": 8.2,
+        "share_5d": 7.88,
+        "share5_pctile200": 18.0,
+        "ret_60": 0.036,
+        "composite": -0.49
       },
       {
         "sector": "Energy",
@@ -327,14 +327,14 @@
         "breadth_250": 16.129,
         "breadth_60": 9.677,
         "amt_surge": 1.164,
-        "amt_rank": 0.432,
-        "amt_1d_yi": 214.93,
+        "amt_rank": 0.431,
+        "amt_1d_yi": 214.91,
         "amt_5d_yi": 177.01,
         "share_1d": 1.73,
         "share_5d": 2.08,
-        "share5_pctile200": 6.5,
+        "share5_pctile200": 6.0,
         "ret_60": -0.109,
-        "composite": -0.756
+        "composite": -0.761
       },
       {
         "sector": "Basic Mat",
@@ -343,11 +343,11 @@
         "breadth_250": 5.405,
         "breadth_60": 13.514,
         "amt_surge": 1.144,
-        "amt_rank": 0.318,
-        "amt_1d_yi": 187.75,
-        "amt_5d_yi": 159.51,
+        "amt_rank": 0.317,
+        "amt_1d_yi": 187.71,
+        "amt_5d_yi": 159.56,
         "share_1d": 1.51,
-        "share_5d": 1.88,
+        "share_5d": 1.87,
         "share5_pctile200": 2.0,
         "ret_60": -0.021,
         "composite": -0.856
@@ -366,7 +366,7 @@
       "amt_rank": 0.113,
       "ret_60": 0.206,
       "ma_aligned": 1,
-      "hotness": 1.898,
+      "hotness": 1.897,
       "sales_growth": null,
       "earn_growth": null,
       "roe": -0.412,
@@ -380,10 +380,10 @@
       "close": 151.35,
       "pct_high_250": 1.0,
       "amt_surge": 1.811,
-      "amt_rank": 0.745,
+      "amt_rank": 0.743,
       "ret_60": 0.852,
       "ma_aligned": 1,
-      "hotness": 1.19,
+      "hotness": 1.188,
       "sales_growth": 0.201,
       "earn_growth": 0.286,
       "roe": 1.324,
@@ -397,10 +397,10 @@
       "close": 591.78,
       "pct_high_250": 0.988,
       "amt_surge": 1.791,
-      "amt_rank": 0.721,
+      "amt_rank": 0.719,
       "ret_60": 0.502,
       "ma_aligned": 1,
-      "hotness": 1.184,
+      "hotness": 1.183,
       "sales_growth": 0.116,
       "earn_growth": 0.473,
       "roe": 0.249,
@@ -485,7 +485,7 @@
       "amt_rank": 0.121,
       "ret_60": 1.101,
       "ma_aligned": 1,
-      "hotness": 0.955,
+      "hotness": 0.954,
       "sales_growth": 0.193,
       "earn_growth": null,
       "roe": -0.182,
@@ -498,7 +498,7 @@
       "sector": "Healthcare",
       "close": 383.84,
       "pct_high_250": 1.0,
-      "amt_surge": 1.255,
+      "amt_surge": 1.256,
       "amt_rank": 0.541,
       "ret_60": 1.219,
       "ma_aligned": 1,
@@ -618,10 +618,10 @@
       "close": 104.34,
       "pct_high_250": 0.997,
       "amt_surge": 1.431,
-      "amt_rank": 0.726,
+      "amt_rank": 0.724,
       "ret_60": 0.466,
       "ma_aligned": 1,
-      "hotness": 0.672,
+      "hotness": 0.671,
       "sales_growth": 0.061,
       "earn_growth": 0.631,
       "roe": 0.037,
@@ -635,10 +635,10 @@
       "close": 92.57,
       "pct_high_250": 1.0,
       "amt_surge": 1.115,
-      "amt_rank": 0.671,
+      "amt_rank": 0.669,
       "ret_60": 0.396,
       "ma_aligned": 1,
-      "hotness": 0.63,
+      "hotness": 0.628,
       "sales_growth": 0.129,
       "earn_growth": null,
       "roe": 0.25,
@@ -689,7 +689,7 @@
       "amt_rank": 0.956,
       "ret_60": 0.316,
       "ma_aligned": 1,
-      "hotness": 0.623,
+      "hotness": 0.622,
       "sales_growth": 0.555,
       "earn_growth": 1.699,
       "roe": 1.075,
@@ -708,7 +708,7 @@
       "amt_rank": 0.982,
       "ret_60": 1.695,
       "ma_aligned": 1,
-      "hotness": 2.906,
+      "hotness": 2.905,
       "sales_growth": 0.276,
       "earn_growth": -0.804,
       "roe": 0.16
@@ -724,7 +724,7 @@
       "amt_rank": 0.387,
       "ret_60": 2.136,
       "ma_aligned": 1,
-      "hotness": 2.552,
+      "hotness": 2.551,
       "sales_growth": 0.173,
       "earn_growth": null,
       "roe": 0.001
@@ -736,7 +736,7 @@
       "sector": "Tech",
       "close": 1132.33,
       "pct_high_250": 0.933,
-      "amt_surge": 3.844,
+      "amt_surge": 3.847,
       "amt_rank": 1.0,
       "ret_60": 2.352,
       "ma_aligned": 1,
@@ -772,7 +772,7 @@
       "amt_rank": 0.113,
       "ret_60": 0.206,
       "ma_aligned": 1,
-      "hotness": 1.898,
+      "hotness": 1.897,
       "sales_growth": null,
       "earn_growth": null,
       "roe": -0.412
@@ -800,7 +800,7 @@
       "sector": "Tech",
       "close": 899.9,
       "pct_high_250": 0.823,
-      "amt_surge": 2.658,
+      "amt_surge": 2.661,
       "amt_rank": 0.971,
       "ret_60": 1.299,
       "ma_aligned": 1,
@@ -836,7 +836,7 @@
       "amt_rank": 0.976,
       "ret_60": 1.169,
       "ma_aligned": 1,
-      "hotness": 1.785,
+      "hotness": 1.784,
       "sales_growth": 0.455,
       "earn_growth": 4.829,
       "roe": 0.859
@@ -852,7 +852,7 @@
       "amt_rank": 0.933,
       "ret_60": 1.21,
       "ma_aligned": 1,
-      "hotness": 1.775,
+      "hotness": 1.774,
       "sales_growth": 0.201,
       "earn_growth": 0.479,
       "roe": 0.119
@@ -868,7 +868,7 @@
       "amt_rank": 0.938,
       "ret_60": 1.442,
       "ma_aligned": 1,
-      "hotness": 1.686,
+      "hotness": 1.685,
       "sales_growth": 0.875,
       "earn_growth": 2.825,
       "roe": null
@@ -896,7 +896,7 @@
       "sector": "Tech",
       "close": 626.84,
       "pct_high_250": 0.938,
-      "amt_surge": 2.727,
+      "amt_surge": 2.728,
       "amt_rank": 0.978,
       "ret_60": 0.836,
       "ma_aligned": 1,
@@ -913,10 +913,10 @@
       "close": 149.75,
       "pct_high_250": 0.857,
       "amt_surge": 3.281,
-      "amt_rank": 0.667,
+      "amt_rank": 0.666,
       "ret_60": 0.948,
       "ma_aligned": 1,
-      "hotness": 1.431,
+      "hotness": 1.429,
       "sales_growth": 0.159,
       "earn_growth": 0.227,
       "roe": -0.058
@@ -928,7 +928,7 @@
       "sector": "Tech",
       "close": 128.32,
       "pct_high_250": 0.91,
-      "amt_surge": 2.629,
+      "amt_surge": 2.63,
       "amt_rank": 0.985,
       "ret_60": 1.908,
       "ma_aligned": 1,
@@ -980,7 +980,7 @@
       "amt_rank": 0.945,
       "ret_60": 0.691,
       "ma_aligned": 1,
-      "hotness": 1.347,
+      "hotness": 1.346,
       "sales_growth": 0.115,
       "earn_growth": 0.118,
       "roe": 0.95
@@ -992,7 +992,7 @@
       "sector": "Tech",
       "close": 221.05,
       "pct_high_250": 0.969,
-      "amt_surge": 2.6,
+      "amt_surge": 2.601,
       "amt_rank": 0.961,
       "ret_60": 0.628,
       "ma_aligned": 1,
@@ -1012,7 +1012,7 @@
       "amt_rank": 0.56,
       "ret_60": 0.855,
       "ma_aligned": 1,
-      "hotness": 1.297,
+      "hotness": 1.296,
       "sales_growth": 0.172,
       "earn_growth": 0.876,
       "roe": 0.136
@@ -1050,7 +1050,7 @@
       "ret_3d": 12.0,
       "vol_ratio": 1.66,
       "trigger": "单日",
-      "hotness": 0.475
+      "hotness": 0.473
     },
     {
       "ticker": "AAL.US",
@@ -1062,6 +1062,17 @@
       "vol_ratio": 1.83,
       "trigger": "单日+3日",
       "hotness": 1.171
+    },
+    {
+      "ticker": "TER.US",
+      "name": "Teradyne",
+      "sub_industry": "Semi Equip & Mat",
+      "close": 436.86,
+      "ret_1d": 10.5,
+      "ret_3d": 4.0,
+      "vol_ratio": 1.5,
+      "trigger": "单日",
+      "hotness": 1.182
     },
     {
       "ticker": "RVMD.US",
@@ -1093,8 +1104,8 @@
       "sub_industry": "Semis",
       "close": 266.77,
       "retrace": 15.7,
-      "ind_comp": 1.332,
-      "hotness": 2.906,
+      "ind_comp": 1.336,
+      "hotness": 2.905,
       "doji": 1,
       "shrink": 1,
       "entangle": 0,
@@ -1111,7 +1122,7 @@
       "sub_industry": "Semis",
       "close": 71.42,
       "retrace": 10.5,
-      "ind_comp": 1.332,
+      "ind_comp": 1.336,
       "hotness": 1.862,
       "doji": 1,
       "shrink": 0,
@@ -1129,8 +1140,8 @@
       "sub_industry": "Semis",
       "close": 334.27,
       "retrace": 23.9,
-      "ind_comp": 1.332,
-      "hotness": 1.775,
+      "ind_comp": 1.336,
+      "hotness": 1.774,
       "doji": 1,
       "shrink": 1,
       "entangle": 0,
@@ -1147,7 +1158,7 @@
       "sub_industry": "Semis",
       "close": 189.39,
       "retrace": 24.3,
-      "ind_comp": 1.332,
+      "ind_comp": 1.336,
       "hotness": 0.803,
       "doji": 1,
       "shrink": 0,
@@ -1165,7 +1176,7 @@
       "sub_industry": "Semis",
       "close": 249.91,
       "retrace": 21.1,
-      "ind_comp": 1.332,
+      "ind_comp": 1.336,
       "hotness": 0.455,
       "doji": 1,
       "shrink": 0,
@@ -1183,7 +1194,7 @@
       "sub_industry": "Semis",
       "close": 138.76,
       "retrace": 10.6,
-      "ind_comp": 1.332,
+      "ind_comp": 1.336,
       "hotness": 0.405,
       "doji": 1,
       "shrink": 0,
@@ -1201,8 +1212,8 @@
       "sub_industry": "Computer Hardware",
       "close": 399.49,
       "retrace": 14.3,
-      "ind_comp": 0.921,
-      "hotness": 1.686,
+      "ind_comp": 0.92,
+      "hotness": 1.685,
       "doji": 1,
       "shrink": 1,
       "entangle": 1,
@@ -1219,7 +1230,7 @@
       "sub_industry": "Computer Hardware",
       "close": 157.6,
       "retrace": 11.3,
-      "ind_comp": 0.921,
+      "ind_comp": 0.92,
       "hotness": 0.361,
       "doji": 0,
       "shrink": 0,
@@ -1238,7 +1249,7 @@
       "close": 804.76,
       "retrace": 19.0,
       "ind_comp": 0.773,
-      "hotness": 1.005,
+      "hotness": 1.004,
       "doji": 1,
       "shrink": 0,
       "entangle": 1,
@@ -1272,31 +1283,21 @@
     {
       "sub_industry": "Lodging",
       "n": 3,
-      "pctile_now": 97.5,
+      "pctile_now": 97.0,
       "pctile_ago": 21.0,
-      "delta10": 76.5,
-      "amt5_now_yi": 121.11,
+      "delta10": 76.0,
+      "amt5_now_yi": 121.12,
       "amt5_chg_pct": 88.6,
       "flag": "gain"
     },
     {
       "sub_industry": "Internet Retail",
       "n": 10,
-      "pctile_now": 71.0,
+      "pctile_now": 70.5,
       "pctile_ago": 2.0,
-      "delta10": 69.0,
-      "amt5_now_yi": 1490.22,
+      "delta10": 68.5,
+      "amt5_now_yi": 1490.64,
       "amt5_chg_pct": 88.2,
-      "flag": "gain"
-    },
-    {
-      "sub_industry": "Info Tech Svc",
-      "n": 9,
-      "pctile_now": 66.5,
-      "pctile_ago": 15.5,
-      "delta10": 51.0,
-      "amt5_now_yi": 439.3,
-      "amt5_chg_pct": 48.4,
       "flag": "gain"
     },
     {
@@ -1310,11 +1311,21 @@
       "flag": ""
     },
     {
+      "sub_industry": "Info Tech Svc",
+      "n": 9,
+      "pctile_now": 66.0,
+      "pctile_ago": 15.5,
+      "delta10": 50.5,
+      "amt5_now_yi": 439.38,
+      "amt5_chg_pct": 48.4,
+      "flag": "gain"
+    },
+    {
       "sub_industry": "Ins - Property & Casualt…",
       "n": 4,
-      "pctile_now": 47.0,
+      "pctile_now": 46.5,
       "pctile_ago": 2.5,
-      "delta10": 44.5,
+      "delta10": 44.0,
       "amt5_now_yi": 147.54,
       "amt5_chg_pct": 61.9,
       "flag": ""
@@ -1330,23 +1341,23 @@
       "flag": "gain"
     },
     {
-      "sub_industry": "Indl Distribution",
-      "n": 4,
-      "pctile_now": 46.5,
-      "pctile_ago": 12.0,
-      "delta10": 34.5,
-      "amt5_now_yi": 88.05,
-      "amt5_chg_pct": 33.7,
+      "sub_industry": "Diagnostics & Research",
+      "n": 10,
+      "pctile_now": 38.5,
+      "pctile_ago": 0.5,
+      "delta10": 38.0,
+      "amt5_now_yi": 282.62,
+      "amt5_chg_pct": 53.0,
       "flag": ""
     },
     {
-      "sub_industry": "Diagnostics & Research",
-      "n": 10,
-      "pctile_now": 35.0,
-      "pctile_ago": 0.5,
-      "delta10": 34.5,
-      "amt5_now_yi": 277.13,
-      "amt5_chg_pct": 50.1,
+      "sub_industry": "Indl Distribution",
+      "n": 4,
+      "pctile_now": 45.5,
+      "pctile_ago": 12.0,
+      "delta10": 33.5,
+      "amt5_now_yi": 88.05,
+      "amt5_chg_pct": 33.7,
       "flag": ""
     },
     {
@@ -1415,18 +1426,8 @@
       "pctile_now": 30.5,
       "pctile_ago": 6.0,
       "delta10": 24.5,
-      "amt5_now_yi": 2712.24,
+      "amt5_now_yi": 2713.0,
       "amt5_chg_pct": 30.7,
-      "flag": ""
-    },
-    {
-      "sub_industry": "REIT - Specialty",
-      "n": 5,
-      "pctile_now": 44.5,
-      "pctile_ago": 21.0,
-      "delta10": 23.5,
-      "amt5_now_yi": 131.04,
-      "amt5_chg_pct": 27.0,
       "flag": ""
     },
     {
@@ -1435,8 +1436,8 @@
       "pctile_now": 98.5,
       "pctile_ago": 75.0,
       "delta10": 23.5,
-      "amt5_now_yi": 370.58,
-      "amt5_chg_pct": 90.4,
+      "amt5_now_yi": 371.03,
+      "amt5_chg_pct": 90.6,
       "flag": ""
     },
     {
@@ -1450,13 +1451,23 @@
       "flag": ""
     },
     {
+      "sub_industry": "REIT - Specialty",
+      "n": 5,
+      "pctile_now": 44.0,
+      "pctile_ago": 21.0,
+      "delta10": 23.0,
+      "amt5_now_yi": 131.04,
+      "amt5_chg_pct": 27.0,
+      "flag": ""
+    },
+    {
       "sub_industry": "Electronic Gaming & Mult…",
       "n": 3,
-      "pctile_now": 24.0,
+      "pctile_now": 23.5,
       "pctile_ago": 1.5,
-      "delta10": 22.5,
-      "amt5_now_yi": 102.79,
-      "amt5_chg_pct": 66.3,
+      "delta10": 22.0,
+      "amt5_now_yi": 102.73,
+      "amt5_chg_pct": 66.2,
       "flag": ""
     },
     {
@@ -1465,8 +1476,8 @@
       "pctile_now": 97.5,
       "pctile_ago": 76.5,
       "delta10": 21.0,
-      "amt5_now_yi": 603.56,
-      "amt5_chg_pct": 64.7,
+      "amt5_now_yi": 603.96,
+      "amt5_chg_pct": 64.8,
       "flag": ""
     },
     {
@@ -1475,7 +1486,7 @@
       "pctile_now": 99.5,
       "pctile_ago": 78.5,
       "delta10": 21.0,
-      "amt5_now_yi": 1477.75,
+      "amt5_now_yi": 1478.41,
       "amt5_chg_pct": 60.8,
       "flag": ""
     },
@@ -1505,7 +1516,7 @@
       "pctile_now": 19.0,
       "pctile_ago": 1.0,
       "delta10": 18.0,
-      "amt5_now_yi": 74.51,
+      "amt5_now_yi": 74.52,
       "amt5_chg_pct": 54.6,
       "flag": ""
     },
@@ -1520,13 +1531,13 @@
       "flag": ""
     },
     {
-      "sub_industry": "Travel Svc",
-      "n": 7,
-      "pctile_now": 18.5,
-      "pctile_ago": 3.5,
-      "delta10": 15.0,
-      "amt5_now_yi": 289.56,
-      "amt5_chg_pct": 48.8,
+      "sub_industry": "Oil & Gas Equip & Svc",
+      "n": 4,
+      "pctile_now": 37.0,
+      "pctile_ago": 22.5,
+      "delta10": 14.5,
+      "amt5_now_yi": 123.28,
+      "amt5_chg_pct": 40.1,
       "flag": ""
     },
     {
@@ -1540,16 +1551,6 @@
       "flag": ""
     },
     {
-      "sub_industry": "Oil & Gas Equip & Svc",
-      "n": 4,
-      "pctile_now": 37.0,
-      "pctile_ago": 22.5,
-      "delta10": 14.5,
-      "amt5_now_yi": 123.28,
-      "amt5_chg_pct": 40.1,
-      "flag": ""
-    },
-    {
       "sub_industry": "Utilities - Regulated El…",
       "n": 13,
       "pctile_now": 20.0,
@@ -1557,6 +1558,16 @@
       "delta10": 14.0,
       "amt5_now_yi": 337.95,
       "amt5_chg_pct": 26.0,
+      "flag": ""
+    },
+    {
+      "sub_industry": "Travel Svc",
+      "n": 7,
+      "pctile_now": 17.0,
+      "pctile_ago": 3.5,
+      "delta10": 13.5,
+      "amt5_now_yi": 289.56,
+      "amt5_chg_pct": 48.8,
       "flag": ""
     },
     {
@@ -1570,16 +1581,6 @@
       "flag": ""
     },
     {
-      "sub_industry": "Specialty Indl Mach",
-      "n": 16,
-      "pctile_now": 30.0,
-      "pctile_ago": 17.5,
-      "delta10": 12.5,
-      "amt5_now_yi": 547.0,
-      "amt5_chg_pct": 24.3,
-      "flag": ""
-    },
-    {
       "sub_industry": "Oil & Gas Midstream",
       "n": 6,
       "pctile_now": 13.5,
@@ -1587,6 +1588,16 @@
       "delta10": 12.5,
       "amt5_now_yi": 133.96,
       "amt5_chg_pct": 60.6,
+      "flag": ""
+    },
+    {
+      "sub_industry": "Specialty Indl Mach",
+      "n": 16,
+      "pctile_now": 29.5,
+      "pctile_ago": 17.5,
+      "delta10": 12.0,
+      "amt5_now_yi": 547.0,
+      "amt5_chg_pct": 24.3,
       "flag": ""
     },
     {
@@ -1605,8 +1616,8 @@
       "pctile_now": 97.5,
       "pctile_ago": 86.0,
       "delta10": 11.5,
-      "amt5_now_yi": 538.98,
-      "amt5_chg_pct": 49.2,
+      "amt5_now_yi": 539.01,
+      "amt5_chg_pct": 49.3,
       "flag": ""
     },
     {
@@ -1630,33 +1641,13 @@
       "flag": ""
     },
     {
-      "sub_industry": "Internet Content & Info",
-      "n": 8,
-      "pctile_now": 45.0,
-      "pctile_ago": 34.5,
-      "delta10": 10.5,
-      "amt5_now_yi": 2356.37,
-      "amt5_chg_pct": 24.8,
-      "flag": ""
-    },
-    {
       "sub_industry": "Entertain",
       "n": 8,
       "pctile_now": 16.0,
       "pctile_ago": 5.5,
       "delta10": 10.5,
-      "amt5_now_yi": 431.6,
+      "amt5_now_yi": 431.71,
       "amt5_chg_pct": 51.2,
-      "flag": ""
-    },
-    {
-      "sub_industry": "Confectioners",
-      "n": 2,
-      "pctile_now": 21.0,
-      "pctile_ago": 11.0,
-      "delta10": 10.0,
-      "amt5_now_yi": 55.97,
-      "amt5_chg_pct": 27.9,
       "flag": ""
     },
     {
@@ -1670,11 +1661,31 @@
       "flag": ""
     },
     {
+      "sub_industry": "Internet Content & Info",
+      "n": 8,
+      "pctile_now": 44.5,
+      "pctile_ago": 34.5,
+      "delta10": 10.0,
+      "amt5_now_yi": 2356.62,
+      "amt5_chg_pct": 24.8,
+      "flag": ""
+    },
+    {
+      "sub_industry": "Confectioners",
+      "n": 2,
+      "pctile_now": 20.0,
+      "pctile_ago": 11.0,
+      "delta10": 9.0,
+      "amt5_now_yi": 55.97,
+      "amt5_chg_pct": 27.9,
+      "flag": ""
+    },
+    {
       "sub_industry": "Chemicals",
       "n": 1,
-      "pctile_now": 24.0,
+      "pctile_now": 23.0,
       "pctile_ago": 16.5,
-      "delta10": 7.5,
+      "delta10": 6.5,
       "amt5_now_yi": 22.65,
       "amt5_chg_pct": 23.4,
       "flag": ""
@@ -1682,19 +1693,19 @@
     {
       "sub_industry": "Health Info Svc",
       "n": 2,
-      "pctile_now": 16.5,
+      "pctile_now": 15.5,
       "pctile_ago": 9.5,
-      "delta10": 7.0,
-      "amt5_now_yi": 43.9,
-      "amt5_chg_pct": 26.2,
+      "delta10": 6.0,
+      "amt5_now_yi": 43.65,
+      "amt5_chg_pct": 25.5,
       "flag": ""
     },
     {
       "sub_industry": "Building Products & Equi…",
       "n": 3,
-      "pctile_now": 38.0,
+      "pctile_now": 37.5,
       "pctile_ago": 32.5,
-      "delta10": 5.5,
+      "delta10": 5.0,
       "amt5_now_yi": 110.37,
       "amt5_chg_pct": 19.7,
       "flag": ""
@@ -1710,6 +1721,16 @@
       "flag": ""
     },
     {
+      "sub_industry": "Computer Hardware",
+      "n": 11,
+      "pctile_now": 97.0,
+      "pctile_ago": 92.5,
+      "delta10": 4.5,
+      "amt5_now_yi": 2683.49,
+      "amt5_chg_pct": 36.0,
+      "flag": ""
+    },
+    {
       "sub_industry": "Utilities - Div",
       "n": 1,
       "pctile_now": 13.0,
@@ -1722,9 +1743,9 @@
     {
       "sub_industry": "Medical Instr & Supplies",
       "n": 5,
-      "pctile_now": 7.5,
+      "pctile_now": 7.0,
       "pctile_ago": 3.0,
-      "delta10": 4.5,
+      "delta10": 4.0,
       "amt5_now_yi": 123.85,
       "amt5_chg_pct": 24.0,
       "flag": ""
@@ -1732,21 +1753,21 @@
     {
       "sub_industry": "Aero & Def",
       "n": 21,
-      "pctile_now": 12.5,
+      "pctile_now": 12.0,
       "pctile_ago": 8.0,
-      "delta10": 4.5,
-      "amt5_now_yi": 749.58,
+      "delta10": 4.0,
+      "amt5_now_yi": 749.59,
       "amt5_chg_pct": 22.0,
       "flag": ""
     },
     {
-      "sub_industry": "Computer Hardware",
-      "n": 11,
-      "pctile_now": 97.0,
-      "pctile_ago": 92.5,
-      "delta10": 4.5,
-      "amt5_now_yi": 2682.13,
-      "amt5_chg_pct": 35.9,
+      "sub_industry": "Intg Freight & Log",
+      "n": 5,
+      "pctile_now": 37.5,
+      "pctile_ago": 34.0,
+      "delta10": 3.5,
+      "amt5_now_yi": 106.94,
+      "amt5_chg_pct": 19.1,
       "flag": ""
     },
     {
@@ -1795,8 +1816,8 @@
       "pctile_now": 2.0,
       "pctile_ago": 1.0,
       "delta10": 1.0,
-      "amt5_now_yi": 20.2,
-      "amt5_chg_pct": 32.4,
+      "amt5_now_yi": 20.14,
+      "amt5_chg_pct": 32.1,
       "flag": ""
     },
     {
@@ -1805,8 +1826,8 @@
       "pctile_now": 100.0,
       "pctile_ago": 100.0,
       "delta10": 0.0,
-      "amt5_now_yi": 1514.68,
-      "amt5_chg_pct": 33.6,
+      "amt5_now_yi": 1515.04,
+      "amt5_chg_pct": 33.7,
       "flag": ""
     },
     {
@@ -1825,18 +1846,8 @@
       "pctile_now": 9.0,
       "pctile_ago": 9.5,
       "delta10": -0.5,
-      "amt5_now_yi": 348.91,
+      "amt5_now_yi": 348.93,
       "amt5_chg_pct": 12.7,
-      "flag": ""
-    },
-    {
-      "sub_industry": "REIT - Retail",
-      "n": 2,
-      "pctile_now": 46.5,
-      "pctile_ago": 47.0,
-      "delta10": -0.5,
-      "amt5_now_yi": 48.64,
-      "amt5_chg_pct": 18.5,
       "flag": ""
     },
     {
@@ -1855,8 +1866,8 @@
       "pctile_now": 0.5,
       "pctile_ago": 1.5,
       "delta10": -1.0,
-      "amt5_now_yi": 159.03,
-      "amt5_chg_pct": 11.4,
+      "amt5_now_yi": 159.26,
+      "amt5_chg_pct": 11.6,
       "flag": ""
     },
     {
@@ -1865,18 +1876,18 @@
       "pctile_now": 0.5,
       "pctile_ago": 1.5,
       "delta10": -1.0,
-      "amt5_now_yi": 259.23,
-      "amt5_chg_pct": 10.6,
+      "amt5_now_yi": 263.37,
+      "amt5_chg_pct": 12.4,
       "flag": ""
     },
     {
-      "sub_industry": "Railroads",
-      "n": 3,
-      "pctile_now": 1.5,
-      "pctile_ago": 3.5,
-      "delta10": -2.0,
-      "amt5_now_yi": 87.66,
-      "amt5_chg_pct": 15.1,
+      "sub_industry": "REIT - Retail",
+      "n": 2,
+      "pctile_now": 45.5,
+      "pctile_ago": 47.0,
+      "delta10": -1.5,
+      "amt5_now_yi": 48.64,
+      "amt5_chg_pct": 18.5,
       "flag": ""
     },
     {
@@ -1887,6 +1898,16 @@
       "delta10": -2.5,
       "amt5_now_yi": 76.89,
       "amt5_chg_pct": 14.5,
+      "flag": ""
+    },
+    {
+      "sub_industry": "Railroads",
+      "n": 3,
+      "pctile_now": 1.0,
+      "pctile_ago": 3.5,
+      "delta10": -2.5,
+      "amt5_now_yi": 87.66,
+      "amt5_chg_pct": 15.1,
       "flag": ""
     },
     {
@@ -1910,11 +1931,21 @@
       "flag": ""
     },
     {
+      "sub_industry": "Telecom Svc",
+      "n": 6,
+      "pctile_now": 6.0,
+      "pctile_ago": 10.5,
+      "delta10": -4.5,
+      "amt5_now_yi": 305.93,
+      "amt5_chg_pct": 9.9,
+      "flag": ""
+    },
+    {
       "sub_industry": "Steel",
       "n": 3,
-      "pctile_now": 32.0,
+      "pctile_now": 31.5,
       "pctile_ago": 36.0,
-      "delta10": -4.0,
+      "delta10": -4.5,
       "amt5_now_yi": 51.05,
       "amt5_chg_pct": 18.4,
       "flag": ""
@@ -1925,7 +1956,7 @@
       "pctile_now": 0.5,
       "pctile_ago": 5.0,
       "delta10": -4.5,
-      "amt5_now_yi": 1300.02,
+      "amt5_now_yi": 1299.72,
       "amt5_chg_pct": 10.3,
       "flag": ""
     },
@@ -1935,18 +1966,18 @@
       "pctile_now": 36.5,
       "pctile_ago": 41.0,
       "delta10": -4.5,
-      "amt5_now_yi": 14.96,
-      "amt5_chg_pct": 14.4,
+      "amt5_now_yi": 15.0,
+      "amt5_chg_pct": 14.7,
       "flag": ""
     },
     {
-      "sub_industry": "REIT - Healthcare Facili…",
-      "n": 2,
-      "pctile_now": 22.5,
-      "pctile_ago": 27.0,
-      "delta10": -4.5,
-      "amt5_now_yi": 57.87,
-      "amt5_chg_pct": 18.4,
+      "sub_industry": "Auto Mfr",
+      "n": 4,
+      "pctile_now": 0.5,
+      "pctile_ago": 5.5,
+      "delta10": -5.0,
+      "amt5_now_yi": 922.88,
+      "amt5_chg_pct": -20.3,
       "flag": ""
     },
     {
@@ -1960,13 +1991,13 @@
       "flag": ""
     },
     {
-      "sub_industry": "Auto Mfr",
-      "n": 4,
-      "pctile_now": 0.5,
-      "pctile_ago": 5.5,
+      "sub_industry": "REIT - Healthcare Facili…",
+      "n": 2,
+      "pctile_now": 22.0,
+      "pctile_ago": 27.0,
       "delta10": -5.0,
-      "amt5_now_yi": 922.45,
-      "amt5_chg_pct": -20.3,
+      "amt5_now_yi": 57.87,
+      "amt5_chg_pct": 18.4,
       "flag": ""
     },
     {
@@ -1975,8 +2006,8 @@
       "pctile_now": 35.0,
       "pctile_ago": 40.5,
       "delta10": -5.5,
-      "amt5_now_yi": 246.55,
-      "amt5_chg_pct": 15.4,
+      "amt5_now_yi": 246.8,
+      "amt5_chg_pct": 15.5,
       "flag": ""
     },
     {
@@ -1990,16 +2021,6 @@
       "flag": ""
     },
     {
-      "sub_industry": "Telecom Svc",
-      "n": 6,
-      "pctile_now": 3.0,
-      "pctile_ago": 10.5,
-      "delta10": -7.5,
-      "amt5_now_yi": 282.61,
-      "amt5_chg_pct": 1.6,
-      "flag": ""
-    },
-    {
       "sub_industry": "Packaging & Containers",
       "n": 2,
       "pctile_now": 22.0,
@@ -2010,22 +2031,12 @@
       "flag": ""
     },
     {
-      "sub_industry": "Intg Freight & Log",
-      "n": 5,
-      "pctile_now": 26.0,
-      "pctile_ago": 34.0,
-      "delta10": -8.0,
-      "amt5_now_yi": 103.13,
-      "amt5_chg_pct": 14.8,
-      "flag": ""
-    },
-    {
       "sub_industry": "Sci & Tech Instr",
       "n": 3,
       "pctile_now": 65.5,
       "pctile_ago": 74.5,
       "delta10": -9.0,
-      "amt5_now_yi": 184.62,
+      "amt5_now_yi": 184.67,
       "amt5_chg_pct": 15.2,
       "flag": ""
     },
@@ -2040,23 +2051,23 @@
       "flag": ""
     },
     {
-      "sub_industry": "Restaurants",
-      "n": 9,
-      "pctile_now": 3.0,
-      "pctile_ago": 12.5,
-      "delta10": -9.5,
-      "amt5_now_yi": 232.83,
-      "amt5_chg_pct": 7.5,
-      "flag": ""
-    },
-    {
       "sub_industry": "Oil & Gas E&P",
       "n": 10,
       "pctile_now": 6.5,
       "pctile_ago": 16.5,
       "delta10": -10.0,
-      "amt5_now_yi": 239.21,
+      "amt5_now_yi": 239.2,
       "amt5_chg_pct": 11.8,
+      "flag": ""
+    },
+    {
+      "sub_industry": "Restaurants",
+      "n": 9,
+      "pctile_now": 2.5,
+      "pctile_ago": 12.5,
+      "delta10": -10.0,
+      "amt5_now_yi": 232.83,
+      "amt5_chg_pct": 7.5,
       "flag": ""
     },
     {
@@ -2110,6 +2121,16 @@
       "flag": ""
     },
     {
+      "sub_industry": "Semis",
+      "n": 34,
+      "pctile_now": 87.0,
+      "pctile_ago": 98.5,
+      "delta10": -11.5,
+      "amt5_now_yi": 10433.31,
+      "amt5_chg_pct": 3.3,
+      "flag": ""
+    },
+    {
       "sub_industry": "Other Indl Metals & Mini…",
       "n": 5,
       "pctile_now": 1.0,
@@ -2117,16 +2138,6 @@
       "delta10": -12.0,
       "amt5_now_yi": 75.86,
       "amt5_chg_pct": -12.8,
-      "flag": ""
-    },
-    {
-      "sub_industry": "Semis",
-      "n": 34,
-      "pctile_now": 86.5,
-      "pctile_ago": 98.5,
-      "delta10": -12.0,
-      "amt5_now_yi": 10412.78,
-      "amt5_chg_pct": 3.1,
       "flag": ""
     },
     {
@@ -2155,8 +2166,8 @@
       "pctile_now": 4.0,
       "pctile_ago": 18.0,
       "delta10": -14.0,
-      "amt5_now_yi": 192.31,
-      "amt5_chg_pct": 7.0,
+      "amt5_now_yi": 192.65,
+      "amt5_chg_pct": 7.1,
       "flag": ""
     },
     {
@@ -2185,7 +2196,7 @@
       "pctile_now": 7.5,
       "pctile_ago": 25.5,
       "delta10": -18.0,
-      "amt5_now_yi": 215.83,
+      "amt5_now_yi": 215.79,
       "amt5_chg_pct": -1.8,
       "flag": ""
     },
@@ -2205,7 +2216,7 @@
       "pctile_now": 1.0,
       "pctile_ago": 19.5,
       "delta10": -18.5,
-      "amt5_now_yi": 9.91,
+      "amt5_now_yi": 9.92,
       "amt5_chg_pct": -24.6,
       "flag": ""
     },
@@ -2262,9 +2273,9 @@
     {
       "sub_industry": "REIT - Indl",
       "n": 2,
-      "pctile_now": 27.0,
+      "pctile_now": 26.0,
       "pctile_ago": 48.5,
-      "delta10": -21.5,
+      "delta10": -22.5,
       "amt5_now_yi": 49.79,
       "amt5_chg_pct": 3.2,
       "flag": ""
@@ -2295,8 +2306,8 @@
       "pctile_now": 6.0,
       "pctile_ago": 33.5,
       "delta10": -27.5,
-      "amt5_now_yi": 297.39,
-      "amt5_chg_pct": -1.2,
+      "amt5_now_yi": 297.55,
+      "amt5_chg_pct": -1.1,
       "flag": ""
     },
     {
@@ -2335,7 +2346,7 @@
       "pctile_now": 61.0,
       "pctile_ago": 91.0,
       "delta10": -30.0,
-      "amt5_now_yi": 927.75,
+      "amt5_now_yi": 927.79,
       "amt5_chg_pct": -10.9,
       "flag": "lose"
     },
@@ -2402,9 +2413,9 @@
     {
       "sub_industry": "Trucking",
       "n": 4,
-      "pctile_now": 13.0,
+      "pctile_now": 12.5,
       "pctile_ago": 80.5,
-      "delta10": -67.5,
+      "delta10": -68.0,
       "amt5_now_yi": 55.57,
       "amt5_chg_pct": -27.1,
       "flag": ""
@@ -2418,7 +2429,7 @@
         "pctile_now": 61.0,
         "pctile_ago": 91.0,
         "delta10": -30.0,
-        "amt5_now_yi": 927.75,
+        "amt5_now_yi": 927.79,
         "amt5_chg_pct": -10.9,
         "flag": "lose"
       }
@@ -2427,30 +2438,30 @@
       {
         "sub_industry": "Lodging",
         "n": 3,
-        "pctile_now": 97.5,
+        "pctile_now": 97.0,
         "pctile_ago": 21.0,
-        "delta10": 76.5,
-        "amt5_now_yi": 121.11,
+        "delta10": 76.0,
+        "amt5_now_yi": 121.12,
         "amt5_chg_pct": 88.6,
         "flag": "gain"
       },
       {
         "sub_industry": "Internet Retail",
         "n": 10,
-        "pctile_now": 71.0,
+        "pctile_now": 70.5,
         "pctile_ago": 2.0,
-        "delta10": 69.0,
-        "amt5_now_yi": 1490.22,
+        "delta10": 68.5,
+        "amt5_now_yi": 1490.64,
         "amt5_chg_pct": 88.2,
         "flag": "gain"
       },
       {
         "sub_industry": "Info Tech Svc",
         "n": 9,
-        "pctile_now": 66.5,
+        "pctile_now": 66.0,
         "pctile_ago": 15.5,
-        "delta10": 51.0,
-        "amt5_now_yi": 439.3,
+        "delta10": 50.5,
+        "amt5_now_yi": 439.38,
         "amt5_chg_pct": 48.4,
         "flag": "gain"
       },
@@ -2473,7 +2484,7 @@
       "sub_industry": "Semis",
       "sector": "Tech",
       "close": 266.77,
-      "hotness": 2.906,
+      "hotness": 2.905,
       "ret_60": 1.695,
       "pct_high_250": 0.843,
       "ma_aligned": 1
@@ -2484,7 +2495,7 @@
       "sub_industry": "Semis",
       "sector": "Tech",
       "close": 56.35,
-      "hotness": 2.552,
+      "hotness": 2.551,
       "ret_60": 2.136,
       "pct_high_250": 0.868,
       "ma_aligned": 1
@@ -2517,7 +2528,7 @@
       "sub_industry": "Biotech",
       "sector": "Healthcare",
       "close": 123.52,
-      "hotness": 1.898,
+      "hotness": 1.897,
       "ret_60": 0.206,
       "pct_high_250": 1.0,
       "ma_aligned": 1
@@ -2561,7 +2572,7 @@
       "sub_industry": "Computer Hardware",
       "sector": "Tech",
       "close": 586.45,
-      "hotness": 1.785,
+      "hotness": 1.784,
       "ret_60": 1.169,
       "pct_high_250": 0.786,
       "ma_aligned": 1
@@ -2572,7 +2583,7 @@
       "sub_industry": "Semis",
       "sector": "Tech",
       "close": 334.27,
-      "hotness": 1.775,
+      "hotness": 1.774,
       "ret_60": 1.21,
       "pct_high_250": 0.761,
       "ma_aligned": 1
@@ -2583,7 +2594,7 @@
       "sub_industry": "Computer Hardware",
       "sector": "Tech",
       "close": 399.49,
-      "hotness": 1.686,
+      "hotness": 1.685,
       "ret_60": 1.442,
       "pct_high_250": 0.857,
       "ma_aligned": 1
@@ -2616,7 +2627,7 @@
       "sub_industry": "Semis",
       "sector": "Tech",
       "close": 149.75,
-      "hotness": 1.431,
+      "hotness": 1.429,
       "ret_60": 0.948,
       "pct_high_250": 0.857,
       "ma_aligned": 1
@@ -2660,7 +2671,7 @@
       "sub_industry": "Semi Equip & Mat",
       "sector": "Tech",
       "close": 248.64,
-      "hotness": 1.347,
+      "hotness": 1.346,
       "ret_60": 0.691,
       "pct_high_250": 0.924,
       "ma_aligned": 1
@@ -2682,7 +2693,7 @@
       "sub_industry": "Semis",
       "sector": "Tech",
       "close": 40.21,
-      "hotness": 1.297,
+      "hotness": 1.296,
       "ret_60": 0.855,
       "pct_high_250": 0.922,
       "ma_aligned": 1
@@ -2704,7 +2715,7 @@
       "sub_industry": "Semis",
       "sector": "Tech",
       "close": 238.0,
-      "hotness": 1.27,
+      "hotness": 1.269,
       "ret_60": 1.535,
       "pct_high_250": 0.787,
       "ma_aligned": 1
@@ -2770,7 +2781,7 @@
       "sub_industry": "Electronic Comp",
       "sector": "Tech",
       "close": 191.49,
-      "hotness": 1.047,
+      "hotness": 1.046,
       "ret_60": 0.966,
       "pct_high_250": 0.865,
       "ma_aligned": 1
@@ -2781,7 +2792,7 @@
       "sub_industry": "Eng & Constr",
       "sector": "Industrials",
       "close": 1854.23,
-      "hotness": 1.026,
+      "hotness": 1.024,
       "ret_60": 0.345,
       "pct_high_250": 0.897,
       "ma_aligned": 1
@@ -2792,7 +2803,7 @@
       "sub_industry": "Eng & Constr",
       "sector": "Industrials",
       "close": 804.76,
-      "hotness": 1.005,
+      "hotness": 1.004,
       "ret_60": 0.976,
       "pct_high_250": 0.81,
       "ma_aligned": 0
@@ -2825,7 +2836,7 @@
       "sub_industry": "Semis",
       "sector": "Tech",
       "close": 1313.32,
-      "hotness": 0.94,
+      "hotness": 0.939,
       "ret_60": 0.201,
       "pct_high_250": 0.777,
       "ma_aligned": 0
@@ -2836,7 +2847,7 @@
       "sub_industry": "Semis",
       "sector": "Tech",
       "close": 305.28,
-      "hotness": 0.926,
+      "hotness": 0.925,
       "ret_60": 1.724,
       "pct_high_250": 0.906,
       "ma_aligned": 1
@@ -2913,7 +2924,7 @@
       "sub_industry": "Semis",
       "sector": "Tech",
       "close": 365.02,
-      "hotness": 0.833,
+      "hotness": 0.834,
       "ret_60": 0.181,
       "pct_high_250": 0.759,
       "ma_aligned": 0
@@ -2990,7 +3001,7 @@
       "sub_industry": "Semi Equip & Mat",
       "sector": "Tech",
       "close": 323.92,
-      "hotness": 0.674,
+      "hotness": 0.672,
       "ret_60": 0.58,
       "pct_high_250": 0.931,
       "ma_aligned": 0
@@ -3001,7 +3012,7 @@
       "sub_industry": "Semis",
       "sector": "Tech",
       "close": 672.19,
-      "hotness": 0.668,
+      "hotness": 0.667,
       "ret_60": 0.946,
       "pct_high_250": 0.746,
       "ma_aligned": 0
@@ -3023,7 +3034,7 @@
       "sub_industry": "Airlines",
       "sector": "Industrials",
       "close": 92.57,
-      "hotness": 0.63,
+      "hotness": 0.628,
       "ret_60": 0.396,
       "pct_high_250": 1.0,
       "ma_aligned": 1
@@ -3034,7 +3045,7 @@
       "sub_industry": "Semis",
       "sector": "Tech",
       "close": 277.02,
-      "hotness": 0.607,
+      "hotness": 0.608,
       "ret_60": 0.412,
       "pct_high_250": 0.836,
       "ma_aligned": 0
@@ -3067,9 +3078,9 @@
       "sub_industry": "Electronic Comp",
       "sector": "Tech",
       "close": 163.72,
-      "hotness": 0.509,
+      "hotness": 0.511,
       "ret_60": 0.298,
-      "pct_high_250": 0.987,
+      "pct_high_250": 0.988,
       "ma_aligned": 1
     },
     {
@@ -3089,7 +3100,7 @@
       "sub_industry": "Semi Equip & Mat",
       "sector": "Tech",
       "close": 161.43,
-      "hotness": 0.491,
+      "hotness": 0.488,
       "ret_60": 0.378,
       "pct_high_250": 0.877,
       "ma_aligned": 0
@@ -3100,7 +3111,7 @@
       "sub_industry": "Airlines",
       "sector": "Industrials",
       "close": 136.11,
-      "hotness": 0.475,
+      "hotness": 0.473,
       "ret_60": 0.478,
       "pct_high_250": 1.0,
       "ma_aligned": 1
@@ -3122,7 +3133,7 @@
       "sub_industry": "Eng & Constr",
       "sector": "Industrials",
       "close": 765.46,
-      "hotness": 0.457,
+      "hotness": 0.456,
       "ret_60": 0.407,
       "pct_high_250": 0.969,
       "ma_aligned": 1
@@ -3155,7 +3166,7 @@
       "sub_industry": "Electronic Comp",
       "sector": "Tech",
       "close": 524.79,
-      "hotness": 0.437,
+      "hotness": 0.435,
       "ret_60": 0.006,
       "pct_high_250": 0.703,
       "ma_aligned": 0
@@ -3166,7 +3177,7 @@
       "sub_industry": "Biotech",
       "sector": "Healthcare",
       "close": 491.34,
-      "hotness": 0.423,
+      "hotness": 0.422,
       "ret_60": 0.1,
       "pct_high_250": 0.984,
       "ma_aligned": 0
@@ -3199,7 +3210,7 @@
       "sub_industry": "Electrical Equip & Parts",
       "sector": "Industrials",
       "close": 55.13,
-      "hotness": 0.365,
+      "hotness": 0.364,
       "ret_60": 0.883,
       "pct_high_250": 0.854,
       "ma_aligned": 1
@@ -3254,7 +3265,7 @@
       "sub_industry": "Computer Hardware",
       "sector": "Tech",
       "close": 30.63,
-      "hotness": 0.249,
+      "hotness": 0.248,
       "ret_60": 0.345,
       "pct_high_250": 0.505,
       "ma_aligned": 0
@@ -3265,7 +3276,7 @@
       "sub_industry": "Semis",
       "sector": "Tech",
       "close": 114.73,
-      "hotness": 0.245,
+      "hotness": 0.243,
       "ret_60": 0.334,
       "pct_high_250": 0.672,
       "ma_aligned": 0
@@ -3326,25 +3337,25 @@
       "ma_aligned": 0
     },
     {
-      "ticker": "TE.US",
-      "name": "T1 Energy",
-      "sub_industry": "Electrical Equip & Parts",
-      "sector": "Industrials",
-      "close": 8.21,
-      "hotness": 0.116,
-      "ret_60": 0.87,
-      "pct_high_250": 0.682,
-      "ma_aligned": 0
-    },
-    {
       "ticker": "HPQ.US",
       "name": "HP",
       "sub_industry": "Computer Hardware",
       "sector": "Tech",
       "close": 22.88,
-      "hotness": 0.116,
+      "hotness": 0.115,
       "ret_60": 0.206,
       "pct_high_250": 0.789,
+      "ma_aligned": 0
+    },
+    {
+      "ticker": "TE.US",
+      "name": "T1 Energy",
+      "sub_industry": "Electrical Equip & Parts",
+      "sector": "Industrials",
+      "close": 8.21,
+      "hotness": 0.115,
+      "ret_60": 0.87,
+      "pct_high_250": 0.682,
       "ma_aligned": 0
     },
     {
@@ -3364,7 +3375,7 @@
       "sub_industry": "Ins - Property & Casualt…",
       "sector": "Fin Svc",
       "close": 341.44,
-      "hotness": 0.096,
+      "hotness": 0.097,
       "ret_60": 0.051,
       "pct_high_250": 1.0,
       "ma_aligned": 0
@@ -3397,7 +3408,7 @@
       "sub_industry": "Electronic Comp",
       "sector": "Tech",
       "close": 337.53,
-      "hotness": 0.071,
+      "hotness": 0.069,
       "ret_60": 0.198,
       "pct_high_250": 0.715,
       "ma_aligned": 0
@@ -3441,7 +3452,7 @@
       "sub_industry": "Biotech",
       "sector": "Healthcare",
       "close": 82.19,
-      "hotness": 0.046,
+      "hotness": 0.045,
       "ret_60": 0.247,
       "pct_high_250": 1.0,
       "ma_aligned": 0
@@ -3452,7 +3463,7 @@
       "sub_industry": "Electrical Equip & Parts",
       "sector": "Industrials",
       "close": 517.02,
-      "hotness": 0.029,
+      "hotness": 0.031,
       "ret_60": 0.057,
       "pct_high_250": 0.93,
       "ma_aligned": 0
@@ -3507,7 +3518,7 @@
       "sub_industry": "Computer Hardware",
       "sector": "Tech",
       "close": 22.76,
-      "hotness": -0.457,
+      "hotness": -0.458,
       "ret_60": 0.577,
       "pct_high_250": 0.508,
       "ma_aligned": 0
@@ -3551,7 +3562,7 @@
       "sub_industry": "Computer Hardware",
       "sector": "Tech",
       "close": 18.36,
-      "hotness": -0.802,
+      "hotness": -0.803,
       "ret_60": 0.308,
       "pct_high_250": 0.326,
       "ma_aligned": 0
