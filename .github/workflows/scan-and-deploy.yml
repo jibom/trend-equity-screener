@@ -135,10 +135,6 @@ jobs:
         run: python scripts/build_a_universe.py
         env:
           PYTHONIOENCODING: utf-8
-          WIND_HOST: ${{ secrets.WIND_HOST }}
-          WIND_USER: ${{ secrets.WIND_USER }}
-          WIND_PASSWORD: ${{ secrets.WIND_PASSWORD }}
-          WIND_DB: ${{ secrets.WIND_DB }}
         continue-on-error: true
 
       - name: Export A-share trend hotspot (Part1-4 → A股-趋势 tab)
@@ -146,20 +142,12 @@ jobs:
         run: python scripts/export_trend_a.py
         env:
           PYTHONIOENCODING: utf-8
-          WIND_HOST: ${{ secrets.WIND_HOST }}
-          WIND_USER: ${{ secrets.WIND_USER }}
-          WIND_PASSWORD: ${{ secrets.WIND_PASSWORD }}
-          WIND_DB: ${{ secrets.WIND_DB }}
 
       - name: Export A-share chartdata (1y daily+weekly for A股-趋势 个股图)
         if: steps.markets.outputs.market == 'hk' || steps.markets.outputs.market == 'all'
         run: python scripts/export_chartdata_a.py
         env:
           PYTHONIOENCODING: utf-8
-          WIND_HOST: ${{ secrets.WIND_HOST }}
-          WIND_USER: ${{ secrets.WIND_USER }}
-          WIND_PASSWORD: ${{ secrets.WIND_PASSWORD }}
-          WIND_DB: ${{ secrets.WIND_DB }}
 
       - name: Classify stocks
         run: python scripts/classify_stocks.py --market all
