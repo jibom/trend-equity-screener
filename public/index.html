@@ -358,6 +358,7 @@
     let usData = null;      // 美股-趋势 (Part1-5), 来自 data/trend_hotspot_us.json
     let aData = null;       // A股-趋势 (Part1-4), 来自 data/trend_hotspot_a.json
     let etfData = null;     // 美国ETF-趋势, 来自 data/trend_hotspot_etf.json
+    let cetfData = null;    // 中国ETF-趋势, 来自 data/trend_hotspot_cetf.json
     let search = '';
     let sortField = 'ma10_slope_pct';
     let sortDir = 'desc';
@@ -404,6 +405,12 @@
         if (r5.ok) etfData = JSON.parse(await r5.text());
       } catch(e) { etfData = null; }
       window.etfData = etfData;
+      // 中国ETF-趋势: 失败不阻塞
+      try {
+        const r6 = await fetch('data/trend_hotspot_cetf.json');
+        if (r6.ok) cetfData = JSON.parse(await r6.text());
+      } catch(e) { cetfData = null; }
+      window.cetfData = cetfData;
       window.tabData = tabData;   // 供全局 stockName() 查进场候选名称
     }
 
@@ -476,6 +483,7 @@
       const usCount = (usData?.part4 || []).length;
       const aCount = (aData?.part2 || []).length;
       const etfCount = (etfData?.part2 || []).length;
+      const cetfCount = (cetfData?.part2 || []).length;
 
       let mainContent = '';
       if (tab === 'trend') {
@@ -484,6 +492,8 @@
         mainContent = renderUs();
       } else if (tab === 'etf') {
         mainContent = renderETF();
+      } else if (tab === 'cetf') {
+        mainContent = renderCETF();
       } else if (tab === 'atrend') {
         mainContent = renderA();
       } else {
@@ -504,12 +514,13 @@
               </svg>
               <div>
                 <div class="title">CPG扫描</div>
-                <div class="subtitle">更新日期：${(tab === 'trend' ? (trendData && trendData.date) : tab === 'ustrend' ? (usData && usData.date) : tab === 'etf' ? (etfData && etfData.date) : tab === 'atrend' ? (aData && aData.date) : tabData.date) || '-'}</div>
+                <div class="subtitle">更新日期：${(tab === 'trend' ? (trendData && trendData.date) : tab === 'ustrend' ? (usData && usData.date) : tab === 'etf' ? (etfData && etfData.date) : tab === 'cetf' ? (cetfData && cetfData.date) : tab === 'atrend' ? (aData && aData.date) : tabData.date) || '-'}</div>
               </div>
               <div class="tab-toggle">
                 <button class="tab-btn ${tab==='trend'?'active':''}" data-tab="trend">港股-趋势<span class="tab-count">${trendCount}</span></button>
                 <button class="tab-btn ${tab==='ustrend'?'active':''}" data-tab="ustrend">美股-趋势<span class="tab-count">${usCount}</span></button>
                 <button class="tab-btn ${tab==='etf'?'active':''}" data-tab="etf">美国ETF<span class="tab-count">${etfCount}</span></button>
+                <button class="tab-btn ${tab==='cetf'?'active':''}" data-tab="cetf">中国ETF<span class="tab-count">${cetfCount}</span></button>
                 <button class="tab-btn ${tab==='atrend'?'active':''}" data-tab="atrend">A股-趋势<span class="tab-count">${aCount}</span></button>
                 <button class="tab-btn ${tab==='entry'?'active':''}" data-tab="entry">进场候选<span class="tab-count">${entryTotal}</span></button>
               </div>
@@ -519,7 +530,7 @@
         </header>
         <main class="main">
           <div class="summary-bar">
-            ${tab === 'trend' ? renderTrendSummary() : tab === 'ustrend' ? renderUsSummary() : tab === 'etf' ? renderEtfSummary() : tab === 'atrend' ? renderASummary() : renderSummary(sosCount, poolCount)}
+            ${tab === 'trend' ? renderTrendSummary() : tab === 'ustrend' ? renderUsSummary() : tab === 'etf' ? renderEtfSummary() : tab === 'cetf' ? renderCetfSummary() : tab === 'atrend' ? renderASummary() : renderSummary(sosCount, poolCount)}
           </div>
           ${errorBanner}
           ${mainContent}
@@ -801,9 +812,40 @@
       const d = etfData;
       if (!d) return `<div class="empty-state"><p>ETF趋势数据未加载 (public/data/trend_hotspot_etf.json)</p></div>`;
       let html = `<div class="subtitle" style="padding:4px 0 10px">美国ETF趋势 · ${d.date||''}</div>`;
-      const cols = ['代码','名称','基准','收盘','距250高','6月新高','250日新高','6月新高占比','量放','5日均额排','60日涨幅','热度分'];
+      const cols = ['代码','名称','收盘','距250高','6月新高','250日新高','6月新高占比','量放','5日均额排','60日涨幅','热度分'];
       const row = (e, sc) => [
-        tk(e.ticker, sc), e.name, e.sub_industry, num2(e.close), pctR(e.pct_high_250),
+        tk(e.ticker, sc), e.name, num2(e.close), pctR(e.pct_high_250),
+        yn(e.pct_high_126 >= 1.0), yn(e.pct_high_250 >= 1.0), pctR(e.nh_ratio_126),
+        num2(e.amt_surge) + 'x', num2(e.amt_rank), signedR(e.ret_60), `<b>${num2(e.hotness)}</b>`];
+      const p1c1 = d.part1c1 || [];
+      html += trendSection('Part 1c-1 · 首次新高 (6月新高, 近6月新高天数<4%, hotness 排序, ≤20)', p1c1.length,
+        trendTable(cols, p1c1.map(e => row(e, 'part1c1'))));
+      const p1c2 = d.part1c2 || [];
+      html += trendSection('Part 1c-2 · 持续新高 (6月新高+多头, 近6月新高天数≥4%, hotness 排序, ≤20)', p1c2.length,
+        trendTable(cols, p1c2.map(e => row(e, 'part1c2'))));
+      const p2 = d.part2 || [];
+      html += trendSection('Part 2 · 趋势向上 (60日>10%, hotness 排序, ≤20)', p2.length,
+        trendTable(cols, p2.map(e => row(e, 'part2'))));
+      return html;
+    }
+
+    // ─── 中国ETF-趋势 渲染 (首次新高/持续新高/趋势向上, 标准同美股ETF) ──
+    function renderCetfSummary() {
+      const d = cetfData;
+      if (!d) return `<div class="summary-item"><span class="summary-val">ETF数据未加载</span></div>`;
+      return `
+        <div class="summary-item"><span class="state-badge state-SETUP_OK">首次新高</span><span class="summary-val">${(d.part1c1||[]).length}</span></div>
+        <div class="summary-item"><span class="state-badge state-SETUP_OK">持续新高</span><span class="summary-val">${(d.part1c2||[]).length}</span></div>
+        <div class="summary-item"><span class="state-badge state-SETUP_OK">趋势向上</span><span class="summary-val">${(d.part2||[]).length}</span></div>
+      `;
+    }
+    function renderCETF() {
+      const d = cetfData;
+      if (!d) return `<div class="empty-state"><p>中国ETF数据未加载 (public/data/trend_hotspot_cetf.json)</p></div>`;
+      let html = `<div class="subtitle" style="padding:4px 0 10px">中国ETF趋势 · ${d.date||''}</div>`;
+      const cols = ['代码','名称','收盘','距250高','6月新高','250日新高','6月新高占比','量放','5日均额排','60日涨幅','热度分'];
+      const row = (e, sc) => [
+        tk(e.ticker, sc), e.name, num2(e.close), pctR(e.pct_high_250),
         yn(e.pct_high_126 >= 1.0), yn(e.pct_high_250 >= 1.0), pctR(e.nh_ratio_126),
         num2(e.amt_surge) + 'x', num2(e.amt_rank), signedR(e.ret_60), `<b>${num2(e.hotness)}</b>`];
       const p1c1 = d.part1c1 || [];
@@ -1349,7 +1391,7 @@
   }
   function stockName(ticker) {
     // 从已加载的各市场数据 + 进场候选 查个股名称 (图表左上角显示用)
-    for (const d of [window.trendData, window.usData, window.etfData, window.aData]) {
+    for (const d of [window.trendData, window.usData, window.etfData, window.cetfData, window.aData]) {
       if (!d) continue;
       for (const k of ['all_stocks', 'part1c1', 'part1c2', 'part2', 'part3', 'part4']) {
         const arr = d[k];
@@ -1371,7 +1413,7 @@
   }
   function stockIndustry(ticker) {
     // 从已加载各市场数据查个股行业 (图表名称下方显示用)
-    for (const d of [window.trendData, window.usData, window.etfData, window.aData]) {
+    for (const d of [window.trendData, window.usData, window.etfData, window.cetfData, window.aData]) {
       if (!d) continue;
       for (const k of ['all_stocks', 'part1c1', 'part1c2', 'part2', 'part3', 'part4']) {
         const arr = d[k];
@@ -1394,7 +1436,10 @@
     // .US 的 ticker 可能是 ETF (在 etfData 里) 或股票; ETF 用 etfData 做导航列表源
     const _inEtf = mkt === 'us' && window.etfData && ['all_stocks','part1c1','part1c2','part2']
       .some(k => Array.isArray(etfData[k]) && etfData[k].some(e => e && e.ticker === ticker));
-    const td = _inEtf ? window.etfData
+    // .SH/.SZ 的 ticker 可能是中国ETF (在 cetfData 里) 或A股; 中国ETF 用 cetfData
+    const _inCetf = mkt === 'a' && window.cetfData && ['all_stocks','part1c1','part1c2','part2']
+      .some(k => Array.isArray(cetfData[k]) && cetfData[k].some(e => e && e.ticker === ticker));
+    const td = _inEtf ? window.etfData : _inCetf ? window.cetfData
              : (mkt === 'us' ? window.usData : mkt === 'a' ? window.aData : window.trendData);
     if (Array.isArray(list)) {                       // 显式列表 (子行业成分股钻取)
       _chartList = list; _chartIdx = list.indexOf(ticker);

@@ -163,6 +163,18 @@ jobs:
         env:
           PYTHONIOENCODING: utf-8
 
+      - name: Export 中国ETF trend hotspot (首次/持续新高 + 趋势向上)
+        if: steps.markets.outputs.market == 'hk' || steps.markets.outputs.market == 'all'
+        run: python scripts/export_trend_cetf.py --asof $(date -u +%F)
+        env:
+          PYTHONIOENCODING: utf-8
+
+      - name: Export 中国ETF chartdata (写入 chartdata/a/)
+        if: steps.markets.outputs.market == 'hk' || steps.markets.outputs.market == 'all'
+        run: python scripts/export_chartdata_cetf.py --asof $(date -u +%F)
+        env:
+          PYTHONIOENCODING: utf-8
+
       - name: Classify stocks
         run: python scripts/classify_stocks.py --market all
         env:
