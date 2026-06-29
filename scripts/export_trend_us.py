@@ -193,7 +193,7 @@ def main():
     # 1c1 首次新高: 近6月新高天数占比<4%(刚突破), 不要求多头(早期突破/低位N倍股候选), 低位优先
     first_nh = nh6m[nh6m["nh_ratio_126"] < 0.04].sort_values("hotness", ascending=False).head(20)
     # 1c2 持续新高: 占比≥4% + 多头排列(ma_stack), 排除已在1c1的, hotness 排序
-    sust_nh = nh6m[(nh6m["nh_ratio_126"] >= 0.04) & (nh6m["ma_stack"] == 1)
+    sust_nh = nh6m[(nh6m["nh_ratio_126"] >= 0.04)
                    & (~nh6m["Ticker"].isin(first_nh["Ticker"]))]
     sust_nh = sust_nh.sort_values("hotness", ascending=False).head(20)
     part1c1 = [stock_record(r, with_nh=True) for _, r in first_nh.iterrows()]

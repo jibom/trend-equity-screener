@@ -72,7 +72,7 @@ def main():
     nh = df_full[df_full["pct_high_126"] >= 0.98]
     first_nh = nh[nh["nh_ratio_126"] < 0.04].sort_values("hotness", ascending=False).head(20)
     # Part1c2 持续新高: 占比≥4% + 多头排列(ma_stack), hotness 排序
-    sust_nh = nh[(nh["nh_ratio_126"] >= 0.04) & (nh["ma_stack"] == 1)].sort_values("hotness", ascending=False).head(20)
+    sust_nh = nh[nh["nh_ratio_126"] >= 0.04].sort_values("hotness", ascending=False).head(20)
     # Part2 趋势向上: 60日>10%, hotness 排序
     top = df_full[df_full["ret_60"] > 0.10].sort_values("hotness", ascending=False).head(20)
 

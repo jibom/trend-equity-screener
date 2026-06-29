@@ -104,7 +104,7 @@ def main():
     # Part1c: 6月新高 (pct_high_126≥0.98) — 拆首次/持续, 互斥 (全市场, 不限Top10申万三级)
     nh6m = df_full[df_full["pct_high_126"] >= 0.98]
     first_nh = nh6m[nh6m["nh_ratio_126"] < 0.04].sort_values("hotness", ascending=False).head(20)
-    sust_nh = nh6m[(nh6m["nh_ratio_126"] >= 0.04) & (nh6m["ma_stack"] == 1)
+    sust_nh = nh6m[(nh6m["nh_ratio_126"] >= 0.04)
                    & (~nh6m["Ticker"].isin(first_nh["Ticker"]))]
     sust_nh = sust_nh.sort_values("hotness", ascending=False).head(20)
     part1c1 = [stock_record(r, with_nh=True) for _, r in first_nh.iterrows()]
