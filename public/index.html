@@ -357,6 +357,7 @@
     let trendData = null;   // 港股-趋势 (Part1-4), 来自 data/trend_hotspot_hk.json
     let usData = null;      // 美股-趋势 (Part1-5), 来自 data/trend_hotspot_us.json
     let aData = null;       // A股-趋势 (Part1-4), 来自 data/trend_hotspot_a.json
+    let etfData = null;     // 美国ETF-趋势, 来自 data/trend_hotspot_etf.json
     let search = '';
     let sortField = 'ma10_slope_pct';
     let sortDir = 'desc';
@@ -397,6 +398,12 @@
         if (r4.ok) aData = JSON.parse(await r4.text());
       } catch(e) { aData = null; }
       window.aData = aData;
+      // 美国ETF-趋势: 失败不阻塞
+      try {
+        const r5 = await fetch('data/trend_hotspot_etf.json');
+        if (r5.ok) etfData = JSON.parse(await r5.text());
+      } catch(e) { etfData = null; }
+      window.etfData = etfData;
       window.tabData = tabData;   // 供全局 stockName() 查进场候选名称
     }
 
@@ -468,12 +475,15 @@
       const trendCount = (trendData?.part4 || []).length;
       const usCount = (usData?.part4 || []).length;
       const aCount = (aData?.part2 || []).length;
+      const etfCount = (etfData?.part2 || []).length;
 
       let mainContent = '';
       if (tab === 'trend') {
         mainContent = renderTrend();
       } else if (tab === 'ustrend') {
         mainContent = renderUs();
+      } else if (tab === 'etf') {
+        mainContent = renderETF();
       } else if (tab === 'atrend') {
         mainContent = renderA();
       } else {
@@ -494,11 +504,12 @@
               </svg>
               <div>
                 <div class="title">CPG扫描</div>
-                <div class="subtitle">更新日期：${(tab === 'trend' ? (trendData && trendData.date) : tab === 'ustrend' ? (usData && usData.date) : tab === 'atrend' ? (aData && aData.date) : tabData.date) || '-'}</div>
+                <div class="subtitle">更新日期：${(tab === 'trend' ? (trendData && trendData.date) : tab === 'ustrend' ? (usData && usData.date) : tab === 'etf' ? (etfData && etfData.date) : tab === 'atrend' ? (aData && aData.date) : tabData.date) || '-'}</div>
               </div>
               <div class="tab-toggle">
                 <button class="tab-btn ${tab==='trend'?'active':''}" data-tab="trend">港股-趋势<span class="tab-count">${trendCount}</span></button>
                 <button class="tab-btn ${tab==='ustrend'?'active':''}" data-tab="ustrend">美股-趋势<span class="tab-count">${usCount}</span></button>
+                <button class="tab-btn ${tab==='etf'?'active':''}" data-tab="etf">美国ETF<span class="tab-count">${etfCount}</span></button>
                 <button class="tab-btn ${tab==='atrend'?'active':''}" data-tab="atrend">A股-趋势<span class="tab-count">${aCount}</span></button>
                 <button class="tab-btn ${tab==='entry'?'active':''}" data-tab="entry">进场候选<span class="tab-count">${entryTotal}</span></button>
               </div>
@@ -508,7 +519,7 @@
         </header>
         <main class="main">
           <div class="summary-bar">
-            ${tab === 'trend' ? renderTrendSummary() : tab === 'ustrend' ? renderUsSummary() : tab === 'atrend' ? renderASummary() : renderSummary(sosCount, poolCount)}
+            ${tab === 'trend' ? renderTrendSummary() : tab === 'ustrend' ? renderUsSummary() : tab === 'etf' ? renderEtfSummary() : tab === 'atrend' ? renderASummary() : renderSummary(sosCount, poolCount)}
           </div>
           ${errorBanner}
           ${mainContent}
@@ -630,7 +641,7 @@
         yn(e.pct_high_126 >= 1.0), yn(e.pct_high_250 >= 1.0), pctR(e.nh_ratio_126),
         num2(e.amt_surge) + 'x', num2(e.amt_rank), signedR(e.ret_60), `<b>${num2(e.hotness)}</b>`];
       const p1c1 = d.part1c1 || [];
-      html += trendSection('Part 1c-1 · 首次新高 (6月新高, 近6月新高天数<4%, 低位优先, ≤20)', p1c1.length,
+      html += trendSection('Part 1c-1 · 首次新高 (6月新高, 近6月新高天数<4%, hotness 排序, ≤20)', p1c1.length,
         trendTable(p1cCols, p1c1.map(e => p1cRow(e, 'part1c1'))));
       const p1c2 = d.part1c2 || [];
       html += trendSection('Part 1c-2 · 持续新高 (6月新高+多头, 近6月新高天数≥4%, hotness 排序, ≤20)', p1c2.length,
@@ -737,7 +748,7 @@
         num2(e.amt_surge) + 'x', num2(e.amt_rank), signedR(e.ret_60),
         signedR(e.sales_growth), signedR(e.earn_growth), pctR(e.roe), `<b>${num2(e.hotness)}</b>`];
       const p1c1 = d.part1c1 || [];
-      html += trendSection('Part 1c-1 · 首次新高 (6月新高+多头, 近6月新高天数<4%, 低位优先, ≤20)', p1c1.length,
+      html += trendSection('Part 1c-1 · 首次新高 (6月新高+多头, 近6月新高天数<4%, hotness 排序, ≤20)', p1c1.length,
         trendTable(p1cCols, p1c1.map(e => p1cRow(e, 'part1c1'))));
       const p1c2 = d.part1c2 || [];
       html += trendSection('Part 1c-2 · 持续新高 (6月新高+多头, 近6月新高天数≥4%, hotness 排序, ≤20)', p1c2.length,
@@ -773,6 +784,37 @@
       html += trendSection('Part 4 · 趋势股回调买点 (Top10行业内, 行业综合分→个股综合分)', p4.length,
         trendTable(['代码','名称','行业','回撤','行业分','个股分','销售增长','盈利增长','ROE','信号(D S E K P)','数'], p4Rows));
 
+      return html;
+    }
+
+    // ─── 美国ETF-趋势 渲染 (首次新高/持续新高/趋势向上, 标准同美股) ──
+    function renderEtfSummary() {
+      const d = etfData;
+      if (!d) return `<div class="summary-item"><span class="summary-val">ETF数据未加载</span></div>`;
+      return `
+        <div class="summary-item"><span class="state-badge state-SETUP_OK">首次新高</span><span class="summary-val">${(d.part1c1||[]).length}</span></div>
+        <div class="summary-item"><span class="state-badge state-SETUP_OK">持续新高</span><span class="summary-val">${(d.part1c2||[]).length}</span></div>
+        <div class="summary-item"><span class="state-badge state-SETUP_OK">趋势向上</span><span class="summary-val">${(d.part2||[]).length}</span></div>
+      `;
+    }
+    function renderETF() {
+      const d = etfData;
+      if (!d) return `<div class="empty-state"><p>ETF趋势数据未加载 (public/data/trend_hotspot_etf.json)</p></div>`;
+      let html = `<div class="subtitle" style="padding:4px 0 10px">美国ETF趋势 · ${d.date||''}</div>`;
+      const cols = ['代码','名称','基准','收盘','距250高','6月新高','250日新高','6月新高占比','量放','5日均额排','60日涨幅','热度分'];
+      const row = (e, sc) => [
+        tk(e.ticker, sc), e.name, e.sub_industry, num2(e.close), pctR(e.pct_high_250),
+        yn(e.pct_high_126 >= 1.0), yn(e.pct_high_250 >= 1.0), pctR(e.nh_ratio_126),
+        num2(e.amt_surge) + 'x', num2(e.amt_rank), signedR(e.ret_60), `<b>${num2(e.hotness)}</b>`];
+      const p1c1 = d.part1c1 || [];
+      html += trendSection('Part 1c-1 · 首次新高 (6月新高, 近6月新高天数<4%, hotness 排序, ≤20)', p1c1.length,
+        trendTable(cols, p1c1.map(e => row(e, 'part1c1'))));
+      const p1c2 = d.part1c2 || [];
+      html += trendSection('Part 1c-2 · 持续新高 (6月新高+多头, 近6月新高天数≥4%, hotness 排序, ≤20)', p1c2.length,
+        trendTable(cols, p1c2.map(e => row(e, 'part1c2'))));
+      const p2 = d.part2 || [];
+      html += trendSection('Part 2 · 趋势向上 (60日>10%, hotness 排序, ≤20)', p2.length,
+        trendTable(cols, p2.map(e => row(e, 'part2'))));
       return html;
     }
 
@@ -819,7 +861,7 @@
         yn(e.pct_high_126 >= 1.0), yn(e.pct_high_250 >= 1.0), pctR(e.nh_ratio_126),
         num2(e.amt_surge) + 'x', num2(e.amt_rank), signedR(e.ret_60), `<b>${num2(e.hotness)}</b>`];
       const p1c1 = d.part1c1 || [];
-      html += trendSection('Part 1c-1 · 首次新高 (6月新高, 近6月新高天数<4%, 低位优先, ≤20)', p1c1.length,
+      html += trendSection('Part 1c-1 · 首次新高 (6月新高, 近6月新高天数<4%, hotness 排序, ≤20)', p1c1.length,
         trendTable(p1cCols, p1c1.map(e => p1cRow(e, 'part1c1'))));
       const p1c2 = d.part1c2 || [];
       html += trendSection('Part 1c-2 · 持续新高 (6月新高+多头, 近6月新高天数≥4%, hotness 排序, ≤20)', p1c2.length,
@@ -1307,7 +1349,7 @@
   }
   function stockName(ticker) {
     // 从已加载的各市场数据 + 进场候选 查个股名称 (图表左上角显示用)
-    for (const d of [window.trendData, window.usData, window.aData]) {
+    for (const d of [window.trendData, window.usData, window.etfData, window.aData]) {
       if (!d) continue;
       for (const k of ['all_stocks', 'part1c1', 'part1c2', 'part2', 'part3', 'part4']) {
         const arr = d[k];
@@ -1329,7 +1371,7 @@
   }
   function stockIndustry(ticker) {
     // 从已加载各市场数据查个股行业 (图表名称下方显示用)
-    for (const d of [window.trendData, window.usData, window.aData]) {
+    for (const d of [window.trendData, window.usData, window.etfData, window.aData]) {
       if (!d) continue;
       for (const k of ['all_stocks', 'part1c1', 'part1c2', 'part2', 'part3', 'part4']) {
         const arr = d[k];
@@ -1349,7 +1391,11 @@
     _chartScreen = screen || null;
     const mkt = ticker.endsWith('.US') ? 'us'
               : (/\.S[HZ]$|\.BJ$/.test(ticker) ? 'a' : 'hk');
-    const td = mkt === 'us' ? window.usData : mkt === 'a' ? window.aData : window.trendData;
+    // .US 的 ticker 可能是 ETF (在 etfData 里) 或股票; ETF 用 etfData 做导航列表源
+    const _inEtf = mkt === 'us' && window.etfData && ['all_stocks','part1c1','part1c2','part2']
+      .some(k => Array.isArray(etfData[k]) && etfData[k].some(e => e && e.ticker === ticker));
+    const td = _inEtf ? window.etfData
+             : (mkt === 'us' ? window.usData : mkt === 'a' ? window.aData : window.trendData);
     if (Array.isArray(list)) {                       // 显式列表 (子行业成分股钻取)
       _chartList = list; _chartIdx = list.indexOf(ticker);
     } else if (_chartScreen && td && Array.isArray(td[_chartScreen])) {

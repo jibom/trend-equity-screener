@@ -130,6 +130,20 @@ jobs:
           PYTHONIOENCODING: utf-8
           EODHD_KEY: ${{ secrets.EODHD_KEY }}
 
+      - name: Export US ETF trend hotspot (首次/持续新高 + 趋势向上)
+        if: steps.markets.outputs.market == 'us' || steps.markets.outputs.market == 'all'
+        run: python scripts/export_trend_etf.py --asof $(date -u +%F)
+        env:
+          PYTHONIOENCODING: utf-8
+          EODHD_KEY: ${{ secrets.EODHD_KEY }}
+
+      - name: Export US ETF chartdata (写入 chartdata/us/, 与股票同目录)
+        if: steps.markets.outputs.market == 'us' || steps.markets.outputs.market == 'all'
+        run: python scripts/export_chartdata_etf.py --asof $(date -u +%F)
+        env:
+          PYTHONIOENCODING: utf-8
+          EODHD_KEY: ${{ secrets.EODHD_KEY }}
+
       - name: Build A-share universe (top600 by 成交金额 + 申万一级/三级)
         if: steps.markets.outputs.market == 'hk' || steps.markets.outputs.market == 'all'
         run: python scripts/build_a_universe.py

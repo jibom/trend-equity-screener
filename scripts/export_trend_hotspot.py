@@ -114,7 +114,7 @@ def main():
     # Part1c: 6月新高 (pct_high_126≥0.98, 126交易日≈6个月) — 拆首次/持续, 互斥
     nh6m = df_full[df_full["pct_high_126"] >= 0.98]
     # 1c1 首次新高: 近6月新高天数占比<4%(刚突破), 不要求多头, 低位优先(距250高升序)
-    first_nh = nh6m[nh6m["nh_ratio_126"] < 0.04].sort_values("pct_high_250", ascending=True).head(20)
+    first_nh = nh6m[nh6m["nh_ratio_126"] < 0.04].sort_values("hotness", ascending=False).head(20)
     # 1c2 持续新高: 占比≥4% + 多头排列(ma_stack), 排除已在1c1的, hotness 排序
     sust_nh = nh6m[(nh6m["nh_ratio_126"] >= 0.04) & (nh6m["ma_stack"] == 1)
                    & (~nh6m["Ticker"].isin(first_nh["Ticker"]))]

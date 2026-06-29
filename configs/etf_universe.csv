@@ -1,0 +1,178 @@
+﻿Ticker,Code,Name,Industry,Sector
+AGIX.US,AGIX,KraneShares Public-Private AI &,AI (Public-Private),AI (Public-Private)
+DBA.US,DBA,Invesco DB Agriculture Fund,Agriculture,Agriculture
+VEGI.US,VEGI,iShares MSCI Agriculture Produc,Agriculture,Agriculture
+IBLC.US,IBLC,iShares Blockchain and Tech ETF,Blockchain,Blockchain
+VTI.US,VTI,Vanguard Total Stock Market Index Fu,CRSP US Total Market,CRSP US Total Market
+YANG.US,YANG,Direxion Daily FTSE China Bear ,China 3x Inverse,China 3x Inverse
+YINN.US,YINN,Direxion Daily FTSE China Bull ,China 3x Leveraged,China 3x Leveraged
+CWEB.US,CWEB,Direxion Daily CSI China Intern,China Internet 2x (Leveraged),China Internet 2x (Leveraged)
+XRT.US,XRT,SPDR® S&P Retail ETF,Consumer Cyclical,Consumer Cyclical
+XHB.US,XHB,SPDR® S&P Homebuilders ETF,Consumer Cyclical,Consumer Cyclical
+ITB.US,ITB,iShares U.S. Home Construction ETF,Consumer Cyclical,Consumer Cyclical
+ICOP.US,ICOP,iShares Copper and Metals Minin,Copper/Metals Mining,Copper/Metals Mining
+JEPQ.US,JEPQ,JPMorgan Nasdaq Equity Premium Incom,Derivative Income,Derivative Income
+QQQI.US,QQQI,NEOS Nasdaq 100 High Income ETF,Derivative Income,Derivative Income
+JEPI.US,JEPI,JPMorgan Equity Premium Income ETF,Derivative Income,Derivative Income
+IBIT.US,IBIT,iShares Bitcoin Trust,Digital Assets,Digital Assets
+BITO.US,BITO,ProShares Bitcoin Strategy ETF,Digital Assets,Digital Assets
+ETHA.US,ETHA,iShares Ethereum Trust ETF,Digital Assets,Digital Assets
+FBTC.US,FBTC,Fidelity Wise Origin Bitcoin Trust,Digital Assets,Digital Assets
+CGDV.US,CGDV,Capital Group Dividend Value ETF,Dividend,Dividend
+DIA.US,DIA,SPDR Dow Jones Industrial Average ET,Dow Jones Industrial Average,Dow Jones Industrial Average
+SCHB.US,SCHB,Schwab U.S. Broad Market ETF,Dow Jones US Broad Market,Dow Jones US Broad Market
+SCHD.US,SCHD,Schwab U.S. Dividend Equity ETF,Dow Jones US Dividend 100,Dow Jones US Dividend 100
+IBAT.US,IBAT,iShares Energy Storage & Materi,Energy Storage,Energy Storage
+FXN.US,FXN,First Trust Energy AlphaDEX® Fund,Equity Energy,Equity Energy
+FTXN.US,FTXN,First Trust Nasdaq Oil & Gas ETF,Equity Energy,Equity Energy
+XOP.US,XOP,SPDR® S&P Oil & Gas Exploration & Pr,Equity Energy,Equity Energy
+OIH.US,OIH,VanEck Oil Services ETF,Equity Energy,Equity Energy
+IXC.US,IXC,iShares Global Energy ETF,Equity Energy,Equity Energy
+VGK.US,VGK,Vanguard FTSE Europe Index Fund ETF ,Europe Stock,Europe Stock
+XT.US,XT,iShares Future Exponential Tech,Exponential Tech,Exponential Tech
+VEA.US,VEA,Vanguard FTSE Developed Markets Inde,FTSE Developed,FTSE Developed
+VWO.US,VWO,Vanguard FTSE Emerging Markets Index,FTSE Emerging,FTSE Emerging
+VYM.US,VYM,Vanguard High Dividend Yield Index F,FTSE High Dividend Yield,FTSE High Dividend Yield
+KRE.US,KRE,SPDR® S&P Regional Banking ETF,Financial,Financial
+KBWB.US,KBWB,Invesco KBW Bank ETF,Financial,Financial
+EWY.US,EWY,iShares MSCI South Korea ETF,Focused Region,Focused Region
+EWZ.US,EWZ,iShares MSCI Brazil ETF,Focused Region,Focused Region
+VXUS.US,VXUS,Vanguard Total International Stock I,Foreign Large Blend,Foreign Large Blend
+SCHF.US,SCHF,Schwab International Equity ETF,Foreign Large Blend,Foreign Large Blend
+VEU.US,VEU,Vanguard FTSE All-World ex-US Index ,Foreign Large Blend,Foreign Large Blend
+IXUS.US,IXUS,iShares Core MSCI Total Internationa,Foreign Large Blend,Foreign Large Blend
+SPDW.US,SPDW,State Street SPDR Portfolio Develope,Foreign Large Blend,Foreign Large Blend
+VT.US,VT,Vanguard Total World Stock Index Fun,Global Large-Stock Blend,Global Large-Stock Blend
+URTH.US,URTH,iShares MSCI World ETF,Global Large-Stock Blend,Global Large-Stock Blend
+SPGM.US,SPGM,SPDR Portfolio MSCI Global Stock Mar,Global Large-Stock Blend,Global Large-Stock Blend
+GLD.US,GLD,SPDR® Gold Shares,Gold,Gold
+GDX.US,GDX,VanEck Gold Miners ETF,Gold Miners,Gold Miners
+NUGT.US,NUGT,Direxion Daily Gold Miners Inde,Gold Miners 3x,Gold Miners 3x
+EWT.US,EWT,iShares MSCI Taiwan ETF,Greater China Region,Greater China Region
+FXI.US,FXI,iShares China Large-Cap ETF,Greater China Region,Greater China Region
+KWEB.US,KWEB,KraneShares CSI China Internet ETF,Greater China Region,Greater China Region
+MCHI.US,MCHI,iShares MSCI China ETF,Greater China Region,Greater China Region
+ASHR.US,ASHR,Xtrackers Harvest CSI 300 China A-Sh,Greater China Region,Greater China Region
+XBI.US,XBI,SPDR® S&P Biotech ETF,Health,Health
+IBB.US,IBB,iShares Biotechnology ETF,Health,Health
+ARKG.US,ARKG,ARK Genomic Revolution ETF,Health,Health
+VHT.US,VHT,Vanguard Health Care Index Fund ETF ,Health,Health
+FBT.US,FBT,First Trust NYSE Arca Biotechnology ,Health,Health
+IHI.US,IHI,iShares U.S. Medical Devices ETF,Health,Health
+IXJ.US,IXJ,iShares Global Healthcare ETF,Health,Health
+INDA.US,INDA,iShares MSCI India ETF,India Equity,India Equity
+SMIN.US,SMIN,iShares MSCI India Small-Cap ETF,India Equity,India Equity
+ITA.US,ITA,iShares U.S. Aerospace & Defense ETF,Industrials,Industrials
+SHLD.US,SHLD,Global X Defense Tech ETF,Industrials,Industrials
+IYT.US,IYT,iShares Transportation Average ETF,Industrials,Industrials
+PAVE.US,PAVE,Global X U.S. Infrastructure Develop,Infrastructure,Infrastructure
+GRID.US,GRID,First Trust NASDAQ® Clean Edge® Smar,Infrastructure,Infrastructure
+IFRA.US,IFRA,iShares U.S. Infrastructure ETF,Infrastructure,Infrastructure
+EWJ.US,EWJ,iShares MSCI Japan ETF,Japan Stock,Japan Stock
+BBJP.US,BBJP,JPMorgan BetaBuilders Japan ETF,Japan Stock,Japan Stock
+SCHX.US,SCHX,Schwab U.S. Large-Cap ETF,Large Blend,Large Blend
+DYNF.US,DYNF,iShares U.S. Equity Factor Rotation ,Large Blend,Large Blend
+VUG.US,VUG,Vanguard Growth Index Fund ETF Share,Large Growth,Large Growth
+SCHG.US,SCHG,Schwab U.S. Large-Cap Growth ETF,Large Growth,Large Growth
+IWY.US,IWY,iShares Russell Top 200 Growth ETF,Large Growth,Large Growth
+CGGR.US,CGGR,Capital Group Growth ETF,Large Growth,Large Growth
+NUGO.US,NUGO,Nuveen Growth Opportunities ETF,Large Growth,Large Growth
+MGK.US,MGK,Vanguard Mega Cap Growth Index Fund ,Large Growth,Large Growth
+VTV.US,VTV,Vanguard Value Index Fund ETF Shares,Large Value,Large Value
+SCHV.US,SCHV,Schwab U.S. Large-Cap Value ETF,Large Value,Large Value
+AVLV.US,AVLV,American Century ETF Trust - Avantis,Large Value,Large Value
+ILF.US,ILF,iShares Latin America 40 ETF,Latin America,Latin America
+SOXL.US,SOXL,Direxion Daily Semiconductor Bull 3X,Leveraged/Inverse,Leveraged/Inverse
+ACWI.US,ACWI,iShares MSCI ACWI ETF,MSCI ACWI,MSCI ACWI
+EFA.US,EFA,iShares MSCI EAFE ETF,MSCI EAFE,MSCI EAFE
+EFV.US,EFV,iShares MSCI EAFE Value ETF,MSCI EAFE Value,MSCI EAFE Value
+EEM.US,EEM,iShares MSCI Emerging Markets ETF,MSCI Emerging Markets,MSCI Emerging Markets
+USMV.US,USMV,iShares MSCI USA Min Vol Factor ETF,MSCI USA Min Volatility,MSCI USA Min Volatility
+MTUM.US,MTUM,iShares MSCI USA Momentum Factor ETF,MSCI USA Momentum,MSCI USA Momentum
+QUAL.US,QUAL,iShares MSCI USA Quality Factor ETF,MSCI USA Quality,MSCI USA Quality
+VLUE.US,VLUE,iShares MSCI USA Value Factor ETF,MSCI USA Value,MSCI USA Value
+METV.US,METV,Roundhill Ball Metaverse ETF,Metaverse,Metaverse
+MDY.US,MDY,SPDR® S&P MIDCAP 400 ETF Trust,Mid-Cap Blend,Mid-Cap Blend
+IJH.US,IJH,iShares Core S&P Mid-Cap ETF,Mid-Cap Blend,Mid-Cap Blend
+IWR.US,IWR,iShares Russell Mid-Cap ETF,Mid-Cap Blend,Mid-Cap Blend
+VO.US,VO,Vanguard Mid-Cap Index Fund ETF Shar,Mid-Cap Blend,Mid-Cap Blend
+VXF.US,VXF,Vanguard Extended Market Index Fund ,Mid-Cap Blend,Mid-Cap Blend
+SPMD.US,SPMD,SPDR Russell Small Cap Completeness,Mid-Cap Blend,Mid-Cap Blend
+IWP.US,IWP,iShares Russell Mid-Cap Growth ETF,Mid-Cap Growth,Mid-Cap Growth
+IWS.US,IWS,iShares Russell Mid-Cap Value ETF,Mid-Cap Value,Mid-Cap Value
+IJJ.US,IJJ,iShares S&P Mid-Cap 400 Value ETF,Mid-Cap Value,Mid-Cap Value
+ICLN.US,ICLN,iShares Global Clean Energy ETF,Miscellaneous Sector,Miscellaneous Sector
+QQQ.US,QQQ,Invesco QQQ Trust,NASDAQ-100,NASDAQ-100
+QLD.US,QLD,ProShares Ultra QQQ,NASDAQ-100 2x,NASDAQ-100 2x
+TQQQ.US,TQQQ,ProShares UltraPro QQQ,NASDAQ-100 3x,NASDAQ-100 3x
+PSQ.US,PSQ,ProShares Short QQQ,NASDAQ-100 Inverse,NASDAQ-100 Inverse
+FNGS.US,FNGS,MicroSectors FANG  ETNs due Jan,NYSE FANG+,NYSE FANG+
+UNG.US,UNG,United States Natural Gas Fund LP,Natural Gas,Natural Gas
+COPX.US,COPX,Global X Copper Miners ETF,Natural Resources,Natural Resources
+XME.US,XME,SPDR® S&P Metals and Mining ETF,Natural Resources,Natural Resources
+URA.US,URA,Global X Uranium ETF,Natural Resources,Natural Resources
+AIA.US,AIA,iShares Asia 50 ETF,Pacific/Asia ex-Japan Stk,Pacific/Asia ex-Japan Stk
+DTCR.US,DTCR,Global X Data Center & Digital Infra,Real Estate,Real Estate
+IYR.US,IYR,iShares U.S. Real Estate ETF,Real Estate / REIT,Real Estate / REIT
+BOTZ.US,BOTZ,Global X Robotics & Artificial ,Robotics/AI,Robotics/AI
+IWB.US,IWB,iShares Russell 1000 ETF,Russell 1000,Russell 1000
+IWF.US,IWF,iShares Russell 1000 Growth ETF,Russell 1000 Growth,Russell 1000 Growth
+IWD.US,IWD,iShares Russell 1000 Value ETF,Russell 1000 Value,Russell 1000 Value
+IWM.US,IWM,iShares Russell 2000 ETF,Russell 2000,Russell 2000
+SRTY.US,SRTY,ProShares UltraPro Short Russel,Russell 2000 3x Inverse,Russell 2000 3x Inverse
+IWO.US,IWO,iShares Russell 2000 Growth ETF,Russell 2000 Growth,Russell 2000 Growth
+IWN.US,IWN,iShares Russell 2000 Value ETF,Russell 2000 Value,Russell 2000 Value
+IWV.US,IWV,iShares Russell 3000 ETF,Russell 3000,Russell 3000
+OEF.US,OEF,iShares S&P 100 ETF,S&P 100,S&P 100
+SPY.US,SPY,SPDR S&P 500 ETF Trust,S&P 500,S&P 500
+SDS.US,SDS,ProShares UltraShort S&P500,S&P 500 2x Inverse,S&P 500 2x Inverse
+UPRO.US,UPRO,ProShares UltraPro S&P 500,S&P 500 3x,S&P 500 3x
+SPXU.US,SPXU,ProShares UltraPro Short S&P500,S&P 500 3x Inverse,S&P 500 3x Inverse
+RSPC.US,RSPC,Invesco S&P 500 Equal Weight Co,S&P 500 EW Communication,S&P 500 EW Communication
+RSPD.US,RSPD,Invesco S&P 500 Equal Weight Co,S&P 500 EW Consumer Disc,S&P 500 EW Consumer Disc
+RSPS.US,RSPS,Invesco S&P 500 Equal Weight Co,S&P 500 EW Consumer Staples,S&P 500 EW Consumer Staples
+RSPG.US,RSPG,Invesco S&P 500 Equal Weight En,S&P 500 EW Energy,S&P 500 EW Energy
+RSPF.US,RSPF,Invesco S&P 500 Equal Weight Fi,S&P 500 EW Financials,S&P 500 EW Financials
+RSPH.US,RSPH,Invesco S&P 500 Equal Weight He,S&P 500 EW Health Care,S&P 500 EW Health Care
+RSPN.US,RSPN,Invesco S&P 500 Equal Weight In,S&P 500 EW Industrials,S&P 500 EW Industrials
+RSPM.US,RSPM,Invesco S&P 500 Equal Weight Ma,S&P 500 EW Materials,S&P 500 EW Materials
+RSPR.US,RSPR,Invesco S&P 500 Equal Weight Re,S&P 500 EW Real Estate,S&P 500 EW Real Estate
+RSPT.US,RSPT,Invesco S&P 500 Equal Weight Te,S&P 500 EW Technology,S&P 500 EW Technology
+RSPU.US,RSPU,Invesco S&P 500 Equal Weight Ut,S&P 500 EW Utilities,S&P 500 EW Utilities
+RSP.US,RSP,Invesco S&P 500® Equal Weight ETF,S&P 500 Equal Weight,S&P 500 Equal Weight
+XLC.US,XLC,Communication Services Select Sector,S&P Communication Services,S&P Communication Services
+XLY.US,XLY,Consumer Discretionary Select Sector,S&P Consumer Discretionary,S&P Consumer Discretionary
+XLP.US,XLP,Consumer Staples Select Sector SPDR®,S&P Consumer Staples,S&P Consumer Staples
+XLE.US,XLE,Energy Select Sector SPDR® Fund,S&P Energy,S&P Energy
+XLF.US,XLF,Financial Select Sector SPDR® Fund,S&P Financials,S&P Financials
+XLV.US,XLV,Health Care Select Sector SPDR® Fund,S&P Health Care,S&P Health Care
+XLI.US,XLI,Industrial Select Sector SPDR® Fund,S&P Industrials,S&P Industrials
+XLK.US,XLK,Technology Select Sector SPDR® Fund,S&P Information Technology,S&P Information Technology
+XLB.US,XLB,Materials Select Sector SPDR® Fund,S&P Materials,S&P Materials
+XLRE.US,XLRE,The Real Estate Select Sector SPDR F,S&P Real Estate,S&P Real Estate
+ITOT.US,ITOT,iShares Core S&P Total U.S. Stock Ma,S&P Total Market,S&P Total Market
+XLU.US,XLU,Utilities Select Sector SPDR® Fund,S&P Utilities,S&P Utilities
+SMH.US,SMH,VanEck Semiconductor ETF,Semiconductor,Semiconductor
+SLV.US,SLV,iShares Silver Trust,Silver,Silver
+IJR.US,IJR,iShares Core S&P Small-Cap ETF,Small Blend,Small Blend
+VB.US,VB,Vanguard Small-Cap Index Fund ETF Sh,Small Blend,Small Blend
+SCHA.US,SCHA,Schwab U.S. Small-Cap ETF,Small Blend,Small Blend
+SPSM.US,SPSM,SPDR® Portfolio S&P 600 Small Cap ET,Small Blend,Small Blend
+VBK.US,VBK,Vanguard Small-Cap Growth Index Fund,Small Growth,Small Growth
+AVUV.US,AVUV,Avantis® U.S. Small Cap Value ETF,Small Value,Small Value
+IJS.US,IJS,iShares S&P Small-Cap 600 Value ETF,Small Value,Small Value
+TAN.US,TAN,Invesco Solar ETF,Solar,Solar
+ISTM.US,ISTM,iShares Strategic Metals ETF,Strategic Metals,Strategic Metals
+DRAM.US,DRAM,Roundhill Memory ETF,Technology,Technology
+IGV.US,IGV,iShares Expanded Tech-Software Secto,Technology,Technology
+FXL.US,FXL,First Trust Technology AlphaDEX® Fun,Technology,Technology
+VGT.US,VGT,Vanguard Information Technology Inde,Technology,Technology
+ARKK.US,ARKK,ARK Innovation ETF,Technology,Technology
+MAGS.US,MAGS,Roundhill Magnificent Seven ETF,Technology,Technology
+CIBR.US,CIBR,First Trust NASDAQ Cybersecurity ETF,Technology,Technology
+BAI.US,BAI,iShares A.I. Innovation and Tech Act,Technology,Technology
+AIQ.US,AIQ,Global X Artificial Intelligence & T,Technology,Technology
+QTUM.US,QTUM,Defiance Quantum ETF,Technology,Technology
+IYW.US,IYW,iShares U.S. Technology ETF,Technology,Technology
+VXX.US,VXX,iPath Series B S&P 500 VIX Shor,Volatility (VIX),Volatility (VIX)
+USO.US,USO,United States Oil Fund LP,WTI Crude Oil,WTI Crude Oil

@@ -90,9 +90,9 @@ def fetch_eod(code: str, asof: str) -> pd.DataFrame | None:
             time.sleep(1.0)
 
 
-def fetch_all(pool: pd.DataFrame, asof: str) -> pd.DataFrame:
+def fetch_all(pool: pd.DataFrame, asof: str, prefix: str = "us_eod_raw") -> pd.DataFrame:
     os.makedirs(DATA_DIR, exist_ok=True)
-    cache = os.path.join(DATA_DIR, f"us_eod_raw_{asof}.pkl")
+    cache = os.path.join(DATA_DIR, f"{prefix}_{asof}.pkl")
     if os.path.exists(cache):
         with open(cache, "rb") as f:
             raw = pickle.load(f)
