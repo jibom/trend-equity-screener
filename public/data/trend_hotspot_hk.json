@@ -17,7 +17,7 @@
         "share_5d": 1.32,
         "share5_pctile200": 34.5,
         "ret_60": 0.188,
-        "composite": 2.394,
+        "composite": 2.393,
         "sector": "Financials"
       },
       {
@@ -34,7 +34,7 @@
         "share_5d": 28.86,
         "share5_pctile200": 99.5,
         "ret_60": 0.985,
-        "composite": 2.123,
+        "composite": 2.127,
         "sector": "Information Technology"
       },
       {
@@ -51,7 +51,7 @@
         "share_5d": 0.81,
         "share5_pctile200": 94.5,
         "ret_60": 0.226,
-        "composite": 1.157,
+        "composite": 1.159,
         "sector": "Materials"
       },
       {
@@ -68,7 +68,7 @@
         "share_5d": 4.08,
         "share5_pctile200": 93.043,
         "ret_60": 0.368,
-        "composite": 0.882,
+        "composite": 0.881,
         "sector": "Information Technology"
       },
       {
@@ -85,7 +85,7 @@
         "share_5d": 1.27,
         "share5_pctile200": 43.5,
         "ret_60": 0.033,
-        "composite": 0.876,
+        "composite": 0.873,
         "sector": "Health Care"
       },
       {
@@ -102,7 +102,7 @@
         "share_5d": 0.56,
         "share5_pctile200": 95.0,
         "ret_60": -0.064,
-        "composite": 0.648,
+        "composite": 0.647,
         "sector": "Materials"
       },
       {
@@ -119,7 +119,7 @@
         "share_5d": 0.23,
         "share5_pctile200": 64.0,
         "ret_60": 0.064,
-        "composite": 0.345,
+        "composite": 0.343,
         "sector": "Information Technology"
       },
       {
@@ -153,7 +153,7 @@
         "share_5d": 3.56,
         "share5_pctile200": 55.0,
         "ret_60": -0.024,
-        "composite": 0.156,
+        "composite": 0.154,
         "sector": "Financials"
       },
       {
@@ -170,7 +170,7 @@
         "share_5d": 2.38,
         "share5_pctile200": 58.5,
         "ret_60": 0.045,
-        "composite": 0.154,
+        "composite": 0.15,
         "sector": "Financials"
       },
       {
@@ -187,7 +187,7 @@
         "share_5d": 1.45,
         "share5_pctile200": 38.0,
         "ret_60": -0.122,
-        "composite": 0.145,
+        "composite": 0.144,
         "sector": "Utilities"
       },
       {
@@ -204,7 +204,7 @@
         "share_5d": 4.24,
         "share5_pctile200": 31.0,
         "ret_60": -0.043,
-        "composite": 0.055,
+        "composite": 0.054,
         "sector": "Information Technology"
       },
       {
@@ -221,7 +221,7 @@
         "share_5d": 0.53,
         "share5_pctile200": 32.0,
         "ret_60": 0.036,
-        "composite": 0.048,
+        "composite": 0.047,
         "sector": "Industrials"
       },
       {
@@ -238,7 +238,7 @@
         "share_5d": 1.19,
         "share5_pctile200": 17.5,
         "ret_60": -0.113,
-        "composite": 0.001,
+        "composite": -0.001,
         "sector": "Industrials"
       },
       {
@@ -255,7 +255,7 @@
         "share_5d": 1.29,
         "share5_pctile200": 39.5,
         "ret_60": -0.137,
-        "composite": -0.041,
+        "composite": -0.043,
         "sector": "Real Estate"
       },
       {
@@ -272,7 +272,7 @@
         "share_5d": 0.12,
         "share5_pctile200": 52.5,
         "ret_60": -0.299,
-        "composite": -0.186,
+        "composite": -0.19,
         "sector": "Consumer Staples"
       },
       {
@@ -289,7 +289,7 @@
         "share_5d": 0.96,
         "share5_pctile200": 10.5,
         "ret_60": -0.129,
-        "composite": -0.198,
+        "composite": -0.2,
         "sector": "Consumer Staples"
       },
       {
@@ -306,7 +306,7 @@
         "share_5d": 4.24,
         "share5_pctile200": 22.0,
         "ret_60": -0.085,
-        "composite": -0.234,
+        "composite": -0.237,
         "sector": "Financials"
       },
       {
@@ -323,7 +323,7 @@
         "share_5d": 1.21,
         "share5_pctile200": 21.5,
         "ret_60": -0.073,
-        "composite": -0.256,
+        "composite": -0.259,
         "sector": "Communication Services"
       },
       {
@@ -340,7 +340,7 @@
         "share_5d": 1.09,
         "share5_pctile200": 18.0,
         "ret_60": -0.106,
-        "composite": -0.271,
+        "composite": -0.273,
         "sector": "Industrials"
       },
       {
@@ -349,7 +349,7 @@
         "pct_high_250": 0.53,
         "breadth_250": 0.0,
         "breadth_60": 0.0,
-        "amt_surge": 0.962,
+        "amt_surge": 0.97,
         "amt_rank": 0.347,
         "amt_1d_yi": 17.51,
         "amt_5d_yi": 19.42,
@@ -357,7 +357,7 @@
         "share_5d": 0.91,
         "share5_pctile200": 18.5,
         "ret_60": -0.077,
-        "composite": -0.283,
+        "composite": -0.282,
         "sector": "Industrials"
       },
       {
@@ -374,7 +374,7 @@
         "share_5d": 1.44,
         "share5_pctile200": 34.5,
         "ret_60": -0.219,
-        "composite": -0.284,
+        "composite": -0.287,
         "sector": "Industrials"
       },
       {
@@ -391,7 +391,7 @@
         "share_5d": 3.13,
         "share5_pctile200": 13.5,
         "ret_60": -0.196,
-        "composite": -0.333,
+        "composite": -0.335,
         "sector": "Materials"
       },
       {
@@ -408,7 +408,7 @@
         "share_5d": 2.38,
         "share5_pctile200": 16.5,
         "ret_60": -0.247,
-        "composite": -0.385,
+        "composite": -0.387,
         "sector": "Energy"
       },
       {
@@ -425,7 +425,7 @@
         "share_5d": 1.39,
         "share5_pctile200": 3.0,
         "ret_60": -0.099,
-        "composite": -0.422,
+        "composite": -0.424,
         "sector": "Consumer Discretionary"
       },
       {
@@ -442,7 +442,7 @@
         "share_5d": 1.08,
         "share5_pctile200": 26.0,
         "ret_60": -0.424,
-        "composite": -0.44,
+        "composite": -0.442,
         "sector": "Materials"
       },
       {
@@ -459,7 +459,7 @@
         "share_5d": 3.16,
         "share5_pctile200": 5.5,
         "ret_60": -0.178,
-        "composite": -0.51,
+        "composite": -0.513,
         "sector": "Health Care"
       },
       {
@@ -476,7 +476,7 @@
         "share_5d": 0.7,
         "share5_pctile200": 7.0,
         "ret_60": -0.243,
-        "composite": -0.511,
+        "composite": -0.514,
         "sector": "Materials"
       },
       {
@@ -493,7 +493,7 @@
         "share_5d": 18.08,
         "share5_pctile200": 5.0,
         "ret_60": -0.181,
-        "composite": -0.519,
+        "composite": -0.522,
         "sector": "Communication Services"
       },
       {
@@ -510,7 +510,7 @@
         "share_5d": 0.84,
         "share5_pctile200": 0.5,
         "ret_60": -0.109,
-        "composite": -0.545,
+        "composite": -0.549,
         "sector": "Consumer Discretionary"
       },
       {
@@ -527,7 +527,7 @@
         "share_5d": 3.45,
         "share5_pctile200": 0.5,
         "ret_60": -0.211,
-        "composite": -0.559,
+        "composite": -0.562,
         "sector": "Consumer Discretionary"
       },
       {
@@ -536,7 +536,7 @@
         "pct_high_250": 0.529,
         "breadth_250": 0.0,
         "breadth_60": 0.0,
-        "amt_surge": 0.683,
+        "amt_surge": 0.764,
         "amt_rank": 0.199,
         "amt_1d_yi": 3.37,
         "amt_5d_yi": 3.76,
@@ -544,7 +544,7 @@
         "share_5d": 0.18,
         "share5_pctile200": 4.5,
         "ret_60": -0.208,
-        "composite": -0.62,
+        "composite": -0.59,
         "sector": "Consumer Staples"
       },
       {
@@ -561,7 +561,7 @@
         "share_5d": 1.9,
         "share5_pctile200": 4.0,
         "ret_60": -0.221,
-        "composite": -0.623,
+        "composite": -0.627,
         "sector": "Consumer Discretionary"
       },
       {
@@ -578,7 +578,7 @@
         "share_5d": 0.11,
         "share5_pctile200": 4.0,
         "ret_60": -0.242,
-        "composite": -0.625,
+        "composite": -0.628,
         "sector": "Consumer Discretionary"
       },
       {
@@ -587,7 +587,7 @@
         "pct_high_250": 0.43,
         "breadth_250": 0.0,
         "breadth_60": 0.0,
-        "amt_surge": 0.824,
+        "amt_surge": 0.923,
         "amt_rank": 0.326,
         "amt_1d_yi": 10.91,
         "amt_5d_yi": 11.78,
@@ -595,7 +595,7 @@
         "share_5d": 0.55,
         "share5_pctile200": 1.0,
         "ret_60": -0.358,
-        "composite": -0.689,
+        "composite": -0.651,
         "sector": "Information Technology"
       },
       {
@@ -612,7 +612,7 @@
         "share_5d": 0.39,
         "share5_pctile200": 2.5,
         "ret_60": -0.372,
-        "composite": -0.764,
+        "composite": -0.768,
         "sector": "Consumer Staples"
       }
     ],
@@ -631,7 +631,7 @@
         "share_5d": 37.92,
         "share5_pctile200": 99.5,
         "ret_60": 0.458,
-        "composite": 1.941
+        "composite": 1.943
       },
       {
         "sector": "Financials",
@@ -647,7 +647,7 @@
         "share_5d": 11.51,
         "share5_pctile200": 28.0,
         "ret_60": 0.005,
-        "composite": 0.62
+        "composite": 0.618
       },
       {
         "sector": "Utilities",
@@ -679,7 +679,7 @@
         "share_5d": 4.45,
         "share5_pctile200": 9.5,
         "ret_60": -0.114,
-        "composite": 0.169
+        "composite": 0.166
       },
       {
         "sector": "Industrials",
@@ -695,7 +695,7 @@
         "share_5d": 5.11,
         "share5_pctile200": 12.5,
         "ret_60": -0.07,
-        "composite": -0.085
+        "composite": -0.086
       },
       {
         "sector": "Real Estate",
@@ -711,7 +711,7 @@
         "share_5d": 2.19,
         "share5_pctile200": 38.0,
         "ret_60": -0.124,
-        "composite": -0.134
+        "composite": -0.135
       },
       {
         "sector": "Materials",
@@ -735,7 +735,7 @@
         "pct_high_250": 0.59,
         "breadth_250": 3.704,
         "breadth_60": 0.0,
-        "amt_surge": 0.834,
+        "amt_surge": 0.849,
         "amt_rank": 0.321,
         "amt_1d_yi": 42.83,
         "amt_5d_yi": 39.38,
@@ -743,7 +743,7 @@
         "share_5d": 1.85,
         "share5_pctile200": 1.0,
         "ret_60": -0.219,
-        "composite": -0.514
+        "composite": -0.509
       },
       {
         "sector": "Energy",
@@ -759,7 +759,7 @@
         "share_5d": 2.8,
         "share5_pctile200": 19.5,
         "ret_60": -0.236,
-        "composite": -0.523
+        "composite": -0.525
       },
       {
         "sector": "Communication Services",
@@ -775,7 +775,7 @@
         "share_5d": 10.52,
         "share5_pctile200": 5.5,
         "ret_60": -0.133,
-        "composite": -0.684
+        "composite": -0.686
       },
       {
         "sector": "Consumer Discretionary",
@@ -783,7 +783,7 @@
         "pct_high_250": 0.572,
         "breadth_250": 0.0,
         "breadth_60": 0.0,
-        "amt_surge": 0.851,
+        "amt_surge": 0.86,
         "amt_rank": 0.415,
         "amt_1d_yi": 397.3,
         "amt_5d_yi": 342.11,
@@ -791,128 +791,12 @@
         "share_5d": 16.03,
         "share5_pctile200": 3.0,
         "ret_60": -0.177,
-        "composite": -0.781
+        "composite": -0.778
       }
     ]
   },
-  "part2": [
-    {
-      "ticker": "0148.HK",
-      "name": "建滔集团",
-      "sub_industry": "AI算力",
-      "sector": "Information Technology",
-      "close": 126.4,
-      "pct_high_250": 0.896,
-      "amt_surge": 8.258,
-      "amt_rank": 0.99,
-      "ret_60": 2.805,
-      "ma_aligned": 1,
-      "hotness": 4.465
-    },
-    {
-      "ticker": "1888.HK",
-      "name": "建滔积层板",
-      "sub_industry": "AI算力",
-      "sector": "Information Technology",
-      "close": 98.55,
-      "pct_high_250": 0.946,
-      "amt_surge": 6.579,
-      "amt_rank": 0.98,
-      "ret_60": 3.961,
-      "ma_aligned": 1,
-      "hotness": 4.253
-    },
-    {
-      "ticker": "0992.HK",
-      "name": "联想集团",
-      "sub_industry": "AI算力",
-      "sector": "Information Technology",
-      "close": 23.44,
-      "pct_high_250": 0.882,
-      "amt_surge": 3.846,
-      "amt_rank": 0.967,
-      "ret_60": 1.502,
-      "ma_aligned": 0,
-      "hotness": 2.598
-    },
-    {
-      "ticker": "0522.HK",
-      "name": "ASMPT",
-      "sub_industry": "AI算力",
-      "sector": "Information Technology",
-      "close": 195.1,
-      "pct_high_250": 0.929,
-      "amt_surge": 2.511,
-      "amt_rank": 0.841,
-      "ret_60": 0.832,
-      "ma_aligned": 1,
-      "hotness": 2.166
-    },
-    {
-      "ticker": "0189.HK",
-      "name": "东岳集团",
-      "sub_industry": "化工",
-      "sector": "Materials",
-      "close": 20.24,
-      "pct_high_250": 0.906,
-      "amt_surge": 4.417,
-      "amt_rank": 0.89,
-      "ret_60": 0.86,
-      "ma_aligned": 1,
-      "hotness": 2.005
-    },
-    {
-      "ticker": "3986.HK",
-      "name": "兆易创新",
-      "sub_industry": "AI算力",
-      "sector": "Information Technology",
-      "close": 1083.0,
-      "pct_high_250": 0.977,
-      "amt_surge": 1.967,
-      "amt_rank": 0.963,
-      "ret_60": 1.88,
-      "ma_aligned": 1,
-      "hotness": 1.868
-    },
-    {
-      "ticker": "2513.HK",
-      "name": "智谱",
-      "sub_industry": "大模型及其应用",
-      "sector": "Information Technology",
-      "close": 2046.0,
-      "pct_high_250": 0.849,
-      "amt_surge": 2.237,
-      "amt_rank": 0.977,
-      "ret_60": 1.991,
-      "ma_aligned": 1,
-      "hotness": 1.732
-    },
-    {
-      "ticker": "9903.HK",
-      "name": "天数智芯",
-      "sub_industry": "AI算力",
-      "sector": "Information Technology",
-      "close": 684.0,
-      "pct_high_250": 0.863,
-      "amt_surge": 2.055,
-      "amt_rank": 0.897,
-      "ret_60": 1.659,
-      "ma_aligned": 1,
-      "hotness": 1.563
-    },
-    {
-      "ticker": "6869.HK",
-      "name": "长飞光纤光缆",
-      "sub_industry": "AI算力",
-      "sector": "Information Technology",
-      "close": 250.6,
-      "pct_high_250": 0.871,
-      "amt_surge": 2.367,
-      "amt_rank": 0.987,
-      "ret_60": 0.388,
-      "ma_aligned": 1,
-      "hotness": 1.468
-    },
+  "part1c1": [],
+  "part1c2": [
     {
       "ticker": "1347.HK",
       "name": "华虹半导体",
@@ -924,85 +808,9 @@
       "amt_rank": 0.983,
       "ret_60": 1.279,
       "ma_aligned": 1,
-      "hotness": 1.466
-    },
-    {
-      "ticker": "6166.HK",
-      "name": "剑桥科技",
-      "sub_industry": "AI算力",
-      "sector": "Information Technology",
-      "close": 148.3,
-      "pct_high_250": 0.926,
-      "amt_surge": 2.172,
-      "amt_rank": 0.937,
-      "ret_60": 0.975,
-      "ma_aligned": 0,
-      "hotness": 1.436
-    },
-    {
-      "ticker": "2388.HK",
-      "name": "中银香港",
-      "sub_industry": "香港银行",
-      "sector": "Financials",
-      "close": 45.56,
-      "pct_high_250": 0.931,
-      "amt_surge": 1.368,
-      "amt_rank": 0.791,
-      "ret_60": 0.107,
-      "ma_aligned": 0,
-      "hotness": 1.337
-    },
-    {
-      "ticker": "2382.HK",
-      "name": "舜宇光学科技",
-      "sub_industry": "消费电子",
-      "sector": "Information Technology",
-      "close": 60.9,
-      "pct_high_250": 0.68,
-      "amt_surge": 2.244,
-      "amt_rank": 0.944,
-      "ret_60": 0.169,
-      "ma_aligned": 0,
-      "hotness": 1.296
-    },
-    {
-      "ticker": "2359.HK",
-      "name": "药明康德",
-      "sub_industry": "CXO",
-      "sector": "Health Care",
-      "close": 145.4,
-      "pct_high_250": 1.0,
-      "amt_surge": 1.295,
-      "amt_rank": 0.864,
-      "ret_60": 0.3,
-      "ma_aligned": 0,
-      "hotness": 1.24
-    },
-    {
-      "ticker": "6613.HK",
-      "name": "蓝思科技",
-      "sub_industry": "消费电子",
-      "sector": "Information Technology",
-      "close": 27.34,
-      "pct_high_250": 0.836,
-      "amt_surge": 2.851,
-      "amt_rank": 0.847,
-      "ret_60": 0.291,
-      "ma_aligned": 0,
-      "hotness": 1.228
-    },
-    {
-      "ticker": "2631.HK",
-      "name": "天岳先进",
-      "sub_industry": "AI算力",
-      "sector": "Information Technology",
-      "close": 101.9,
-      "pct_high_250": 0.792,
-      "amt_surge": 2.512,
-      "amt_rank": 0.844,
-      "ret_60": 1.175,
-      "ma_aligned": 0,
-      "hotness": 1.224
+      "hotness": 1.465,
+      "pct_high_126": 0.983,
+      "nh_ratio_126": 0.127
     },
     {
       "ticker": "0005.HK",
@@ -1015,7 +823,247 @@
       "amt_rank": 0.917,
       "ret_60": 0.19,
       "ma_aligned": 1,
-      "hotness": 1.197
+      "hotness": 1.196,
+      "pct_high_126": 0.991,
+      "nh_ratio_126": 0.238
+    },
+    {
+      "ticker": "0669.HK",
+      "name": "创科实业",
+      "sub_industry": "其他工业",
+      "sector": "Industrials",
+      "close": 127.2,
+      "pct_high_250": 0.991,
+      "amt_surge": 1.296,
+      "amt_rank": 0.797,
+      "ret_60": 0.203,
+      "ma_aligned": 1,
+      "hotness": 0.763,
+      "pct_high_126": 0.991,
+      "nh_ratio_126": 0.095
+    }
+  ],
+  "part2": [
+    {
+      "ticker": "0148.HK",
+      "name": "建滔集团",
+      "sub_industry": "AI算力",
+      "sector": "Information Technology",
+      "close": 126.4,
+      "pct_high_250": 0.896,
+      "amt_surge": 8.258,
+      "amt_rank": 0.99,
+      "ret_60": 2.805,
+      "ma_aligned": 1,
+      "hotness": 4.464
+    },
+    {
+      "ticker": "1888.HK",
+      "name": "建滔积层板",
+      "sub_industry": "AI算力",
+      "sector": "Information Technology",
+      "close": 98.55,
+      "pct_high_250": 0.946,
+      "amt_surge": 6.579,
+      "amt_rank": 0.98,
+      "ret_60": 3.961,
+      "ma_aligned": 1,
+      "hotness": 4.252
+    },
+    {
+      "ticker": "0992.HK",
+      "name": "联想集团",
+      "sub_industry": "AI算力",
+      "sector": "Information Technology",
+      "close": 23.44,
+      "pct_high_250": 0.882,
+      "amt_surge": 3.846,
+      "amt_rank": 0.967,
+      "ret_60": 1.502,
+      "ma_aligned": 0,
+      "hotness": 2.597
+    },
+    {
+      "ticker": "0522.HK",
+      "name": "ASMPT",
+      "sub_industry": "AI算力",
+      "sector": "Information Technology",
+      "close": 195.1,
+      "pct_high_250": 0.929,
+      "amt_surge": 2.511,
+      "amt_rank": 0.841,
+      "ret_60": 0.832,
+      "ma_aligned": 1,
+      "hotness": 2.165
+    },
+    {
+      "ticker": "0189.HK",
+      "name": "东岳集团",
+      "sub_industry": "化工",
+      "sector": "Materials",
+      "close": 20.24,
+      "pct_high_250": 0.906,
+      "amt_surge": 4.417,
+      "amt_rank": 0.89,
+      "ret_60": 0.86,
+      "ma_aligned": 1,
+      "hotness": 2.004
+    },
+    {
+      "ticker": "3986.HK",
+      "name": "兆易创新",
+      "sub_industry": "AI算力",
+      "sector": "Information Technology",
+      "close": 1083.0,
+      "pct_high_250": 0.977,
+      "amt_surge": 1.967,
+      "amt_rank": 0.963,
+      "ret_60": 1.88,
+      "ma_aligned": 1,
+      "hotness": 1.867
+    },
+    {
+      "ticker": "2513.HK",
+      "name": "智谱",
+      "sub_industry": "大模型及其应用",
+      "sector": "Information Technology",
+      "close": 2046.0,
+      "pct_high_250": 0.849,
+      "amt_surge": 2.237,
+      "amt_rank": 0.977,
+      "ret_60": 1.991,
+      "ma_aligned": 1,
+      "hotness": 1.731
+    },
+    {
+      "ticker": "9903.HK",
+      "name": "天数智芯",
+      "sub_industry": "AI算力",
+      "sector": "Information Technology",
+      "close": 684.0,
+      "pct_high_250": 0.863,
+      "amt_surge": 2.055,
+      "amt_rank": 0.897,
+      "ret_60": 1.659,
+      "ma_aligned": 1,
+      "hotness": 1.562
+    },
+    {
+      "ticker": "6869.HK",
+      "name": "长飞光纤光缆",
+      "sub_industry": "AI算力",
+      "sector": "Information Technology",
+      "close": 250.6,
+      "pct_high_250": 0.871,
+      "amt_surge": 2.367,
+      "amt_rank": 0.987,
+      "ret_60": 0.388,
+      "ma_aligned": 1,
+      "hotness": 1.467
+    },
+    {
+      "ticker": "1347.HK",
+      "name": "华虹半导体",
+      "sub_industry": "AI算力",
+      "sector": "Information Technology",
+      "close": 189.5,
+      "pct_high_250": 0.983,
+      "amt_surge": 1.906,
+      "amt_rank": 0.983,
+      "ret_60": 1.279,
+      "ma_aligned": 1,
+      "hotness": 1.465
+    },
+    {
+      "ticker": "6166.HK",
+      "name": "剑桥科技",
+      "sub_industry": "AI算力",
+      "sector": "Information Technology",
+      "close": 148.3,
+      "pct_high_250": 0.926,
+      "amt_surge": 2.172,
+      "amt_rank": 0.937,
+      "ret_60": 0.975,
+      "ma_aligned": 0,
+      "hotness": 1.434
+    },
+    {
+      "ticker": "2388.HK",
+      "name": "中银香港",
+      "sub_industry": "香港银行",
+      "sector": "Financials",
+      "close": 45.56,
+      "pct_high_250": 0.931,
+      "amt_surge": 1.368,
+      "amt_rank": 0.791,
+      "ret_60": 0.107,
+      "ma_aligned": 0,
+      "hotness": 1.335
+    },
+    {
+      "ticker": "2382.HK",
+      "name": "舜宇光学科技",
+      "sub_industry": "消费电子",
+      "sector": "Information Technology",
+      "close": 60.9,
+      "pct_high_250": 0.68,
+      "amt_surge": 2.244,
+      "amt_rank": 0.944,
+      "ret_60": 0.169,
+      "ma_aligned": 0,
+      "hotness": 1.295
+    },
+    {
+      "ticker": "2359.HK",
+      "name": "药明康德",
+      "sub_industry": "CXO",
+      "sector": "Health Care",
+      "close": 145.4,
+      "pct_high_250": 1.0,
+      "amt_surge": 1.295,
+      "amt_rank": 0.864,
+      "ret_60": 0.3,
+      "ma_aligned": 0,
+      "hotness": 1.239
+    },
+    {
+      "ticker": "6613.HK",
+      "name": "蓝思科技",
+      "sub_industry": "消费电子",
+      "sector": "Information Technology",
+      "close": 27.34,
+      "pct_high_250": 0.836,
+      "amt_surge": 2.851,
+      "amt_rank": 0.847,
+      "ret_60": 0.291,
+      "ma_aligned": 0,
+      "hotness": 1.227
+    },
+    {
+      "ticker": "2631.HK",
+      "name": "天岳先进",
+      "sub_industry": "AI算力",
+      "sector": "Information Technology",
+      "close": 101.9,
+      "pct_high_250": 0.792,
+      "amt_surge": 2.512,
+      "amt_rank": 0.844,
+      "ret_60": 1.175,
+      "ma_aligned": 0,
+      "hotness": 1.223
+    },
+    {
+      "ticker": "0005.HK",
+      "name": "汇丰控股",
+      "sub_industry": "香港银行",
+      "sector": "Financials",
+      "close": 147.7,
+      "pct_high_250": 0.991,
+      "amt_surge": 1.239,
+      "amt_rank": 0.917,
+      "ret_60": 0.19,
+      "ma_aligned": 1,
+      "hotness": 1.196
     },
     {
       "ticker": "0981.HK",
@@ -1028,7 +1076,7 @@
       "amt_rank": 0.997,
       "ret_60": 0.505,
       "ma_aligned": 1,
-      "hotness": 1.121
+      "hotness": 1.12
     },
     {
       "ticker": "6082.HK",
@@ -1041,7 +1089,7 @@
       "amt_rank": 0.867,
       "ret_60": 0.945,
       "ma_aligned": 1,
-      "hotness": 1.12
+      "hotness": 1.119
     },
     {
       "ticker": "3323.HK",
@@ -1054,7 +1102,7 @@
       "amt_rank": 0.857,
       "ret_60": 0.206,
       "ma_aligned": 0,
-      "hotness": 1.116
+      "hotness": 1.115
     }
   ],
   "part3": [
@@ -1067,7 +1115,7 @@
       "ret_3d": 12.6,
       "vol_ratio": 1.63,
       "trigger": "单日+3日",
-      "hotness": -0.053
+      "hotness": -0.054
     },
     {
       "ticker": "3759.HK",
@@ -1078,7 +1126,7 @@
       "ret_3d": 11.6,
       "vol_ratio": 1.75,
       "trigger": "单日+3日",
-      "hotness": -0.553
+      "hotness": -0.554
     },
     {
       "ticker": "3347.HK",
@@ -1089,7 +1137,7 @@
       "ret_3d": 9.7,
       "vol_ratio": 1.68,
       "trigger": "单日",
-      "hotness": -0.699
+      "hotness": -0.7
     },
     {
       "ticker": "3998.HK",
@@ -1100,7 +1148,7 @@
       "ret_3d": 4.5,
       "vol_ratio": 2.5,
       "trigger": "单日",
-      "hotness": -0.053
+      "hotness": -0.054
     },
     {
       "ticker": "0669.HK",
@@ -1111,7 +1159,7 @@
       "ret_3d": 7.2,
       "vol_ratio": 1.8,
       "trigger": "单日",
-      "hotness": 0.764
+      "hotness": 0.763
     },
     {
       "ticker": "0753.HK",
@@ -1122,7 +1170,7 @@
       "ret_3d": 6.4,
       "vol_ratio": 1.75,
       "trigger": "单日",
-      "hotness": -0.4
+      "hotness": -0.401
     },
     {
       "ticker": "1055.HK",
@@ -1133,7 +1181,7 @@
       "ret_3d": 3.2,
       "vol_ratio": 1.83,
       "trigger": "单日",
-      "hotness": -0.621
+      "hotness": -0.623
     }
   ],
   "part4": [
@@ -1143,8 +1191,8 @@
       "sub_industry": "AI算力",
       "close": 23.44,
       "retrace": 11.8,
-      "ind_comp": 2.123,
-      "hotness": 2.598,
+      "ind_comp": 2.127,
+      "hotness": 2.597,
       "doji": 1,
       "shrink": 1,
       "entangle": 0,
@@ -1158,8 +1206,8 @@
       "sub_industry": "消费电子",
       "close": 43.02,
       "retrace": 12.0,
-      "ind_comp": 0.055,
-      "hotness": 1.036,
+      "ind_comp": 0.054,
+      "hotness": 1.035,
       "doji": 0,
       "shrink": 0,
       "entangle": 1,
@@ -1173,8 +1221,8 @@
       "sub_industry": "中国地产&物管",
       "close": 30.16,
       "retrace": 19.0,
-      "ind_comp": -0.041,
-      "hotness": 1.045,
+      "ind_comp": -0.043,
+      "hotness": 1.044,
       "doji": 1,
       "shrink": 1,
       "entangle": 0,
@@ -1188,8 +1236,8 @@
       "sub_industry": "交运",
       "close": 31.76,
       "retrace": 11.1,
-      "ind_comp": -0.271,
-      "hotness": 0.422,
+      "ind_comp": -0.273,
+      "hotness": 0.421,
       "doji": 1,
       "shrink": 1,
       "entangle": 0,
@@ -1203,8 +1251,8 @@
       "sub_industry": "消费服务",
       "close": 131.0,
       "retrace": 23.1,
-      "ind_comp": -0.545,
-      "hotness": -0.197,
+      "ind_comp": -0.549,
+      "hotness": -0.198,
       "doji": 1,
       "shrink": 1,
       "entangle": 0,
@@ -1218,8 +1266,8 @@
       "sub_industry": "汽车",
       "close": 39.54,
       "retrace": 16.9,
-      "ind_comp": -0.559,
-      "hotness": 0.773,
+      "ind_comp": -0.562,
+      "hotness": 0.772,
       "doji": 1,
       "shrink": 1,
       "entangle": 0,
@@ -1233,8 +1281,8 @@
       "sub_industry": "美妆个护",
       "close": 67.0,
       "retrace": 23.2,
-      "ind_comp": -0.62,
-      "hotness": 0.017,
+      "ind_comp": -0.59,
+      "hotness": 0.016,
       "doji": 1,
       "shrink": 1,
       "entangle": 0,
@@ -1616,7 +1664,7 @@
       "sub_industry": "AI算力",
       "sector": "Information Technology",
       "close": 126.4,
-      "hotness": 4.465,
+      "hotness": 4.464,
       "ret_60": 2.805,
       "pct_high_250": 0.896,
       "ma_aligned": 1
@@ -1627,7 +1675,7 @@
       "sub_industry": "AI算力",
       "sector": "Information Technology",
       "close": 98.55,
-      "hotness": 4.253,
+      "hotness": 4.252,
       "ret_60": 3.961,
       "pct_high_250": 0.946,
       "ma_aligned": 1
@@ -1638,7 +1686,7 @@
       "sub_industry": "AI算力",
       "sector": "Information Technology",
       "close": 23.44,
-      "hotness": 2.598,
+      "hotness": 2.597,
       "ret_60": 1.502,
       "pct_high_250": 0.882,
       "ma_aligned": 0
@@ -1649,7 +1697,7 @@
       "sub_industry": "AI算力",
       "sector": "Information Technology",
       "close": 195.1,
-      "hotness": 2.166,
+      "hotness": 2.165,
       "ret_60": 0.832,
       "pct_high_250": 0.929,
       "ma_aligned": 1
@@ -1660,7 +1708,7 @@
       "sub_industry": "化工",
       "sector": "Materials",
       "close": 20.24,
-      "hotness": 2.005,
+      "hotness": 2.004,
       "ret_60": 0.86,
       "pct_high_250": 0.906,
       "ma_aligned": 1
@@ -1671,7 +1719,7 @@
       "sub_industry": "AI算力",
       "sector": "Information Technology",
       "close": 1083.0,
-      "hotness": 1.868,
+      "hotness": 1.867,
       "ret_60": 1.88,
       "pct_high_250": 0.977,
       "ma_aligned": 1
@@ -1682,7 +1730,7 @@
       "sub_industry": "大模型及其应用",
       "sector": "Information Technology",
       "close": 2046.0,
-      "hotness": 1.732,
+      "hotness": 1.731,
       "ret_60": 1.991,
       "pct_high_250": 0.849,
       "ma_aligned": 1
@@ -1693,7 +1741,7 @@
       "sub_industry": "中国银行",
       "sector": "Financials",
       "close": 5.06,
-      "hotness": 1.658,
+      "hotness": 1.657,
       "ret_60": 0.045,
       "pct_high_250": 0.915,
       "ma_aligned": 0
@@ -1704,7 +1752,7 @@
       "sub_industry": "AI算力",
       "sector": "Information Technology",
       "close": 684.0,
-      "hotness": 1.563,
+      "hotness": 1.562,
       "ret_60": 1.659,
       "pct_high_250": 0.863,
       "ma_aligned": 1
@@ -1715,7 +1763,7 @@
       "sub_industry": "AI算力",
       "sector": "Information Technology",
       "close": 250.6,
-      "hotness": 1.468,
+      "hotness": 1.467,
       "ret_60": 0.388,
       "pct_high_250": 0.871,
       "ma_aligned": 1
@@ -1726,7 +1774,7 @@
       "sub_industry": "AI算力",
       "sector": "Information Technology",
       "close": 189.5,
-      "hotness": 1.466,
+      "hotness": 1.465,
       "ret_60": 1.279,
       "pct_high_250": 0.983,
       "ma_aligned": 1
@@ -1737,7 +1785,7 @@
       "sub_industry": "AI算力",
       "sector": "Information Technology",
       "close": 148.3,
-      "hotness": 1.436,
+      "hotness": 1.434,
       "ret_60": 0.975,
       "pct_high_250": 0.926,
       "ma_aligned": 0
@@ -1748,7 +1796,7 @@
       "sub_industry": "香港银行",
       "sector": "Financials",
       "close": 45.56,
-      "hotness": 1.337,
+      "hotness": 1.335,
       "ret_60": 0.107,
       "pct_high_250": 0.931,
       "ma_aligned": 0
@@ -1759,7 +1807,7 @@
       "sub_industry": "消费电子",
       "sector": "Information Technology",
       "close": 60.9,
-      "hotness": 1.296,
+      "hotness": 1.295,
       "ret_60": 0.169,
       "pct_high_250": 0.68,
       "ma_aligned": 0
@@ -1770,7 +1818,7 @@
       "sub_industry": "电信",
       "sector": "Communication Services",
       "close": 77.4,
-      "hotness": 1.289,
+      "hotness": 1.288,
       "ret_60": 0.029,
       "pct_high_250": 0.898,
       "ma_aligned": 0
@@ -1781,7 +1829,7 @@
       "sub_industry": "中国银行",
       "sector": "Financials",
       "close": 6.62,
-      "hotness": 1.244,
+      "hotness": 1.243,
       "ret_60": 0.038,
       "pct_high_250": 0.917,
       "ma_aligned": 0
@@ -1792,7 +1840,7 @@
       "sub_industry": "CXO",
       "sector": "Health Care",
       "close": 145.4,
-      "hotness": 1.24,
+      "hotness": 1.239,
       "ret_60": 0.3,
       "pct_high_250": 1.0,
       "ma_aligned": 0
@@ -1803,7 +1851,7 @@
       "sub_industry": "消费电子",
       "sector": "Information Technology",
       "close": 27.34,
-      "hotness": 1.228,
+      "hotness": 1.227,
       "ret_60": 0.291,
       "pct_high_250": 0.836,
       "ma_aligned": 0
@@ -1814,7 +1862,7 @@
       "sub_industry": "中国银行",
       "sector": "Financials",
       "close": 8.26,
-      "hotness": 1.228,
+      "hotness": 1.227,
       "ret_60": 0.031,
       "pct_high_250": 0.919,
       "ma_aligned": 0
@@ -1825,7 +1873,7 @@
       "sub_industry": "AI算力",
       "sector": "Information Technology",
       "close": 101.9,
-      "hotness": 1.224,
+      "hotness": 1.223,
       "ret_60": 1.175,
       "pct_high_250": 0.792,
       "ma_aligned": 0
@@ -1836,7 +1884,7 @@
       "sub_industry": "香港银行",
       "sector": "Financials",
       "close": 147.7,
-      "hotness": 1.197,
+      "hotness": 1.196,
       "ret_60": 0.19,
       "pct_high_250": 0.991,
       "ma_aligned": 1
@@ -1847,7 +1895,7 @@
       "sub_industry": "公共事业",
       "sector": "Utilities",
       "close": 5.39,
-      "hotness": 1.175,
+      "hotness": 1.173,
       "ret_60": -0.067,
       "pct_high_250": 0.767,
       "ma_aligned": 0
@@ -1858,7 +1906,7 @@
       "sub_industry": "AI算力",
       "sector": "Information Technology",
       "close": 80.0,
-      "hotness": 1.121,
+      "hotness": 1.12,
       "ret_60": 0.505,
       "pct_high_250": 0.879,
       "ma_aligned": 1
@@ -1869,7 +1917,7 @@
       "sub_industry": "AI算力",
       "sector": "Information Technology",
       "close": 57.0,
-      "hotness": 1.12,
+      "hotness": 1.119,
       "ret_60": 0.945,
       "pct_high_250": 0.838,
       "ma_aligned": 1
@@ -1880,7 +1928,7 @@
       "sub_industry": "建材",
       "sector": "Materials",
       "close": 5.71,
-      "hotness": 1.116,
+      "hotness": 1.115,
       "ret_60": 0.206,
       "pct_high_250": 0.836,
       "ma_aligned": 0
@@ -1891,7 +1939,7 @@
       "sub_industry": "公共事业",
       "sector": "Utilities",
       "close": 17.23,
-      "hotness": 1.1,
+      "hotness": 1.099,
       "ret_60": -0.072,
       "pct_high_250": 0.824,
       "ma_aligned": 0
@@ -1902,7 +1950,7 @@
       "sub_industry": "中国地产&物管",
       "sector": "Real Estate",
       "close": 30.16,
-      "hotness": 1.045,
+      "hotness": 1.044,
       "ret_60": 0.112,
       "pct_high_250": 0.81,
       "ma_aligned": 0
@@ -1913,7 +1961,7 @@
       "sub_industry": "消费电子",
       "sector": "Information Technology",
       "close": 43.02,
-      "hotness": 1.036,
+      "hotness": 1.035,
       "ret_60": 0.259,
       "pct_high_250": 0.861,
       "ma_aligned": 1
@@ -1924,7 +1972,7 @@
       "sub_industry": "新能源产业链",
       "sector": "Industrials",
       "close": 680.5,
-      "hotness": 1.015,
+      "hotness": 1.014,
       "ret_60": 0.119,
       "pct_high_250": 0.873,
       "ma_aligned": 0
@@ -1935,7 +1983,7 @@
       "sub_industry": "其他芯片",
       "sector": "Information Technology",
       "close": 195.2,
-      "hotness": 0.903,
+      "hotness": 0.902,
       "ret_60": 0.649,
       "pct_high_250": 0.831,
       "ma_aligned": 0
@@ -1946,7 +1994,7 @@
       "sub_industry": "中国银行",
       "sector": "Financials",
       "close": 5.33,
-      "hotness": 0.902,
+      "hotness": 0.901,
       "ret_60": 0.021,
       "pct_high_250": 0.872,
       "ma_aligned": 0
@@ -1957,7 +2005,7 @@
       "sub_industry": "AI算力",
       "sector": "Industrials",
       "close": 180.0,
-      "hotness": 0.895,
+      "hotness": 0.894,
       "ret_60": 0.753,
       "pct_high_250": 0.921,
       "ma_aligned": 1
@@ -1968,7 +2016,7 @@
       "sub_industry": "汽车",
       "sector": "Industrials",
       "close": 35.96,
-      "hotness": 0.882,
+      "hotness": 0.881,
       "ret_60": 0.346,
       "pct_high_250": 0.805,
       "ma_aligned": 0
@@ -1979,7 +2027,7 @@
       "sub_industry": "综合企业",
       "sector": "Industrials",
       "close": 11.78,
-      "hotness": 0.838,
+      "hotness": 0.837,
       "ret_60": -0.006,
       "pct_high_250": 0.852,
       "ma_aligned": 0
@@ -1990,7 +2038,7 @@
       "sub_industry": "香港银行",
       "sector": "Financials",
       "close": 210.8,
-      "hotness": 0.789,
+      "hotness": 0.788,
       "ret_60": 0.268,
       "pct_high_250": 0.971,
       "ma_aligned": 1
@@ -2001,7 +2049,7 @@
       "sub_industry": "汽车",
       "sector": "Industrials",
       "close": 39.54,
-      "hotness": 0.773,
+      "hotness": 0.772,
       "ret_60": 0.006,
       "pct_high_250": 0.831,
       "ma_aligned": 1
@@ -2012,7 +2060,7 @@
       "sub_industry": "其他工业",
       "sector": "Industrials",
       "close": 127.2,
-      "hotness": 0.764,
+      "hotness": 0.763,
       "ret_60": 0.203,
       "pct_high_250": 0.991,
       "ma_aligned": 1
@@ -2023,7 +2071,7 @@
       "sub_industry": "公共事业",
       "sector": "Utilities",
       "close": 57.55,
-      "hotness": 0.759,
+      "hotness": 0.758,
       "ret_60": -0.026,
       "pct_high_250": 0.896,
       "ma_aligned": 0
@@ -2034,7 +2082,7 @@
       "sub_industry": "中国地产&物管",
       "sector": "Real Estate",
       "close": 12.17,
-      "hotness": 0.755,
+      "hotness": 0.754,
       "ret_60": 0.045,
       "pct_high_250": 0.752,
       "ma_aligned": 0
@@ -2045,7 +2093,7 @@
       "sub_industry": "机器人产业链",
       "sector": "Industrials",
       "close": 17.48,
-      "hotness": 0.725,
+      "hotness": 0.723,
       "ret_60": 0.527,
       "pct_high_250": 0.83,
       "ma_aligned": 1
@@ -2056,7 +2104,7 @@
       "sub_industry": "其他工业",
       "sector": "Industrials",
       "close": 60.5,
-      "hotness": 0.708,
+      "hotness": 0.707,
       "ret_60": 0.746,
       "pct_high_250": 0.931,
       "ma_aligned": 1
@@ -2067,7 +2115,7 @@
       "sub_industry": "互联网",
       "sector": "Communication Services",
       "close": 187.5,
-      "hotness": 0.702,
+      "hotness": 0.701,
       "ret_60": 0.098,
       "pct_high_250": 0.776,
       "ma_aligned": 0
@@ -2078,7 +2126,7 @@
       "sub_industry": "AI算力",
       "sector": "Information Technology",
       "close": 419.8,
-      "hotness": 0.701,
+      "hotness": 0.7,
       "ret_60": 1.319,
       "pct_high_250": 0.838,
       "ma_aligned": 0
@@ -2089,7 +2137,7 @@
       "sub_industry": "综合企业",
       "sector": "Industrials",
       "close": 67.25,
-      "hotness": 0.697,
+      "hotness": 0.696,
       "ret_60": 0.162,
       "pct_high_250": 0.939,
       "ma_aligned": 0
@@ -2100,7 +2148,7 @@
       "sub_industry": "食品饮料调味品/酒",
       "sector": "Consumer Staples",
       "close": 16.65,
-      "hotness": 0.684,
+      "hotness": 0.683,
       "ret_60": 0.059,
       "pct_high_250": 0.975,
       "ma_aligned": 0
@@ -2111,7 +2159,7 @@
       "sub_industry": "能源",
       "sector": "Energy",
       "close": 8.78,
-      "hotness": 0.662,
+      "hotness": 0.661,
       "ret_60": -0.168,
       "pct_high_250": 0.752,
       "ma_aligned": 0
@@ -2122,7 +2170,7 @@
       "sub_industry": "耐用品",
       "sector": "Consumer Discretionary",
       "close": 80.35,
-      "hotness": 0.64,
+      "hotness": 0.639,
       "ret_60": 0.038,
       "pct_high_250": 0.897,
       "ma_aligned": 0
@@ -2133,7 +2181,7 @@
       "sub_industry": "其他工业",
       "sector": "Industrials",
       "close": 8.36,
-      "hotness": 0.635,
+      "hotness": 0.634,
       "ret_60": 0.032,
       "pct_high_250": 0.73,
       "ma_aligned": 0
@@ -2144,7 +2192,7 @@
       "sub_industry": "其他非银",
       "sector": "Financials",
       "close": 16.95,
-      "hotness": 0.633,
+      "hotness": 0.632,
       "ret_60": 0.299,
       "pct_high_250": 0.913,
       "ma_aligned": 1
@@ -2155,7 +2203,7 @@
       "sub_industry": "交运",
       "sector": "Industrials",
       "close": 12.58,
-      "hotness": 0.626,
+      "hotness": 0.625,
       "ret_60": 0.08,
       "pct_high_250": 0.945,
       "ma_aligned": 0
@@ -2166,7 +2214,7 @@
       "sub_industry": "保险",
       "sector": "Financials",
       "close": 70.8,
-      "hotness": 0.622,
+      "hotness": 0.62,
       "ret_60": -0.172,
       "pct_high_250": 0.792,
       "ma_aligned": 0
@@ -2177,7 +2225,7 @@
       "sub_industry": "中国银行",
       "sector": "Financials",
       "close": 44.7,
-      "hotness": 0.613,
+      "hotness": 0.612,
       "ret_60": -0.088,
       "pct_high_250": 0.842,
       "ma_aligned": 0
@@ -2188,7 +2236,7 @@
       "sub_industry": "香港地产",
       "sector": "Real Estate",
       "close": 114.2,
-      "hotness": 0.587,
+      "hotness": 0.586,
       "ret_60": -0.126,
       "pct_high_250": 0.781,
       "ma_aligned": 0
@@ -2199,7 +2247,7 @@
       "sub_industry": "其他非银",
       "sector": "Financials",
       "close": 362.2,
-      "hotness": 0.552,
+      "hotness": 0.55,
       "ret_60": -0.073,
       "pct_high_250": 0.803,
       "ma_aligned": 0
@@ -2210,7 +2258,7 @@
       "sub_industry": "能源金属/小金属",
       "sector": "Materials",
       "close": 48.9,
-      "hotness": 0.53,
+      "hotness": 0.528,
       "ret_60": -0.279,
       "pct_high_250": 0.551,
       "ma_aligned": 0
@@ -2221,7 +2269,7 @@
       "sub_industry": "交运",
       "sector": "Energy",
       "close": 16.83,
-      "hotness": 0.525,
+      "hotness": 0.524,
       "ret_60": -0.133,
       "pct_high_250": 0.792,
       "ma_aligned": 0
@@ -2232,7 +2280,7 @@
       "sub_industry": "AI算力",
       "sector": "Information Technology",
       "close": 6.98,
-      "hotness": 0.512,
+      "hotness": 0.511,
       "ret_60": -0.102,
       "pct_high_250": 0.67,
       "ma_aligned": 0
@@ -2243,7 +2291,7 @@
       "sub_industry": "电信",
       "sector": "Communication Services",
       "close": 4.35,
-      "hotness": 0.494,
+      "hotness": 0.493,
       "ret_60": -0.091,
       "pct_high_250": 0.716,
       "ma_aligned": 0
@@ -2254,7 +2302,7 @@
       "sub_industry": "中国银行",
       "sector": "Financials",
       "close": 6.8,
-      "hotness": 0.488,
+      "hotness": 0.487,
       "ret_60": -0.112,
       "pct_high_250": 0.817,
       "ma_aligned": 0
@@ -2265,7 +2313,7 @@
       "sub_industry": "食品饮料调味品/酒",
       "sector": "Consumer Staples",
       "close": 8.5,
-      "hotness": 0.48,
+      "hotness": 0.479,
       "ret_60": -0.104,
       "pct_high_250": 0.819,
       "ma_aligned": 0
@@ -2276,7 +2324,7 @@
       "sub_industry": "互联网",
       "sector": "Consumer Discretionary",
       "close": 96.0,
-      "hotness": 0.463,
+      "hotness": 0.462,
       "ret_60": -0.124,
       "pct_high_250": 0.697,
       "ma_aligned": 0
@@ -2287,7 +2335,7 @@
       "sub_industry": "公共事业",
       "sector": "Utilities",
       "close": 2.49,
-      "hotness": 0.458,
+      "hotness": 0.457,
       "ret_60": -0.104,
       "pct_high_250": 0.709,
       "ma_aligned": 0
@@ -2298,7 +2346,7 @@
       "sub_industry": "创新药",
       "sector": "Health Care",
       "close": 83.3,
-      "hotness": 0.444,
+      "hotness": 0.443,
       "ret_60": -0.327,
       "pct_high_250": 0.471,
       "ma_aligned": 0
@@ -2309,7 +2357,7 @@
       "sub_industry": "公共事业",
       "sector": "Utilities",
       "close": 7.83,
-      "hotness": 0.435,
+      "hotness": 0.434,
       "ret_60": 0.048,
       "pct_high_250": 0.91,
       "ma_aligned": 0
@@ -2320,7 +2368,7 @@
       "sub_industry": "香港地产",
       "sector": "Real Estate",
       "close": 44.08,
-      "hotness": 0.431,
+      "hotness": 0.43,
       "ret_60": 0.023,
       "pct_high_250": 0.869,
       "ma_aligned": 0
@@ -2331,7 +2379,7 @@
       "sub_industry": "其他非银",
       "sector": "Financials",
       "close": 26.56,
-      "hotness": 0.429,
+      "hotness": 0.428,
       "ret_60": 0.137,
       "pct_high_250": 0.844,
       "ma_aligned": 0
@@ -2342,7 +2390,7 @@
       "sub_industry": "交运",
       "sector": "Industrials",
       "close": 31.76,
-      "hotness": 0.422,
+      "hotness": 0.421,
       "ret_60": -0.027,
       "pct_high_250": 0.889,
       "ma_aligned": 0
@@ -2353,7 +2401,7 @@
       "sub_industry": "公共事业",
       "sector": "Utilities",
       "close": 73.75,
-      "hotness": 0.421,
+      "hotness": 0.42,
       "ret_60": 0.02,
       "pct_high_250": 0.965,
       "ma_aligned": 0
@@ -2364,7 +2412,7 @@
       "sub_industry": "耐用品",
       "sector": "Consumer Discretionary",
       "close": 12.61,
-      "hotness": 0.412,
+      "hotness": 0.411,
       "ret_60": 0.186,
       "pct_high_250": 0.822,
       "ma_aligned": 0
@@ -2375,7 +2423,7 @@
       "sub_industry": "汽车",
       "sector": "Consumer Discretionary",
       "close": 17.06,
-      "hotness": 0.397,
+      "hotness": 0.396,
       "ret_60": -0.151,
       "pct_high_250": 0.701,
       "ma_aligned": 0
@@ -2386,7 +2434,7 @@
       "sub_industry": "公共事业",
       "sector": "Utilities",
       "close": 60.25,
-      "hotness": 0.395,
+      "hotness": 0.394,
       "ret_60": 0.016,
       "pct_high_250": 0.921,
       "ma_aligned": 0
@@ -2397,7 +2445,7 @@
       "sub_industry": "能源",
       "sector": "Energy",
       "close": 40.62,
-      "hotness": 0.388,
+      "hotness": 0.387,
       "ret_60": -0.147,
       "pct_high_250": 0.824,
       "ma_aligned": 0
@@ -2408,7 +2456,7 @@
       "sub_industry": "创新药",
       "sector": "Health Care",
       "close": 418.0,
-      "hotness": 0.388,
+      "hotness": 0.386,
       "ret_60": -0.022,
       "pct_high_250": 0.724,
       "ma_aligned": 0
@@ -2419,7 +2467,7 @@
       "sub_industry": "其他非银",
       "sector": "Financials",
       "close": 11.97,
-      "hotness": 0.386,
+      "hotness": 0.385,
       "ret_60": 0.149,
       "pct_high_250": 0.792,
       "ma_aligned": 0
@@ -2430,7 +2478,7 @@
       "sub_industry": "中国地产&物管",
       "sector": "Real Estate",
       "close": 35.94,
-      "hotness": 0.35,
+      "hotness": 0.348,
       "ret_60": -0.085,
       "pct_high_250": 0.69,
       "ma_aligned": 0
@@ -2441,7 +2489,7 @@
       "sub_industry": "其他非银",
       "sector": "Financials",
       "close": 14.31,
-      "hotness": 0.332,
+      "hotness": 0.331,
       "ret_60": 0.091,
       "pct_high_250": 0.8,
       "ma_aligned": 0
@@ -2452,7 +2500,7 @@
       "sub_industry": "互联网",
       "sector": "Communication Services",
       "close": 411.8,
-      "hotness": 0.297,
+      "hotness": 0.296,
       "ret_60": -0.159,
       "pct_high_250": 0.615,
       "ma_aligned": 0
@@ -2463,7 +2511,7 @@
       "sub_industry": "保险",
       "sector": "Financials",
       "close": 50.55,
-      "hotness": 0.285,
+      "hotness": 0.284,
       "ret_60": -0.1,
       "pct_high_250": 0.712,
       "ma_aligned": 0
@@ -2474,7 +2522,7 @@
       "sub_industry": "其他工业",
       "sector": "Industrials",
       "close": 37.48,
-      "hotness": 0.276,
+      "hotness": 0.275,
       "ret_60": 0.035,
       "pct_high_250": 0.818,
       "ma_aligned": 0
@@ -2485,7 +2533,7 @@
       "sub_industry": "保险",
       "sector": "Financials",
       "close": 14.36,
-      "hotness": 0.267,
+      "hotness": 0.266,
       "ret_60": -0.041,
       "pct_high_250": 0.745,
       "ma_aligned": 0
@@ -2496,7 +2544,7 @@
       "sub_industry": "消费电子",
       "sector": "Information Technology",
       "close": 20.1,
-      "hotness": 0.266,
+      "hotness": 0.265,
       "ret_60": -0.275,
       "pct_high_250": 0.619,
       "ma_aligned": 0
@@ -2507,7 +2555,7 @@
       "sub_industry": "能源",
       "sector": "Energy",
       "close": 20.86,
-      "hotness": 0.265,
+      "hotness": 0.264,
       "ret_60": -0.27,
       "pct_high_250": 0.699,
       "ma_aligned": 0
@@ -2518,7 +2566,7 @@
       "sub_industry": "综合企业",
       "sector": "Industrials",
       "close": 82.95,
-      "hotness": 0.257,
+      "hotness": 0.256,
       "ret_60": -0.005,
       "pct_high_250": 0.91,
       "ma_aligned": 0
@@ -2529,7 +2577,7 @@
       "sub_industry": "CXO",
       "sector": "Health Care",
       "close": 33.04,
-      "hotness": 0.255,
+      "hotness": 0.254,
       "ret_60": 0.048,
       "pct_high_250": 0.783,
       "ma_aligned": 0
@@ -2540,7 +2588,7 @@
       "sub_industry": "食品饮料调味品/酒",
       "sector": "Consumer Staples",
       "close": 9.67,
-      "hotness": 0.254,
+      "hotness": 0.253,
       "ret_60": -0.176,
       "pct_high_250": 0.776,
       "ma_aligned": 0
@@ -2551,7 +2599,7 @@
       "sub_industry": "其他非银",
       "sector": "Financials",
       "close": 16.5,
-      "hotness": 0.244,
+      "hotness": 0.243,
       "ret_60": 0.082,
       "pct_high_250": 0.77,
       "ma_aligned": 0
@@ -2562,7 +2610,7 @@
       "sub_industry": "中国地产&物管",
       "sector": "Real Estate",
       "close": 36.96,
-      "hotness": 0.243,
+      "hotness": 0.242,
       "ret_60": -0.158,
       "pct_high_250": 0.752,
       "ma_aligned": 0
@@ -2573,7 +2621,7 @@
       "sub_industry": "保险",
       "sector": "Financials",
       "close": 26.92,
-      "hotness": 0.242,
+      "hotness": 0.241,
       "ret_60": 0.075,
       "pct_high_250": 0.758,
       "ma_aligned": 0
@@ -2584,7 +2632,7 @@
       "sub_industry": "创新药",
       "sector": "Health Care",
       "close": 75.15,
-      "hotness": 0.238,
+      "hotness": 0.237,
       "ret_60": -0.054,
       "pct_high_250": 0.702,
       "ma_aligned": 0
@@ -2595,7 +2643,7 @@
       "sub_industry": "能源",
       "sector": "Energy",
       "close": 11.47,
-      "hotness": 0.232,
+      "hotness": 0.231,
       "ret_60": -0.28,
       "pct_high_250": 0.682,
       "ma_aligned": 0
@@ -2606,7 +2654,7 @@
       "sub_industry": "中国银行",
       "sector": "Financials",
       "close": 5.96,
-      "hotness": 0.221,
+      "hotness": 0.22,
       "ret_60": -0.095,
       "pct_high_250": 0.837,
       "ma_aligned": 0
@@ -2617,7 +2665,7 @@
       "sub_industry": "公共事业",
       "sector": "Utilities",
       "close": 6.66,
-      "hotness": 0.213,
+      "hotness": 0.212,
       "ret_60": -0.031,
       "pct_high_250": 0.888,
       "ma_aligned": 0
@@ -2628,7 +2676,7 @@
       "sub_industry": "创新药",
       "sector": "Health Care",
       "close": 165.9,
-      "hotness": 0.197,
+      "hotness": 0.196,
       "ret_60": 0.011,
       "pct_high_250": 0.724,
       "ma_aligned": 0
@@ -2639,7 +2687,7 @@
       "sub_industry": "工业金属",
       "sector": "Materials",
       "close": 15.22,
-      "hotness": 0.195,
+      "hotness": 0.194,
       "ret_60": -0.071,
       "pct_high_250": 0.625,
       "ma_aligned": 0
@@ -2650,7 +2698,7 @@
       "sub_industry": "能源金属/小金属",
       "sector": "Materials",
       "close": 38.64,
-      "hotness": 0.19,
+      "hotness": 0.189,
       "ret_60": -0.141,
       "pct_high_250": 0.572,
       "ma_aligned": 0
@@ -2661,7 +2709,7 @@
       "sub_industry": "其他非银",
       "sector": "Financials",
       "close": 19.92,
-      "hotness": 0.188,
+      "hotness": 0.187,
       "ret_60": 0.145,
       "pct_high_250": 0.85,
       "ma_aligned": 0
@@ -2672,7 +2720,7 @@
       "sub_industry": "中国银行",
       "sector": "Financials",
       "close": 4.77,
-      "hotness": 0.186,
+      "hotness": 0.185,
       "ret_60": -0.029,
       "pct_high_250": 0.834,
       "ma_aligned": 0
@@ -2683,7 +2731,7 @@
       "sub_industry": "交运",
       "sector": "Industrials",
       "close": 170.3,
-      "hotness": 0.176,
+      "hotness": 0.175,
       "ret_60": -0.079,
       "pct_high_250": 0.835,
       "ma_aligned": 0
@@ -2694,7 +2742,7 @@
       "sub_industry": "其他非银",
       "sector": "Financials",
       "close": 16.43,
-      "hotness": 0.174,
+      "hotness": 0.173,
       "ret_60": 0.113,
       "pct_high_250": 0.784,
       "ma_aligned": 0
@@ -2705,7 +2753,7 @@
       "sub_industry": "交运",
       "sector": "Industrials",
       "close": 11.57,
-      "hotness": 0.167,
+      "hotness": 0.166,
       "ret_60": -0.165,
       "pct_high_250": 0.721,
       "ma_aligned": 0
@@ -2716,7 +2764,7 @@
       "sub_industry": "香港地产",
       "sector": "Real Estate",
       "close": 10.34,
-      "hotness": 0.144,
+      "hotness": 0.143,
       "ret_60": -0.095,
       "pct_high_250": 0.786,
       "ma_aligned": 0
@@ -2727,7 +2775,7 @@
       "sub_industry": "互联网",
       "sector": "Communication Services",
       "close": 98.75,
-      "hotness": 0.124,
+      "hotness": 0.123,
       "ret_60": -0.097,
       "pct_high_250": 0.615,
       "ma_aligned": 0
@@ -2738,7 +2786,7 @@
       "sub_industry": "零售",
       "sector": "Consumer Discretionary",
       "close": 11.29,
-      "hotness": 0.12,
+      "hotness": 0.119,
       "ret_60": 0.056,
       "pct_high_250": 0.69,
       "ma_aligned": 0
@@ -2749,7 +2797,7 @@
       "sub_industry": "工业金属",
       "sector": "Materials",
       "close": 27.46,
-      "hotness": 0.119,
+      "hotness": 0.118,
       "ret_60": -0.178,
       "pct_high_250": 0.604,
       "ma_aligned": 0
@@ -2760,7 +2808,7 @@
       "sub_industry": "汽车",
       "sector": "Consumer Discretionary",
       "close": 72.65,
-      "hotness": 0.114,
+      "hotness": 0.112,
       "ret_60": -0.289,
       "pct_high_250": 0.544,
       "ma_aligned": 0
@@ -2771,7 +2819,7 @@
       "sub_industry": "香港地产",
       "sector": "Real Estate",
       "close": 18.13,
-      "hotness": 0.112,
+      "hotness": 0.111,
       "ret_60": -0.183,
       "pct_high_250": 0.599,
       "ma_aligned": 0
@@ -2782,7 +2830,7 @@
       "sub_industry": "汽车",
       "sector": "Consumer Discretionary",
       "close": 37.12,
-      "hotness": 0.105,
+      "hotness": 0.104,
       "ret_60": -0.189,
       "pct_high_250": 0.607,
       "ma_aligned": 0
@@ -2793,7 +2841,7 @@
       "sub_industry": "食品饮料调味品/酒",
       "sector": "Consumer Staples",
       "close": 29.0,
-      "hotness": 0.104,
+      "hotness": 0.103,
       "ret_60": -0.112,
       "pct_high_250": 0.781,
       "ma_aligned": 0
@@ -2804,7 +2852,7 @@
       "sub_industry": "保险",
       "sector": "Financials",
       "close": 46.38,
-      "hotness": 0.102,
+      "hotness": 0.101,
       "ret_60": -0.009,
       "pct_high_250": 0.712,
       "ma_aligned": 0
@@ -2815,7 +2863,7 @@
       "sub_industry": "能源",
       "sector": "Energy",
       "close": 4.07,
-      "hotness": 0.102,
+      "hotness": 0.101,
       "ret_60": -0.063,
       "pct_high_250": 0.741,
       "ma_aligned": 0
@@ -2826,7 +2874,7 @@
       "sub_industry": "耐用品",
       "sector": "Consumer Discretionary",
       "close": 19.7,
-      "hotness": 0.085,
+      "hotness": 0.084,
       "ret_60": -0.137,
       "pct_high_250": 0.708,
       "ma_aligned": 0
@@ -2837,7 +2885,7 @@
       "sub_industry": "汽车",
       "sector": "Consumer Discretionary",
       "close": 33.56,
-      "hotness": 0.082,
+      "hotness": 0.081,
       "ret_60": -0.277,
       "pct_high_250": 0.457,
       "ma_aligned": 0
@@ -2848,7 +2896,7 @@
       "sub_industry": "工业金属",
       "sector": "Materials",
       "close": 20.14,
-      "hotness": 0.081,
+      "hotness": 0.08,
       "ret_60": -0.37,
       "pct_high_250": 0.529,
       "ma_aligned": 0
@@ -2859,7 +2907,7 @@
       "sub_industry": "AI算力",
       "sector": "Information Technology",
       "close": 22.8,
-      "hotness": 0.08,
+      "hotness": 0.079,
       "ret_60": 0.038,
       "pct_high_250": 0.537,
       "ma_aligned": 0
@@ -2870,7 +2918,7 @@
       "sub_industry": "香港地产",
       "sector": "Real Estate",
       "close": 25.16,
-      "hotness": 0.076,
+      "hotness": 0.075,
       "ret_60": -0.143,
       "pct_high_250": 0.728,
       "ma_aligned": 0
@@ -2881,7 +2929,7 @@
       "sub_industry": "工业金属",
       "sector": "Materials",
       "close": 31.26,
-      "hotness": 0.07,
+      "hotness": 0.069,
       "ret_60": -0.123,
       "pct_high_250": 0.605,
       "ma_aligned": 0
@@ -2892,7 +2940,7 @@
       "sub_industry": "中国地产&物管",
       "sector": "Real Estate",
       "close": 12.85,
-      "hotness": 0.069,
+      "hotness": 0.068,
       "ret_60": 0.065,
       "pct_high_250": 0.721,
       "ma_aligned": 0
@@ -2903,7 +2951,7 @@
       "sub_industry": "综合企业",
       "sector": "Industrials",
       "close": 30.94,
-      "hotness": 0.053,
+      "hotness": 0.052,
       "ret_60": -0.009,
       "pct_high_250": 0.847,
       "ma_aligned": 0
@@ -2914,7 +2962,7 @@
       "sub_industry": "交运",
       "sector": "Industrials",
       "close": 13.16,
-      "hotness": 0.052,
+      "hotness": 0.051,
       "ret_60": -0.089,
       "pct_high_250": 0.836,
       "ma_aligned": 0
@@ -2925,7 +2973,7 @@
       "sub_industry": "耐用品",
       "sector": "Consumer Discretionary",
       "close": 68.75,
-      "hotness": 0.046,
+      "hotness": 0.045,
       "ret_60": -0.077,
       "pct_high_250": 0.678,
       "ma_aligned": 0
@@ -2936,7 +2984,7 @@
       "sub_industry": "耐用品",
       "sector": "Consumer Discretionary",
       "close": 14.92,
-      "hotness": 0.046,
+      "hotness": 0.045,
       "ret_60": -0.294,
       "pct_high_250": 0.659,
       "ma_aligned": 0
@@ -2947,7 +2995,7 @@
       "sub_industry": "化工",
       "sector": "Materials",
       "close": 10.75,
-      "hotness": 0.038,
+      "hotness": 0.037,
       "ret_60": -0.069,
       "pct_high_250": 0.468,
       "ma_aligned": 0
@@ -2958,7 +3006,7 @@
       "sub_industry": "保险",
       "sector": "Financials",
       "close": 27.0,
-      "hotness": 0.027,
+      "hotness": 0.026,
       "ret_60": -0.115,
       "pct_high_250": 0.704,
       "ma_aligned": 0
@@ -2969,7 +3017,7 @@
       "sub_industry": "耐用品",
       "sector": "Consumer Discretionary",
       "close": 24.58,
-      "hotness": 0.023,
+      "hotness": 0.022,
       "ret_60": 0.135,
       "pct_high_250": 0.914,
       "ma_aligned": 1
@@ -2980,7 +3028,7 @@
       "sub_industry": "美妆个护",
       "sector": "Health Care",
       "close": 67.0,
-      "hotness": 0.017,
+      "hotness": 0.016,
       "ret_60": 0.095,
       "pct_high_250": 0.768,
       "ma_aligned": 0
@@ -2991,7 +3039,7 @@
       "sub_industry": "消费服务",
       "sector": "Consumer Discretionary",
       "close": 316.2,
-      "hotness": 0.01,
+      "hotness": 0.009,
       "ret_60": -0.181,
       "pct_high_250": 0.711,
       "ma_aligned": 0
@@ -3002,7 +3050,7 @@
       "sub_industry": "食品饮料调味品/酒",
       "sector": "Consumer Staples",
       "close": 45.58,
-      "hotness": 0.009,
+      "hotness": 0.008,
       "ret_60": -0.063,
       "pct_high_250": 0.818,
       "ma_aligned": 0
@@ -3013,7 +3061,7 @@
       "sub_industry": "工业金属",
       "sector": "Materials",
       "close": 6.77,
-      "hotness": -0.002,
+      "hotness": -0.003,
       "ret_60": -0.092,
       "pct_high_250": 0.595,
       "ma_aligned": 0
@@ -3024,7 +3072,7 @@
       "sub_industry": "消费服务",
       "sector": "Consumer Discretionary",
       "close": 29.2,
-      "hotness": -0.006,
+      "hotness": -0.008,
       "ret_60": -0.142,
       "pct_high_250": 0.682,
       "ma_aligned": 0
@@ -3035,7 +3083,7 @@
       "sub_industry": "创新药",
       "sector": "Health Care",
       "close": 28.66,
-      "hotness": -0.008,
+      "hotness": -0.009,
       "ret_60": -0.08,
       "pct_high_250": 0.661,
       "ma_aligned": 0
@@ -3046,7 +3094,7 @@
       "sub_industry": "食品饮料调味品/酒",
       "sector": "Consumer Staples",
       "close": 42.54,
-      "hotness": -0.013,
+      "hotness": -0.015,
       "ret_60": -0.02,
       "pct_high_250": 0.779,
       "ma_aligned": 0
@@ -3057,7 +3105,7 @@
       "sub_industry": "零售",
       "sector": "Consumer Discretionary",
       "close": 158.5,
-      "hotness": -0.014,
+      "hotness": -0.016,
       "ret_60": 0.07,
       "pct_high_250": 0.481,
       "ma_aligned": 0
@@ -3068,7 +3116,7 @@
       "sub_industry": "其他工业",
       "sector": "Industrials",
       "close": 4.55,
-      "hotness": -0.025,
+      "hotness": -0.026,
       "ret_60": -0.11,
       "pct_high_250": 0.707,
       "ma_aligned": 0
@@ -3079,7 +3127,7 @@
       "sub_industry": "保险",
       "sector": "Financials",
       "close": 18.4,
-      "hotness": -0.033,
+      "hotness": -0.034,
       "ret_60": -0.122,
       "pct_high_250": 0.717,
       "ma_aligned": 0
@@ -3090,7 +3138,7 @@
       "sub_industry": "交运",
       "sector": "Industrials",
       "close": 121.8,
-      "hotness": -0.034,
+      "hotness": -0.035,
       "ret_60": -0.129,
       "pct_high_250": 0.79,
       "ma_aligned": 0
@@ -3101,7 +3149,7 @@
       "sub_industry": "机器人产业链",
       "sector": "Industrials",
       "close": 90.05,
-      "hotness": -0.037,
+      "hotness": -0.038,
       "ret_60": -0.008,
       "pct_high_250": 0.571,
       "ma_aligned": 0
@@ -3112,7 +3160,7 @@
       "sub_industry": "公共事业",
       "sector": "Industrials",
       "close": 10.1,
-      "hotness": -0.041,
+      "hotness": -0.043,
       "ret_60": -0.137,
       "pct_high_250": 0.736,
       "ma_aligned": 0
@@ -3123,7 +3171,7 @@
       "sub_industry": "互联网",
       "sector": "Consumer Discretionary",
       "close": 89.5,
-      "hotness": -0.046,
+      "hotness": -0.047,
       "ret_60": -0.266,
       "pct_high_250": 0.488,
       "ma_aligned": 0
@@ -3134,7 +3182,7 @@
       "sub_industry": "工业金属",
       "sector": "Materials",
       "close": 7.64,
-      "hotness": -0.048,
+      "hotness": -0.049,
       "ret_60": -0.296,
       "pct_high_250": 0.507,
       "ma_aligned": 0
@@ -3145,7 +3193,7 @@
       "sub_industry": "其他工业",
       "sector": "Industrials",
       "close": 18.49,
-      "hotness": -0.049,
+      "hotness": -0.05,
       "ret_60": -0.098,
       "pct_high_250": 0.696,
       "ma_aligned": 0
@@ -3156,7 +3204,7 @@
       "sub_industry": "创新药",
       "sector": "Health Care",
       "close": 69.65,
-      "hotness": -0.051,
+      "hotness": -0.052,
       "ret_60": -0.214,
       "pct_high_250": 0.557,
       "ma_aligned": 0
@@ -3167,7 +3215,7 @@
       "sub_industry": "耐用品",
       "sector": "Consumer Discretionary",
       "close": 3.95,
-      "hotness": -0.053,
+      "hotness": -0.054,
       "ret_60": -0.003,
       "pct_high_250": 0.77,
       "ma_aligned": 0
@@ -3178,7 +3226,7 @@
       "sub_industry": "CXO",
       "sector": "Health Care",
       "close": 55.0,
-      "hotness": -0.053,
+      "hotness": -0.054,
       "ret_60": -0.02,
       "pct_high_250": 0.646,
       "ma_aligned": 0
@@ -3189,7 +3237,7 @@
       "sub_industry": "新能源产业链",
       "sector": "Consumer Discretionary",
       "close": 23.0,
-      "hotness": -0.054,
+      "hotness": -0.055,
       "ret_60": -0.24,
       "pct_high_250": 0.608,
       "ma_aligned": 0
@@ -3200,7 +3248,7 @@
       "sub_industry": "AI算力",
       "sector": "Information Technology",
       "close": 4.28,
-      "hotness": -0.061,
+      "hotness": -0.062,
       "ret_60": -0.435,
       "pct_high_250": 0.454,
       "ma_aligned": 0
@@ -3211,7 +3259,7 @@
       "sub_industry": "公共事业",
       "sector": "Industrials",
       "close": 4.69,
-      "hotness": -0.072,
+      "hotness": -0.073,
       "ret_60": -0.155,
       "pct_high_250": 0.819,
       "ma_aligned": 0
@@ -3222,7 +3270,7 @@
       "sub_industry": "公共事业",
       "sector": "Utilities",
       "close": 40.98,
-      "hotness": -0.075,
+      "hotness": -0.076,
       "ret_60": -0.337,
       "pct_high_250": 0.58,
       "ma_aligned": 0
@@ -3233,7 +3281,7 @@
       "sub_industry": "电信",
       "sector": "Communication Services",
       "close": 8.92,
-      "hotness": -0.077,
+      "hotness": -0.078,
       "ret_60": -0.145,
       "pct_high_250": 0.722,
       "ma_aligned": 0
@@ -3244,7 +3292,7 @@
       "sub_industry": "互联网",
       "sector": "Consumer Discretionary",
       "close": 64.25,
-      "hotness": -0.079,
+      "hotness": -0.08,
       "ret_60": -0.259,
       "pct_high_250": 0.478,
       "ma_aligned": 0
@@ -3255,7 +3303,7 @@
       "sub_industry": "食品饮料调味品/酒",
       "sector": "Consumer Staples",
       "close": 21.4,
-      "hotness": -0.084,
+      "hotness": -0.085,
       "ret_60": -0.113,
       "pct_high_250": 0.755,
       "ma_aligned": 0
@@ -3266,7 +3314,7 @@
       "sub_industry": "中国地产&物管",
       "sector": "Real Estate",
       "close": 3.89,
-      "hotness": -0.106,
+      "hotness": -0.107,
       "ret_60": -0.031,
       "pct_high_250": 0.789,
       "ma_aligned": 0
@@ -3277,7 +3325,7 @@
       "sub_industry": "互联网",
       "sector": "Consumer Discretionary",
       "close": 305.2,
-      "hotness": -0.107,
+      "hotness": -0.108,
       "ret_60": -0.217,
       "pct_high_250": 0.501,
       "ma_aligned": 0
@@ -3288,7 +3336,7 @@
       "sub_industry": "电信",
       "sector": "Communication Services",
       "close": 6.34,
-      "hotness": -0.108,
+      "hotness": -0.11,
       "ret_60": -0.086,
       "pct_high_250": 0.642,
       "ma_aligned": 0
@@ -3299,7 +3347,7 @@
       "sub_industry": "香港地产",
       "sector": "Real Estate",
       "close": 20.7,
-      "hotness": -0.118,
+      "hotness": -0.12,
       "ret_60": -0.107,
       "pct_high_250": 0.794,
       "ma_aligned": 0
@@ -3310,7 +3358,7 @@
       "sub_industry": "消费服务",
       "sector": "Consumer Discretionary",
       "close": 32.42,
-      "hotness": -0.119,
+      "hotness": -0.12,
       "ret_60": -0.133,
       "pct_high_250": 0.758,
       "ma_aligned": 0
@@ -3321,7 +3369,7 @@
       "sub_industry": "香港地产",
       "sector": "Real Estate",
       "close": 21.86,
-      "hotness": -0.124,
+      "hotness": -0.125,
       "ret_60": -0.029,
       "pct_high_250": 0.778,
       "ma_aligned": 0
@@ -3332,7 +3380,7 @@
       "sub_industry": "中国地产&物管",
       "sector": "Real Estate",
       "close": 1.25,
-      "hotness": -0.131,
+      "hotness": -0.132,
       "ret_60": -0.06,
       "pct_high_250": 0.625,
       "ma_aligned": 0
@@ -3343,7 +3391,7 @@
       "sub_industry": "能源",
       "sector": "Energy",
       "close": 10.06,
-      "hotness": -0.132,
+      "hotness": -0.133,
       "ret_60": -0.287,
       "pct_high_250": 0.676,
       "ma_aligned": 0
@@ -3354,7 +3402,7 @@
       "sub_industry": "互联网",
       "sector": "Communication Services",
       "close": 40.88,
-      "hotness": -0.142,
+      "hotness": -0.143,
       "ret_60": -0.104,
       "pct_high_250": 0.445,
       "ma_aligned": 0
@@ -3365,7 +3413,7 @@
       "sub_industry": "工业金属",
       "sector": "Materials",
       "close": 11.49,
-      "hotness": -0.146,
+      "hotness": -0.147,
       "ret_60": 0.003,
       "pct_high_250": 0.63,
       "ma_aligned": 0
@@ -3376,7 +3424,7 @@
       "sub_industry": "公共事业",
       "sector": "Utilities",
       "close": 27.34,
-      "hotness": -0.157,
+      "hotness": -0.158,
       "ret_60": -0.09,
       "pct_high_250": 0.768,
       "ma_aligned": 0
@@ -3387,7 +3435,7 @@
       "sub_industry": "公共事业",
       "sector": "Utilities",
       "close": 5.65,
-      "hotness": -0.161,
+      "hotness": -0.162,
       "ret_60": -0.231,
       "pct_high_250": 0.659,
       "ma_aligned": 0
@@ -3398,7 +3446,7 @@
       "sub_industry": "创新药",
       "sector": "Health Care",
       "close": 6.69,
-      "hotness": -0.165,
+      "hotness": -0.166,
       "ret_60": -0.162,
       "pct_high_250": 0.605,
       "ma_aligned": 0
@@ -3409,7 +3457,7 @@
       "sub_industry": "消费服务",
       "sector": "Consumer Discretionary",
       "close": 4.98,
-      "hotness": -0.165,
+      "hotness": -0.166,
       "ret_60": -0.059,
       "pct_high_250": 0.715,
       "ma_aligned": 0
@@ -3420,7 +3468,7 @@
       "sub_industry": "其他工业",
       "sector": "Industrials",
       "close": 7.02,
-      "hotness": -0.165,
+      "hotness": -0.166,
       "ret_60": -0.144,
       "pct_high_250": 0.602,
       "ma_aligned": 0
@@ -3431,7 +3479,7 @@
       "sub_industry": "食品饮料调味品/酒",
       "sector": "Consumer Staples",
       "close": 6.32,
-      "hotness": -0.171,
+      "hotness": -0.172,
       "ret_60": -0.056,
       "pct_high_250": 0.758,
       "ma_aligned": 0
@@ -3442,7 +3490,7 @@
       "sub_industry": "保险",
       "sector": "Financials",
       "close": 4.7,
-      "hotness": -0.179,
+      "hotness": -0.18,
       "ret_60": -0.197,
       "pct_high_250": 0.623,
       "ma_aligned": 0
@@ -3453,7 +3501,7 @@
       "sub_industry": "创新药",
       "sector": "Health Care",
       "close": 38.22,
-      "hotness": -0.194,
+      "hotness": -0.195,
       "ret_60": -0.24,
       "pct_high_250": 0.497,
       "ma_aligned": 0
@@ -3464,7 +3512,7 @@
       "sub_industry": "消费服务",
       "sector": "Consumer Discretionary",
       "close": 131.0,
-      "hotness": -0.197,
+      "hotness": -0.198,
       "ret_60": 0.738,
       "pct_high_250": 0.769,
       "ma_aligned": 0
@@ -3475,7 +3523,7 @@
       "sub_industry": "耐用品",
       "sector": "Consumer Discretionary",
       "close": 38.24,
-      "hotness": -0.229,
+      "hotness": -0.23,
       "ret_60": 0.03,
       "pct_high_250": 0.789,
       "ma_aligned": 0
@@ -3486,7 +3534,7 @@
       "sub_industry": "汽车",
       "sector": "Consumer Discretionary",
       "close": 49.92,
-      "hotness": -0.229,
+      "hotness": -0.23,
       "ret_60": -0.113,
       "pct_high_250": 0.652,
       "ma_aligned": 0
@@ -3497,7 +3545,7 @@
       "sub_industry": "公共事业",
       "sector": "Utilities",
       "close": 5.29,
-      "hotness": -0.233,
+      "hotness": -0.234,
       "ret_60": -0.327,
       "pct_high_250": 0.634,
       "ma_aligned": 0
@@ -3508,7 +3556,7 @@
       "sub_industry": "其他工业",
       "sector": "Industrials",
       "close": 9.94,
-      "hotness": -0.236,
+      "hotness": -0.237,
       "ret_60": -0.313,
       "pct_high_250": 0.557,
       "ma_aligned": 0
@@ -3519,7 +3567,7 @@
       "sub_industry": "公共事业",
       "sector": "Utilities",
       "close": 2.71,
-      "hotness": -0.238,
+      "hotness": -0.239,
       "ret_60": -0.239,
       "pct_high_250": 0.747,
       "ma_aligned": 0
@@ -3530,7 +3578,7 @@
       "sub_industry": "大模型及其应用",
       "sector": "Information Technology",
       "close": 427.0,
-      "hotness": -0.245,
+      "hotness": -0.246,
       "ret_60": -0.567,
       "pct_high_250": 0.345,
       "ma_aligned": 0
@@ -3541,7 +3589,7 @@
       "sub_industry": "化工",
       "sector": "Materials",
       "close": 9.19,
-      "hotness": -0.256,
+      "hotness": -0.257,
       "ret_60": -0.112,
       "pct_high_250": 0.722,
       "ma_aligned": 0
@@ -3552,7 +3600,7 @@
       "sub_industry": "创新药",
       "sector": "Health Care",
       "close": 55.5,
-      "hotness": -0.263,
+      "hotness": -0.265,
       "ret_60": -0.159,
       "pct_high_250": 0.626,
       "ma_aligned": 0
@@ -3563,7 +3611,7 @@
       "sub_industry": "能源金属/小金属",
       "sector": "Materials",
       "close": 60.55,
-      "hotness": -0.267,
+      "hotness": -0.268,
       "ret_60": -0.428,
       "pct_high_250": 0.4,
       "ma_aligned": 0
@@ -3574,7 +3622,7 @@
       "sub_industry": "创新药",
       "sector": "Health Care",
       "close": 52.95,
-      "hotness": -0.275,
+      "hotness": -0.276,
       "ret_60": -0.132,
       "pct_high_250": 0.565,
       "ma_aligned": 0
@@ -3585,7 +3633,7 @@
       "sub_industry": "AI算力",
       "sector": "Information Technology",
       "close": 27.86,
-      "hotness": -0.28,
+      "hotness": -0.281,
       "ret_60": -0.349,
       "pct_high_250": 0.606,
       "ma_aligned": 0
@@ -3596,7 +3644,7 @@
       "sub_industry": "机器人产业链",
       "sector": "Consumer Discretionary",
       "close": 21.56,
-      "hotness": -0.283,
+      "hotness": -0.284,
       "ret_60": -0.085,
       "pct_high_250": 0.487,
       "ma_aligned": 0
@@ -3607,7 +3655,7 @@
       "sub_industry": "机器人产业链",
       "sector": "Industrials",
       "close": 24.42,
-      "hotness": -0.285,
+      "hotness": -0.286,
       "ret_60": -0.161,
       "pct_high_250": 0.537,
       "ma_aligned": 0
@@ -3618,7 +3666,7 @@
       "sub_industry": "公共事业",
       "sector": "Utilities",
       "close": 6.45,
-      "hotness": -0.287,
+      "hotness": -0.288,
       "ret_60": -0.112,
       "pct_high_250": 0.762,
       "ma_aligned": 0
@@ -3629,7 +3677,7 @@
       "sub_industry": "贵金属",
       "sector": "Materials",
       "close": 12.83,
-      "hotness": -0.293,
+      "hotness": -0.294,
       "ret_60": -0.464,
       "pct_high_250": 0.432,
       "ma_aligned": 0
@@ -3640,7 +3688,7 @@
       "sub_industry": "汽车",
       "sector": "Consumer Discretionary",
       "close": 26.52,
-      "hotness": -0.297,
+      "hotness": -0.298,
       "ret_60": -0.256,
       "pct_high_250": 0.573,
       "ma_aligned": 0
@@ -3651,7 +3699,7 @@
       "sub_industry": "汽车",
       "sector": "Consumer Discretionary",
       "close": 45.58,
-      "hotness": -0.3,
+      "hotness": -0.301,
       "ret_60": -0.352,
       "pct_high_250": 0.42,
       "ma_aligned": 0
@@ -3662,7 +3710,7 @@
       "sub_industry": "贵金属",
       "sector": "Materials",
       "close": 93.75,
-      "hotness": -0.301,
+      "hotness": -0.302,
       "ret_60": -0.437,
       "pct_high_250": 0.375,
       "ma_aligned": 0
@@ -3673,7 +3721,7 @@
       "sub_industry": "轻工",
       "sector": "Materials",
       "close": 6.49,
-      "hotness": -0.305,
+      "hotness": -0.307,
       "ret_60": -0.062,
       "pct_high_250": 0.66,
       "ma_aligned": 0
@@ -3684,7 +3732,7 @@
       "sub_industry": "消费电子",
       "sector": "Information Technology",
       "close": 21.42,
-      "hotness": -0.31,
+      "hotness": -0.311,
       "ret_60": -0.34,
       "pct_high_250": 0.356,
       "ma_aligned": 0
@@ -3695,7 +3743,7 @@
       "sub_industry": "公共事业",
       "sector": "Utilities",
       "close": 2.26,
-      "hotness": -0.316,
+      "hotness": -0.317,
       "ret_60": -0.146,
       "pct_high_250": 0.79,
       "ma_aligned": 0
@@ -3706,7 +3754,7 @@
       "sub_industry": "零售",
       "sector": "Consumer Staples",
       "close": 291.4,
-      "hotness": -0.316,
+      "hotness": -0.317,
       "ret_60": -0.236,
       "pct_high_250": 0.626,
       "ma_aligned": 0
@@ -3717,7 +3765,7 @@
       "sub_industry": "互联网",
       "sector": "Communication Services",
       "close": 124.7,
-      "hotness": -0.319,
+      "hotness": -0.32,
       "ret_60": -0.316,
       "pct_high_250": 0.444,
       "ma_aligned": 0
@@ -3728,7 +3776,7 @@
       "sub_industry": "食品饮料调味品/酒",
       "sector": "Consumer Staples",
       "close": 65.25,
-      "hotness": -0.319,
+      "hotness": -0.32,
       "ret_60": -0.076,
       "pct_high_250": 0.731,
       "ma_aligned": 0
@@ -3739,7 +3787,7 @@
       "sub_industry": "汽车",
       "sector": "Consumer Discretionary",
       "close": 46.28,
-      "hotness": -0.32,
+      "hotness": -0.321,
       "ret_60": -0.329,
       "pct_high_250": 0.372,
       "ma_aligned": 0
@@ -3750,7 +3798,7 @@
       "sub_industry": "消费服务",
       "sector": "Consumer Discretionary",
       "close": 34.7,
-      "hotness": -0.326,
+      "hotness": -0.327,
       "ret_60": -0.189,
       "pct_high_250": 0.69,
       "ma_aligned": 0
@@ -3761,9 +3809,20 @@
       "sub_industry": "消费服务",
       "sector": "Consumer Discretionary",
       "close": 12.9,
-      "hotness": -0.326,
+      "hotness": -0.327,
       "ret_60": -0.205,
       "pct_high_250": 0.6,
+      "ma_aligned": 0
+    },
+    {
+      "ticker": "2698.HK",
+      "name": "乐舒适",
+      "sub_industry": "美妆个护",
+      "sector": "Consumer Staples",
+      "close": 24.96,
+      "hotness": -0.338,
+      "ret_60": -0.253,
+      "pct_high_250": 0.739,
       "ma_aligned": 0
     },
     {
@@ -3772,7 +3831,7 @@
       "sub_industry": "互联网药店",
       "sector": "Consumer Staples",
       "close": 31.98,
-      "hotness": -0.341,
+      "hotness": -0.342,
       "ret_60": -0.329,
       "pct_high_250": 0.459,
       "ma_aligned": 0
@@ -3783,7 +3842,7 @@
       "sub_industry": "能源",
       "sector": "Energy",
       "close": 29.78,
-      "hotness": -0.351,
+      "hotness": -0.353,
       "ret_60": -0.333,
       "pct_high_250": 0.628,
       "ma_aligned": 0
@@ -3794,7 +3853,7 @@
       "sub_industry": "耐用品",
       "sector": "Consumer Discretionary",
       "close": 40.26,
-      "hotness": -0.354,
+      "hotness": -0.355,
       "ret_60": -0.216,
       "pct_high_250": 0.573,
       "ma_aligned": 0
@@ -3805,7 +3864,7 @@
       "sub_industry": "其他工业",
       "sector": "Industrials",
       "close": 3.35,
-      "hotness": -0.362,
+      "hotness": -0.363,
       "ret_60": -0.187,
       "pct_high_250": 0.648,
       "ma_aligned": 0
@@ -3816,7 +3875,7 @@
       "sub_industry": "消费服务",
       "sector": "Consumer Discretionary",
       "close": 21.02,
-      "hotness": -0.372,
+      "hotness": -0.373,
       "ret_60": -0.173,
       "pct_high_250": 0.686,
       "ma_aligned": 0
@@ -3827,7 +3886,7 @@
       "sub_industry": "创新药",
       "sector": "Health Care",
       "close": 4.26,
-      "hotness": -0.381,
+      "hotness": -0.382,
       "ret_60": -0.26,
       "pct_high_250": 0.478,
       "ma_aligned": 0
@@ -3838,7 +3897,7 @@
       "sub_industry": "建材",
       "sector": "Materials",
       "close": 16.9,
-      "hotness": -0.388,
+      "hotness": -0.389,
       "ret_60": -0.176,
       "pct_high_250": 0.657,
       "ma_aligned": 0
@@ -3849,7 +3908,7 @@
       "sub_industry": "其他工业",
       "sector": "Industrials",
       "close": 18.79,
-      "hotness": -0.393,
+      "hotness": -0.394,
       "ret_60": -0.061,
       "pct_high_250": 0.76,
       "ma_aligned": 0
@@ -3860,7 +3919,7 @@
       "sub_industry": "耐用品",
       "sector": "Consumer Discretionary",
       "close": 4.05,
-      "hotness": -0.393,
+      "hotness": -0.394,
       "ret_60": -0.296,
       "pct_high_250": 0.58,
       "ma_aligned": 0
@@ -3871,7 +3930,7 @@
       "sub_industry": "贵金属",
       "sector": "Materials",
       "close": 16.64,
-      "hotness": -0.394,
+      "hotness": -0.395,
       "ret_60": -0.434,
       "pct_high_250": 0.41,
       "ma_aligned": 0
@@ -3882,7 +3941,7 @@
       "sub_industry": "交运",
       "sector": "Industrials",
       "close": 4.51,
-      "hotness": -0.4,
+      "hotness": -0.401,
       "ret_60": -0.055,
       "pct_high_250": 0.595,
       "ma_aligned": 0
@@ -3893,7 +3952,7 @@
       "sub_industry": "创新药",
       "sector": "Health Care",
       "close": 15.91,
-      "hotness": -0.404,
+      "hotness": -0.405,
       "ret_60": -0.267,
       "pct_high_250": 0.443,
       "ma_aligned": 0
@@ -3904,7 +3963,7 @@
       "sub_industry": "中国地产&物管",
       "sector": "Real Estate",
       "close": 6.03,
-      "hotness": -0.406,
+      "hotness": -0.407,
       "ret_60": -0.251,
       "pct_high_250": 0.503,
       "ma_aligned": 0
@@ -3915,7 +3974,7 @@
       "sub_industry": "其他工业",
       "sector": "Industrials",
       "close": 21.5,
-      "hotness": -0.415,
+      "hotness": -0.416,
       "ret_60": -0.402,
       "pct_high_250": 0.493,
       "ma_aligned": 0
@@ -3926,7 +3985,7 @@
       "sub_industry": "消费服务",
       "sector": "Consumer Discretionary",
       "close": 10.87,
-      "hotness": -0.43,
+      "hotness": -0.431,
       "ret_60": -0.197,
       "pct_high_250": 0.632,
       "ma_aligned": 0
@@ -3937,7 +3996,7 @@
       "sub_industry": "创新药",
       "sector": "Health Care",
       "close": 10.85,
-      "hotness": -0.432,
+      "hotness": -0.433,
       "ret_60": -0.125,
       "pct_high_250": 0.542,
       "ma_aligned": 0
@@ -3948,7 +4007,7 @@
       "sub_industry": "食品饮料调味品/酒",
       "sector": "Consumer Staples",
       "close": 13.02,
-      "hotness": -0.432,
+      "hotness": -0.433,
       "ret_60": -0.152,
       "pct_high_250": 0.797,
       "ma_aligned": 0
@@ -3959,7 +4018,7 @@
       "sub_industry": "机器人产业链",
       "sector": "Information Technology",
       "close": 121.0,
-      "hotness": -0.437,
+      "hotness": -0.438,
       "ret_60": 0.23,
       "pct_high_250": 0.579,
       "ma_aligned": 0
@@ -3970,7 +4029,7 @@
       "sub_industry": "耐用品",
       "sector": "Consumer Discretionary",
       "close": 1.81,
-      "hotness": -0.438,
+      "hotness": -0.439,
       "ret_60": -0.342,
       "pct_high_250": 0.54,
       "ma_aligned": 0
@@ -3981,7 +4040,7 @@
       "sub_industry": "智能驾驶",
       "sector": "Information Technology",
       "close": 3.61,
-      "hotness": -0.439,
+      "hotness": -0.44,
       "ret_60": -0.473,
       "pct_high_250": 0.334,
       "ma_aligned": 0
@@ -3992,7 +4051,7 @@
       "sub_industry": "消费服务",
       "sector": "Consumer Discretionary",
       "close": 12.27,
-      "hotness": -0.449,
+      "hotness": -0.45,
       "ret_60": -0.335,
       "pct_high_250": 0.485,
       "ma_aligned": 0
@@ -4003,7 +4062,7 @@
       "sub_industry": "消费电子",
       "sector": "Information Technology",
       "close": 21.24,
-      "hotness": -0.451,
+      "hotness": -0.453,
       "ret_60": -0.31,
       "pct_high_250": 0.485,
       "ma_aligned": 0
@@ -4014,7 +4073,7 @@
       "sub_industry": "贵金属",
       "sector": "Materials",
       "close": 7.65,
-      "hotness": -0.452,
+      "hotness": -0.453,
       "ret_60": -0.358,
       "pct_high_250": 0.421,
       "ma_aligned": 0
@@ -4025,7 +4084,7 @@
       "sub_industry": "大模型及其应用",
       "sector": "Information Technology",
       "close": 103.0,
-      "hotness": -0.453,
+      "hotness": -0.454,
       "ret_60": -0.321,
       "pct_high_250": 0.287,
       "ma_aligned": 0
@@ -4036,7 +4095,7 @@
       "sub_industry": "公共事业",
       "sector": "Utilities",
       "close": 14.79,
-      "hotness": -0.458,
+      "hotness": -0.459,
       "ret_60": -0.199,
       "pct_high_250": 0.661,
       "ma_aligned": 0
@@ -4047,7 +4106,7 @@
       "sub_industry": "创新药",
       "sector": "Health Care",
       "close": 6.75,
-      "hotness": -0.463,
+      "hotness": -0.464,
       "ret_60": -0.272,
       "pct_high_250": 0.454,
       "ma_aligned": 0
@@ -4058,7 +4117,7 @@
       "sub_industry": "耐用品",
       "sector": "Consumer Discretionary",
       "close": 12.59,
-      "hotness": -0.469,
+      "hotness": -0.47,
       "ret_60": -0.12,
       "pct_high_250": 0.706,
       "ma_aligned": 0
@@ -4069,20 +4128,9 @@
       "sub_industry": "香港地产",
       "sector": "Real Estate",
       "close": 7.0,
-      "hotness": -0.47,
+      "hotness": -0.471,
       "ret_60": -0.164,
       "pct_high_250": 0.712,
-      "ma_aligned": 0
-    },
-    {
-      "ticker": "2698.HK",
-      "name": "乐舒适",
-      "sub_industry": "美妆个护",
-      "sector": "Consumer Staples",
-      "close": 24.96,
-      "hotness": -0.474,
-      "ret_60": -0.253,
-      "pct_high_250": 0.739,
       "ma_aligned": 0
     },
     {
@@ -4091,7 +4139,7 @@
       "sub_industry": "零售",
       "sector": "Consumer Discretionary",
       "close": 371.0,
-      "hotness": -0.48,
+      "hotness": -0.481,
       "ret_60": -0.386,
       "pct_high_250": 0.357,
       "ma_aligned": 0
@@ -4102,7 +4150,7 @@
       "sub_industry": "智能驾驶",
       "sector": "Consumer Discretionary",
       "close": 114.9,
-      "hotness": -0.48,
+      "hotness": -0.481,
       "ret_60": -0.268,
       "pct_high_250": 0.491,
       "ma_aligned": 0
@@ -4113,7 +4161,7 @@
       "sub_industry": "农林牧渔",
       "sector": "Consumer Staples",
       "close": 29.06,
-      "hotness": -0.485,
+      "hotness": -0.486,
       "ret_60": -0.276,
       "pct_high_250": 0.621,
       "ma_aligned": 0
@@ -4124,7 +4172,7 @@
       "sub_industry": "其他工业",
       "sector": "Industrials",
       "close": 7.27,
-      "hotness": -0.488,
+      "hotness": -0.489,
       "ret_60": -0.114,
       "pct_high_250": 0.717,
       "ma_aligned": 0
@@ -4135,7 +4183,7 @@
       "sub_industry": "耐用品",
       "sector": "Consumer Discretionary",
       "close": 3.84,
-      "hotness": -0.504,
+      "hotness": -0.505,
       "ret_60": -0.179,
       "pct_high_250": 0.599,
       "ma_aligned": 0
@@ -4146,7 +4194,7 @@
       "sub_industry": "其他非银",
       "sector": "Financials",
       "close": 7.21,
-      "hotness": -0.509,
+      "hotness": -0.51,
       "ret_60": -0.176,
       "pct_high_250": 0.572,
       "ma_aligned": 0
@@ -4157,7 +4205,7 @@
       "sub_industry": "零售",
       "sector": "Consumer Staples",
       "close": 23.2,
-      "hotness": -0.511,
+      "hotness": -0.512,
       "ret_60": -0.065,
       "pct_high_250": 0.535,
       "ma_aligned": 0
@@ -4168,7 +4216,7 @@
       "sub_industry": "消费电子",
       "sector": "Information Technology",
       "close": 6.86,
-      "hotness": -0.513,
+      "hotness": -0.514,
       "ret_60": -0.07,
       "pct_high_250": 0.429,
       "ma_aligned": 0
@@ -4179,7 +4227,7 @@
       "sub_industry": "其他工业",
       "sector": "Industrials",
       "close": 15.25,
-      "hotness": -0.515,
+      "hotness": -0.516,
       "ret_60": -0.334,
       "pct_high_250": 0.55,
       "ma_aligned": 0
@@ -4190,7 +4238,7 @@
       "sub_industry": "新能源产业链",
       "sector": "Information Technology",
       "close": 2.0,
-      "hotness": -0.516,
+      "hotness": -0.517,
       "ret_60": -0.357,
       "pct_high_250": 0.501,
       "ma_aligned": 0
@@ -4201,7 +4249,7 @@
       "sub_industry": "消费电子",
       "sector": "Information Technology",
       "close": 22.12,
-      "hotness": -0.525,
+      "hotness": -0.526,
       "ret_60": -0.065,
       "pct_high_250": 0.546,
       "ma_aligned": 0
@@ -4212,7 +4260,7 @@
       "sub_industry": "中国地产&物管",
       "sector": "Real Estate",
       "close": 6.41,
-      "hotness": -0.528,
+      "hotness": -0.529,
       "ret_60": -0.305,
       "pct_high_250": 0.555,
       "ma_aligned": 0
@@ -4223,7 +4271,7 @@
       "sub_industry": "交运",
       "sector": "Industrials",
       "close": 3.47,
-      "hotness": -0.529,
+      "hotness": -0.53,
       "ret_60": -0.06,
       "pct_high_250": 0.548,
       "ma_aligned": 0
@@ -4234,7 +4282,7 @@
       "sub_industry": "汽车",
       "sector": "Consumer Discretionary",
       "close": 9.09,
-      "hotness": -0.535,
+      "hotness": -0.536,
       "ret_60": -0.268,
       "pct_high_250": 0.47,
       "ma_aligned": 0
@@ -4245,7 +4293,7 @@
       "sub_industry": "互联网药店",
       "sector": "Consumer Staples",
       "close": 3.07,
-      "hotness": -0.546,
+      "hotness": -0.547,
       "ret_60": -0.347,
       "pct_high_250": 0.395,
       "ma_aligned": 0
@@ -4256,7 +4304,7 @@
       "sub_industry": "耐用品",
       "sector": "Consumer Discretionary",
       "close": 13.38,
-      "hotness": -0.553,
+      "hotness": -0.554,
       "ret_60": -0.11,
       "pct_high_250": 0.622,
       "ma_aligned": 0
@@ -4267,7 +4315,7 @@
       "sub_industry": "CXO",
       "sector": "Health Care",
       "close": 17.3,
-      "hotness": -0.553,
+      "hotness": -0.554,
       "ret_60": -0.028,
       "pct_high_250": 0.579,
       "ma_aligned": 0
@@ -4278,7 +4326,7 @@
       "sub_industry": "其他芯片",
       "sector": "Information Technology",
       "close": 28.1,
-      "hotness": -0.56,
+      "hotness": -0.561,
       "ret_60": -0.285,
       "pct_high_250": 0.5,
       "ma_aligned": 0
@@ -4289,7 +4337,7 @@
       "sub_industry": "其他工业",
       "sector": "Industrials",
       "close": 7.67,
-      "hotness": -0.562,
+      "hotness": -0.563,
       "ret_60": -0.241,
       "pct_high_250": 0.607,
       "ma_aligned": 0
@@ -4300,7 +4348,7 @@
       "sub_industry": "贵金属",
       "sector": "Materials",
       "close": 17.25,
-      "hotness": -0.564,
+      "hotness": -0.565,
       "ret_60": -0.43,
       "pct_high_250": 0.334,
       "ma_aligned": 0
@@ -4311,7 +4359,7 @@
       "sub_industry": "其他芯片",
       "sector": "Information Technology",
       "close": 71.3,
-      "hotness": -0.564,
+      "hotness": -0.565,
       "ret_60": -0.171,
       "pct_high_250": 0.586,
       "ma_aligned": 0
@@ -4322,7 +4370,7 @@
       "sub_industry": "新能源产业链",
       "sector": "Information Technology",
       "close": 0.68,
-      "hotness": -0.566,
+      "hotness": -0.567,
       "ret_60": -0.244,
       "pct_high_250": 0.463,
       "ma_aligned": 0
@@ -4333,7 +4381,7 @@
       "sub_industry": "工业金属",
       "sector": "Materials",
       "close": 14.1,
-      "hotness": -0.567,
+      "hotness": -0.568,
       "ret_60": -0.443,
       "pct_high_250": 0.447,
       "ma_aligned": 0
@@ -4344,7 +4392,7 @@
       "sub_industry": "能源金属/小金属",
       "sector": "Industrials",
       "close": 16.39,
-      "hotness": -0.578,
+      "hotness": -0.579,
       "ret_60": -0.122,
       "pct_high_250": 0.583,
       "ma_aligned": 0
@@ -4355,7 +4403,7 @@
       "sub_industry": "美妆个护",
       "sector": "Consumer Staples",
       "close": 50.6,
-      "hotness": -0.582,
+      "hotness": -0.583,
       "ret_60": -0.262,
       "pct_high_250": 0.461,
       "ma_aligned": 0
@@ -4366,7 +4414,7 @@
       "sub_industry": "新能源产业链",
       "sector": "Industrials",
       "close": 31.04,
-      "hotness": -0.582,
+      "hotness": -0.583,
       "ret_60": -0.269,
       "pct_high_250": 0.526,
       "ma_aligned": 0
@@ -4377,7 +4425,7 @@
       "sub_industry": "能源",
       "sector": "Energy",
       "close": 6.27,
-      "hotness": -0.585,
+      "hotness": -0.586,
       "ret_60": -0.337,
       "pct_high_250": 0.588,
       "ma_aligned": 0
@@ -4388,7 +4436,7 @@
       "sub_industry": "消费服务",
       "sector": "Consumer Discretionary",
       "close": 9.91,
-      "hotness": -0.586,
+      "hotness": -0.587,
       "ret_60": -0.068,
       "pct_high_250": 0.604,
       "ma_aligned": 0
@@ -4399,7 +4447,7 @@
       "sub_industry": "交运",
       "sector": "Industrials",
       "close": 29.22,
-      "hotness": -0.603,
+      "hotness": -0.604,
       "ret_60": -0.114,
       "pct_high_250": 0.644,
       "ma_aligned": 0
@@ -4410,7 +4458,7 @@
       "sub_industry": "交运",
       "sector": "Industrials",
       "close": 3.58,
-      "hotness": -0.621,
+      "hotness": -0.623,
       "ret_60": -0.114,
       "pct_high_250": 0.551,
       "ma_aligned": 0
@@ -4421,9 +4469,20 @@
       "sub_industry": "机器人产业链",
       "sector": "Consumer Discretionary",
       "close": 12.51,
-      "hotness": -0.627,
+      "hotness": -0.628,
       "ret_60": -0.113,
       "pct_high_250": 0.625,
+      "ma_aligned": 0
+    },
+    {
+      "ticker": "0800.HK",
+      "name": "文远知行-W",
+      "sub_industry": "智能驾驶",
+      "sector": "Consumer Discretionary",
+      "close": 13.65,
+      "hotness": -0.663,
+      "ret_60": -0.275,
+      "pct_high_250": 0.529,
       "ma_aligned": 0
     },
     {
@@ -4432,7 +4491,7 @@
       "sub_industry": "能源",
       "sector": "Energy",
       "close": 2.52,
-      "hotness": -0.666,
+      "hotness": -0.667,
       "ret_60": -0.34,
       "pct_high_250": 0.482,
       "ma_aligned": 0
@@ -4443,7 +4502,7 @@
       "sub_industry": "新能源产业链",
       "sector": "Industrials",
       "close": 24.36,
-      "hotness": -0.669,
+      "hotness": -0.67,
       "ret_60": -0.218,
       "pct_high_250": 0.54,
       "ma_aligned": 0
@@ -4454,7 +4513,7 @@
       "sub_industry": "食品饮料调味品/酒",
       "sector": "Consumer Staples",
       "close": 2.84,
-      "hotness": -0.673,
+      "hotness": -0.674,
       "ret_60": -0.199,
       "pct_high_250": 0.52,
       "ma_aligned": 0
@@ -4465,7 +4524,7 @@
       "sub_industry": "互联网",
       "sector": "Communication Services",
       "close": 18.66,
-      "hotness": -0.674,
+      "hotness": -0.675,
       "ret_60": -0.277,
       "pct_high_250": 0.424,
       "ma_aligned": 0
@@ -4476,7 +4535,7 @@
       "sub_industry": "其他工业",
       "sector": "Industrials",
       "close": 11.9,
-      "hotness": -0.679,
+      "hotness": -0.68,
       "ret_60": -0.122,
       "pct_high_250": 0.68,
       "ma_aligned": 0
@@ -4487,7 +4546,7 @@
       "sub_industry": "消费服务",
       "sector": "Consumer Discretionary",
       "close": 242.6,
-      "hotness": -0.69,
+      "hotness": -0.691,
       "ret_60": -0.193,
       "pct_high_250": 0.446,
       "ma_aligned": 0
@@ -4498,7 +4557,7 @@
       "sub_industry": "农林牧渔",
       "sector": "Consumer Staples",
       "close": 2.88,
-      "hotness": -0.697,
+      "hotness": -0.698,
       "ret_60": -0.213,
       "pct_high_250": 0.551,
       "ma_aligned": 0
@@ -4509,7 +4568,7 @@
       "sub_industry": "CXO",
       "sector": "Health Care",
       "close": 33.98,
-      "hotness": -0.699,
+      "hotness": -0.7,
       "ret_60": -0.132,
       "pct_high_250": 0.583,
       "ma_aligned": 0
@@ -4520,7 +4579,7 @@
       "sub_industry": "食品饮料调味品/酒",
       "sector": "Consumer Staples",
       "close": 104.4,
-      "hotness": -0.759,
+      "hotness": -0.76,
       "ret_60": -0.361,
       "pct_high_250": 0.499,
       "ma_aligned": 0
@@ -4531,7 +4590,7 @@
       "sub_industry": "美妆个护",
       "sector": "Consumer Staples",
       "close": 25.8,
-      "hotness": -0.807,
+      "hotness": -0.808,
       "ret_60": -0.054,
       "pct_high_250": 0.42,
       "ma_aligned": 0
@@ -4542,20 +4601,9 @@
       "sub_industry": "创新药",
       "sector": "Health Care",
       "close": 162.8,
-      "hotness": -0.808,
+      "hotness": -0.809,
       "ret_60": -0.364,
       "pct_high_250": 0.319,
-      "ma_aligned": 0
-    },
-    {
-      "ticker": "0800.HK",
-      "name": "文远知行-W",
-      "sub_industry": "智能驾驶",
-      "sector": "Consumer Discretionary",
-      "close": 13.65,
-      "hotness": -0.828,
-      "ret_60": -0.275,
-      "pct_high_250": 0.529,
       "ma_aligned": 0
     },
     {
@@ -4564,7 +4612,7 @@
       "sub_industry": "零售",
       "sector": "Consumer Discretionary",
       "close": 47.74,
-      "hotness": -0.833,
+      "hotness": -0.834,
       "ret_60": -0.256,
       "pct_high_250": 0.448,
       "ma_aligned": 0
@@ -4575,7 +4623,7 @@
       "sub_industry": "零售",
       "sector": "Consumer Discretionary",
       "close": 21.76,
-      "hotness": -0.833,
+      "hotness": -0.835,
       "ret_60": -0.288,
       "pct_high_250": 0.442,
       "ma_aligned": 0
@@ -4586,7 +4634,7 @@
       "sub_industry": "智能驾驶",
       "sector": "Information Technology",
       "close": 52.3,
-      "hotness": -0.838,
+      "hotness": -0.839,
       "ret_60": -0.397,
       "pct_high_250": 0.383,
       "ma_aligned": 0
@@ -4597,7 +4645,7 @@
       "sub_industry": "机器人产业链",
       "sector": "Industrials",
       "close": 44.22,
-      "hotness": -0.844,
+      "hotness": -0.845,
       "ret_60": -0.327,
       "pct_high_250": 0.484,
       "ma_aligned": 0
@@ -4608,7 +4656,7 @@
       "sub_industry": "建材",
       "sector": "Materials",
       "close": 11.72,
-      "hotness": -0.854,
+      "hotness": -0.855,
       "ret_60": -0.221,
       "pct_high_250": 0.594,
       "ma_aligned": 0
@@ -4619,7 +4667,7 @@
       "sub_industry": "其他工业",
       "sector": "Industrials",
       "close": 6.61,
-      "hotness": -0.859,
+      "hotness": -0.86,
       "ret_60": -0.392,
       "pct_high_250": 0.433,
       "ma_aligned": 0
@@ -4630,7 +4678,7 @@
       "sub_industry": "中国地产&物管",
       "sector": "Real Estate",
       "close": 0.68,
-      "hotness": -0.893,
+      "hotness": -0.894,
       "ret_60": -0.358,
       "pct_high_250": 0.364,
       "ma_aligned": 0
@@ -4641,7 +4689,7 @@
       "sub_industry": "食品饮料调味品/酒",
       "sector": "Consumer Staples",
       "close": 7.03,
-      "hotness": -0.901,
+      "hotness": -0.902,
       "ret_60": -0.308,
       "pct_high_250": 0.504,
       "ma_aligned": 0
@@ -4652,7 +4700,7 @@
       "sub_industry": "其他非银",
       "sector": "Financials",
       "close": 9.08,
-      "hotness": -0.911,
+      "hotness": -0.912,
       "ret_60": -0.314,
       "pct_high_250": 0.415,
       "ma_aligned": 0
@@ -4663,7 +4711,7 @@
       "sub_industry": "智能驾驶",
       "sector": "Information Technology",
       "close": 10.38,
-      "hotness": -0.916,
+      "hotness": -0.917,
       "ret_60": -0.377,
       "pct_high_250": 0.414,
       "ma_aligned": 0
@@ -4674,7 +4722,7 @@
       "sub_industry": "农林牧渔",
       "sector": "Consumer Staples",
       "close": 39.58,
-      "hotness": -0.919,
+      "hotness": -0.92,
       "ret_60": -0.407,
       "pct_high_250": 0.378,
       "ma_aligned": 0
@@ -4685,7 +4733,7 @@
       "sub_industry": "新能源产业链",
       "sector": "Information Technology",
       "close": 5.9,
-      "hotness": -0.924,
+      "hotness": -0.925,
       "ret_60": -0.325,
       "pct_high_250": 0.451,
       "ma_aligned": 0
@@ -4696,7 +4744,7 @@
       "sub_industry": "汽车",
       "sector": "Consumer Discretionary",
       "close": 46.46,
-      "hotness": -0.929,
+      "hotness": -0.93,
       "ret_60": -0.459,
       "pct_high_250": 0.358,
       "ma_aligned": 0
@@ -4707,7 +4755,7 @@
       "sub_industry": "AI算力",
       "sector": "Industrials",
       "close": 10.95,
-      "hotness": -0.931,
+      "hotness": -0.932,
       "ret_60": -0.416,
       "pct_high_250": 0.502,
       "ma_aligned": 0
@@ -4718,7 +4766,7 @@
       "sub_industry": "中国地产&物管",
       "sector": "Real Estate",
       "close": 1.33,
-      "hotness": -0.932,
+      "hotness": -0.933,
       "ret_60": -0.354,
       "pct_high_250": 0.473,
       "ma_aligned": 0
@@ -4729,7 +4777,7 @@
       "sub_industry": "其他工业",
       "sector": "Industrials",
       "close": 32.4,
-      "hotness": -0.943,
+      "hotness": -0.944,
       "ret_60": -0.14,
       "pct_high_250": 0.441,
       "ma_aligned": 0
@@ -4740,7 +4788,7 @@
       "sub_industry": "轻工",
       "sector": "Consumer Discretionary",
       "close": 18.88,
-      "hotness": -0.966,
+      "hotness": -0.967,
       "ret_60": -0.444,
       "pct_high_250": 0.406,
       "ma_aligned": 0
@@ -4751,7 +4799,7 @@
       "sub_industry": "零售",
       "sector": "Consumer Staples",
       "close": 1.77,
-      "hotness": -0.97,
+      "hotness": -0.971,
       "ret_60": -0.561,
       "pct_high_250": 0.382,
       "ma_aligned": 0
@@ -4762,7 +4810,7 @@
       "sub_industry": "汽车",
       "sector": "Consumer Discretionary",
       "close": 3.82,
-      "hotness": -0.973,
+      "hotness": -0.974,
       "ret_60": -0.232,
       "pct_high_250": 0.455,
       "ma_aligned": 0
@@ -4773,7 +4821,7 @@
       "sub_industry": "机器人产业链",
       "sector": "Industrials",
       "close": 24.64,
-      "hotness": -0.995,
+      "hotness": -0.996,
       "ret_60": -0.286,
       "pct_high_250": 0.386,
       "ma_aligned": 0
@@ -4784,7 +4832,7 @@
       "sub_industry": "互联网",
       "sector": "Communication Services",
       "close": 31.46,
-      "hotness": -0.998,
+      "hotness": -0.999,
       "ret_60": -0.147,
       "pct_high_250": 0.314,
       "ma_aligned": 0
@@ -4795,7 +4843,7 @@
       "sub_industry": "互联网",
       "sector": "Communication Services",
       "close": 0.455,
-      "hotness": -1.011,
+      "hotness": -1.012,
       "ret_60": -0.3,
       "pct_high_250": 0.337,
       "ma_aligned": 0
@@ -4806,7 +4854,7 @@
       "sub_industry": "其他工业",
       "sector": "Industrials",
       "close": 10.99,
-      "hotness": -1.021,
+      "hotness": -1.022,
       "ret_60": -0.389,
       "pct_high_250": 0.329,
       "ma_aligned": 0
@@ -4817,7 +4865,7 @@
       "sub_industry": "中国地产&物管",
       "sector": "Real Estate",
       "close": 2.2,
-      "hotness": -1.027,
+      "hotness": -1.028,
       "ret_60": -0.264,
       "pct_high_250": 0.375,
       "ma_aligned": 0
@@ -4828,7 +4876,7 @@
       "sub_industry": "轻工",
       "sector": "Consumer Staples",
       "close": 7.12,
-      "hotness": -1.075,
+      "hotness": -1.076,
       "ret_60": -0.22,
       "pct_high_250": 0.313,
       "ma_aligned": 0
@@ -4839,7 +4887,7 @@
       "sub_industry": "互联网药店",
       "sector": "Consumer Staples",
       "close": 6.58,
-      "hotness": -1.095,
+      "hotness": -1.096,
       "ret_60": -0.44,
       "pct_high_250": 0.284,
       "ma_aligned": 0
@@ -4850,9 +4898,20 @@
       "sub_industry": "交运",
       "sector": "Industrials",
       "close": 7.06,
-      "hotness": -1.1,
+      "hotness": -1.101,
       "ret_60": -0.386,
       "pct_high_250": 0.373,
+      "ma_aligned": 0
+    },
+    {
+      "ticker": "6600.HK",
+      "name": "卧安机器人",
+      "sub_industry": "机器人产业链",
+      "sector": "Consumer Discretionary",
+      "close": 54.1,
+      "hotness": -1.136,
+      "ret_60": -0.474,
+      "pct_high_250": 0.274,
       "ma_aligned": 0
     },
     {
@@ -4861,7 +4920,7 @@
       "sub_industry": "消费服务",
       "sector": "Consumer Discretionary",
       "close": 0.335,
-      "hotness": -1.144,
+      "hotness": -1.145,
       "ret_60": -0.295,
       "pct_high_250": 0.332,
       "ma_aligned": 0
@@ -4872,20 +4931,9 @@
       "sub_industry": "消费服务",
       "sector": "Consumer Discretionary",
       "close": 1.02,
-      "hotness": -1.152,
+      "hotness": -1.153,
       "ret_60": -0.09,
       "pct_high_250": 0.472,
-      "ma_aligned": 0
-    },
-    {
-      "ticker": "6600.HK",
-      "name": "卧安机器人",
-      "sub_industry": "机器人产业链",
-      "sector": "Consumer Discretionary",
-      "close": 54.1,
-      "hotness": -1.157,
-      "ret_60": -0.474,
-      "pct_high_250": 0.274,
       "ma_aligned": 0
     },
     {
@@ -4894,7 +4942,7 @@
       "sub_industry": "美妆个护",
       "sector": "Consumer Staples",
       "close": 25.44,
-      "hotness": -1.176,
+      "hotness": -1.177,
       "ret_60": -0.568,
       "pct_high_250": 0.254,
       "ma_aligned": 0
@@ -4905,7 +4953,7 @@
       "sub_industry": "汽车",
       "sector": "Consumer Discretionary",
       "close": 4.85,
-      "hotness": -1.27,
+      "hotness": -1.271,
       "ret_60": -0.388,
       "pct_high_250": 0.281,
       "ma_aligned": 0
@@ -4916,7 +4964,7 @@
       "sub_industry": "零售",
       "sector": "Consumer Discretionary",
       "close": 40.28,
-      "hotness": -1.345,
+      "hotness": -1.346,
       "ret_60": -0.323,
       "pct_high_250": 0.275,
       "ma_aligned": 0
