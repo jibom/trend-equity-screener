@@ -1446,16 +1446,6 @@
       "last_close": 40.62
     },
     {
-      "ticker": "1209.HK",
-      "name_cn": "华润万象生活",
-      "gics_sector": "Real Estate",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 1,
-      "last_close": 36.96
-    },
-    {
       "ticker": "0817.HK",
       "name_cn": "中国金茂",
       "gics_sector": "Real Estate",
@@ -1464,6 +1454,16 @@
       "emoji": "🔴",
       "days_in_state": 2,
       "last_close": 1.25
+    },
+    {
+      "ticker": "1209.HK",
+      "name_cn": "华润万象生活",
+      "gics_sector": "Real Estate",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 1,
+      "last_close": 36.96
     },
     {
       "ticker": "2869.HK",
@@ -1486,6 +1486,16 @@
       "last_close": 6.41
     },
     {
+      "ticker": "2423.HK",
+      "name_cn": "贝壳-W",
+      "gics_sector": "Real Estate",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 2,
+      "last_close": 35.94
+    },
+    {
       "ticker": "1972.HK",
       "name_cn": "太古地产",
       "gics_sector": "Real Estate",
@@ -1504,16 +1514,6 @@
       "emoji": "🔴",
       "days_in_state": 1,
       "last_close": 7.0
-    },
-    {
-      "ticker": "2423.HK",
-      "name_cn": "贝壳-W",
-      "gics_sector": "Real Estate",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 2,
-      "last_close": 35.94
     },
     {
       "ticker": "0083.HK",
@@ -1606,16 +1606,6 @@
       "last_close": 4.69
     },
     {
-      "ticker": "0586.HK",
-      "name_cn": "海螺创业",
-      "gics_sector": "Industrials",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 2,
-      "last_close": 10.1
-    },
-    {
       "ticker": "1816.HK",
       "name_cn": "中广核电力",
       "gics_sector": "Utilities",
@@ -1624,6 +1614,16 @@
       "emoji": "🔴",
       "days_in_state": 3,
       "last_close": 2.71
+    },
+    {
+      "ticker": "0586.HK",
+      "name_cn": "海螺创业",
+      "gics_sector": "Industrials",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 2,
+      "last_close": 10.1
     },
     {
       "ticker": "1038.HK",
@@ -2026,16 +2026,6 @@
       "last_close": 38.64
     },
     {
-      "ticker": "6680.HK",
-      "name_cn": "金力永磁",
-      "gics_sector": "Industrials",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 2,
-      "last_close": 16.39
-    },
-    {
       "ticker": "3858.HK",
       "name_cn": "佳鑫国际资源",
       "gics_sector": "Materials",
@@ -2044,6 +2034,16 @@
       "emoji": "🔴",
       "days_in_state": 4,
       "last_close": 60.55
+    },
+    {
+      "ticker": "6680.HK",
+      "name_cn": "金力永磁",
+      "gics_sector": "Industrials",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 2,
+      "last_close": 16.39
     },
     {
       "ticker": "9698.HK",
@@ -2066,16 +2066,6 @@
       "last_close": 4.28
     },
     {
-      "ticker": "9995.HK",
-      "name_cn": "荣昌生物",
-      "gics_sector": "Health Care",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 1,
-      "last_close": 69.65
-    },
-    {
       "ticker": "1801.HK",
       "name_cn": "信达生物",
       "gics_sector": "Health Care",
@@ -2086,14 +2076,14 @@
       "last_close": 75.15
     },
     {
-      "ticker": "2696.HK",
-      "name_cn": "复宏汉霖",
+      "ticker": "9995.HK",
+      "name_cn": "荣昌生物",
       "gics_sector": "Health Care",
       "alert_type": "B_EXIT",
       "label": "B·EXIT",
       "emoji": "🔴",
-      "days_in_state": 3,
-      "last_close": 55.5
+      "days_in_state": 1,
+      "last_close": 69.65
     },
     {
       "ticker": "9926.HK",
@@ -2104,6 +2094,16 @@
       "emoji": "🔴",
       "days_in_state": 4,
       "last_close": 83.3
+    },
+    {
+      "ticker": "2696.HK",
+      "name_cn": "复宏汉霖",
+      "gics_sector": "Health Care",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 3,
+      "last_close": 55.5
     },
     {
       "ticker": "6990.HK",
