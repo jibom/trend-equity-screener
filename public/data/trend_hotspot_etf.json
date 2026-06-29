@@ -1522,7 +1522,7 @@
       "pct_high_250": 0.993,
       "ret_60": 0.118,
       "ma_aligned": 1,
-      "hotness": 0.054
+      "hotness": 0.055
     },
     {
       "ticker": "IBB.US",
@@ -1625,16 +1625,6 @@
       "hotness": -0.01
     },
     {
-      "ticker": "PAVE.US",
-      "name": "Global X U.S. Infrastructure Develop",
-      "sub_industry": "Infrastructure",
-      "close": 58.84,
-      "pct_high_250": 0.981,
-      "ret_60": 0.158,
-      "ma_aligned": 1,
-      "hotness": -0.013
-    },
-    {
       "ticker": "XLRE.US",
       "name": "The Real Estate Select Sector SPDR F",
       "sub_industry": "S&P Real Estate",
@@ -1652,6 +1642,16 @@
       "pct_high_250": 0.916,
       "ret_60": 0.148,
       "ma_aligned": 0,
+      "hotness": -0.016
+    },
+    {
+      "ticker": "PAVE.US",
+      "name": "Global X U.S. Infrastructure Develop",
+      "sub_industry": "Infrastructure",
+      "close": 58.737,
+      "pct_high_250": 0.979,
+      "ret_60": 0.156,
+      "ma_aligned": 1,
       "hotness": -0.016
     },
     {
@@ -1702,7 +1702,7 @@
       "pct_high_250": 0.953,
       "ret_60": 0.041,
       "ma_aligned": 0,
-      "hotness": -0.042
+      "hotness": -0.041
     },
     {
       "ticker": "OEF.US",
@@ -1722,17 +1722,7 @@
       "pct_high_250": 0.974,
       "ret_60": 0.114,
       "ma_aligned": 1,
-      "hotness": -0.047
-    },
-    {
-      "ticker": "IFRA.US",
-      "name": "iShares U.S. Infrastructure ETF",
-      "sub_industry": "Infrastructure",
-      "close": 63.49,
-      "pct_high_250": 0.991,
-      "ret_60": 0.113,
-      "ma_aligned": 1,
-      "hotness": -0.05
+      "hotness": -0.046
     },
     {
       "ticker": "IWY.US",
@@ -1742,6 +1732,16 @@
       "pct_high_250": 0.922,
       "ret_60": 0.119,
       "ma_aligned": 0,
+      "hotness": -0.05
+    },
+    {
+      "ticker": "IFRA.US",
+      "name": "iShares U.S. Infrastructure ETF",
+      "sub_industry": "Infrastructure",
+      "close": 63.49,
+      "pct_high_250": 0.991,
+      "ret_60": 0.113,
+      "ma_aligned": 1,
       "hotness": -0.05
     },
     {
@@ -1902,7 +1902,7 @@
       "pct_high_250": 0.975,
       "ret_60": 0.108,
       "ma_aligned": 1,
-      "hotness": -0.177
+      "hotness": -0.176
     },
     {
       "ticker": "EWZ.US",
@@ -1982,7 +1982,7 @@
       "pct_high_250": 0.946,
       "ret_60": 0.083,
       "ma_aligned": 0,
-      "hotness": -0.262
+      "hotness": -0.261
     },
     {
       "ticker": "ITB.US",
@@ -2088,11 +2088,11 @@
       "ticker": "COPX.US",
       "name": "Global X Copper Miners ETF",
       "sub_industry": "Natural Resources",
-      "close": 76.18,
-      "pct_high_250": 0.796,
-      "ret_60": -0.002,
+      "close": 75.922,
+      "pct_high_250": 0.793,
+      "ret_60": -0.006,
       "ma_aligned": 0,
-      "hotness": -0.39
+      "hotness": -0.395
     },
     {
       "ticker": "GDX.US",
@@ -2112,7 +2112,7 @@
       "pct_high_250": 0.814,
       "ret_60": 0.001,
       "ma_aligned": 0,
-      "hotness": -0.424
+      "hotness": -0.423
     },
     {
       "ticker": "YANG.US",
@@ -2392,7 +2392,7 @@
       "pct_high_250": 0.475,
       "ret_60": -0.119,
       "ma_aligned": 0,
-      "hotness": -1.032
+      "hotness": -1.031
     },
     {
       "ticker": "VXX.US",
