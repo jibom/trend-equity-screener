@@ -23,7 +23,7 @@ import pullback_buypoint as pb    # hotspot_scores/analyze/screen_surge (泛型,
 
 UNIVERSE_CSV = os.path.join(PROJECT_DIR, "configs", "a_universe.csv")
 DATA_DIR = os.path.join(PROJECT_DIR, "data")
-LOOKBACK_DAYS = 600
+LOOKBACK_DAYS = 1200         # 日历日, 覆盖周线3年(~780交易日) + 日线热身
 
 
 def _cache_path(asof):

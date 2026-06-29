@@ -57,8 +57,8 @@ def part1_records(rank_df, name_key, sector_map=None):
     return out
 
 
-def stock_record(r):
-    return rec({
+def stock_record(r, with_nh=False):
+    d = {
         "ticker": r["Ticker"], "name": r["Name"],
         "sub_industry": r["SubIndustry"], "sector": r.get("Sector"),
         "close": r.get("close"), "pct_high_250": r.get("pct_high_250"),
@@ -66,7 +66,11 @@ def stock_record(r):
         "ret_60": r.get("ret_60"),
         "ma_aligned": int(r["ma_aligned"]) if r.get("ma_aligned") is not None else 0,
         "hotness": r.get("hotness"),
-    })
+    }
+    if with_nh:
+        d["pct_high_126"] = r.get("pct_high_126")
+        d["nh_ratio_126"] = r.get("nh_ratio_126")
+    return rec(d)
 
 
 def main():
@@ -96,6 +100,15 @@ def main():
     top = df_full[(df_full["ret_60"] > 0.10) & (df_full["SubIndustry"].isin(top10_sub))]
     top = top.sort_values("hotness", ascending=False).head(TOP_STOCKS)
     part2 = [stock_record(r) for _, r in top.iterrows()]
+
+    # Part1c: 6月新高 (pct_high_126≥0.98) — 拆首次/持续, 互斥 (全市场, 不限Top10申万三级)
+    nh6m = df_full[df_full["pct_high_126"] >= 0.98]
+    first_nh = nh6m[nh6m["nh_ratio_126"] < 0.04].sort_values("pct_high_250", ascending=True).head(20)
+    sust_nh = nh6m[(nh6m["nh_ratio_126"] >= 0.04) & (nh6m["ma_stack"] == 1)
+                   & (~nh6m["Ticker"].isin(first_nh["Ticker"]))]
+    sust_nh = sust_nh.sort_values("hotness", ascending=False).head(20)
+    part1c1 = [stock_record(r, with_nh=True) for _, r in first_nh.iterrows()]
+    part1c2 = [stock_record(r, with_nh=True) for _, r in sust_nh.iterrows()]
 
     # Part4: 回调买点 (Top10申万三级内)
     hotness_map = df_full.set_index("Ticker")["hotness"]
@@ -141,7 +154,7 @@ def main():
 
     payload = {
         "date": asof, "market": "A", "hottest_sub": hottest_sub,
-        "part1": part1, "part2": part2, "part3": part3, "part4": part4,
+        "part1": part1, "part1c1": part1c1, "part1c2": part1c2, "part2": part2, "part3": part3, "part4": part4,
         "all_stocks": all_stocks,
     }
     os.makedirs(os.path.dirname(OUT_PATH), exist_ok=True)
@@ -149,7 +162,7 @@ def main():
         json.dump(payload, f, ensure_ascii=False, indent=2)
     print(f"\n[Export] -> {OUT_PATH}")
     print(f"  part1: Top{TOP_SUB} 申万三级, Top{TOP_SEC} 申万一级")
-    print(f"  part2: {len(part2)} 趋势个股 | part3: {len(part3)} 异动 | part4: {len(part4)} 回调买点")
+    print(f"  part1c1: {len(part1c1)} 首次新高 | part1c2: {len(part1c2)} 持续新高 | part2: {len(part2)} 趋势个股 | part3: {len(part3)} 异动 | part4: {len(part4)} 回调买点")
     print(f"  all_stocks: {len(all_stocks)} (Top{TOP_SUB}申万三级内)")
 
 

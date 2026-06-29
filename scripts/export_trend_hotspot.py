@@ -78,7 +78,8 @@ def stock_record(r, with_nh=False):
         "hotness": r.get("hotness"),
     }
     if with_nh:
-        d["nh_ratio_60"] = r.get("nh_ratio_60")
+        d["pct_high_126"] = r.get("pct_high_126")
+        d["nh_ratio_126"] = r.get("nh_ratio_126")
     return rec(d)
 
 
@@ -109,6 +110,17 @@ def main():
     # Part2: 趋势个股 (60日涨幅>10%) 按 hotness 排序, 最多20只
     top = df_full[df_full["ret_60"] > 0.10].sort_values("hotness", ascending=False).head(20)
     part2 = [stock_record(r) for _, r in top.iterrows()]
+
+    # Part1c: 6月新高 (pct_high_126≥0.98, 126交易日≈6个月) — 拆首次/持续, 互斥
+    nh6m = df_full[df_full["pct_high_126"] >= 0.98]
+    # 1c1 首次新高: 近6月新高天数占比<4%(刚突破), 不要求多头, 低位优先(距250高升序)
+    first_nh = nh6m[nh6m["nh_ratio_126"] < 0.04].sort_values("pct_high_250", ascending=True).head(20)
+    # 1c2 持续新高: 占比≥4% + 多头排列(ma_stack), 排除已在1c1的, hotness 排序
+    sust_nh = nh6m[(nh6m["nh_ratio_126"] >= 0.04) & (nh6m["ma_stack"] == 1)
+                   & (~nh6m["Ticker"].isin(first_nh["Ticker"]))]
+    sust_nh = sust_nh.sort_values("hotness", ascending=False).head(20)
+    part1c1 = [stock_record(r, with_nh=True) for _, r in first_nh.iterrows()]
+    part1c2 = [stock_record(r, with_nh=True) for _, r in sust_nh.iterrows()]
 
     # Part4: 回调买点候选 (先算, 用于 Part3 排除)
     hotness_map = df_full.set_index("Ticker")["hotness"]
@@ -176,6 +188,8 @@ def main():
         "date": asof,
         "hottest_sub": hottest_sub,
         "part1": part1,
+        "part1c1": part1c1,
+        "part1c2": part1c2,
         "part2": part2,
         "part3": part3,
         "part4": part4,
@@ -189,7 +203,7 @@ def main():
         json.dump(payload, f, ensure_ascii=False, indent=2)
     print(f"\n[Export] -> {OUT_PATH}")
     print(f"  part1: {len(part1['sub_industries'])} 细分行业, {len(part1['sectors'])} GICS板块")
-    print(f"  part2: {len(part2)} 只趋势个股 (60日>10%, ≤20)")
+    print(f"  part1c1: {len(part1c1)} 首次新高 | part1c2: {len(part1c2)} 持续新高 | part2: {len(part2)} 只趋势个股 (60日>10%, ≤20)")
     print(f"  part3: {len(part3)} 只异动放量个股 (已排除Part2/4)")
     print(f"  part4: {len(part4)} 只回调买点候选")
     print(f"  part5: {len(part5)} 个行业轮动 (🔻lose={len(rotation_alerts['lose'])} 🔺gain={len(rotation_alerts['gain'])})")

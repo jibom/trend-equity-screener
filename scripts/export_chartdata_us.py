@@ -13,7 +13,8 @@ import us_trend as ust   # 模块级已设 utf-8 stdout
 import pandas as pd
 
 OUT_DIR = os.path.join(os.path.dirname(__file__), "..", "public", "data", "chartdata", "us")
-DAYS = 260
+DAYS = 260          # 日线 ~12个月 (含均线热身; 渲染时美股只显示最近8个月)
+WEEKLY_DAYS = 780   # 周线 3年 (~156周)
 
 
 def _ts(dt_str):
@@ -32,8 +33,9 @@ def build_ohlc(g):
                       round(float(r["fwd_open"]), 4), round(float(r["fwd_high"]), 4),
                       round(float(r["fwd_low"]), 4), round(float(r["fwd_close"]), 4),
                       int(r["vol"]) if pd.notna(r["vol"]) else 0])
-    d["date"] = pd.to_datetime(d["date"])
-    w = d.set_index("date").resample("W-FRI").agg({
+    wsrc = gg.tail(WEEKLY_DAYS).copy()
+    wsrc["date"] = pd.to_datetime(wsrc["date"])
+    w = wsrc.set_index("date").resample("W-FRI").agg({
         "fwd_open": "first", "fwd_high": "max", "fwd_low": "min",
         "fwd_close": "last", "vol": "sum"}).dropna()
     weekly = []

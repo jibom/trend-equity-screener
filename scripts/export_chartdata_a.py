@@ -12,7 +12,8 @@ import a_trend as at   # 透传 utf-8 stdout
 import pandas as pd
 
 OUT_DIR = os.path.join(os.path.dirname(__file__), "..", "public", "data", "chartdata", "a")
-DAYS = 260
+DAYS = 260          # 日线 ~12个月 (含均线热身; 渲染时只显示最近6个月)
+WEEKLY_DAYS = 780   # 周线 3年 (~156周)
 
 
 def _ts(dt_str):
@@ -35,7 +36,9 @@ def build_ohlc(g):
                       round(float(r["S_DQ_ADJCLOSE"]) / f, 4),
                       int(r["S_DQ_VOLUME"]) if pd.notna(r["S_DQ_VOLUME"]) else 0])
     d["date"] = pd.to_datetime(d["TRADE_DT"], format="%Y%m%d")
-    w = d.set_index("date").resample("W-FRI").agg({
+    wsrc = g.tail(WEEKLY_DAYS).copy()
+    wsrc["date"] = pd.to_datetime(wsrc["TRADE_DT"], format="%Y%m%d")
+    w = wsrc.set_index("date").resample("W-FRI").agg({
         "S_DQ_ADJOPEN": "first", "S_DQ_ADJHIGH": "max", "S_DQ_ADJLOW": "min",
         "S_DQ_ADJCLOSE": "last", "S_DQ_VOLUME": "sum", "TRADE_DT": "last"}).dropna()
     weekly = []

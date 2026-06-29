@@ -37,7 +37,7 @@ sys.path.insert(0, os.path.dirname(__file__))
 from db_config import DB_CONFIG, SECTOR_MAP_FILE
 
 ASOF_DEFAULT = "2026-06-20"
-LOOKBACK_DAYS = 600          # 日历日, 足够覆盖 250 交易日
+LOOKBACK_DAYS = 1200         # 日历日, 覆盖周线3年(~780交易日) + 日线热身
 MIN_DAYS = 60                # 至少 60 交易日即可 (新股放宽, 特征按 min(历史,窗口) 自适应)
 N_CLUSTERS = 6
 
@@ -202,14 +202,21 @@ def compute_features(g: pd.DataFrame) -> dict | None:
     w250 = min(n, 250)
     high_250 = np.max(c[-w250:])
     high_60 = np.max(c[-60:])
+    high_126 = np.max(c[-min(n, 126):])
     pct_high_250 = close / high_250 if high_250 > 0 else np.nan
     pct_high_60 = close / high_60 if high_60 > 0 else np.nan
+    pct_high_126 = close / high_126 if high_126 > 0 else np.nan
 
     s = pd.Series(c)
     # 60日新高天数占比
     roll60_max = s.rolling(60, min_periods=60).max()
     nh_60 = int((s[-60:] == roll60_max[-60:]).sum())
     nh_ratio_60 = nh_60 / 60.0
+    # 126日(≈6月) 新高天数占比
+    w126 = min(n, 126)
+    roll126_max = s.rolling(w126, min_periods=w126).max()
+    nh_126 = int((s[-w126:] == roll126_max[-w126:]).sum())
+    nh_ratio_126 = nh_126 / float(w126)
     # 250日 (或全部历史) 新高天数占比
     roll_long = s.rolling(w250, min_periods=w250).max()
     nh_long = int((s[-w250:] == roll_long[-w250:]).sum())
@@ -239,13 +246,17 @@ def compute_features(g: pd.DataFrame) -> dict | None:
         aligned = int(all(ma[avail[i]] > ma[avail[i + 1]] for i in range(len(avail) - 1)))
     else:
         aligned = 0
+    # 中长期多头排列: close>MA20>MA50>MA100>MA200 (允许短期 10/30 纠缠, 需≥200日)
+    ma200 = s.rolling(200).mean().iloc[-1] if n >= 200 else np.nan
+    ma_stack = int(not pd.isna(ma200) and not pd.isna(ma[100])
+                   and close > ma[20] > ma[50] > ma[100] > ma200)
 
     return dict(
-        pct_high_250=pct_high_250, pct_high_60=pct_high_60,
-        nh_ratio_60=nh_ratio_60, nh_ratio_250=nh_ratio_250,
+        pct_high_250=pct_high_250, pct_high_60=pct_high_60, pct_high_126=pct_high_126,
+        nh_ratio_60=nh_ratio_60, nh_ratio_126=nh_ratio_126, nh_ratio_250=nh_ratio_250,
         amt_20=amt_20, amt_surge=amt_surge, amt_1d=amt_1d, amt_5d=amt_5d,
         ret_20=ret_20, ret_60=ret_60, ret_120=ret_120,
-        ma_aligned=aligned, close=close, days=n,
+        ma_aligned=aligned, ma_stack=ma_stack, close=close, days=n,
     )
 
 

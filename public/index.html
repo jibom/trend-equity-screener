@@ -293,6 +293,8 @@
       background: var(--bg-muted); flex-shrink: 0;
     }
     #modal-name { font-weight: 700; font-size: 15px; color: var(--text); }
+    .modal-title { display: flex; flex-direction: column; line-height: 1.25; }
+    #modal-industry { font-size: 11px; color: var(--text-muted); font-weight: 400; }
     #modal-ticker { font-size: 12px; color: var(--text-muted); }
     .interval-btn {
       padding: 4px 14px; border-radius: 6px; font-size: 12px; font-weight: 600;
@@ -307,8 +309,8 @@
     }
     .close-btn:hover { background: var(--hover); }
     #chart-panes { flex: 1; display: flex; flex-direction: column; min-height: 0; gap: 1px; background: var(--border); }
-    #chart-main { flex: 5; min-height: 0; background: var(--bg-card); }
-    .chart-sub { flex: 1.5; min-height: 80px; position: relative; background: var(--bg-card); }
+    #chart-main { flex: 5.75; min-height: 0; background: var(--bg-card); }
+    .chart-sub { flex: 1.125; min-height: 60px; position: relative; background: var(--bg-card); }
     .chart-sub-label { position: absolute; top: 4px; left: 8px; font-size: 10px; font-weight: 700; color: var(--text-muted); z-index: 2; pointer-events: none; text-transform: uppercase; letter-spacing: 0.05em; }
     @media (max-width: 640px) {
       .modal-content { width: 100vw; height: 100vh; border-radius: 0; }
@@ -322,7 +324,10 @@
     <div class="modal-backdrop" onclick="closeChart()"></div>
     <div class="modal-content">
       <div class="modal-header">
-        <span id="modal-name"></span>
+        <div class="modal-title">
+          <span id="modal-name"></span>
+          <span id="modal-industry"></span>
+        </div>
         <span id="modal-ticker"></span>
         <button id="btn-daily" class="interval-btn active" onclick="switchInterval('D')">Daily</button>
         <button id="btn-weekly" class="interval-btn" onclick="switchInterval('W')">Weekly</button>
@@ -586,6 +591,8 @@
       const top = (d.part1 && d.part1.sub_industries && d.part1.sub_industries[0]) || {};
       return `
         <div class="summary-item"><span class="state-badge state-STRONG">最热细分</span><span class="summary-val">${d.hottest_sub || '-'} ${top.composite != null ? '(' + top.composite + ')' : ''}</span></div>
+        <div class="summary-item"><span class="state-badge state-SETUP_OK">首次新高</span><span class="summary-val">${(d.part1c1 || []).length}</span></div>
+        <div class="summary-item"><span class="state-badge state-SETUP_OK">持续新高</span><span class="summary-val">${(d.part1c2 || []).length}</span></div>
         <div class="summary-item"><span class="state-badge state-SETUP_OK">最热个股</span><span class="summary-val">${(d.part2 || []).length}</span></div>
         <div class="summary-item"><span class="state-badge state-EARLY">回调买点</span><span class="summary-val">${(d.part4 || []).length}</span></div>
       `;
@@ -615,6 +622,19 @@
         pctRaw(s.share_1d), pctRaw(s.share_5d), pctRaw(s.share5_pctile200), signedR(s.ret_60), `<b>${num2(s.composite)}</b>`]);
       html += trendSection('Part 1 · GICS 板块热度 (全量)', secs.length,
         trendTable(['板块','n','新高广度250','量放','占比1日','占比5日','5日占比200日分位','60日涨幅','综合分'], secRows));
+
+      // ── Part 1c: 6月新高 (首次/持续) ──
+      const p1cCols = ['代码','名称','细分行业','收盘','距250高','6月新高','250日新高','6月新高占比','量放','5日均额排','60日涨幅','热度分'];
+      const p1cRow = (e, sc) => [
+        tk(e.ticker, sc), e.name, e.sub_industry, num2(e.close), pctR(e.pct_high_250),
+        yn(e.pct_high_126 >= 1.0), yn(e.pct_high_250 >= 1.0), pctR(e.nh_ratio_126),
+        num2(e.amt_surge) + 'x', num2(e.amt_rank), signedR(e.ret_60), `<b>${num2(e.hotness)}</b>`];
+      const p1c1 = d.part1c1 || [];
+      html += trendSection('Part 1c-1 · 首次新高 (6月新高, 近6月新高天数<4%, 低位优先, ≤20)', p1c1.length,
+        trendTable(p1cCols, p1c1.map(e => p1cRow(e, 'part1c1'))));
+      const p1c2 = d.part1c2 || [];
+      html += trendSection('Part 1c-2 · 持续新高 (6月新高+多头, 近6月新高天数≥4%, hotness 排序, ≤20)', p1c2.length,
+        trendTable(p1cCols, p1c2.map(e => p1cRow(e, 'part1c2'))));
 
       // ── Part 2: 最热个股 top30 ──
       const p2 = d.part2 || [];
@@ -679,7 +699,8 @@
       const top = (d.part1 && d.part1.sub_industries && d.part1.sub_industries[0]) || {};
       return `
         <div class="summary-item"><span class="state-badge state-STRONG">最热行业</span><span class="summary-val">${d.hottest_sub || '-'} ${top.composite != null ? '(' + top.composite + ')' : ''}</span></div>
-        <div class="summary-item"><span class="state-badge state-SETUP_OK">3月新高</span><span class="summary-val">${(d.part1c || []).length}</span></div>
+        <div class="summary-item"><span class="state-badge state-SETUP_OK">首次新高</span><span class="summary-val">${(d.part1c1 || []).length}</span></div>
+        <div class="summary-item"><span class="state-badge state-SETUP_OK">持续新高</span><span class="summary-val">${(d.part1c2 || []).length}</span></div>
         <div class="summary-item"><span class="state-badge state-SETUP_OK">趋势个股</span><span class="summary-val">${(d.part2 || []).length}</span></div>
         <div class="summary-item"><span class="state-badge state-EARLY">回调买点</span><span class="summary-val">${(d.part4 || []).length}</span></div>
       `;
@@ -709,14 +730,18 @@
       html += trendSection('Part 1 · GICS Sector 热度 (全量)', secs.length,
         trendTable(['Sector','n','新高广度250','量放','占比1日','占比5日','5日占比200日分位','60日涨幅','综合分'], secRows));
 
-      const p1c = d.part1c || [];
-      const p1cRows = p1c.map(e => [
-        tk(e.ticker, 'part1c'), e.name, e.sub_industry, num2(e.close), pctR(e.pct_high_250),
-        pctR(e.nh_ratio_60), num2(e.amt_surge) + 'x', num2(e.amt_rank), signedR(e.ret_60),
-        signedR(e.sales_growth), signedR(e.earn_growth), pctR(e.roe),
-        yn(e.ma_aligned), `<b>${num2(e.hotness)}</b>`]);
-      html += trendSection('Part 1c · 3个月新高个股 (全市场, 距60日高≤2%, hotness 排序, ≤20)', p1c.length,
-        trendTable(['代码','名称','行业','收盘','距250高','新高天数占比','量放','5日均额排','60日涨幅','销售增长','盈利增长','ROE','多头','热度分'], p1cRows));
+      const p1cCols = ['代码','名称','行业','收盘','距250高','6月新高','250日新高','6月新高占比','量放','5日均额排','60日涨幅','销售增长','盈利增长','ROE','热度分'];
+      const p1cRow = (e, sc) => [
+        tk(e.ticker, sc), e.name, e.sub_industry, num2(e.close), pctR(e.pct_high_250),
+        yn(e.pct_high_126 >= 1.0), yn(e.pct_high_250 >= 1.0), pctR(e.nh_ratio_126),
+        num2(e.amt_surge) + 'x', num2(e.amt_rank), signedR(e.ret_60),
+        signedR(e.sales_growth), signedR(e.earn_growth), pctR(e.roe), `<b>${num2(e.hotness)}</b>`];
+      const p1c1 = d.part1c1 || [];
+      html += trendSection('Part 1c-1 · 首次新高 (6月新高+多头, 近6月新高天数<4%, 低位优先, ≤20)', p1c1.length,
+        trendTable(p1cCols, p1c1.map(e => p1cRow(e, 'part1c1'))));
+      const p1c2 = d.part1c2 || [];
+      html += trendSection('Part 1c-2 · 持续新高 (6月新高+多头, 近6月新高天数≥4%, hotness 排序, ≤20)', p1c2.length,
+        trendTable(p1cCols, p1c2.map(e => p1cRow(e, 'part1c2'))));
 
       const p2 = d.part2 || [];
       const p2Rows = p2.map(e => [
@@ -758,6 +783,8 @@
       const top = (d.part1 && d.part1.sub_industries && d.part1.sub_industries[0]) || {};
       return `
         <div class="summary-item"><span class="state-badge state-STRONG">最热申万三级</span><span class="summary-val">${d.hottest_sub || '-'} ${top.composite != null ? '(' + top.composite + ')' : ''}</span></div>
+        <div class="summary-item"><span class="state-badge state-SETUP_OK">首次新高</span><span class="summary-val">${(d.part1c1 || []).length}</span></div>
+        <div class="summary-item"><span class="state-badge state-SETUP_OK">持续新高</span><span class="summary-val">${(d.part1c2 || []).length}</span></div>
         <div class="summary-item"><span class="state-badge state-SETUP_OK">趋势个股</span><span class="summary-val">${(d.part2 || []).length}</span></div>
         <div class="summary-item"><span class="state-badge state-EARLY">回调买点</span><span class="summary-val">${(d.part4 || []).length}</span></div>
       `;
@@ -785,6 +812,18 @@
         pctRaw(s.share_1d), pctRaw(s.share_5d), pctRaw(s.share5_pctile200), signedR(s.ret_60), `<b>${num2(s.composite)}</b>`]);
       html += trendSection('Part 1 · 申万一级热度 (Top 10)', secs.length,
         trendTable(['申万一级','n','新高广度250','量放','占比1日','占比5日','5日占比200日分位','60日涨幅','综合分'], secRows));
+
+      const p1cCols = ['代码','名称','申万三级','收盘','距250高','6月新高','250日新高','6月新高占比','量放','5日均额排','60日涨幅','热度分'];
+      const p1cRow = (e, sc) => [
+        tk(e.ticker, sc), e.name, e.sub_industry, num2(e.close), pctR(e.pct_high_250),
+        yn(e.pct_high_126 >= 1.0), yn(e.pct_high_250 >= 1.0), pctR(e.nh_ratio_126),
+        num2(e.amt_surge) + 'x', num2(e.amt_rank), signedR(e.ret_60), `<b>${num2(e.hotness)}</b>`];
+      const p1c1 = d.part1c1 || [];
+      html += trendSection('Part 1c-1 · 首次新高 (6月新高, 近6月新高天数<4%, 低位优先, ≤20)', p1c1.length,
+        trendTable(p1cCols, p1c1.map(e => p1cRow(e, 'part1c1'))));
+      const p1c2 = d.part1c2 || [];
+      html += trendSection('Part 1c-2 · 持续新高 (6月新高+多头, 近6月新高天数≥4%, hotness 排序, ≤20)', p1c2.length,
+        trendTable(p1cCols, p1c2.map(e => p1cRow(e, 'part1c2'))));
 
       const p2 = d.part2 || [];
       const p2Rows = p2.map(e => [
@@ -1150,8 +1189,8 @@
     const theme = _lcTheme();
     _charts = [];
 
-    // 均线: 快线组 5/10/15/20 (暖色系), 慢线组 40/50/60/70 (冷色系) — 组内颜色一致渐变
-    const ma5  = calcMA(rows, 5),  ma10 = calcMA(rows, 10), ma15 = calcMA(rows, 15), ma20 = calcMA(rows, 20);
+    // 均线: 快线组 5/10/20/30 (红色), 慢线组 40/50/60/70 (蓝色) — 组内同色, 10/50 不透明加粗以凸显
+    const ma5  = calcMA(rows, 5),  ma10 = calcMA(rows, 10), ma20 = calcMA(rows, 20), ma30 = calcMA(rows, 30);
     const ma40 = calcMA(rows, 40), ma50 = calcMA(rows, 50), ma60 = calcMA(rows, 60), ma70 = calcMA(rows, 70);
     const macd = calcMACD(rows);
     const kdj = calcKDJ(rows);
@@ -1184,9 +1223,9 @@
     cs.setData(candles); allSeries.push(cs);
 
     const maOpts = (color, width) => ({ color, lineWidth: width || 1, priceLineVisible: false, lastValueVisible: false });
-    // 快线组 5/10/15/20 — 暖色渐变 (红→橙→琥珀); 慢线组 40/50/60/70 — 冷色渐变 (蓝→靛→紫)
-    [['#E53935', ma5, 1], ['#FF7043', ma10, 1], ['#FB8C00', ma15, 1], ['#FFB300', ma20, 1],
-     ['#42A5F5', ma40, 1], ['#5C6BC0', ma50, 1], ['#7E57C2', ma60, 1], ['#AB47BC', ma70, 1]]
+    // 快线 5/10/20/30 红, 慢线 40/50/60/70 蓝; 10/50 不透明(凸显), 其余半透明, 粗细统一
+    [['rgba(229,57,53,0.35)', ma5, 1], ['rgba(229,57,53,1)', ma10, 1], ['rgba(229,57,53,0.35)', ma20, 1], ['rgba(229,57,53,0.35)', ma30, 1],
+     ['rgba(66,165,245,0.35)', ma40, 1], ['rgba(66,165,245,1)', ma50, 1], ['rgba(66,165,245,0.35)', ma60, 1], ['rgba(66,165,245,0.35)', ma70, 1]]
       .forEach(([c, arr, w]) => { if (arr.length) addSer(mainChart, maOpts(c, w), arr); });
 
     const vs = mainChart.addHistogramSeries({ priceFormat: { type: 'volume' }, priceScaleId: 'vol' });
@@ -1236,7 +1275,13 @@
     _syncScales(mainChart, macdChart, kdjChart);
     // 统一 rightOffset (留右侧空间) + 主图 fitContent, 子图同步同 range (同宽→同 barSpacing→对齐)
     [mainChart, macdChart, kdjChart].forEach(c => c.timeScale().applyOptions({ rightOffset: 6 }));
-    mainChart.timeScale().fitContent();
+    // 日线只看最近6个月(~126根); 周线 fitContent
+    if (_chartInterval === 'D' && (_chartData.daily || []).length > 126) {
+      const n = _chartData.daily.length;
+      mainChart.timeScale().setVisibleLogicalRange({ from: n - 126, to: n - 1 });
+    } else {
+      mainChart.timeScale().fitContent();
+    }
     const mainRange = mainChart.timeScale().getVisibleLogicalRange();
     if (mainRange) {
       macdChart.timeScale().setVisibleLogicalRange(mainRange);
@@ -1264,7 +1309,7 @@
     // 从已加载的各市场数据 + 进场候选 查个股名称 (图表左上角显示用)
     for (const d of [window.trendData, window.usData, window.aData]) {
       if (!d) continue;
-      for (const k of ['all_stocks', 'part2', 'part3', 'part4']) {
+      for (const k of ['all_stocks', 'part1c1', 'part1c2', 'part2', 'part3', 'part4']) {
         const arr = d[k];
         if (Array.isArray(arr)) {
           const m = arr.find(e => e && e.ticker === ticker);
@@ -1282,10 +1327,24 @@
     }
     return '';
   }
+  function stockIndustry(ticker) {
+    // 从已加载各市场数据查个股行业 (图表名称下方显示用)
+    for (const d of [window.trendData, window.usData, window.aData]) {
+      if (!d) continue;
+      for (const k of ['all_stocks', 'part1c1', 'part1c2', 'part2', 'part3', 'part4']) {
+        const arr = d[k];
+        if (Array.isArray(arr)) {
+          const m = arr.find(e => e && e.ticker === ticker);
+          if (m && (m.sub_industry || m.sector)) return [m.sub_industry, m.sector].filter(Boolean).join(' · ');
+        }
+      }
+    }
+    return '';
+  }
 
   async function showChart(ticker, screen, list) {
     _chartTicker = ticker;
-    _chartInterval = 'D';
+    // _chartInterval 不重置: 首次默认 D(模块初值), 切换 W 后下次打开保持 W
     _chartData = null;
     _chartScreen = screen || null;
     const mkt = ticker.endsWith('.US') ? 'us'
@@ -1299,6 +1358,7 @@
     } else { _chartList = []; _chartIdx = -1; }
     document.getElementById('chart-modal').classList.add('open');
     document.getElementById('modal-name').textContent = stockName(ticker);
+    document.getElementById('modal-industry').textContent = stockIndustry(ticker);
     document.getElementById('modal-ticker').textContent =
       ticker + (_chartIdx >= 0 ? `   (${_chartIdx + 1}/${_chartList.length})  ←→切换 D/W日周` : '');
     _updateIntervalBtns();
