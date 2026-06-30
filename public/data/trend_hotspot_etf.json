@@ -283,7 +283,7 @@
       "pct_high_250": 1.0,
       "pct_high_126": 1.0,
       "nh_ratio_126": 0.222,
-      "amt_surge": 0.79,
+      "amt_surge": 0.791,
       "amt_rank": 0.949,
       "ret_60": 0.111,
       "ma_aligned": 1,
@@ -321,21 +321,6 @@
       "hotness": 0.393
     },
     {
-      "ticker": "IWB.US",
-      "name": "iShares Russell 1000 ETF",
-      "sub_industry": "Russell 1000",
-      "close": 406.31,
-      "pct_high_250": 0.982,
-      "pct_high_126": 0.982,
-      "nh_ratio_126": 0.183,
-      "amt_surge": 0.679,
-      "amt_rank": 0.617,
-      "ret_60": 0.133,
-      "ma_aligned": 0,
-      "ma_stack": 1,
-      "hotness": 0.361
-    },
-    {
       "ticker": "MDY.US",
       "name": "SPDR® S&P MIDCAP 400 ETF Trust",
       "sub_industry": "Mid-Cap Blend",
@@ -349,6 +334,21 @@
       "ma_aligned": 1,
       "ma_stack": 1,
       "hotness": 0.36
+    },
+    {
+      "ticker": "IWB.US",
+      "name": "iShares Russell 1000 ETF",
+      "sub_industry": "Russell 1000",
+      "close": 406.31,
+      "pct_high_250": 0.982,
+      "pct_high_126": 0.982,
+      "nh_ratio_126": 0.183,
+      "amt_surge": 0.679,
+      "amt_rank": 0.611,
+      "ret_60": 0.133,
+      "ma_aligned": 0,
+      "ma_stack": 1,
+      "hotness": 0.356
     },
     {
       "ticker": "ACWI.US",
@@ -435,12 +435,12 @@
       "pct_high_250": 0.945,
       "pct_high_126": 0.945,
       "nh_ratio_126": 0.317,
-      "amt_surge": 2.174,
+      "amt_surge": 2.175,
       "amt_rank": 0.977,
       "ret_60": 0.612,
       "ma_aligned": 1,
       "ma_stack": 1,
-      "hotness": 1.201
+      "hotness": 1.202
     },
     {
       "ticker": "SOXL.US",
@@ -570,7 +570,7 @@
       "pct_high_250": 0.937,
       "pct_high_126": 0.937,
       "nh_ratio_126": 0.159,
-      "amt_surge": 1.205,
+      "amt_surge": 1.206,
       "amt_rank": 0.943,
       "ret_60": 0.376,
       "ma_aligned": 0,
@@ -722,7 +722,7 @@
       "pct_high_250": 0.945,
       "ret_60": 0.612,
       "ma_aligned": 1,
-      "hotness": 1.201
+      "hotness": 1.202
     },
     {
       "ticker": "SOXL.US",
@@ -1095,16 +1095,6 @@
       "hotness": 0.375
     },
     {
-      "ticker": "IWB.US",
-      "name": "iShares Russell 1000 ETF",
-      "sub_industry": "Russell 1000",
-      "close": 406.31,
-      "pct_high_250": 0.982,
-      "ret_60": 0.133,
-      "ma_aligned": 0,
-      "hotness": 0.361
-    },
-    {
       "ticker": "MDY.US",
       "name": "SPDR® S&P MIDCAP 400 ETF Trust",
       "sub_industry": "Mid-Cap Blend",
@@ -1113,6 +1103,16 @@
       "ret_60": 0.125,
       "ma_aligned": 1,
       "hotness": 0.36
+    },
+    {
+      "ticker": "IWB.US",
+      "name": "iShares Russell 1000 ETF",
+      "sub_industry": "Russell 1000",
+      "close": 406.31,
+      "pct_high_250": 0.982,
+      "ret_60": 0.133,
+      "ma_aligned": 0,
+      "hotness": 0.356
     },
     {
       "ticker": "ACWI.US",
@@ -1275,6 +1275,16 @@
       "hotness": 0.234
     },
     {
+      "ticker": "UPRO.US",
+      "name": "ProShares UltraPro S&P 500",
+      "sub_industry": "S&P 500 3x",
+      "close": 138.76,
+      "pct_high_250": 0.922,
+      "ret_60": 0.402,
+      "ma_aligned": 0,
+      "hotness": 0.223
+    },
+    {
       "ticker": "EFA.US",
       "name": "iShares MSCI EAFE ETF",
       "sub_industry": "MSCI EAFE",
@@ -1283,16 +1293,6 @@
       "ret_60": 0.066,
       "ma_aligned": 1,
       "hotness": 0.219
-    },
-    {
-      "ticker": "UPRO.US",
-      "name": "ProShares UltraPro S&P 500",
-      "sub_industry": "S&P 500 3x",
-      "close": 138.76,
-      "pct_high_250": 0.922,
-      "ret_60": 0.402,
-      "ma_aligned": 0,
-      "hotness": 0.218
     },
     {
       "ticker": "CIBR.US",
