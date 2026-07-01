@@ -109,7 +109,7 @@ def main():
     first_nh = df_full[cond_6m | cond_3m].sort_values("hotness", ascending=False).head(20)
     sust_nh = nh6m[(nh6m["nh_ratio_126"] >= 0.04)
                    & (~nh6m["Ticker"].isin(first_nh["Ticker"]))]
-    sust_nh = sust_nh.sort_values("hotness", ascending=False).head(20)
+    sust_nh = sust_nh.sort_values("hotness", ascending=False).head(30)
     part1c1 = [stock_record(r, with_nh=True) for _, r in first_nh.iterrows()]
     part1c2 = [stock_record(r, with_nh=True) for _, r in sust_nh.iterrows()]
 

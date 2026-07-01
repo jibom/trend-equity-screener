@@ -109,7 +109,7 @@ def main():
     }
 
     # Part2: 趋势个股 (60日涨幅>10%) 按 hotness 排序, 最多20只
-    top = df_full[df_full["ret_60"] > 0.10].sort_values("hotness", ascending=False).head(20)
+    top = df_full[df_full["ret_60"] > 0.10].sort_values("hotness", ascending=False).head(30)
     part2 = [stock_record(r) for _, r in top.iterrows()]
 
     # Part1c: 6月新高 (pct_high_126≥0.98, 126交易日≈6个月) — 拆首次/持续, 互斥
@@ -121,7 +121,7 @@ def main():
     # 1c2 持续新高: 占比≥4% + 多头排列(ma_stack), 排除已在1c1的, hotness 排序
     sust_nh = nh6m[(nh6m["nh_ratio_126"] >= 0.04)
                    & (~nh6m["Ticker"].isin(first_nh["Ticker"]))]
-    sust_nh = sust_nh.sort_values("hotness", ascending=False).head(20)
+    sust_nh = sust_nh.sort_values("hotness", ascending=False).head(30)
     part1c1 = [stock_record(r, with_nh=True) for _, r in first_nh.iterrows()]
     part1c2 = [stock_record(r, with_nh=True) for _, r in sust_nh.iterrows()]
 

@@ -198,13 +198,13 @@ def main():
     # 1c2 持续新高: 占比≥4% + 多头排列(ma_stack), 排除已在1c1的, hotness 排序
     sust_nh = nh6m[(nh6m["nh_ratio_126"] >= 0.04)
                    & (~nh6m["Ticker"].isin(first_nh["Ticker"]))]
-    sust_nh = sust_nh.sort_values("hotness", ascending=False).head(20)
+    sust_nh = sust_nh.sort_values("hotness", ascending=False).head(30)
     part1c1 = [stock_record(r, with_nh=True) for _, r in first_nh.iterrows()]
     part1c2 = [stock_record(r, with_nh=True) for _, r in sust_nh.iterrows()]
 
     # Part2: 趋势个股 (60日>10%, 且在 Top10 行业内) hotness 排序 ≤20
     top = df_full[(df_full["ret_60"] > 0.10) & (df_full["Industry"].isin(top10_ind))]
-    top = top.sort_values("hotness", ascending=False).head(20)
+    top = top.sort_values("hotness", ascending=False).head(30)
     part2 = [stock_record(r) for _, r in top.iterrows()]
 
     # Part4: 回调买点 (先算, 用于 Part3 排除)
