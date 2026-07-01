@@ -511,7 +511,7 @@
       "nh_ratio_126": 0.254,
       "amt_surge": 1.033,
       "amt_rank": 0.455,
-      "ret_60": 0.154,
+      "ret_60": 0.158,
       "ma_aligned": 1,
       "days_below_ma10": 0,
       "ma_stack": 1,
@@ -1583,7 +1583,7 @@
       "sub_industry": "Dividend",
       "close": 49.28,
       "pct_high_250": 1.0,
-      "ret_60": 0.154,
+      "ret_60": 0.158,
       "ma_aligned": 1,
       "days_below_ma10": 0,
       "hotness": 0.324
