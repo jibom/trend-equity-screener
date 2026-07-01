@@ -60,7 +60,8 @@ jobs:
           MARKET="${{ github.event.inputs.market || 'all' }}"
           HOUR=$(date -u +%H)
 
-          if [ "$MARKET" = "all" ]; then
+          # 自动检测只对 schedule 生效; workflow_dispatch 选 all 就保持 all
+          if [ "$MARKET" = "all" ] && [ "${{ github.event_name }}" = "schedule" ]; then
             # Auto-detect based on schedule time
             # UTC 21:00 (HKT 05:00) → US (美股刚收盘)
             # UTC 00:00 (HKT 08:00) → HK (港股开盘前)
