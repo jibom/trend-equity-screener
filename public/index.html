@@ -443,10 +443,6 @@
       slope(v) { return v != null ? (v >= 0 ? '+' : '') + v.toFixed(1) + '%' : '-'; },
     };
 
-    function toTV(ticker) {
-      return 'HKEX:' + ticker.replace('.HK', '').replace(/^0+/, '');
-    }
-
     function copyTickers(tickers) {
       const text = tickers.map(toTV).join(', ');
       try { navigator.clipboard.writeText(text); } catch {
@@ -525,6 +521,7 @@
                 <button class="tab-btn ${tab==='entry'?'active':''}" data-tab="entry">进场候选<span class="tab-count">${entryTotal}</span></button>
               </div>
             </div>
+            <button class="icon-btn" id="tv-download" title="下载 TradingView CSV (首次/持续新高+趋势向上)" style="font-size:11px;padding:4px 10px;border:1px solid var(--border);border-radius:6px;background:var(--bg);color:var(--text)">TV CSV</button>
             <button class="icon-btn" id="theme-toggle">${isDark ? icons.sun : icons.moon}</button>
           </div>
         </header>
@@ -549,6 +546,50 @@
         });
       });
       document.getElementById('theme-toggle').addEventListener('click', () => { isDark = !isDark; render(); });
+
+      // ─── TradingView CSV 下载 ───
+      function toTV(t) {
+        if (t.endsWith('.HK')) return 'HKEX:' + t.replace('.HK', '').replace(/^0+/, '');
+        if (t.endsWith('.US')) return t.replace('.US', '');
+        if (t.endsWith('.SH')) return 'SSE:' + t.replace('.SH', '');
+        if (t.endsWith('.SZ')) return 'SZSE:' + t.replace('.SZ', '');
+        if (t.endsWith('.BJ')) return 'BSE:' + t.replace('.BJ', '');
+        return t;
+      }
+      function downloadTVCSV() {
+        const markets = [
+          {data: trendData, name: 'HK'},
+          {data: usData, name: 'US'},
+          {data: etfData, name: 'US-ETF'},
+          {data: cetfData, name: 'CN-ETF'},
+          {data: aData, name: 'A-Share'},
+        ];
+        const seen = new Set(), rows = [];
+        for (const m of markets) {
+          if (!m.data) continue;
+          const sections = [
+            {key: 'part1c1', label: m.name + ' First New High'},
+            {key: 'part1c2', label: m.name + ' Sustained New High'},
+            {key: 'part2',   label: m.name + ' Trending Up'},
+          ];
+          for (const sec of sections) {
+            const tickers = (m.data[sec.key] || []).filter(r => r.ticker && !seen.has(r.ticker)).map(r => { seen.add(r.ticker); return toTV(r.ticker); });
+            if (tickers.length) {
+              rows.push('### ' + sec.label);
+              rows.push(...tickers);
+            }
+          }
+        }
+        const csv = 'symbols\n' + rows.join('\n');
+        const blob = new Blob([csv], { type: 'text/csv;charset=utf-8' });
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(blob);
+        a.download = 'tradingview_watchlist.csv';
+        a.click();
+        URL.revokeObjectURL(a.href);
+      }
+      const tvBtn = document.getElementById('tv-download');
+      if (tvBtn) tvBtn.addEventListener('click', downloadTVCSV);
 
       const si = document.getElementById('search-input');
       if (si) {
