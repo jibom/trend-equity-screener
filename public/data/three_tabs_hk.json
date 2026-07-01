@@ -1578,16 +1578,6 @@
       "last_close": 6.65
     },
     {
-      "ticker": "1658.HK",
-      "name_cn": "邮储银行",
-      "gics_sector": "Financials",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 3,
-      "last_close": 4.57
-    },
-    {
       "ticker": "3618.HK",
       "name_cn": "重庆农村商业银行",
       "gics_sector": "Financials",
@@ -1596,6 +1586,16 @@
       "emoji": "🔴",
       "days_in_state": 4,
       "last_close": 5.78
+    },
+    {
+      "ticker": "1658.HK",
+      "name_cn": "邮储银行",
+      "gics_sector": "Financials",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 3,
+      "last_close": 4.57
     },
     {
       "ticker": "2318.HK",
@@ -1778,16 +1778,6 @@
       "last_close": 5.48
     },
     {
-      "ticker": "0371.HK",
-      "name_cn": "北控水务集团",
-      "gics_sector": "Utilities",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 3,
-      "last_close": 2.26
-    },
-    {
       "ticker": "0991.HK",
       "name_cn": "大唐",
       "gics_sector": "Utilities",
@@ -1796,6 +1786,16 @@
       "emoji": "🔴",
       "days_in_state": 4,
       "last_close": 2.4
+    },
+    {
+      "ticker": "0371.HK",
+      "name_cn": "北控水务集团",
+      "gics_sector": "Utilities",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 3,
+      "last_close": 2.26
     },
     {
       "ticker": "0586.HK",
@@ -1848,16 +1848,6 @@
       "last_close": 8.81
     },
     {
-      "ticker": "9888.HK",
-      "name_cn": "百度集团-SW",
-      "gics_sector": "Communication Services",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 3,
-      "last_close": 109.6
-    },
-    {
       "ticker": "9618.HK",
       "name_cn": "京东集团-SW",
       "gics_sector": "Consumer Discretionary",
@@ -1866,6 +1856,16 @@
       "emoji": "🔴",
       "days_in_state": 4,
       "last_close": 99.25
+    },
+    {
+      "ticker": "9888.HK",
+      "name_cn": "百度集团-SW",
+      "gics_sector": "Communication Services",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 3,
+      "last_close": 109.6
     },
     {
       "ticker": "1211.HK",
@@ -2168,16 +2168,6 @@
       "last_close": 7.43
     },
     {
-      "ticker": "3993.HK",
-      "name_cn": "洛阳钼业",
-      "gics_sector": "Materials",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 2,
-      "last_close": 15.18
-    },
-    {
       "ticker": "2899.HK",
       "name_cn": "紫金矿业",
       "gics_sector": "Materials",
@@ -2186,6 +2176,16 @@
       "emoji": "🔴",
       "days_in_state": 4,
       "last_close": 27.4
+    },
+    {
+      "ticker": "3993.HK",
+      "name_cn": "洛阳钼业",
+      "gics_sector": "Materials",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 2,
+      "last_close": 15.18
     },
     {
       "ticker": "0358.HK",
@@ -2278,16 +2278,6 @@
       "last_close": 74.3
     },
     {
-      "ticker": "6990.HK",
-      "name_cn": "科伦博泰生物-B",
-      "gics_sector": "Health Care",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 3,
-      "last_close": 436.2
-    },
-    {
       "ticker": "9969.HK",
       "name_cn": "诺诚健华",
       "gics_sector": "Health Care",
@@ -2298,14 +2288,14 @@
       "last_close": 11.86
     },
     {
-      "ticker": "1276.HK",
-      "name_cn": "恒瑞医药",
+      "ticker": "6990.HK",
+      "name_cn": "科伦博泰生物-B",
       "gics_sector": "Health Care",
       "alert_type": "B_EXIT",
       "label": "B·EXIT",
       "emoji": "🔴",
-      "days_in_state": 1,
-      "last_close": 57.85
+      "days_in_state": 3,
+      "last_close": 436.2
     },
     {
       "ticker": "3696.HK",
@@ -2316,6 +2306,16 @@
       "emoji": "🔴",
       "days_in_state": 1,
       "last_close": 39.62
+    },
+    {
+      "ticker": "1276.HK",
+      "name_cn": "恒瑞医药",
+      "gics_sector": "Health Care",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 1,
+      "last_close": 57.85
     },
     {
       "ticker": "2228.HK",
