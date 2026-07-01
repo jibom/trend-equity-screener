@@ -61,8 +61,10 @@ def main():
     print(f"[Hotspot] {len(df_full)} 只有效")
 
     nh = df_full[df_full["pct_high_126"] >= 0.98]
-    first_nh = nh[nh["nh_ratio_126"] < 0.04].sort_values("hotness", ascending=False).head(20)
-    sust_nh = nh[nh["nh_ratio_126"] >= 0.04].sort_values("hotness", ascending=False).head(20)
+    cond_6m = (df_full["pct_high_126"] >= 0.98) & (df_full["nh_ratio_126"] < 0.04)
+    cond_3m = (df_full["pct_high_60"] >= 1.0) & (df_full["nh_ratio_60"] < 0.04)
+    first_nh = df_full[cond_6m | cond_3m].sort_values("hotness", ascending=False).head(20)
+    sust_nh = nh[(nh["nh_ratio_126"] >= 0.04) & (~nh["Ticker"].isin(first_nh["Ticker"]))].sort_values("hotness", ascending=False).head(20)
     top = df_full[df_full["ret_60"] > 0.10].sort_values("hotness", ascending=False).head(20)
 
     part1c1 = [record(r) for _, r in first_nh.iterrows()]

@@ -694,7 +694,7 @@
         yn(e.pct_high_126 >= 1.0), yn(e.pct_high_250 >= 1.0), pctR(e.nh_ratio_126),
         num2(e.amt_surge) + 'x', num2(e.amt_rank), signedR(e.ret_60), ma10warn(e.days_below_ma10), `<b>${num2(e.hotness)}</b>`];
       const p1c1 = d.part1c1 || [];
-      html += trendSection('Part 1c-1 · 首次新高 (6月新高, 近6月新高天数<4%, hotness 排序, ≤20)', p1c1.length,
+      html += trendSection('Part 1c-1 · 首次新高 (6月新高≤2% OR 3月新高=最高, 首次天数<4%, hotness 排序, ≤20)', p1c1.length,
         trendTable(p1cCols, p1c1.map(e => p1cRow(e, 'part1c1'))));
       const p1c2 = d.part1c2 || [];
       html += trendSection('Part 1c-2 · 持续新高 (6月新高, 近6月新高天数≥4%, hotness 排序, ≤20)', p1c2.length,
@@ -860,7 +860,7 @@
         yn(e.pct_high_126 >= 1.0), yn(e.pct_high_250 >= 1.0), pctR(e.nh_ratio_126),
         num2(e.amt_surge) + 'x', num2(e.amt_rank), signedR(e.ret_60), ma10warn(e.days_below_ma10), `<b>${num2(e.hotness)}</b>`];
       const p1c1 = d.part1c1 || [];
-      html += trendSection('Part 1c-1 · 首次新高 (6月新高, 近6月新高天数<4%, hotness 排序, ≤20)', p1c1.length,
+      html += trendSection('Part 1c-1 · 首次新高 (6月新高≤2% OR 3月新高=最高, 首次天数<4%, hotness 排序, ≤20)', p1c1.length,
         trendTable(cols, p1c1.map(e => row(e, 'part1c1'))));
       const p1c2 = d.part1c2 || [];
       html += trendSection('Part 1c-2 · 持续新高 (6月新高, 近6月新高天数≥4%, hotness 排序, ≤20)', p1c2.length,
@@ -891,7 +891,7 @@
         yn(e.pct_high_126 >= 1.0), yn(e.pct_high_250 >= 1.0), pctR(e.nh_ratio_126),
         num2(e.amt_surge) + 'x', num2(e.amt_rank), signedR(e.ret_60), ma10warn(e.days_below_ma10), `<b>${num2(e.hotness)}</b>`];
       const p1c1 = d.part1c1 || [];
-      html += trendSection('Part 1c-1 · 首次新高 (6月新高, 近6月新高天数<4%, hotness 排序, ≤20)', p1c1.length,
+      html += trendSection('Part 1c-1 · 首次新高 (6月新高≤2% OR 3月新高=最高, 首次天数<4%, hotness 排序, ≤20)', p1c1.length,
         trendTable(cols, p1c1.map(e => row(e, 'part1c1'))));
       const p1c2 = d.part1c2 || [];
       html += trendSection('Part 1c-2 · 持续新高 (6月新高, 近6月新高天数≥4%, hotness 排序, ≤20)', p1c2.length,
@@ -945,7 +945,7 @@
         yn(e.pct_high_126 >= 1.0), yn(e.pct_high_250 >= 1.0), pctR(e.nh_ratio_126),
         num2(e.amt_surge) + 'x', num2(e.amt_rank), signedR(e.ret_60), ma10warn(e.days_below_ma10), `<b>${num2(e.hotness)}</b>`];
       const p1c1 = d.part1c1 || [];
-      html += trendSection('Part 1c-1 · 首次新高 (6月新高, 近6月新高天数<4%, hotness 排序, ≤20)', p1c1.length,
+      html += trendSection('Part 1c-1 · 首次新高 (6月新高≤2% OR 3月新高=最高, 首次天数<4%, hotness 排序, ≤20)', p1c1.length,
         trendTable(p1cCols, p1c1.map(e => p1cRow(e, 'part1c1'))));
       const p1c2 = d.part1c2 || [];
       html += trendSection('Part 1c-2 · 持续新高 (6月新高, 近6月新高天数≥4%, hotness 排序, ≤20)', p1c2.length,

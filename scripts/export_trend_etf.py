@@ -71,9 +71,11 @@ def main():
 
     # Part1c1 首次新高: 6月新高 + 近6月新高天数<4%, 低位优先
     nh = df_full[df_full["pct_high_126"] >= 0.98]
-    first_nh = nh[nh["nh_ratio_126"] < 0.04].sort_values("hotness", ascending=False).head(20)
+    cond_6m = (df_full["pct_high_126"] >= 0.98) & (df_full["nh_ratio_126"] < 0.04)
+    cond_3m = (df_full["pct_high_60"] >= 1.0) & (df_full["nh_ratio_60"] < 0.04)
+    first_nh = df_full[cond_6m | cond_3m].sort_values("hotness", ascending=False).head(20)
     # Part1c2 持续新高: 占比≥4% + 多头排列(ma_stack), hotness 排序
-    sust_nh = nh[nh["nh_ratio_126"] >= 0.04].sort_values("hotness", ascending=False).head(20)
+    sust_nh = nh[(nh["nh_ratio_126"] >= 0.04) & (~nh["Ticker"].isin(first_nh["Ticker"]))].sort_values("hotness", ascending=False).head(20)
     # Part2 趋势向上: 60日>10%, hotness 排序
     top = df_full[df_full["ret_60"] > 0.10].sort_values("hotness", ascending=False).head(20)
 
