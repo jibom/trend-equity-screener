@@ -39,6 +39,7 @@ def record(r):
         "amt_surge": r.get("amt_surge"), "amt_rank": r.get("amt_rank_pct"),
         "ret_60": r.get("ret_60"),
         "ma_aligned": int(r["ma_aligned"]) if r.get("ma_aligned") is not None else 0,
+        "days_below_ma10": int(r.get("days_below_ma10", 0)),
         "ma_stack": int(r["ma_stack"]) if r.get("ma_stack") is not None else 0,
         "hotness": r.get("hotness"),
     })
@@ -71,6 +72,7 @@ def main():
                        "close": r.get("close"), "pct_high_250": r.get("pct_high_250"),
                        "ret_60": r.get("ret_60"),
                        "ma_aligned": int(r["ma_aligned"]) if r.get("ma_aligned") is not None else 0,
+        "days_below_ma10": int(r.get("days_below_ma10", 0)),
                        "hotness": r.get("hotness")})
                   for _, r in df_full.sort_values("hotness", ascending=False).iterrows()]
 

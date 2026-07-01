@@ -154,16 +154,22 @@ def compute_features(g: pd.DataFrame) -> dict | None:
     pct_high_126 = close / high_126 if high_126 > 0 else np.nan
 
     s = pd.Series(c)
-    roll60_max = s.rolling(60, min_periods=60).max()
+    roll60_max = s.rolling(60, min_periods=1).max()
     nh_60 = int((s[-60:] == roll60_max[-60:]).sum())
     nh_ratio_60 = nh_60 / 60.0
     w126 = min(n, 126)
-    roll126_max = s.rolling(w126, min_periods=w126).max()
+    roll126_max = s.rolling(w126, min_periods=1).max()
     nh_126 = int((s[-w126:] == roll126_max[-w126:]).sum())
     nh_ratio_126 = nh_126 / float(w126)
-    roll_long = s.rolling(w250, min_periods=w250).max()
+    roll_long = s.rolling(w250, min_periods=1).max()
     nh_long = int((s[-w250:] == roll_long[-w250:]).sum())
     nh_ratio_250 = nh_long / float(w250)
+    # 连续低于MA10的天数 (从最新日往前数; >3天=警示)
+    ma10_s = s.rolling(10, min_periods=10).mean()
+    days_below_ma10 = 0
+    for v in (s < ma10_s).iloc[::-1]:
+        if pd.isna(v) or not v: break
+        days_below_ma10 += 1
 
     amt_20 = np.nanmean(amt[-20:]); amt_long = np.nanmean(amt[-w250:])
     amt_surge = amt_20 / amt_long if amt_long and amt_long > 0 else np.nan
@@ -188,7 +194,7 @@ def compute_features(g: pd.DataFrame) -> dict | None:
                 nh_ratio_60=nh_ratio_60, nh_ratio_126=nh_ratio_126, nh_ratio_250=nh_ratio_250,
                 amt_20=amt_20, amt_surge=amt_surge, amt_1d=amt_1d, amt_5d=amt_5d,
                 ret_20=ret_20, ret_60=ret_60, ret_120=ret_120,
-                ma_aligned=aligned, ma_stack=ma_stack, close=close, days=n)
+                ma_aligned=aligned, ma_stack=ma_stack, days_below_ma10=days_below_ma10, close=close, days=n)
 
 
 def _amt_long(raw: pd.DataFrame, pool: pd.DataFrame, group_col: str) -> pd.DataFrame:

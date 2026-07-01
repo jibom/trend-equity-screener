@@ -75,6 +75,7 @@ def stock_record(r, with_nh=False):
         "amt_rank": r.get("amt_rank_pct"),
         "ret_60": r.get("ret_60"),
         "ma_aligned": int(r["ma_aligned"]) if r.get("ma_aligned") is not None else 0,
+        "days_below_ma10": int(r.get("days_below_ma10", 0)),
         "hotness": r.get("hotness"),
     }
     if with_nh:
@@ -182,6 +183,7 @@ def main():
             "sector": r["Sector"], "close": r.get("close"), "hotness": r.get("hotness"),
             "ret_60": r.get("ret_60"), "pct_high_250": r.get("pct_high_250"),
             "ma_aligned": int(r["ma_aligned"]) if r.get("ma_aligned") is not None else 0,
+        "days_below_ma10": int(r.get("days_below_ma10", 0)),
         }))
 
     payload = {
