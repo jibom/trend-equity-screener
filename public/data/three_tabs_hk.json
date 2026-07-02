@@ -1598,16 +1598,6 @@
       "last_close": 43.86
     },
     {
-      "ticker": "1658.HK",
-      "name_cn": "邮储银行",
-      "gics_sector": "Financials",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 4,
-      "last_close": 4.63
-    },
-    {
       "ticker": "2318.HK",
       "name_cn": "中国平安",
       "gics_sector": "Financials",
@@ -1616,6 +1606,16 @@
       "emoji": "🔴",
       "days_in_state": 3,
       "last_close": 52.3
+    },
+    {
+      "ticker": "1658.HK",
+      "name_cn": "邮储银行",
+      "gics_sector": "Financials",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 4,
+      "last_close": 4.63
     },
     {
       "ticker": "1299.HK",
@@ -1798,16 +1798,6 @@
       "last_close": 2.27
     },
     {
-      "ticker": "0257.HK",
-      "name_cn": "光大环境",
-      "gics_sector": "Industrials",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 1,
-      "last_close": 4.66
-    },
-    {
       "ticker": "1816.HK",
       "name_cn": "中广核电力",
       "gics_sector": "Utilities",
@@ -1816,6 +1806,16 @@
       "emoji": "🔴",
       "days_in_state": 1,
       "last_close": 2.72
+    },
+    {
+      "ticker": "0257.HK",
+      "name_cn": "光大环境",
+      "gics_sector": "Industrials",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 1,
+      "last_close": 4.66
     },
     {
       "ticker": "0006.HK",
@@ -1998,16 +1998,6 @@
       "last_close": 40.44
     },
     {
-      "ticker": "0291.HK",
-      "name_cn": "华润啤酒",
-      "gics_sector": "Consumer Staples",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 1,
-      "last_close": 21.58
-    },
-    {
       "ticker": "0322.HK",
       "name_cn": "康师傅控股",
       "gics_sector": "Consumer Staples",
@@ -2016,6 +2006,16 @@
       "emoji": "🔴",
       "days_in_state": 3,
       "last_close": 10.16
+    },
+    {
+      "ticker": "0291.HK",
+      "name_cn": "华润啤酒",
+      "gics_sector": "Consumer Staples",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 1,
+      "last_close": 21.58
     },
     {
       "ticker": "0288.HK",
@@ -2028,16 +2028,6 @@
       "last_close": 8.54
     },
     {
-      "ticker": "1579.HK",
-      "name_cn": "颐海国际",
-      "gics_sector": "Consumer Staples",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 2,
-      "last_close": 13.11
-    },
-    {
       "ticker": "2648.HK",
       "name_cn": "安井食品",
       "gics_sector": "Consumer Staples",
@@ -2046,6 +2036,16 @@
       "emoji": "🔴",
       "days_in_state": 2,
       "last_close": 65.9
+    },
+    {
+      "ticker": "1579.HK",
+      "name_cn": "颐海国际",
+      "gics_sector": "Consumer Staples",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 2,
+      "last_close": 13.11
     },
     {
       "ticker": "2057.HK",
