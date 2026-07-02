@@ -333,13 +333,13 @@
       "pct_high_250": 0.991,
       "pct_high_126": 0.991,
       "nh_ratio_126": 0.27,
-      "amt_surge": 0.98,
+      "amt_surge": 0.984,
       "amt_rank": 0.801,
       "ret_60": 0.104,
       "ma_aligned": 1,
       "days_below_ma10": 0,
       "ma_stack": 1,
-      "hotness": 0.509
+      "hotness": 0.51
     },
     {
       "ticker": "RSP.US",
@@ -1055,13 +1055,13 @@
       "pct_high_250": 0.991,
       "pct_high_126": 0.991,
       "nh_ratio_126": 0.27,
-      "amt_surge": 0.98,
+      "amt_surge": 0.984,
       "amt_rank": 0.801,
       "ret_60": 0.104,
       "ma_aligned": 1,
       "days_below_ma10": 0,
       "ma_stack": 1,
-      "hotness": 0.509
+      "hotness": 0.51
     },
     {
       "ticker": "QTUM.US",
@@ -1072,12 +1072,12 @@
       "pct_high_126": 0.952,
       "nh_ratio_126": 0.23,
       "amt_surge": 2.16,
-      "amt_rank": 0.273,
+      "amt_rank": 0.267,
       "ret_60": 0.452,
       "ma_aligned": 1,
       "days_below_ma10": 1,
       "ma_stack": 0,
-      "hotness": 0.496
+      "hotness": 0.491
     },
     {
       "ticker": "RSP.US",
@@ -1414,7 +1414,7 @@
       "ret_60": 0.104,
       "ma_aligned": 1,
       "days_below_ma10": 0,
-      "hotness": 0.509
+      "hotness": 0.51
     },
     {
       "ticker": "QTUM.US",
@@ -1425,7 +1425,7 @@
       "ret_60": 0.452,
       "ma_aligned": 1,
       "days_below_ma10": 1,
-      "hotness": 0.496
+      "hotness": 0.491
     },
     {
       "ticker": "RSP.US",
@@ -1934,17 +1934,6 @@
       "hotness": 0.172
     },
     {
-      "ticker": "EWJ.US",
-      "name": "iShares MSCI Japan ETF",
-      "sub_industry": "Japan Stock",
-      "close": 93.05,
-      "pct_high_250": 0.96,
-      "ret_60": 0.093,
-      "ma_aligned": 1,
-      "days_below_ma10": 7,
-      "hotness": 0.159
-    },
-    {
       "ticker": "VO.US",
       "name": "Vanguard Mid-Cap Index Fund ETF Shar",
       "sub_industry": "Mid-Cap Blend",
@@ -1953,6 +1942,17 @@
       "ret_60": 0.107,
       "ma_aligned": 1,
       "days_below_ma10": 0,
+      "hotness": 0.164
+    },
+    {
+      "ticker": "EWJ.US",
+      "name": "iShares MSCI Japan ETF",
+      "sub_industry": "Japan Stock",
+      "close": 93.05,
+      "pct_high_250": 0.96,
+      "ret_60": 0.093,
+      "ma_aligned": 1,
+      "days_below_ma10": 7,
       "hotness": 0.159
     },
     {
@@ -2044,17 +2044,6 @@
       "hotness": 0.065
     },
     {
-      "ticker": "VYM.US",
-      "name": "Vanguard High Dividend Yield Index F",
-      "sub_industry": "FTSE High Dividend Yield",
-      "close": 158.24,
-      "pct_high_250": 0.988,
-      "ret_60": 0.071,
-      "ma_aligned": 0,
-      "days_below_ma10": 4,
-      "hotness": 0.04
-    },
-    {
       "ticker": "FBT.US",
       "name": "First Trust NYSE Arca Biotechnology ",
       "sub_industry": "Health",
@@ -2077,6 +2066,28 @@
       "hotness": 0.037
     },
     {
+      "ticker": "VYM.US",
+      "name": "Vanguard High Dividend Yield Index F",
+      "sub_industry": "FTSE High Dividend Yield",
+      "close": 158.24,
+      "pct_high_250": 0.988,
+      "ret_60": 0.071,
+      "ma_aligned": 0,
+      "days_below_ma10": 4,
+      "hotness": 0.035
+    },
+    {
+      "ticker": "VBK.US",
+      "name": "Vanguard Small-Cap Growth Index Fund",
+      "sub_industry": "Small Growth",
+      "close": 362.32,
+      "pct_high_250": 0.991,
+      "ret_60": 0.177,
+      "ma_aligned": 1,
+      "days_below_ma10": 0,
+      "hotness": 0.033
+    },
+    {
       "ticker": "XLRE.US",
       "name": "The Real Estate Select Sector SPDR F",
       "sub_industry": "S&P Real Estate",
@@ -2095,17 +2106,6 @@
       "pct_high_250": 0.932,
       "ret_60": 0.137,
       "ma_aligned": 0,
-      "days_below_ma10": 0,
-      "hotness": 0.027
-    },
-    {
-      "ticker": "VBK.US",
-      "name": "Vanguard Small-Cap Growth Index Fund",
-      "sub_industry": "Small Growth",
-      "close": 362.32,
-      "pct_high_250": 0.991,
-      "ret_60": 0.177,
-      "ma_aligned": 1,
       "days_below_ma10": 0,
       "hotness": 0.027
     },
@@ -2239,7 +2239,7 @@
       "ret_60": -0.024,
       "ma_aligned": 0,
       "days_below_ma10": 1,
-      "hotness": -0.066
+      "hotness": -0.067
     },
     {
       "ticker": "IWP.US",
@@ -2305,7 +2305,7 @@
       "ret_60": 0.015,
       "ma_aligned": 0,
       "days_below_ma10": 2,
-      "hotness": -0.097
+      "hotness": -0.098
     },
     {
       "ticker": "IJJ.US",
@@ -2514,7 +2514,7 @@
       "ret_60": 0.011,
       "ma_aligned": 0,
       "days_below_ma10": 0,
-      "hotness": -0.256
+      "hotness": -0.255
     },
     {
       "ticker": "EWZ.US",
