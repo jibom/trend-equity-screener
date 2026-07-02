@@ -1798,16 +1798,6 @@
       "last_close": 2.27
     },
     {
-      "ticker": "1816.HK",
-      "name_cn": "中广核电力",
-      "gics_sector": "Utilities",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 1,
-      "last_close": 2.72
-    },
-    {
       "ticker": "0257.HK",
       "name_cn": "光大环境",
       "gics_sector": "Industrials",
@@ -1816,6 +1806,16 @@
       "emoji": "🔴",
       "days_in_state": 1,
       "last_close": 4.66
+    },
+    {
+      "ticker": "1816.HK",
+      "name_cn": "中广核电力",
+      "gics_sector": "Utilities",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 1,
+      "last_close": 2.72
     },
     {
       "ticker": "0006.HK",
@@ -2288,16 +2288,6 @@
       "last_close": 94.8
     },
     {
-      "ticker": "9969.HK",
-      "name_cn": "诺诚健华",
-      "gics_sector": "Health Care",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 2,
-      "last_close": 12.34
-    },
-    {
       "ticker": "6990.HK",
       "name_cn": "科伦博泰生物-B",
       "gics_sector": "Health Care",
@@ -2308,14 +2298,14 @@
       "last_close": 467.6
     },
     {
-      "ticker": "3696.HK",
-      "name_cn": "英矽智能",
+      "ticker": "9969.HK",
+      "name_cn": "诺诚健华",
       "gics_sector": "Health Care",
       "alert_type": "B_EXIT",
       "label": "B·EXIT",
       "emoji": "🔴",
       "days_in_state": 2,
-      "last_close": 38.0
+      "last_close": 12.34
     },
     {
       "ticker": "1276.HK",
@@ -2326,6 +2316,16 @@
       "emoji": "🔴",
       "days_in_state": 2,
       "last_close": 59.4
+    },
+    {
+      "ticker": "3696.HK",
+      "name_cn": "英矽智能",
+      "gics_sector": "Health Care",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 2,
+      "last_close": 38.0
     },
     {
       "ticker": "2228.HK",

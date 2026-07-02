@@ -97,7 +97,7 @@
       "ma_aligned": 0,
       "days_below_ma10": 0,
       "ma_stack": 1,
-      "hotness": -0.202
+      "hotness": -0.203
     },
     {
       "ticker": "RSPF.US",
@@ -430,12 +430,12 @@
       "pct_high_126": 1.0,
       "nh_ratio_126": 0.079,
       "amt_surge": 1.898,
-      "amt_rank": 0.528,
+      "amt_rank": 0.523,
       "ret_60": 0.563,
       "ma_aligned": 1,
       "days_below_ma10": 0,
       "ma_stack": 1,
-      "hotness": 0.407
+      "hotness": 0.403
     },
     {
       "ticker": "QUAL.US",
@@ -574,12 +574,12 @@
       "pct_high_126": 0.993,
       "nh_ratio_126": 0.175,
       "amt_surge": 1.288,
-      "amt_rank": 0.534,
+      "amt_rank": 0.528,
       "ret_60": 0.225,
       "ma_aligned": 1,
       "days_below_ma10": 0,
       "ma_stack": 1,
-      "hotness": 0.3
+      "hotness": 0.295
     },
     {
       "ticker": "DYNF.US",
@@ -606,12 +606,12 @@
       "pct_high_126": 0.995,
       "nh_ratio_126": 0.214,
       "amt_surge": 1.063,
-      "amt_rank": 0.545,
+      "amt_rank": 0.54,
       "ret_60": 0.139,
       "ma_aligned": 1,
       "days_below_ma10": 0,
       "ma_stack": 1,
-      "hotness": 0.285
+      "hotness": 0.28
     }
   ],
   "part2": [
@@ -709,7 +709,7 @@
       "ma_aligned": 1,
       "days_below_ma10": 1,
       "ma_stack": 0,
-      "hotness": 0.892
+      "hotness": 0.891
     },
     {
       "ticker": "DRAM.US",
@@ -1161,7 +1161,7 @@
       "ret_60": 2.969,
       "ma_aligned": 1,
       "days_below_ma10": 1,
-      "hotness": 0.892
+      "hotness": 0.891
     },
     {
       "ticker": "DRAM.US",
@@ -1557,7 +1557,7 @@
       "ret_60": 0.563,
       "ma_aligned": 1,
       "days_below_ma10": 0,
-      "hotness": 0.407
+      "hotness": 0.403
     },
     {
       "ticker": "QUAL.US",
@@ -1700,7 +1700,7 @@
       "ret_60": 0.225,
       "ma_aligned": 1,
       "days_below_ma10": 0,
-      "hotness": 0.3
+      "hotness": 0.295
     },
     {
       "ticker": "DYNF.US",
@@ -1722,7 +1722,7 @@
       "ret_60": 0.139,
       "ma_aligned": 1,
       "days_below_ma10": 0,
-      "hotness": 0.285
+      "hotness": 0.28
     },
     {
       "ticker": "IJH.US",
@@ -2008,7 +2008,7 @@
       "ret_60": 0.126,
       "ma_aligned": 1,
       "days_below_ma10": 0,
-      "hotness": 0.099
+      "hotness": 0.098
     },
     {
       "ticker": "AIA.US",
@@ -2162,7 +2162,7 @@
       "ret_60": 0.091,
       "ma_aligned": 1,
       "days_below_ma10": 1,
-      "hotness": -0.027
+      "hotness": -0.032
     },
     {
       "ticker": "XLY.US",
@@ -2448,7 +2448,7 @@
       "ret_60": 0.04,
       "ma_aligned": 0,
       "days_below_ma10": 0,
-      "hotness": -0.202
+      "hotness": -0.203
     },
     {
       "ticker": "BITO.US",
@@ -2591,7 +2591,7 @@
       "ret_60": -0.133,
       "ma_aligned": 0,
       "days_below_ma10": 10,
-      "hotness": -0.385
+      "hotness": -0.386
     },
     {
       "ticker": "INDA.US",
@@ -2602,7 +2602,7 @@
       "ret_60": 0.041,
       "ma_aligned": 0,
       "days_below_ma10": 3,
-      "hotness": -0.419
+      "hotness": -0.424
     },
     {
       "ticker": "RSPN.US",
@@ -2625,6 +2625,17 @@
       "ma_aligned": 0,
       "days_below_ma10": 18,
       "hotness": -0.439
+    },
+    {
+      "ticker": "COPX.US",
+      "name": "Global X Copper Miners ETF",
+      "sub_industry": "Natural Resources",
+      "close": 75.29,
+      "pct_high_250": 0.789,
+      "ret_60": -0.015,
+      "ma_aligned": 0,
+      "days_below_ma10": 7,
+      "hotness": -0.471
     },
     {
       "ticker": "YANG.US",
@@ -2660,17 +2671,6 @@
       "hotness": -0.494
     },
     {
-      "ticker": "COPX.US",
-      "name": "Global X Copper Miners ETF",
-      "sub_industry": "Natural Resources",
-      "close": 75.29,
-      "pct_high_250": 0.789,
-      "ret_60": -0.015,
-      "ma_aligned": 0,
-      "days_below_ma10": 7,
-      "hotness": -0.502
-    },
-    {
       "ticker": "RSPD.US",
       "name": "Invesco S&P 500 Equal Weight Co",
       "sub_industry": "S&P 500 EW Consumer Disc",
@@ -2690,7 +2690,7 @@
       "ret_60": 0.134,
       "ma_aligned": 0,
       "days_below_ma10": 0,
-      "hotness": -0.536
+      "hotness": -0.535
     },
     {
       "ticker": "SMIN.US",
@@ -2943,7 +2943,7 @@
       "ret_60": -0.112,
       "ma_aligned": 0,
       "days_below_ma10": 7,
-      "hotness": -0.982
+      "hotness": -0.983
     },
     {
       "ticker": "FBTC.US",
@@ -2965,7 +2965,7 @@
       "ret_60": 0.013,
       "ma_aligned": 0,
       "days_below_ma10": 1,
-      "hotness": -1.202
+      "hotness": -1.203
     },
     {
       "ticker": "VXX.US",
