@@ -1998,16 +1998,6 @@
       "last_close": 40.44
     },
     {
-      "ticker": "0322.HK",
-      "name_cn": "康师傅控股",
-      "gics_sector": "Consumer Staples",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 3,
-      "last_close": 10.16
-    },
-    {
       "ticker": "0291.HK",
       "name_cn": "华润啤酒",
       "gics_sector": "Consumer Staples",
@@ -2016,6 +2006,16 @@
       "emoji": "🔴",
       "days_in_state": 1,
       "last_close": 21.58
+    },
+    {
+      "ticker": "0322.HK",
+      "name_cn": "康师傅控股",
+      "gics_sector": "Consumer Staples",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 3,
+      "last_close": 10.16
     },
     {
       "ticker": "0288.HK",
@@ -2028,16 +2028,6 @@
       "last_close": 8.54
     },
     {
-      "ticker": "2648.HK",
-      "name_cn": "安井食品",
-      "gics_sector": "Consumer Staples",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 2,
-      "last_close": 65.9
-    },
-    {
       "ticker": "1579.HK",
       "name_cn": "颐海国际",
       "gics_sector": "Consumer Staples",
@@ -2046,6 +2036,16 @@
       "emoji": "🔴",
       "days_in_state": 2,
       "last_close": 13.11
+    },
+    {
+      "ticker": "2648.HK",
+      "name_cn": "安井食品",
+      "gics_sector": "Consumer Staples",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 2,
+      "last_close": 65.9
     },
     {
       "ticker": "2057.HK",
@@ -2308,16 +2308,6 @@
       "last_close": 12.34
     },
     {
-      "ticker": "1276.HK",
-      "name_cn": "恒瑞医药",
-      "gics_sector": "Health Care",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 2,
-      "last_close": 59.4
-    },
-    {
       "ticker": "3696.HK",
       "name_cn": "英矽智能",
       "gics_sector": "Health Care",
@@ -2326,6 +2316,16 @@
       "emoji": "🔴",
       "days_in_state": 2,
       "last_close": 38.0
+    },
+    {
+      "ticker": "1276.HK",
+      "name_cn": "恒瑞医药",
+      "gics_sector": "Health Care",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 2,
+      "last_close": 59.4
     },
     {
       "ticker": "2228.HK",
