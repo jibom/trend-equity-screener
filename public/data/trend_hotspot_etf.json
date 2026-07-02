@@ -17,7 +17,7 @@
       "ma_aligned": 0,
       "days_below_ma10": 0,
       "ma_stack": 0,
-      "hotness": 0.259
+      "hotness": 0.258
     },
     {
       "ticker": "IWP.US",
@@ -33,7 +33,7 @@
       "ma_aligned": 1,
       "days_below_ma10": 0,
       "ma_stack": 0,
-      "hotness": -0.074
+      "hotness": -0.075
     },
     {
       "ticker": "RSPH.US",
@@ -150,6 +150,22 @@
       "hotness": 1.112
     },
     {
+      "ticker": "JEPQ.US",
+      "name": "JPMorgan Nasdaq Equity Premium Incom",
+      "sub_industry": "Derivative Income",
+      "close": 60.2,
+      "pct_high_250": 0.99,
+      "pct_high_126": 0.99,
+      "nh_ratio_126": 0.278,
+      "amt_surge": 1.242,
+      "amt_rank": 0.653,
+      "ret_60": 0.109,
+      "ma_aligned": 1,
+      "days_below_ma10": 0,
+      "ma_stack": 1,
+      "hotness": 0.835
+    },
+    {
       "ticker": "SPY.US",
       "name": "SPDR S&P 500 ETF Trust",
       "sub_industry": "S&P 500",
@@ -195,7 +211,7 @@
       "ma_aligned": 1,
       "days_below_ma10": 0,
       "ma_stack": 1,
-      "hotness": 0.699
+      "hotness": 0.698
     },
     {
       "ticker": "IJR.US",
@@ -221,7 +237,7 @@
       "pct_high_250": 0.989,
       "pct_high_126": 0.989,
       "nh_ratio_126": 0.19,
-      "amt_surge": 0.896,
+      "amt_surge": 0.897,
       "amt_rank": 0.864,
       "ret_60": 0.139,
       "ma_aligned": 0,
@@ -275,7 +291,7 @@
       "ma_aligned": 1,
       "days_below_ma10": 0,
       "ma_stack": 1,
-      "hotness": 0.572
+      "hotness": 0.571
     },
     {
       "ticker": "SCHB.US",
@@ -387,7 +403,7 @@
       "ma_aligned": 0,
       "days_below_ma10": 0,
       "ma_stack": 1,
-      "hotness": 0.419
+      "hotness": 0.418
     },
     {
       "ticker": "MDY.US",
@@ -419,7 +435,7 @@
       "ma_aligned": 1,
       "days_below_ma10": 0,
       "ma_stack": 1,
-      "hotness": 0.408
+      "hotness": 0.407
     },
     {
       "ticker": "QUAL.US",
@@ -547,7 +563,7 @@
       "ma_aligned": 0,
       "days_below_ma10": 0,
       "ma_stack": 1,
-      "hotness": 0.345
+      "hotness": 0.344
     },
     {
       "ticker": "IWO.US",
@@ -596,22 +612,6 @@
       "days_below_ma10": 0,
       "ma_stack": 1,
       "hotness": 0.285
-    },
-    {
-      "ticker": "IJH.US",
-      "name": "iShares Core S&P Mid-Cap ETF",
-      "sub_industry": "Mid-Cap Blend",
-      "close": 76.44,
-      "pct_high_250": 0.991,
-      "pct_high_126": 0.991,
-      "nh_ratio_126": 0.19,
-      "amt_surge": 0.874,
-      "amt_rank": 0.716,
-      "ret_60": 0.119,
-      "ma_aligned": 1,
-      "days_below_ma10": 0,
-      "ma_stack": 1,
-      "hotness": 0.28
     }
   ],
   "part2": [
@@ -645,7 +645,7 @@
       "ma_aligned": 1,
       "days_below_ma10": 2,
       "ma_stack": 0,
-      "hotness": 1.235
+      "hotness": 1.234
     },
     {
       "ticker": "SMH.US",
@@ -726,6 +726,22 @@
       "days_below_ma10": 1,
       "ma_stack": 0,
       "hotness": 0.846
+    },
+    {
+      "ticker": "JEPQ.US",
+      "name": "JPMorgan Nasdaq Equity Premium Incom",
+      "sub_industry": "Derivative Income",
+      "close": 60.2,
+      "pct_high_250": 0.99,
+      "pct_high_126": 0.99,
+      "nh_ratio_126": 0.278,
+      "amt_surge": 1.242,
+      "amt_rank": 0.653,
+      "ret_60": 0.109,
+      "ma_aligned": 1,
+      "days_below_ma10": 0,
+      "ma_stack": 1,
+      "hotness": 0.835
     },
     {
       "ticker": "EWT.US",
@@ -853,7 +869,7 @@
       "ma_aligned": 1,
       "days_below_ma10": 0,
       "ma_stack": 1,
-      "hotness": 0.699
+      "hotness": 0.698
     },
     {
       "ticker": "IJR.US",
@@ -879,7 +895,7 @@
       "pct_high_250": 0.989,
       "pct_high_126": 0.989,
       "nh_ratio_126": 0.19,
-      "amt_surge": 0.896,
+      "amt_surge": 0.897,
       "amt_rank": 0.864,
       "ret_60": 0.139,
       "ma_aligned": 0,
@@ -933,7 +949,7 @@
       "ma_aligned": 0,
       "days_below_ma10": 0,
       "ma_stack": 0,
-      "hotness": 0.619
+      "hotness": 0.618
     },
     {
       "ticker": "DIA.US",
@@ -965,7 +981,7 @@
       "ma_aligned": 1,
       "days_below_ma10": 0,
       "ma_stack": 1,
-      "hotness": 0.572
+      "hotness": 0.571
     },
     {
       "ticker": "TQQQ.US",
@@ -1078,22 +1094,6 @@
       "days_below_ma10": 0,
       "ma_stack": 1,
       "hotness": 0.486
-    },
-    {
-      "ticker": "DTCR.US",
-      "name": "Global X Data Center & Digital Infra",
-      "sub_industry": "Real Estate",
-      "close": 29.49,
-      "pct_high_250": 0.912,
-      "pct_high_126": 0.912,
-      "nh_ratio_126": 0.27,
-      "amt_surge": 2.768,
-      "amt_rank": 0.159,
-      "ret_60": 0.188,
-      "ma_aligned": 0,
-      "days_below_ma10": 6,
-      "ma_stack": 0,
-      "hotness": 0.461
     }
   ],
   "all_stocks": [
@@ -1117,7 +1117,7 @@
       "ret_60": 0.341,
       "ma_aligned": 1,
       "days_below_ma10": 2,
-      "hotness": 1.235
+      "hotness": 1.234
     },
     {
       "ticker": "SMH.US",
@@ -1186,6 +1186,17 @@
       "hotness": 0.837
     },
     {
+      "ticker": "JEPQ.US",
+      "name": "JPMorgan Nasdaq Equity Premium Incom",
+      "sub_industry": "Derivative Income",
+      "close": 60.2,
+      "pct_high_250": 0.99,
+      "ret_60": 0.109,
+      "ma_aligned": 1,
+      "days_below_ma10": 0,
+      "hotness": 0.835
+    },
+    {
       "ticker": "EWT.US",
       "name": "iShares MSCI Taiwan ETF",
       "sub_industry": "Greater China Region",
@@ -1195,17 +1206,6 @@
       "ma_aligned": 1,
       "days_below_ma10": 1,
       "hotness": 0.833
-    },
-    {
-      "ticker": "JEPQ.US",
-      "name": "JPMorgan Nasdaq Equity Premium Incom",
-      "sub_industry": "Derivative Income",
-      "close": 60.2,
-      "pct_high_250": 0.979,
-      "ret_60": 0.098,
-      "ma_aligned": 1,
-      "days_below_ma10": 1,
-      "hotness": 0.817
     },
     {
       "ticker": "QQQ.US",
@@ -1282,7 +1282,7 @@
       "ret_60": 0.189,
       "ma_aligned": 1,
       "days_below_ma10": 0,
-      "hotness": 0.699
+      "hotness": 0.698
     },
     {
       "ticker": "IJR.US",
@@ -1337,7 +1337,7 @@
       "ret_60": 0.311,
       "ma_aligned": 0,
       "days_below_ma10": 0,
-      "hotness": 0.619
+      "hotness": 0.618
     },
     {
       "ticker": "DIA.US",
@@ -1359,7 +1359,7 @@
       "ret_60": 0.217,
       "ma_aligned": 1,
       "days_below_ma10": 0,
-      "hotness": 0.572
+      "hotness": 0.571
     },
     {
       "ticker": "TQQQ.US",
@@ -1480,7 +1480,7 @@
       "ret_60": 0.483,
       "ma_aligned": 0,
       "days_below_ma10": 0,
-      "hotness": 0.449
+      "hotness": 0.448
     },
     {
       "ticker": "SPGM.US",
@@ -1524,7 +1524,7 @@
       "ret_60": 0.139,
       "ma_aligned": 0,
       "days_below_ma10": 0,
-      "hotness": 0.419
+      "hotness": 0.418
     },
     {
       "ticker": "MDY.US",
@@ -1557,7 +1557,7 @@
       "ret_60": 0.563,
       "ma_aligned": 1,
       "days_below_ma10": 0,
-      "hotness": 0.408
+      "hotness": 0.407
     },
     {
       "ticker": "QUAL.US",
@@ -1604,17 +1604,6 @@
       "hotness": 0.374
     },
     {
-      "ticker": "ACWI.US",
-      "name": "iShares MSCI ACWI ETF",
-      "sub_industry": "MSCI ACWI",
-      "close": 156.12,
-      "pct_high_250": 0.982,
-      "ret_60": 0.121,
-      "ma_aligned": 0,
-      "days_below_ma10": 0,
-      "hotness": 0.363
-    },
-    {
       "ticker": "AIQ.US",
       "name": "Global X Artificial Intelligence & T",
       "sub_industry": "Technology",
@@ -1623,6 +1612,17 @@
       "ret_60": 0.333,
       "ma_aligned": 0,
       "days_below_ma10": 1,
+      "hotness": 0.363
+    },
+    {
+      "ticker": "ACWI.US",
+      "name": "iShares MSCI ACWI ETF",
+      "sub_industry": "MSCI ACWI",
+      "close": 156.12,
+      "pct_high_250": 0.982,
+      "ret_60": 0.121,
+      "ma_aligned": 0,
+      "days_below_ma10": 0,
       "hotness": 0.363
     },
     {
@@ -1656,7 +1656,7 @@
       "ret_60": 0.115,
       "ma_aligned": 0,
       "days_below_ma10": 0,
-      "hotness": 0.345
+      "hotness": 0.344
     },
     {
       "ticker": "IBAT.US",
@@ -1733,7 +1733,7 @@
       "ret_60": 0.119,
       "ma_aligned": 1,
       "days_below_ma10": 0,
-      "hotness": 0.28
+      "hotness": 0.279
     },
     {
       "ticker": "IWV.US",
@@ -1766,7 +1766,7 @@
       "ret_60": 0.095,
       "ma_aligned": 0,
       "days_below_ma10": 0,
-      "hotness": 0.259
+      "hotness": 0.258
     },
     {
       "ticker": "IJS.US",
@@ -1799,7 +1799,7 @@
       "ret_60": 0.119,
       "ma_aligned": 1,
       "days_below_ma10": 0,
-      "hotness": 0.237
+      "hotness": 0.236
     },
     {
       "ticker": "MAGS.US",
@@ -1810,7 +1810,7 @@
       "ret_60": 0.128,
       "ma_aligned": 0,
       "days_below_ma10": 0,
-      "hotness": 0.231
+      "hotness": 0.23
     },
     {
       "ticker": "SPSM.US",
@@ -1832,7 +1832,7 @@
       "ret_60": 0.117,
       "ma_aligned": 1,
       "days_below_ma10": 0,
-      "hotness": 0.218
+      "hotness": 0.217
     },
     {
       "ticker": "EFA.US",
@@ -1843,7 +1843,7 @@
       "ret_60": 0.063,
       "ma_aligned": 1,
       "days_below_ma10": 1,
-      "hotness": 0.214
+      "hotness": 0.213
     },
     {
       "ticker": "VEA.US",
@@ -2096,7 +2096,7 @@
       "ret_60": 0.137,
       "ma_aligned": 0,
       "days_below_ma10": 0,
-      "hotness": 0.028
+      "hotness": 0.027
     },
     {
       "ticker": "VBK.US",
@@ -2140,7 +2140,7 @@
       "ret_60": 0.123,
       "ma_aligned": 1,
       "days_below_ma10": 1,
-      "hotness": -0.011
+      "hotness": -0.012
     },
     {
       "ticker": "OEF.US",
@@ -2151,7 +2151,7 @@
       "ret_60": 0.139,
       "ma_aligned": 0,
       "days_below_ma10": 0,
-      "hotness": -0.017
+      "hotness": -0.018
     },
     {
       "ticker": "IXUS.US",
@@ -2195,7 +2195,7 @@
       "ret_60": 0.16,
       "ma_aligned": 0,
       "days_below_ma10": 0,
-      "hotness": -0.046
+      "hotness": -0.047
     },
     {
       "ticker": "SPMD.US",
@@ -2250,7 +2250,7 @@
       "ret_60": 0.118,
       "ma_aligned": 1,
       "days_below_ma10": 0,
-      "hotness": -0.074
+      "hotness": -0.075
     },
     {
       "ticker": "XLB.US",
@@ -2261,7 +2261,7 @@
       "ret_60": 0.02,
       "ma_aligned": 0,
       "days_below_ma10": 4,
-      "hotness": -0.075
+      "hotness": -0.076
     },
     {
       "ticker": "XRT.US",
@@ -2272,7 +2272,7 @@
       "ret_60": 0.076,
       "ma_aligned": 1,
       "days_below_ma10": 0,
-      "hotness": -0.075
+      "hotness": -0.076
     },
     {
       "ticker": "EFV.US",
@@ -2283,7 +2283,7 @@
       "ret_60": 0.04,
       "ma_aligned": 0,
       "days_below_ma10": 0,
-      "hotness": -0.083
+      "hotness": -0.084
     },
     {
       "ticker": "IXJ.US",
@@ -2393,7 +2393,7 @@
       "ret_60": -0.015,
       "ma_aligned": 0,
       "days_below_ma10": 0,
-      "hotness": -0.175
+      "hotness": -0.176
     },
     {
       "ticker": "RSPR.US",
@@ -2456,10 +2456,10 @@
       "sub_industry": "Digital Assets",
       "close": 8.13,
       "pct_high_250": 0.464,
-      "ret_60": -0.149,
+      "ret_60": -0.148,
       "ma_aligned": 0,
       "days_below_ma10": 7,
-      "hotness": -0.212
+      "hotness": -0.21
     },
     {
       "ticker": "ITA.US",
@@ -2510,11 +2510,11 @@
       "name": "JPMorgan Equity Premium Income ETF",
       "sub_industry": "Derivative Income",
       "close": 56.12,
-      "pct_high_250": 0.964,
-      "ret_60": 0.004,
+      "pct_high_250": 0.971,
+      "ret_60": 0.011,
       "ma_aligned": 0,
-      "days_below_ma10": 1,
-      "hotness": -0.267
+      "days_below_ma10": 0,
+      "hotness": -0.256
     },
     {
       "ticker": "EWZ.US",
@@ -2690,7 +2690,7 @@
       "ret_60": 0.134,
       "ma_aligned": 0,
       "days_below_ma10": 0,
-      "hotness": -0.535
+      "hotness": -0.536
     },
     {
       "ticker": "SMIN.US",
@@ -2767,7 +2767,7 @@
       "ret_60": -0.071,
       "ma_aligned": 0,
       "days_below_ma10": 11,
-      "hotness": -0.677
+      "hotness": -0.678
     },
     {
       "ticker": "RSPS.US",
@@ -2778,7 +2778,7 @@
       "ret_60": 0.027,
       "ma_aligned": 0,
       "days_below_ma10": 0,
-      "hotness": -0.696
+      "hotness": -0.697
     },
     {
       "ticker": "PSQ.US",
@@ -2800,7 +2800,7 @@
       "ret_60": -0.034,
       "ma_aligned": 0,
       "days_below_ma10": 0,
-      "hotness": -0.712
+      "hotness": -0.713
     },
     {
       "ticker": "KWEB.US",
@@ -2855,7 +2855,7 @@
       "ret_60": -0.179,
       "ma_aligned": 0,
       "days_below_ma10": 0,
-      "hotness": -0.754
+      "hotness": -0.755
     },
     {
       "ticker": "RSPC.US",
