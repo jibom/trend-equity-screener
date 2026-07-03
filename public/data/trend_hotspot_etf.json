@@ -2225,11 +2225,11 @@
       "name": "Capital Group Growth ETF",
       "sub_industry": "Large Growth",
       "close": 46.53,
-      "pct_high_250": 0.974,
+      "pct_high_250": 0.975,
       "ret_60": 0.145,
       "ma_aligned": 0,
       "days_below_ma10": 0,
-      "hotness": -0.057
+      "hotness": -0.056
     },
     {
       "ticker": "IXUS.US",
