@@ -11,13 +11,13 @@
       "pct_high_250": 1.0,
       "pct_high_126": 1.0,
       "nh_ratio_126": 0.04,
-      "amt_surge": 0.979,
-      "amt_rank": 0.932,
+      "amt_surge": 0.989,
+      "amt_rank": 0.938,
       "ret_60": 0.122,
       "ma_aligned": 0,
       "days_below_ma10": 0,
       "ma_stack": 0,
-      "hotness": 0.317
+      "hotness": 0.324
     },
     {
       "ticker": "XLF.US",
@@ -28,12 +28,12 @@
       "pct_high_126": 0.995,
       "nh_ratio_126": 0.016,
       "amt_surge": 0.935,
-      "amt_rank": 0.926,
+      "amt_rank": 0.92,
       "ret_60": 0.119,
       "ma_aligned": 1,
       "days_below_ma10": 0,
       "ma_stack": 0,
-      "hotness": 0.259
+      "hotness": 0.254
     },
     {
       "ticker": "VHT.US",
@@ -44,18 +44,18 @@
       "pct_high_126": 1.0,
       "nh_ratio_126": 0.032,
       "amt_surge": 1.342,
-      "amt_rank": 0.324,
+      "amt_rank": 0.312,
       "ret_60": 0.134,
       "ma_aligned": 1,
       "days_below_ma10": 0,
       "ma_stack": 1,
-      "hotness": -0.046
+      "hotness": -0.056
     },
     {
       "ticker": "RSPF.US",
       "name": "Invesco S&P 500 Equal Weight Fi",
       "sub_industry": "S&P 500 EW Financials",
-      "close": 81.072,
+      "close": 81.07,
       "pct_high_250": 1.0,
       "pct_high_126": 1.0,
       "nh_ratio_126": 0.024,
@@ -65,7 +65,7 @@
       "ma_aligned": 1,
       "days_below_ma10": 0,
       "ma_stack": 0,
-      "hotness": -0.144
+      "hotness": -0.145
     },
     {
       "ticker": "JEPI.US",
@@ -141,13 +141,13 @@
       "pct_high_250": 0.983,
       "pct_high_126": 0.983,
       "nh_ratio_126": 0.19,
-      "amt_surge": 0.956,
+      "amt_surge": 0.963,
       "amt_rank": 1.0,
       "ret_60": 0.133,
       "ma_aligned": 0,
       "days_below_ma10": 0,
       "ma_stack": 1,
-      "hotness": 0.792
+      "hotness": 0.793
     },
     {
       "ticker": "IWM.US",
@@ -163,7 +163,7 @@
       "ma_aligned": 1,
       "days_below_ma10": 1,
       "ma_stack": 1,
-      "hotness": 0.683
+      "hotness": 0.682
     },
     {
       "ticker": "IJR.US",
@@ -173,13 +173,13 @@
       "pct_high_250": 0.988,
       "pct_high_126": 0.988,
       "nh_ratio_126": 0.246,
-      "amt_surge": 1.053,
+      "amt_surge": 1.057,
       "amt_rank": 0.795,
       "ret_60": 0.161,
       "ma_aligned": 1,
       "days_below_ma10": 0,
       "ma_stack": 1,
-      "hotness": 0.681
+      "hotness": 0.682
     },
     {
       "ticker": "VTI.US",
@@ -189,29 +189,13 @@
       "pct_high_250": 0.988,
       "pct_high_126": 0.988,
       "nh_ratio_126": 0.19,
-      "amt_surge": 0.892,
+      "amt_surge": 0.893,
       "amt_rank": 0.864,
       "ret_60": 0.136,
       "ma_aligned": 0,
       "days_below_ma10": 0,
       "ma_stack": 1,
       "hotness": 0.665
-    },
-    {
-      "ticker": "DIA.US",
-      "name": "SPDR Dow Jones Industrial Average ET",
-      "sub_industry": "Dow Jones Industrial Average",
-      "close": 527.88,
-      "pct_high_250": 1.0,
-      "pct_high_126": 1.0,
-      "nh_ratio_126": 0.175,
-      "amt_surge": 1.035,
-      "amt_rank": 0.938,
-      "ret_60": 0.137,
-      "ma_aligned": 1,
-      "days_below_ma10": 0,
-      "ma_stack": 1,
-      "hotness": 0.627
     },
     {
       "ticker": "XBI.US",
@@ -221,13 +205,29 @@
       "pct_high_250": 1.0,
       "pct_high_126": 1.0,
       "nh_ratio_126": 0.143,
-      "amt_surge": 1.289,
+      "amt_surge": 1.293,
       "amt_rank": 0.892,
       "ret_60": 0.247,
       "ma_aligned": 1,
       "days_below_ma10": 0,
       "ma_stack": 1,
       "hotness": 0.624
+    },
+    {
+      "ticker": "DIA.US",
+      "name": "SPDR Dow Jones Industrial Average ET",
+      "sub_industry": "Dow Jones Industrial Average",
+      "close": 527.88,
+      "pct_high_250": 1.0,
+      "pct_high_126": 1.0,
+      "nh_ratio_126": 0.175,
+      "amt_surge": 1.038,
+      "amt_rank": 0.932,
+      "ret_60": 0.137,
+      "ma_aligned": 1,
+      "days_below_ma10": 0,
+      "ma_stack": 1,
+      "hotness": 0.622
     },
     {
       "ticker": "SCHB.US",
@@ -237,13 +237,13 @@
       "pct_high_250": 0.987,
       "pct_high_126": 0.987,
       "nh_ratio_126": 0.198,
-      "amt_surge": 1.363,
-      "amt_rank": 0.608,
+      "amt_surge": 1.364,
+      "amt_rank": 0.597,
       "ret_60": 0.136,
       "ma_aligned": 0,
       "days_below_ma10": 0,
       "ma_stack": 1,
-      "hotness": 0.602
+      "hotness": 0.592
     },
     {
       "ticker": "VTV.US",
@@ -253,13 +253,13 @@
       "pct_high_250": 0.999,
       "pct_high_126": 0.999,
       "nh_ratio_126": 0.27,
-      "amt_surge": 1.008,
-      "amt_rank": 0.801,
+      "amt_surge": 1.02,
+      "amt_rank": 0.807,
       "ret_60": 0.115,
       "ma_aligned": 1,
       "days_below_ma10": 0,
       "ma_stack": 1,
-      "hotness": 0.532
+      "hotness": 0.54
     },
     {
       "ticker": "RSP.US",
@@ -269,7 +269,7 @@
       "pct_high_250": 1.0,
       "pct_high_126": 1.0,
       "nh_ratio_126": 0.238,
-      "amt_surge": 0.823,
+      "amt_surge": 0.824,
       "amt_rank": 0.955,
       "ret_60": 0.115,
       "ma_aligned": 1,
@@ -285,13 +285,13 @@
       "pct_high_250": 0.984,
       "pct_high_126": 0.984,
       "nh_ratio_126": 0.198,
-      "amt_surge": 1.21,
-      "amt_rank": 0.722,
+      "amt_surge": 1.211,
+      "amt_rank": 0.716,
       "ret_60": 0.118,
       "ma_aligned": 0,
       "days_below_ma10": 0,
       "ma_stack": 1,
-      "hotness": 0.492
+      "hotness": 0.486
     },
     {
       "ticker": "SPGM.US",
@@ -310,22 +310,6 @@
       "hotness": 0.453
     },
     {
-      "ticker": "ARKG.US",
-      "name": "ARK Genomic Revolution ETF",
-      "sub_industry": "Health",
-      "close": 42.91,
-      "pct_high_250": 1.0,
-      "pct_high_126": 1.0,
-      "nh_ratio_126": 0.087,
-      "amt_surge": 1.914,
-      "amt_rank": 0.528,
-      "ret_60": 0.58,
-      "ma_aligned": 1,
-      "days_below_ma10": 0,
-      "ma_stack": 1,
-      "hotness": 0.445
-    },
-    {
       "ticker": "SCHX.US",
       "name": "Schwab U.S. Large-Cap ETF",
       "sub_industry": "Large Blend",
@@ -342,6 +326,22 @@
       "hotness": 0.444
     },
     {
+      "ticker": "ARKG.US",
+      "name": "ARK Genomic Revolution ETF",
+      "sub_industry": "Health",
+      "close": 42.91,
+      "pct_high_250": 1.0,
+      "pct_high_126": 1.0,
+      "nh_ratio_126": 0.087,
+      "amt_surge": 1.915,
+      "amt_rank": 0.523,
+      "ret_60": 0.58,
+      "ma_aligned": 1,
+      "days_below_ma10": 0,
+      "ma_stack": 1,
+      "hotness": 0.44
+    },
+    {
       "ticker": "ITOT.US",
       "name": "iShares Core S&P Total U.S. Stock Ma",
       "sub_industry": "S&P Total Market",
@@ -349,13 +349,13 @@
       "pct_high_250": 0.988,
       "pct_high_126": 0.988,
       "nh_ratio_126": 0.19,
-      "amt_surge": 0.767,
-      "amt_rank": 0.602,
+      "amt_surge": 0.771,
+      "amt_rank": 0.614,
       "ret_60": 0.137,
       "ma_aligned": 0,
       "days_below_ma10": 0,
       "ma_stack": 1,
-      "hotness": 0.405
+      "hotness": 0.416
     },
     {
       "ticker": "MDY.US",
@@ -365,13 +365,29 @@
       "pct_high_250": 0.986,
       "pct_high_126": 0.986,
       "nh_ratio_126": 0.19,
-      "amt_surge": 1.129,
-      "amt_rank": 0.784,
+      "amt_surge": 1.138,
+      "amt_rank": 0.79,
       "ret_60": 0.111,
       "ma_aligned": 1,
       "days_below_ma10": 1,
       "ma_stack": 1,
-      "hotness": 0.4
+      "hotness": 0.406
+    },
+    {
+      "ticker": "IWB.US",
+      "name": "iShares Russell 1000 ETF",
+      "sub_industry": "Russell 1000",
+      "close": 408.75,
+      "pct_high_250": 0.988,
+      "pct_high_126": 0.988,
+      "nh_ratio_126": 0.183,
+      "amt_surge": 0.699,
+      "amt_rank": 0.636,
+      "ret_60": 0.133,
+      "ma_aligned": 0,
+      "days_below_ma10": 0,
+      "ma_stack": 1,
+      "hotness": 0.384
     },
     {
       "ticker": "CGDV.US",
@@ -387,23 +403,7 @@
       "ma_aligned": 1,
       "days_below_ma10": 0,
       "ma_stack": 1,
-      "hotness": 0.381
-    },
-    {
-      "ticker": "IWB.US",
-      "name": "iShares Russell 1000 ETF",
-      "sub_industry": "Russell 1000",
-      "close": 408.75,
-      "pct_high_250": 0.988,
-      "pct_high_126": 0.988,
-      "nh_ratio_126": 0.183,
-      "amt_surge": 0.697,
-      "amt_rank": 0.631,
-      "ret_60": 0.133,
-      "ma_aligned": 0,
-      "days_below_ma10": 0,
-      "ma_stack": 1,
-      "hotness": 0.379
+      "hotness": 0.38
     },
     {
       "ticker": "QUAL.US",
@@ -419,7 +419,7 @@
       "ma_aligned": 1,
       "days_below_ma10": 0,
       "ma_stack": 1,
-      "hotness": 0.374
+      "hotness": 0.373
     },
     {
       "ticker": "ACWI.US",
@@ -429,13 +429,13 @@
       "pct_high_250": 0.982,
       "pct_high_126": 0.982,
       "nh_ratio_126": 0.19,
-      "amt_surge": 0.992,
+      "amt_surge": 0.998,
       "amt_rank": 0.688,
       "ret_60": 0.121,
       "ma_aligned": 0,
       "days_below_ma10": 0,
       "ma_stack": 1,
-      "hotness": 0.37
+      "hotness": 0.371
     },
     {
       "ticker": "AVUV.US",
@@ -461,13 +461,13 @@
       "pct_high_250": 0.982,
       "pct_high_126": 0.982,
       "nh_ratio_126": 0.175,
-      "amt_surge": 1.351,
-      "amt_rank": 0.585,
+      "amt_surge": 1.367,
+      "amt_rank": 0.602,
       "ret_60": 0.209,
       "ma_aligned": 1,
       "days_below_ma10": 1,
       "ma_stack": 1,
-      "hotness": 0.344
+      "hotness": 0.362
     },
     {
       "ticker": "KRE.US",
@@ -477,7 +477,7 @@
       "pct_high_250": 0.985,
       "pct_high_126": 0.985,
       "nh_ratio_126": 0.103,
-      "amt_surge": 1.073,
+      "amt_surge": 1.074,
       "amt_rank": 0.847,
       "ret_60": 0.13,
       "ma_aligned": 1,
@@ -499,7 +499,23 @@
       "ma_aligned": 1,
       "days_below_ma10": 0,
       "ma_stack": 1,
-      "hotness": 0.337
+      "hotness": 0.336
+    },
+    {
+      "ticker": "URTH.US",
+      "name": "iShares MSCI World ETF",
+      "sub_industry": "Global Large-Stock Blend",
+      "close": 202.65,
+      "pct_high_250": 0.989,
+      "pct_high_126": 0.989,
+      "nh_ratio_126": 0.183,
+      "amt_surge": 1.557,
+      "amt_rank": 0.409,
+      "ret_60": 0.118,
+      "ma_aligned": 0,
+      "days_below_ma10": 0,
+      "ma_stack": 1,
+      "hotness": 0.324
     },
     {
       "ticker": "IWR.US",
@@ -510,28 +526,28 @@
       "pct_high_126": 1.0,
       "nh_ratio_126": 0.23,
       "amt_surge": 0.971,
-      "amt_rank": 0.534,
+      "amt_rank": 0.528,
       "ret_60": 0.122,
       "ma_aligned": 1,
       "days_below_ma10": 0,
       "ma_stack": 1,
-      "hotness": 0.294
+      "hotness": 0.288
     },
     {
-      "ticker": "URTH.US",
-      "name": "iShares MSCI World ETF",
-      "sub_industry": "Global Large-Stock Blend",
-      "close": 202.65,
-      "pct_high_250": 0.989,
-      "pct_high_126": 0.989,
-      "nh_ratio_126": 0.183,
-      "amt_surge": 1.531,
-      "amt_rank": 0.375,
-      "ret_60": 0.118,
-      "ma_aligned": 0,
-      "days_below_ma10": 0,
+      "ticker": "IJH.US",
+      "name": "iShares Core S&P Mid-Cap ETF",
+      "sub_industry": "Mid-Cap Blend",
+      "close": 76.09,
+      "pct_high_250": 0.987,
+      "pct_high_126": 0.987,
+      "nh_ratio_126": 0.19,
+      "amt_surge": 0.879,
+      "amt_rank": 0.727,
+      "ret_60": 0.113,
+      "ma_aligned": 1,
+      "days_below_ma10": 1,
       "ma_stack": 1,
-      "hotness": 0.288
+      "hotness": 0.284
     },
     {
       "ticker": "DYNF.US",
@@ -542,44 +558,28 @@
       "pct_high_126": 0.987,
       "nh_ratio_126": 0.198,
       "amt_surge": 0.961,
-      "amt_rank": 0.364,
+      "amt_rank": 0.358,
       "ret_60": 0.137,
       "ma_aligned": 0,
       "days_below_ma10": 1,
       "ma_stack": 1,
-      "hotness": 0.283
+      "hotness": 0.277
     },
     {
-      "ticker": "IJH.US",
-      "name": "iShares Core S&P Mid-Cap ETF",
-      "sub_industry": "Mid-Cap Blend",
-      "close": 76.09,
-      "pct_high_250": 0.987,
-      "pct_high_126": 0.987,
-      "nh_ratio_126": 0.19,
-      "amt_surge": 0.87,
-      "amt_rank": 0.727,
-      "ret_60": 0.113,
-      "ma_aligned": 1,
-      "days_below_ma10": 1,
-      "ma_stack": 1,
-      "hotness": 0.282
-    },
-    {
-      "ticker": "VB.US",
-      "name": "Vanguard Small-Cap Index Fund ETF Sh",
-      "sub_industry": "Small Blend",
-      "close": 300.34,
-      "pct_high_250": 0.991,
-      "pct_high_126": 0.991,
-      "nh_ratio_126": 0.214,
-      "amt_surge": 0.996,
-      "amt_rank": 0.523,
-      "ret_60": 0.134,
+      "ticker": "IWS.US",
+      "name": "iShares Russell Mid-Cap Value ETF",
+      "sub_industry": "Mid-Cap Value",
+      "close": 166.05,
+      "pct_high_250": 1.0,
+      "pct_high_126": 1.0,
+      "nh_ratio_126": 0.262,
+      "amt_surge": 1.34,
+      "amt_rank": 0.369,
+      "ret_60": 0.125,
       "ma_aligned": 1,
       "days_below_ma10": 0,
       "ma_stack": 1,
-      "hotness": 0.243
+      "hotness": 0.25
     }
   ],
   "part2": [
@@ -592,12 +592,12 @@
       "pct_high_126": 0.916,
       "nh_ratio_126": 0.135,
       "amt_surge": 8.995,
-      "amt_rank": 0.591,
+      "amt_rank": 0.585,
       "ret_60": 0.248,
       "ma_aligned": 1,
       "days_below_ma10": 1,
       "ma_stack": 0,
-      "hotness": 2.349
+      "hotness": 2.345
     },
     {
       "ticker": "VLUE.US",
@@ -608,12 +608,12 @@
       "pct_high_126": 0.943,
       "nh_ratio_126": 0.302,
       "amt_surge": 3.188,
-      "amt_rank": 0.705,
+      "amt_rank": 0.699,
       "ret_60": 0.324,
       "ma_aligned": 1,
       "days_below_ma10": 3,
       "ma_stack": 0,
-      "hotness": 1.26
+      "hotness": 1.255
     },
     {
       "ticker": "SMH.US",
@@ -671,7 +671,7 @@
       "pct_high_250": 0.94,
       "pct_high_126": 0.94,
       "nh_ratio_126": 0.302,
-      "amt_surge": 2.005,
+      "amt_surge": 2.006,
       "amt_rank": 0.761,
       "ret_60": 0.46,
       "ma_aligned": 1,
@@ -703,13 +703,13 @@
       "pct_high_250": 0.983,
       "pct_high_126": 0.983,
       "nh_ratio_126": 0.19,
-      "amt_surge": 0.956,
+      "amt_surge": 0.963,
       "amt_rank": 1.0,
       "ret_60": 0.133,
       "ma_aligned": 0,
       "days_below_ma10": 0,
       "ma_stack": 1,
-      "hotness": 0.792
+      "hotness": 0.793
     },
     {
       "ticker": "QQQ.US",
@@ -719,7 +719,7 @@
       "pct_high_250": 0.956,
       "pct_high_126": 0.956,
       "nh_ratio_126": 0.151,
-      "amt_surge": 1.177,
+      "amt_surge": 1.178,
       "amt_rank": 0.994,
       "ret_60": 0.212,
       "ma_aligned": 0,
@@ -735,13 +735,13 @@
       "pct_high_250": 0.822,
       "pct_high_126": 0.822,
       "nh_ratio_126": 0.294,
-      "amt_surge": 2.652,
+      "amt_surge": 2.656,
       "amt_rank": 0.96,
       "ret_60": 0.416,
       "ma_aligned": 0,
       "days_below_ma10": 8,
       "ma_stack": 0,
-      "hotness": 0.742
+      "hotness": 0.743
     },
     {
       "ticker": "DRAM.US",
@@ -767,7 +767,7 @@
       "pct_high_250": 0.912,
       "pct_high_126": 0.912,
       "nh_ratio_126": 0.159,
-      "amt_surge": 1.167,
+      "amt_surge": 1.169,
       "amt_rank": 0.943,
       "ret_60": 0.316,
       "ma_aligned": 0,
@@ -783,7 +783,7 @@
       "pct_high_250": 0.603,
       "pct_high_126": 0.603,
       "nh_ratio_126": 0.27,
-      "amt_surge": 2.658,
+      "amt_surge": 2.66,
       "amt_rank": 0.989,
       "ret_60": 2.209,
       "ma_aligned": 1,
@@ -805,7 +805,7 @@
       "ma_aligned": 1,
       "days_below_ma10": 1,
       "ma_stack": 1,
-      "hotness": 0.683
+      "hotness": 0.682
     },
     {
       "ticker": "IJR.US",
@@ -815,13 +815,13 @@
       "pct_high_250": 0.988,
       "pct_high_126": 0.988,
       "nh_ratio_126": 0.246,
-      "amt_surge": 1.053,
+      "amt_surge": 1.057,
       "amt_rank": 0.795,
       "ret_60": 0.161,
       "ma_aligned": 1,
       "days_below_ma10": 0,
       "ma_stack": 1,
-      "hotness": 0.681
+      "hotness": 0.682
     },
     {
       "ticker": "VTI.US",
@@ -831,29 +831,13 @@
       "pct_high_250": 0.988,
       "pct_high_126": 0.988,
       "nh_ratio_126": 0.19,
-      "amt_surge": 0.892,
+      "amt_surge": 0.893,
       "amt_rank": 0.864,
       "ret_60": 0.136,
       "ma_aligned": 0,
       "days_below_ma10": 0,
       "ma_stack": 1,
       "hotness": 0.665
-    },
-    {
-      "ticker": "DIA.US",
-      "name": "SPDR Dow Jones Industrial Average ET",
-      "sub_industry": "Dow Jones Industrial Average",
-      "close": 527.88,
-      "pct_high_250": 1.0,
-      "pct_high_126": 1.0,
-      "nh_ratio_126": 0.175,
-      "amt_surge": 1.035,
-      "amt_rank": 0.938,
-      "ret_60": 0.137,
-      "ma_aligned": 1,
-      "days_below_ma10": 0,
-      "ma_stack": 1,
-      "hotness": 0.627
     },
     {
       "ticker": "XBI.US",
@@ -863,7 +847,7 @@
       "pct_high_250": 1.0,
       "pct_high_126": 1.0,
       "nh_ratio_126": 0.143,
-      "amt_surge": 1.289,
+      "amt_surge": 1.293,
       "amt_rank": 0.892,
       "ret_60": 0.247,
       "ma_aligned": 1,
@@ -885,7 +869,23 @@
       "ma_aligned": 1,
       "days_below_ma10": 2,
       "ma_stack": 0,
-      "hotness": 0.624
+      "hotness": 0.623
+    },
+    {
+      "ticker": "DIA.US",
+      "name": "SPDR Dow Jones Industrial Average ET",
+      "sub_industry": "Dow Jones Industrial Average",
+      "close": 527.88,
+      "pct_high_250": 1.0,
+      "pct_high_126": 1.0,
+      "nh_ratio_126": 0.175,
+      "amt_surge": 1.038,
+      "amt_rank": 0.932,
+      "ret_60": 0.137,
+      "ma_aligned": 1,
+      "days_below_ma10": 0,
+      "ma_stack": 1,
+      "hotness": 0.622
     },
     {
       "ticker": "RSPT.US",
@@ -904,22 +904,6 @@
       "hotness": 0.606
     },
     {
-      "ticker": "SCHB.US",
-      "name": "Schwab U.S. Broad Market ETF",
-      "sub_industry": "Dow Jones US Broad Market",
-      "close": 28.87,
-      "pct_high_250": 0.987,
-      "pct_high_126": 0.987,
-      "nh_ratio_126": 0.198,
-      "amt_surge": 1.363,
-      "amt_rank": 0.608,
-      "ret_60": 0.136,
-      "ma_aligned": 0,
-      "days_below_ma10": 0,
-      "ma_stack": 1,
-      "hotness": 0.602
-    },
-    {
       "ticker": "QQQI.US",
       "name": "NEOS Nasdaq 100 High Income ETF",
       "sub_industry": "Derivative Income",
@@ -927,13 +911,29 @@
       "pct_high_250": 0.971,
       "pct_high_126": 0.971,
       "nh_ratio_126": 0.206,
-      "amt_surge": 1.558,
+      "amt_surge": 1.559,
       "amt_rank": 0.58,
       "ret_60": 0.135,
       "ma_aligned": 0,
       "days_below_ma10": 1,
       "ma_stack": 0,
       "hotness": 0.601
+    },
+    {
+      "ticker": "SCHB.US",
+      "name": "Schwab U.S. Broad Market ETF",
+      "sub_industry": "Dow Jones US Broad Market",
+      "close": 28.87,
+      "pct_high_250": 0.987,
+      "pct_high_126": 0.987,
+      "nh_ratio_126": 0.198,
+      "amt_surge": 1.364,
+      "amt_rank": 0.597,
+      "ret_60": 0.136,
+      "ma_aligned": 0,
+      "days_below_ma10": 0,
+      "ma_stack": 1,
+      "hotness": 0.592
     },
     {
       "ticker": "DTCR.US",
@@ -959,7 +959,7 @@
       "pct_high_250": 0.913,
       "pct_high_126": 0.913,
       "nh_ratio_126": 0.143,
-      "amt_surge": 1.498,
+      "amt_surge": 1.501,
       "amt_rank": 0.71,
       "ret_60": 0.278,
       "ma_aligned": 0,
@@ -975,13 +975,13 @@
       "pct_high_250": 0.999,
       "pct_high_126": 0.999,
       "nh_ratio_126": 0.27,
-      "amt_surge": 1.008,
-      "amt_rank": 0.801,
+      "amt_surge": 1.02,
+      "amt_rank": 0.807,
       "ret_60": 0.115,
       "ma_aligned": 1,
       "days_below_ma10": 0,
       "ma_stack": 1,
-      "hotness": 0.532
+      "hotness": 0.54
     },
     {
       "ticker": "RSP.US",
@@ -991,29 +991,13 @@
       "pct_high_250": 1.0,
       "pct_high_126": 1.0,
       "nh_ratio_126": 0.238,
-      "amt_surge": 0.823,
+      "amt_surge": 0.824,
       "amt_rank": 0.955,
       "ret_60": 0.115,
       "ma_aligned": 1,
       "days_below_ma10": 0,
       "ma_stack": 1,
       "hotness": 0.52
-    },
-    {
-      "ticker": "VT.US",
-      "name": "Vanguard Total World Stock Index Fun",
-      "sub_industry": "Global Large-Stock Blend",
-      "close": 156.17,
-      "pct_high_250": 0.984,
-      "pct_high_126": 0.984,
-      "nh_ratio_126": 0.198,
-      "amt_surge": 1.21,
-      "amt_rank": 0.722,
-      "ret_60": 0.118,
-      "ma_aligned": 0,
-      "days_below_ma10": 0,
-      "ma_stack": 1,
-      "hotness": 0.492
     },
     {
       "ticker": "TQQQ.US",
@@ -1023,7 +1007,7 @@
       "pct_high_250": 0.843,
       "pct_high_126": 0.843,
       "nh_ratio_126": 0.127,
-      "amt_surge": 1.168,
+      "amt_surge": 1.169,
       "amt_rank": 0.972,
       "ret_60": 0.665,
       "ma_aligned": 0,
@@ -1032,20 +1016,20 @@
       "hotness": 0.487
     },
     {
-      "ticker": "QTUM.US",
-      "name": "Defiance Quantum ETF",
-      "sub_industry": "Technology",
-      "close": 155.01,
-      "pct_high_250": 0.92,
-      "pct_high_126": 0.92,
-      "nh_ratio_126": 0.23,
-      "amt_surge": 2.142,
-      "amt_rank": 0.295,
-      "ret_60": 0.406,
-      "ma_aligned": 1,
-      "days_below_ma10": 2,
-      "ma_stack": 0,
-      "hotness": 0.458
+      "ticker": "VT.US",
+      "name": "Vanguard Total World Stock Index Fun",
+      "sub_industry": "Global Large-Stock Blend",
+      "close": 156.17,
+      "pct_high_250": 0.984,
+      "pct_high_126": 0.984,
+      "nh_ratio_126": 0.198,
+      "amt_surge": 1.211,
+      "amt_rank": 0.716,
+      "ret_60": 0.118,
+      "ma_aligned": 0,
+      "days_below_ma10": 0,
+      "ma_stack": 1,
+      "hotness": 0.486
     },
     {
       "ticker": "SPGM.US",
@@ -1062,6 +1046,22 @@
       "days_below_ma10": 0,
       "ma_stack": 1,
       "hotness": 0.453
+    },
+    {
+      "ticker": "QTUM.US",
+      "name": "Defiance Quantum ETF",
+      "sub_industry": "Technology",
+      "close": 155.01,
+      "pct_high_250": 0.92,
+      "pct_high_126": 0.92,
+      "nh_ratio_126": 0.23,
+      "amt_surge": 2.142,
+      "amt_rank": 0.29,
+      "ret_60": 0.406,
+      "ma_aligned": 1,
+      "days_below_ma10": 2,
+      "ma_stack": 0,
+      "hotness": 0.453
     }
   ],
   "all_stocks": [
@@ -1074,7 +1074,7 @@
       "ret_60": 0.248,
       "ma_aligned": 1,
       "days_below_ma10": 1,
-      "hotness": 2.349
+      "hotness": 2.345
     },
     {
       "ticker": "VLUE.US",
@@ -1085,7 +1085,7 @@
       "ret_60": 0.324,
       "ma_aligned": 1,
       "days_below_ma10": 3,
-      "hotness": 1.26
+      "hotness": 1.255
     },
     {
       "ticker": "SMH.US",
@@ -1173,7 +1173,7 @@
       "ret_60": 0.133,
       "ma_aligned": 0,
       "days_below_ma10": 0,
-      "hotness": 0.792
+      "hotness": 0.793
     },
     {
       "ticker": "QQQ.US",
@@ -1195,7 +1195,7 @@
       "ret_60": 0.416,
       "ma_aligned": 0,
       "days_below_ma10": 8,
-      "hotness": 0.742
+      "hotness": 0.743
     },
     {
       "ticker": "DRAM.US",
@@ -1239,7 +1239,7 @@
       "ret_60": 0.179,
       "ma_aligned": 1,
       "days_below_ma10": 1,
-      "hotness": 0.683
+      "hotness": 0.682
     },
     {
       "ticker": "IJR.US",
@@ -1250,7 +1250,7 @@
       "ret_60": 0.161,
       "ma_aligned": 1,
       "days_below_ma10": 0,
-      "hotness": 0.681
+      "hotness": 0.682
     },
     {
       "ticker": "VTI.US",
@@ -1262,17 +1262,6 @@
       "ma_aligned": 0,
       "days_below_ma10": 0,
       "hotness": 0.665
-    },
-    {
-      "ticker": "DIA.US",
-      "name": "SPDR Dow Jones Industrial Average ET",
-      "sub_industry": "Dow Jones Industrial Average",
-      "close": 527.88,
-      "pct_high_250": 1.0,
-      "ret_60": 0.137,
-      "ma_aligned": 1,
-      "days_below_ma10": 0,
-      "hotness": 0.627
     },
     {
       "ticker": "XBI.US",
@@ -1294,7 +1283,18 @@
       "ret_60": 0.352,
       "ma_aligned": 1,
       "days_below_ma10": 2,
-      "hotness": 0.624
+      "hotness": 0.623
+    },
+    {
+      "ticker": "DIA.US",
+      "name": "SPDR Dow Jones Industrial Average ET",
+      "sub_industry": "Dow Jones Industrial Average",
+      "close": 527.88,
+      "pct_high_250": 1.0,
+      "ret_60": 0.137,
+      "ma_aligned": 1,
+      "days_below_ma10": 0,
+      "hotness": 0.622
     },
     {
       "ticker": "RSPT.US",
@@ -1308,17 +1308,6 @@
       "hotness": 0.606
     },
     {
-      "ticker": "SCHB.US",
-      "name": "Schwab U.S. Broad Market ETF",
-      "sub_industry": "Dow Jones US Broad Market",
-      "close": 28.87,
-      "pct_high_250": 0.987,
-      "ret_60": 0.136,
-      "ma_aligned": 0,
-      "days_below_ma10": 0,
-      "hotness": 0.602
-    },
-    {
       "ticker": "QQQI.US",
       "name": "NEOS Nasdaq 100 High Income ETF",
       "sub_industry": "Derivative Income",
@@ -1328,6 +1317,17 @@
       "ma_aligned": 0,
       "days_below_ma10": 1,
       "hotness": 0.601
+    },
+    {
+      "ticker": "SCHB.US",
+      "name": "Schwab U.S. Broad Market ETF",
+      "sub_industry": "Dow Jones US Broad Market",
+      "close": 28.87,
+      "pct_high_250": 0.987,
+      "ret_60": 0.136,
+      "ma_aligned": 0,
+      "days_below_ma10": 0,
+      "hotness": 0.592
     },
     {
       "ticker": "DTCR.US",
@@ -1360,7 +1360,7 @@
       "ret_60": 0.115,
       "ma_aligned": 1,
       "days_below_ma10": 0,
-      "hotness": 0.532
+      "hotness": 0.54
     },
     {
       "ticker": "RSP.US",
@@ -1374,17 +1374,6 @@
       "hotness": 0.52
     },
     {
-      "ticker": "VT.US",
-      "name": "Vanguard Total World Stock Index Fun",
-      "sub_industry": "Global Large-Stock Blend",
-      "close": 156.17,
-      "pct_high_250": 0.984,
-      "ret_60": 0.118,
-      "ma_aligned": 0,
-      "days_below_ma10": 0,
-      "hotness": 0.492
-    },
-    {
       "ticker": "TQQQ.US",
       "name": "ProShares UltraPro QQQ",
       "sub_industry": "NASDAQ-100 3x",
@@ -1396,15 +1385,15 @@
       "hotness": 0.487
     },
     {
-      "ticker": "QTUM.US",
-      "name": "Defiance Quantum ETF",
-      "sub_industry": "Technology",
-      "close": 155.01,
-      "pct_high_250": 0.92,
-      "ret_60": 0.406,
-      "ma_aligned": 1,
-      "days_below_ma10": 2,
-      "hotness": 0.458
+      "ticker": "VT.US",
+      "name": "Vanguard Total World Stock Index Fun",
+      "sub_industry": "Global Large-Stock Blend",
+      "close": 156.17,
+      "pct_high_250": 0.984,
+      "ret_60": 0.118,
+      "ma_aligned": 0,
+      "days_below_ma10": 0,
+      "hotness": 0.486
     },
     {
       "ticker": "SPGM.US",
@@ -1418,6 +1407,17 @@
       "hotness": 0.453
     },
     {
+      "ticker": "QTUM.US",
+      "name": "Defiance Quantum ETF",
+      "sub_industry": "Technology",
+      "close": 155.01,
+      "pct_high_250": 0.92,
+      "ret_60": 0.406,
+      "ma_aligned": 1,
+      "days_below_ma10": 2,
+      "hotness": 0.453
+    },
+    {
       "ticker": "EEM.US",
       "name": "iShares MSCI Emerging Markets ETF",
       "sub_industry": "MSCI Emerging Markets",
@@ -1426,18 +1426,7 @@
       "ret_60": 0.152,
       "ma_aligned": 0,
       "days_below_ma10": 8,
-      "hotness": 0.449
-    },
-    {
-      "ticker": "ARKG.US",
-      "name": "ARK Genomic Revolution ETF",
-      "sub_industry": "Health",
-      "close": 42.91,
-      "pct_high_250": 1.0,
-      "ret_60": 0.58,
-      "ma_aligned": 1,
-      "days_below_ma10": 0,
-      "hotness": 0.445
+      "hotness": 0.448
     },
     {
       "ticker": "SCHX.US",
@@ -1462,6 +1451,17 @@
       "hotness": 0.442
     },
     {
+      "ticker": "ARKG.US",
+      "name": "ARK Genomic Revolution ETF",
+      "sub_industry": "Health",
+      "close": 42.91,
+      "pct_high_250": 1.0,
+      "ret_60": 0.58,
+      "ma_aligned": 1,
+      "days_below_ma10": 0,
+      "hotness": 0.44
+    },
+    {
       "ticker": "VUG.US",
       "name": "Vanguard Growth Index Fund ETF Share",
       "sub_industry": "Large Growth",
@@ -1470,7 +1470,7 @@
       "ret_60": 0.154,
       "ma_aligned": 0,
       "days_below_ma10": 0,
-      "hotness": 0.431
+      "hotness": 0.426
     },
     {
       "ticker": "ITOT.US",
@@ -1481,7 +1481,7 @@
       "ret_60": 0.137,
       "ma_aligned": 0,
       "days_below_ma10": 0,
-      "hotness": 0.405
+      "hotness": 0.416
     },
     {
       "ticker": "MDY.US",
@@ -1492,7 +1492,7 @@
       "ret_60": 0.111,
       "ma_aligned": 1,
       "days_below_ma10": 1,
-      "hotness": 0.4
+      "hotness": 0.406
     },
     {
       "ticker": "QLD.US",
@@ -1517,6 +1517,17 @@
       "hotness": 0.397
     },
     {
+      "ticker": "IWB.US",
+      "name": "iShares Russell 1000 ETF",
+      "sub_industry": "Russell 1000",
+      "close": 408.75,
+      "pct_high_250": 0.988,
+      "ret_60": 0.133,
+      "ma_aligned": 0,
+      "days_below_ma10": 0,
+      "hotness": 0.384
+    },
+    {
       "ticker": "CGDV.US",
       "name": "Capital Group Dividend Value ETF",
       "sub_industry": "Dividend",
@@ -1525,7 +1536,7 @@
       "ret_60": 0.139,
       "ma_aligned": 1,
       "days_below_ma10": 0,
-      "hotness": 0.381
+      "hotness": 0.38
     },
     {
       "ticker": "IWF.US",
@@ -1536,17 +1547,6 @@
       "ret_60": 0.123,
       "ma_aligned": 0,
       "days_below_ma10": 1,
-      "hotness": 0.38
-    },
-    {
-      "ticker": "IWB.US",
-      "name": "iShares Russell 1000 ETF",
-      "sub_industry": "Russell 1000",
-      "close": 408.75,
-      "pct_high_250": 0.988,
-      "ret_60": 0.133,
-      "ma_aligned": 0,
-      "days_below_ma10": 0,
       "hotness": 0.379
     },
     {
@@ -1558,7 +1558,7 @@
       "ret_60": 0.131,
       "ma_aligned": 1,
       "days_below_ma10": 0,
-      "hotness": 0.374
+      "hotness": 0.373
     },
     {
       "ticker": "ACWI.US",
@@ -1569,7 +1569,7 @@
       "ret_60": 0.121,
       "ma_aligned": 0,
       "days_below_ma10": 0,
-      "hotness": 0.37
+      "hotness": 0.371
     },
     {
       "ticker": "AVUV.US",
@@ -1591,7 +1591,7 @@
       "ret_60": 0.209,
       "ma_aligned": 1,
       "days_below_ma10": 1,
-      "hotness": 0.344
+      "hotness": 0.362
     },
     {
       "ticker": "KRE.US",
@@ -1613,7 +1613,7 @@
       "ret_60": 0.148,
       "ma_aligned": 1,
       "days_below_ma10": 0,
-      "hotness": 0.337
+      "hotness": 0.336
     },
     {
       "ticker": "NUGO.US",
@@ -1624,40 +1624,7 @@
       "ret_60": 0.156,
       "ma_aligned": 0,
       "days_below_ma10": 0,
-      "hotness": 0.332
-    },
-    {
-      "ticker": "XLV.US",
-      "name": "Health Care Select Sector SPDR® Fund",
-      "sub_industry": "S&P Health Care",
-      "close": 163.74,
-      "pct_high_250": 1.0,
-      "ret_60": 0.122,
-      "ma_aligned": 0,
-      "days_below_ma10": 0,
-      "hotness": 0.317
-    },
-    {
-      "ticker": "AIQ.US",
-      "name": "Global X Artificial Intelligence & T",
-      "sub_industry": "Technology",
-      "close": 61.85,
-      "pct_high_250": 0.882,
-      "ret_60": 0.293,
-      "ma_aligned": 0,
-      "days_below_ma10": 2,
-      "hotness": 0.315
-    },
-    {
-      "ticker": "IWR.US",
-      "name": "iShares Russell Mid-Cap ETF",
-      "sub_industry": "Mid-Cap Blend",
-      "close": 110.34,
-      "pct_high_250": 1.0,
-      "ret_60": 0.122,
-      "ma_aligned": 1,
-      "days_below_ma10": 0,
-      "hotness": 0.294
+      "hotness": 0.331
     },
     {
       "ticker": "URTH.US",
@@ -1668,18 +1635,40 @@
       "ret_60": 0.118,
       "ma_aligned": 0,
       "days_below_ma10": 0,
-      "hotness": 0.288
+      "hotness": 0.324
     },
     {
-      "ticker": "DYNF.US",
-      "name": "iShares U.S. Equity Factor Rotation ",
-      "sub_industry": "Large Blend",
-      "close": 67.13,
-      "pct_high_250": 0.987,
-      "ret_60": 0.137,
+      "ticker": "XLV.US",
+      "name": "Health Care Select Sector SPDR® Fund",
+      "sub_industry": "S&P Health Care",
+      "close": 163.74,
+      "pct_high_250": 1.0,
+      "ret_60": 0.122,
       "ma_aligned": 0,
-      "days_below_ma10": 1,
-      "hotness": 0.283
+      "days_below_ma10": 0,
+      "hotness": 0.324
+    },
+    {
+      "ticker": "AIQ.US",
+      "name": "Global X Artificial Intelligence & T",
+      "sub_industry": "Technology",
+      "close": 61.85,
+      "pct_high_250": 0.882,
+      "ret_60": 0.293,
+      "ma_aligned": 0,
+      "days_below_ma10": 2,
+      "hotness": 0.304
+    },
+    {
+      "ticker": "IWR.US",
+      "name": "iShares Russell Mid-Cap ETF",
+      "sub_industry": "Mid-Cap Blend",
+      "close": 110.34,
+      "pct_high_250": 1.0,
+      "ret_60": 0.122,
+      "ma_aligned": 1,
+      "days_below_ma10": 0,
+      "hotness": 0.288
     },
     {
       "ticker": "IJH.US",
@@ -1690,18 +1679,18 @@
       "ret_60": 0.113,
       "ma_aligned": 1,
       "days_below_ma10": 1,
-      "hotness": 0.282
+      "hotness": 0.284
     },
     {
-      "ticker": "CIBR.US",
-      "name": "First Trust NASDAQ Cybersecurity ETF",
-      "sub_industry": "Technology",
-      "close": 90.67,
-      "pct_high_250": 0.962,
-      "ret_60": 0.391,
+      "ticker": "DYNF.US",
+      "name": "iShares U.S. Equity Factor Rotation ",
+      "sub_industry": "Large Blend",
+      "close": 67.13,
+      "pct_high_250": 0.987,
+      "ret_60": 0.137,
       "ma_aligned": 0,
-      "days_below_ma10": 0,
-      "hotness": 0.264
+      "days_below_ma10": 1,
+      "hotness": 0.277
     },
     {
       "ticker": "IBAT.US",
@@ -1715,6 +1704,17 @@
       "hotness": 0.26
     },
     {
+      "ticker": "CIBR.US",
+      "name": "First Trust NASDAQ Cybersecurity ETF",
+      "sub_industry": "Technology",
+      "close": 90.67,
+      "pct_high_250": 0.962,
+      "ret_60": 0.391,
+      "ma_aligned": 0,
+      "days_below_ma10": 0,
+      "hotness": 0.259
+    },
+    {
       "ticker": "XLF.US",
       "name": "Financial Select Sector SPDR® Fund",
       "sub_industry": "S&P Financials",
@@ -1723,7 +1723,18 @@
       "ret_60": 0.119,
       "ma_aligned": 1,
       "days_below_ma10": 0,
-      "hotness": 0.259
+      "hotness": 0.254
+    },
+    {
+      "ticker": "IWS.US",
+      "name": "iShares Russell Mid-Cap Value ETF",
+      "sub_industry": "Mid-Cap Value",
+      "close": 166.05,
+      "pct_high_250": 1.0,
+      "ret_60": 0.125,
+      "ma_aligned": 1,
+      "days_below_ma10": 0,
+      "hotness": 0.25
     },
     {
       "ticker": "VEA.US",
@@ -1737,17 +1748,6 @@
       "hotness": 0.249
     },
     {
-      "ticker": "VB.US",
-      "name": "Vanguard Small-Cap Index Fund ETF Sh",
-      "sub_industry": "Small Blend",
-      "close": 300.34,
-      "pct_high_250": 0.991,
-      "ret_60": 0.134,
-      "ma_aligned": 1,
-      "days_below_ma10": 0,
-      "hotness": 0.243
-    },
-    {
       "ticker": "UPRO.US",
       "name": "ProShares UltraPro S&P 500",
       "sub_industry": "S&P 500 3x",
@@ -1756,18 +1756,18 @@
       "ret_60": 0.399,
       "ma_aligned": 0,
       "days_below_ma10": 0,
-      "hotness": 0.243
+      "hotness": 0.242
     },
     {
-      "ticker": "IWS.US",
-      "name": "iShares Russell Mid-Cap Value ETF",
-      "sub_industry": "Mid-Cap Value",
-      "close": 166.05,
-      "pct_high_250": 1.0,
-      "ret_60": 0.125,
+      "ticker": "VB.US",
+      "name": "Vanguard Small-Cap Index Fund ETF Sh",
+      "sub_industry": "Small Blend",
+      "close": 300.34,
+      "pct_high_250": 0.991,
+      "ret_60": 0.134,
       "ma_aligned": 1,
       "days_below_ma10": 0,
-      "hotness": 0.239
+      "hotness": 0.237
     },
     {
       "ticker": "EFA.US",
@@ -1778,7 +1778,18 @@
       "ret_60": 0.078,
       "ma_aligned": 1,
       "days_below_ma10": 0,
-      "hotness": 0.236
+      "hotness": 0.237
+    },
+    {
+      "ticker": "IWV.US",
+      "name": "iShares Russell 3000 ETF",
+      "sub_industry": "Russell 3000",
+      "close": 425.26,
+      "pct_high_250": 0.989,
+      "ret_60": 0.135,
+      "ma_aligned": 0,
+      "days_below_ma10": 0,
+      "hotness": 0.237
     },
     {
       "ticker": "SPSM.US",
@@ -1803,17 +1814,6 @@
       "hotness": 0.229
     },
     {
-      "ticker": "SCHD.US",
-      "name": "Schwab U.S. Dividend Equity ETF",
-      "sub_industry": "Dow Jones US Dividend 100",
-      "close": 32.39,
-      "pct_high_250": 0.994,
-      "ret_60": 0.068,
-      "ma_aligned": 0,
-      "days_below_ma10": 0,
-      "hotness": 0.218
-    },
-    {
       "ticker": "XLI.US",
       "name": "Industrial Select Sector SPDR® Fund",
       "sub_industry": "S&P Industrials",
@@ -1822,18 +1822,40 @@
       "ret_60": 0.122,
       "ma_aligned": 1,
       "days_below_ma10": 0,
-      "hotness": 0.218
+      "hotness": 0.217
     },
     {
-      "ticker": "IWV.US",
-      "name": "iShares Russell 3000 ETF",
-      "sub_industry": "Russell 3000",
-      "close": 425.26,
-      "pct_high_250": 0.989,
-      "ret_60": 0.135,
+      "ticker": "VO.US",
+      "name": "Vanguard Mid-Cap Index Fund ETF Shar",
+      "sub_industry": "Mid-Cap Blend",
+      "close": 80.51,
+      "pct_high_250": 0.999,
+      "ret_60": 0.11,
+      "ma_aligned": 1,
+      "days_below_ma10": 0,
+      "hotness": 0.213
+    },
+    {
+      "ticker": "SCHD.US",
+      "name": "Schwab U.S. Dividend Equity ETF",
+      "sub_industry": "Dow Jones US Dividend 100",
+      "close": 32.39,
+      "pct_high_250": 0.994,
+      "ret_60": 0.068,
       "ma_aligned": 0,
       "days_below_ma10": 0,
-      "hotness": 0.218
+      "hotness": 0.213
+    },
+    {
+      "ticker": "IGV.US",
+      "name": "iShares Expanded Tech-Software Secto",
+      "sub_industry": "Technology",
+      "close": 93.57,
+      "pct_high_250": 0.795,
+      "ret_60": 0.163,
+      "ma_aligned": 0,
+      "days_below_ma10": 0,
+      "hotness": 0.202
     },
     {
       "ticker": "VXUS.US",
@@ -1847,17 +1869,6 @@
       "hotness": 0.199
     },
     {
-      "ticker": "IGV.US",
-      "name": "iShares Expanded Tech-Software Secto",
-      "sub_industry": "Technology",
-      "close": 93.57,
-      "pct_high_250": 0.795,
-      "ret_60": 0.163,
-      "ma_aligned": 0,
-      "days_below_ma10": 0,
-      "hotness": 0.195
-    },
-    {
       "ticker": "MAGS.US",
       "name": "Roundhill Magnificent Seven ETF",
       "sub_industry": "Technology",
@@ -1866,18 +1877,7 @@
       "ret_60": 0.117,
       "ma_aligned": 0,
       "days_below_ma10": 0,
-      "hotness": 0.186
-    },
-    {
-      "ticker": "VO.US",
-      "name": "Vanguard Mid-Cap Index Fund ETF Shar",
-      "sub_industry": "Mid-Cap Blend",
-      "close": 80.51,
-      "pct_high_250": 0.999,
-      "ret_60": 0.11,
-      "ma_aligned": 1,
-      "days_below_ma10": 0,
-      "hotness": 0.184
+      "hotness": 0.196
     },
     {
       "ticker": "EWJ.US",
@@ -1888,7 +1888,7 @@
       "ret_60": 0.095,
       "ma_aligned": 1,
       "days_below_ma10": 8,
-      "hotness": 0.181
+      "hotness": 0.188
     },
     {
       "ticker": "SCHG.US",
@@ -1910,18 +1910,7 @@
       "ret_60": 0.125,
       "ma_aligned": 1,
       "days_below_ma10": 2,
-      "hotness": 0.178
-    },
-    {
-      "ticker": "VXF.US",
-      "name": "Vanguard Extended Market Index Fund ",
-      "sub_industry": "Mid-Cap Blend",
-      "close": 243.24,
-      "pct_high_250": 0.988,
-      "ret_60": 0.165,
-      "ma_aligned": 1,
-      "days_below_ma10": 0,
-      "hotness": 0.152
+      "hotness": 0.168
     },
     {
       "ticker": "IYW.US",
@@ -1932,7 +1921,18 @@
       "ret_60": 0.3,
       "ma_aligned": 0,
       "days_below_ma10": 1,
-      "hotness": 0.151
+      "hotness": 0.15
+    },
+    {
+      "ticker": "VXF.US",
+      "name": "Vanguard Extended Market Index Fund ",
+      "sub_industry": "Mid-Cap Blend",
+      "close": 243.24,
+      "pct_high_250": 0.988,
+      "ret_60": 0.165,
+      "ma_aligned": 1,
+      "days_below_ma10": 0,
+      "hotness": 0.147
     },
     {
       "ticker": "IBB.US",
@@ -1943,7 +1943,7 @@
       "ret_60": 0.162,
       "ma_aligned": 1,
       "days_below_ma10": 0,
-      "hotness": 0.139
+      "hotness": 0.134
     },
     {
       "ticker": "SCHA.US",
@@ -1979,17 +1979,6 @@
       "hotness": 0.077
     },
     {
-      "ticker": "VWO.US",
-      "name": "Vanguard FTSE Emerging Markets Index",
-      "sub_industry": "FTSE Emerging",
-      "close": 59.04,
-      "pct_high_250": 0.964,
-      "ret_60": 0.093,
-      "ma_aligned": 0,
-      "days_below_ma10": 2,
-      "hotness": 0.075
-    },
-    {
       "ticker": "IJS.US",
       "name": "iShares S&P Small-Cap 600 Value ETF",
       "sub_industry": "Small Value",
@@ -1999,6 +1988,17 @@
       "ma_aligned": 1,
       "days_below_ma10": 0,
       "hotness": 0.07
+    },
+    {
+      "ticker": "VWO.US",
+      "name": "Vanguard FTSE Emerging Markets Index",
+      "sub_industry": "FTSE Emerging",
+      "close": 59.04,
+      "pct_high_250": 0.964,
+      "ret_60": 0.093,
+      "ma_aligned": 0,
+      "days_below_ma10": 2,
+      "hotness": 0.065
     },
     {
       "ticker": "ICLN.US",
@@ -2031,7 +2031,7 @@
       "ret_60": 0.08,
       "ma_aligned": 1,
       "days_below_ma10": 0,
-      "hotness": 0.053
+      "hotness": 0.048
     },
     {
       "ticker": "EFV.US",
@@ -2042,7 +2042,7 @@
       "ret_60": 0.06,
       "ma_aligned": 0,
       "days_below_ma10": 0,
-      "hotness": 0.042
+      "hotness": 0.041
     },
     {
       "ticker": "IWY.US",
@@ -2053,7 +2053,7 @@
       "ret_60": 0.125,
       "ma_aligned": 0,
       "days_below_ma10": 1,
-      "hotness": 0.041
+      "hotness": 0.036
     },
     {
       "ticker": "GRID.US",
@@ -2064,17 +2064,17 @@
       "ret_60": 0.109,
       "ma_aligned": 0,
       "days_below_ma10": 2,
-      "hotness": 0.016
+      "hotness": 0.01
     },
     {
-      "ticker": "KBWB.US",
-      "name": "Invesco KBW Bank ETF",
-      "sub_industry": "Financial",
-      "close": 94.44,
-      "pct_high_250": 0.997,
-      "ret_60": 0.168,
-      "ma_aligned": 1,
-      "days_below_ma10": 0,
+      "ticker": "XHB.US",
+      "name": "SPDR® S&P Homebuilders ETF",
+      "sub_industry": "Consumer Cyclical",
+      "close": 112.56,
+      "pct_high_250": 0.932,
+      "ret_60": 0.162,
+      "ma_aligned": 0,
+      "days_below_ma10": 1,
       "hotness": 0.001
     },
     {
@@ -2086,18 +2086,18 @@
       "ret_60": 0.164,
       "ma_aligned": 0,
       "days_below_ma10": 0,
-      "hotness": 0.0
+      "hotness": -0.0
     },
     {
-      "ticker": "XHB.US",
-      "name": "SPDR® S&P Homebuilders ETF",
-      "sub_industry": "Consumer Cyclical",
-      "close": 112.56,
-      "pct_high_250": 0.932,
-      "ret_60": 0.162,
-      "ma_aligned": 0,
-      "days_below_ma10": 1,
-      "hotness": -0.004
+      "ticker": "KBWB.US",
+      "name": "Invesco KBW Bank ETF",
+      "sub_industry": "Financial",
+      "close": 94.44,
+      "pct_high_250": 0.997,
+      "ret_60": 0.168,
+      "ma_aligned": 1,
+      "days_below_ma10": 0,
+      "hotness": -0.005
     },
     {
       "ticker": "XLU.US",
@@ -2119,7 +2119,7 @@
       "ret_60": 0.164,
       "ma_aligned": 1,
       "days_below_ma10": 1,
-      "hotness": -0.023
+      "hotness": -0.024
     },
     {
       "ticker": "XLB.US",
@@ -2152,18 +2152,7 @@
       "ret_60": 0.093,
       "ma_aligned": 0,
       "days_below_ma10": 0,
-      "hotness": -0.027
-    },
-    {
-      "ticker": "XLY.US",
-      "name": "Consumer Discretionary Select Sector",
-      "sub_industry": "S&P Consumer Discretionary",
-      "close": 117.12,
-      "pct_high_250": 0.944,
-      "ret_60": 0.089,
-      "ma_aligned": 0,
-      "days_below_ma10": 0,
-      "hotness": -0.038
+      "hotness": -0.028
     },
     {
       "ticker": "XT.US",
@@ -2185,7 +2174,7 @@
       "ret_60": -0.017,
       "ma_aligned": 0,
       "days_below_ma10": 0,
-      "hotness": -0.045
+      "hotness": -0.044
     },
     {
       "ticker": "PAVE.US",
@@ -2196,18 +2185,18 @@
       "ret_60": 0.112,
       "ma_aligned": 1,
       "days_below_ma10": 2,
-      "hotness": -0.046
+      "hotness": -0.045
     },
     {
-      "ticker": "VHT.US",
-      "name": "Vanguard Health Care Index Fund ETF ",
-      "sub_industry": "Health",
-      "close": 308.41,
-      "pct_high_250": 1.0,
-      "ret_60": 0.134,
-      "ma_aligned": 1,
+      "ticker": "XLY.US",
+      "name": "Consumer Discretionary Select Sector",
+      "sub_industry": "S&P Consumer Discretionary",
+      "close": 117.12,
+      "pct_high_250": 0.944,
+      "ret_60": 0.089,
+      "ma_aligned": 0,
       "days_below_ma10": 0,
-      "hotness": -0.046
+      "hotness": -0.048
     },
     {
       "ticker": "OEF.US",
@@ -2221,6 +2210,17 @@
       "hotness": -0.049
     },
     {
+      "ticker": "VHT.US",
+      "name": "Vanguard Health Care Index Fund ETF ",
+      "sub_industry": "Health",
+      "close": 308.41,
+      "pct_high_250": 1.0,
+      "ret_60": 0.134,
+      "ma_aligned": 1,
+      "days_below_ma10": 0,
+      "hotness": -0.056
+    },
+    {
       "ticker": "CGGR.US",
       "name": "Capital Group Growth ETF",
       "sub_industry": "Large Growth",
@@ -2229,7 +2229,7 @@
       "ret_60": 0.145,
       "ma_aligned": 0,
       "days_below_ma10": 0,
-      "hotness": -0.056
+      "hotness": -0.057
     },
     {
       "ticker": "IXUS.US",
@@ -2240,7 +2240,7 @@
       "ret_60": 0.095,
       "ma_aligned": 0,
       "days_below_ma10": 2,
-      "hotness": -0.058
+      "hotness": -0.059
     },
     {
       "ticker": "XLP.US",
@@ -2251,7 +2251,18 @@
       "ret_60": 0.053,
       "ma_aligned": 0,
       "days_below_ma10": 0,
-      "hotness": -0.069
+      "hotness": -0.059
+    },
+    {
+      "ticker": "SPMD.US",
+      "name": "SPDR Russell Small Cap Completeness",
+      "sub_industry": "Mid-Cap Blend",
+      "close": 66.65,
+      "pct_high_250": 0.987,
+      "ret_60": 0.113,
+      "ma_aligned": 1,
+      "days_below_ma10": 1,
+      "hotness": -0.072
     },
     {
       "ticker": "SCHF.US",
@@ -2265,17 +2276,6 @@
       "hotness": -0.075
     },
     {
-      "ticker": "SPMD.US",
-      "name": "SPDR Russell Small Cap Completeness",
-      "sub_industry": "Mid-Cap Blend",
-      "close": 66.65,
-      "pct_high_250": 0.987,
-      "ret_60": 0.113,
-      "ma_aligned": 1,
-      "days_below_ma10": 1,
-      "hotness": -0.082
-    },
-    {
       "ticker": "IFRA.US",
       "name": "iShares U.S. Infrastructure ETF",
       "sub_industry": "Infrastructure",
@@ -2284,7 +2284,7 @@
       "ret_60": 0.081,
       "ma_aligned": 1,
       "days_below_ma10": 2,
-      "hotness": -0.082
+      "hotness": -0.083
     },
     {
       "ticker": "IWP.US",
@@ -2295,18 +2295,7 @@
       "ret_60": 0.109,
       "ma_aligned": 1,
       "days_below_ma10": 0,
-      "hotness": -0.085
-    },
-    {
-      "ticker": "XRT.US",
-      "name": "SPDR® S&P Retail ETF",
-      "sub_industry": "Consumer Cyclical",
-      "close": 88.06,
-      "pct_high_250": 0.974,
-      "ret_60": 0.087,
-      "ma_aligned": 1,
-      "days_below_ma10": 0,
-      "hotness": -0.088
+      "hotness": -0.084
     },
     {
       "ticker": "RSPH.US",
@@ -2318,6 +2307,17 @@
       "ma_aligned": 0,
       "days_below_ma10": 0,
       "hotness": -0.09
+    },
+    {
+      "ticker": "XRT.US",
+      "name": "SPDR® S&P Retail ETF",
+      "sub_industry": "Consumer Cyclical",
+      "close": 88.06,
+      "pct_high_250": 0.974,
+      "ret_60": 0.087,
+      "ma_aligned": 1,
+      "days_below_ma10": 0,
+      "hotness": -0.093
     },
     {
       "ticker": "ASHR.US",
@@ -2356,12 +2356,12 @@
       "ticker": "RSPF.US",
       "name": "Invesco S&P 500 Equal Weight Fi",
       "sub_industry": "S&P 500 EW Financials",
-      "close": 81.072,
+      "close": 81.07,
       "pct_high_250": 1.0,
       "ret_60": 0.131,
       "ma_aligned": 1,
       "days_below_ma10": 0,
-      "hotness": -0.144
+      "hotness": -0.145
     },
     {
       "ticker": "RSPR.US",
@@ -2375,17 +2375,6 @@
       "hotness": -0.153
     },
     {
-      "ticker": "ITA.US",
-      "name": "iShares U.S. Aerospace & Defense ETF",
-      "sub_industry": "Industrials",
-      "close": 248.19,
-      "pct_high_250": 0.992,
-      "ret_60": 0.112,
-      "ma_aligned": 0,
-      "days_below_ma10": 0,
-      "hotness": -0.156
-    },
-    {
       "ticker": "VGK.US",
       "name": "Vanguard FTSE Europe Index Fund ETF ",
       "sub_industry": "Europe Stock",
@@ -2394,7 +2383,7 @@
       "ret_60": 0.084,
       "ma_aligned": 1,
       "days_below_ma10": 0,
-      "hotness": -0.161
+      "hotness": -0.162
     },
     {
       "ticker": "USMV.US",
@@ -2405,18 +2394,18 @@
       "ret_60": 0.053,
       "ma_aligned": 0,
       "days_below_ma10": 0,
-      "hotness": -0.166
+      "hotness": -0.165
     },
     {
-      "ticker": "SPDW.US",
-      "name": "State Street SPDR Portfolio Develope",
-      "sub_industry": "Foreign Large Blend",
-      "close": 50.07,
-      "pct_high_250": 0.979,
-      "ret_60": 0.095,
+      "ticker": "ITA.US",
+      "name": "iShares U.S. Aerospace & Defense ETF",
+      "sub_industry": "Industrials",
+      "close": 248.19,
+      "pct_high_250": 0.992,
+      "ret_60": 0.112,
       "ma_aligned": 0,
-      "days_below_ma10": 2,
-      "hotness": -0.176
+      "days_below_ma10": 0,
+      "hotness": -0.166
     },
     {
       "ticker": "ARKK.US",
@@ -2427,7 +2416,7 @@
       "ret_60": 0.182,
       "ma_aligned": 0,
       "days_below_ma10": 0,
-      "hotness": -0.179
+      "hotness": -0.173
     },
     {
       "ticker": "XLE.US",
@@ -2439,6 +2428,17 @@
       "ma_aligned": 0,
       "days_below_ma10": 15,
       "hotness": -0.18
+    },
+    {
+      "ticker": "SPDW.US",
+      "name": "State Street SPDR Portfolio Develope",
+      "sub_industry": "Foreign Large Blend",
+      "close": 50.07,
+      "pct_high_250": 0.979,
+      "ret_60": 0.095,
+      "ma_aligned": 0,
+      "days_below_ma10": 2,
+      "hotness": -0.182
     },
     {
       "ticker": "JEPI.US",
@@ -2460,7 +2460,7 @@
       "ret_60": -0.01,
       "ma_aligned": 0,
       "days_below_ma10": 0,
-      "hotness": -0.206
+      "hotness": -0.207
     },
     {
       "ticker": "BITO.US",
@@ -2493,7 +2493,7 @@
       "ret_60": -0.096,
       "ma_aligned": 0,
       "days_below_ma10": 0,
-      "hotness": -0.27
+      "hotness": -0.265
     },
     {
       "ticker": "FNGS.US",
@@ -2504,7 +2504,7 @@
       "ret_60": 0.196,
       "ma_aligned": 0,
       "days_below_ma10": 0,
-      "hotness": -0.337
+      "hotness": -0.338
     },
     {
       "ticker": "GLD.US",
@@ -2526,7 +2526,7 @@
       "ret_60": -0.138,
       "ma_aligned": 0,
       "days_below_ma10": 0,
-      "hotness": -0.377
+      "hotness": -0.378
     },
     {
       "ticker": "ITB.US",
@@ -2548,7 +2548,7 @@
       "ret_60": -0.094,
       "ma_aligned": 0,
       "days_below_ma10": 12,
-      "hotness": -0.397
+      "hotness": -0.396
     },
     {
       "ticker": "XME.US",
@@ -2570,7 +2570,7 @@
       "ret_60": 0.053,
       "ma_aligned": 0,
       "days_below_ma10": 2,
-      "hotness": -0.409
+      "hotness": -0.41
     },
     {
       "ticker": "RSPN.US",
@@ -2592,7 +2592,7 @@
       "ret_60": -0.174,
       "ma_aligned": 0,
       "days_below_ma10": 0,
-      "hotness": -0.433
+      "hotness": -0.434
     },
     {
       "ticker": "INDA.US",
@@ -2603,7 +2603,7 @@
       "ret_60": 0.046,
       "ma_aligned": 0,
       "days_below_ma10": 0,
-      "hotness": -0.451
+      "hotness": -0.452
     },
     {
       "ticker": "YANG.US",
@@ -2614,7 +2614,7 @@
       "ret_60": 0.317,
       "ma_aligned": 1,
       "days_below_ma10": 0,
-      "hotness": -0.475
+      "hotness": -0.476
     },
     {
       "ticker": "OIH.US",
@@ -2658,7 +2658,7 @@
       "ret_60": 0.063,
       "ma_aligned": 0,
       "days_below_ma10": 0,
-      "hotness": -0.517
+      "hotness": -0.518
     },
     {
       "ticker": "SMIN.US",
@@ -2680,7 +2680,7 @@
       "ret_60": 0.12,
       "ma_aligned": 0,
       "days_below_ma10": 0,
-      "hotness": -0.563
+      "hotness": -0.564
     },
     {
       "ticker": "RSPS.US",
@@ -2713,7 +2713,7 @@
       "ret_60": -0.125,
       "ma_aligned": 0,
       "days_below_ma10": 15,
-      "hotness": -0.634
+      "hotness": -0.635
     },
     {
       "ticker": "ILF.US",
@@ -2724,7 +2724,7 @@
       "ret_60": -0.042,
       "ma_aligned": 0,
       "days_below_ma10": 0,
-      "hotness": -0.643
+      "hotness": -0.644
     },
     {
       "ticker": "METV.US",
@@ -2746,7 +2746,7 @@
       "ret_60": -0.247,
       "ma_aligned": 0,
       "days_below_ma10": 17,
-      "hotness": -0.66
+      "hotness": -0.661
     },
     {
       "ticker": "VEGI.US",
@@ -2757,7 +2757,7 @@
       "ret_60": -0.029,
       "ma_aligned": 0,
       "days_below_ma10": 0,
-      "hotness": -0.689
+      "hotness": -0.69
     },
     {
       "ticker": "RSPU.US",
@@ -2779,7 +2779,7 @@
       "ret_60": -0.173,
       "ma_aligned": 0,
       "days_below_ma10": 0,
-      "hotness": -0.715
+      "hotness": -0.704
     },
     {
       "ticker": "RSPG.US",
@@ -2790,7 +2790,7 @@
       "ret_60": -0.093,
       "ma_aligned": 0,
       "days_below_ma10": 15,
-      "hotness": -0.74
+      "hotness": -0.741
     },
     {
       "ticker": "KWEB.US",
@@ -2801,7 +2801,7 @@
       "ret_60": -0.109,
       "ma_aligned": 0,
       "days_below_ma10": 0,
-      "hotness": -0.74
+      "hotness": -0.741
     },
     {
       "ticker": "SHLD.US",
@@ -2829,23 +2829,12 @@
       "ticker": "RSPC.US",
       "name": "Invesco S&P 500 Equal Weight Co",
       "sub_industry": "S&P 500 EW Communication",
-      "close": 36.225,
+      "close": 36.23,
       "pct_high_250": 0.886,
       "ret_60": -0.037,
       "ma_aligned": 0,
       "days_below_ma10": 0,
       "hotness": -0.807
-    },
-    {
-      "ticker": "SPXU.US",
-      "name": "ProShares UltraPro Short S&P500",
-      "sub_industry": "S&P 500 3x Inverse",
-      "close": 37.4,
-      "pct_high_250": 0.59,
-      "ret_60": -0.307,
-      "ma_aligned": 0,
-      "days_below_ma10": 4,
-      "hotness": -0.85
     },
     {
       "ticker": "RSPM.US",
@@ -2859,6 +2848,17 @@
       "hotness": -0.853
     },
     {
+      "ticker": "SPXU.US",
+      "name": "ProShares UltraPro Short S&P500",
+      "sub_industry": "S&P 500 3x Inverse",
+      "close": 37.4,
+      "pct_high_250": 0.59,
+      "ret_60": -0.307,
+      "ma_aligned": 0,
+      "days_below_ma10": 4,
+      "hotness": -0.856
+    },
+    {
       "ticker": "SDS.US",
       "name": "ProShares UltraShort S&P500",
       "sub_industry": "S&P 500 2x Inverse",
@@ -2867,7 +2867,7 @@
       "ret_60": -0.212,
       "ma_aligned": 0,
       "days_below_ma10": 4,
-      "hotness": -0.871
+      "hotness": -0.877
     },
     {
       "ticker": "ICOP.US",
@@ -2911,7 +2911,7 @@
       "ret_60": -0.098,
       "ma_aligned": 0,
       "days_below_ma10": 8,
-      "hotness": -0.96
+      "hotness": -0.95
     },
     {
       "ticker": "FBTC.US",
@@ -2922,7 +2922,7 @@
       "ret_60": -0.109,
       "ma_aligned": 0,
       "days_below_ma10": 0,
-      "hotness": -1.066
+      "hotness": -1.077
     },
     {
       "ticker": "UNG.US",
@@ -2933,7 +2933,7 @@
       "ret_60": 0.003,
       "ma_aligned": 0,
       "days_below_ma10": 2,
-      "hotness": -1.21
+      "hotness": -1.211
     },
     {
       "ticker": "VXX.US",
@@ -2966,7 +2966,7 @@
       "ret_60": -0.372,
       "ma_aligned": 0,
       "days_below_ma10": 0,
-      "hotness": -1.594
+      "hotness": -1.595
     },
     {
       "ticker": "SRTY.US",
@@ -2988,7 +2988,7 @@
       "ret_60": -0.296,
       "ma_aligned": 0,
       "days_below_ma10": 12,
-      "hotness": -1.694
+      "hotness": -1.695
     },
     {
       "ticker": "CWEB.US",
