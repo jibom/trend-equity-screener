@@ -623,7 +623,7 @@
       "pct_high_250": 0.885,
       "pct_high_126": 0.885,
       "nh_ratio_126": 0.317,
-      "amt_surge": 2.266,
+      "amt_surge": 2.267,
       "amt_rank": 0.983,
       "ret_60": 0.481,
       "ma_aligned": 1,
@@ -1855,7 +1855,7 @@
       "ret_60": 0.163,
       "ma_aligned": 0,
       "days_below_ma10": 0,
-      "hotness": 0.196
+      "hotness": 0.195
     },
     {
       "ticker": "MAGS.US",
@@ -2515,7 +2515,7 @@
       "ret_60": -0.124,
       "ma_aligned": 0,
       "days_below_ma10": 0,
-      "hotness": -0.36
+      "hotness": -0.361
     },
     {
       "ticker": "XOP.US",
@@ -2658,7 +2658,7 @@
       "ret_60": 0.063,
       "ma_aligned": 0,
       "days_below_ma10": 0,
-      "hotness": -0.518
+      "hotness": -0.517
     },
     {
       "ticker": "SMIN.US",
