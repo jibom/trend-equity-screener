@@ -189,13 +189,13 @@
       "pct_high_250": 0.988,
       "pct_high_126": 0.988,
       "nh_ratio_126": 0.19,
-      "amt_surge": 0.893,
-      "amt_rank": 0.864,
+      "amt_surge": 0.857,
+      "amt_rank": 0.835,
       "ret_60": 0.136,
       "ma_aligned": 0,
       "days_below_ma10": 0,
       "ma_stack": 1,
-      "hotness": 0.665
+      "hotness": 0.631
     },
     {
       "ticker": "XBI.US",
@@ -478,12 +478,12 @@
       "pct_high_126": 0.985,
       "nh_ratio_126": 0.103,
       "amt_surge": 1.074,
-      "amt_rank": 0.847,
+      "amt_rank": 0.852,
       "ret_60": 0.13,
       "ma_aligned": 1,
       "days_below_ma10": 0,
       "ma_stack": 1,
-      "hotness": 0.339
+      "hotness": 0.344
     },
     {
       "ticker": "IWN.US",
@@ -499,7 +499,7 @@
       "ma_aligned": 1,
       "days_below_ma10": 0,
       "ma_stack": 1,
-      "hotness": 0.336
+      "hotness": 0.337
     },
     {
       "ticker": "URTH.US",
@@ -831,13 +831,13 @@
       "pct_high_250": 0.988,
       "pct_high_126": 0.988,
       "nh_ratio_126": 0.19,
-      "amt_surge": 0.893,
-      "amt_rank": 0.864,
+      "amt_surge": 0.857,
+      "amt_rank": 0.835,
       "ret_60": 0.136,
       "ma_aligned": 0,
       "days_below_ma10": 0,
       "ma_stack": 1,
-      "hotness": 0.665
+      "hotness": 0.631
     },
     {
       "ticker": "XBI.US",
@@ -1261,7 +1261,7 @@
       "ret_60": 0.136,
       "ma_aligned": 0,
       "days_below_ma10": 0,
-      "hotness": 0.665
+      "hotness": 0.631
     },
     {
       "ticker": "XBI.US",
@@ -1602,7 +1602,7 @@
       "ret_60": 0.13,
       "ma_aligned": 1,
       "days_below_ma10": 0,
-      "hotness": 0.339
+      "hotness": 0.344
     },
     {
       "ticker": "IWN.US",
@@ -1613,7 +1613,7 @@
       "ret_60": 0.148,
       "ma_aligned": 1,
       "days_below_ma10": 0,
-      "hotness": 0.336
+      "hotness": 0.337
     },
     {
       "ticker": "NUGO.US",
@@ -1726,6 +1726,17 @@
       "hotness": 0.254
     },
     {
+      "ticker": "VEA.US",
+      "name": "Vanguard FTSE Developed Markets Inde",
+      "sub_industry": "FTSE Developed",
+      "close": 70.81,
+      "pct_high_250": 0.978,
+      "ret_60": 0.094,
+      "ma_aligned": 0,
+      "days_below_ma10": 8,
+      "hotness": 0.254
+    },
+    {
       "ticker": "IWS.US",
       "name": "iShares Russell Mid-Cap Value ETF",
       "sub_industry": "Mid-Cap Value",
@@ -1735,17 +1746,6 @@
       "ma_aligned": 1,
       "days_below_ma10": 0,
       "hotness": 0.25
-    },
-    {
-      "ticker": "VEA.US",
-      "name": "Vanguard FTSE Developed Markets Inde",
-      "sub_industry": "FTSE Developed",
-      "close": 70.81,
-      "pct_high_250": 0.978,
-      "ret_60": 0.094,
-      "ma_aligned": 0,
-      "days_below_ma10": 8,
-      "hotness": 0.249
     },
     {
       "ticker": "UPRO.US",
@@ -1921,7 +1921,7 @@
       "ret_60": 0.3,
       "ma_aligned": 0,
       "days_below_ma10": 1,
-      "hotness": 0.15
+      "hotness": 0.151
     },
     {
       "ticker": "VXF.US",
@@ -2042,7 +2042,7 @@
       "ret_60": 0.06,
       "ma_aligned": 0,
       "days_below_ma10": 0,
-      "hotness": 0.041
+      "hotness": 0.042
     },
     {
       "ticker": "IWY.US",
@@ -2086,7 +2086,7 @@
       "ret_60": 0.164,
       "ma_aligned": 0,
       "days_below_ma10": 0,
-      "hotness": -0.0
+      "hotness": 0.0
     },
     {
       "ticker": "KBWB.US",
@@ -2108,7 +2108,7 @@
       "ret_60": -0.005,
       "ma_aligned": 0,
       "days_below_ma10": 0,
-      "hotness": -0.018
+      "hotness": -0.013
     },
     {
       "ticker": "XLB.US",
@@ -2177,6 +2177,17 @@
       "hotness": -0.041
     },
     {
+      "ticker": "XLY.US",
+      "name": "Consumer Discretionary Select Sector",
+      "sub_industry": "S&P Consumer Discretionary",
+      "close": 117.12,
+      "pct_high_250": 0.944,
+      "ret_60": 0.089,
+      "ma_aligned": 0,
+      "days_below_ma10": 0,
+      "hotness": -0.043
+    },
+    {
       "ticker": "PAVE.US",
       "name": "Global X U.S. Infrastructure Develop",
       "sub_industry": "Infrastructure",
@@ -2188,17 +2199,6 @@
       "hotness": -0.045
     },
     {
-      "ticker": "XLY.US",
-      "name": "Consumer Discretionary Select Sector",
-      "sub_industry": "S&P Consumer Discretionary",
-      "close": 117.12,
-      "pct_high_250": 0.944,
-      "ret_60": 0.089,
-      "ma_aligned": 0,
-      "days_below_ma10": 0,
-      "hotness": -0.048
-    },
-    {
       "ticker": "OEF.US",
       "name": "iShares S&P 100 ETF",
       "sub_industry": "S&P 100",
@@ -2208,6 +2208,17 @@
       "ma_aligned": 0,
       "days_below_ma10": 0,
       "hotness": -0.049
+    },
+    {
+      "ticker": "XLP.US",
+      "name": "Consumer Staples Select Sector SPDR®",
+      "sub_industry": "S&P Consumer Staples",
+      "close": 84.99,
+      "pct_high_250": 0.956,
+      "ret_60": 0.053,
+      "ma_aligned": 0,
+      "days_below_ma10": 0,
+      "hotness": -0.054
     },
     {
       "ticker": "VHT.US",
@@ -2241,17 +2252,6 @@
       "ma_aligned": 0,
       "days_below_ma10": 2,
       "hotness": -0.058
-    },
-    {
-      "ticker": "XLP.US",
-      "name": "Consumer Staples Select Sector SPDR®",
-      "sub_industry": "S&P Consumer Staples",
-      "close": 84.99,
-      "pct_high_250": 0.956,
-      "ret_60": 0.053,
-      "ma_aligned": 0,
-      "days_below_ma10": 0,
-      "hotness": -0.059
     },
     {
       "ticker": "SPMD.US",
@@ -2383,7 +2383,7 @@
       "ret_60": 0.084,
       "ma_aligned": 1,
       "days_below_ma10": 0,
-      "hotness": -0.162
+      "hotness": -0.161
     },
     {
       "ticker": "USMV.US",
@@ -2592,7 +2592,7 @@
       "ret_60": -0.174,
       "ma_aligned": 0,
       "days_below_ma10": 0,
-      "hotness": -0.434
+      "hotness": -0.433
     },
     {
       "ticker": "INDA.US",
@@ -2603,7 +2603,7 @@
       "ret_60": 0.046,
       "ma_aligned": 0,
       "days_below_ma10": 0,
-      "hotness": -0.452
+      "hotness": -0.451
     },
     {
       "ticker": "YANG.US",
@@ -2768,7 +2768,7 @@
       "ret_60": 0.006,
       "ma_aligned": 0,
       "days_below_ma10": 0,
-      "hotness": -0.704
+      "hotness": -0.703
     },
     {
       "ticker": "PSQ.US",
@@ -2801,7 +2801,7 @@
       "ret_60": -0.093,
       "ma_aligned": 0,
       "days_below_ma10": 15,
-      "hotness": -0.741
+      "hotness": -0.74
     },
     {
       "ticker": "IBIT.US",
@@ -2966,7 +2966,7 @@
       "ret_60": -0.372,
       "ma_aligned": 0,
       "days_below_ma10": 0,
-      "hotness": -1.595
+      "hotness": -1.594
     },
     {
       "ticker": "SRTY.US",
