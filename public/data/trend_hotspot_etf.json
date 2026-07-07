@@ -557,7 +557,7 @@
       "pct_high_250": 0.992,
       "pct_high_126": 0.992,
       "nh_ratio_126": 0.103,
-      "amt_surge": 1.055,
+      "amt_surge": 1.054,
       "amt_rank": 0.852,
       "ret_60": 0.106,
       "ma_aligned": 1,
@@ -1843,7 +1843,7 @@
       "ret_60": 0.191,
       "ma_aligned": 0,
       "days_below_ma10": 7,
-      "hotness": 0.222
+      "hotness": 0.221
     },
     {
       "ticker": "IYR.US",
