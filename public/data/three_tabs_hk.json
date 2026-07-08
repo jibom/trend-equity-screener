@@ -1640,6 +1640,16 @@
       "last_close": 5.65
     },
     {
+      "ticker": "1658.HK",
+      "name_cn": "邮储银行",
+      "gics_sector": "Financials",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 3,
+      "last_close": 4.74
+    },
+    {
       "ticker": "0998.HK",
       "name_cn": "中信银行",
       "gics_sector": "Financials",
@@ -1658,16 +1668,6 @@
       "emoji": "🔴",
       "days_in_state": 4,
       "last_close": 6.21
-    },
-    {
-      "ticker": "1658.HK",
-      "name_cn": "邮储银行",
-      "gics_sector": "Financials",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 3,
-      "last_close": 4.74
     },
     {
       "ticker": "2318.HK",
@@ -1880,16 +1880,6 @@
       "last_close": 5.54
     },
     {
-      "ticker": "0371.HK",
-      "name_cn": "北控水务集团",
-      "gics_sector": "Utilities",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 3,
-      "last_close": 2.3
-    },
-    {
       "ticker": "0991.HK",
       "name_cn": "大唐",
       "gics_sector": "Utilities",
@@ -1898,6 +1888,16 @@
       "emoji": "🔴",
       "days_in_state": 4,
       "last_close": 2.35
+    },
+    {
+      "ticker": "0371.HK",
+      "name_cn": "北控水务集团",
+      "gics_sector": "Utilities",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 3,
+      "last_close": 2.3
     },
     {
       "ticker": "0586.HK",
@@ -2270,16 +2270,6 @@
       "last_close": 15.23
     },
     {
-      "ticker": "3993.HK",
-      "name_cn": "洛阳钼业",
-      "gics_sector": "Materials",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 2,
-      "last_close": 15.1
-    },
-    {
       "ticker": "2899.HK",
       "name_cn": "紫金矿业",
       "gics_sector": "Materials",
@@ -2288,6 +2278,16 @@
       "emoji": "🔴",
       "days_in_state": 3,
       "last_close": 29.74
+    },
+    {
+      "ticker": "3993.HK",
+      "name_cn": "洛阳钼业",
+      "gics_sector": "Materials",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 2,
+      "last_close": 15.1
     },
     {
       "ticker": "1208.HK",
@@ -2310,16 +2310,6 @@
       "last_close": 15.7
     },
     {
-      "ticker": "9696.HK",
-      "name_cn": "天齐锂业",
-      "gics_sector": "Materials",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 3,
-      "last_close": 36.36
-    },
-    {
       "ticker": "6680.HK",
       "name_cn": "金力永磁",
       "gics_sector": "Industrials",
@@ -2328,6 +2318,16 @@
       "emoji": "🔴",
       "days_in_state": 4,
       "last_close": 17.5
+    },
+    {
+      "ticker": "9696.HK",
+      "name_cn": "天齐锂业",
+      "gics_sector": "Materials",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 3,
+      "last_close": 36.36
     },
     {
       "ticker": "2465.HK",
@@ -2360,16 +2360,6 @@
       "last_close": 12.79
     },
     {
-      "ticker": "3323.HK",
-      "name_cn": "中国建材",
-      "gics_sector": "Materials",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 1,
-      "last_close": 4.39
-    },
-    {
       "ticker": "6869.HK",
       "name_cn": "长飞光纤光缆",
       "gics_sector": "Information Technology",
@@ -2378,6 +2368,16 @@
       "emoji": "🔴",
       "days_in_state": 1,
       "last_close": 151.9
+    },
+    {
+      "ticker": "3323.HK",
+      "name_cn": "中国建材",
+      "gics_sector": "Materials",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 1,
+      "last_close": 4.39
     },
     {
       "ticker": "0763.HK",
@@ -2470,16 +2470,6 @@
       "last_close": 26.0
     },
     {
-      "ticker": "2692.HK",
-      "name_cn": "兆威机电",
-      "gics_sector": "Industrials",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 3,
-      "last_close": 51.65
-    },
-    {
       "ticker": "9880.HK",
       "name_cn": "优必选",
       "gics_sector": "Industrials",
@@ -2488,6 +2478,16 @@
       "emoji": "🔴",
       "days_in_state": 1,
       "last_close": 88.3
+    },
+    {
+      "ticker": "2692.HK",
+      "name_cn": "兆威机电",
+      "gics_sector": "Industrials",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 3,
+      "last_close": 51.65
     },
     {
       "ticker": "6600.HK",
