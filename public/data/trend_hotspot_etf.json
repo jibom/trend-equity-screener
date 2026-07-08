@@ -93,13 +93,13 @@
       "pct_high_250": 1.0,
       "pct_high_126": 1.0,
       "nh_ratio_126": 0.317,
-      "amt_surge": 1.16,
+      "amt_surge": 1.159,
       "amt_rank": 0.807,
       "ret_60": 0.114,
       "ma_aligned": 1,
       "days_below_ma10": 0,
       "ma_stack": 1,
-      "hotness": 0.818
+      "hotness": 0.817
     },
     {
       "ticker": "SPY.US",
@@ -109,7 +109,7 @@
       "pct_high_250": 0.987,
       "pct_high_126": 0.987,
       "nh_ratio_126": 0.19,
-      "amt_surge": 0.925,
+      "amt_surge": 0.927,
       "amt_rank": 1.0,
       "ret_60": 0.103,
       "ma_aligned": 0,
@@ -157,29 +157,13 @@
       "pct_high_250": 1.0,
       "pct_high_126": 1.0,
       "nh_ratio_126": 0.159,
-      "amt_surge": 1.316,
+      "amt_surge": 1.318,
       "amt_rank": 0.886,
       "ret_60": 0.244,
       "ma_aligned": 1,
       "days_below_ma10": 0,
       "ma_stack": 1,
-      "hotness": 0.668
-    },
-    {
-      "ticker": "DIA.US",
-      "name": "SPDR Dow Jones Industrial Average ET",
-      "sub_industry": "Dow Jones Industrial Average",
-      "close": 528.45,
-      "pct_high_250": 0.997,
-      "pct_high_126": 0.997,
-      "nh_ratio_126": 0.183,
-      "amt_surge": 0.989,
-      "amt_rank": 0.92,
-      "ret_60": 0.101,
-      "ma_aligned": 1,
-      "days_below_ma10": 0,
-      "ma_stack": 1,
-      "hotness": 0.637
+      "hotness": 0.669
     },
     {
       "ticker": "IJR.US",
@@ -189,11 +173,27 @@
       "pct_high_250": 0.98,
       "pct_high_126": 0.98,
       "nh_ratio_126": 0.246,
-      "amt_surge": 1.053,
+      "amt_surge": 1.056,
       "amt_rank": 0.744,
       "ret_60": 0.115,
       "ma_aligned": 1,
       "days_below_ma10": 1,
+      "ma_stack": 1,
+      "hotness": 0.636
+    },
+    {
+      "ticker": "DIA.US",
+      "name": "SPDR Dow Jones Industrial Average ET",
+      "sub_industry": "Dow Jones Industrial Average",
+      "close": 528.45,
+      "pct_high_250": 0.997,
+      "pct_high_126": 0.997,
+      "nh_ratio_126": 0.183,
+      "amt_surge": 0.987,
+      "amt_rank": 0.92,
+      "ret_60": 0.101,
+      "ma_aligned": 1,
+      "days_below_ma10": 0,
       "ma_stack": 1,
       "hotness": 0.636
     },
@@ -435,7 +435,7 @@
       "ma_aligned": 0,
       "days_below_ma10": 0,
       "ma_stack": 1,
-      "hotness": 0.336
+      "hotness": 0.335
     },
     {
       "ticker": "KRE.US",
@@ -493,13 +493,13 @@
       "pct_high_250": 0.992,
       "pct_high_126": 0.992,
       "nh_ratio_126": 0.183,
-      "amt_surge": 1.591,
-      "amt_rank": 0.358,
+      "amt_surge": 1.589,
+      "amt_rank": 0.364,
       "ret_60": 0.086,
       "ma_aligned": 0,
       "days_below_ma10": 0,
       "ma_stack": 1,
-      "hotness": 0.304
+      "hotness": 0.309
     },
     {
       "ticker": "IWV.US",
@@ -509,13 +509,13 @@
       "pct_high_250": 0.991,
       "pct_high_126": 0.991,
       "nh_ratio_126": 0.19,
-      "amt_surge": 1.148,
+      "amt_surge": 1.146,
       "amt_rank": 0.341,
       "ret_60": 0.103,
       "ma_aligned": 0,
       "days_below_ma10": 0,
       "ma_stack": 1,
-      "hotness": 0.3
+      "hotness": 0.299
     },
     {
       "ticker": "VO.US",
@@ -559,7 +559,7 @@
       "pct_high_250": 0.907,
       "pct_high_126": 0.907,
       "nh_ratio_126": 0.135,
-      "amt_surge": 9.016,
+      "amt_surge": 9.017,
       "amt_rank": 0.136,
       "ret_60": 0.214,
       "ma_aligned": 0,
@@ -591,13 +591,13 @@
       "pct_high_250": 0.869,
       "pct_high_126": 0.869,
       "nh_ratio_126": 0.31,
-      "amt_surge": 2.177,
+      "amt_surge": 2.178,
       "amt_rank": 0.983,
       "ret_60": 0.351,
       "ma_aligned": 0,
       "days_below_ma10": 4,
       "ma_stack": 0,
-      "hotness": 1.049
+      "hotness": 1.05
     },
     {
       "ticker": "MTUM.US",
@@ -607,7 +607,7 @@
       "pct_high_250": 0.905,
       "pct_high_126": 0.905,
       "nh_ratio_126": 0.222,
-      "amt_surge": 2.222,
+      "amt_surge": 2.221,
       "amt_rank": 0.801,
       "ret_60": 0.192,
       "ma_aligned": 1,
@@ -623,13 +623,13 @@
       "pct_high_250": 1.0,
       "pct_high_126": 1.0,
       "nh_ratio_126": 0.317,
-      "amt_surge": 1.16,
+      "amt_surge": 1.159,
       "amt_rank": 0.807,
       "ret_60": 0.114,
       "ma_aligned": 1,
       "days_below_ma10": 0,
       "ma_stack": 1,
-      "hotness": 0.818
+      "hotness": 0.817
     },
     {
       "ticker": "SPY.US",
@@ -639,7 +639,7 @@
       "pct_high_250": 0.987,
       "pct_high_126": 0.987,
       "nh_ratio_126": 0.19,
-      "amt_surge": 0.925,
+      "amt_surge": 0.927,
       "amt_rank": 1.0,
       "ret_60": 0.103,
       "ma_aligned": 0,
@@ -767,13 +767,13 @@
       "pct_high_250": 1.0,
       "pct_high_126": 1.0,
       "nh_ratio_126": 0.159,
-      "amt_surge": 1.316,
+      "amt_surge": 1.318,
       "amt_rank": 0.886,
       "ret_60": 0.244,
       "ma_aligned": 1,
       "days_below_ma10": 0,
       "ma_stack": 1,
-      "hotness": 0.668
+      "hotness": 0.669
     },
     {
       "ticker": "RSPT.US",
@@ -792,22 +792,6 @@
       "hotness": 0.647
     },
     {
-      "ticker": "DIA.US",
-      "name": "SPDR Dow Jones Industrial Average ET",
-      "sub_industry": "Dow Jones Industrial Average",
-      "close": 528.45,
-      "pct_high_250": 0.997,
-      "pct_high_126": 0.997,
-      "nh_ratio_126": 0.183,
-      "amt_surge": 0.989,
-      "amt_rank": 0.92,
-      "ret_60": 0.101,
-      "ma_aligned": 1,
-      "days_below_ma10": 0,
-      "ma_stack": 1,
-      "hotness": 0.637
-    },
-    {
       "ticker": "IJR.US",
       "name": "iShares Core S&P Small-Cap ETF",
       "sub_industry": "Small Blend",
@@ -815,11 +799,27 @@
       "pct_high_250": 0.98,
       "pct_high_126": 0.98,
       "nh_ratio_126": 0.246,
-      "amt_surge": 1.053,
+      "amt_surge": 1.056,
       "amt_rank": 0.744,
       "ret_60": 0.115,
       "ma_aligned": 1,
       "days_below_ma10": 1,
+      "ma_stack": 1,
+      "hotness": 0.636
+    },
+    {
+      "ticker": "DIA.US",
+      "name": "SPDR Dow Jones Industrial Average ET",
+      "sub_industry": "Dow Jones Industrial Average",
+      "close": 528.45,
+      "pct_high_250": 0.997,
+      "pct_high_126": 0.997,
+      "nh_ratio_126": 0.183,
+      "amt_surge": 0.987,
+      "amt_rank": 0.92,
+      "ret_60": 0.101,
+      "ma_aligned": 1,
+      "days_below_ma10": 0,
       "ma_stack": 1,
       "hotness": 0.636
     },
@@ -911,7 +911,7 @@
       "pct_high_250": 0.83,
       "pct_high_126": 0.83,
       "nh_ratio_126": 0.127,
-      "amt_surge": 1.128,
+      "amt_surge": 1.127,
       "amt_rank": 0.972,
       "ret_60": 0.479,
       "ma_aligned": 0,
@@ -975,13 +975,29 @@
       "pct_high_250": 0.978,
       "pct_high_126": 0.978,
       "nh_ratio_126": 0.095,
-      "amt_surge": 1.838,
-      "amt_rank": 0.472,
+      "amt_surge": 1.84,
+      "amt_rank": 0.477,
       "ret_60": 0.574,
       "ma_aligned": 1,
       "days_below_ma10": 0,
       "ma_stack": 1,
-      "hotness": 0.38
+      "hotness": 0.385
+    },
+    {
+      "ticker": "QLD.US",
+      "name": "ProShares Ultra QQQ",
+      "sub_industry": "NASDAQ-100 2x",
+      "close": 89.69,
+      "pct_high_250": 0.893,
+      "pct_high_126": 0.893,
+      "nh_ratio_126": 0.135,
+      "amt_surge": 1.205,
+      "amt_rank": 0.693,
+      "ret_60": 0.32,
+      "ma_aligned": 0,
+      "days_below_ma10": 1,
+      "ma_stack": 0,
+      "hotness": 0.383
     },
     {
       "ticker": "SPSM.US",
@@ -998,22 +1014,6 @@
       "days_below_ma10": 1,
       "ma_stack": 1,
       "hotness": 0.379
-    },
-    {
-      "ticker": "QLD.US",
-      "name": "ProShares Ultra QQQ",
-      "sub_industry": "NASDAQ-100 2x",
-      "close": 89.69,
-      "pct_high_250": 0.893,
-      "pct_high_126": 0.893,
-      "nh_ratio_126": 0.135,
-      "amt_surge": 1.205,
-      "amt_rank": 0.688,
-      "ret_60": 0.32,
-      "ma_aligned": 0,
-      "days_below_ma10": 1,
-      "ma_stack": 0,
-      "hotness": 0.378
     },
     {
       "ticker": "XLV.US",
@@ -1075,7 +1075,7 @@
       "ret_60": 0.351,
       "ma_aligned": 0,
       "days_below_ma10": 4,
-      "hotness": 1.049
+      "hotness": 1.05
     },
     {
       "ticker": "MTUM.US",
@@ -1108,7 +1108,7 @@
       "ret_60": 0.114,
       "ma_aligned": 1,
       "days_below_ma10": 0,
-      "hotness": 0.818
+      "hotness": 0.817
     },
     {
       "ticker": "SPY.US",
@@ -1207,7 +1207,7 @@
       "ret_60": 0.244,
       "ma_aligned": 1,
       "days_below_ma10": 0,
-      "hotness": 0.668
+      "hotness": 0.669
     },
     {
       "ticker": "RSPT.US",
@@ -1221,17 +1221,6 @@
       "hotness": 0.647
     },
     {
-      "ticker": "DIA.US",
-      "name": "SPDR Dow Jones Industrial Average ET",
-      "sub_industry": "Dow Jones Industrial Average",
-      "close": 528.45,
-      "pct_high_250": 0.997,
-      "ret_60": 0.101,
-      "ma_aligned": 1,
-      "days_below_ma10": 0,
-      "hotness": 0.637
-    },
-    {
       "ticker": "IJR.US",
       "name": "iShares Core S&P Small-Cap ETF",
       "sub_industry": "Small Blend",
@@ -1240,6 +1229,17 @@
       "ret_60": 0.115,
       "ma_aligned": 1,
       "days_below_ma10": 1,
+      "hotness": 0.636
+    },
+    {
+      "ticker": "DIA.US",
+      "name": "SPDR Dow Jones Industrial Average ET",
+      "sub_industry": "Dow Jones Industrial Average",
+      "close": 528.45,
+      "pct_high_250": 0.997,
+      "ret_60": 0.101,
+      "ma_aligned": 1,
+      "days_below_ma10": 0,
       "hotness": 0.636
     },
     {
@@ -1460,7 +1460,18 @@
       "ret_60": 0.574,
       "ma_aligned": 1,
       "days_below_ma10": 0,
-      "hotness": 0.38
+      "hotness": 0.385
+    },
+    {
+      "ticker": "QLD.US",
+      "name": "ProShares Ultra QQQ",
+      "sub_industry": "NASDAQ-100 2x",
+      "close": 89.69,
+      "pct_high_250": 0.893,
+      "ret_60": 0.32,
+      "ma_aligned": 0,
+      "days_below_ma10": 1,
+      "hotness": 0.383
     },
     {
       "ticker": "SPSM.US",
@@ -1472,17 +1483,6 @@
       "ma_aligned": 1,
       "days_below_ma10": 1,
       "hotness": 0.379
-    },
-    {
-      "ticker": "QLD.US",
-      "name": "ProShares Ultra QQQ",
-      "sub_industry": "NASDAQ-100 2x",
-      "close": 89.69,
-      "pct_high_250": 0.893,
-      "ret_60": 0.32,
-      "ma_aligned": 0,
-      "days_below_ma10": 1,
-      "hotness": 0.378
     },
     {
       "ticker": "MDY.US",
@@ -1570,7 +1570,7 @@
       "ret_60": 0.101,
       "ma_aligned": 0,
       "days_below_ma10": 0,
-      "hotness": 0.336
+      "hotness": 0.335
     },
     {
       "ticker": "KRE.US",
@@ -1606,6 +1606,17 @@
       "hotness": 0.312
     },
     {
+      "ticker": "URTH.US",
+      "name": "iShares MSCI World ETF",
+      "sub_industry": "Global Large-Stock Blend",
+      "close": 203.13,
+      "pct_high_250": 0.992,
+      "ret_60": 0.086,
+      "ma_aligned": 0,
+      "days_below_ma10": 0,
+      "hotness": 0.309
+    },
+    {
       "ticker": "CIBR.US",
       "name": "First Trust NASDAQ Cybersecurity ETF",
       "sub_industry": "Technology",
@@ -1628,17 +1639,6 @@
       "hotness": 0.306
     },
     {
-      "ticker": "URTH.US",
-      "name": "iShares MSCI World ETF",
-      "sub_industry": "Global Large-Stock Blend",
-      "close": 203.13,
-      "pct_high_250": 0.992,
-      "ret_60": 0.086,
-      "ma_aligned": 0,
-      "days_below_ma10": 0,
-      "hotness": 0.304
-    },
-    {
       "ticker": "IWO.US",
       "name": "iShares Russell 2000 Growth ETF",
       "sub_industry": "Russell 2000 Growth",
@@ -1658,7 +1658,7 @@
       "ret_60": 0.103,
       "ma_aligned": 0,
       "days_below_ma10": 0,
-      "hotness": 0.3
+      "hotness": 0.299
     },
     {
       "ticker": "XLF.US",
@@ -1716,17 +1716,6 @@
       "hotness": 0.261
     },
     {
-      "ticker": "AIQ.US",
-      "name": "Global X Artificial Intelligence & T",
-      "sub_industry": "Technology",
-      "close": 62.08,
-      "pct_high_250": 0.885,
-      "ret_60": 0.258,
-      "ma_aligned": 0,
-      "days_below_ma10": 4,
-      "hotness": 0.258
-    },
-    {
       "ticker": "IYR.US",
       "name": "iShares U.S. Real Estate ETF",
       "sub_industry": "Real Estate / REIT",
@@ -1738,15 +1727,15 @@
       "hotness": 0.252
     },
     {
-      "ticker": "XLI.US",
-      "name": "Industrial Select Sector SPDR® Fund",
-      "sub_industry": "S&P Industrials",
-      "close": 182.38,
-      "pct_high_250": 0.983,
-      "ret_60": 0.062,
-      "ma_aligned": 1,
-      "days_below_ma10": 1,
-      "hotness": 0.249
+      "ticker": "AIQ.US",
+      "name": "Global X Artificial Intelligence & T",
+      "sub_industry": "Technology",
+      "close": 62.08,
+      "pct_high_250": 0.885,
+      "ret_60": 0.258,
+      "ma_aligned": 0,
+      "days_below_ma10": 4,
+      "hotness": 0.251
     },
     {
       "ticker": "VEA.US",
@@ -1768,7 +1757,18 @@
       "ret_60": 0.038,
       "ma_aligned": 1,
       "days_below_ma10": 0,
-      "hotness": 0.242
+      "hotness": 0.248
+    },
+    {
+      "ticker": "XLI.US",
+      "name": "Industrial Select Sector SPDR® Fund",
+      "sub_industry": "S&P Industrials",
+      "close": 182.38,
+      "pct_high_250": 0.983,
+      "ret_60": 0.062,
+      "ma_aligned": 1,
+      "days_below_ma10": 1,
+      "hotness": 0.244
     },
     {
       "ticker": "IBB.US",
@@ -2145,17 +2145,6 @@
       "hotness": -0.022
     },
     {
-      "ticker": "XHB.US",
-      "name": "SPDR® S&P Homebuilders ETF",
-      "sub_industry": "Consumer Cyclical",
-      "close": 109.41,
-      "pct_high_250": 0.906,
-      "ret_60": 0.052,
-      "ma_aligned": 0,
-      "days_below_ma10": 3,
-      "hotness": -0.024
-    },
-    {
       "ticker": "VBK.US",
       "name": "Vanguard Small-Cap Growth Index Fund",
       "sub_industry": "Small Growth",
@@ -2164,6 +2153,17 @@
       "ret_60": 0.122,
       "ma_aligned": 1,
       "days_below_ma10": 1,
+      "hotness": -0.025
+    },
+    {
+      "ticker": "XHB.US",
+      "name": "SPDR® S&P Homebuilders ETF",
+      "sub_industry": "Consumer Cyclical",
+      "close": 109.41,
+      "pct_high_250": 0.906,
+      "ret_60": 0.052,
+      "ma_aligned": 0,
+      "days_below_ma10": 3,
       "hotness": -0.025
     },
     {
@@ -2219,7 +2219,7 @@
       "ret_60": 0.024,
       "ma_aligned": 0,
       "days_below_ma10": 0,
-      "hotness": -0.05
+      "hotness": -0.049
     },
     {
       "ticker": "SCHF.US",
@@ -2472,7 +2472,7 @@
       "ret_60": -0.057,
       "ma_aligned": 0,
       "days_below_ma10": 0,
-      "hotness": -0.322
+      "hotness": -0.327
     },
     {
       "ticker": "FNGS.US",
@@ -2538,7 +2538,7 @@
       "ret_60": -0.09,
       "ma_aligned": 0,
       "days_below_ma10": 21,
-      "hotness": -0.401
+      "hotness": -0.4
     },
     {
       "ticker": "RSPN.US",
@@ -2560,7 +2560,7 @@
       "ret_60": 0.057,
       "ma_aligned": 0,
       "days_below_ma10": 2,
-      "hotness": -0.416
+      "hotness": -0.421
     },
     {
       "ticker": "OIH.US",
@@ -2615,7 +2615,7 @@
       "ret_60": 0.01,
       "ma_aligned": 0,
       "days_below_ma10": 1,
-      "hotness": -0.52
+      "hotness": -0.519
     },
     {
       "ticker": "SMIN.US",
@@ -2879,7 +2879,7 @@
       "ret_60": -0.204,
       "ma_aligned": 0,
       "days_below_ma10": 0,
-      "hotness": -0.96
+      "hotness": -0.959
     },
     {
       "ticker": "FBTC.US",
