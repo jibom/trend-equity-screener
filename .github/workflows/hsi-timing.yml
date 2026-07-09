@@ -1,0 +1,75 @@
+name: HSI Timing Daily
+
+# 每日港股收盘后用最新 HSI OHLC 重生 抄底+逃顶 HTML, 推到 GitHub Pages。
+# 只跑 plot (读仓库里已提交的 breadth CSV + 拉最新 HSI 指数 OHLC), 不跑 backtest。
+# backtest (per-stock breadth) 每 few months 本地跑一次后, 提交更新的 CSV 推上来。
+# DB 连接走 data_provider 默认值 (jianxin Aliyun RDS, 公网可达), 仅用于拉 HSI.HI OHLC。
+
+on:
+  schedule:
+    - cron: '13 9 * * 1-5'   # UTC 09:13 = HKT 17:13, Mon-Fri (HSI 16:00 收盘后)
+  workflow_dispatch:
+
+concurrency:
+  group: hsi-timing
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Build combined 2-tab HTML (读 committed CSV + 拉最新 HSI OHLC)
+        run: python scripts/plot_combined_tabs.py
+        env:
+          PYTHONIOENCODING: utf-8
+
+      - name: Publish HTML to public/
+        run: |
+          mkdir -p public
+          cp output/hsi_timing_combined.html public/hsi_timing_combined.html
+
+      - name: Commit & push HTML
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add public/hsi_timing_combined.html
+          git diff --staged --quiet || git commit -m "HSI timing daily update $(date -u +'%Y-%m-%d')"
+          git pull --rebase --autostash origin main
+          git push
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
