@@ -246,7 +246,19 @@ def build(csv=CSV, idx_code='HSI.HI', idx_table='hkindexeodprices', market='HSI'
         ('放量∪大跌%',       f'≥ {u99_now:.1f}% (99th)',  bool(last['c_union']),              f"{last['union_pct']:.1f}%"),
     ]
     n_met = sum(1 for _, _, met, _ in conds if met)
-    trigger = n_met >= 4   # 满足 4 个即标注/满仓干
+    today_trig = n_met >= 4   # 满足 4 个即标注/满仓干
+    # "让子弹飞": 过去 PERSIST 交易日内出现过 score≥4 信号 → 信号仍有效 (簇内保持, 不因当天分数回落就消失)
+    PERSIST = 10
+    sig_idx = df.index[df['score'] >= 4]
+    recent_info, recent_trig = '', False
+    if len(sig_idx):
+        ri = sig_idx[-1]
+        days_ago = len(df) - 1 - ri
+        if days_ago <= PERSIST:
+            rrow = df.iloc[ri]
+            recent_info = f"🔔 近期信号 {rrow['date'].strftime('%Y-%m-%d')} score={int(rrow['score'])}/6 · {days_ago} 交易日前 · 仍有效"
+            recent_trig = True
+    trigger = today_trig or recent_trig
     # 扁平样式
     cell = "padding:2px 10px;border:1px solid #e0e0e0;line-height:1.3"
     rows = ''
@@ -258,7 +270,12 @@ def build(csv=CSV, idx_code='HSI.HI', idx_table='hkindexeodprices', market='HSI'
             f"<td style='{cell};text-align:right'>{val}</td>"
             f"<td style='{cell};text-align:center'>{chk}</td></tr>"
         )
-    summary = f'满仓干！({n_met}/6)' if trigger else f'{n_met}/6 满足'
+    if today_trig:
+        summary = f'满仓干！({n_met}/6)'
+    elif recent_trig:
+        summary = f'信号仍有效 ({n_met}/6)'
+    else:
+        summary = f'{n_met}/6 满足'
     summary_color = '#c0392b' if trigger else '#555'
     last_date = last['date'].strftime('%Y-%m-%d')
     # 历史胜率 + 预期收益: score≥4 的日期, 前瞻 5/20/60 日 HSI 收益
@@ -272,6 +289,8 @@ def build(csv=CSV, idx_code='HSI.HI', idx_table='hkindexeodprices', market='HSI'
     wr_txt = f"5日 {wr[5]:.0f}% · 20日 {wr[20]:.0f}% · 60日 {wr[60]:.0f}%"
     er_txt = f"5日 {er[5]:+.1f}% · 20日 {er[20]:+.1f}% · 60日 {er[60]:+.1f}%"
     th = "padding:3px 10px;border:1px solid #ccc;background:#f6f6f6;font-weight:600"
+    recent_row = (f"<tr><td colspan='4' style='{cell};color:#c0392b;font-weight:600;text-align:center;background:#fff5f5'>"
+                  f"{recent_info}</td></tr>") if recent_info else ''
     table_html = (
         f"<table style='border-collapse:collapse;font-family:sans-serif;font-size:12px;margin:6px auto 0;'>"
         f"<caption style='caption-side:top;font-weight:bold;font-size:13px;margin-bottom:3px;'>"
@@ -279,6 +298,7 @@ def build(csv=CSV, idx_code='HSI.HI', idx_table='hkindexeodprices', market='HSI'
         f"<thead><tr><th style='{th}'>指标</th><th style='{th}'>阈值</th><th style='{th}'>当前值</th><th style='{th}'>状态</th></tr></thead>"
         f"<tbody>{rows}</tbody>"
         f"<tfoot>"
+        f"{recent_row}"
         f"<tr><td colspan='3' style='padding:3px 10px;border:1px solid #ccc;text-align:right;font-weight:bold'>综合判断</td>"
         f"<td style='padding:3px 10px;border:1px solid #ccc;text-align:center;font-weight:bold;color:{summary_color};font-size:13px'>{summary}</td></tr>"
         f"<tr><td colspan='2' style='{cell};color:#666'>历史胜率 (score≥4, n={n_sig})</td><td colspan='2' style='{cell};color:#2e7d32'>{wr_txt}</td></tr>"
