@@ -25,10 +25,10 @@ def build(csv=CSV, idx_code='HSI.HI', idx_table='hkindexeodprices', market='HSI'
     df['date'] = pd.to_datetime(df['date'], format='%Y%m%d')
     df = df.sort_values('date').reset_index(drop=True)
 
-    # 拉指数 OHLC
+    # 拉指数 OHLC (拉到今天, 不被 CSV 末日卡住 — breadth 可能滞后到上次 backtest)
     conn = pymysql.connect(**DB_CONFIG)
     start = df['date'].min().strftime('%Y%m%d')
-    end = df['date'].max().strftime('%Y%m%d')
+    end = pd.Timestamp.today().strftime('%Y%m%d')
     hsi_raw = pd.read_sql(
         f"SELECT TRADE_DT, S_DQ_HIGH, S_DQ_LOW, S_DQ_CLOSE FROM {idx_table} "
         f"WHERE S_INFO_WINDCODE='{idx_code}' AND TRADE_DT BETWEEN '{start}' AND '{end}' ORDER BY TRADE_DT", conn)
@@ -53,6 +53,13 @@ def build(csv=CSV, idx_code='HSI.HI', idx_table='hkindexeodprices', market='HSI'
     _prior = hsi_raw['logret'].shift(1)
     hsi_raw['cap_z'] = (hsi_raw['logret'] - _prior.rolling(20).mean()) / _prior.rolling(20).std()
 
+    # 用 hsi_raw 日期扩展 df: CSV 末日之后用新鲜 HSI 价格/RSI/cap_z, breadth 列留 NaN
+    df = (hsi_raw[['date', 'S_DQ_CLOSE', 'rsi', 'cap_z', 'logret']]
+          .rename(columns={'S_DQ_CLOSE': 'hsi_close'})
+          .merge(df.drop(columns=['hsi_close']), on='date', how='left'))
+    df['w_kdj_j'] = np.nan
+    df['w_kdj_j_high4'] = np.nan
+
     # 周线 KDJ
     df_d = pd.DataFrame({
         'date': hsi_raw['date'],
@@ -75,7 +82,7 @@ def build(csv=CSV, idx_code='HSI.HI', idx_table='hkindexeodprices', market='HSI'
         df.loc[mask, 'w_kdj_j'] = wr['w_kdj_j']
         df.loc[mask, 'w_kdj_j_high4'] = wr['w_kdj_j_high4']
 
-    df = df.merge(hsi_raw[['date', 'rsi', 'cap_z', 'logret']], on='date', how='left')
+    # df 已含 rsi/cap_z/logret (上面 extend 时并入), 无需再 merge
 
     # Rolling 累计顶部信号
     for weeks, days in [(1, 5), (2, 10), (3, 15), (4, 20)]:

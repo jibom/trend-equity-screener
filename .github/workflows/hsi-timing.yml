@@ -7,7 +7,7 @@ name: HSI Timing Daily
 
 on:
   schedule:
-    - cron: '13 9 * * 1-5'   # UTC 09:13 = HKT 17:13, Mon-Fri (HSI 16:00 收盘后)
+    - cron: '7 13 * * 1-5'   # UTC 13:07 = HKT 21:07, Mon-Fri (HSI 收盘后数据落定)
   workflow_dispatch:
 
 concurrency:
