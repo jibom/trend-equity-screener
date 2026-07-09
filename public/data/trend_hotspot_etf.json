@@ -559,7 +559,7 @@
       "pct_high_250": 0.887,
       "pct_high_126": 0.887,
       "nh_ratio_126": 0.302,
-      "amt_surge": 2.132,
+      "amt_surge": 2.133,
       "amt_rank": 0.983,
       "ret_60": 0.357,
       "ma_aligned": 0,
@@ -655,7 +655,7 @@
       "pct_high_250": 0.769,
       "pct_high_126": 0.769,
       "nh_ratio_126": 0.394,
-      "amt_surge": 1.864,
+      "amt_surge": 1.863,
       "amt_rank": 0.96,
       "ret_60": 0.913,
       "ma_aligned": 0,
@@ -1527,7 +1527,7 @@
       "ret_60": 0.07,
       "ma_aligned": 1,
       "days_below_ma10": 1,
-      "hotness": 0.325
+      "hotness": 0.324
     },
     {
       "ticker": "IWO.US",
