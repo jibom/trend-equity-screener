@@ -158,15 +158,18 @@ def build(csv=CSV, idx_code='HSI.HI', idx_table='hkindexeodprices', market='HSI'
             best = sorted(c, key=lambda r: (-int(r['score']), -r['hsi_close']))[0]
             picked.append(best.name)
     cap_df = df.loc[picked]
-    cap_styles = {8: ('#4a148c', 20), 6: ('#6a1b9a', 16), 5: ('#9575cd', 11)}
-    for tier in (8, 6, 5):
-        sub = cap_df[cap_df['score'] == tier]
+    # 按 score 区间分档 (>=8 大深紫, 6-7 中紫, 5 浅紫) — 用区间避免 score=7 等被丢弃
+    cap_tiers = [(8, '#4a148c', 20), (6, '#6a1b9a', 16), (5, '#9575cd', 11)]
+    for i, (min_s, col, sz) in enumerate(cap_tiers):
+        if i == 0:
+            sub = cap_df[cap_df['score'] >= min_s]
+        else:
+            sub = cap_df[(cap_df['score'] >= min_s) & (cap_df['score'] < cap_tiers[i - 1][0])]
         if sub.empty:
             continue
         txt = [f"{d.strftime('%Y-%m-%d')}<br>score={int(s)}/10<br>HSI={h:,.0f}"
                for s, h, d in zip(sub['score'], sub['hsi_close'], sub['date'])]
-        col, sz = cap_styles[tier]
-        fig.add_trace(go.Scatter(x=sub['date'], y=sub['hsi_close'], name=f'Cap {tier}/6',
+        fig.add_trace(go.Scatter(x=sub['date'], y=sub['hsi_close'], name=f'Cap >={min_s}/10',
                                  mode='markers', showlegend=False,
                                  marker=dict(symbol='triangle-down', color=col, size=sz,
                                              opacity=0.9, line=dict(color='white', width=1)),

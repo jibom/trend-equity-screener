@@ -56,10 +56,10 @@ df['score']=df[CONDS].sum(axis=1)
 for N in (5,20,60): df[f'fwd_{N}']=df['hsi_close'].shift(-N)/df['hsi_close']-1
 pd.set_option('display.width',320); pd.set_option('display.max_columns',60)
 
-print("=== 2018-01 ~ 2018-03 HSI 顶部窗口 (每周采样) ===")
-w=df[(df['date']>='2018-01-01')&(df['date']<='2018-03-31')]
+print("=== 2025-12 ~ 2026-02 HSI 顶部窗口 (每日) ===")
+w=df[(df['date']>='2025-12-01')&(df['date']<='2026-02-15')]
 show=['date','hsi_close','score','c_rsi','c_kdj','c_brd','c_cap','c_bias','rsi','w_kdj_j_high4','bias20','cap_z','breadth_below_ma50']
-print(w[show].iloc[::5].to_string(index=False))
+print(w[show].to_string(index=False))
 
 print("\n=== 各子信号独立有效性 (触发后下跌概率 / 预期收益) ===")
 base60=(df['fwd_60'].dropna()<0).mean()*100; base20=(df['fwd_20'].dropna()<0).mean()*100; base5=(df['fwd_5'].dropna()<0).mean()*100

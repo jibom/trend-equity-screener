@@ -62,6 +62,25 @@ print("\n=== 所有 score>=5 日期 (Cap 候选) 按年统计 ===")
 s5 = df[df['score']>=5]
 print(s5.groupby(s5['date'].dt.year).size().to_string())
 
+print("\n=== 所有 score>=5 日期 (原始, 去重前) ===")
+print(s5[['date','hsi_close','score']].to_string(index=False))
+
+# HSI 主要季度高点 → 检查每个高点前后15交易日是否有 score>=5
+print("\n=== HSI 季度高点覆盖检查 (前后15交易日有无 score>=5) ===")
+df2 = df.sort_values('date').reset_index(drop=True)
+# 用 60 交易日 rolling max 找局部高点 (峰)
+df2['is_peak'] = (df2['hsi_close'] == df2['hsi_close'].rolling(60, min_periods=30).max()) & \
+                 (df2['hsi_close'].shift(20) < df2['hsi_close']) & (df2['hsi_close'].shift(-20) < df2['hsi_close'] if len(df2)>20 else False)
+peaks = df2[df2['is_peak']]
+for _, p in peaks.iterrows():
+    pi = p.name
+    lo, hi = max(0, pi-15), min(len(df2), pi+16)
+    window = df2.iloc[lo:hi]
+    sigs = window[window['score']>=5]
+    status = f"score={int(sigs['score'].max())} on {sigs['date'].iloc[0].strftime('%Y-%m-%d')}" if len(sigs) else "❌ MISSED"
+    print(f"  peak {p['date'].strftime('%Y-%m-%d')} HSI={p['hsi_close']:.0f}  → {status}")
+
+
 print("\n=== Cap 标记 (score>=5, gap>10 去重后) 全部日期 ===")
 sig = df[df['score']>=5].copy()
 if not sig.empty:
