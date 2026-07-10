@@ -1683,16 +1683,6 @@
       "last_close": 5.48
     },
     {
-      "ticker": "0257.HK",
-      "name_cn": "光大环境",
-      "gics_sector": "Industrials",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 1,
-      "last_close": 4.69
-    },
-    {
       "ticker": "0371.HK",
       "name_cn": "北控水务集团",
       "gics_sector": "Utilities",
@@ -1701,6 +1691,16 @@
       "emoji": "🔴",
       "days_in_state": 4,
       "last_close": 2.29
+    },
+    {
+      "ticker": "0257.HK",
+      "name_cn": "光大环境",
+      "gics_sector": "Industrials",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 1,
+      "last_close": 4.69
     },
     {
       "ticker": "1816.HK",
@@ -1893,16 +1893,6 @@
       "last_close": 40.28
     },
     {
-      "ticker": "0322.HK",
-      "name_cn": "康师傅控股",
-      "gics_sector": "Consumer Staples",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 1,
-      "last_close": 11.06
-    },
-    {
       "ticker": "9980.HK",
       "name_cn": "东鹏饮料",
       "gics_sector": "Consumer Staples",
@@ -1911,6 +1901,16 @@
       "emoji": "🔴",
       "days_in_state": 4,
       "last_close": 107.3
+    },
+    {
+      "ticker": "0322.HK",
+      "name_cn": "康师傅控股",
+      "gics_sector": "Consumer Staples",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 1,
+      "last_close": 11.06
     },
     {
       "ticker": "0291.HK",
@@ -1933,16 +1933,6 @@
       "last_close": 7.76
     },
     {
-      "ticker": "1579.HK",
-      "name_cn": "颐海国际",
-      "gics_sector": "Consumer Staples",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 1,
-      "last_close": 14.18
-    },
-    {
       "ticker": "2648.HK",
       "name_cn": "安井食品",
       "gics_sector": "Consumer Staples",
@@ -1951,6 +1941,16 @@
       "emoji": "🔴",
       "days_in_state": 2,
       "last_close": 65.05
+    },
+    {
+      "ticker": "1579.HK",
+      "name_cn": "颐海国际",
+      "gics_sector": "Consumer Staples",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 1,
+      "last_close": 14.18
     },
     {
       "ticker": "9985.HK",
@@ -2033,16 +2033,6 @@
       "last_close": 10.92
     },
     {
-      "ticker": "2208.HK",
-      "name_cn": "金风科技",
-      "gics_sector": "Industrials",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 4,
-      "last_close": 9.76
-    },
-    {
       "ticker": "0066.HK",
       "name_cn": "港铁公司",
       "gics_sector": "Industrials",
@@ -2051,6 +2041,16 @@
       "emoji": "🔴",
       "days_in_state": 1,
       "last_close": 31.08
+    },
+    {
+      "ticker": "2208.HK",
+      "name_cn": "金风科技",
+      "gics_sector": "Industrials",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 4,
+      "last_close": 9.76
     },
     {
       "ticker": "0317.HK",
@@ -2113,16 +2113,6 @@
       "last_close": 19.29
     },
     {
-      "ticker": "2259.HK",
-      "name_cn": "紫金黄金国际",
-      "gics_sector": "Materials",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 4,
-      "last_close": 99.7
-    },
-    {
       "ticker": "1787.HK",
       "name_cn": "山东黄金",
       "gics_sector": "Materials",
@@ -2131,6 +2121,16 @@
       "emoji": "🔴",
       "days_in_state": 4,
       "last_close": 18.08
+    },
+    {
+      "ticker": "2259.HK",
+      "name_cn": "紫金黄金国际",
+      "gics_sector": "Materials",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 4,
+      "last_close": 99.7
     },
     {
       "ticker": "3939.HK",
@@ -2263,16 +2263,6 @@
       "last_close": 5.45
     },
     {
-      "ticker": "2382.HK",
-      "name_cn": "舜宇光学科技",
-      "gics_sector": "Information Technology",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 2,
-      "last_close": 56.7
-    },
-    {
       "ticker": "1415.HK",
       "name_cn": "高伟电子",
       "gics_sector": "Information Technology",
@@ -2281,6 +2271,16 @@
       "emoji": "🔴",
       "days_in_state": 3,
       "last_close": 23.66
+    },
+    {
+      "ticker": "2382.HK",
+      "name_cn": "舜宇光学科技",
+      "gics_sector": "Information Technology",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 2,
+      "last_close": 56.7
     },
     {
       "ticker": "9995.HK",
@@ -2333,16 +2333,6 @@
       "last_close": 25.48
     },
     {
-      "ticker": "9880.HK",
-      "name_cn": "优必选",
-      "gics_sector": "Industrials",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 2,
-      "last_close": 87.7
-    },
-    {
       "ticker": "2692.HK",
       "name_cn": "兆威机电",
       "gics_sector": "Industrials",
@@ -2353,14 +2343,14 @@
       "last_close": 52.0
     },
     {
-      "ticker": "0699.HK",
-      "name_cn": "均胜电子",
-      "gics_sector": "Consumer Discretionary",
+      "ticker": "9880.HK",
+      "name_cn": "优必选",
+      "gics_sector": "Industrials",
       "alert_type": "B_EXIT",
       "label": "B·EXIT",
       "emoji": "🔴",
-      "days_in_state": 4,
-      "last_close": 12.84
+      "days_in_state": 2,
+      "last_close": 87.7
     },
     {
       "ticker": "6600.HK",
@@ -2371,6 +2361,16 @@
       "emoji": "🔴",
       "days_in_state": 4,
       "last_close": 68.0
+    },
+    {
+      "ticker": "0699.HK",
+      "name_cn": "均胜电子",
+      "gics_sector": "Consumer Discretionary",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 4,
+      "last_close": 12.84
     }
   ]
 }
