@@ -29,13 +29,13 @@
         "breadth_60": 0.0,
         "amt_surge": 2.229,
         "amt_rank": 0.673,
-        "amt_1d_yi": 1340.17,
-        "amt_5d_yi": 1451.31,
-        "share_1d": 24.61,
+        "amt_1d_yi": 1342.83,
+        "amt_5d_yi": 1451.84,
+        "share_1d": 24.65,
         "share_5d": 23.68,
         "share5_pctile200": 83.0,
         "ret_60": 0.661,
-        "composite": 1.263,
+        "composite": 1.264,
         "sector": "Tech"
       },
       {
@@ -52,7 +52,7 @@
         "share_5d": 0.75,
         "share5_pctile200": 89.0,
         "ret_60": 0.154,
-        "composite": 1.145,
+        "composite": 1.146,
         "sector": "Healthcare"
       },
       {
@@ -63,13 +63,13 @@
         "breadth_60": 9.091,
         "amt_surge": 1.612,
         "amt_rank": 0.702,
-        "amt_1d_yi": 402.28,
-        "amt_5d_yi": 390.75,
+        "amt_1d_yi": 402.32,
+        "amt_5d_yi": 390.76,
         "share_1d": 7.39,
         "share_5d": 6.37,
         "share5_pctile200": 97.5,
         "ret_60": 0.513,
-        "composite": 1.117,
+        "composite": 1.118,
         "sector": "Tech"
       },
       {
@@ -78,15 +78,15 @@
         "pct_high_250": 0.975,
         "breadth_250": 100.0,
         "breadth_60": 50.0,
-        "amt_surge": 1.316,
-        "amt_rank": 0.643,
-        "amt_1d_yi": 18.54,
-        "amt_5d_yi": 21.82,
-        "share_1d": 0.34,
-        "share_5d": 0.36,
-        "share5_pctile200": 56.5,
+        "amt_surge": 1.315,
+        "amt_rank": 0.642,
+        "amt_1d_yi": 18.2,
+        "amt_5d_yi": 21.76,
+        "share_1d": 0.33,
+        "share_5d": 0.35,
+        "share5_pctile200": 56.0,
         "ret_60": 0.124,
-        "composite": 1.081,
+        "composite": 1.076,
         "sector": "Fin Svc"
       },
       {
@@ -97,8 +97,8 @@
         "breadth_60": 0.0,
         "amt_surge": 2.284,
         "amt_rank": 0.651,
-        "amt_1d_yi": 221.13,
-        "amt_5d_yi": 227.71,
+        "amt_1d_yi": 221.16,
+        "amt_5d_yi": 227.72,
         "share_1d": 4.06,
         "share_5d": 3.71,
         "share5_pctile200": 97.0,
@@ -114,8 +114,8 @@
         "breadth_60": 0.0,
         "amt_surge": 2.053,
         "amt_rank": 0.478,
-        "amt_1d_yi": 57.95,
-        "amt_5d_yi": 77.65,
+        "amt_1d_yi": 57.86,
+        "amt_5d_yi": 77.63,
         "share_1d": 1.06,
         "share_5d": 1.27,
         "share5_pctile200": 94.0,
@@ -154,7 +154,7 @@
         "share_5d": 0.65,
         "share5_pctile200": 97.0,
         "ret_60": 0.365,
-        "composite": 0.918,
+        "composite": 0.919,
         "sector": "Industrials"
       },
       {
@@ -184,13 +184,13 @@
         "breadth_60": 10.0,
         "amt_surge": 1.668,
         "amt_rank": 0.616,
-        "amt_1d_yi": 2876.14,
-        "amt_5d_yi": 3074.21,
-        "share_1d": 52.82,
-        "share_5d": 50.15,
+        "amt_1d_yi": 2878.58,
+        "amt_5d_yi": 3074.69,
+        "share_1d": 52.85,
+        "share_5d": 50.16,
         "share5_pctile200": 83.0,
         "ret_60": 0.35,
-        "composite": 1.129
+        "composite": 1.13
       },
       {
         "sector": "Real Estate",
@@ -206,7 +206,7 @@
         "share_5d": 0.9,
         "share5_pctile200": 50.5,
         "ret_60": 0.057,
-        "composite": 0.713
+        "composite": 0.714
       },
       {
         "sector": "Fin Svc",
@@ -215,14 +215,14 @@
         "breadth_250": 44.0,
         "breadth_60": 37.333,
         "amt_surge": 1.134,
-        "amt_rank": 0.514,
-        "amt_1d_yi": 394.21,
-        "amt_5d_yi": 502.61,
-        "share_1d": 7.24,
+        "amt_rank": 0.515,
+        "amt_1d_yi": 393.86,
+        "amt_5d_yi": 502.53,
+        "share_1d": 7.23,
         "share_5d": 8.2,
-        "share5_pctile200": 21.0,
+        "share5_pctile200": 20.5,
         "ret_60": 0.094,
-        "composite": 0.427
+        "composite": 0.421
       },
       {
         "sector": "Healthcare",
@@ -232,13 +232,13 @@
         "breadth_60": 30.508,
         "amt_surge": 1.257,
         "amt_rank": 0.539,
-        "amt_1d_yi": 294.1,
+        "amt_1d_yi": 294.11,
         "amt_5d_yi": 367.24,
         "share_1d": 5.4,
         "share_5d": 5.99,
         "share5_pctile200": 21.0,
         "ret_60": 0.152,
-        "composite": 0.379
+        "composite": 0.38
       },
       {
         "sector": "Industrials",
@@ -248,13 +248,13 @@
         "breadth_60": 10.87,
         "amt_surge": 1.391,
         "amt_rank": 0.429,
-        "amt_1d_yi": 405.77,
-        "amt_5d_yi": 496.25,
-        "share_1d": 7.45,
-        "share_5d": 8.1,
+        "amt_1d_yi": 405.34,
+        "amt_5d_yi": 496.16,
+        "share_1d": 7.44,
+        "share_5d": 8.09,
         "share5_pctile200": 45.0,
         "ret_60": 0.076,
-        "composite": 0.149
+        "composite": 0.151
       },
       {
         "sector": "Utilities",
@@ -270,7 +270,7 @@
         "share_5d": 1.46,
         "share5_pctile200": 11.5,
         "ret_60": -0.009,
-        "composite": -0.148
+        "composite": -0.147
       },
       {
         "sector": "Energy",
@@ -280,13 +280,13 @@
         "breadth_60": 12.903,
         "amt_surge": 1.136,
         "amt_rank": 0.472,
-        "amt_1d_yi": 122.69,
+        "amt_1d_yi": 122.68,
         "amt_5d_yi": 152.82,
         "share_1d": 2.25,
         "share_5d": 2.49,
-        "share5_pctile200": 40.5,
+        "share5_pctile200": 40.0,
         "ret_60": -0.042,
-        "composite": -0.256
+        "composite": -0.261
       },
       {
         "sector": "Comm Svc",
@@ -296,13 +296,13 @@
         "breadth_60": 14.286,
         "amt_surge": 1.269,
         "amt_rank": 0.605,
-        "amt_1d_yi": 485.01,
-        "amt_5d_yi": 497.28,
-        "share_1d": 8.91,
+        "amt_1d_yi": 484.74,
+        "amt_5d_yi": 497.23,
+        "share_1d": 8.9,
         "share_5d": 8.11,
         "share5_pctile200": 20.5,
         "ret_60": 0.012,
-        "composite": -0.353
+        "composite": -0.352
       },
       {
         "sector": "Consumer Def",
@@ -318,7 +318,7 @@
         "share_5d": 3.02,
         "share5_pctile200": 32.0,
         "ret_60": 0.045,
-        "composite": -0.355
+        "composite": -0.353
       },
       {
         "sector": "Consumer Cyc",
@@ -328,13 +328,13 @@
         "breadth_60": 13.846,
         "amt_surge": 1.125,
         "amt_rank": 0.434,
-        "amt_1d_yi": 477.08,
-        "amt_5d_yi": 578.15,
+        "amt_1d_yi": 477.03,
+        "amt_5d_yi": 578.14,
         "share_1d": 8.76,
         "share_5d": 9.43,
         "share5_pctile200": 12.0,
         "ret_60": 0.044,
-        "composite": -0.542
+        "composite": -0.541
       },
       {
         "sector": "Basic Mat",
@@ -344,13 +344,13 @@
         "breadth_60": 0.0,
         "amt_surge": 1.102,
         "amt_rank": 0.321,
-        "amt_1d_yi": 91.69,
-        "amt_5d_yi": 124.63,
+        "amt_1d_yi": 91.66,
+        "amt_5d_yi": 124.62,
         "share_1d": 1.68,
         "share_5d": 2.03,
         "share5_pctile200": 9.5,
         "ret_60": -0.112,
-        "composite": -1.143
+        "composite": -1.142
       }
     ]
   },
@@ -954,11 +954,11 @@
       "close": 95.28,
       "pct_high_250": 0.984,
       "amt_surge": 1.176,
-      "amt_rank": 0.511,
+      "amt_rank": 0.513,
       "ret_60": 0.279,
       "ma_aligned": 0,
       "days_below_ma10": 0,
-      "hotness": 0.578,
+      "hotness": 0.58,
       "sales_growth": 0.168,
       "earn_growth": 0.229,
       "roe": 0.236,
@@ -1403,7 +1403,7 @@
       "ret_60": 0.299,
       "ma_aligned": 1,
       "days_below_ma10": 5,
-      "hotness": 1.365,
+      "hotness": 1.366,
       "sales_growth": 0.115,
       "earn_growth": 0.118,
       "roe": 0.95
@@ -1638,7 +1638,7 @@
       "sub_industry": "Semis",
       "close": 991.64,
       "retrace": 18.3,
-      "ind_comp": 1.263,
+      "ind_comp": 1.264,
       "hotness": 2.003,
       "doji": 1,
       "shrink": 1,
@@ -1656,7 +1656,7 @@
       "sub_industry": "Semis",
       "close": 71.39,
       "retrace": 10.6,
-      "ind_comp": 1.263,
+      "ind_comp": 1.264,
       "hotness": 1.643,
       "doji": 1,
       "shrink": 1,
@@ -1674,7 +1674,7 @@
       "sub_industry": "Semis",
       "close": 417.45,
       "retrace": 13.6,
-      "ind_comp": 1.263,
+      "ind_comp": 1.264,
       "hotness": 1.571,
       "doji": 1,
       "shrink": 1,
@@ -1692,7 +1692,7 @@
       "sub_industry": "Semis",
       "close": 265.65,
       "retrace": 12.2,
-      "ind_comp": 1.263,
+      "ind_comp": 1.264,
       "hotness": 1.375,
       "doji": 0,
       "shrink": 1,
@@ -1710,7 +1710,7 @@
       "sub_industry": "Semis",
       "close": 137.5,
       "retrace": 21.3,
-      "ind_comp": 1.263,
+      "ind_comp": 1.264,
       "hotness": 1.327,
       "doji": 1,
       "shrink": 1,
@@ -1728,7 +1728,7 @@
       "sub_industry": "Semis",
       "close": 191.11,
       "retrace": 23.6,
-      "ind_comp": 1.263,
+      "ind_comp": 1.264,
       "hotness": 0.738,
       "doji": 0,
       "shrink": 1,
@@ -1746,7 +1746,7 @@
       "sub_industry": "Semis",
       "close": 401.11,
       "retrace": 16.6,
-      "ind_comp": 1.263,
+      "ind_comp": 1.264,
       "hotness": 0.694,
       "doji": 1,
       "shrink": 1,
@@ -1764,7 +1764,7 @@
       "sub_industry": "Semis",
       "close": 202.78,
       "retrace": 13.9,
-      "ind_comp": 1.263,
+      "ind_comp": 1.264,
       "hotness": 0.538,
       "doji": 1,
       "shrink": 0,
@@ -1782,7 +1782,7 @@
       "sub_industry": "Semis",
       "close": 139.53,
       "retrace": 10.1,
-      "ind_comp": 1.263,
+      "ind_comp": 1.264,
       "hotness": 0.364,
       "doji": 1,
       "shrink": 0,
@@ -1969,16 +1969,6 @@
       "flag": ""
     },
     {
-      "sub_industry": "Indl Distribution",
-      "n": 4,
-      "pctile_now": 83.5,
-      "pctile_ago": 51.0,
-      "delta10": 32.5,
-      "amt5_now_yi": 71.79,
-      "amt5_chg_pct": -18.2,
-      "flag": ""
-    },
-    {
       "sub_industry": "Packaged Foods",
       "n": 2,
       "pctile_now": 38.5,
@@ -1986,6 +1976,16 @@
       "delta10": 32.0,
       "amt5_now_yi": 34.18,
       "amt5_chg_pct": -10.5,
+      "flag": ""
+    },
+    {
+      "sub_industry": "Indl Distribution",
+      "n": 4,
+      "pctile_now": 83.0,
+      "pctile_ago": 51.0,
+      "delta10": 32.0,
+      "amt5_now_yi": 71.79,
+      "amt5_chg_pct": -18.2,
       "flag": ""
     },
     {
@@ -2001,10 +2001,10 @@
     {
       "sub_industry": "Software - Infra",
       "n": 22,
-      "pctile_now": 28.5,
+      "pctile_now": 28.0,
       "pctile_ago": 2.0,
-      "delta10": 26.5,
-      "amt5_now_yi": 1928.26,
+      "delta10": 26.0,
+      "amt5_now_yi": 1927.9,
       "amt5_chg_pct": -14.3,
       "flag": ""
     },
@@ -2099,13 +2099,13 @@
       "flag": ""
     },
     {
-      "sub_industry": "Drug Mfr - General",
-      "n": 11,
-      "pctile_now": 33.5,
-      "pctile_ago": 18.0,
-      "delta10": 15.5,
-      "amt5_now_yi": 634.68,
-      "amt5_chg_pct": -21.4,
+      "sub_industry": "Oil & Gas Intg",
+      "n": 7,
+      "pctile_now": 41.5,
+      "pctile_ago": 26.5,
+      "delta10": 15.0,
+      "amt5_now_yi": 268.29,
+      "amt5_chg_pct": -21.1,
       "flag": ""
     },
     {
@@ -2119,13 +2119,13 @@
       "flag": ""
     },
     {
-      "sub_industry": "Oil & Gas Intg",
-      "n": 7,
-      "pctile_now": 41.5,
-      "pctile_ago": 26.5,
+      "sub_industry": "Drug Mfr - General",
+      "n": 11,
+      "pctile_now": 33.0,
+      "pctile_ago": 18.0,
       "delta10": 15.0,
-      "amt5_now_yi": 268.28,
-      "amt5_chg_pct": -21.1,
+      "amt5_now_yi": 634.69,
+      "amt5_chg_pct": -21.4,
       "flag": ""
     },
     {
@@ -2294,7 +2294,7 @@
       "pctile_now": 97.5,
       "pctile_ago": 93.0,
       "delta10": 4.5,
-      "amt5_now_yi": 1953.73,
+      "amt5_now_yi": 1953.78,
       "amt5_chg_pct": -21.1,
       "flag": ""
     },
@@ -2304,7 +2304,7 @@
       "pctile_now": 94.0,
       "pctile_ago": 89.5,
       "delta10": 4.5,
-      "amt5_now_yi": 388.23,
+      "amt5_now_yi": 388.14,
       "amt5_chg_pct": -10.2,
       "flag": ""
     },
@@ -2344,7 +2344,7 @@
       "pctile_now": 7.5,
       "pctile_ago": 4.5,
       "delta10": 3.0,
-      "amt5_now_yi": 638.4,
+      "amt5_now_yi": 638.41,
       "amt5_chg_pct": -27.2,
       "flag": ""
     },
@@ -2404,7 +2404,7 @@
       "pctile_now": 42.5,
       "pctile_ago": 42.0,
       "delta10": 0.5,
-      "amt5_now_yi": 404.75,
+      "amt5_now_yi": 404.76,
       "amt5_chg_pct": -27.3,
       "flag": ""
     },
@@ -2444,7 +2444,7 @@
       "pctile_now": 97.0,
       "pctile_ago": 97.0,
       "delta10": 0.0,
-      "amt5_now_yi": 1138.56,
+      "amt5_now_yi": 1138.59,
       "amt5_chg_pct": -19.6,
       "flag": ""
     },
@@ -2474,7 +2474,7 @@
       "pctile_now": 4.5,
       "pctile_ago": 5.5,
       "delta10": -1.0,
-      "amt5_now_yi": 939.96,
+      "amt5_now_yi": 939.99,
       "amt5_chg_pct": -31.4,
       "flag": ""
     },
@@ -2514,7 +2514,7 @@
       "pctile_now": 6.5,
       "pctile_ago": 8.5,
       "delta10": -2.0,
-      "amt5_now_yi": 108.06,
+      "amt5_now_yi": 108.07,
       "amt5_chg_pct": -30.5,
       "flag": ""
     },
@@ -2674,7 +2674,7 @@
       "pctile_now": 37.5,
       "pctile_ago": 47.0,
       "delta10": -9.5,
-      "amt5_now_yi": 207.8,
+      "amt5_now_yi": 207.79,
       "amt5_chg_pct": -29.4,
       "flag": ""
     },
@@ -2694,8 +2694,8 @@
       "pctile_now": 45.5,
       "pctile_ago": 57.0,
       "delta10": -11.5,
-      "amt5_now_yi": 38.61,
-      "amt5_chg_pct": -31.6,
+      "amt5_now_yi": 38.58,
+      "amt5_chg_pct": -31.7,
       "flag": ""
     },
     {
@@ -2704,7 +2704,7 @@
       "pctile_now": 54.0,
       "pctile_ago": 65.5,
       "delta10": -11.5,
-      "amt5_now_yi": 574.88,
+      "amt5_now_yi": 574.91,
       "amt5_chg_pct": -40.0,
       "flag": ""
     },
@@ -2734,8 +2734,8 @@
       "pctile_now": 18.0,
       "pctile_ago": 30.5,
       "delta10": -12.5,
-      "amt5_now_yi": 81.09,
-      "amt5_chg_pct": -32.2,
+      "amt5_now_yi": 81.06,
+      "amt5_chg_pct": -32.3,
       "flag": ""
     },
     {
@@ -2744,7 +2744,7 @@
       "pctile_now": 83.0,
       "pctile_ago": 95.5,
       "delta10": -12.5,
-      "amt5_now_yi": 7256.57,
+      "amt5_now_yi": 7259.22,
       "amt5_chg_pct": -33.3,
       "flag": ""
     },
@@ -2754,7 +2754,7 @@
       "pctile_now": 12.0,
       "pctile_ago": 24.5,
       "delta10": -12.5,
-      "amt5_now_yi": 170.1,
+      "amt5_now_yi": 170.08,
       "amt5_chg_pct": -37.5,
       "flag": ""
     },
@@ -2864,8 +2864,8 @@
       "pctile_now": 29.0,
       "pctile_ago": 58.0,
       "delta10": -29.0,
-      "amt5_now_yi": 58.71,
-      "amt5_chg_pct": -32.8,
+      "amt5_now_yi": 58.69,
+      "amt5_chg_pct": -32.9,
       "flag": ""
     },
     {
@@ -2891,11 +2891,11 @@
     {
       "sub_industry": "Ins - Property & Casualt…",
       "n": 4,
-      "pctile_now": 56.5,
+      "pctile_now": 56.0,
       "pctile_ago": 90.5,
-      "delta10": -34.0,
-      "amt5_now_yi": 109.12,
-      "amt5_chg_pct": -36.8,
+      "delta10": -34.5,
+      "amt5_now_yi": 108.78,
+      "amt5_chg_pct": -37.0,
       "flag": ""
     },
     {
@@ -2904,7 +2904,7 @@
       "pctile_now": 15.5,
       "pctile_ago": 51.0,
       "delta10": -35.5,
-      "amt5_now_yi": 41.7,
+      "amt5_now_yi": 41.69,
       "amt5_chg_pct": -44.1,
       "flag": ""
     },
@@ -2944,8 +2944,8 @@
       "pctile_now": 10.0,
       "pctile_ago": 55.0,
       "delta10": -45.0,
-      "amt5_now_yi": 63.13,
-      "amt5_chg_pct": -48.2,
+      "amt5_now_yi": 62.86,
+      "amt5_chg_pct": -48.4,
       "flag": ""
     },
     {
@@ -2964,7 +2964,7 @@
       "pctile_now": 39.5,
       "pctile_ago": 86.0,
       "delta10": -46.5,
-      "amt5_now_yi": 282.62,
+      "amt5_now_yi": 282.63,
       "amt5_chg_pct": -42.7,
       "flag": ""
     },
@@ -2979,16 +2979,6 @@
       "flag": ""
     },
     {
-      "sub_industry": "Rental & Leasing Svc",
-      "n": 2,
-      "pctile_now": 42.5,
-      "pctile_ago": 91.0,
-      "delta10": -48.5,
-      "amt5_now_yi": 30.46,
-      "amt5_chg_pct": -56.4,
-      "flag": ""
-    },
-    {
       "sub_industry": "Utilities - Div",
       "n": 1,
       "pctile_now": 6.5,
@@ -2996,6 +2986,16 @@
       "delta10": -48.5,
       "amt5_now_yi": 12.33,
       "amt5_chg_pct": -51.7,
+      "flag": ""
+    },
+    {
+      "sub_industry": "Rental & Leasing Svc",
+      "n": 2,
+      "pctile_now": 41.5,
+      "pctile_ago": 91.0,
+      "delta10": -49.5,
+      "amt5_now_yi": 30.13,
+      "amt5_chg_pct": -56.9,
       "flag": ""
     },
     {
@@ -3233,7 +3233,7 @@
       "sub_industry": "Semi Equip & Mat",
       "sector": "Tech",
       "close": 229.52,
-      "hotness": 1.365,
+      "hotness": 1.366,
       "ret_60": 0.299,
       "pct_high_250": 0.761,
       "ma_aligned": 1,
@@ -3869,7 +3869,7 @@
       "sub_industry": "Ins - Property & Casualt…",
       "sector": "Fin Svc",
       "close": 347.8,
-      "hotness": 0.293,
+      "hotness": 0.289,
       "ret_60": 0.057,
       "pct_high_250": 0.963,
       "ma_aligned": 1,
@@ -3929,7 +3929,7 @@
       "sub_industry": "Healthcare Plans",
       "sector": "Healthcare",
       "close": 67.6,
-      "hotness": 0.138,
+      "hotness": 0.139,
       "ret_60": 0.804,
       "pct_high_250": 0.989,
       "ma_aligned": 1,

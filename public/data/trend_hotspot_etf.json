@@ -173,7 +173,7 @@
       "pct_high_250": 0.995,
       "pct_high_126": 0.995,
       "nh_ratio_126": 0.183,
-      "amt_surge": 0.855,
+      "amt_surge": 0.856,
       "amt_rank": 0.886,
       "ret_60": 0.1,
       "ma_aligned": 0,
@@ -1767,7 +1767,7 @@
       "ret_60": 0.051,
       "ma_aligned": 1,
       "days_below_ma10": 3,
-      "hotness": 0.23
+      "hotness": 0.235
     },
     {
       "ticker": "SCHG.US",
@@ -2119,7 +2119,7 @@
       "ret_60": 0.028,
       "ma_aligned": 0,
       "days_below_ma10": 0,
-      "hotness": 0.001
+      "hotness": -0.004
     },
     {
       "ticker": "XLRE.US",
