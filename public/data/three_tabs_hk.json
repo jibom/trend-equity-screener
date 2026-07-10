@@ -1463,16 +1463,6 @@
       "last_close": 197.0
     },
     {
-      "ticker": "3968.HK",
-      "name_cn": "招商银行",
-      "gics_sector": "Financials",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 4,
-      "last_close": 44.98
-    },
-    {
       "ticker": "1288.HK",
       "name_cn": "农业银行",
       "gics_sector": "Financials",
@@ -1493,14 +1483,14 @@
       "last_close": 5.01
     },
     {
-      "ticker": "1658.HK",
-      "name_cn": "邮储银行",
+      "ticker": "3968.HK",
+      "name_cn": "招商银行",
       "gics_sector": "Financials",
       "alert_type": "B_EXIT",
       "label": "B·EXIT",
       "emoji": "🔴",
       "days_in_state": 4,
-      "last_close": 4.66
+      "last_close": 44.98
     },
     {
       "ticker": "2318.HK",
@@ -1511,6 +1501,16 @@
       "emoji": "🔴",
       "days_in_state": 3,
       "last_close": 53.25
+    },
+    {
+      "ticker": "1658.HK",
+      "name_cn": "邮储银行",
+      "gics_sector": "Financials",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 4,
+      "last_close": 4.66
     },
     {
       "ticker": "1299.HK",
@@ -1593,16 +1593,6 @@
       "last_close": 6.72
     },
     {
-      "ticker": "0101.HK",
-      "name_cn": "恒隆地产",
-      "gics_sector": "Real Estate",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 4,
-      "last_close": 7.09
-    },
-    {
       "ticker": "1972.HK",
       "name_cn": "太古地产",
       "gics_sector": "Real Estate",
@@ -1613,14 +1603,14 @@
       "last_close": 20.9
     },
     {
-      "ticker": "0083.HK",
-      "name_cn": "信和置业",
+      "ticker": "0101.HK",
+      "name_cn": "恒隆地产",
       "gics_sector": "Real Estate",
       "alert_type": "B_EXIT",
       "label": "B·EXIT",
       "emoji": "🔴",
-      "days_in_state": 1,
-      "last_close": 10.19
+      "days_in_state": 4,
+      "last_close": 7.09
     },
     {
       "ticker": "0012.HK",
@@ -1633,6 +1623,16 @@
       "last_close": 24.9
     },
     {
+      "ticker": "0083.HK",
+      "name_cn": "信和置业",
+      "gics_sector": "Real Estate",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 1,
+      "last_close": 10.19
+    },
+    {
       "ticker": "0004.HK",
       "name_cn": "九龙仓集团",
       "gics_sector": "Real Estate",
@@ -1643,16 +1643,6 @@
       "last_close": 18.75
     },
     {
-      "ticker": "1997.HK",
-      "name_cn": "九龙仓置业",
-      "gics_sector": "Real Estate",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 3,
-      "last_close": 22.62
-    },
-    {
       "ticker": "1113.HK",
       "name_cn": "长实集团",
       "gics_sector": "Real Estate",
@@ -1661,6 +1651,16 @@
       "emoji": "🔴",
       "days_in_state": 2,
       "last_close": 44.76
+    },
+    {
+      "ticker": "1997.HK",
+      "name_cn": "九龙仓置业",
+      "gics_sector": "Real Estate",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 3,
+      "last_close": 22.62
     },
     {
       "ticker": "0135.HK",
@@ -1743,16 +1743,6 @@
       "last_close": 6.58
     },
     {
-      "ticker": "0728.HK",
-      "name_cn": "中国电信",
-      "gics_sector": "Communication Services",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 1,
-      "last_close": 4.52
-    },
-    {
       "ticker": "0941.HK",
       "name_cn": "中国移动",
       "gics_sector": "Communication Services",
@@ -1761,6 +1751,16 @@
       "emoji": "🔴",
       "days_in_state": 3,
       "last_close": 78.45
+    },
+    {
+      "ticker": "0728.HK",
+      "name_cn": "中国电信",
+      "gics_sector": "Communication Services",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 1,
+      "last_close": 4.52
     },
     {
       "ticker": "9988.HK",
@@ -1893,16 +1893,6 @@
       "last_close": 40.28
     },
     {
-      "ticker": "0322.HK",
-      "name_cn": "康师傅控股",
-      "gics_sector": "Consumer Staples",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 1,
-      "last_close": 11.06
-    },
-    {
       "ticker": "9980.HK",
       "name_cn": "东鹏饮料",
       "gics_sector": "Consumer Staples",
@@ -1911,6 +1901,16 @@
       "emoji": "🔴",
       "days_in_state": 4,
       "last_close": 107.3
+    },
+    {
+      "ticker": "0322.HK",
+      "name_cn": "康师傅控股",
+      "gics_sector": "Consumer Staples",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 1,
+      "last_close": 11.06
     },
     {
       "ticker": "0291.HK",
@@ -1933,16 +1933,6 @@
       "last_close": 7.76
     },
     {
-      "ticker": "1579.HK",
-      "name_cn": "颐海国际",
-      "gics_sector": "Consumer Staples",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 1,
-      "last_close": 14.18
-    },
-    {
       "ticker": "2648.HK",
       "name_cn": "安井食品",
       "gics_sector": "Consumer Staples",
@@ -1951,6 +1941,16 @@
       "emoji": "🔴",
       "days_in_state": 2,
       "last_close": 65.05
+    },
+    {
+      "ticker": "1579.HK",
+      "name_cn": "颐海国际",
+      "gics_sector": "Consumer Staples",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 1,
+      "last_close": 14.18
     },
     {
       "ticker": "9985.HK",
@@ -2083,16 +2083,6 @@
       "last_close": 7.29
     },
     {
-      "ticker": "1286.HK",
-      "name_cn": "鹰普精密",
-      "gics_sector": "Industrials",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 1,
-      "last_close": 8.32
-    },
-    {
       "ticker": "2590.HK",
       "name_cn": "极智嘉-W",
       "gics_sector": "Industrials",
@@ -2101,6 +2091,16 @@
       "emoji": "🔴",
       "days_in_state": 4,
       "last_close": 10.79
+    },
+    {
+      "ticker": "1286.HK",
+      "name_cn": "鹰普精密",
+      "gics_sector": "Industrials",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 1,
+      "last_close": 8.32
     },
     {
       "ticker": "1882.HK",
