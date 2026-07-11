@@ -58,28 +58,14 @@ def main():
     codes = list(pool['Ticker'])
     print(f"=== HSI Combined Backtest ({args.start} ~ {args.end}) ===\n[Pool] {len(codes)} HK stocks")
 
-    conn = pymysql.connect(**DB_CONFIG)
     end = args.end.replace('-', '')
     start = (pd.to_datetime(args.start) - pd.Timedelta(days=400)).strftime('%Y%m%d')
-    BATCH = 50
-    raw_parts = []
-    print(f"[DB] 分批拉取 EOD ({start}~{end}) ...")
-    for bi in range(0, len(codes), BATCH):
-        batch = codes[bi:bi + BATCH]
-        codes_sql = ','.join(f"'{c}'" for c in batch)
-        df_b = pd.read_sql(
-            f"SELECT S_INFO_WINDCODE AS code, TRADE_DT, S_DQ_CLOSE, S_DQ_ADJOPEN, S_DQ_ADJHIGH, "
-            f"S_DQ_ADJLOW, S_DQ_ADJCLOSE, S_DQ_VOLUME, S_DQ_AMOUNT FROM {STOCK_TABLE} "
-            f"WHERE TRADE_DT BETWEEN '{start}' AND '{end}' AND S_INFO_WINDCODE IN ({codes_sql}) "
-            f"ORDER BY S_INFO_WINDCODE, TRADE_DT", conn)
-        raw_parts.append(df_b)
-    raw = pd.concat(raw_parts, ignore_index=True)
-    print(f"[DB] 拉取 {IDX_CODE} ...")
-    idx = pd.read_sql(f"SELECT TRADE_DT, S_DQ_CLOSE FROM {IDX_TABLE} WHERE S_INFO_WINDCODE='{IDX_CODE}' AND TRADE_DT BETWEEN '{start}' AND '{end}' ORDER BY TRADE_DT", conn)
-    conn.close()
-    idx['date'] = idx['TRADE_DT']
-    idx['hsi_close'] = idx['S_DQ_CLOSE'].astype(float)
-    idx = idx[['date', 'hsi_close']]
+    from hk_data import fetch_hk_stocks, fetch_hk_index
+    print(f"[DB] 拉取港股 EOD ({start}~{end}) [jianxin→EODHD→yfinance] ...")
+    raw = fetch_hk_stocks(codes, start, end).rename(columns={'S_INFO_WINDCODE': 'code'})
+    idx_raw = fetch_hk_index(IDX_CODE, start, end)
+    idx = pd.DataFrame({'date': idx_raw['TRADE_DT'], 'hsi_close': idx_raw['S_DQ_CLOSE'].astype(float)})
+    idx = idx.sort_values('date').reset_index(drop=True)
     print(f"[Fetch] {raw['code'].nunique()} stocks, {len(idx)} index days")
 
     all_signals = []

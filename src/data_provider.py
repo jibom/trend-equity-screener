@@ -35,18 +35,17 @@ class WindFetcher:
         cfg = db or self.DEFAULT_DB
         url = (f"mysql+pymysql://{cfg['user']}:{cfg['password']}"
                f"@{cfg['host']}:{cfg['port']}/{cfg['database']}")
-        self._engine = create_engine(url)
+        self._engine = create_engine(url, pool_recycle=1800, pool_pre_ping=True,
+                                    connect_args={'connect_timeout': 15, 'read_timeout': 30})
         self.lookback_days = lookback_days
 
     def fetch(self, code: str, asof: str) -> pd.DataFrame:
         start = (datetime.strptime(asof, '%Y-%m-%d')
                  - timedelta(days=int(self.lookback_days * 1.6))).strftime('%Y%m%d')
         end = asof.replace('-', '')
-        sql = f"""SELECT {",".join(REQUIRED_COLS)}
-                  FROM hkshareeodprices
-                  WHERE S_INFO_WINDCODE=%s AND TRADE_DT BETWEEN %s AND %s
-                  ORDER BY TRADE_DT"""
-        return pd.read_sql(sql, self._engine, params=(code, start, end))
+        from hk_data import fetch_hk_stocks
+        df = fetch_hk_stocks([code], start, end)
+        return df[df['S_INFO_WINDCODE'] == code].sort_values('TRADE_DT').reset_index(drop=True)
 
     def close(self):
         self._engine.dispose()

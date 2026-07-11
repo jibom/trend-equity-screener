@@ -68,21 +68,8 @@ def load_pool() -> pd.DataFrame:
 def fetch_all(pool_codes: list[str], asof: str) -> pd.DataFrame:
     end = asof.replace("-", "")
     start = (pd.to_datetime(asof) - pd.Timedelta(days=LOOKBACK_DAYS)).strftime("%Y%m%d")
-    codes_sql = ",".join(f"'{c}'" for c in pool_codes)
-    sql = f"""
-        SELECT S_INFO_WINDCODE AS code, TRADE_DT,
-               S_DQ_CLOSE, S_DQ_ADJOPEN, S_DQ_ADJHIGH, S_DQ_ADJLOW, S_DQ_ADJCLOSE,
-               S_DQ_VOLUME, S_DQ_AMOUNT
-        FROM hkshareeodprices
-        WHERE TRADE_DT BETWEEN %s AND %s
-          AND S_INFO_WINDCODE IN ({codes_sql})
-        ORDER BY S_INFO_WINDCODE, TRADE_DT
-    """
-    conn = pymysql.connect(**DB_CONFIG)
-    try:
-        raw = pd.read_sql(sql, conn, params=(start, end))
-    finally:
-        conn.close()
+    from hk_data import fetch_hk_stocks
+    raw = fetch_hk_stocks(list(pool_codes), start, end).rename(columns={'S_INFO_WINDCODE': 'code'})
     raw = raw[raw["TRADE_DT"] <= end].copy()
     return raw
 

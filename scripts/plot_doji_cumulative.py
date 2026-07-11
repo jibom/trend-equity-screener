@@ -26,13 +26,18 @@ def build(csv=CSV, idx_code='HSI.HI', idx_table='hkindexeodprices', market='HSI'
     df = df.sort_values('date').reset_index(drop=True)
 
     # 拉指数 OHLC (拉到今天, 不被 CSV 末日卡住 — CSV 的 breadth 可能滞后到上次 backtest)
-    conn = pymysql.connect(**DB_CONFIG)
+    # HK 指数走 hk_data (jianxin→yfinance 补尾); 其他 (ChiNext 等) 直 SQL
     start = df['date'].min().strftime('%Y%m%d')
     end = pd.Timestamp.today().strftime('%Y%m%d')
-    hsi_raw = pd.read_sql(
-        f"SELECT TRADE_DT, S_DQ_HIGH, S_DQ_LOW, S_DQ_CLOSE FROM {idx_table} "
-        f"WHERE S_INFO_WINDCODE='{idx_code}' AND TRADE_DT BETWEEN '{start}' AND '{end}' ORDER BY TRADE_DT", conn)
-    conn.close()
+    if idx_table == 'hkindexeodprices':
+        from hk_data import fetch_hk_index
+        hsi_raw = fetch_hk_index(idx_code, start, end)
+    else:
+        conn = pymysql.connect(**DB_CONFIG)
+        hsi_raw = pd.read_sql(
+            f"SELECT TRADE_DT, S_DQ_HIGH, S_DQ_LOW, S_DQ_CLOSE FROM {idx_table} "
+            f"WHERE S_INFO_WINDCODE='{idx_code}' AND TRADE_DT BETWEEN '{start}' AND '{end}' ORDER BY TRADE_DT", conn)
+        conn.close()
     hsi_raw['date'] = pd.to_datetime(hsi_raw['TRADE_DT'], format='%Y%m%d')
     hsi_raw = hsi_raw.sort_values('date').reset_index(drop=True)
     for c in ['S_DQ_HIGH', 'S_DQ_LOW', 'S_DQ_CLOSE']:

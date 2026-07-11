@@ -4,9 +4,8 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'src'))
 import pandas as pd, numpy as np, pymysql
 from db_config import DB_CONFIG
 
-conn = pymysql.connect(**DB_CONFIG)
-hsi = pd.read_sql("SELECT TRADE_DT, S_DQ_CLOSE FROM hkindexeodprices WHERE S_INFO_WINDCODE='HSI.HI' AND TRADE_DT BETWEEN '20140101' AND '20260707' ORDER BY TRADE_DT", conn)
-conn.close()
+from hk_data import fetch_hk_index
+hsi = fetch_hk_index('HSI.HI', '20140101', pd.Timestamp.today().strftime('%Y%m%d'))
 hsi['date'] = pd.to_datetime(hsi['TRADE_DT'], format='%Y%m%d')
 hsi = hsi.sort_values('date').reset_index(drop=True)
 hsi['close'] = hsi['S_DQ_CLOSE'].astype(float)

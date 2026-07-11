@@ -10,11 +10,11 @@ df = pd.read_csv(CSV)
 df['date'] = pd.to_datetime(df['date'], format='%Y%m%d')
 df = df.sort_values('date').reset_index(drop=True)
 
-conn = pymysql.connect(**DB_CONFIG)
-start = df['date'].min().strftime('%Y%m%d'); end = df['date'].max().strftime('%Y%m%d')
-hsi = pd.read_sql(f"SELECT TRADE_DT, S_DQ_HIGH, S_DQ_LOW, S_DQ_CLOSE FROM hkindexeodprices WHERE S_INFO_WINDCODE='HSI.HI' AND TRADE_DT BETWEEN '{start}' AND '{end}' ORDER BY TRADE_DT", conn)
-conn.close()
+from hk_data import fetch_hk_index
+start = df['date'].min().strftime('%Y%m%d'); end = pd.Timestamp.today().strftime('%Y%m%d')
+hsi = fetch_hk_index('HSI.HI', start, end)
 hsi['date'] = pd.to_datetime(hsi['TRADE_DT'], format='%Y%m%d')
+hsi = hsi.sort_values('date').reset_index(drop=True)
 for c in ['S_DQ_HIGH','S_DQ_LOW','S_DQ_CLOSE']: hsi[c]=hsi[c].astype(float)
 close = hsi['S_DQ_CLOSE']
 delta=close.diff(); gain=delta.clip(lower=0); loss=-delta.clip(upper=0)

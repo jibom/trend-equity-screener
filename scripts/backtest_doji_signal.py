@@ -250,32 +250,18 @@ def main():
     pool = sc.load_pool()
     print(f"=== Backtest Doji Signal ({args.start} ~ {args.end}) ===\n[Pool] {len(pool)} HK stocks")
 
-    conn = pymysql.connect(**DB_CONFIG)
     end = args.end.replace('-', '')
-    start = (pd.to_datetime(args.start) - pd.Timedelta(days=400)).strftime('%Y%m%d')  # 多拉400天热身
-    # 分批拉取 (每批50个code), 避免单大查询被远程MySQL掐断
+    start = (pd.to_datetime(args.start) - pd.Timedelta(days=400)).strftime('%Y%m%d')
     codes = list(pool['Ticker'])
-    BATCH = 50
-    raw_parts = []
-    print(f"[DB] 分批拉取 {len(codes)} 只港股 EOD ({start}~{end}), 批大小 {BATCH} ...")
-    for bi in range(0, len(codes), BATCH):
-        batch = codes[bi:bi + BATCH]
-        codes_sql = ','.join(f"'{c}'" for c in batch)
-        df_b = pd.read_sql(
-            f"SELECT S_INFO_WINDCODE AS code, TRADE_DT, S_DQ_CLOSE, S_DQ_ADJOPEN, S_DQ_ADJHIGH, "
-            f"S_DQ_ADJLOW, S_DQ_ADJCLOSE, S_DQ_VOLUME, S_DQ_AMOUNT FROM hkshareeodprices "
-            f"WHERE TRADE_DT BETWEEN '{start}' AND '{end}' AND S_INFO_WINDCODE IN ({codes_sql}) "
-            f"ORDER BY S_INFO_WINDCODE, TRADE_DT", conn)
-        raw_parts.append(df_b)
-    raw = pd.concat(raw_parts, ignore_index=True)
+    from hk_data import fetch_hk_stocks, fetch_hk_index
+    print(f"[DB] 拉取 {len(codes)} 只港股 EOD ({start}~{end}) [jianxin→EODHD→yfinance] ...")
+    raw = fetch_hk_stocks(codes, start, end).rename(columns={'S_INFO_WINDCODE': 'code'})
 
     # HSI
     print("[DB] 拉取 HSI.HI ...")
-    hsi = pd.read_sql(f"SELECT TRADE_DT, S_DQ_CLOSE FROM hkindexeodprices WHERE S_INFO_WINDCODE='HSI.HI' AND TRADE_DT BETWEEN '{start}' AND '{end}' ORDER BY TRADE_DT", conn)
-    conn.close()
-    hsi['date'] = hsi['TRADE_DT']
-    hsi['hsi_close'] = hsi['S_DQ_CLOSE'].astype(float)
-    hsi = hsi[['date', 'hsi_close']]
+    idx_raw = fetch_hk_index('HSI.HI', start, end)
+    hsi = pd.DataFrame({'date': idx_raw['TRADE_DT'], 'hsi_close': idx_raw['S_DQ_CLOSE'].astype(float)})
+    hsi = hsi.sort_values('date').reset_index(drop=True)
     print(f"[Fetch] {raw['code'].nunique()} stocks, {len(hsi)} HSI days")
 
     # 预计算每只股票
