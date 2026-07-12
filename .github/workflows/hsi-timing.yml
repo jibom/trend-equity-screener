@@ -1,14 +1,18 @@
 name: HSI Timing Daily
 
-# 每日港股收盘后用最新 HSI OHLC 重生 抄底+逃顶 HTML, 推到 GitHub Pages。
-# 只跑 plot (读仓库里已提交的 breadth CSV + 拉最新 HSI 指数 OHLC), 不跑 backtest。
-# backtest (per-stock breadth) 每 few months 本地跑一次后, 提交更新的 CSV 推上来。
-# DB 连接走 data_provider 默认值 (jianxin Aliyun RDS, 公网可达), 仅用于拉 HSI.HI OHLC。
+# 每日港股收盘后跑 backtest (个股breadth) + plot (HSI指数), 推 HTML 到 GitHub Pages。
+# backtest 走 hk_data (jianxin→EODHD→yfinance), jianxin 港股停更时自动从 EODHD 补个股尾部 → 市场宽度等也更新。
+# DB 连接走 data_provider 默认值 (jianxin Aliyun RDS, 公网可达)。
 
 on:
   schedule:
     - cron: '7 13 * * 1-5'   # UTC 13:07 = HKT 21:07, Mon-Fri (HSI 收盘后数据落定)
   workflow_dispatch:
+    inputs:
+      end:
+        description: 'End date YYYY-MM-DD (默认今天 UTC)'
+        required: false
+        default: ''
 
 concurrency:
   group: hsi-timing
@@ -22,7 +26,7 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 60
 
     steps:
       - name: Checkout
@@ -36,10 +40,25 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Build combined 2-tab HTML (读 committed CSV + 拉最新 HSI OHLC)
+      - name: Determine end date
+        id: d
+        run: |
+          END="${{ github.event.inputs.end }}"
+          [ -z "$END" ] && END=$(date -u +%F)
+          echo "end=$END" >> $GITHUB_OUTPUT
+          echo "End date: $END"
+
+      - name: Run backtest (抄底+逃顶 breadth, jianxin→EODHD→yfinance)
+        run: python scripts/backtest_hsi_combined.py --start 2014-01-01 --end ${{ steps.d.outputs.end }}
+        env:
+          PYTHONIOENCODING: utf-8
+          EODHD_KEY: ${{ secrets.EODHD_KEY }}
+
+      - name: Build combined 2-tab HTML (读 fresh CSV + 拉最新 HSI OHLC)
         run: python scripts/plot_combined_tabs.py
         env:
           PYTHONIOENCODING: utf-8
+          EODHD_KEY: ${{ secrets.EODHD_KEY }}
 
       - name: Publish HTML to public/
         run: |
