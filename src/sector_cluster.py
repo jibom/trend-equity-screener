@@ -43,13 +43,17 @@ N_CLUSTERS = 6
 
 
 def latest_asof() -> str:
-    """DB 里港股最新交易日 (YYYY-MM-DD)。用于避免 asof=今天 但数据 T-1/T-2 造成日期与数据不符。"""
-    conn = pymysql.connect(**DB_CONFIG)
-    try:
-        df = pd.read_sql("SELECT MAX(TRADE_DT) AS d FROM hkshareeodprices", conn)
-    finally:
-        conn.close()
-    return pd.to_datetime(str(df.iloc[0, 0]), format="%Y%m%d").strftime("%Y-%m-%d")
+    """最新交易日 (YYYY-MM-DD)。返回今天 (周末回退到周五)。
+    不再读 jianxin MAX(TRADE_DT) — jianxin 港股分支会停更 (如停在7/9),
+    用它作 asof 会导致 fetch end=旧值, EODHD/yfinance 补尾不触发。
+    改用今天, fetch_hk_stocks 会自动从 EODHD 补 jianxin 缺的尾部。"""
+    from datetime import date, timedelta
+    today = date.today()
+    if today.weekday() == 5:      # Sat → Fri
+        today -= timedelta(days=1)
+    elif today.weekday() == 6:    # Sun → Fri
+        today -= timedelta(days=2)
+    return today.strftime("%Y-%m-%d")
 
 
 def load_pool() -> pd.DataFrame:
