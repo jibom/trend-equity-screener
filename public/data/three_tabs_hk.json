@@ -1913,16 +1913,6 @@
       "last_close": 27.34
     },
     {
-      "ticker": "1193.HK",
-      "name_cn": "华润燃气",
-      "gics_sector": "Utilities",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 2,
-      "last_close": 15.56
-    },
-    {
       "ticker": "1997.HK",
       "name_cn": "九龙仓置业",
       "gics_sector": "Real Estate",
@@ -1931,6 +1921,16 @@
       "emoji": "🔴",
       "days_in_state": 3,
       "last_close": 24.7
+    },
+    {
+      "ticker": "1193.HK",
+      "name_cn": "华润燃气",
+      "gics_sector": "Utilities",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 2,
+      "last_close": 15.56
     },
     {
       "ticker": "0135.HK",
@@ -1993,6 +1993,16 @@
       "last_close": 58.05
     },
     {
+      "ticker": "0270.HK",
+      "name_cn": "粤海投资",
+      "gics_sector": "Utilities",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 4,
+      "last_close": 7.71
+    },
+    {
       "ticker": "0003.HK",
       "name_cn": "香港中华煤气",
       "gics_sector": "Utilities",
@@ -2011,16 +2021,6 @@
       "emoji": "🔴",
       "days_in_state": 2,
       "last_close": 79.6
-    },
-    {
-      "ticker": "0270.HK",
-      "name_cn": "粤海投资",
-      "gics_sector": "Utilities",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 4,
-      "last_close": 7.71
     },
     {
       "ticker": "0728.HK",
@@ -2123,16 +2123,6 @@
       "last_close": 23.74
     },
     {
-      "ticker": "2648.HK",
-      "name_cn": "安井食品",
-      "gics_sector": "Consumer Staples",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 2,
-      "last_close": 72.55
-    },
-    {
       "ticker": "0288.HK",
       "name_cn": "万洲国际",
       "gics_sector": "Consumer Staples",
@@ -2141,6 +2131,16 @@
       "emoji": "🔴",
       "days_in_state": 1,
       "last_close": 8.3
+    },
+    {
+      "ticker": "2648.HK",
+      "name_cn": "安井食品",
+      "gics_sector": "Consumer Staples",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 2,
+      "last_close": 72.55
     },
     {
       "ticker": "2618.HK",
@@ -2233,16 +2233,6 @@
       "last_close": 7.63
     },
     {
-      "ticker": "1378.HK",
-      "name_cn": "中国宏桥",
-      "gics_sector": "Materials",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 2,
-      "last_close": 22.86
-    },
-    {
       "ticker": "2788.HK",
       "name_cn": "创新实业",
       "gics_sector": "Materials",
@@ -2251,6 +2241,16 @@
       "emoji": "🔴",
       "days_in_state": 2,
       "last_close": 16.4
+    },
+    {
+      "ticker": "1378.HK",
+      "name_cn": "中国宏桥",
+      "gics_sector": "Materials",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 2,
+      "last_close": 22.86
     },
     {
       "ticker": "9696.HK",
