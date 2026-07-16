@@ -39,7 +39,7 @@
         "substate": "",
         "last_close": 56.55,
         "ma10": 52.33,
-        "ma20": 51.076,
+        "ma20": 51.077,
         "ma60": 58.778,
         "ma200": 72.43,
         "ma200_slope": -4.28,
@@ -93,7 +93,7 @@
         "substate": "",
         "last_close": 11.87,
         "ma10": 11.145,
-        "ma20": 11.164,
+        "ma20": 11.165,
         "ma60": 12.737,
         "ma200": 13.815,
         "ma200_slope": -1.41,
@@ -229,7 +229,7 @@
         "last_close": 59.3,
         "ma10": 60.155,
         "ma20": 56.518,
-        "ma60": 55.229,
+        "ma60": 55.23,
         "ma200": 62.988,
         "ma200_slope": -0.96,
         "ma10_slope_pct": 13.75,
@@ -338,7 +338,7 @@
         "substate": "",
         "last_close": 14.82,
         "ma10": 14.119,
-        "ma20": 13.705,
+        "ma20": 13.706,
         "ma60": 14.116,
         "ma200": 13.654,
         "ma200_slope": 0.57,
@@ -365,7 +365,7 @@
         "substate": "",
         "last_close": 16.82,
         "ma10": 17.613,
-        "ma20": 17.856,
+        "ma20": 17.857,
         "ma60": 18.963,
         "ma200": 20.27,
         "ma200_slope": -1.83,
@@ -689,7 +689,7 @@
         "substate": "",
         "last_close": 6.49,
         "ma10": 6.254,
-        "ma20": 6.312,
+        "ma20": 6.313,
         "ma60": 6.902,
         "ma200": 7.239,
         "ma200_slope": -2.18,
@@ -743,7 +743,7 @@
         "substate": "",
         "last_close": 76.35,
         "ma10": 74.49,
-        "ma20": 71.317,
+        "ma20": 71.318,
         "ma60": 74.914,
         "ma200": 66.662,
         "ma200_slope": 0.92,
@@ -1020,8 +1020,8 @@
       "substate": "STRONG",
       "last_close": 13.12,
       "ma10": 13.22,
-      "ma20": 12.819,
-      "ma60": 12.477,
+      "ma20": 12.82,
+      "ma60": 12.478,
       "ma200": 11.714,
       "ma200_slope": 2.47,
       "ma10_slope_pct": 6.45,
@@ -1076,7 +1076,7 @@
       "substate": "STRONG",
       "last_close": 70.45,
       "ma10": 67.6,
-      "ma20": 67.587,
+      "ma20": 67.588,
       "ma60": 67.829,
       "ma200": 59.455,
       "ma200_slope": 3.06,
@@ -1412,7 +1412,7 @@
       "substate": "EARLY",
       "last_close": 7.47,
       "ma10": 7.356,
-      "ma20": 7.05,
+      "ma20": 7.051,
       "ma60": 6.685,
       "ma200": 6.719,
       "ma200_slope": 2.07,
@@ -1713,7 +1713,7 @@
       "alert_type": "A_PULLBACK",
       "label": "A·PULLBACK",
       "emoji": "🟡",
-      "pullback_dd_pct": -28.26,
+      "pullback_dd_pct": -27.32,
       "days_in_pullback": 3,
       "last_close": 32.04
     },
@@ -1853,16 +1853,6 @@
       "last_close": 41.88
     },
     {
-      "ticker": "1209.HK",
-      "name_cn": "华润万象生活",
-      "gics_sector": "Real Estate",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 4,
-      "last_close": 39.98
-    },
-    {
       "ticker": "0817.HK",
       "name_cn": "中国金茂",
       "gics_sector": "Real Estate",
@@ -1871,6 +1861,16 @@
       "emoji": "🔴",
       "days_in_state": 3,
       "last_close": 1.39
+    },
+    {
+      "ticker": "1209.HK",
+      "name_cn": "华润万象生活",
+      "gics_sector": "Real Estate",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 4,
+      "last_close": 39.98
     },
     {
       "ticker": "2869.HK",
@@ -1913,16 +1913,6 @@
       "last_close": 27.34
     },
     {
-      "ticker": "1997.HK",
-      "name_cn": "九龙仓置业",
-      "gics_sector": "Real Estate",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 3,
-      "last_close": 24.7
-    },
-    {
       "ticker": "1193.HK",
       "name_cn": "华润燃气",
       "gics_sector": "Utilities",
@@ -1931,6 +1921,16 @@
       "emoji": "🔴",
       "days_in_state": 2,
       "last_close": 15.56
+    },
+    {
+      "ticker": "1997.HK",
+      "name_cn": "九龙仓置业",
+      "gics_sector": "Real Estate",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 3,
+      "last_close": 24.7
     },
     {
       "ticker": "0135.HK",
@@ -1963,16 +1963,6 @@
       "last_close": 2.34
     },
     {
-      "ticker": "1816.HK",
-      "name_cn": "中广核电力",
-      "gics_sector": "Utilities",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 1,
-      "last_close": 2.72
-    },
-    {
       "ticker": "0257.HK",
       "name_cn": "光大环境",
       "gics_sector": "Industrials",
@@ -1983,6 +1973,16 @@
       "last_close": 4.83
     },
     {
+      "ticker": "1816.HK",
+      "name_cn": "中广核电力",
+      "gics_sector": "Utilities",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 1,
+      "last_close": 2.72
+    },
+    {
       "ticker": "0006.HK",
       "name_cn": "电能实业",
       "gics_sector": "Utilities",
@@ -1991,16 +1991,6 @@
       "emoji": "🔴",
       "days_in_state": 1,
       "last_close": 58.05
-    },
-    {
-      "ticker": "0270.HK",
-      "name_cn": "粤海投资",
-      "gics_sector": "Utilities",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 4,
-      "last_close": 7.71
     },
     {
       "ticker": "0003.HK",
@@ -2021,6 +2011,16 @@
       "emoji": "🔴",
       "days_in_state": 2,
       "last_close": 79.6
+    },
+    {
+      "ticker": "0270.HK",
+      "name_cn": "粤海投资",
+      "gics_sector": "Utilities",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 4,
+      "last_close": 7.71
     },
     {
       "ticker": "0728.HK",
@@ -2123,16 +2123,6 @@
       "last_close": 23.74
     },
     {
-      "ticker": "0288.HK",
-      "name_cn": "万洲国际",
-      "gics_sector": "Consumer Staples",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 1,
-      "last_close": 8.3
-    },
-    {
       "ticker": "2648.HK",
       "name_cn": "安井食品",
       "gics_sector": "Consumer Staples",
@@ -2141,6 +2131,16 @@
       "emoji": "🔴",
       "days_in_state": 2,
       "last_close": 72.55
+    },
+    {
+      "ticker": "0288.HK",
+      "name_cn": "万洲国际",
+      "gics_sector": "Consumer Staples",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 1,
+      "last_close": 8.3
     },
     {
       "ticker": "2618.HK",
