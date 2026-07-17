@@ -1315,7 +1315,7 @@
     const theme = _lcTheme();
     _charts = [];
 
-    // 均线: 快线组 5/10/20/30 (红色), 慢线组 40/50/60/70 (蓝色) — 组内同色, 10/50 不透明加粗以凸显
+    // 均线: 5/10/20/30/40/50/60/70; 高亮 MA5(橙)/MA10(红)/MA50(蓝) 不透明加粗, 其余淡灰背景
     const ma5  = calcMA(rows, 5),  ma10 = calcMA(rows, 10), ma20 = calcMA(rows, 20), ma30 = calcMA(rows, 30);
     const ma40 = calcMA(rows, 40), ma50 = calcMA(rows, 50), ma60 = calcMA(rows, 60), ma70 = calcMA(rows, 70);
     const macd = calcMACD(rows);
@@ -1342,16 +1342,16 @@
 
     const mainChart = mkChart(document.getElementById('chart-main'));
     const cs = mainChart.addCandlestickSeries({
-      upColor: '#26a69a', downColor: '#ef5350',
+      upColor: 'rgba(0,0,0,0)', downColor: '#ef5350',
       borderUpColor: '#26a69a', borderDownColor: '#ef5350',
       wickUpColor: '#26a69a', wickDownColor: '#ef5350',
     });
     cs.setData(candles); allSeries.push(cs);
 
     const maOpts = (color, width) => ({ color, lineWidth: width || 1, priceLineVisible: false, lastValueVisible: false });
-    // 快线 5/10/20/30 红, 慢线 40/50/60/70 蓝; 10/50 不透明(凸显), 其余半透明, 粗细统一
-    [['rgba(229,57,53,0.35)', ma5, 1], ['rgba(229,57,53,1)', ma10, 1], ['rgba(229,57,53,0.35)', ma20, 1], ['rgba(229,57,53,0.35)', ma30, 1],
-     ['rgba(66,165,245,0.35)', ma40, 1], ['rgba(66,165,245,1)', ma50, 1], ['rgba(66,165,245,0.35)', ma60, 1], ['rgba(66,165,245,0.35)', ma70, 1]]
+    // 高亮 MA5(橙)/MA10(红)/MA50(蓝) — 不透明; 其余 MA20/30/40/60/70 淡灰细线作背景
+    [['#FB8C00', ma5, 1.5], ['#E53935', ma10, 1.5], ['rgba(150,150,150,0.4)', ma20, 1], ['rgba(150,150,150,0.4)', ma30, 1],
+     ['rgba(150,150,150,0.4)', ma40, 1], ['#42A5F5', ma50, 1.5], ['rgba(150,150,150,0.4)', ma60, 1], ['rgba(150,150,150,0.4)', ma70, 1]]
       .forEach(([c, arr, w]) => { if (arr.length) addSer(mainChart, maOpts(c, w), arr); });
 
     const vs = mainChart.addHistogramSeries({ priceFormat: { type: 'volume' }, priceScaleId: 'vol' });
@@ -1401,10 +1401,10 @@
     _syncScales(mainChart, macdChart, kdjChart);
     // 统一 rightOffset (留右侧空间) + 主图 fitContent, 子图同步同 range (同宽→同 barSpacing→对齐)
     [mainChart, macdChart, kdjChart].forEach(c => c.timeScale().applyOptions({ rightOffset: 6 }));
-    // 日线只看最近6个月(~126根); 周线 fitContent
-    if (_chartInterval === 'D' && (_chartData.daily || []).length > 126) {
+    // 日线只看最近10个月(~210根); 周线 fitContent (不变)
+    if (_chartInterval === 'D' && (_chartData.daily || []).length > 210) {
       const n = _chartData.daily.length;
-      mainChart.timeScale().setVisibleLogicalRange({ from: n - 126, to: n - 1 });
+      mainChart.timeScale().setVisibleLogicalRange({ from: n - 210, to: n - 1 });
     } else {
       mainChart.timeScale().fitContent();
     }
