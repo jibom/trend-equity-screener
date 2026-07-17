@@ -1690,16 +1690,6 @@
       "last_close": 8.29
     },
     {
-      "ticker": "0998.HK",
-      "name_cn": "中信银行",
-      "gics_sector": "Financials",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 1,
-      "last_close": 7.05
-    },
-    {
       "ticker": "3618.HK",
       "name_cn": "重庆农村商业银行",
       "gics_sector": "Financials",
@@ -1708,6 +1698,16 @@
       "emoji": "🔴",
       "days_in_state": 1,
       "last_close": 6.37
+    },
+    {
+      "ticker": "0998.HK",
+      "name_cn": "中信银行",
+      "gics_sector": "Financials",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 1,
+      "last_close": 7.05
     },
     {
       "ticker": "1299.HK",
@@ -1770,16 +1770,6 @@
       "last_close": 22.28
     },
     {
-      "ticker": "0083.HK",
-      "name_cn": "信和置业",
-      "gics_sector": "Real Estate",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 2,
-      "last_close": 10.56
-    },
-    {
       "ticker": "0012.HK",
       "name_cn": "恒基地产",
       "gics_sector": "Real Estate",
@@ -1788,6 +1778,16 @@
       "emoji": "🔴",
       "days_in_state": 2,
       "last_close": 27.26
+    },
+    {
+      "ticker": "0083.HK",
+      "name_cn": "信和置业",
+      "gics_sector": "Real Estate",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 2,
+      "last_close": 10.56
     },
     {
       "ticker": "1997.HK",
@@ -1840,16 +1840,6 @@
       "last_close": 5.79
     },
     {
-      "ticker": "0586.HK",
-      "name_cn": "海螺创业",
-      "gics_sector": "Industrials",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 1,
-      "last_close": 8.52
-    },
-    {
       "ticker": "0257.HK",
       "name_cn": "光大环境",
       "gics_sector": "Industrials",
@@ -1858,6 +1848,16 @@
       "emoji": "🔴",
       "days_in_state": 2,
       "last_close": 4.8
+    },
+    {
+      "ticker": "0586.HK",
+      "name_cn": "海螺创业",
+      "gics_sector": "Industrials",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 1,
+      "last_close": 8.52
     },
     {
       "ticker": "1816.HK",
