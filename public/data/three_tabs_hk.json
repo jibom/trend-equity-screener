@@ -365,7 +365,7 @@
         "substate": "",
         "last_close": 11.03,
         "ma10": 12.2,
-        "ma20": 12.347,
+        "ma20": 12.348,
         "ma60": 14.016,
         "ma200": 14.502,
         "ma200_slope": -1.89,
@@ -581,7 +581,7 @@
         "substate": "",
         "last_close": 15.1,
         "ma10": 14.625,
-        "ma20": 13.895,
+        "ma20": 13.894,
         "ma60": 14.353,
         "ma200": 13.629,
         "ma200_slope": 0.7,
@@ -770,7 +770,7 @@
         "substate": "",
         "last_close": 62.25,
         "ma10": 60.45,
-        "ma20": 59.897,
+        "ma20": 59.898,
         "ma60": 61.051,
         "ma200": 58.065,
         "ma200_slope": 1.62,
@@ -882,7 +882,7 @@
       "substate": "MID",
       "last_close": 92.25,
       "ma10": 89.53,
-      "ma20": 86.152,
+      "ma20": 86.153,
       "ma60": 85.083,
       "ma200": 82.772,
       "ma200_slope": 0.76,
@@ -910,7 +910,7 @@
       "substate": "EARLY",
       "last_close": 4.77,
       "ma10": 4.737,
-      "ma20": 4.379,
+      "ma20": 4.38,
       "ma60": 4.317,
       "ma200": 4.508,
       "ma200_slope": -0.29,
@@ -966,8 +966,8 @@
       "substate": "STRONG",
       "last_close": 13.14,
       "ma10": 13.229,
-      "ma20": 12.872,
-      "ma60": 12.499,
+      "ma20": 12.871,
+      "ma60": 12.498,
       "ma200": 11.729,
       "ma200_slope": 2.51,
       "ma10_slope_pct": 5.71,
@@ -1274,7 +1274,7 @@
       "substate": "STRONG",
       "last_close": 6.91,
       "ma10": 6.728,
-      "ma20": 6.694,
+      "ma20": 6.695,
       "ma60": 6.844,
       "ma200": 6.308,
       "ma200_slope": 1.82,
@@ -1690,16 +1690,6 @@
       "last_close": 8.29
     },
     {
-      "ticker": "3618.HK",
-      "name_cn": "重庆农村商业银行",
-      "gics_sector": "Financials",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 1,
-      "last_close": 6.37
-    },
-    {
       "ticker": "0998.HK",
       "name_cn": "中信银行",
       "gics_sector": "Financials",
@@ -1708,6 +1698,16 @@
       "emoji": "🔴",
       "days_in_state": 1,
       "last_close": 7.05
+    },
+    {
+      "ticker": "3618.HK",
+      "name_cn": "重庆农村商业银行",
+      "gics_sector": "Financials",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 1,
+      "last_close": 6.37
     },
     {
       "ticker": "1299.HK",
@@ -1790,16 +1790,6 @@
       "last_close": 10.56
     },
     {
-      "ticker": "1997.HK",
-      "name_cn": "九龙仓置业",
-      "gics_sector": "Real Estate",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 4,
-      "last_close": 24.84
-    },
-    {
       "ticker": "1193.HK",
       "name_cn": "华润燃气",
       "gics_sector": "Utilities",
@@ -1808,6 +1798,16 @@
       "emoji": "🔴",
       "days_in_state": 3,
       "last_close": 15.61
+    },
+    {
+      "ticker": "1997.HK",
+      "name_cn": "九龙仓置业",
+      "gics_sector": "Real Estate",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 4,
+      "last_close": 24.84
     },
     {
       "ticker": "0135.HK",
@@ -1840,14 +1840,14 @@
       "last_close": 5.79
     },
     {
-      "ticker": "0257.HK",
-      "name_cn": "光大环境",
-      "gics_sector": "Industrials",
+      "ticker": "1816.HK",
+      "name_cn": "中广核电力",
+      "gics_sector": "Utilities",
       "alert_type": "B_EXIT",
       "label": "B·EXIT",
       "emoji": "🔴",
       "days_in_state": 2,
-      "last_close": 4.8
+      "last_close": 2.73
     },
     {
       "ticker": "0586.HK",
@@ -1860,14 +1860,14 @@
       "last_close": 8.52
     },
     {
-      "ticker": "1816.HK",
-      "name_cn": "中广核电力",
-      "gics_sector": "Utilities",
+      "ticker": "0257.HK",
+      "name_cn": "光大环境",
+      "gics_sector": "Industrials",
       "alert_type": "B_EXIT",
       "label": "B·EXIT",
       "emoji": "🔴",
       "days_in_state": 2,
-      "last_close": 2.73
+      "last_close": 4.8
     },
     {
       "ticker": "0006.HK",
@@ -1990,16 +1990,6 @@
       "last_close": 11.66
     },
     {
-      "ticker": "0291.HK",
-      "name_cn": "华润啤酒",
-      "gics_sector": "Consumer Staples",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 2,
-      "last_close": 23.7
-    },
-    {
       "ticker": "0168.HK",
       "name_cn": "青岛啤酒股份",
       "gics_sector": "Consumer Staples",
@@ -2008,6 +1998,16 @@
       "emoji": "🔴",
       "days_in_state": 1,
       "last_close": 44.9
+    },
+    {
+      "ticker": "0291.HK",
+      "name_cn": "华润啤酒",
+      "gics_sector": "Consumer Staples",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 2,
+      "last_close": 23.7
     },
     {
       "ticker": "1876.HK",
