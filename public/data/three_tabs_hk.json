@@ -2064,16 +2064,6 @@
       "last_close": 20.68
     },
     {
-      "ticker": "0388.HK",
-      "name_cn": "香港交易所",
-      "gics_sector": "Financials",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 4,
-      "last_close": 397.4
-    },
-    {
       "ticker": "6881.HK",
       "name_cn": "中国银河",
       "gics_sector": "Financials",
@@ -2082,6 +2072,16 @@
       "emoji": "🔴",
       "days_in_state": 3,
       "last_close": 7.53
+    },
+    {
+      "ticker": "0388.HK",
+      "name_cn": "香港交易所",
+      "gics_sector": "Financials",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 4,
+      "last_close": 397.4
     },
     {
       "ticker": "1209.HK",
@@ -2114,16 +2114,6 @@
       "last_close": 22.18
     },
     {
-      "ticker": "0012.HK",
-      "name_cn": "恒基地产",
-      "gics_sector": "Real Estate",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 3,
-      "last_close": 27.28
-    },
-    {
       "ticker": "0083.HK",
       "name_cn": "信和置业",
       "gics_sector": "Real Estate",
@@ -2132,6 +2122,16 @@
       "emoji": "🔴",
       "days_in_state": 3,
       "last_close": 10.7
+    },
+    {
+      "ticker": "0012.HK",
+      "name_cn": "恒基地产",
+      "gics_sector": "Real Estate",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 3,
+      "last_close": 27.28
     },
     {
       "ticker": "1193.HK",
@@ -2184,6 +2184,16 @@
       "last_close": 2.48
     },
     {
+      "ticker": "0257.HK",
+      "name_cn": "光大环境",
+      "gics_sector": "Industrials",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 3,
+      "last_close": 4.95
+    },
+    {
       "ticker": "1816.HK",
       "name_cn": "中广核电力",
       "gics_sector": "Utilities",
@@ -2202,16 +2212,6 @@
       "emoji": "🔴",
       "days_in_state": 2,
       "last_close": 8.94
-    },
-    {
-      "ticker": "0257.HK",
-      "name_cn": "光大环境",
-      "gics_sector": "Industrials",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 3,
-      "last_close": 4.95
     },
     {
       "ticker": "0006.HK",
@@ -2334,6 +2334,16 @@
       "last_close": 11.75
     },
     {
+      "ticker": "1876.HK",
+      "name_cn": "百威亚太",
+      "gics_sector": "Consumer Staples",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 2,
+      "last_close": 6.73
+    },
+    {
       "ticker": "0291.HK",
       "name_cn": "华润啤酒",
       "gics_sector": "Consumer Staples",
@@ -2352,16 +2362,6 @@
       "emoji": "🔴",
       "days_in_state": 2,
       "last_close": 45.84
-    },
-    {
-      "ticker": "1876.HK",
-      "name_cn": "百威亚太",
-      "gics_sector": "Consumer Staples",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 2,
-      "last_close": 6.73
     },
     {
       "ticker": "0288.HK",
@@ -2494,16 +2494,6 @@
       "last_close": 7.41
     },
     {
-      "ticker": "2788.HK",
-      "name_cn": "创新实业",
-      "gics_sector": "Materials",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 4,
-      "last_close": 16.24
-    },
-    {
       "ticker": "1258.HK",
       "name_cn": "中国有色矿业",
       "gics_sector": "Materials",
@@ -2522,6 +2512,16 @@
       "emoji": "🔴",
       "days_in_state": 4,
       "last_close": 22.66
+    },
+    {
+      "ticker": "2788.HK",
+      "name_cn": "创新实业",
+      "gics_sector": "Materials",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 4,
+      "last_close": 16.24
     },
     {
       "ticker": "6680.HK",
@@ -2554,16 +2554,6 @@
       "last_close": 8.65
     },
     {
-      "ticker": "6166.HK",
-      "name_cn": "剑桥科技",
-      "gics_sector": "Information Technology",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 1,
-      "last_close": 81.5
-    },
-    {
       "ticker": "3323.HK",
       "name_cn": "中国建材",
       "gics_sector": "Materials",
@@ -2572,6 +2562,16 @@
       "emoji": "🔴",
       "days_in_state": 4,
       "last_close": 3.56
+    },
+    {
+      "ticker": "6166.HK",
+      "name_cn": "剑桥科技",
+      "gics_sector": "Information Technology",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 1,
+      "last_close": 81.5
     },
     {
       "ticker": "6869.HK",
