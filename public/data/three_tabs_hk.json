@@ -120,7 +120,7 @@
         "substate": "",
         "last_close": 84.55,
         "ma10": 82.18,
-        "ma20": 78.758,
+        "ma20": 78.757,
         "ma60": 83.177,
         "ma200": null,
         "ma200_slope": null,
@@ -174,7 +174,7 @@
         "substate": "",
         "last_close": 3.79,
         "ma10": 3.284,
-        "ma20": 3.115,
+        "ma20": 3.116,
         "ma60": 3.272,
         "ma200": 3.867,
         "ma200_slope": -0.84,
@@ -228,7 +228,7 @@
         "substate": "",
         "last_close": 14.37,
         "ma10": 13.586,
-        "ma20": 12.943,
+        "ma20": 12.944,
         "ma60": 14.212,
         "ma200": 16.188,
         "ma200_slope": -0.36,
@@ -1381,7 +1381,7 @@
       "substate": "STRONG",
       "last_close": 7.02,
       "ma10": 6.849,
-      "ma20": 6.714,
+      "ma20": 6.715,
       "ma60": 6.846,
       "ma200": 6.324,
       "ma200_slope": 1.87,
@@ -1493,7 +1493,7 @@
       "substate": "EARLY",
       "last_close": 18.35,
       "ma10": 17.666,
-      "ma20": 17.156,
+      "ma20": 17.155,
       "ma60": 16.641,
       "ma200": 15.454,
       "ma200_slope": 1.59,
@@ -2016,16 +2016,6 @@
       "last_close": 11.61
     },
     {
-      "ticker": "0817.HK",
-      "name_cn": "中国金茂",
-      "gics_sector": "Real Estate",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 1,
-      "last_close": 1.37
-    },
-    {
       "ticker": "1209.HK",
       "name_cn": "华润万象生活",
       "gics_sector": "Real Estate",
@@ -2044,6 +2034,16 @@
       "emoji": "🔴",
       "days_in_state": 2,
       "last_close": 4.2
+    },
+    {
+      "ticker": "0817.HK",
+      "name_cn": "中国金茂",
+      "gics_sector": "Real Estate",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 1,
+      "last_close": 1.37
     },
     {
       "ticker": "1972.HK",
@@ -2116,16 +2116,6 @@
       "last_close": 2.41
     },
     {
-      "ticker": "0257.HK",
-      "name_cn": "光大环境",
-      "gics_sector": "Industrials",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 4,
-      "last_close": 5.02
-    },
-    {
       "ticker": "1816.HK",
       "name_cn": "中广核电力",
       "gics_sector": "Utilities",
@@ -2134,6 +2124,16 @@
       "emoji": "🔴",
       "days_in_state": 4,
       "last_close": 2.87
+    },
+    {
+      "ticker": "0257.HK",
+      "name_cn": "光大环境",
+      "gics_sector": "Industrials",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 4,
+      "last_close": 5.02
     },
     {
       "ticker": "0586.HK",
@@ -2356,16 +2356,6 @@
       "last_close": 11.2
     },
     {
-      "ticker": "0631.HK",
-      "name_cn": "三一国际",
-      "gics_sector": "Industrials",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 3,
-      "last_close": 7.41
-    },
-    {
       "ticker": "6031.HK",
       "name_cn": "三一重工",
       "gics_sector": "Industrials",
@@ -2374,6 +2364,16 @@
       "emoji": "🔴",
       "days_in_state": 1,
       "last_close": 20.14
+    },
+    {
+      "ticker": "0631.HK",
+      "name_cn": "三一国际",
+      "gics_sector": "Industrials",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 3,
+      "last_close": 7.41
     },
     {
       "ticker": "3898.HK",
@@ -2406,16 +2406,6 @@
       "last_close": 20.46
     },
     {
-      "ticker": "1208.HK",
-      "name_cn": "五矿资源",
-      "gics_sector": "Materials",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 2,
-      "last_close": 7.73
-    },
-    {
       "ticker": "1258.HK",
       "name_cn": "中国有色矿业",
       "gics_sector": "Materials",
@@ -2424,6 +2414,16 @@
       "emoji": "🔴",
       "days_in_state": 3,
       "last_close": 13.85
+    },
+    {
+      "ticker": "1208.HK",
+      "name_cn": "五矿资源",
+      "gics_sector": "Materials",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 2,
+      "last_close": 7.73
     },
     {
       "ticker": "1866.HK",
