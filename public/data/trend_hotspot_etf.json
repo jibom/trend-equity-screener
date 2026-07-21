@@ -543,7 +543,7 @@
       "pct_high_250": 0.835,
       "pct_high_126": 0.835,
       "nh_ratio_126": 0.262,
-      "amt_surge": 1.921,
+      "amt_surge": 1.922,
       "amt_rank": 0.983,
       "ret_60": 0.172,
       "ma_aligned": 0,
@@ -2489,7 +2489,7 @@
       "ret_60": -0.033,
       "ma_aligned": 0,
       "days_below_ma10": 2,
-      "hotness": -0.603
+      "hotness": -0.602
     },
     {
       "ticker": "PSQ.US",
