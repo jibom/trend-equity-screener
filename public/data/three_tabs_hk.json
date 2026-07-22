@@ -1935,14 +1935,14 @@
       "last_close": 8.55
     },
     {
-      "ticker": "1288.HK",
-      "name_cn": "农业银行",
+      "ticker": "1658.HK",
+      "name_cn": "邮储银行",
       "gics_sector": "Financials",
       "alert_type": "B_EXIT",
       "label": "B·EXIT",
       "emoji": "🔴",
-      "days_in_state": 2,
-      "last_close": 5.72
+      "days_in_state": 1,
+      "last_close": 4.85
     },
     {
       "ticker": "0998.HK",
@@ -1955,14 +1955,14 @@
       "last_close": 7.22
     },
     {
-      "ticker": "1658.HK",
-      "name_cn": "邮储银行",
+      "ticker": "1288.HK",
+      "name_cn": "农业银行",
       "gics_sector": "Financials",
       "alert_type": "B_EXIT",
       "label": "B·EXIT",
       "emoji": "🔴",
-      "days_in_state": 1,
-      "last_close": 4.85
+      "days_in_state": 2,
+      "last_close": 5.72
     },
     {
       "ticker": "3618.HK",
@@ -2025,14 +2025,14 @@
       "last_close": 10.91
     },
     {
-      "ticker": "2869.HK",
-      "name_cn": "绿城服务",
+      "ticker": "0817.HK",
+      "name_cn": "中国金茂",
       "gics_sector": "Real Estate",
       "alert_type": "B_EXIT",
       "label": "B·EXIT",
       "emoji": "🔴",
-      "days_in_state": 3,
-      "last_close": 4.16
+      "days_in_state": 2,
+      "last_close": 1.37
     },
     {
       "ticker": "1209.HK",
@@ -2045,14 +2045,14 @@
       "last_close": 38.36
     },
     {
-      "ticker": "0817.HK",
-      "name_cn": "中国金茂",
+      "ticker": "2869.HK",
+      "name_cn": "绿城服务",
       "gics_sector": "Real Estate",
       "alert_type": "B_EXIT",
       "label": "B·EXIT",
       "emoji": "🔴",
-      "days_in_state": 2,
-      "last_close": 1.37
+      "days_in_state": 3,
+      "last_close": 4.16
     },
     {
       "ticker": "0016.HK",
@@ -2075,16 +2075,6 @@
       "last_close": 6.97
     },
     {
-      "ticker": "0991.HK",
-      "name_cn": "大唐",
-      "gics_sector": "Utilities",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 2,
-      "last_close": 2.56
-    },
-    {
       "ticker": "0836.HK",
       "name_cn": "华润电力",
       "gics_sector": "Utilities",
@@ -2093,6 +2083,16 @@
       "emoji": "🔴",
       "days_in_state": 4,
       "last_close": 19.31
+    },
+    {
+      "ticker": "0991.HK",
+      "name_cn": "大唐",
+      "gics_sector": "Utilities",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 2,
+      "last_close": 2.56
     },
     {
       "ticker": "0371.HK",
@@ -2295,16 +2295,6 @@
       "last_close": 11.36
     },
     {
-      "ticker": "0631.HK",
-      "name_cn": "三一国际",
-      "gics_sector": "Industrials",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 4,
-      "last_close": 7.49
-    },
-    {
       "ticker": "6031.HK",
       "name_cn": "三一重工",
       "gics_sector": "Industrials",
@@ -2313,6 +2303,16 @@
       "emoji": "🔴",
       "days_in_state": 2,
       "last_close": 20.26
+    },
+    {
+      "ticker": "0631.HK",
+      "name_cn": "三一国际",
+      "gics_sector": "Industrials",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 4,
+      "last_close": 7.49
     },
     {
       "ticker": "3311.HK",
