@@ -201,7 +201,7 @@
         "substate": "",
         "last_close": 19.18,
         "ma10": 15.892,
-        "ma20": 14.825,
+        "ma20": 14.824,
         "ma60": 16.985,
         "ma200": 19.928,
         "ma200_slope": -0.51,
@@ -228,7 +228,7 @@
         "substate": "",
         "last_close": 14.22,
         "ma10": 13.729,
-        "ma20": 13.038,
+        "ma20": 13.037,
         "ma60": 14.174,
         "ma200": 16.188,
         "ma200_slope": -0.35,
@@ -662,7 +662,7 @@
         "substate": "",
         "last_close": 11.48,
         "ma10": 11.342,
-        "ma20": 10.851,
+        "ma20": 10.852,
         "ma60": 11.003,
         "ma200": 11.074,
         "ma200_slope": 0.57,
@@ -689,7 +689,7 @@
         "substate": "",
         "last_close": 8.35,
         "ma10": 8.136,
-        "ma20": 8.283,
+        "ma20": 8.282,
         "ma60": 8.864,
         "ma200": 8.654,
         "ma200_slope": 0.48,
@@ -986,7 +986,7 @@
         "substate": "",
         "last_close": 58.75,
         "ma10": 58.38,
-        "ma20": 57.843,
+        "ma20": 57.842,
         "ma60": 59.397,
         "ma200": 56.123,
         "ma200_slope": 1.61,
@@ -1013,7 +1013,7 @@
         "substate": "",
         "last_close": 4.58,
         "ma10": 4.61,
-        "ma20": 4.488,
+        "ma20": 4.489,
         "ma60": 4.888,
         "ma200": 5.132,
         "ma200_slope": -2.09,
@@ -1070,8 +1070,8 @@
       "substate": "EARLY",
       "last_close": 4.85,
       "ma10": 4.814,
-      "ma20": 4.541,
-      "ma60": 4.348,
+      "ma20": 4.542,
+      "ma60": 4.349,
       "ma200": 4.513,
       "ma200_slope": 0.07,
       "ma10_slope_pct": 12.77,
@@ -1126,7 +1126,7 @@
       "substate": "STRONG",
       "last_close": 15.21,
       "ma10": 14.635,
-      "ma20": 14.068,
+      "ma20": 14.067,
       "ma60": 14.09,
       "ma200": 11.786,
       "ma200_slope": 3.71,
@@ -1574,7 +1574,7 @@
       "substate": "MID",
       "last_close": 7.84,
       "ma10": 7.403,
-      "ma20": 7.2,
+      "ma20": 7.199,
       "ma60": 6.743,
       "ma200": 6.751,
       "ma200_slope": 2.17,
@@ -1686,8 +1686,8 @@
       "substate": "EARLY",
       "last_close": 14.48,
       "ma10": 14.247,
-      "ma20": 13.255,
-      "ma60": 12.443,
+      "ma20": 13.256,
+      "ma60": 12.444,
       "ma200": 13.334,
       "ma200_slope": -2.97,
       "ma10_slope_pct": 16.17,
@@ -1955,16 +1955,6 @@
       "last_close": 7.22
     },
     {
-      "ticker": "3618.HK",
-      "name_cn": "重庆农村商业银行",
-      "gics_sector": "Financials",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 4,
-      "last_close": 6.33
-    },
-    {
       "ticker": "1658.HK",
       "name_cn": "邮储银行",
       "gics_sector": "Financials",
@@ -1973,6 +1963,16 @@
       "emoji": "🔴",
       "days_in_state": 1,
       "last_close": 4.85
+    },
+    {
+      "ticker": "3618.HK",
+      "name_cn": "重庆农村商业银行",
+      "gics_sector": "Financials",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 4,
+      "last_close": 6.33
     },
     {
       "ticker": "1299.HK",
@@ -2025,6 +2025,16 @@
       "last_close": 10.91
     },
     {
+      "ticker": "2869.HK",
+      "name_cn": "绿城服务",
+      "gics_sector": "Real Estate",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 3,
+      "last_close": 4.16
+    },
+    {
       "ticker": "1209.HK",
       "name_cn": "华润万象生活",
       "gics_sector": "Real Estate",
@@ -2043,16 +2053,6 @@
       "emoji": "🔴",
       "days_in_state": 2,
       "last_close": 1.37
-    },
-    {
-      "ticker": "2869.HK",
-      "name_cn": "绿城服务",
-      "gics_sector": "Real Estate",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 3,
-      "last_close": 4.16
     },
     {
       "ticker": "0016.HK",
@@ -2075,16 +2075,6 @@
       "last_close": 6.97
     },
     {
-      "ticker": "0836.HK",
-      "name_cn": "华润电力",
-      "gics_sector": "Utilities",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 4,
-      "last_close": 19.31
-    },
-    {
       "ticker": "0991.HK",
       "name_cn": "大唐",
       "gics_sector": "Utilities",
@@ -2093,6 +2083,16 @@
       "emoji": "🔴",
       "days_in_state": 2,
       "last_close": 2.56
+    },
+    {
+      "ticker": "0836.HK",
+      "name_cn": "华润电力",
+      "gics_sector": "Utilities",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 4,
+      "last_close": 19.31
     },
     {
       "ticker": "0371.HK",
@@ -2325,16 +2325,6 @@
       "last_close": 8.12
     },
     {
-      "ticker": "1208.HK",
-      "name_cn": "五矿资源",
-      "gics_sector": "Materials",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 3,
-      "last_close": 8.47
-    },
-    {
       "ticker": "1258.HK",
       "name_cn": "中国有色矿业",
       "gics_sector": "Materials",
@@ -2343,6 +2333,16 @@
       "emoji": "🔴",
       "days_in_state": 4,
       "last_close": 14.68
+    },
+    {
+      "ticker": "1208.HK",
+      "name_cn": "五矿资源",
+      "gics_sector": "Materials",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 3,
+      "last_close": 8.47
     },
     {
       "ticker": "6680.HK",
