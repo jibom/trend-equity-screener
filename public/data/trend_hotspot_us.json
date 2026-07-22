@@ -217,7 +217,7 @@
         "amt_surge": 1.396,
         "amt_rank": 0.595,
         "amt_1d_yi": 2734.83,
-        "amt_5d_yi": 2926.56,
+        "amt_5d_yi": 2926.55,
         "share_1d": 50.53,
         "share_5d": 48.88,
         "share5_pctile200": 77.0,
@@ -1982,7 +1982,7 @@
       "pctile_now": 97.5,
       "pctile_ago": 89.0,
       "delta10": 8.5,
-      "amt5_now_yi": 2000.63,
+      "amt5_now_yi": 2000.55,
       "amt5_chg_pct": -0.0,
       "flag": ""
     },
