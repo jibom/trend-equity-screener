@@ -2021,16 +2021,6 @@
       "last_close": 24.22
     },
     {
-      "ticker": "1171.HK",
-      "name_cn": "兖矿能源",
-      "gics_sector": "Energy",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 3,
-      "last_close": 12.21
-    },
-    {
       "ticker": "1898.HK",
       "name_cn": "中煤能源",
       "gics_sector": "Energy",
@@ -2041,14 +2031,14 @@
       "last_close": 11.17
     },
     {
-      "ticker": "0817.HK",
-      "name_cn": "中国金茂",
-      "gics_sector": "Real Estate",
+      "ticker": "1171.HK",
+      "name_cn": "兖矿能源",
+      "gics_sector": "Energy",
       "alert_type": "B_EXIT",
       "label": "B·EXIT",
       "emoji": "🔴",
       "days_in_state": 3,
-      "last_close": 1.39
+      "last_close": 12.21
     },
     {
       "ticker": "1209.HK",
@@ -2069,6 +2059,16 @@
       "emoji": "🔴",
       "days_in_state": 4,
       "last_close": 4.22
+    },
+    {
+      "ticker": "0817.HK",
+      "name_cn": "中国金茂",
+      "gics_sector": "Real Estate",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 3,
+      "last_close": 1.39
     },
     {
       "ticker": "0083.HK",
@@ -2121,16 +2121,6 @@
       "last_close": 2.39
     },
     {
-      "ticker": "0257.HK",
-      "name_cn": "光大环境",
-      "gics_sector": "Industrials",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 1,
-      "last_close": 5.05
-    },
-    {
       "ticker": "1816.HK",
       "name_cn": "中广核电力",
       "gics_sector": "Utilities",
@@ -2139,6 +2129,16 @@
       "emoji": "🔴",
       "days_in_state": 1,
       "last_close": 2.94
+    },
+    {
+      "ticker": "0257.HK",
+      "name_cn": "光大环境",
+      "gics_sector": "Industrials",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 1,
+      "last_close": 5.05
     },
     {
       "ticker": "0006.HK",
@@ -2291,16 +2291,6 @@
       "last_close": 17.11
     },
     {
-      "ticker": "0317.HK",
-      "name_cn": "中船防务",
-      "gics_sector": "Industrials",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 4,
-      "last_close": 11.76
-    },
-    {
       "ticker": "6031.HK",
       "name_cn": "三一重工",
       "gics_sector": "Industrials",
@@ -2309,6 +2299,16 @@
       "emoji": "🔴",
       "days_in_state": 3,
       "last_close": 21.0
+    },
+    {
+      "ticker": "0317.HK",
+      "name_cn": "中船防务",
+      "gics_sector": "Industrials",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 4,
+      "last_close": 11.76
     },
     {
       "ticker": "3898.HK",
