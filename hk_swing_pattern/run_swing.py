@@ -126,7 +126,16 @@ def main():
         print(f"[EODHD] 预取失败, 全部走 Wind: {e}")
     if eodhd_bag:
         print(f"[EODHD] 命中 {len(eodhd_bag)}/{len(codes)}, 缺失走 Wind 回退")
-    fetcher = P.make_fetcher(cfg["data"]["lookback_days"])
+    # Wind fetcher 懒构造 (仅 EODHD 缺失时才建; DB secret 缺失则跳过, 不崩)
+    fetcher = [None]  # 用 list 闭包可变
+    def get_fetcher():
+        if fetcher[0] is None:
+            try:
+                fetcher[0] = P.make_fetcher(cfg["data"]["lookback_days"])
+            except Exception as e:
+                print(f"[Wind] 不可用 ({e}), 跳过 Wind 回退")
+                fetcher[0] = False
+        return fetcher[0] if fetcher[0] is not False else None
     rows = []
     t0 = time.time()
     n_wind_fb = 0
@@ -135,7 +144,10 @@ def main():
             print(f"  [{idx+1}/{len(pool)}] {time.time()-t0:.0f}s ...")
         df = eodhd_bag.get(code)
         if df is None or df.empty:
-            daily = P.fetch_daily(fetcher, code, asof)   # Wind 回退
+            f = get_fetcher()
+            if f is None:
+                continue
+            daily = P.fetch_daily(f, code, asof)   # Wind 回退
             n_wind_fb += 1
         else:
             daily = P.forward_adjust(df)
@@ -152,7 +164,8 @@ def main():
         r["Name"] = name
         r["Sector"] = sector
         rows.append(r)
-    fetcher.close()
+    if fetcher[0] and fetcher[0] is not False:
+        fetcher[0].close()
     if eodhd_bag:
         print(f"[Wind回退] {n_wind_fb} 只")
     df = pd.DataFrame(rows)
