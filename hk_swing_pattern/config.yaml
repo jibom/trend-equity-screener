@@ -1,0 +1,53 @@
+# 港股 背离+十字星+筹码峰 三层信号合成器
+# 周线KDJ背离(context) + 日线doji(trigger) + 筹码峰密集区(conviction)
+
+# ---- 数据 ----
+data:
+  asof: null              # null=today; 或 "2026-07-20"
+  lookback_days: 520      # WindFetcher 拉取日历日 (周线40w+缓冲)
+  chip_window: 120        # 筹码分布回看交易日
+  pool_csv: "hk_stock_list_pool.csv"
+
+# ---- 周线背离 (复用 kdj_strict_screener 参数) ----
+divergence:
+  lookback_weeks: 40
+  j_oversold: 5.0
+  j_overbought: 95.0
+  max_weeks_since_div: 10   # 背离时效
+
+# ---- doji (复用 H_Reversal_Screen TypeA|TypeB) ----
+doji:
+  range_min: 0.005          # TypeA: 振幅/开盘 ≥ 0.5%
+  body_to_rng: 0.10         # TypeA: 实体/振幅 ≤ 10%
+  recent_window: 10         # 近 N 个交易日找 trigger doji
+  near_atr_k: 1.0           # doji 距背离anchor ≤ k×ATR(14) 视为"在底部/顶部区域"
+
+# ---- 筹码峰 ----
+chip:
+  nbins: 200
+  exp_tau: 60               # 指数时间衰减 tau (交易日)
+  turnover_cap: 0.99        # 换手率衰减: 单日换手上限 (防异常)
+  peak_order: 5             # 峰检测 argrelextrema order
+  peak_band_ratio: 0.50     # FWHM: 密集带 = density ≥ ratio×峰值
+  sig_peak_ratio: 0.30      # 显著峰: 峰值 ≥ ratio×最大峰 才计入
+  smooth_win: 5             # 密度平滑窗口
+
+# ---- 评分 ----
+score:
+  base: 2                   # context(背离)+trigger(doji) 同时满足的基础分
+  chip_hit_each: 1          # 每种筹码模型命中 +1 (最多+2)
+  near_anchor: 1            # doji 在背离anchor附近
+  vol_div: 1                # 跌缩涨放(底)/涨缩跌放(顶)
+  quiet_doji: 1             # 缩量doji (量比<0.6)
+  j_extreme: 1              # 40周J极值 (底≤-10 / 顶≥110)
+  weekly_signal: 1          # 周线★全信号 (detect_weekly_divergence.signal)
+  daily_sync: 1             # 日线KDJ同步 (底金叉/顶死叉)
+  j_extreme_bottom: -10
+  j_extreme_top: 110
+  quiet_vol_ratio: 0.60
+  tier_high: 7              # ≥ 高确信
+  tier_mid: 4               # 4-6 中
+
+# ---- 输出 ----
+output:
+  dir: "output"

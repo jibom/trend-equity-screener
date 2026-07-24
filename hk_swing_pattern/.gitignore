@@ -1,0 +1,17 @@
+# 机密
+.env
+
+# Python
+__pycache__/
+*.pyc
+
+# 输出/缓存 (workflow 会重新生成, 不入库)
+output/
+float_shares_cache.json
+climax_bag.parquet
+climax_*.csv
+swing_*.xlsx
+swing_*.html
+div_doji_chip_*.xlsx
+div_doji_chip_*.html
+_test_*.html
