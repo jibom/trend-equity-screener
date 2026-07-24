@@ -35,7 +35,7 @@ import gen_site         # noqa: E402
 
 OUT_XLSX = "US_Swing_Pattern.xlsx"
 # 美股专属 5 列 (年线斜率 / RS_SPY / RS_行业 / RS_SPY_1W / RS_SPY_4W)
-COL_ORDER_US = run_swing.COL_ORDER + ["年线斜率", "RS_SPY", "RS_行业", "RS_SPY_1W", "RS_SPY_4W"]
+COL_ORDER_US = run_swing.COL_ORDER + ["年线斜率", "MRS_SPY", "MRS_行业", "MRS_SPY_1W", "MRS_SPY_4W"]
 
 
 def to_bloomberg(us_code: str) -> str:

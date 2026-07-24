@@ -34,6 +34,8 @@ COL_ORDER = [
     "十字星(5d)", "涨放量跌缩量", "climax",
     "KDJ Cross", "日MACD Cross", "5_10 Cross",
 ]
+# HK 专属 4 列 (年线斜率 / RS_HSI / RS_HSI_1W / RS_HSI_4W)
+COL_ORDER_HK = COL_ORDER + ["年线斜率", "MRS_HSI", "MRS_HSI_1W", "MRS_HSI_4W"]
 
 
 def to_bloomberg(wind_code: str) -> str:
@@ -99,14 +101,23 @@ def write_excel(df: pd.DataFrame, asof: str, out: Path, col_order: list = None):
         ("    KDJ: K上穿D; MACD: DIF上穿DEA; 5_10: MA5上穿MA10", 10, False),
         ("    MACD 专属: 预告窗口=3日(其他2日), 且需过去3根MACD柱(DIF-DEA)依次单边且加速, 来回震荡不触发预告", 10, False),
     ]
-    if cols and "年线斜率" in cols:  # 美股专属指标
+    if cols and "MRS_HSI" in cols:  # HK 专属
         info += [
             ("", 10, False),
-            ("【⑤ 美股专属 — 趋势/相对强度】", 11, True),
+            ("【⑤ HK 专属 — 趋势/Mansfield RS】", 11, True),
             ("  年线斜率: MA200 近5日变化率 ×52 (年化, %)。正值=年线上行", 10, False),
-            ("  RS_SPY: 个股/SPY 比值 (相对S&P的相对强度线)", 10, False),
-            ("  RS_行业: 个股/行业ETF 比值 (GICS sector→XLK/XLE/XLV...)", 10, False),
-            ("  RS_SPY_1W / RS_SPY_4W: 个股/SPY 比值的 5日 / 20日 变化 (%)。正=跑赢大盘", 10, False),
+            ("  MRS_HSI: Mansfield RS vs 2800.HK(盈富基金,HSI代理) = (个股/2800.HK)/(252日均线)-1 ×100。0=在均线上, 正=跑赢, 负=跑输", 10, False),
+            ("  MRS_HSI_1W / MRS_HSI_4W: MRS_HSI 分数的 5日 / 20日 变化", 10, False),
+            ("  (HK股票池无sector, 不算 MRS_行业)", 10, False),
+        ]
+    elif cols and "MRS_SPY" in cols:  # 美股专属
+        info += [
+            ("", 10, False),
+            ("【⑤ 美股专属 — 趋势/Mansfield RS】", 11, True),
+            ("  年线斜率: MA200 近5日变化率 ×52 (年化, %)。正值=年线上行", 10, False),
+            ("  MRS_SPY: Mansfield RS vs SPY = (个股/SPY)/(252日均线)-1 ×100。0=在均线上, 正=跑赢S&P, 负=跑输", 10, False),
+            ("  MRS_行业: Mansfield RS vs 行业ETF (GICS sector→XLK/XLE/XLV...) 同法", 10, False),
+            ("  MRS_SPY_1W / MRS_SPY_4W: MRS_SPY 分数的 5日 / 20日 变化", 10, False),
         ]
     for i, (t, s, b) in enumerate(info, 1):
         c = ws2.cell(i, 1, t); c.font = Font(size=s, bold=b, color="1F4E78" if b and s >= 12 else "000000")
@@ -135,6 +146,14 @@ def main():
         print(f"[EODHD] 预取失败, 全部走 Wind: {e}")
     if eodhd_bag:
         print(f"[EODHD] 命中 {len(eodhd_bag)}/{len(codes)}, 缺失走 Wind 回退")
+    # HK 基准 (2800.HK 盈富基金) 用于 RS 指标
+    import hk_rs
+    hk_bench = {}
+    try:
+        hk_bench = hk_rs.fetch_benchmarks(asof, cfg["data"]["lookback_days"])
+        print(f"[Bench] 2800.HK {'OK' if hk_bench else '缺失'}")
+    except Exception as e:
+        print(f"[Bench] 拉取失败: {e}")
     # Wind fetcher 懒构造 (仅 EODHD 缺失时才建; DB secret 缺失则跳过, 不崩)
     fetcher = [None]  # 用 list 闭包可变
     def get_fetcher():
@@ -165,6 +184,8 @@ def main():
             continue
         try:
             r = sw.analyze(daily)
+            if r:
+                r.update(hk_rs.compute_extras(daily, hk_bench))
         except Exception as e:
             print(f"  [ERR] {code}: {e}"); r = None
         if r is None:
@@ -179,7 +200,7 @@ def main():
         print(f"[Wind回退] {n_wind_fb} 只")
     df = pd.DataFrame(rows)
     if not df.empty:
-        df = df[COL_ORDER]
+        df = df[COL_ORDER_HK]
         # 排序: 有周度背离/DeMark/Cross 信号优先
         def _has_sig(r):
             return any(str(r.get(c)) not in ("", "nan", "None") for c in
@@ -192,11 +213,11 @@ def main():
         print("无数据"); return
     out_path = out_dir / OUT_XLSX
     try:
-        write_excel(df, asof, out_path)
+        write_excel(df, asof, out_path, col_order=COL_ORDER_HK)
     except PermissionError:
         out_path = out_dir / f"swing_{asof}_alt.xlsx"
         print(f"[WARN] 主文件被占用, 写到 {out_path.name}")
-        write_excel(df, asof, out_path)
+        write_excel(df, asof, out_path, col_order=COL_ORDER_HK)
     # 生成网站页 (两 tab HK/US, 含下载按钮 + 表格) + xlsx 复制到根目录(供下载)
     try:
         import shutil
