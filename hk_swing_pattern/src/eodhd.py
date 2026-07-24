@@ -48,7 +48,10 @@ def fetch_eodhd(code: str, asof: str, lookback_days: int = 520, timeout: int = 3
 
 def fetch_all_eodhd(codes: list, asof: str, lookback_days: int = 520,
                     workers: int = 12) -> dict:
-    """并行拉取多股, 返回 {code: DataFrame}。"""
+    """并行拉取多股, 返回 {code: DataFrame}。无 token 时早退返回空(走 Wind 回退)。"""
+    if not os.environ.get("EODHD_TOKEN"):
+        print("[EODHD] 未配置 EODHD_TOKEN, 跳过, 走 Wind 回退")
+        return {}
     out = {}
     t0 = time.time()
     with ThreadPoolExecutor(max_workers=workers) as ex:
