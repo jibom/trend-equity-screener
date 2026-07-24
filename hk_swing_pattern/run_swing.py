@@ -41,7 +41,7 @@ def to_bloomberg(wind_code: str) -> str:
     return f"{num.lstrip('0') or num} {suf}"
 
 
-def write_excel(df: pd.DataFrame, asof: str, out: Path):
+def write_excel(df: pd.DataFrame, asof: str, out: Path, col_order: list = None):
     from openpyxl import Workbook
     from openpyxl.styles import Font, PatternFill, Alignment, Border, Side
     from openpyxl.utils import get_column_letter
@@ -51,7 +51,7 @@ def write_excel(df: pd.DataFrame, asof: str, out: Path):
     hfont = Font(bold=True, color="FFFFFF", size=10)
     thin = Side(style="thin", color="DDDDDD")
     border = Border(left=thin, right=thin, top=thin, bottom=thin)
-    cols = COL_ORDER
+    cols = col_order or COL_ORDER
     for j, c in enumerate(cols, 1):
         cell = ws.cell(1, j, c); cell.fill = head; cell.font = hfont
         cell.alignment = Alignment(horizontal="center", vertical="center")
@@ -99,6 +99,15 @@ def write_excel(df: pd.DataFrame, asof: str, out: Path):
         ("    KDJ: K上穿D; MACD: DIF上穿DEA; 5_10: MA5上穿MA10", 10, False),
         ("    MACD 专属: 预告窗口=3日(其他2日), 且需过去3根MACD柱(DIF-DEA)依次单边且加速, 来回震荡不触发预告", 10, False),
     ]
+    if cols and "年线斜率" in cols:  # 美股专属指标
+        info += [
+            ("", 10, False),
+            ("【⑤ 美股专属 — 趋势/相对强度】", 11, True),
+            ("  年线斜率: MA200 近5日变化率 ×52 (年化, %)。正值=年线上行", 10, False),
+            ("  RS_SPY: 个股/SPY 比值 (相对S&P的相对强度线)", 10, False),
+            ("  RS_行业: 个股/行业ETF 比值 (GICS sector→XLK/XLE/XLV...)", 10, False),
+            ("  RS_SPY_1W / RS_SPY_4W: 个股/SPY 比值的 5日 / 20日 变化 (%)。正=跑赢大盘", 10, False),
+        ]
     for i, (t, s, b) in enumerate(info, 1):
         c = ws2.cell(i, 1, t); c.font = Font(size=s, bold=b, color="1F4E78" if b and s >= 12 else "000000")
     ws2.column_dimensions["A"].width = 110

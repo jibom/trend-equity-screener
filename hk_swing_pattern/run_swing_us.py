@@ -28,11 +28,14 @@ sys.path.insert(0, str(ROOT / "src"))
 import eodhd            # noqa: E402
 import swing as sw      # noqa: E402
 import us_pool          # noqa: E402
+import us_rs            # noqa: E402
 from data_provider import forward_adjust  # noqa: E402
 import run_swing        # noqa: E402  复用 COL_ORDER / write_excel
 import gen_site         # noqa: E402
 
 OUT_XLSX = "US_Swing_Pattern.xlsx"
+# 美股专属 5 列 (年线斜率 / RS_SPY / RS_行业 / RS_SPY_1W / RS_SPY_4W)
+COL_ORDER_US = run_swing.COL_ORDER + ["年线斜率", "RS_SPY", "RS_行业", "RS_SPY_1W", "RS_SPY_4W"]
 
 
 def to_bloomberg(us_code: str) -> str:
@@ -57,6 +60,9 @@ def main():
     lookback = cfg["data"]["lookback_days"]
     raw_map = eodhd.fetch_all_eodhd(codes, asof, lookback_days=lookback, workers=5)
     print(f"[EODHD] 取到 {len(raw_map)}/{len(codes)} 只日线")
+    # 基准: SPY + 行业ETF (用于 RS 指标)
+    benchmarks = us_rs.fetch_benchmarks(asof, lookback)
+    print(f"[Bench] SPY + {len(benchmarks)-1} 行业ETF")
 
     rows, t0 = [], time.time()
     for idx, (code, name, sector) in enumerate(pool):
@@ -71,6 +77,8 @@ def main():
             if len(daily) < 60:
                 continue
             r = sw.analyze(daily)
+            if r:
+                r.update(us_rs.compute_extras(daily, benchmarks, sector))
         except Exception as e:
             print(f"  [ERR] {code}: {e}"); r = None
         if r is None:
@@ -84,7 +92,7 @@ def main():
 
     df = pd.DataFrame(rows)
     if not df.empty:
-        df = df[run_swing.COL_ORDER]
+        df = df[COL_ORDER_US]
         def _has_sig(r):
             return any(str(r.get(c)) not in ("", "nan", "None") for c in
                        ["周度背离", "日度背离", "周度DeMark", "日度DeMark",
@@ -96,7 +104,7 @@ def main():
         print("无数据"); return
     out_path = out_dir / OUT_XLSX
     try:
-        run_swing.write_excel(df, asof, out_path)
+        run_swing.write_excel(df, asof, out_path, col_order=COL_ORDER_US)
     except PermissionError:
         out_path = out_dir / f"swing_us_{asof}_alt.xlsx"
         print(f"[WARN] 主文件被占用, 写到 {out_path.name}")
