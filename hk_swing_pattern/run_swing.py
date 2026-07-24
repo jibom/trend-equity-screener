@@ -188,12 +188,12 @@ def main():
         out_path = out_dir / f"swing_{asof}_alt.xlsx"
         print(f"[WARN] 主文件被占用, 写到 {out_path.name}")
         write_excel(df, asof, out_path)
-    # 生成网站页 (index.html, 含下载按钮 + 表格) + xlsx 复制到根目录(供下载)
+    # 生成网站页 (两 tab HK/US, 含下载按钮 + 表格) + xlsx 复制到根目录(供下载)
     try:
         import shutil
         shutil.copy(out_path, ROOT / OUT_XLSX)
         import gen_site
-        gen_site.build(out_path, asof, len(df), ROOT / "index.html")
+        gen_site.build(ROOT / OUT_XLSX, ROOT / "US_Swing_Pattern.xlsx", ROOT / "index.html")
         print(f"[Site] -> {ROOT / 'index.html'}")
     except Exception as e:
         print(f"[Site] 生成失败: {e}")
