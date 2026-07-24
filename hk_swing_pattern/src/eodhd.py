@@ -5,7 +5,7 @@ from __future__ import annotations
 import os, json, time
 from datetime import datetime, timedelta
 from concurrent.futures import ThreadPoolExecutor, as_completed
-import urllib.request
+import urllib.request, urllib.error
 import pandas as pd
 
 BASE = "https://eodhd.com/api"
@@ -13,18 +13,34 @@ WIND_COLS = ["TRADE_DT", "S_DQ_OPEN", "S_DQ_HIGH", "S_DQ_LOW", "S_DQ_CLOSE",
              "S_DQ_ADJOPEN", "S_DQ_ADJHIGH", "S_DQ_ADJLOW", "S_DQ_ADJCLOSE", "S_DQ_VOLUME"]
 
 
-def fetch_eodhd(code: str, asof: str, lookback_days: int = 520, timeout: int = 30) -> pd.DataFrame:
-    """拉单股 EOD, 返回 Wind schema DataFrame (按 TRADE_DT 升序)。失败返回空。"""
+def fetch_eodhd(code: str, asof: str, lookback_days: int = 520, timeout: int = 30,
+                retries: int = 4) -> pd.DataFrame:
+    """拉单股 EOD, 返回 Wind schema DataFrame (按 TRADE_DT 升序)。失败返回空。
+    404=代码不存在(不重试); 429/5xx=退避重试。"""
     token = os.environ.get("EODHD_TOKEN", "")
     if not token:
         raise RuntimeError("缺少 EODHD_TOKEN 环境变量")
     frm = (datetime.strptime(asof, "%Y-%m-%d") - timedelta(days=int(lookback_days * 1.6))).strftime("%Y-%m-%d")
     url = f"{BASE}/eod/{code}?api_token={token}&fmt=json&from={frm}&to={asof}&period=d"
-    try:
-        with urllib.request.urlopen(url, timeout=timeout) as resp:
-            r = json.load(resp)
-    except Exception as e:
-        print(f"  [EODHD err] {code}: {e}")
+    r = None
+    for attempt in range(retries):
+        try:
+            with urllib.request.urlopen(url, timeout=timeout) as resp:
+                r = json.load(resp)
+            break
+        except urllib.error.HTTPError as e:
+            if e.code == 404:
+                return pd.DataFrame(columns=WIND_COLS)   # 代码不存在, 不重试
+            if e.code == 429 or 500 <= e.code < 600:
+                time.sleep(1.5 * (attempt + 1))          # 退避: 1.5, 3, 4.5, 6s
+                continue
+            print(f"  [EODHD err] {code}: HTTP {e.code}")
+            return pd.DataFrame(columns=WIND_COLS)
+        except Exception as e:
+            print(f"  [EODHD err] {code}: {e}")
+            return pd.DataFrame(columns=WIND_COLS)
+    if r is None:
+        print(f"  [EODHD err] {code}: 429 重试耗尽")
         return pd.DataFrame(columns=WIND_COLS)
     if not r:
         return pd.DataFrame(columns=WIND_COLS)
@@ -47,8 +63,9 @@ def fetch_eodhd(code: str, asof: str, lookback_days: int = 520, timeout: int = 3
 
 
 def fetch_all_eodhd(codes: list, asof: str, lookback_days: int = 520,
-                    workers: int = 12) -> dict:
-    """并行拉取多股, 返回 {code: DataFrame}。无 token 时早退返回空(走 Wind 回退)。"""
+                    workers: int = 5) -> dict:
+    """并行拉取多股, 返回 {code: DataFrame}。无 token 时早退返回空(走 Wind 回退)。
+    workers=5 避免 EODHD 429 限流。"""
     if not os.environ.get("EODHD_TOKEN"):
         print("[EODHD] 未配置 EODHD_TOKEN, 跳过, 走 Wind 回退")
         return {}

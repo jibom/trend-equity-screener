@@ -121,7 +121,7 @@ def main():
     eodhd_bag = {}
     try:
         import eodhd
-        eodhd_bag = eodhd.fetch_all_eodhd(codes, asof, cfg["data"]["lookback_days"], workers=12)
+        eodhd_bag = eodhd.fetch_all_eodhd(codes, asof, cfg["data"]["lookback_days"], workers=5)
     except Exception as e:
         print(f"[EODHD] 预取失败, 全部走 Wind: {e}")
     if eodhd_bag:
