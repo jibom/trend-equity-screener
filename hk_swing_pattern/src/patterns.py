@@ -475,10 +475,19 @@ def crossovers(daily: pd.DataFrame) -> dict:
     out = {}
     c = d["fwd_close"].values
     dif, dea, _ = macd(c)
+    ma5 = ma(c, 5); ma10 = ma(c, 10); ma50 = ma(c, 50)
     out["KDJ金叉"] = _cross_status(d["k"].values, d["d"].values, dates, forecast=True)["state"]
     out["MACD金叉"] = _cross_status(dif, dea, dates, forecast=True, forecast_days=3, forecast_guard=True)["state"]
-    out["5_10金叉"] = _cross_status(ma(c, 5), ma(c, 10), dates, forecast=True)["state"]
-    out["10_50金叉"] = _cross_status(ma(c, 10), ma(c, 50), dates, forecast=True)["state"]
+    # 5/10 Cross: 仅在 close >= MA10 时报信号 (股价站上10日线才有意义)
+    s510 = _cross_status(ma5, ma10, dates, forecast=True)["state"]
+    if np.isnan(ma10[-1]) or c[-1] < ma10[-1]:
+        s510 = ""
+    out["5_10金叉"] = s510
+    # 10/50 Cross: 仅在 close >= MA50 时报信号 (股价站上50日线才有意义)
+    s1050 = _cross_status(ma10, ma50, dates, forecast=True)["state"]
+    if np.isnan(ma50[-1]) or c[-1] < ma50[-1]:
+        s1050 = ""
+    out["10_50金叉"] = s1050
     return out
 
 

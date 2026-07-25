@@ -103,7 +103,7 @@ def write_excel(df: pd.DataFrame, asof: str, out: Path, col_order: list = None):
         ("【④ 企稳上行 — Cross】", 11, True),
         ("  KDJ Cross / 日MACD Cross / 5_10 Cross: 日线快线上穿慢线=金叉, 下穿=死叉", 10, False),
         ("    近2日金叉=1 / 死叉=-1; 按gap斜率线性推算将交叉=预1 / 预-1; 否则空", 10, False),
-        ("    KDJ: K上穿D; MACD: DIF上穿DEA; 5_10: MA5上穿MA10; 10_50: MA10上穿MA50", 10, False),
+        ("    KDJ: K上穿D; MACD: DIF上穿DEA; 5_10: MA5上穿MA10(需close>=MA10); 10_50: MA10上穿MA50(需close>=MA50)", 10, False),
         ("    MACD 专属: 预告窗口=3日(其他2日), 且需过去3根MACD柱(DIF-DEA)依次单边且加速, 来回震荡不触发预告", 10, False),
     ]
     if cols and "MRS_HSI" in cols:  # HK 专属
