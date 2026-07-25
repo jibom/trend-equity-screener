@@ -510,9 +510,10 @@ def detect_sos(daily: pd.DataFrame, lookback: int = 3, pos_n: int = 60,
         if pos[i] > pos_max: continue
         if v[i] < vol_mult * vol_ma[i]: continue
         # 十字星判定
-        b2r = body[i] / rng[i]
+        abs_body = abs(body[i])
+        b2r = abs_body / rng[i]
         r2o = rng[i] / o[i] if o[i] > 0 else 0.0
-        is_doji = (b2r <= 0.10 and r2o >= 0.005) or (body[i] <= (0.02 if c[i] >= 5 else 0.01))
+        is_doji = (b2r <= 0.10 and r2o >= 0.005) or (abs_body <= (0.02 if c[i] >= 5 else 0.01))
         # 阳线 path: 中大阳(实体>3%) + 波幅扩张 + 收盘靠高
         if body[i] > 0 and o[i] > 0 and body[i] / o[i] >= bull_body_pct:
             if rng[i] < range_mult * avg_rng[i]: continue
