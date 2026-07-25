@@ -53,7 +53,7 @@ def analyze(daily: pd.DataFrame) -> dict | None:
         "周度背离": wk_div_agg, "日度背离": d_div_agg,
         "周度DeMark": P.demark_col(dm, "周"), "日度DeMark": P.demark_col(dm, "日"),
         # ③ 多空平衡 (1=命中, 空=未命中)
-        "十字星(5d)": cp["doji_count"],
+        "十字星(3d)": cp["doji_count"],
         "涨放量跌缩量": 1 if vp["up_vol_dn_shrink"] else "",
         "climax": climax_val,
         "SOS": 1 if P.detect_sos(daily) else "",
