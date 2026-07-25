@@ -116,15 +116,22 @@ def rsi_stats(daily: pd.DataFrame, lookback: int = 60) -> dict:
 def _divergence(prices: np.ndarray, ind: np.ndarray, order: int = 5,
                 lookback: int = 60, recent: int = 15, min_pdiff: float = 0.02,
                 min_spacing: int = 4, zone_lo: float | None = None,
-                zone_hi: float | None = None) -> str:
+                zone_hi: float | None = None, cancel_k: float = 8.0) -> str:
     """返回 '底背离' / '顶背离' / '' 。取 lookback 内最后两个同向极值比较。
-    要求: 第二极值在最近 recent 根内(时效); 价差>min_pdiff(降噪); 两极值间距≥min_spacing;
-    zone(可选): 底背离要求两极值指标<zone_lo, 顶背离要求>zone_hi。"""
+    要求: 第二极值在近 recent 根内(时效); 价差>min_pdiff; 间距≥min_spacing;
+    zone(可选): 底背离要求两极值指标<zone_lo, 顶背离要求>zone_hi。
+    cancel_k: 波动率取消倍数。价格从第二极值沿背离方向走 > cancel_k×日收益标准差 视为已兑现→取消。
+      (银行低波~10%到位, 高波股~50%到位, 自适应)。
+    反向信号: 若底/顶背离都存在, 取第二极值更晚的那个(后来者取代)。"""
     n = len(prices)
     if n < 10:
         return ""
     s = min(lookback, n)
     p = prices[-s:]; iv = ind[-s:]
+    # 波动率 (20日日收益标准差)
+    rets = np.diff(np.log(np.where(p > 0, p, 1.0)))
+    vol = float(np.std(rets[-20:])) if len(rets) >= 20 else (float(np.std(rets)) if len(rets) >= 2 else 0.02)
+    cancel_thr = cancel_k * vol
     lows = argrelextrema(p, np.less_equal, order=order)[0]
     highs = argrelextrema(p, np.greater_equal, order=order)[0]
     if len(p) > 0 and p[-1] == p.min():
@@ -133,7 +140,8 @@ def _divergence(prices: np.ndarray, ind: np.ndarray, order: int = 5,
     if len(p) > 0 and p[-1] == p.max():
         if len(highs) == 0 or highs[-1] != len(p) - 1:
             highs = np.append(highs, len(p) - 1)
-    # 底背离: 价格新低 + 指标未新低
+    # 检测底背离和顶背离, 各记录 (i2, 类型)
+    bot = None; top = None
     if len(lows) >= 2:
         i1, i2 = lows[-2], lows[-1]
         if (i2 >= len(p) - recent and (i2 - i1) >= min_spacing
@@ -141,7 +149,8 @@ def _divergence(prices: np.ndarray, ind: np.ndarray, order: int = 5,
                 and p[i2] < p[i1] and iv[i2] > iv[i1]
                 and abs(p[i1] - p[i2]) / max(p[i1], 1e-9) > min_pdiff
                 and (zone_lo is None or (iv[i1] < zone_lo and iv[i2] < zone_lo))):
-            return "底背离"
+            if not (p[-1] > p[i2] * (1 + cancel_thr)):
+                bot = (i2, "底背离")
     if len(highs) >= 2:
         i1, i2 = highs[-2], highs[-1]
         if (i2 >= len(p) - recent and (i2 - i1) >= min_spacing
@@ -149,9 +158,16 @@ def _divergence(prices: np.ndarray, ind: np.ndarray, order: int = 5,
                 and p[i2] > p[i1] and iv[i2] < iv[i1]
                 and abs(p[i2] - p[i1]) / max(p[i1], 1e-9) > min_pdiff
                 and (zone_hi is None or (iv[i1] > zone_hi and iv[i2] > zone_hi))):
-            return "顶背离"
+            if not (p[-1] < p[i2] * (1 - cancel_thr)):
+                top = (i2, "顶背离")
+    # 反向信号: 第二极值更晚的取代
+    if bot and top:
+        return bot[1] if bot[0] >= top[0] else top[1]
+    if bot:
+        return bot[1]
+    if top:
+        return top[1]
     return ""
-
 
 def all_divergences(daily: pd.DataFrame) -> dict:
     """周线/日线 × MACD/KDJ/RSI 背离。周KDJ用J且要求J<10(底)/J>90(顶)极值区。"""
