@@ -1,5 +1,5 @@
 {
-  "date": "2026-07-24",
+  "date": "2026-07-25",
   "tab1": {
     "sos_section": [
       {
@@ -27,7 +27,7 @@
         "recent_new_high_flag": false,
         "trending_to_pullback_recent": false,
         "to_exit_recent": false,
-        "date": "2026-07-24"
+        "date": "2026-07-25"
       },
       {
         "ticker": "9858.HK",
@@ -54,7 +54,7 @@
         "recent_new_high_flag": false,
         "trending_to_pullback_recent": false,
         "to_exit_recent": false,
-        "date": "2026-07-24"
+        "date": "2026-07-25"
       },
       {
         "ticker": "3330.HK",
@@ -81,7 +81,7 @@
         "recent_new_high_flag": false,
         "trending_to_pullback_recent": false,
         "to_exit_recent": false,
-        "date": "2026-07-24"
+        "date": "2026-07-25"
       },
       {
         "ticker": "0316.HK",
@@ -108,7 +108,7 @@
         "recent_new_high_flag": false,
         "trending_to_pullback_recent": false,
         "to_exit_recent": false,
-        "date": "2026-07-24"
+        "date": "2026-07-25"
       },
       {
         "ticker": "0019.HK",
@@ -135,7 +135,7 @@
         "recent_new_high_flag": false,
         "trending_to_pullback_recent": false,
         "to_exit_recent": false,
-        "date": "2026-07-24"
+        "date": "2026-07-25"
       },
       {
         "ticker": "2507.HK",
@@ -162,7 +162,7 @@
         "recent_new_high_flag": false,
         "trending_to_pullback_recent": false,
         "to_exit_recent": false,
-        "date": "2026-07-24"
+        "date": "2026-07-25"
       },
       {
         "ticker": "0392.HK",
@@ -189,7 +189,7 @@
         "recent_new_high_flag": false,
         "trending_to_pullback_recent": false,
         "to_exit_recent": false,
-        "date": "2026-07-24"
+        "date": "2026-07-25"
       }
     ],
     "pool_section": [
@@ -218,7 +218,7 @@
         "recent_new_high_flag": false,
         "trending_to_pullback_recent": false,
         "to_exit_recent": false,
-        "date": "2026-07-24"
+        "date": "2026-07-25"
       },
       {
         "ticker": "2020.HK",
@@ -245,7 +245,7 @@
         "recent_new_high_flag": false,
         "trending_to_pullback_recent": false,
         "to_exit_recent": false,
-        "date": "2026-07-24"
+        "date": "2026-07-25"
       },
       {
         "ticker": "2618.HK",
@@ -258,7 +258,7 @@
         "last_close": 13.99,
         "ma10": 13.533,
         "ma20": 12.85,
-        "ma60": 13.385,
+        "ma60": 13.384,
         "ma200": 12.773,
         "ma200_slope": -0.38,
         "ma10_slope_pct": 11.24,
@@ -272,7 +272,7 @@
         "recent_new_high_flag": false,
         "trending_to_pullback_recent": false,
         "to_exit_recent": false,
-        "date": "2026-07-24"
+        "date": "2026-07-25"
       },
       {
         "ticker": "0066.HK",
@@ -299,7 +299,7 @@
         "recent_new_high_flag": false,
         "trending_to_pullback_recent": false,
         "to_exit_recent": false,
-        "date": "2026-07-24"
+        "date": "2026-07-25"
       },
       {
         "ticker": "3968.HK",
@@ -326,7 +326,7 @@
         "recent_new_high_flag": false,
         "trending_to_pullback_recent": false,
         "to_exit_recent": false,
-        "date": "2026-07-24"
+        "date": "2026-07-25"
       },
       {
         "ticker": "0388.HK",
@@ -353,7 +353,7 @@
         "recent_new_high_flag": false,
         "trending_to_pullback_recent": false,
         "to_exit_recent": false,
-        "date": "2026-07-24"
+        "date": "2026-07-25"
       },
       {
         "ticker": "3618.HK",
@@ -380,7 +380,7 @@
         "recent_new_high_flag": false,
         "trending_to_pullback_recent": false,
         "to_exit_recent": false,
-        "date": "2026-07-24"
+        "date": "2026-07-25"
       },
       {
         "ticker": "0998.HK",
@@ -407,7 +407,7 @@
         "recent_new_high_flag": false,
         "trending_to_pullback_recent": false,
         "to_exit_recent": false,
-        "date": "2026-07-24"
+        "date": "2026-07-25"
       },
       {
         "ticker": "1336.HK",
@@ -434,7 +434,7 @@
         "recent_new_high_flag": false,
         "trending_to_pullback_recent": false,
         "to_exit_recent": false,
-        "date": "2026-07-24"
+        "date": "2026-07-25"
       },
       {
         "ticker": "2328.HK",
@@ -461,7 +461,7 @@
         "recent_new_high_flag": false,
         "trending_to_pullback_recent": false,
         "to_exit_recent": false,
-        "date": "2026-07-24"
+        "date": "2026-07-25"
       },
       {
         "ticker": "2628.HK",
@@ -488,7 +488,7 @@
         "recent_new_high_flag": false,
         "trending_to_pullback_recent": false,
         "to_exit_recent": false,
-        "date": "2026-07-24"
+        "date": "2026-07-25"
       },
       {
         "ticker": "1258.HK",
@@ -515,7 +515,7 @@
         "recent_new_high_flag": false,
         "trending_to_pullback_recent": false,
         "to_exit_recent": false,
-        "date": "2026-07-24"
+        "date": "2026-07-25"
       },
       {
         "ticker": "2423.HK",
@@ -542,7 +542,7 @@
         "recent_new_high_flag": false,
         "trending_to_pullback_recent": false,
         "to_exit_recent": false,
-        "date": "2026-07-24"
+        "date": "2026-07-25"
       },
       {
         "ticker": "1997.HK",
@@ -569,7 +569,7 @@
         "recent_new_high_flag": false,
         "trending_to_pullback_recent": false,
         "to_exit_recent": false,
-        "date": "2026-07-24"
+        "date": "2026-07-25"
       },
       {
         "ticker": "0688.HK",
@@ -596,7 +596,7 @@
         "recent_new_high_flag": false,
         "trending_to_pullback_recent": false,
         "to_exit_recent": false,
-        "date": "2026-07-24"
+        "date": "2026-07-25"
       },
       {
         "ticker": "2869.HK",
@@ -623,7 +623,7 @@
         "recent_new_high_flag": false,
         "trending_to_pullback_recent": false,
         "to_exit_recent": true,
-        "date": "2026-07-24"
+        "date": "2026-07-25"
       },
       {
         "ticker": "0836.HK",
@@ -650,7 +650,7 @@
         "recent_new_high_flag": false,
         "trending_to_pullback_recent": false,
         "to_exit_recent": false,
-        "date": "2026-07-24"
+        "date": "2026-07-25"
       },
       {
         "ticker": "0902.HK",
@@ -677,34 +677,7 @@
         "recent_new_high_flag": false,
         "trending_to_pullback_recent": false,
         "to_exit_recent": false,
-        "date": "2026-07-24"
-      },
-      {
-        "ticker": "0135.HK",
-        "name": "昆仑能源",
-        "name_cn": "昆仑能源",
-        "gics_sector": "Utilities",
-        "sub_industry": "公共事业",
-        "state": "ENTANGLED",
-        "substate": "",
-        "last_close": 7.07,
-        "ma10": 6.885,
-        "ma20": 6.718,
-        "ma60": 6.975,
-        "ma200": 7.295,
-        "ma200_slope": -0.54,
-        "ma10_slope_pct": 5.1,
-        "days_in_state": 2,
-        "days_in_pullback": 0,
-        "pullback_dd_pct": null,
-        "sos": "",
-        "bear_gate": false,
-        "is_new_stock": false,
-        "sos_setup_recent": "",
-        "recent_new_high_flag": false,
-        "trending_to_pullback_recent": false,
-        "to_exit_recent": false,
-        "date": "2026-07-24"
+        "date": "2026-07-25"
       },
       {
         "ticker": "0003.HK",
@@ -731,7 +704,7 @@
         "recent_new_high_flag": false,
         "trending_to_pullback_recent": false,
         "to_exit_recent": false,
-        "date": "2026-07-24"
+        "date": "2026-07-25"
       },
       {
         "ticker": "0371.HK",
@@ -758,7 +731,7 @@
         "recent_new_high_flag": false,
         "trending_to_pullback_recent": false,
         "to_exit_recent": true,
-        "date": "2026-07-24"
+        "date": "2026-07-25"
       },
       {
         "ticker": "1038.HK",
@@ -785,7 +758,7 @@
         "recent_new_high_flag": false,
         "trending_to_pullback_recent": false,
         "to_exit_recent": false,
-        "date": "2026-07-24"
+        "date": "2026-07-25"
       },
       {
         "ticker": "1088.HK",
@@ -812,7 +785,7 @@
         "recent_new_high_flag": false,
         "trending_to_pullback_recent": false,
         "to_exit_recent": false,
-        "date": "2026-07-24"
+        "date": "2026-07-25"
       }
     ]
   },
@@ -842,7 +815,7 @@
       "recent_new_high_flag": true,
       "trending_to_pullback_recent": false,
       "to_exit_recent": false,
-      "date": "2026-07-24",
+      "date": "2026-07-25",
       "display_tier": "STRONG"
     },
     {
@@ -870,7 +843,7 @@
       "recent_new_high_flag": true,
       "trending_to_pullback_recent": false,
       "to_exit_recent": false,
-      "date": "2026-07-24",
+      "date": "2026-07-25",
       "display_tier": "STRONG"
     },
     {
@@ -898,7 +871,7 @@
       "recent_new_high_flag": true,
       "trending_to_pullback_recent": false,
       "to_exit_recent": false,
-      "date": "2026-07-24",
+      "date": "2026-07-25",
       "display_tier": "STRONG"
     },
     {
@@ -926,7 +899,7 @@
       "recent_new_high_flag": true,
       "trending_to_pullback_recent": false,
       "to_exit_recent": false,
-      "date": "2026-07-24",
+      "date": "2026-07-25",
       "display_tier": "STRONG"
     },
     {
@@ -954,7 +927,7 @@
       "recent_new_high_flag": true,
       "trending_to_pullback_recent": false,
       "to_exit_recent": false,
-      "date": "2026-07-24",
+      "date": "2026-07-25",
       "display_tier": "STRONG"
     },
     {
@@ -982,7 +955,7 @@
       "recent_new_high_flag": true,
       "trending_to_pullback_recent": true,
       "to_exit_recent": false,
-      "date": "2026-07-24",
+      "date": "2026-07-25",
       "display_tier": "STRONG"
     },
     {
@@ -1010,7 +983,7 @@
       "recent_new_high_flag": true,
       "trending_to_pullback_recent": false,
       "to_exit_recent": false,
-      "date": "2026-07-24",
+      "date": "2026-07-25",
       "display_tier": "STRONG"
     },
     {
@@ -1038,7 +1011,7 @@
       "recent_new_high_flag": false,
       "trending_to_pullback_recent": false,
       "to_exit_recent": false,
-      "date": "2026-07-24",
+      "date": "2026-07-25",
       "display_tier": "EARLY"
     },
     {
@@ -1066,7 +1039,7 @@
       "recent_new_high_flag": false,
       "trending_to_pullback_recent": false,
       "to_exit_recent": false,
-      "date": "2026-07-24",
+      "date": "2026-07-25",
       "display_tier": "EARLY"
     },
     {
@@ -1094,7 +1067,7 @@
       "recent_new_high_flag": false,
       "trending_to_pullback_recent": false,
       "to_exit_recent": false,
-      "date": "2026-07-24",
+      "date": "2026-07-25",
       "display_tier": "STRONG"
     },
     {
@@ -1122,7 +1095,7 @@
       "recent_new_high_flag": false,
       "trending_to_pullback_recent": false,
       "to_exit_recent": false,
-      "date": "2026-07-24",
+      "date": "2026-07-25",
       "display_tier": "STRONG NEW"
     },
     {
@@ -1150,7 +1123,7 @@
       "recent_new_high_flag": false,
       "trending_to_pullback_recent": false,
       "to_exit_recent": false,
-      "date": "2026-07-24",
+      "date": "2026-07-25",
       "display_tier": "STRONG NEW"
     },
     {
@@ -1178,7 +1151,7 @@
       "recent_new_high_flag": false,
       "trending_to_pullback_recent": true,
       "to_exit_recent": false,
-      "date": "2026-07-24",
+      "date": "2026-07-25",
       "display_tier": "STRONG NEW"
     },
     {
@@ -1206,7 +1179,7 @@
       "recent_new_high_flag": true,
       "trending_to_pullback_recent": false,
       "to_exit_recent": false,
-      "date": "2026-07-24",
+      "date": "2026-07-25",
       "display_tier": "STRONG"
     },
     {
@@ -1234,7 +1207,7 @@
       "recent_new_high_flag": false,
       "trending_to_pullback_recent": false,
       "to_exit_recent": false,
-      "date": "2026-07-24",
+      "date": "2026-07-25",
       "display_tier": "STRONG"
     },
     {
@@ -1262,7 +1235,7 @@
       "recent_new_high_flag": true,
       "trending_to_pullback_recent": false,
       "to_exit_recent": false,
-      "date": "2026-07-24",
+      "date": "2026-07-25",
       "display_tier": "STRONG"
     },
     {
@@ -1290,7 +1263,7 @@
       "recent_new_high_flag": false,
       "trending_to_pullback_recent": false,
       "to_exit_recent": false,
-      "date": "2026-07-24",
+      "date": "2026-07-25",
       "display_tier": "STRONG"
     },
     {
@@ -1318,7 +1291,7 @@
       "recent_new_high_flag": true,
       "trending_to_pullback_recent": false,
       "to_exit_recent": false,
-      "date": "2026-07-24",
+      "date": "2026-07-25",
       "display_tier": "STRONG"
     },
     {
@@ -1346,7 +1319,7 @@
       "recent_new_high_flag": false,
       "trending_to_pullback_recent": false,
       "to_exit_recent": false,
-      "date": "2026-07-24",
+      "date": "2026-07-25",
       "display_tier": "STRONG"
     },
     {
@@ -1374,7 +1347,7 @@
       "recent_new_high_flag": false,
       "trending_to_pullback_recent": false,
       "to_exit_recent": false,
-      "date": "2026-07-24",
+      "date": "2026-07-25",
       "display_tier": "EARLY"
     },
     {
@@ -1402,7 +1375,7 @@
       "recent_new_high_flag": true,
       "trending_to_pullback_recent": false,
       "to_exit_recent": false,
-      "date": "2026-07-24",
+      "date": "2026-07-25",
       "display_tier": "STRONG"
     },
     {
@@ -1430,7 +1403,7 @@
       "recent_new_high_flag": true,
       "trending_to_pullback_recent": false,
       "to_exit_recent": false,
-      "date": "2026-07-24",
+      "date": "2026-07-25",
       "display_tier": "STRONG"
     },
     {
@@ -1458,7 +1431,7 @@
       "recent_new_high_flag": false,
       "trending_to_pullback_recent": false,
       "to_exit_recent": false,
-      "date": "2026-07-24",
+      "date": "2026-07-25",
       "display_tier": "EARLY"
     },
     {
@@ -1486,7 +1459,7 @@
       "recent_new_high_flag": false,
       "trending_to_pullback_recent": false,
       "to_exit_recent": false,
-      "date": "2026-07-24",
+      "date": "2026-07-25",
       "display_tier": "EARLY"
     },
     {
@@ -1514,7 +1487,7 @@
       "recent_new_high_flag": true,
       "trending_to_pullback_recent": false,
       "to_exit_recent": false,
-      "date": "2026-07-24",
+      "date": "2026-07-25",
       "display_tier": "STRONG"
     },
     {
@@ -1529,7 +1502,7 @@
       "ma10": 191.07,
       "ma20": 185.155,
       "ma60": 177.16,
-      "ma200": 188.613,
+      "ma200": 188.614,
       "ma200_slope": -0.76,
       "ma10_slope_pct": 6.6,
       "days_in_state": 7,
@@ -1542,7 +1515,7 @@
       "recent_new_high_flag": true,
       "trending_to_pullback_recent": false,
       "to_exit_recent": false,
-      "date": "2026-07-24",
+      "date": "2026-07-25",
       "display_tier": "STRONG"
     },
     {
@@ -1570,7 +1543,7 @@
       "recent_new_high_flag": false,
       "trending_to_pullback_recent": false,
       "to_exit_recent": false,
-      "date": "2026-07-24",
+      "date": "2026-07-25",
       "display_tier": "STRONG"
     },
     {
@@ -1598,7 +1571,7 @@
       "recent_new_high_flag": false,
       "trending_to_pullback_recent": false,
       "to_exit_recent": false,
-      "date": "2026-07-24",
+      "date": "2026-07-25",
       "display_tier": "STRONG NEW"
     },
     {
@@ -1612,7 +1585,7 @@
       "last_close": 13.8,
       "ma10": 14.311,
       "ma20": 13.581,
-      "ma60": 12.435,
+      "ma60": 12.434,
       "ma200": 13.299,
       "ma200_slope": -2.8,
       "ma10_slope_pct": 11.36,
@@ -1626,7 +1599,7 @@
       "recent_new_high_flag": false,
       "trending_to_pullback_recent": false,
       "to_exit_recent": false,
-      "date": "2026-07-24",
+      "date": "2026-07-25",
       "display_tier": "EARLY"
     },
     {
@@ -1654,7 +1627,7 @@
       "recent_new_high_flag": false,
       "trending_to_pullback_recent": false,
       "to_exit_recent": false,
-      "date": "2026-07-24",
+      "date": "2026-07-25",
       "display_tier": "EARLY"
     },
     {
@@ -1682,7 +1655,7 @@
       "recent_new_high_flag": false,
       "trending_to_pullback_recent": false,
       "to_exit_recent": false,
-      "date": "2026-07-24",
+      "date": "2026-07-25",
       "display_tier": "EARLY"
     },
     {
@@ -1710,7 +1683,7 @@
       "recent_new_high_flag": false,
       "trending_to_pullback_recent": false,
       "to_exit_recent": false,
-      "date": "2026-07-24",
+      "date": "2026-07-25",
       "display_tier": "EARLY"
     },
     {
@@ -1738,7 +1711,7 @@
       "recent_new_high_flag": false,
       "trending_to_pullback_recent": false,
       "to_exit_recent": false,
-      "date": "2026-07-24",
+      "date": "2026-07-25",
       "display_tier": "EARLY"
     },
     {
@@ -1766,7 +1739,7 @@
       "recent_new_high_flag": false,
       "trending_to_pullback_recent": false,
       "to_exit_recent": false,
-      "date": "2026-07-24",
+      "date": "2026-07-25",
       "display_tier": "STRONG"
     },
     {
@@ -1794,7 +1767,7 @@
       "recent_new_high_flag": false,
       "trending_to_pullback_recent": false,
       "to_exit_recent": false,
-      "date": "2026-07-24",
+      "date": "2026-07-25",
       "display_tier": "STRONG"
     },
     {
@@ -1822,7 +1795,7 @@
       "recent_new_high_flag": false,
       "trending_to_pullback_recent": false,
       "to_exit_recent": false,
-      "date": "2026-07-24",
+      "date": "2026-07-25",
       "display_tier": "STRONG"
     },
     {
@@ -1850,7 +1823,7 @@
       "recent_new_high_flag": false,
       "trending_to_pullback_recent": false,
       "to_exit_recent": false,
-      "date": "2026-07-24",
+      "date": "2026-07-25",
       "display_tier": "STRONG"
     }
   ],
@@ -1907,16 +1880,6 @@
       "last_close": 23.56
     },
     {
-      "ticker": "1171.HK",
-      "name_cn": "兖矿能源",
-      "gics_sector": "Energy",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 4,
-      "last_close": 11.78
-    },
-    {
       "ticker": "1898.HK",
       "name_cn": "中煤能源",
       "gics_sector": "Energy",
@@ -1925,6 +1888,16 @@
       "emoji": "🔴",
       "days_in_state": 4,
       "last_close": 10.96
+    },
+    {
+      "ticker": "1171.HK",
+      "name_cn": "兖矿能源",
+      "gics_sector": "Energy",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 4,
+      "last_close": 11.78
     },
     {
       "ticker": "0817.HK",
@@ -1977,6 +1950,16 @@
       "last_close": 120.7
     },
     {
+      "ticker": "0135.HK",
+      "name_cn": "昆仑能源",
+      "gics_sector": "Utilities",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 4,
+      "last_close": 7.07
+    },
+    {
       "ticker": "0991.HK",
       "name_cn": "大唐",
       "gics_sector": "Utilities",
@@ -1985,6 +1968,16 @@
       "emoji": "🔴",
       "days_in_state": 4,
       "last_close": 2.51
+    },
+    {
+      "ticker": "1816.HK",
+      "name_cn": "中广核电力",
+      "gics_sector": "Utilities",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 2,
+      "last_close": 2.88
     },
     {
       "ticker": "0257.HK",
@@ -2005,16 +1998,6 @@
       "emoji": "🔴",
       "days_in_state": 1,
       "last_close": 8.74
-    },
-    {
-      "ticker": "1816.HK",
-      "name_cn": "中广核电力",
-      "gics_sector": "Utilities",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 2,
-      "last_close": 2.88
     },
     {
       "ticker": "0006.HK",

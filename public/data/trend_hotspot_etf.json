@@ -355,7 +355,7 @@
       "ma_aligned": 1,
       "days_below_ma10": 0,
       "ma_stack": 1,
-      "hotness": 0.319
+      "hotness": 0.318
     },
     {
       "ticker": "IWN.US",
@@ -677,7 +677,7 @@
       "ma_aligned": 0,
       "days_below_ma10": 1,
       "ma_stack": 0,
-      "hotness": 0.585
+      "hotness": 0.584
     },
     {
       "ticker": "XLK.US",
@@ -1091,7 +1091,7 @@
       "ret_60": 0.425,
       "ma_aligned": 0,
       "days_below_ma10": 1,
-      "hotness": 0.585
+      "hotness": 0.584
     },
     {
       "ticker": "EWY.US",
@@ -1432,7 +1432,7 @@
       "ret_60": 0.053,
       "ma_aligned": 1,
       "days_below_ma10": 0,
-      "hotness": 0.319
+      "hotness": 0.318
     },
     {
       "ticker": "SPSM.US",
