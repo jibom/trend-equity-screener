@@ -159,16 +159,16 @@ def all_divergences(daily: pd.DataFrame) -> dict:
     # 日线
     d = calc_kdj(daily.copy())
     dif, dea, _ = macd(d["fwd_close"].values)
-    out["日KDJ背离"] = _divergence(d["fwd_close"].values, d["k"].values)
-    out["日MACD背离"] = _divergence(d["fwd_close"].values, dif)
-    out["日RSI背离"] = _divergence(d["fwd_close"].values, rsi(d["fwd_close"].values))
+    out["日KDJ背离"] = _divergence(d["fwd_close"].values, d["k"].values, recent=10)
+    out["日MACD背离"] = _divergence(d["fwd_close"].values, dif, recent=10)
+    out["日RSI背离"] = _divergence(d["fwd_close"].values, rsi(d["fwd_close"].values), recent=10)
     # 周线 (KDJ 用 J + 极值区 J<10/J>90)
     wk = calc_kdj(_complete_weekly(d))
     wdif, wdea, _ = macd(wk["fwd_close"].values)
     out["周KDJ背离"] = _divergence(wk["fwd_close"].values, wk["j"].values, lookback=40,
-                                  zone_lo=10.0, zone_hi=90.0)
-    out["周MACD背离"] = _divergence(wk["fwd_close"].values, wdif, lookback=40)
-    out["周RSI背离"] = _divergence(wk["fwd_close"].values, rsi(wk["fwd_close"].values), lookback=40)
+                                  zone_lo=10.0, zone_hi=90.0, recent=4)
+    out["周MACD背离"] = _divergence(wk["fwd_close"].values, wdif, lookback=40, recent=4)
+    out["周RSI背离"] = _divergence(wk["fwd_close"].values, rsi(wk["fwd_close"].values), lookback=40, recent=4)
     return out
 
 
