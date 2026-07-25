@@ -480,3 +480,38 @@ def crossovers(daily: pd.DataFrame) -> dict:
     out["5_10金叉"] = _cross_status(ma(c, 5), ma(c, 10), dates, forecast=True)["state"]
     out["10_50金叉"] = _cross_status(ma(c, 10), ma(c, 50), dates, forecast=True)["state"]
     return out
+
+
+# ---------------- SOS (Sign of Strength, Wyckoff) ----------------
+def detect_sos(daily: pd.DataFrame, lookback: int = 3, pos_n: int = 60,
+               pos_max: float = 0.30, new_high_n: int = 10, range_mult: float = 1.5,
+               vol_mult: float = 1.5, close_ratio: float = 0.70, body_ratio: float = 0.20) -> int:
+    """Sign of Strength (Wyckoff 底部吸筹): 放量长阳, 实体饱满, 收盘靠近高点, 创近期新高, 在底部区间。
+    检测近 lookback 日内是否有 SOS bar。返回 1 或 0。"""
+    need = max(pos_n, lookback + new_high_n + 25)
+    d = daily.tail(need).reset_index(drop=True)
+    if len(d) < 60:
+        return 0
+    o = d["fwd_open"].values; c = d["fwd_close"].values
+    h = d["fwd_high"].values; l = d["fwd_low"].values; v = d["volume"].values
+    n = len(d)
+    rng = h - l
+    body = c - o
+    rmin = pd.Series(c).rolling(pos_n, min_periods=pos_n).min().values
+    rmax = pd.Series(c).rolling(pos_n, min_periods=pos_n).max().values
+    pos = (c - rmin) / np.where(rmax > rmin, rmax - rmin, np.nan)
+    avg_rng = pd.Series(rng).rolling(10, min_periods=5).mean().values
+    vol_ma = pd.Series(v).rolling(20, min_periods=5).mean().values
+    for i in range(n - lookback, n):
+        if i < 25 or np.isnan(avg_rng[i]) or np.isnan(vol_ma[i]) or np.isnan(pos[i]) or rng[i] <= 0:
+            continue
+        if body[i] <= 0: continue
+        if body[i] / rng[i] < body_ratio: continue
+        if rng[i] < range_mult * avg_rng[i]: continue
+        if v[i] < vol_mult * vol_ma[i]: continue
+        if (c[i] - l[i]) / rng[i] < close_ratio: continue
+        if i < new_high_n: continue
+        if c[i] < np.max(c[i - new_high_n:i]): continue
+        if pos[i] > pos_max: continue
+        return 1
+    return 0

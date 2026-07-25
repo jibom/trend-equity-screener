@@ -56,6 +56,7 @@ def analyze(daily: pd.DataFrame) -> dict | None:
         "十字星(5d)": cp["doji_count"],
         "涨放量跌缩量": 1 if vp["up_vol_dn_shrink"] else "",
         "climax": climax_val,
+        "SOS": 1 if P.detect_sos(daily) else "",
         # ④ 企稳上行 (近2日金叉=1/死叉=-1; 推算2日内将金叉=预1/将死叉=预-1)
         "KDJ Cross": P.cross_code(co["KDJ金叉"]),
         "日MACD Cross": P.cross_code(co["MACD金叉"]),

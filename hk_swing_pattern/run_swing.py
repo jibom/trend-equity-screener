@@ -31,7 +31,7 @@ COL_ORDER = [
     "周KDJ背离", "周MACD背离", "周RSI背离", "日MACD背离", "日RSI背离",
     "周度背离", "日度背离",
     "周度DeMark", "日度DeMark",
-    "十字星(3d)", "涨放量跌缩量", "climax",
+    "十字星(3d)", "涨放量跌缩量", "climax", "SOS",
     "KDJ Cross", "日MACD Cross", "5_10 Cross",
 ]
 # HK 专属 4 列 (年线斜率 / RS_HSI / RS_HSI_1W / RS_HSI_4W)
@@ -97,6 +97,7 @@ def write_excel(df: pd.DataFrame, asof: str, out: Path, col_order: list = None):
         ("  climax: 极端价格变动 + 放量 + 极端位置。+1=放量大涨在60日高位(最后一涨); -1=放量大跌在60日低位(最后一跌); ±1=双向; 取近5日最新", 10, False),
         ("    触发: |收盘-前收|≥4×ATR(14) 或 |日收益率|≥近250日99.5分位; 且 量≥1.5×20日量均; 位置=收盘在60日区间分位(高位≥0.85/低位≤0.15)", 10, False),
         ("    回测(4年/268只): climax bottom 20日forward +8.4%/胜率70.6%; climax top 20日forward正(动量延续, 预警较弱, 保留参考)", 10, False),
+        ("  SOS (Sign of Strength, Wyckoff): 近3日底部区间放量长阳, 实体饱满, 收盘靠近高点(>=70%), 创近10日新高, 60日分位<=0.30。需求主动进攻", 10, False),
         ("", 10, False),
         ("【④ 企稳上行 — Cross】", 11, True),
         ("  KDJ Cross / 日MACD Cross / 5_10 Cross: 日线快线上穿慢线=金叉, 下穿=死叉", 10, False),
