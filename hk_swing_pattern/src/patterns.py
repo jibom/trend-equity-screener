@@ -505,13 +505,16 @@ def detect_sos(daily: pd.DataFrame, lookback: int = 3, pos_n: int = 60,
     for i in range(n - lookback, n):
         if i < 25 or np.isnan(avg_rng[i]) or np.isnan(vol_ma[i]) or np.isnan(pos[i]) or rng[i] <= 0:
             continue
-        if body[i] <= 0: continue
-        if body[i] / rng[i] < body_ratio: continue
+        # 阳线 OR 十字星 (满足一个即可)
+        is_bull = body[i] > 0
+        b2r = body[i] / rng[i] if rng[i] > 0 else 1.0
+        r2o = rng[i] / o[i] if o[i] > 0 else 0.0
+        is_doji = (b2r <= 0.10 and r2o >= 0.005) or (body[i] <= (0.02 if c[i] >= 5 else 0.01))
+        if not (is_bull or is_doji): continue
+        # ③ 波幅扩张 ④ 放量 ⑤ 收盘靠近高点 ⑦ 底部位置
         if rng[i] < range_mult * avg_rng[i]: continue
         if v[i] < vol_mult * vol_ma[i]: continue
         if (c[i] - l[i]) / rng[i] < close_ratio: continue
-        if i < new_high_n: continue
-        if c[i] < np.max(c[i - new_high_n:i]): continue
         if pos[i] > pos_max: continue
         return 1
     return 0
