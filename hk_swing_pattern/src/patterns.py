@@ -318,8 +318,8 @@ def demark_all(daily: pd.DataFrame) -> dict:
     c = dd["fwd_close"].values; h = dd["fwd_high"].values; l = dd["fwd_low"].values
     dt = dd["date"].dt.strftime("%Y-%m-%d").values
     seq_d = td_sequential(c, h, l, dt)
-    out["日买9"] = bool(seq_d["buy9_bars_ago"] is not None and seq_d["buy9_bars_ago"] <= 8)
-    out["日卖9"] = bool(seq_d["sell9_bars_ago"] is not None and seq_d["sell9_bars_ago"] <= 8)
+    out["日买9"] = bool(seq_d["buy_setup"] >= 9 or (seq_d["buy9_bars_ago"] is not None and seq_d["buy9_bars_ago"] <= 8))
+    out["日卖9"] = bool(seq_d["sell_setup"] >= 9 or (seq_d["sell9_bars_ago"] is not None and seq_d["sell9_bars_ago"] <= 8))
     out["日买13"] = bool(seq_d["buy_cd_complete"] and seq_d["buy_cd_bars_ago"] is not None
                          and seq_d["buy_cd_bars_ago"] <= 8)
     out["日卖13"] = bool(seq_d["sell_cd_complete"] and seq_d["sell_cd_bars_ago"] is not None
@@ -330,8 +330,8 @@ def demark_all(daily: pd.DataFrame) -> dict:
         c = wk["fwd_close"].values; h = wk["fwd_high"].values; l = wk["fwd_low"].values
         dt = wk["date"].dt.strftime("%Y-%m-%d").values
         seq_w = td_sequential(c, h, l, dt)
-        out["周买9"] = bool(seq_w["buy9_bars_ago"] is not None and seq_w["buy9_bars_ago"] <= 4)
-        out["周卖9"] = bool(seq_w["sell9_bars_ago"] is not None and seq_w["sell9_bars_ago"] <= 4)
+        out["周买9"] = bool(seq_w["buy_setup"] >= 9 or (seq_w["buy9_bars_ago"] is not None and seq_w["buy9_bars_ago"] <= 4))
+        out["周卖9"] = bool(seq_w["sell_setup"] >= 9 or (seq_w["sell9_bars_ago"] is not None and seq_w["sell9_bars_ago"] <= 4))
         out["周买13"] = bool(seq_w["buy_cd_complete"] and seq_w["buy_cd_bars_ago"] is not None
                              and seq_w["buy_cd_bars_ago"] <= 4)
         out["周卖13"] = bool(seq_w["sell_cd_complete"] and seq_w["sell_cd_bars_ago"] is not None
