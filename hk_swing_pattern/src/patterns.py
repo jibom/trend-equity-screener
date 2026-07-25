@@ -116,7 +116,7 @@ def rsi_stats(daily: pd.DataFrame, lookback: int = 60) -> dict:
 def _divergence(prices: np.ndarray, ind: np.ndarray, order: int = 5,
                 lookback: int = 60, recent: int = 15, min_pdiff: float = 0.02,
                 min_spacing: int = 4, zone_lo: float | None = None,
-                zone_hi: float | None = None, cancel_k: float = 8.0) -> str:
+                zone_hi: float | None = None, cancel_k: float = 6.0) -> str:
     """返回 '底背离' / '顶背离' / '' 。取 lookback 内最后两个同向极值比较。
     要求: 第二极值在近 recent 根内(时效); 价差>min_pdiff; 间距≥min_spacing;
     zone(可选): 底背离要求两极值指标<zone_lo, 顶背离要求>zone_hi。
