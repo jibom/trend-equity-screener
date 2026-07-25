@@ -490,7 +490,7 @@ def detect_sos(daily: pd.DataFrame, lookback: int = 3, pos_n: int = 60,
     阳线path: 中大阳(实体>3%) + 波幅扩张(1.5×) + 收盘靠高(0.70) + 放量 + 底部
     十字星path: 十字星 + 放量 + 底部 (无波幅/收盘要求)
     近 lookback 日内任一根满足任一路径 → 返回 1, 否则 0。"""
-    need = max(pos_n, lookback + 35)
+    need = max(pos_n + 10, lookback + 35)
     d = daily.tail(need).reset_index(drop=True)
     if len(d) < 65:
         return 0
