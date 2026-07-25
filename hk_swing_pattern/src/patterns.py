@@ -356,7 +356,7 @@ def demark_col(dm: dict, pfx: str):
 
 
 # ---------------- K线形态 + 量 ----------------
-def candlestick_patterns(daily: pd.DataFrame, lookback: int = 10, doji_lookback: int = 5) -> dict:
+def candlestick_patterns(daily: pd.DataFrame, lookback: int = 10, doji_lookback: int = 3) -> dict:
     d = daily.tail(lookback).reset_index(drop=True)
     o = d["fwd_open"].values; c = d["fwd_close"].values
     h = d["fwd_high"].values; l = d["fwd_low"].values
