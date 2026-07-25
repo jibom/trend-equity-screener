@@ -35,7 +35,8 @@ COL_ORDER = [
     "KDJ Cross", "日MACD Cross", "5_10 Cross",
 ]
 # HK 专属 4 列 (年线斜率 / RS_HSI / RS_HSI_1W / RS_HSI_4W)
-COL_ORDER_HK = COL_ORDER + ["年线斜率", "MRS_HSI", "MRS_HSI_1W", "MRS_HSI_4W", "MRS_HD"]
+COL_ORDER_HK = COL_ORDER + ["年线斜率", "MRS_HSI", "MRS_HSI_1W", "MRS_HSI_4W",
+                            "MRS_HD", "MRS_HD_1W", "MRS_HD_4W"]
 
 
 def to_bloomberg(wind_code: str) -> str:
@@ -109,6 +110,7 @@ def write_excel(df: pd.DataFrame, asof: str, out: Path, col_order: list = None):
             ("  MRS_HSI: Mansfield RS vs 2800.HK(盈富基金,HSI代理) = (个股/2800.HK)/(252日均线)-1 ×100。0=在均线上, 正=跑赢, 负=跑输", 10, False),
             ("  MRS_HSI_1W / MRS_HSI_4W: MRS_HSI 分数的 5日 / 20日 变化", 10, False),
             ("  MRS_HD: Mansfield RS vs 3110.HK(恒生高股息率ETF) = (个股/3110.HK)/(252日均线)-1 ×100。正=跑赢高股息指数", 10, False),
+            ("  MRS_HD_1W / MRS_HD_4W: MRS_HD 分数的 5日 / 20日 变化", 10, False),
             ("  (HK股票池无sector, 不算 MRS_行业)", 10, False),
         ]
     elif cols and "MRS_SPY" in cols:  # 美股专属

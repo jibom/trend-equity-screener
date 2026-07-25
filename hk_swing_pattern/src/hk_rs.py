@@ -31,7 +31,8 @@ def fetch_benchmarks(asof: str, lookback_days: int = 520) -> dict:
 
 
 def compute_extras(stock_daily: pd.DataFrame, benchmarks: dict) -> dict:
-    out = {"年线斜率": None, "MRS_HSI": None, "MRS_HSI_1W": None, "MRS_HSI_4W": None, "MRS_HD": None}
+    out = {"年线斜率": None, "MRS_HSI": None, "MRS_HSI_1W": None, "MRS_HSI_4W": None,
+           "MRS_HD": None, "MRS_HD_1W": None, "MRS_HD_4W": None}
     c = stock_daily["fwd_close"].values.astype(float)
     dates = stock_daily["date"]
     ma200 = pd.Series(c).rolling(200, min_periods=200).mean().values
@@ -48,6 +49,8 @@ def compute_extras(stock_daily: pd.DataFrame, benchmarks: dict) -> dict:
     hd = benchmarks.get("3110.HK")
     if hd is not None:
         mrs_hd = _mrs((stk / hd).dropna()).dropna()
-        if len(mrs_hd) >= 1:
+        if len(mrs_hd) >= 21:
             out["MRS_HD"] = round(float(mrs_hd.iloc[-1]), 2)
+            out["MRS_HD_1W"] = round(float(mrs_hd.iloc[-1] - mrs_hd.iloc[-6]), 2)
+            out["MRS_HD_4W"] = round(float(mrs_hd.iloc[-1] - mrs_hd.iloc[-21]), 2)
     return out
