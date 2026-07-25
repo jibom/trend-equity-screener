@@ -97,7 +97,7 @@ def write_excel(df: pd.DataFrame, asof: str, out: Path, col_order: list = None):
         ("  climax: 极端价格变动 + 放量 + 极端位置。+1=放量大涨在60日高位(最后一涨); -1=放量大跌在60日低位(最后一跌); ±1=双向; 取近5日最新", 10, False),
         ("    触发: |收盘-前收|≥4×ATR(14) 或 |日收益率|≥近250日99.5分位; 且 量≥1.5×20日量均; 位置=收盘在60日区间分位(高位≥0.85/低位≤0.15)", 10, False),
         ("    回测(4年/268只): climax bottom 20日forward +8.4%/胜率70.6%; climax top 20日forward正(动量延续, 预警较弱, 保留参考)", 10, False),
-        ("  SOS (Sign of Strength, Wyckoff): 近3日, 两条路径(共享: 放量>=1.5x + 60日分位<=0.30):", 10, False),
+        ("  SOS (Sign of Strength, Wyckoff): 近3日, 两条路径(共享: 放量>=1.5x + 60日分位<=0.50):", 10, False),
         ("    阳线path: 中大阳(实体>3%) + 波幅扩张(1.5x) + 收盘靠高(>=70%); 十字星path: 十字星 + 放量(无需波幅/收盘条件)", 10, False),
         ("", 10, False),
         ("【④ 企稳上行 — Cross】", 11, True),

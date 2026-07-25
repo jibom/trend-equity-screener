@@ -484,7 +484,7 @@ def crossovers(daily: pd.DataFrame) -> dict:
 
 # ---------------- SOS (Sign of Strength, Wyckoff) ----------------
 def detect_sos(daily: pd.DataFrame, lookback: int = 3, pos_n: int = 60,
-               pos_max: float = 0.30, range_mult: float = 1.5, vol_mult: float = 1.5,
+               pos_max: float = 0.50, range_mult: float = 1.5, vol_mult: float = 1.5,
                close_ratio: float = 0.70, bull_body_pct: float = 0.03) -> int:
     """Sign of Strength (Wyckoff): 两条路径, 共享 放量+底部位置。
     阳线path: 中大阳(实体>3%) + 波幅扩张(1.5×) + 收盘靠高(0.70) + 放量 + 底部
