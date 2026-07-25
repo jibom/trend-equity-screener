@@ -484,19 +484,20 @@ def crossovers(daily: pd.DataFrame) -> dict:
 
 # ---------------- SOS (Sign of Strength, Wyckoff) ----------------
 def detect_sos(daily: pd.DataFrame, lookback: int = 3, pos_n: int = 60,
-               pos_max: float = 0.30, new_high_n: int = 10, range_mult: float = 1.5,
-               vol_mult: float = 1.5, close_ratio: float = 0.70, body_ratio: float = 0.20) -> int:
-    """Sign of Strength (Wyckoff 底部吸筹): 放量长阳, 实体饱满, 收盘靠近高点, 创近期新高, 在底部区间。
-    检测近 lookback 日内是否有 SOS bar。返回 1 或 0。"""
-    need = max(pos_n, lookback + new_high_n + 25)
+               pos_max: float = 0.30, range_mult: float = 1.5, vol_mult: float = 1.5,
+               close_ratio: float = 0.70, bull_body_pct: float = 0.03) -> int:
+    """Sign of Strength (Wyckoff): 两条路径, 共享 放量+底部位置。
+    阳线path: 中大阳(实体>3%) + 波幅扩张(1.5×) + 收盘靠高(0.70) + 放量 + 底部
+    十字星path: 十字星 + 放量 + 底部 (无波幅/收盘要求)
+    近 lookback 日内任一根满足任一路径 → 返回 1, 否则 0。"""
+    need = max(pos_n, lookback + 35)
     d = daily.tail(need).reset_index(drop=True)
-    if len(d) < 60:
+    if len(d) < 65:
         return 0
     o = d["fwd_open"].values; c = d["fwd_close"].values
     h = d["fwd_high"].values; l = d["fwd_low"].values; v = d["volume"].values
     n = len(d)
-    rng = h - l
-    body = c - o
+    rng = h - l; body = c - o
     rmin = pd.Series(c).rolling(pos_n, min_periods=pos_n).min().values
     rmax = pd.Series(c).rolling(pos_n, min_periods=pos_n).max().values
     pos = (c - rmin) / np.where(rmax > rmin, rmax - rmin, np.nan)
@@ -505,16 +506,19 @@ def detect_sos(daily: pd.DataFrame, lookback: int = 3, pos_n: int = 60,
     for i in range(n - lookback, n):
         if i < 25 or np.isnan(avg_rng[i]) or np.isnan(vol_ma[i]) or np.isnan(pos[i]) or rng[i] <= 0:
             continue
-        # 阳线 OR 十字星 (满足一个即可)
-        is_bull = body[i] > 0
-        b2r = body[i] / rng[i] if rng[i] > 0 else 1.0
+        # 共享: ⑦ 底部位置 + ④ 放量
+        if pos[i] > pos_max: continue
+        if v[i] < vol_mult * vol_ma[i]: continue
+        # 十字星判定
+        b2r = body[i] / rng[i]
         r2o = rng[i] / o[i] if o[i] > 0 else 0.0
         is_doji = (b2r <= 0.10 and r2o >= 0.005) or (body[i] <= (0.02 if c[i] >= 5 else 0.01))
-        if not (is_bull or is_doji): continue
-        # ③ 波幅扩张 ④ 放量 ⑤ 收盘靠近高点 ⑦ 底部位置
-        if rng[i] < range_mult * avg_rng[i]: continue
-        if v[i] < vol_mult * vol_ma[i]: continue
-        if (c[i] - l[i]) / rng[i] < close_ratio: continue
-        if pos[i] > pos_max: continue
-        return 1
+        # 阳线 path: 中大阳(实体>3%) + 波幅扩张 + 收盘靠高
+        if body[i] > 0 and o[i] > 0 and body[i] / o[i] >= bull_body_pct:
+            if rng[i] < range_mult * avg_rng[i]: continue
+            if (c[i] - l[i]) / rng[i] < close_ratio: continue
+            return 1
+        # 十字星 path: 已满足 放量+底部 → SOS
+        if is_doji:
+            return 1
     return 0
