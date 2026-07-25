@@ -35,9 +35,9 @@ def analyze(daily: pd.DataFrame) -> dict | None:
     sw_j = je["swing_extreme"]
     wk_oversold = sw_j is not None and sw_j < 20
     wk_overbought = sw_j is not None and sw_j > 80
-    wk_div_agg = _div_agg(["周KDJ背离", "周MACD背离", "周RSI背离"],
+    wk_div_agg = _div_agg(["周MACD背离", "周RSI背离"],
                            suppress_top=wk_oversold, suppress_bot=wk_overbought)
-    d_div_agg = _div_agg(["日KDJ背离", "日MACD背离", "日RSI背离"])
+    d_div_agg = _div_agg(["日MACD背离", "日RSI背离"])
     # climax (ATR版, 取近5日最新): +1 最后一涨 / -1 最后一跌
     last5 = CX.climax_flags(daily, **CLIMAX_PARAMS)["flag"].tail(5).tolist()
     has_top = 1 in last5; has_bot = -1 in last5
@@ -48,8 +48,8 @@ def analyze(daily: pd.DataFrame) -> dict | None:
         "周J": je["swing_extreme"],
         "周RSI": wk_rsi,
         # ② 趋势尾声
-        "周KDJ背离": div["周KDJ背离"], "周MACD背离": div["周MACD背离"], "周RSI背离": div["周RSI背离"],
-        "日KDJ背离": div["日KDJ背离"], "日MACD背离": div["日MACD背离"], "日RSI背离": div["日RSI背离"],
+        "周MACD背离": div["周MACD背离"], "周RSI背离": div["周RSI背离"],
+        "日MACD背离": div["日MACD背离"], "日RSI背离": div["日RSI背离"],
         "周度背离": wk_div_agg, "日度背离": d_div_agg,
         "周度DeMark": P.demark_col(dm, "周"), "日度DeMark": P.demark_col(dm, "日"),
         # ③ 多空平衡 (1=命中, 空=未命中)
