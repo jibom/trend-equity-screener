@@ -15,6 +15,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: 拉取最新 (拿到另一市场最新xlsx, 供index重建)
+        run: git pull --rebase origin main || true
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
       - name: 安装依赖
@@ -32,7 +34,12 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add hk_swing_pattern/index.html hk_swing_pattern/US_Swing_Pattern.xlsx public/hk_swing_pattern/
-          if git diff --cached --quiet; then echo "无变化"; else git commit -m "auto: 更新 US Swing $(date -u +%Y-%m-%d)"; git push; fi
+          if git diff --cached --quiet; then
+            echo "无变化"
+          else
+            git commit -m "auto: 更新 US Swing $(date -u +%Y-%m-%d)"
+            git pull --rebase origin main && git push
+          fi
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with: { path: public }
