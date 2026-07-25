@@ -175,9 +175,9 @@ def all_divergences(daily: pd.DataFrame) -> dict:
     # 日线
     d = calc_kdj(daily.copy())
     dif, dea, _ = macd(d["fwd_close"].values)
-    out["日KDJ背离"] = _divergence(d["fwd_close"].values, d["k"].values, recent=10)
-    out["日MACD背离"] = _divergence(d["fwd_close"].values, dif, recent=10)
-    out["日RSI背离"] = _divergence(d["fwd_close"].values, rsi(d["fwd_close"].values), recent=10)
+    out["日KDJ背离"] = _divergence(d["fwd_close"].values, d["j"].values, recent=10, min_spacing=22)
+    out["日MACD背离"] = _divergence(d["fwd_close"].values, dif, recent=10, min_spacing=22)
+    out["日RSI背离"] = _divergence(d["fwd_close"].values, rsi(d["fwd_close"].values), recent=10, min_spacing=22)
     # 周线 (KDJ 用 J + 极值区 J<10/J>90)
     wk = calc_kdj(_complete_weekly(d))
     wdif, wdea, _ = macd(wk["fwd_close"].values)
