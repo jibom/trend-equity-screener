@@ -89,7 +89,7 @@ def write_excel(df: pd.DataFrame, asof: str, out: Path, col_order: list = None):
         ("  日度背离: 日KDJ/MACD/RSI任一背离 → +1底/-1顶/±1双向", 10, False),
         ("", 10, False),
         ("【② 趋势尾声 — DeMark TD Sequential】", 11, True),
-        ("  周度DeMark / 日度DeMark: +9=买方setup(连续9根收盘<4根前收盘, 底部耗竭setup); +13=买方countdown完成(setup后数到13根 收盘<2根前低, 近4周/8日内完成, 底反转); -9/-13=卖方对称(顶反转)。正=买方, 负=卖方", 10, False),
+        ("  周度DeMark / 日度DeMark: +9=买方setup完成(近8日/4周内, 非瞬时); +13=买方countdown完成(setup后数到13根 收盘<2根前低, 近4周/8日内完成, 底反转); -9/-13=卖方对称(顶反转)。正=买方, 负=卖方", 10, False),
         ("", 10, False),
         ("【③ 多空平衡】(1=命中, 空=未命中)", 11, True),
         ("  十字星(5d): 近5日十字星个数。十字星=实体/振幅≤10% 且 振幅/开盘≥0.5%(经典十字星), 或 实体绝对值≤0.02(价≥5)/≤0.01(价<5)(小实体)", 10, False),

@@ -283,19 +283,20 @@ def td_sequential(close, high, low, dates) -> dict:
     buy, sell = _td_setup_counts(close)
     cd, bidx, sidx = _td_sequential_countdown(close, high, low, buy, sell)
     n = len(close)
+    # setup-9 完成时点 (最新一次 count==9 的 index)
+    buy9_idx = np.where(buy == 9)[0]
+    sell9_idx = np.where(sell == 9)[0]
+    buy9_idx = int(buy9_idx[-1]) if len(buy9_idx) > 0 else -1
+    sell9_idx = int(sell9_idx[-1]) if len(sell9_idx) > 0 else -1
     out = {
         "buy_setup": int(buy[-1]), "sell_setup": int(sell[-1]),
-        "buy_setup_complete": bool((buy >= 9).any()),
-        "sell_setup_complete": bool((sell >= 9).any()),
         "buy_cd": cd["buy_cd"], "sell_cd": cd["sell_cd"],
         "buy_cd_complete": cd["buy_cd_complete"], "sell_cd_complete": cd["sell_cd_complete"],
         "buy_cd_bars_ago": (n - 1 - bidx) if bidx >= 0 else None,
         "sell_cd_bars_ago": (n - 1 - sidx) if sidx >= 0 else None,
+        "buy9_bars_ago": (n - 1 - buy9_idx) if buy9_idx >= 0 else None,
+        "sell9_bars_ago": (n - 1 - sell9_idx) if sell9_idx >= 0 else None,
     }
-    if bidx >= 0:
-        out["buy_cd_date"] = str(dates[bidx])[:10]
-    if sidx >= 0:
-        out["sell_cd_date"] = str(dates[sidx])[:10]
     return out
 
 
@@ -311,14 +312,14 @@ def td_combo(close, high, low, dates) -> dict:
 
 def demark_all(daily: pd.DataFrame) -> dict:
     """DeMark TD Sequential 精简: 周/日 × 买9/买13/卖9/卖13 (8 个 flag)。
-    9=当前 setup 连续≥9; 13=countdown 完成(周近4周/日近8日内)。"""
+    9=setup完成近8日/4周内; 13=countdown完成(周近4周/日近8日内)。"""
     out = {}
     dd = daily.reset_index(drop=True)
     c = dd["fwd_close"].values; h = dd["fwd_high"].values; l = dd["fwd_low"].values
     dt = dd["date"].dt.strftime("%Y-%m-%d").values
     seq_d = td_sequential(c, h, l, dt)
-    out["日买9"] = bool(seq_d["buy_setup"] >= 9)
-    out["日卖9"] = bool(seq_d["sell_setup"] >= 9)
+    out["日买9"] = bool(seq_d["buy9_bars_ago"] is not None and seq_d["buy9_bars_ago"] <= 8)
+    out["日卖9"] = bool(seq_d["sell9_bars_ago"] is not None and seq_d["sell9_bars_ago"] <= 8)
     out["日买13"] = bool(seq_d["buy_cd_complete"] and seq_d["buy_cd_bars_ago"] is not None
                          and seq_d["buy_cd_bars_ago"] <= 8)
     out["日卖13"] = bool(seq_d["sell_cd_complete"] and seq_d["sell_cd_bars_ago"] is not None
@@ -329,8 +330,8 @@ def demark_all(daily: pd.DataFrame) -> dict:
         c = wk["fwd_close"].values; h = wk["fwd_high"].values; l = wk["fwd_low"].values
         dt = wk["date"].dt.strftime("%Y-%m-%d").values
         seq_w = td_sequential(c, h, l, dt)
-        out["周买9"] = bool(seq_w["buy_setup"] >= 9)
-        out["周卖9"] = bool(seq_w["sell_setup"] >= 9)
+        out["周买9"] = bool(seq_w["buy9_bars_ago"] is not None and seq_w["buy9_bars_ago"] <= 4)
+        out["周卖9"] = bool(seq_w["sell9_bars_ago"] is not None and seq_w["sell9_bars_ago"] <= 4)
         out["周买13"] = bool(seq_w["buy_cd_complete"] and seq_w["buy_cd_bars_ago"] is not None
                              and seq_w["buy_cd_bars_ago"] <= 4)
         out["周卖13"] = bool(seq_w["sell_cd_complete"] and seq_w["sell_cd_bars_ago"] is not None
