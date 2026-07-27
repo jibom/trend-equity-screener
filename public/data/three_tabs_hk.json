@@ -2394,16 +2394,6 @@
       "last_close": 5.7
     },
     {
-      "ticker": "0168.HK",
-      "name_cn": "青岛啤酒股份",
-      "gics_sector": "Consumer Staples",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 2,
-      "last_close": 45.72
-    },
-    {
       "ticker": "1876.HK",
       "name_cn": "百威亚太",
       "gics_sector": "Consumer Staples",
@@ -2414,14 +2404,14 @@
       "last_close": 6.59
     },
     {
-      "ticker": "0288.HK",
-      "name_cn": "万洲国际",
+      "ticker": "0168.HK",
+      "name_cn": "青岛啤酒股份",
       "gics_sector": "Consumer Staples",
       "alert_type": "B_EXIT",
       "label": "B·EXIT",
       "emoji": "🔴",
-      "days_in_state": 3,
-      "last_close": 8.38
+      "days_in_state": 2,
+      "last_close": 45.72
     },
     {
       "ticker": "2648.HK",
@@ -2432,6 +2422,16 @@
       "emoji": "🔴",
       "days_in_state": 4,
       "last_close": 73.45
+    },
+    {
+      "ticker": "0288.HK",
+      "name_cn": "万洲国际",
+      "gics_sector": "Consumer Staples",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 3,
+      "last_close": 8.38
     },
     {
       "ticker": "3288.HK",
