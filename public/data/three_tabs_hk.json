@@ -2314,14 +2314,14 @@
       "last_close": 2.35
     },
     {
-      "ticker": "1816.HK",
-      "name_cn": "中广核电力",
-      "gics_sector": "Utilities",
+      "ticker": "0257.HK",
+      "name_cn": "光大环境",
+      "gics_sector": "Industrials",
       "alert_type": "B_EXIT",
       "label": "B·EXIT",
       "emoji": "🔴",
       "days_in_state": 3,
-      "last_close": 2.86
+      "last_close": 5.0
     },
     {
       "ticker": "0586.HK",
@@ -2334,14 +2334,14 @@
       "last_close": 8.73
     },
     {
-      "ticker": "0257.HK",
-      "name_cn": "光大环境",
-      "gics_sector": "Industrials",
+      "ticker": "1816.HK",
+      "name_cn": "中广核电力",
+      "gics_sector": "Utilities",
       "alert_type": "B_EXIT",
       "label": "B·EXIT",
       "emoji": "🔴",
       "days_in_state": 3,
-      "last_close": 5.0
+      "last_close": 2.86
     },
     {
       "ticker": "0006.HK",
