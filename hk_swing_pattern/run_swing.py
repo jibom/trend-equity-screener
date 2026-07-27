@@ -174,6 +174,7 @@ def main():
     rows = []
     t0 = time.time()
     n_wind_fb = 0
+    latest_dt = None  # 实际最新交易日 (取数据max, 避免周末/假日产出"截至 周日"误导标签)
     for idx, (code, name, sector) in enumerate(pool):
         if (idx + 1) % 100 == 0:
             print(f"  [{idx+1}/{len(pool)}] {time.time()-t0:.0f}s ...")
@@ -189,6 +190,9 @@ def main():
             daily = daily[daily["date"] <= pd.to_datetime(asof)].reset_index(drop=True)
         if daily is None or daily.empty or len(daily) < 60:
             continue
+        d_max = daily["date"].max()
+        if latest_dt is None or d_max > latest_dt:
+            latest_dt = d_max
         try:
             r = sw.analyze(daily)
             if r:
@@ -218,6 +222,12 @@ def main():
     print(f"\n[完成] {len(df)} 只, 耗时 {time.time()-t0:.0f}s")
     if df.empty:
         print("无数据"); return
+    # asof 修正为实际最新交易日 (周末/假日运行时 date.today() 不是交易日)
+    if latest_dt is not None:
+        real_asof = pd.Timestamp(latest_dt).strftime("%Y-%m-%d")
+        if real_asof != asof:
+            print(f"[asof] 运行日 {asof} 非交易日, 改用实际最新交易日 {real_asof}")
+        asof = real_asof
     out_path = out_dir / OUT_XLSX
     try:
         write_excel(df, asof, out_path, col_order=COL_ORDER_HK)

@@ -1,8 +1,8 @@
-name: HK Swing (20:00 HKT)
+name: HK Swing (21:00 HKT)
 
 on:
   schedule:
-    - cron: "0 12 * * *"   # UTC 12:00 = 北京 20:00
+    - cron: "0 13 * * *"   # UTC 13:00 = 香港 21:00 (港股16:00收盘, 21:00确保EODHD/Wind已有当日EOD)
   workflow_dispatch:
 
 permissions:
