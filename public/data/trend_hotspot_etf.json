@@ -1105,6 +1105,17 @@
       "hotness": 0.57
     },
     {
+      "ticker": "QQQI.US",
+      "name": "NEOS Nasdaq 100 High Income ETF",
+      "sub_industry": "Derivative Income",
+      "close": 52.73,
+      "pct_high_250": 0.935,
+      "ret_60": 0.017,
+      "ma_aligned": 0,
+      "days_below_ma10": 7,
+      "hotness": 0.565
+    },
+    {
       "ticker": "CGDV.US",
       "name": "Capital Group Dividend Value ETF",
       "sub_industry": "Dividend",
@@ -1114,17 +1125,6 @@
       "ma_aligned": 0,
       "days_below_ma10": 3,
       "hotness": 0.565
-    },
-    {
-      "ticker": "QQQI.US",
-      "name": "NEOS Nasdaq 100 High Income ETF",
-      "sub_industry": "Derivative Income",
-      "close": 52.73,
-      "pct_high_250": 0.935,
-      "ret_60": 0.017,
-      "ma_aligned": 0,
-      "days_below_ma10": 7,
-      "hotness": 0.56
     },
     {
       "ticker": "VO.US",
@@ -2378,7 +2378,7 @@
       "ret_60": -0.025,
       "ma_aligned": 0,
       "days_below_ma10": 14,
-      "hotness": -0.34
+      "hotness": -0.345
     },
     {
       "ticker": "XME.US",
@@ -2648,9 +2648,9 @@
       "ticker": "RSPC.US",
       "name": "Invesco S&P 500 Equal Weight Co",
       "sub_industry": "S&P 500 EW Communication",
-      "close": 34.817,
+      "close": 34.82,
       "pct_high_250": 0.851,
-      "ret_60": -0.078,
+      "ret_60": -0.077,
       "ma_aligned": 0,
       "days_below_ma10": 6,
       "hotness": -0.798
