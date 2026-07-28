@@ -2151,16 +2151,6 @@
       "last_close": 22.98
     },
     {
-      "ticker": "2869.HK",
-      "name_cn": "绿城服务",
-      "gics_sector": "Real Estate",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 1,
-      "last_close": 4.2
-    },
-    {
       "ticker": "0817.HK",
       "name_cn": "中国金茂",
       "gics_sector": "Real Estate",
@@ -2169,6 +2159,16 @@
       "emoji": "🔴",
       "days_in_state": 1,
       "last_close": 1.33
+    },
+    {
+      "ticker": "2869.HK",
+      "name_cn": "绿城服务",
+      "gics_sector": "Real Estate",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 1,
+      "last_close": 4.2
     },
     {
       "ticker": "1972.HK",
@@ -2221,14 +2221,14 @@
       "last_close": 2.4
     },
     {
-      "ticker": "1816.HK",
-      "name_cn": "中广核电力",
-      "gics_sector": "Utilities",
+      "ticker": "0257.HK",
+      "name_cn": "光大环境",
+      "gics_sector": "Industrials",
       "alert_type": "B_EXIT",
       "label": "B·EXIT",
       "emoji": "🔴",
       "days_in_state": 4,
-      "last_close": 2.88
+      "last_close": 5.14
     },
     {
       "ticker": "0586.HK",
@@ -2241,14 +2241,14 @@
       "last_close": 8.74
     },
     {
-      "ticker": "0257.HK",
-      "name_cn": "光大环境",
-      "gics_sector": "Industrials",
+      "ticker": "1816.HK",
+      "name_cn": "中广核电力",
+      "gics_sector": "Utilities",
       "alert_type": "B_EXIT",
       "label": "B·EXIT",
       "emoji": "🔴",
       "days_in_state": 4,
-      "last_close": 5.14
+      "last_close": 2.88
     },
     {
       "ticker": "0006.HK",
@@ -2381,16 +2381,6 @@
       "last_close": 11.55
     },
     {
-      "ticker": "2631.HK",
-      "name_cn": "天岳先进",
-      "gics_sector": "Information Technology",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 2,
-      "last_close": 55.75
-    },
-    {
       "ticker": "0148.HK",
       "name_cn": "建滔集团",
       "gics_sector": "Information Technology",
@@ -2399,6 +2389,16 @@
       "emoji": "🔴",
       "days_in_state": 3,
       "last_close": 42.22
+    },
+    {
+      "ticker": "2631.HK",
+      "name_cn": "天岳先进",
+      "gics_sector": "Information Technology",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 2,
+      "last_close": 55.75
     },
     {
       "ticker": "1888.HK",
