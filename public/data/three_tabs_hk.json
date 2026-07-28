@@ -2151,16 +2151,6 @@
       "last_close": 22.98
     },
     {
-      "ticker": "0817.HK",
-      "name_cn": "中国金茂",
-      "gics_sector": "Real Estate",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 1,
-      "last_close": 1.33
-    },
-    {
       "ticker": "2869.HK",
       "name_cn": "绿城服务",
       "gics_sector": "Real Estate",
@@ -2169,6 +2159,16 @@
       "emoji": "🔴",
       "days_in_state": 1,
       "last_close": 4.2
+    },
+    {
+      "ticker": "0817.HK",
+      "name_cn": "中国金茂",
+      "gics_sector": "Real Estate",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 1,
+      "last_close": 1.33
     },
     {
       "ticker": "1972.HK",
@@ -2221,16 +2221,6 @@
       "last_close": 2.4
     },
     {
-      "ticker": "0257.HK",
-      "name_cn": "光大环境",
-      "gics_sector": "Industrials",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 4,
-      "last_close": 5.14
-    },
-    {
       "ticker": "0586.HK",
       "name_cn": "海螺创业",
       "gics_sector": "Industrials",
@@ -2249,6 +2239,16 @@
       "emoji": "🔴",
       "days_in_state": 4,
       "last_close": 2.88
+    },
+    {
+      "ticker": "0257.HK",
+      "name_cn": "光大环境",
+      "gics_sector": "Industrials",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 4,
+      "last_close": 5.14
     },
     {
       "ticker": "0006.HK",
