@@ -134,6 +134,22 @@
       "hotness": 0.756
     },
     {
+      "ticker": "IWD.US",
+      "name": "iShares Russell 1000 Value ETF",
+      "sub_industry": "Russell 1000 Value",
+      "close": 249.74,
+      "pct_high_250": 1.0,
+      "pct_high_126": 1.0,
+      "nh_ratio_126": 0.278,
+      "amt_surge": 0.809,
+      "amt_rank": 0.718,
+      "ret_60": 0.103,
+      "ma_aligned": 1,
+      "days_below_ma10": 0,
+      "ma_stack": 1,
+      "hotness": 0.721
+    },
+    {
       "ticker": "DIA.US",
       "name": "SPDR Dow Jones Industrial Average ET",
       "sub_industry": "Dow Jones Industrial Average",
@@ -148,22 +164,6 @@
       "days_below_ma10": 8,
       "ma_stack": 0,
       "hotness": 0.72
-    },
-    {
-      "ticker": "IWD.US",
-      "name": "iShares Russell 1000 Value ETF",
-      "sub_industry": "Russell 1000 Value",
-      "close": 249.74,
-      "pct_high_250": 1.0,
-      "pct_high_126": 1.0,
-      "nh_ratio_126": 0.278,
-      "amt_surge": 0.802,
-      "amt_rank": 0.718,
-      "ret_60": 0.103,
-      "ma_aligned": 1,
-      "days_below_ma10": 0,
-      "ma_stack": 1,
-      "hotness": 0.717
     },
     {
       "ticker": "RSP.US",
@@ -397,7 +397,7 @@
       "pct_high_250": 0.985,
       "pct_high_126": 0.985,
       "nh_ratio_126": 0.119,
-      "amt_surge": 0.81,
+      "amt_surge": 0.811,
       "amt_rank": 0.706,
       "ret_60": 0.063,
       "ma_aligned": 0,
@@ -607,7 +607,7 @@
       "pct_high_250": 0.65,
       "pct_high_126": 0.65,
       "nh_ratio_126": 0.329,
-      "amt_surge": 1.692,
+      "amt_surge": 1.693,
       "amt_rank": 0.966,
       "ret_60": 0.371,
       "ma_aligned": 0,
@@ -632,6 +632,22 @@
       "hotness": 0.765
     },
     {
+      "ticker": "IWD.US",
+      "name": "iShares Russell 1000 Value ETF",
+      "sub_industry": "Russell 1000 Value",
+      "close": 249.74,
+      "pct_high_250": 1.0,
+      "pct_high_126": 1.0,
+      "nh_ratio_126": 0.278,
+      "amt_surge": 0.809,
+      "amt_rank": 0.718,
+      "ret_60": 0.103,
+      "ma_aligned": 1,
+      "days_below_ma10": 0,
+      "ma_stack": 1,
+      "hotness": 0.721
+    },
+    {
       "ticker": "FBT.US",
       "name": "First Trust NYSE Arca Biotechnology ",
       "sub_industry": "Health",
@@ -646,22 +662,6 @@
       "days_below_ma10": 2,
       "ma_stack": 0,
       "hotness": 0.72
-    },
-    {
-      "ticker": "IWD.US",
-      "name": "iShares Russell 1000 Value ETF",
-      "sub_industry": "Russell 1000 Value",
-      "close": 249.74,
-      "pct_high_250": 1.0,
-      "pct_high_126": 1.0,
-      "nh_ratio_126": 0.278,
-      "amt_surge": 0.802,
-      "amt_rank": 0.718,
-      "ret_60": 0.103,
-      "ma_aligned": 1,
-      "days_below_ma10": 0,
-      "ma_stack": 1,
-      "hotness": 0.717
     },
     {
       "ticker": "XBI.US",
@@ -979,6 +979,17 @@
       "hotness": 0.756
     },
     {
+      "ticker": "IWD.US",
+      "name": "iShares Russell 1000 Value ETF",
+      "sub_industry": "Russell 1000 Value",
+      "close": 249.74,
+      "pct_high_250": 1.0,
+      "ret_60": 0.103,
+      "ma_aligned": 1,
+      "days_below_ma10": 0,
+      "hotness": 0.721
+    },
+    {
       "ticker": "FBT.US",
       "name": "First Trust NYSE Arca Biotechnology ",
       "sub_industry": "Health",
@@ -999,17 +1010,6 @@
       "ma_aligned": 0,
       "days_below_ma10": 8,
       "hotness": 0.72
-    },
-    {
-      "ticker": "IWD.US",
-      "name": "iShares Russell 1000 Value ETF",
-      "sub_industry": "Russell 1000 Value",
-      "close": 249.74,
-      "pct_high_250": 1.0,
-      "ret_60": 0.103,
-      "ma_aligned": 1,
-      "days_below_ma10": 0,
-      "hotness": 0.717
     },
     {
       "ticker": "SPGM.US",
@@ -1218,7 +1218,7 @@
       "ret_60": 0.091,
       "ma_aligned": 0,
       "days_below_ma10": 4,
-      "hotness": 0.511
+      "hotness": 0.51
     },
     {
       "ticker": "FXL.US",
@@ -1548,7 +1548,7 @@
       "ret_60": 0.043,
       "ma_aligned": 0,
       "days_below_ma10": 7,
-      "hotness": 0.267
+      "hotness": 0.268
     },
     {
       "ticker": "IJH.US",
@@ -1625,7 +1625,7 @@
       "ret_60": 0.036,
       "ma_aligned": 0,
       "days_below_ma10": 11,
-      "hotness": 0.213
+      "hotness": 0.212
     },
     {
       "ticker": "AIA.US",
@@ -1900,7 +1900,7 @@
       "ret_60": -0.004,
       "ma_aligned": 0,
       "days_below_ma10": 0,
-      "hotness": 0.046
+      "hotness": 0.045
     },
     {
       "ticker": "RSPH.US",
@@ -2494,7 +2494,7 @@
       "ret_60": -0.081,
       "ma_aligned": 0,
       "days_below_ma10": 8,
-      "hotness": -0.598
+      "hotness": -0.599
     },
     {
       "ticker": "BOTZ.US",
@@ -2725,7 +2725,7 @@
       "ret_60": -0.14,
       "ma_aligned": 0,
       "days_below_ma10": 2,
-      "hotness": -1.191
+      "hotness": -1.19
     },
     {
       "ticker": "VXX.US",
