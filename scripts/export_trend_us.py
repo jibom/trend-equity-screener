@@ -155,6 +155,7 @@ def stock_record(r, with_nh=False):
         "ret_60": r.get("ret_60"),
         "ma_aligned": int(r["ma_aligned"]) if r.get("ma_aligned") is not None else 0,
         "days_below_ma10": int(r.get("days_below_ma10", 0)),
+        "ma200_slope": r.get("ma200_slope"),
         "hotness": r.get("hotness"),
         "sales_growth": f.get("sales_growth"), "earn_growth": f.get("earn_growth"), "roe": f.get("roe"),
     }

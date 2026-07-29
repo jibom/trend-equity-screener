@@ -247,13 +247,20 @@ def compute_features(g: pd.DataFrame) -> dict | None:
     ma200 = s.rolling(200).mean().iloc[-1] if n >= 200 else np.nan
     ma_stack = int(not pd.isna(ma200) and not pd.isna(ma[100])
                    and close > ma[20] > ma[50] > ma[100] > ma200)
+    # 年线斜率: 200D均线一周(5日)百分比变化 × 52 (年化, %)
+    ma200_slope = None
+    if n >= 205:
+        _ma200_prev = float(c[-205:-5].mean())
+        if _ma200_prev and not np.isnan(_ma200_prev):
+            ma200_slope = round((float(c[-200:].mean()) / _ma200_prev - 1) * 52 * 100, 2)
 
     return dict(
         pct_high_250=pct_high_250, pct_high_60=pct_high_60, pct_high_126=pct_high_126,
         nh_ratio_60=nh_ratio_60, nh_ratio_126=nh_ratio_126, nh_ratio_250=nh_ratio_250,
         amt_20=amt_20, amt_surge=amt_surge, amt_1d=amt_1d, amt_5d=amt_5d,
         ret_20=ret_20, ret_60=ret_60, ret_120=ret_120,
-        ma_aligned=aligned, ma_stack=ma_stack, days_below_ma10=days_below_ma10, close=close, days=n,
+        ma_aligned=aligned, ma_stack=ma_stack, ma200_slope=ma200_slope,
+        days_below_ma10=days_below_ma10, close=close, days=n,
     )
 
 

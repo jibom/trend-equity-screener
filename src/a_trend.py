@@ -119,11 +119,11 @@ def main():
     print(sec_rank[show].to_string())
     print(f"\n## Part 2  最热个股 (hotness top {args.top_stocks})")
     c2 = ["Ticker", "Name", "SubIndustry", "close", "pct_high_250", "amt_surge",
-          "amt_rank_pct", "ret_60", "ma_aligned", "hotness"]
+          "amt_rank_pct", "ret_60", "ma_aligned", "ma200_slope", "hotness"]
     print(top_stocks[c2].round(3).to_string(index=False))
     print(f"\n## Part 3  最热申万三级【{hottest_sub}】个股热度排序")
     c3 = ["Ticker", "Name", "close", "pct_high_250", "nh_ratio_60",
-          "amt_surge", "amt_rank_pct", "ret_60", "ma_aligned", "hotness"]
+          "amt_surge", "amt_rank_pct", "ret_60", "ma_aligned", "ma200_slope", "hotness"]
     print(hot_sub_stocks[c3].round(3).to_string(index=False))
 
 

@@ -49,6 +49,7 @@ def record(r):
         "ma_aligned": int(r["ma_aligned"]) if r.get("ma_aligned") is not None else 0,
         "days_below_ma10": int(r.get("days_below_ma10", 0)),
         "ma_stack": int(r["ma_stack"]) if r.get("ma_stack") is not None else 0,
+        "ma200_slope": r.get("ma200_slope"),
         "hotness": r.get("hotness"),
     })
 
@@ -87,6 +88,7 @@ def main():
                        "ret_60": r.get("ret_60"),
                        "ma_aligned": int(r["ma_aligned"]) if r.get("ma_aligned") is not None else 0,
         "days_below_ma10": int(r.get("days_below_ma10", 0)),
+                       "ma200_slope": r.get("ma200_slope"),
                        "hotness": r.get("hotness")})
                   for _, r in df_full.sort_values("hotness", ascending=False).iterrows()]
 

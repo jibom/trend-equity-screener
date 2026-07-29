@@ -57,15 +57,16 @@ def load_sector_map() -> dict[str, dict]:
     return result
 
 
-def compute_ma200_slope(df: pd.DataFrame, lookback: int = 20) -> float | None:
-    if 'fwd_close' not in df.columns or len(df) < 220:
+def compute_ma200_slope(df: pd.DataFrame, lookback: int = 5) -> float | None:
+    """年线斜率: 200D均线一周(lookback=5日)百分比变化 × 52 (年化, %)。"""
+    if 'fwd_close' not in df.columns or len(df) < 200 + lookback:
         return None
     closes = df['fwd_close'].values
     ma200_now = np.mean(closes[-200:])
     ma200_prev = np.mean(closes[-(200 + lookback):-lookback])
     if ma200_prev == 0:
         return None
-    return round((ma200_now / ma200_prev - 1) * 100, 2)
+    return round((ma200_now / ma200_prev - 1) * 52 * 100, 2)
 
 
 def scan_one(code: str, asof: str, cfg: dict, sector_info: dict) -> dict | None:

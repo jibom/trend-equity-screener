@@ -68,7 +68,7 @@ def export_excel(three_tabs: dict, output_path: str):
     # Sheet 1: 进场候选
     ws1 = wb.active
     ws1.title = '1.进场候选'
-    headers = ['代码', '名称', 'GICS行业', '子行业', '状态', 'SOS', '收盘价', 'MA10', 'MA10斜率%', 'MA200斜率%']
+    headers = ['代码', '名称', 'GICS行业', '子行业', '状态', 'SOS', '收盘价', 'MA10', 'MA10斜率%', '年线斜率%(年化)']
     rows = []
     for item in three_tabs['tab1']['sos_section']:
         rows.append([
@@ -88,7 +88,7 @@ def export_excel(three_tabs: dict, output_path: str):
 
     # Sheet 2: 持有关注
     ws2 = wb.create_sheet('2.持有关注')
-    headers2 = ['代码', '名称', 'GICS行业', '子行业', '显示等级', '子状态', '收盘价', 'MA10', 'MA10斜率%', 'MA60', 'MA200斜率%', '持仓天数']
+    headers2 = ['代码', '名称', 'GICS行业', '子行业', '显示等级', '子状态', '收盘价', 'MA10', 'MA10斜率%', 'MA60', '年线斜率%(年化)', '持仓天数']
     rows2 = []
     for item in three_tabs['tab2']:
         rows2.append([
