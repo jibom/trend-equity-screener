@@ -333,13 +333,13 @@
       "pct_high_250": 1.0,
       "pct_high_126": 1.0,
       "nh_ratio_126": 0.063,
-      "amt_surge": 1.972,
+      "amt_surge": 1.973,
       "amt_rank": 0.051,
       "ret_60": 0.12,
       "ma_aligned": 1,
       "days_below_ma10": 0,
       "ma_stack": 0,
-      "hotness": 0.606
+      "hotness": 0.607
     },
     {
       "ticker": "CGDV.US",
@@ -365,7 +365,7 @@
       "pct_high_250": 1.0,
       "pct_high_126": 1.0,
       "nh_ratio_126": 0.159,
-      "amt_surge": 1.134,
+      "amt_surge": 1.135,
       "amt_rank": 0.831,
       "ret_60": 0.065,
       "ma_aligned": 1,
@@ -735,13 +735,13 @@
       "pct_high_250": 1.0,
       "pct_high_126": 1.0,
       "nh_ratio_126": 0.063,
-      "amt_surge": 1.972,
+      "amt_surge": 1.973,
       "amt_rank": 0.051,
       "ret_60": 0.12,
       "ma_aligned": 1,
       "days_below_ma10": 0,
       "ma_stack": 0,
-      "hotness": 0.606
+      "hotness": 0.607
     },
     {
       "ticker": "KRE.US",
@@ -936,7 +936,7 @@
       "ret_60": 0.045,
       "ma_aligned": 0,
       "days_below_ma10": 4,
-      "hotness": 1.064
+      "hotness": 1.065
     },
     {
       "ticker": "JEPQ.US",
@@ -1167,7 +1167,7 @@
       "ret_60": 0.12,
       "ma_aligned": 1,
       "days_below_ma10": 0,
-      "hotness": 0.606
+      "hotness": 0.607
     },
     {
       "ticker": "CGDV.US",
@@ -1343,7 +1343,7 @@
       "ret_60": 0.044,
       "ma_aligned": 0,
       "days_below_ma10": 13,
-      "hotness": 0.444
+      "hotness": 0.443
     },
     {
       "ticker": "DTCR.US",
@@ -2487,7 +2487,7 @@
       "ret_60": -0.159,
       "ma_aligned": 0,
       "days_below_ma10": 9,
-      "hotness": -0.508
+      "hotness": -0.509
     },
     {
       "ticker": "RSPM.US",
