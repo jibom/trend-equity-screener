@@ -2520,16 +2520,6 @@
       "last_close": 78.15
     },
     {
-      "ticker": "0883.HK",
-      "name_cn": "中国海洋石油",
-      "gics_sector": "Energy",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 2,
-      "last_close": 23.5
-    },
-    {
       "ticker": "0857.HK",
       "name_cn": "中国石油股份",
       "gics_sector": "Energy",
@@ -2540,14 +2530,14 @@
       "last_close": 9.93
     },
     {
-      "ticker": "2869.HK",
-      "name_cn": "绿城服务",
-      "gics_sector": "Real Estate",
+      "ticker": "0883.HK",
+      "name_cn": "中国海洋石油",
+      "gics_sector": "Energy",
       "alert_type": "B_EXIT",
       "label": "B·EXIT",
       "emoji": "🔴",
       "days_in_state": 2,
-      "last_close": 4.36
+      "last_close": 23.5
     },
     {
       "ticker": "0817.HK",
@@ -2558,6 +2548,16 @@
       "emoji": "🔴",
       "days_in_state": 2,
       "last_close": 1.39
+    },
+    {
+      "ticker": "2869.HK",
+      "name_cn": "绿城服务",
+      "gics_sector": "Real Estate",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 2,
+      "last_close": 4.36
     },
     {
       "ticker": "1972.HK",
