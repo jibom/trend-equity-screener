@@ -3,9 +3,6 @@ from __future__ import annotations
 import numpy as np
 import pandas as pd
 import patterns as P
-import climax as CX
-
-CLIMAX_PARAMS = dict(k_atr=4.0, v_mult=1.5, pos_lo=0.15, pos_hi=0.85)  # 回测胜率最高(bottom 20d 70.6%)
 
 
 def analyze(daily: pd.DataFrame) -> dict | None:
@@ -38,10 +35,6 @@ def analyze(daily: pd.DataFrame) -> dict | None:
     wk_div_agg = _div_agg(["周KDJ背离", "周MACD背离", "周RSI背离"],
                            suppress_top=wk_oversold, suppress_bot=wk_overbought)
     d_div_agg = _div_agg(["日MACD背离", "日RSI背离"])
-    # climax (ATR版, 取近5日最新): +1 最后一涨 / -1 最后一跌
-    last5 = CX.climax_flags(daily, **CLIMAX_PARAMS)["flag"].tail(5).tolist()
-    has_top = 1 in last5; has_bot = -1 in last5
-    climax_val = "±1" if (has_top and has_bot) else (1 if has_top else (-1 if has_bot else ""))
     row = {
         "Close": round(last_close, 3),
         # ① 超卖超买 (周J/周RSI 仅输出近期 swing 极值)
@@ -55,7 +48,7 @@ def analyze(daily: pd.DataFrame) -> dict | None:
         # ③ 多空平衡 (1=命中, 空=未命中)
         "十字星(3d)": cp["doji_count"],
         "涨放量跌缩量": 1 if vp["up_vol_dn_shrink"] else "",
-        "climax": climax_val,
+        "SOS_orig": 1 if P.detect_sos_orig(daily) else "",
         "SOS": 1 if P.detect_sos(daily) else "",
         # ④ 企稳上行 (近2日金叉=1/死叉=-1; 推算2日内将金叉=预1/将死叉=预-1)
         "KDJ Cross": P.cross_code(co["KDJ金叉"]),
