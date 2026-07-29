@@ -469,6 +469,46 @@ def cross_code(state: str):
     return ""
 
 
+def cross_5_10_stable(daily: pd.DataFrame, entangle_thresh: float = 0.002,
+                      narrow_window: int = 5, cross_lookback: int = 2):
+    """5/10 均线穿过信号 (稳定穿过版, 替代频繁的预告式 cross):
+    1) 稳定穿过: gap(MA5-MA10) 近 cross_lookback 日内过零, 且过零前 narrow_window 日 |gap| 持续收窄
+       (允许 1 次反复) → 1(金叉)/-1(死叉)
+    2) 有过零但不稳定 (whipsaw/暴涨驱动等脏交叉) → 0 (纠缠/无方向)
+    3) 无近期过零但两线持续重叠 (近 narrow_window 日 rel gap 均<entangle_thresh) → 0
+    4) 其余 (无过零且分离) → 空。"""
+    c = daily["fwd_close"].values
+    ma5 = pd.Series(c).rolling(5, min_periods=5).mean().values
+    ma10 = pd.Series(c).rolling(10, min_periods=10).mean().values
+    n = len(c)
+    if n < 15 or np.isnan(ma5[-1]) or np.isnan(ma10[-1]):
+        return ""
+    gap = ma5 - ma10
+    with np.errstate(invalid="ignore", divide="ignore"):
+        rel = np.abs(gap) / np.where(ma5 > 0, ma5, np.nan)
+    # 找近 cross_lookback 日内最近一次过零
+    cross_idx = -1
+    for i in range(n - 1, max(n - 1 - cross_lookback, 4), -1):
+        if np.isnan(gap[i]) or np.isnan(gap[i - 1]):
+            continue
+        if (gap[i - 1] <= 0 < gap[i]) or (gap[i - 1] >= 0 > gap[i]):
+            cross_idx = i; break
+    if cross_idx >= 0:
+        # 过零前 narrow_window 日 |gap| 持续收窄 (允许 1 次增大=反复)
+        lo = max(0, cross_idx - narrow_window)
+        seg = np.abs(gap[lo:cross_idx])
+        if len(seg) >= 3:
+            increases = int(np.sum(np.diff(seg) > 0))
+            if increases <= 1:
+                return 1 if gap[cross_idx] > 0 else -1  # 稳定穿过
+        return 0  # 有过零但不稳定 → 纠缠/无方向
+    # 无近期过零: 两线持续重叠 → 0
+    last_rel = rel[-narrow_window:]
+    if not np.isnan(last_rel).any() and np.all(last_rel < entangle_thresh):
+        return 0
+    return ""  # 无过零且分离 → 空
+
+
 def crossovers(daily: pd.DataFrame) -> dict:
     d = calc_kdj(daily.copy()).reset_index(drop=True)
     dates = d["date"].dt.strftime("%Y-%m-%d").values

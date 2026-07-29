@@ -53,7 +53,7 @@ def analyze(daily: pd.DataFrame) -> dict | None:
         # ④ 企稳上行 (近2日金叉=1/死叉=-1; 推算2日内将金叉=预1/将死叉=预-1)
         "KDJ Cross": P.cross_code(co["KDJ金叉"]),
         "日MACD Cross": P.cross_code(co["MACD金叉"]),
-        "5_10 Cross": P.cross_code(co["5_10金叉"]),
+        "5_10 Cross": P.cross_5_10_stable(daily),
         "10_50 Cross": P.cross_code(co["10_50金叉"]),
     }
     return row

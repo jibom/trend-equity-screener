@@ -99,10 +99,13 @@ def write_excel(df: pd.DataFrame, asof: str, out: Path, col_order: list = None):
         ("    阳线path: 中大阳(实体>3%) + 波幅扩张(1.5x) + 收盘靠高(>=70%); 十字星path: 十字星 + 放量(无需波幅/收盘条件)", 10, False),
         ("", 10, False),
         ("【④ 企稳上行 — Cross】", 11, True),
-        ("  KDJ Cross / 日MACD Cross / 5_10 Cross: 日线快线上穿慢线=金叉, 下穿=死叉", 10, False),
+        ("  KDJ Cross / 日MACD Cross / 10_50 Cross: 日线快线上穿慢线=金叉, 下穿=死叉", 10, False),
         ("    近2日金叉=1 / 死叉=-1; 按gap斜率线性推算将交叉=预1 / 预-1; 否则空", 10, False),
-        ("    KDJ: K上穿D; MACD: DIF上穿DEA; 5_10: MA5上穿MA10(需close>=MA10); 10_50: MA10上穿MA50(需close>=MA50)", 10, False),
+        ("    KDJ: K上穿D; MACD: DIF上穿DEA; 10_50: MA10上穿MA50(需close>=MA50)", 10, False),
         ("    MACD 专属: 预告窗口=3日(其他2日), 且需过去3根MACD柱(DIF-DEA)依次单边且加速, 来回震荡不触发预告", 10, False),
+        ("  5_10 Cross (稳定穿过版, 不报预告): MA5 vs MA10", 10, False),
+        ("    稳定穿过: gap近2日内过零 且 过零前5日|gap|持续收窄(允许1次反复) → 1金叉/-1死叉", 10, False),
+        ("    有过零但不稳定(whipsaw/暴涨驱动等脏交叉) → 0; 无过零但两线持续重叠(近5日rel<0.2%) → 0; 其余空", 10, False),
     ]
     if cols and "MRS_HSI" in cols:  # HK 专属
         info += [
