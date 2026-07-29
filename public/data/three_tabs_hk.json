@@ -2690,16 +2690,6 @@
       "last_close": 41.56
     },
     {
-      "ticker": "2631.HK",
-      "name_cn": "天岳先进",
-      "gics_sector": "Information Technology",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 3,
-      "last_close": 53.65
-    },
-    {
       "ticker": "1888.HK",
       "name_cn": "建滔积层板",
       "gics_sector": "Information Technology",
@@ -2708,6 +2698,16 @@
       "emoji": "🔴",
       "days_in_state": 2,
       "last_close": 31.54
+    },
+    {
+      "ticker": "2631.HK",
+      "name_cn": "天岳先进",
+      "gics_sector": "Information Technology",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 3,
+      "last_close": 53.65
     },
     {
       "ticker": "3986.HK",
