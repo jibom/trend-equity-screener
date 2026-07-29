@@ -15,3 +15,6 @@ swing_*.html
 div_doji_chip_*.xlsx
 div_doji_chip_*.html
 _test_*.html
+
+# 一次性结果
+out_sos_compare.txt

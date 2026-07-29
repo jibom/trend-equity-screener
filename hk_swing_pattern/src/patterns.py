@@ -492,14 +492,18 @@ def crossovers(daily: pd.DataFrame) -> dict:
 
 
 # ---------------- SOS (Sign of Strength, Wyckoff) ----------------
-def detect_sos(daily: pd.DataFrame, lookback: int = 3, pos_n: int = 60,
+def detect_sos(daily: pd.DataFrame, lookback: int = 3, pos_n: int = 126,
                pos_max: float = 0.50, range_mult: float = 1.5, vol_mult: float = 1.5,
-               close_ratio: float = 0.70, bull_body_pct: float = 0.03) -> int:
-    """Sign of Strength (Wyckoff): 两条路径, 共享 放量+底部位置。
-    阳线path: 中大阳(实体>3%) + 波幅扩张(1.5×) + 收盘靠高(0.70) + 放量 + 底部
-    十字星path: 十字星 + 放量 + 底部 (无波幅/收盘要求)
-    近 lookback 日内任一根满足任一路径 → 返回 1, 否则 0。"""
-    need = max(pos_n + 10, lookback + 35)
+               close_ratio: float = 0.70, bull_body_pct: float = 0.03,
+               entangle_thresh: float = 0.05, entangle_lookback: int = 3) -> int:
+    """Sign of Strength (Wyckoff): 位置门 = A OR B, 强度共享放量。
+    A: pos_n(默认126=6个月)区间 pos<=pos_max  (从长期底部反强)
+    B: 近 entangle_lookback 日 6均线(5/10/20/40/50/60)纠缠 max/min-1<entangle_thresh  (从均线纠缠平台启动)
+    阳线path: 中大阳(实体>3%) + 波幅扩张(1.5×) + 收盘靠高(0.70) + 放量 + (A或B)
+    十字星path: 十字星 + 放量 + (A或B) (无波幅/收盘要求)
+    近 lookback 日内任一根满足任一路径 → 返回 1, 否则 0。
+    pos NaN(上市<pos_n日)时只看B, 兼容半新股。"""
+    need = max(pos_n + 10, lookback + 65, 65)
     d = daily.tail(need).reset_index(drop=True)
     if len(d) < 65:
         return 0
@@ -512,12 +516,28 @@ def detect_sos(daily: pd.DataFrame, lookback: int = 3, pos_n: int = 60,
     pos = (c - rmin) / np.where(rmax > rmin, rmax - rmin, np.nan)
     avg_rng = pd.Series(rng).rolling(10, min_periods=5).mean().values
     vol_ma = pd.Series(v).rolling(20, min_periods=5).mean().values
+    # 6均线纠缠逐日
+    mas = np.column_stack([pd.Series(c).rolling(w, min_periods=w).mean().values for w in (5, 10, 20, 40, 50, 60)])
+    ma_valid = ~np.isnan(mas).any(axis=1)
+    ma_max = np.full(n, np.nan); ma_min = np.full(n, np.nan)
+    if ma_valid.any():
+        ma_max[ma_valid] = np.nanmax(mas[ma_valid], axis=1)
+        ma_min[ma_valid] = np.nanmin(mas[ma_valid], axis=1)
+    with np.errstate(invalid='ignore', divide='ignore'):
+        spread = ma_max / np.where(ma_min > 0, ma_min, np.nan) - 1
+    entangled = (spread < entangle_thresh) & ma_valid
     for i in range(n - lookback, n):
-        if i < 25 or np.isnan(avg_rng[i]) or np.isnan(vol_ma[i]) or np.isnan(pos[i]) or rng[i] <= 0:
+        if i < 25 or np.isnan(avg_rng[i]) or np.isnan(vol_ma[i]) or rng[i] <= 0:
             continue
-        # 共享: ⑦ 底部位置 + ④ 放量
-        if pos[i] > pos_max: continue
-        if v[i] < vol_mult * vol_ma[i]: continue
+        # 位置门 A OR B (pos NaN时只看B)
+        pos_ok = (not np.isnan(pos[i])) and pos[i] <= pos_max
+        lo = max(0, i - entangle_lookback + 1)
+        ent_ok = bool(entangled[lo:i + 1].any())
+        if not (pos_ok or ent_ok):
+            continue
+        # 放量(共享)
+        if v[i] < vol_mult * vol_ma[i]:
+            continue
         # 十字星判定
         abs_body = abs(body[i])
         b2r = abs_body / rng[i]
@@ -528,7 +548,7 @@ def detect_sos(daily: pd.DataFrame, lookback: int = 3, pos_n: int = 60,
             if rng[i] < range_mult * avg_rng[i]: continue
             if (c[i] - l[i]) / rng[i] < close_ratio: continue
             return 1
-        # 十字星 path: 已满足 放量+底部 → SOS
+        # 十字星 path: 已满足 放量+位置门 → SOS
         if is_doji:
             return 1
     return 0
