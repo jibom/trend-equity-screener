@@ -109,20 +109,25 @@ def cross_per_day(fast, slow, close, filter_ma=None):
 
 # ============ Helper: SOS 逐日 ============
 # 位置门 = A OR B:
-#   A: 6个月(pos_window=126)区间pos<=0.50  (从长期低位反强)
-#   B: 近 entangle_lookback 日 6均线(5/10/20/40/50/60)纠缠 max/min-1<entangle_thresh  (从均线纠缠平台启动)
+#   A: 6个月(pos_window=126)区间pos<=0.50; 6个月数据不足回退3个月(pos_window_fallback=63)  (从长期低位反强)
+#   B: 近 entangle_lookback 日 4均线(5/10/15/20)纠缠 max/min-1<entangle_thresh  (从均线纠缠平台启动)
 # 强度条件不变: vol>=1.5x & (阳线body>=3% & range>=1.5x & close_pos>=0.70) 或 doji
-def sos_per_day(c, o, h, l, v, pos_window=126, entangle_thresh=0.05, entangle_lookback=3):
+def sos_per_day(c, o, h, l, v, pos_window=126, pos_window_fallback=63, entangle_thresh=0.05, entangle_lookback=3):
     n = len(c)
     sos = np.zeros(n, dtype=bool)
     rng = h - l; body = c - o
     avg_rng = pd.Series(rng).rolling(10, min_periods=5).mean().values
     vol_ma = pd.Series(v).rolling(20, min_periods=5).mean().values
-    rmin = pd.Series(c).rolling(pos_window, min_periods=pos_window).min().values
-    rmax = pd.Series(c).rolling(pos_window, min_periods=pos_window).max().values
-    pos = (c - rmin) / np.where(rmax > rmin, rmax - rmin, np.nan)
-    # 6均线纠缠逐日
-    mas = np.column_stack([pd.Series(c).rolling(w, min_periods=w).mean().values for w in (5,10,20,40,50,60)])
+    # A: pos 6个月, 不足回退3个月
+    rmin1 = pd.Series(c).rolling(pos_window, min_periods=pos_window).min().values
+    rmax1 = pd.Series(c).rolling(pos_window, min_periods=pos_window).max().values
+    pos1 = (c - rmin1) / np.where(rmax1 > rmin1, rmax1 - rmin1, np.nan)
+    rmin2 = pd.Series(c).rolling(pos_window_fallback, min_periods=pos_window_fallback).min().values
+    rmax2 = pd.Series(c).rolling(pos_window_fallback, min_periods=pos_window_fallback).max().values
+    pos2 = (c - rmin2) / np.where(rmax2 > rmin2, rmax2 - rmin2, np.nan)
+    pos = np.where(np.isnan(pos1), pos2, pos1)
+    # 4均线(5/10/15/20)纠缠逐日
+    mas = np.column_stack([pd.Series(c).rolling(w, min_periods=w).mean().values for w in (5,10,15,20)])
     ma_valid = ~np.isnan(mas).any(axis=1)
     ma_max = np.full(n, np.nan); ma_min = np.full(n, np.nan)
     if ma_valid.any():
@@ -139,7 +144,7 @@ def sos_per_day(c, o, h, l, v, pos_window=126, entangle_thresh=0.05, entangle_lo
         for j in range(max(0, i-2), i+1):
             if j < 25 or np.isnan(avg_rng[j]) or np.isnan(vol_ma[j]) or rng[j] <= 0:
                 continue
-            # 位置门 A OR B (pos NaN时只看B, 兼容半新股<6个月历史)
+            # 位置门 A OR B (pos NaN时只看B)
             pos_ok = (not np.isnan(pos[j])) and pos[j] <= 0.50
             if not (pos_ok or ent_recent[j]):
                 continue

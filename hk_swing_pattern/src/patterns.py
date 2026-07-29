@@ -493,16 +493,17 @@ def crossovers(daily: pd.DataFrame) -> dict:
 
 # ---------------- SOS (Sign of Strength, Wyckoff) ----------------
 def detect_sos(daily: pd.DataFrame, lookback: int = 3, pos_n: int = 126,
+               pos_n_fallback: int = 63,
                pos_max: float = 0.50, range_mult: float = 1.5, vol_mult: float = 1.5,
                close_ratio: float = 0.70, bull_body_pct: float = 0.03,
                entangle_thresh: float = 0.05, entangle_lookback: int = 3) -> int:
     """Sign of Strength (Wyckoff): 位置门 = A OR B, 强度共享放量。
-    A: pos_n(默认126=6个月)区间 pos<=pos_max  (从长期底部反强)
-    B: 近 entangle_lookback 日 6均线(5/10/20/40/50/60)纠缠 max/min-1<entangle_thresh  (从均线纠缠平台启动)
+    A: pos_n(默认126=6个月)区间 pos<=pos_max; 6个月数据不足时回退 pos_n_fallback(默认63=3个月)
+    B: 近 entangle_lookback 日 4均线(5/10/15/20)纠缠 max/min-1<entangle_thresh  (从均线纠缠平台启动)
     阳线path: 中大阳(实体>3%) + 波幅扩张(1.5×) + 收盘靠高(0.70) + 放量 + (A或B)
     十字星path: 十字星 + 放量 + (A或B) (无波幅/收盘要求)
     近 lookback 日内任一根满足任一路径 → 返回 1, 否则 0。
-    pos NaN(上市<pos_n日)时只看B, 兼容半新股。"""
+    pos 仍NaN(<fallback日)时只看B; B只需20日历史, 兼容次新股。"""
     need = max(pos_n + 10, lookback + 65, 65)
     d = daily.tail(need).reset_index(drop=True)
     if len(d) < 65:
@@ -511,13 +512,18 @@ def detect_sos(daily: pd.DataFrame, lookback: int = 3, pos_n: int = 126,
     h = d["fwd_high"].values; l = d["fwd_low"].values; v = d["volume"].values
     n = len(d)
     rng = h - l; body = c - o
-    rmin = pd.Series(c).rolling(pos_n, min_periods=pos_n).min().values
-    rmax = pd.Series(c).rolling(pos_n, min_periods=pos_n).max().values
-    pos = (c - rmin) / np.where(rmax > rmin, rmax - rmin, np.nan)
+    # A: pos 6个月, 不足回退3个月
+    rmin1 = pd.Series(c).rolling(pos_n, min_periods=pos_n).min().values
+    rmax1 = pd.Series(c).rolling(pos_n, min_periods=pos_n).max().values
+    pos1 = (c - rmin1) / np.where(rmax1 > rmin1, rmax1 - rmin1, np.nan)
+    rmin2 = pd.Series(c).rolling(pos_n_fallback, min_periods=pos_n_fallback).min().values
+    rmax2 = pd.Series(c).rolling(pos_n_fallback, min_periods=pos_n_fallback).max().values
+    pos2 = (c - rmin2) / np.where(rmax2 > rmin2, rmax2 - rmin2, np.nan)
+    pos = np.where(np.isnan(pos1), pos2, pos1)
     avg_rng = pd.Series(rng).rolling(10, min_periods=5).mean().values
     vol_ma = pd.Series(v).rolling(20, min_periods=5).mean().values
-    # 6均线纠缠逐日
-    mas = np.column_stack([pd.Series(c).rolling(w, min_periods=w).mean().values for w in (5, 10, 20, 40, 50, 60)])
+    # B: 4均线(5/10/15/20)纠缠逐日
+    mas = np.column_stack([pd.Series(c).rolling(w, min_periods=w).mean().values for w in (5, 10, 15, 20)])
     ma_valid = ~np.isnan(mas).any(axis=1)
     ma_max = np.full(n, np.nan); ma_min = np.full(n, np.nan)
     if ma_valid.any():
