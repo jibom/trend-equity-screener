@@ -541,8 +541,7 @@ def detect_sos(daily: pd.DataFrame, lookback: int = 3, pos_n: int = 126,
     A: pos_n(默认126=6个月)区间 pos<=pos_max; 6个月数据不足时回退 pos_n_fallback(默认63=3个月)
     B: 近 entangle_lookback 日 4均线(5/10/15/20)纠缠 max/min-1<entangle_thresh  (从均线纠缠平台启动)
     阳线path: 中大阳(实体>3%) + 波幅扩张(1.5×) + 收盘靠高(0.70) + 放量 + (A或B)
-    十字星path: 十字星 + 放量 + (A或B) (无波幅/收盘要求)
-    近 lookback 日内任一根满足任一路径 → 返回 1, 否则 0。
+    近 lookback 日内任一根满足阳线路径 → 返回 1, 否则 0。
     pos 仍NaN(<fallback日)时只看B; B只需20日历史, 兼容次新股。"""
     need = max(pos_n + 10, lookback + 65, 65)
     d = daily.tail(need).reset_index(drop=True)
@@ -584,18 +583,10 @@ def detect_sos(daily: pd.DataFrame, lookback: int = 3, pos_n: int = 126,
         # 放量(共享)
         if v[i] < vol_mult * vol_ma[i]:
             continue
-        # 十字星判定
-        abs_body = abs(body[i])
-        b2r = abs_body / rng[i]
-        r2o = rng[i] / o[i] if o[i] > 0 else 0.0
-        is_doji = (b2r <= 0.10 and r2o >= 0.005) or (abs_body <= (0.02 if c[i] >= 5 else 0.01))
         # 阳线 path: 中大阳(实体>3%) + 波幅扩张 + 收盘靠高
         if body[i] > 0 and o[i] > 0 and body[i] / o[i] >= bull_body_pct:
             if rng[i] < range_mult * avg_rng[i]: continue
             if (c[i] - l[i]) / rng[i] < close_ratio: continue
-            return 1
-        # 十字星 path: 已满足 放量+位置门 → SOS
-        if is_doji:
             return 1
     return 0
 
@@ -604,8 +595,8 @@ def detect_sos(daily: pd.DataFrame, lookback: int = 3, pos_n: int = 126,
 def detect_sos_orig(daily: pd.DataFrame, lookback: int = 3, pos_n: int = 60,
                     pos_max: float = 0.50, range_mult: float = 1.5, vol_mult: float = 1.5,
                     close_ratio: float = 0.70, bull_body_pct: float = 0.03) -> int:
-    """原版 Sign of Strength: 60日区间 pos<=0.50 + 放量 + (阳线body>=3%&range>=1.5x&close_pos>=0.70 或 十字星)。
-    无均线纠缠OR、无6月->3月回退。近 lookback 日任一根满足任一路径 → 1, 否则 0。"""
+    """原版 Sign of Strength: 60日区间 pos<=0.50 + 放量 + 阳线(body>=3%&range>=1.5x&close_pos>=0.70)。
+    无均线纠缠OR、无6月->3月回退、无十字星路径。近 lookback 日任一根满足阳线路径 → 1, 否则 0。"""
     need = max(pos_n + 10, lookback + 35)
     d = daily.tail(need).reset_index(drop=True)
     if len(d) < 65:
@@ -626,14 +617,8 @@ def detect_sos_orig(daily: pd.DataFrame, lookback: int = 3, pos_n: int = 60,
             continue
         if v[i] < vol_mult * vol_ma[i]:
             continue
-        abs_body = abs(body[i])
-        b2r = abs_body / rng[i]
-        r2o = rng[i] / o[i] if o[i] > 0 else 0.0
-        is_doji = (b2r <= 0.10 and r2o >= 0.005) or (abs_body <= (0.02 if c[i] >= 5 else 0.01))
         if body[i] > 0 and o[i] > 0 and body[i] / o[i] >= bull_body_pct:
             if rng[i] < range_mult * avg_rng[i]: continue
             if (c[i] - l[i]) / rng[i] < close_ratio: continue
-            return 1
-        if is_doji:
             return 1
     return 0

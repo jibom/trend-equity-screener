@@ -111,7 +111,7 @@ def cross_per_day(fast, slow, close, filter_ma=None):
 # 位置门 = A OR B:
 #   A: 6个月(pos_window=126)区间pos<=0.50; 6个月数据不足回退3个月(pos_window_fallback=63)  (从长期低位反强)
 #   B: 近 entangle_lookback 日 4均线(5/10/15/20)纠缠 max/min-1<entangle_thresh  (从均线纠缠平台启动)
-# 强度条件不变: vol>=1.5x & (阳线body>=3% & range>=1.5x & close_pos>=0.70) 或 doji
+# 强度条件: vol>=1.5x & 阳线(body>=3% & range>=1.5x & close_pos>=0.70)。无十字星路径
 def sos_per_day(c, o, h, l, v, pos_window=126, pos_window_fallback=63, entangle_thresh=0.05, entangle_lookback=3):
     n = len(c)
     sos = np.zeros(n, dtype=bool)
@@ -150,14 +150,9 @@ def sos_per_day(c, o, h, l, v, pos_window=126, pos_window_fallback=63, entangle_
                 continue
             if v[j] < 1.5 * vol_ma[j]:
                 continue
-            ab = abs(body[j]); b2r = ab / rng[j]
-            r2o = rng[j] / o[j] if o[j] > 0 else 0
-            is_doji = (b2r <= 0.10 and r2o >= 0.005) or (ab <= (0.02 if c[j] >= 5 else 0.01))
             if body[j] > 0 and o[j] > 0 and body[j] / o[j] >= 0.03:
                 if rng[j] >= 1.5 * avg_rng[j] and (c[j] - l[j]) / rng[j] >= 0.70:
                     sos[i] = True; break
-            if is_doji:
-                sos[i] = True; break
     return sos
 
 
