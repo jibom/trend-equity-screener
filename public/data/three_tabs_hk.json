@@ -498,7 +498,7 @@
         "substate": "",
         "last_close": 5.11,
         "ma10": 4.947,
-        "ma20": 4.819,
+        "ma20": 4.818,
         "ma60": 4.872,
         "ma200": 4.989,
         "ma200_slope": -4.02,
@@ -1765,7 +1765,7 @@
       "substate": "STRONG",
       "last_close": 7.64,
       "ma10": 7.217,
-      "ma20": 6.948,
+      "ma20": 6.949,
       "ma60": 6.885,
       "ma200": 6.389,
       "ma200_slope": 40.46,
@@ -2561,16 +2561,6 @@
       "last_close": 3.7
     },
     {
-      "ticker": "2631.HK",
-      "name_cn": "天岳先进",
-      "gics_sector": "Information Technology",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 4,
-      "last_close": 51.7
-    },
-    {
       "ticker": "1888.HK",
       "name_cn": "建滔积层板",
       "gics_sector": "Information Technology",
@@ -2579,6 +2569,16 @@
       "emoji": "🔴",
       "days_in_state": 3,
       "last_close": 29.14
+    },
+    {
+      "ticker": "2631.HK",
+      "name_cn": "天岳先进",
+      "gics_sector": "Information Technology",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 4,
+      "last_close": 51.7
     },
     {
       "ticker": "3986.HK",
@@ -2611,16 +2611,6 @@
       "last_close": 62.0
     },
     {
-      "ticker": "2382.HK",
-      "name_cn": "舜宇光学科技",
-      "gics_sector": "Information Technology",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 3,
-      "last_close": 57.2
-    },
-    {
       "ticker": "0522.HK",
       "name_cn": "ASMPT",
       "gics_sector": "Information Technology",
@@ -2629,6 +2619,16 @@
       "emoji": "🔴",
       "days_in_state": 3,
       "last_close": 135.1
+    },
+    {
+      "ticker": "2382.HK",
+      "name_cn": "舜宇光学科技",
+      "gics_sector": "Information Technology",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 3,
+      "last_close": 57.2
     },
     {
       "ticker": "2676.HK",
