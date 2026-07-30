@@ -17,6 +17,7 @@
       "ma_aligned": 1,
       "days_below_ma10": 0,
       "ma_stack": 0,
+      "ma200_slope": 7.45,
       "hotness": 0.223
     },
     {
@@ -33,6 +34,7 @@
       "ma_aligned": 1,
       "days_below_ma10": 0,
       "ma_stack": 0,
+      "ma200_slope": 19.62,
       "hotness": 0.176
     },
     {
@@ -49,6 +51,7 @@
       "ma_aligned": 0,
       "days_below_ma10": 0,
       "ma_stack": 0,
+      "ma200_slope": -19.97,
       "hotness": 0.024
     },
     {
@@ -65,6 +68,7 @@
       "ma_aligned": 0,
       "days_below_ma10": 0,
       "ma_stack": 0,
+      "ma200_slope": -12.25,
       "hotness": -0.382
     }
   ],
@@ -83,6 +87,7 @@
       "ma_aligned": 1,
       "days_below_ma10": 0,
       "ma_stack": 1,
+      "ma200_slope": 24.17,
       "hotness": 1.11
     },
     {
@@ -99,6 +104,7 @@
       "ma_aligned": 1,
       "days_below_ma10": 0,
       "ma_stack": 1,
+      "ma200_slope": 17.44,
       "hotness": 0.842
     },
     {
@@ -115,6 +121,7 @@
       "ma_aligned": 1,
       "days_below_ma10": 1,
       "ma_stack": 0,
+      "ma200_slope": 32.25,
       "hotness": 0.8
     },
     {
@@ -131,6 +138,7 @@
       "ma_aligned": 0,
       "days_below_ma10": 0,
       "ma_stack": 1,
+      "ma200_slope": 13.76,
       "hotness": 0.783
     },
     {
@@ -147,6 +155,7 @@
       "ma_aligned": 0,
       "days_below_ma10": 0,
       "ma_stack": 0,
+      "ma200_slope": 17.59,
       "hotness": 0.73
     },
     {
@@ -163,6 +172,7 @@
       "ma_aligned": 1,
       "days_below_ma10": 0,
       "ma_stack": 1,
+      "ma200_slope": 27.66,
       "hotness": 0.726
     },
     {
@@ -179,6 +189,7 @@
       "ma_aligned": 1,
       "days_below_ma10": 0,
       "ma_stack": 0,
+      "ma200_slope": 9.19,
       "hotness": 0.682
     },
     {
@@ -195,6 +206,7 @@
       "ma_aligned": 1,
       "days_below_ma10": 0,
       "ma_stack": 0,
+      "ma200_slope": 10.72,
       "hotness": 0.66
     },
     {
@@ -211,6 +223,7 @@
       "ma_aligned": 1,
       "days_below_ma10": 0,
       "ma_stack": 1,
+      "ma200_slope": 25.53,
       "hotness": 0.657
     },
     {
@@ -221,13 +234,14 @@
       "pct_high_250": 0.998,
       "pct_high_126": 0.998,
       "nh_ratio_126": 0.151,
-      "amt_surge": 1.162,
-      "amt_rank": 0.836,
+      "amt_surge": 1.163,
+      "amt_rank": 0.842,
       "ret_60": 0.07,
       "ma_aligned": 1,
       "days_below_ma10": 0,
       "ma_stack": 1,
-      "hotness": 0.643
+      "ma200_slope": 30.45,
+      "hotness": 0.648
     },
     {
       "ticker": "IWS.US",
@@ -243,6 +257,7 @@
       "ma_aligned": 1,
       "days_below_ma10": 0,
       "ma_stack": 1,
+      "ma200_slope": 24.86,
       "hotness": 0.579
     },
     {
@@ -259,6 +274,7 @@
       "ma_aligned": 1,
       "days_below_ma10": 0,
       "ma_stack": 0,
+      "ma200_slope": 18.67,
       "hotness": 0.528
     },
     {
@@ -275,6 +291,7 @@
       "ma_aligned": 1,
       "days_below_ma10": 1,
       "ma_stack": 1,
+      "ma200_slope": 31.28,
       "hotness": 0.494
     },
     {
@@ -291,6 +308,7 @@
       "ma_aligned": 1,
       "days_below_ma10": 1,
       "ma_stack": 1,
+      "ma200_slope": 30.23,
       "hotness": 0.438
     },
     {
@@ -307,6 +325,7 @@
       "ma_aligned": 1,
       "days_below_ma10": 0,
       "ma_stack": 1,
+      "ma200_slope": 20.84,
       "hotness": 0.392
     },
     {
@@ -323,6 +342,7 @@
       "ma_aligned": 1,
       "days_below_ma10": 0,
       "ma_stack": 1,
+      "ma200_slope": 16.43,
       "hotness": 0.39
     },
     {
@@ -339,6 +359,7 @@
       "ma_aligned": 0,
       "days_below_ma10": 1,
       "ma_stack": 0,
+      "ma200_slope": 15.83,
       "hotness": 0.23
     },
     {
@@ -355,6 +376,7 @@
       "ma_aligned": 1,
       "days_below_ma10": 0,
       "ma_stack": 1,
+      "ma200_slope": 7.96,
       "hotness": 0.211
     },
     {
@@ -371,6 +393,7 @@
       "ma_aligned": 1,
       "days_below_ma10": 1,
       "ma_stack": 1,
+      "ma200_slope": 18.66,
       "hotness": 0.198
     },
     {
@@ -387,6 +410,7 @@
       "ma_aligned": 0,
       "days_below_ma10": 0,
       "ma_stack": 1,
+      "ma200_slope": 4.72,
       "hotness": 0.181
     },
     {
@@ -403,6 +427,7 @@
       "ma_aligned": 1,
       "days_below_ma10": 0,
       "ma_stack": 1,
+      "ma200_slope": 14.6,
       "hotness": 0.175
     },
     {
@@ -419,6 +444,7 @@
       "ma_aligned": 1,
       "days_below_ma10": 0,
       "ma_stack": 1,
+      "ma200_slope": 16.31,
       "hotness": 0.168
     },
     {
@@ -435,6 +461,7 @@
       "ma_aligned": 1,
       "days_below_ma10": 0,
       "ma_stack": 0,
+      "ma200_slope": 17.75,
       "hotness": 0.11
     },
     {
@@ -451,6 +478,7 @@
       "ma_aligned": 1,
       "days_below_ma10": 1,
       "ma_stack": 1,
+      "ma200_slope": 28.15,
       "hotness": 0.043
     },
     {
@@ -467,6 +495,7 @@
       "ma_aligned": 0,
       "days_below_ma10": 0,
       "ma_stack": 1,
+      "ma200_slope": 15.57,
       "hotness": -0.032
     },
     {
@@ -483,6 +512,7 @@
       "ma_aligned": 1,
       "days_below_ma10": 0,
       "ma_stack": 1,
+      "ma200_slope": 12.82,
       "hotness": -0.121
     },
     {
@@ -499,6 +529,7 @@
       "ma_aligned": 1,
       "days_below_ma10": 0,
       "ma_stack": 0,
+      "ma200_slope": 13.69,
       "hotness": -0.226
     }
   ],
@@ -517,6 +548,7 @@
       "ma_aligned": 0,
       "days_below_ma10": 0,
       "ma_stack": 1,
+      "ma200_slope": 37.7,
       "hotness": 0.89
     },
     {
@@ -533,6 +565,7 @@
       "ma_aligned": 0,
       "days_below_ma10": 10,
       "ma_stack": 0,
+      "ma200_slope": 20.63,
       "hotness": 0.759
     },
     {
@@ -549,6 +582,7 @@
       "ma_aligned": 0,
       "days_below_ma10": 14,
       "ma_stack": 0,
+      "ma200_slope": 47.06,
       "hotness": 0.726
     },
     {
@@ -565,6 +599,7 @@
       "ma_aligned": 0,
       "days_below_ma10": 4,
       "ma_stack": 0,
+      "ma200_slope": null,
       "hotness": 0.662
     },
     {
@@ -581,6 +616,7 @@
       "ma_aligned": 1,
       "days_below_ma10": 0,
       "ma_stack": 0,
+      "ma200_slope": 10.72,
       "hotness": 0.66
     },
     {
@@ -597,6 +633,7 @@
       "ma_aligned": 1,
       "days_below_ma10": 0,
       "ma_stack": 0,
+      "ma200_slope": 18.67,
       "hotness": 0.528
     },
     {
@@ -613,6 +650,7 @@
       "ma_aligned": 0,
       "days_below_ma10": 1,
       "ma_stack": 0,
+      "ma200_slope": 57.65,
       "hotness": 0.369
     },
     {
@@ -629,6 +667,7 @@
       "ma_aligned": 0,
       "days_below_ma10": 14,
       "ma_stack": 0,
+      "ma200_slope": 29.61,
       "hotness": 0.348
     },
     {
@@ -645,7 +684,8 @@
       "ma_aligned": 0,
       "days_below_ma10": 1,
       "ma_stack": 0,
-      "hotness": 0.34
+      "ma200_slope": 29.02,
+      "hotness": 0.339
     },
     {
       "ticker": "VHT.US",
@@ -661,6 +701,7 @@
       "ma_aligned": 1,
       "days_below_ma10": 0,
       "ma_stack": 0,
+      "ma200_slope": 19.62,
       "hotness": 0.176
     },
     {
@@ -677,6 +718,7 @@
       "ma_aligned": 1,
       "days_below_ma10": 0,
       "ma_stack": 0,
+      "ma200_slope": 17.75,
       "hotness": 0.11
     },
     {
@@ -693,6 +735,7 @@
       "ma_aligned": 1,
       "days_below_ma10": 0,
       "ma_stack": 0,
+      "ma200_slope": 13.69,
       "hotness": -0.226
     }
   ],
@@ -706,6 +749,7 @@
       "ret_60": -0.006,
       "ma_aligned": 0,
       "days_below_ma10": 4,
+      "ma200_slope": 22.07,
       "hotness": 1.215
     },
     {
@@ -717,6 +761,7 @@
       "ret_60": 0.073,
       "ma_aligned": 1,
       "days_below_ma10": 0,
+      "ma200_slope": 24.17,
       "hotness": 1.11
     },
     {
@@ -728,7 +773,8 @@
       "ret_60": -0.011,
       "ma_aligned": 0,
       "days_below_ma10": 5,
-      "hotness": 1.018
+      "ma200_slope": 59.89,
+      "hotness": 1.019
     },
     {
       "ticker": "JEPQ.US",
@@ -739,6 +785,7 @@
       "ret_60": -0.027,
       "ma_aligned": 0,
       "days_below_ma10": 6,
+      "ma200_slope": 10.82,
       "hotness": 0.94
     },
     {
@@ -750,6 +797,7 @@
       "ret_60": 0.218,
       "ma_aligned": 0,
       "days_below_ma10": 0,
+      "ma200_slope": 37.7,
       "hotness": 0.89
     },
     {
@@ -761,6 +809,7 @@
       "ret_60": 0.068,
       "ma_aligned": 1,
       "days_below_ma10": 0,
+      "ma200_slope": 17.44,
       "hotness": 0.842
     },
     {
@@ -772,6 +821,7 @@
       "ret_60": -0.11,
       "ma_aligned": 0,
       "days_below_ma10": 4,
+      "ma200_slope": 74.38,
       "hotness": 0.833
     },
     {
@@ -783,6 +833,7 @@
       "ret_60": 0.045,
       "ma_aligned": 0,
       "days_below_ma10": 1,
+      "ma200_slope": 15.81,
       "hotness": 0.801
     },
     {
@@ -794,6 +845,7 @@
       "ret_60": 0.058,
       "ma_aligned": 1,
       "days_below_ma10": 1,
+      "ma200_slope": 32.25,
       "hotness": 0.8
     },
     {
@@ -805,6 +857,7 @@
       "ret_60": 0.047,
       "ma_aligned": 0,
       "days_below_ma10": 0,
+      "ma200_slope": 13.76,
       "hotness": 0.783
     },
     {
@@ -816,6 +869,7 @@
       "ret_60": 0.292,
       "ma_aligned": 0,
       "days_below_ma10": 10,
+      "ma200_slope": 20.63,
       "hotness": 0.759
     },
     {
@@ -827,6 +881,7 @@
       "ret_60": 0.054,
       "ma_aligned": 0,
       "days_below_ma10": 0,
+      "ma200_slope": 17.59,
       "hotness": 0.73
     },
     {
@@ -838,6 +893,7 @@
       "ret_60": 0.084,
       "ma_aligned": 1,
       "days_below_ma10": 0,
+      "ma200_slope": 27.66,
       "hotness": 0.726
     },
     {
@@ -849,6 +905,7 @@
       "ret_60": 0.135,
       "ma_aligned": 0,
       "days_below_ma10": 14,
+      "ma200_slope": 47.06,
       "hotness": 0.726
     },
     {
@@ -860,6 +917,7 @@
       "ret_60": -0.006,
       "ma_aligned": 0,
       "days_below_ma10": 5,
+      "ma200_slope": 56.57,
       "hotness": 0.709
     },
     {
@@ -871,6 +929,7 @@
       "ret_60": 0.078,
       "ma_aligned": 0,
       "days_below_ma10": 13,
+      "ma200_slope": 35.89,
       "hotness": 0.683
     },
     {
@@ -882,6 +941,7 @@
       "ret_60": 0.095,
       "ma_aligned": 1,
       "days_below_ma10": 0,
+      "ma200_slope": 9.19,
       "hotness": 0.682
     },
     {
@@ -893,6 +953,7 @@
       "ret_60": 0.11,
       "ma_aligned": 0,
       "days_below_ma10": 4,
+      "ma200_slope": null,
       "hotness": 0.662
     },
     {
@@ -904,6 +965,7 @@
       "ret_60": 0.108,
       "ma_aligned": 1,
       "days_below_ma10": 0,
+      "ma200_slope": 10.72,
       "hotness": 0.66
     },
     {
@@ -915,6 +977,7 @@
       "ret_60": 0.053,
       "ma_aligned": 1,
       "days_below_ma10": 0,
+      "ma200_slope": 25.53,
       "hotness": 0.657
     },
     {
@@ -926,6 +989,7 @@
       "ret_60": -0.196,
       "ma_aligned": 0,
       "days_below_ma10": 4,
+      "ma200_slope": -98.2,
       "hotness": 0.654
     },
     {
@@ -937,7 +1001,8 @@
       "ret_60": 0.07,
       "ma_aligned": 1,
       "days_below_ma10": 0,
-      "hotness": 0.643
+      "ma200_slope": 30.45,
+      "hotness": 0.648
     },
     {
       "ticker": "QQQI.US",
@@ -948,6 +1013,7 @@
       "ret_60": -0.032,
       "ma_aligned": 0,
       "days_below_ma10": 10,
+      "ma200_slope": 9.43,
       "hotness": 0.627
     },
     {
@@ -959,6 +1025,7 @@
       "ret_60": 0.043,
       "ma_aligned": 0,
       "days_below_ma10": 1,
+      "ma200_slope": 19.76,
       "hotness": 0.607
     },
     {
@@ -970,6 +1037,7 @@
       "ret_60": 0.015,
       "ma_aligned": 0,
       "days_below_ma10": 9,
+      "ma200_slope": 13.47,
       "hotness": 0.59
     },
     {
@@ -981,6 +1049,7 @@
       "ret_60": 0.097,
       "ma_aligned": 1,
       "days_below_ma10": 0,
+      "ma200_slope": 26.32,
       "hotness": 0.587
     },
     {
@@ -992,6 +1061,7 @@
       "ret_60": 0.077,
       "ma_aligned": 1,
       "days_below_ma10": 0,
+      "ma200_slope": 24.86,
       "hotness": 0.579
     },
     {
@@ -1003,6 +1073,7 @@
       "ret_60": 0.011,
       "ma_aligned": 0,
       "days_below_ma10": 5,
+      "ma200_slope": 16.22,
       "hotness": 0.572
     },
     {
@@ -1014,6 +1085,7 @@
       "ret_60": 0.036,
       "ma_aligned": 0,
       "days_below_ma10": 6,
+      "ma200_slope": 23.57,
       "hotness": 0.545
     },
     {
@@ -1025,6 +1097,7 @@
       "ret_60": 0.15,
       "ma_aligned": 1,
       "days_below_ma10": 0,
+      "ma200_slope": 18.67,
       "hotness": 0.528
     },
     {
@@ -1036,6 +1109,7 @@
       "ret_60": 0.017,
       "ma_aligned": 0,
       "days_below_ma10": 10,
+      "ma200_slope": 13.85,
       "hotness": 0.522
     },
     {
@@ -1047,6 +1121,7 @@
       "ret_60": -0.017,
       "ma_aligned": 0,
       "days_below_ma10": 13,
+      "ma200_slope": 14.97,
       "hotness": 0.521
     },
     {
@@ -1058,6 +1133,7 @@
       "ret_60": 0.053,
       "ma_aligned": 0,
       "days_below_ma10": 1,
+      "ma200_slope": 27.47,
       "hotness": 0.502
     },
     {
@@ -1069,6 +1145,7 @@
       "ret_60": 0.033,
       "ma_aligned": 0,
       "days_below_ma10": 6,
+      "ma200_slope": 22.01,
       "hotness": 0.497
     },
     {
@@ -1080,6 +1157,7 @@
       "ret_60": 0.047,
       "ma_aligned": 1,
       "days_below_ma10": 1,
+      "ma200_slope": 31.28,
       "hotness": 0.494
     },
     {
@@ -1091,7 +1169,8 @@
       "ret_60": 0.044,
       "ma_aligned": 0,
       "days_below_ma10": 1,
-      "hotness": 0.473
+      "ma200_slope": 14.08,
+      "hotness": 0.474
     },
     {
       "ticker": "IWN.US",
@@ -1102,6 +1181,7 @@
       "ret_60": 0.068,
       "ma_aligned": 1,
       "days_below_ma10": 1,
+      "ma200_slope": 30.23,
       "hotness": 0.438
     },
     {
@@ -1113,6 +1193,7 @@
       "ret_60": -0.02,
       "ma_aligned": 0,
       "days_below_ma10": 10,
+      "ma200_slope": 4.37,
       "hotness": 0.419
     },
     {
@@ -1124,6 +1205,7 @@
       "ret_60": 0.017,
       "ma_aligned": 0,
       "days_below_ma10": 9,
+      "ma200_slope": 13.79,
       "hotness": 0.412
     },
     {
@@ -1135,6 +1217,7 @@
       "ret_60": 0.066,
       "ma_aligned": 0,
       "days_below_ma10": 0,
+      "ma200_slope": -34.27,
       "hotness": 0.404
     },
     {
@@ -1146,6 +1229,7 @@
       "ret_60": -0.028,
       "ma_aligned": 0,
       "days_below_ma10": 1,
+      "ma200_slope": 23.59,
       "hotness": 0.397
     },
     {
@@ -1157,6 +1241,7 @@
       "ret_60": 0.039,
       "ma_aligned": 1,
       "days_below_ma10": 0,
+      "ma200_slope": 20.84,
       "hotness": 0.392
     },
     {
@@ -1168,6 +1253,7 @@
       "ret_60": 0.051,
       "ma_aligned": 1,
       "days_below_ma10": 0,
+      "ma200_slope": 16.43,
       "hotness": 0.39
     },
     {
@@ -1179,6 +1265,7 @@
       "ret_60": 0.122,
       "ma_aligned": 0,
       "days_below_ma10": 1,
+      "ma200_slope": 57.65,
       "hotness": 0.369
     },
     {
@@ -1190,6 +1277,7 @@
       "ret_60": 0.048,
       "ma_aligned": 0,
       "days_below_ma10": 1,
+      "ma200_slope": 22.69,
       "hotness": 0.368
     },
     {
@@ -1201,6 +1289,7 @@
       "ret_60": -0.078,
       "ma_aligned": 0,
       "days_below_ma10": 3,
+      "ma200_slope": 33.02,
       "hotness": 0.368
     },
     {
@@ -1212,6 +1301,7 @@
       "ret_60": 0.011,
       "ma_aligned": 0,
       "days_below_ma10": 14,
+      "ma200_slope": 17.42,
       "hotness": 0.357
     },
     {
@@ -1223,6 +1313,7 @@
       "ret_60": 0.03,
       "ma_aligned": 0,
       "days_below_ma10": 13,
+      "ma200_slope": 25.27,
       "hotness": 0.354
     },
     {
@@ -1234,6 +1325,7 @@
       "ret_60": 0.009,
       "ma_aligned": 0,
       "days_below_ma10": 10,
+      "ma200_slope": 14.95,
       "hotness": 0.353
     },
     {
@@ -1245,6 +1337,7 @@
       "ret_60": 0.093,
       "ma_aligned": 1,
       "days_below_ma10": 5,
+      "ma200_slope": 32.09,
       "hotness": 0.349
     },
     {
@@ -1256,6 +1349,7 @@
       "ret_60": 0.238,
       "ma_aligned": 0,
       "days_below_ma10": 14,
+      "ma200_slope": 29.61,
       "hotness": 0.348
     },
     {
@@ -1267,7 +1361,8 @@
       "ret_60": 0.127,
       "ma_aligned": 0,
       "days_below_ma10": 1,
-      "hotness": 0.34
+      "ma200_slope": 29.02,
+      "hotness": 0.339
     },
     {
       "ticker": "EEM.US",
@@ -1278,6 +1373,7 @@
       "ret_60": -0.043,
       "ma_aligned": 0,
       "days_below_ma10": 6,
+      "ma200_slope": 21.41,
       "hotness": 0.318
     },
     {
@@ -1289,6 +1385,7 @@
       "ret_60": -0.064,
       "ma_aligned": 0,
       "days_below_ma10": 9,
+      "ma200_slope": -1.93,
       "hotness": 0.316
     },
     {
@@ -1300,6 +1397,7 @@
       "ret_60": 0.028,
       "ma_aligned": 0,
       "days_below_ma10": 1,
+      "ma200_slope": 19.58,
       "hotness": 0.313
     },
     {
@@ -1311,6 +1409,7 @@
       "ret_60": 0.012,
       "ma_aligned": 0,
       "days_below_ma10": 10,
+      "ma200_slope": 14.79,
       "hotness": 0.308
     },
     {
@@ -1322,6 +1421,7 @@
       "ret_60": 0.009,
       "ma_aligned": 0,
       "days_below_ma10": 5,
+      "ma200_slope": 20.33,
       "hotness": 0.291
     },
     {
@@ -1333,6 +1433,7 @@
       "ret_60": 0.024,
       "ma_aligned": 0,
       "days_below_ma10": 1,
+      "ma200_slope": 22.13,
       "hotness": 0.289
     },
     {
@@ -1344,6 +1445,7 @@
       "ret_60": 0.053,
       "ma_aligned": 0,
       "days_below_ma10": 1,
+      "ma200_slope": 27.5,
       "hotness": 0.286
     },
     {
@@ -1355,6 +1457,7 @@
       "ret_60": 0.005,
       "ma_aligned": 0,
       "days_below_ma10": 6,
+      "ma200_slope": 17.18,
       "hotness": 0.276
     },
     {
@@ -1366,6 +1469,7 @@
       "ret_60": 0.029,
       "ma_aligned": 0,
       "days_below_ma10": 1,
+      "ma200_slope": 19.98,
       "hotness": 0.27
     },
     {
@@ -1377,6 +1481,7 @@
       "ret_60": -0.14,
       "ma_aligned": 0,
       "days_below_ma10": 4,
+      "ma200_slope": 22.98,
       "hotness": 0.267
     },
     {
@@ -1388,6 +1493,7 @@
       "ret_60": 0.063,
       "ma_aligned": 1,
       "days_below_ma10": 6,
+      "ma200_slope": 25.62,
       "hotness": 0.252
     },
     {
@@ -1399,6 +1505,7 @@
       "ret_60": 0.028,
       "ma_aligned": 0,
       "days_below_ma10": 1,
+      "ma200_slope": 15.83,
       "hotness": 0.23
     },
     {
@@ -1410,6 +1517,7 @@
       "ret_60": 0.07,
       "ma_aligned": 1,
       "days_below_ma10": 0,
+      "ma200_slope": 7.45,
       "hotness": 0.223
     },
     {
@@ -1421,6 +1529,7 @@
       "ret_60": 0.016,
       "ma_aligned": 1,
       "days_below_ma10": 0,
+      "ma200_slope": 7.96,
       "hotness": 0.211
     },
     {
@@ -1432,6 +1541,7 @@
       "ret_60": 0.018,
       "ma_aligned": 0,
       "days_below_ma10": 9,
+      "ma200_slope": 13.06,
       "hotness": 0.206
     },
     {
@@ -1443,6 +1553,7 @@
       "ret_60": 0.047,
       "ma_aligned": 1,
       "days_below_ma10": 1,
+      "ma200_slope": 18.66,
       "hotness": 0.198
     },
     {
@@ -1454,6 +1565,7 @@
       "ret_60": 0.024,
       "ma_aligned": 0,
       "days_below_ma10": 5,
+      "ma200_slope": 16.34,
       "hotness": 0.195
     },
     {
@@ -1465,6 +1577,7 @@
       "ret_60": 0.017,
       "ma_aligned": 0,
       "days_below_ma10": 6,
+      "ma200_slope": 18.06,
       "hotness": 0.19
     },
     {
@@ -1476,6 +1589,7 @@
       "ret_60": 0.043,
       "ma_aligned": 0,
       "days_below_ma10": 0,
+      "ma200_slope": 4.72,
       "hotness": 0.181
     },
     {
@@ -1487,6 +1601,7 @@
       "ret_60": 0.151,
       "ma_aligned": 1,
       "days_below_ma10": 0,
+      "ma200_slope": 19.62,
       "hotness": 0.176
     },
     {
@@ -1498,6 +1613,7 @@
       "ret_60": 0.045,
       "ma_aligned": 1,
       "days_below_ma10": 0,
+      "ma200_slope": 14.6,
       "hotness": 0.175
     },
     {
@@ -1509,6 +1625,7 @@
       "ret_60": 0.002,
       "ma_aligned": 0,
       "days_below_ma10": 5,
+      "ma200_slope": 18.19,
       "hotness": 0.174
     },
     {
@@ -1520,6 +1637,7 @@
       "ret_60": -0.06,
       "ma_aligned": 0,
       "days_below_ma10": 13,
+      "ma200_slope": 19.97,
       "hotness": 0.171
     },
     {
@@ -1531,6 +1649,7 @@
       "ret_60": 0.046,
       "ma_aligned": 1,
       "days_below_ma10": 0,
+      "ma200_slope": 16.31,
       "hotness": 0.168
     },
     {
@@ -1542,6 +1661,7 @@
       "ret_60": -0.003,
       "ma_aligned": 0,
       "days_below_ma10": 5,
+      "ma200_slope": 17.47,
       "hotness": 0.144
     },
     {
@@ -1553,6 +1673,7 @@
       "ret_60": -0.114,
       "ma_aligned": 0,
       "days_below_ma10": 13,
+      "ma200_slope": 20.93,
       "hotness": 0.143
     },
     {
@@ -1564,6 +1685,7 @@
       "ret_60": 0.014,
       "ma_aligned": 0,
       "days_below_ma10": 5,
+      "ma200_slope": 21.37,
       "hotness": 0.138
     },
     {
@@ -1575,6 +1697,7 @@
       "ret_60": 0.01,
       "ma_aligned": 0,
       "days_below_ma10": 6,
+      "ma200_slope": 24.46,
       "hotness": 0.137
     },
     {
@@ -1586,6 +1709,7 @@
       "ret_60": 0.004,
       "ma_aligned": 0,
       "days_below_ma10": 9,
+      "ma200_slope": 5.08,
       "hotness": 0.121
     },
     {
@@ -1597,6 +1721,7 @@
       "ret_60": 0.005,
       "ma_aligned": 0,
       "days_below_ma10": 6,
+      "ma200_slope": 16.5,
       "hotness": 0.118
     },
     {
@@ -1608,6 +1733,7 @@
       "ret_60": -0.049,
       "ma_aligned": 0,
       "days_below_ma10": 10,
+      "ma200_slope": -1.13,
       "hotness": 0.111
     },
     {
@@ -1619,6 +1745,7 @@
       "ret_60": 0.164,
       "ma_aligned": 1,
       "days_below_ma10": 0,
+      "ma200_slope": 17.75,
       "hotness": 0.11
     },
     {
@@ -1630,6 +1757,7 @@
       "ret_60": 0.001,
       "ma_aligned": 0,
       "days_below_ma10": 4,
+      "ma200_slope": 39.57,
       "hotness": 0.107
     },
     {
@@ -1641,6 +1769,7 @@
       "ret_60": 0.011,
       "ma_aligned": 0,
       "days_below_ma10": 0,
+      "ma200_slope": 19.45,
       "hotness": 0.106
     },
     {
@@ -1652,6 +1781,7 @@
       "ret_60": 0.032,
       "ma_aligned": 0,
       "days_below_ma10": 1,
+      "ma200_slope": 19.69,
       "hotness": 0.102
     },
     {
@@ -1663,6 +1793,7 @@
       "ret_60": -0.015,
       "ma_aligned": 0,
       "days_below_ma10": 13,
+      "ma200_slope": 16.51,
       "hotness": 0.099
     },
     {
@@ -1674,6 +1805,7 @@
       "ret_60": 0.017,
       "ma_aligned": 0,
       "days_below_ma10": 10,
+      "ma200_slope": 13.78,
       "hotness": 0.098
     },
     {
@@ -1685,6 +1817,7 @@
       "ret_60": -0.295,
       "ma_aligned": 0,
       "days_below_ma10": 20,
+      "ma200_slope": 114.22,
       "hotness": 0.087
     },
     {
@@ -1696,6 +1829,7 @@
       "ret_60": -0.023,
       "ma_aligned": 0,
       "days_below_ma10": 13,
+      "ma200_slope": 0.24,
       "hotness": 0.085
     },
     {
@@ -1707,6 +1841,7 @@
       "ret_60": 0.004,
       "ma_aligned": 0,
       "days_below_ma10": 0,
+      "ma200_slope": 38.49,
       "hotness": 0.078
     },
     {
@@ -1718,6 +1853,7 @@
       "ret_60": 0.093,
       "ma_aligned": 0,
       "days_below_ma10": 0,
+      "ma200_slope": 16.62,
       "hotness": 0.066
     },
     {
@@ -1729,7 +1865,8 @@
       "ret_60": -0.059,
       "ma_aligned": 0,
       "days_below_ma10": 0,
-      "hotness": 0.065
+      "ma200_slope": -8.14,
+      "hotness": 0.06
     },
     {
       "ticker": "UPRO.US",
@@ -1740,6 +1877,7 @@
       "ret_60": 0.008,
       "ma_aligned": 0,
       "days_below_ma10": 9,
+      "ma200_slope": 24.21,
       "hotness": 0.047
     },
     {
@@ -1751,6 +1889,7 @@
       "ret_60": 0.054,
       "ma_aligned": 1,
       "days_below_ma10": 1,
+      "ma200_slope": 28.15,
       "hotness": 0.043
     },
     {
@@ -1762,6 +1901,7 @@
       "ret_60": 0.015,
       "ma_aligned": 0,
       "days_below_ma10": 5,
+      "ma200_slope": 20.49,
       "hotness": 0.025
     },
     {
@@ -1773,6 +1913,7 @@
       "ret_60": 0.057,
       "ma_aligned": 0,
       "days_below_ma10": 0,
+      "ma200_slope": -19.97,
       "hotness": 0.024
     },
     {
@@ -1784,6 +1925,7 @@
       "ret_60": -0.034,
       "ma_aligned": 0,
       "days_below_ma10": 10,
+      "ma200_slope": 10.08,
       "hotness": 0.024
     },
     {
@@ -1795,6 +1937,7 @@
       "ret_60": 0.031,
       "ma_aligned": 0,
       "days_below_ma10": 17,
+      "ma200_slope": 15.63,
       "hotness": -0.011
     },
     {
@@ -1806,6 +1949,7 @@
       "ret_60": -0.029,
       "ma_aligned": 0,
       "days_below_ma10": 2,
+      "ma200_slope": 4.76,
       "hotness": -0.014
     },
     {
@@ -1817,6 +1961,7 @@
       "ret_60": -0.021,
       "ma_aligned": 0,
       "days_below_ma10": 0,
+      "ma200_slope": 35.23,
       "hotness": -0.015
     },
     {
@@ -1828,6 +1973,7 @@
       "ret_60": -0.057,
       "ma_aligned": 0,
       "days_below_ma10": 9,
+      "ma200_slope": -7.98,
       "hotness": -0.025
     },
     {
@@ -1839,6 +1985,7 @@
       "ret_60": 0.019,
       "ma_aligned": 0,
       "days_below_ma10": 10,
+      "ma200_slope": 13.97,
       "hotness": -0.031
     },
     {
@@ -1850,6 +1997,7 @@
       "ret_60": 0.034,
       "ma_aligned": 0,
       "days_below_ma10": 0,
+      "ma200_slope": 15.57,
       "hotness": -0.032
     },
     {
@@ -1861,6 +2009,7 @@
       "ret_60": -0.018,
       "ma_aligned": 0,
       "days_below_ma10": 9,
+      "ma200_slope": 5.23,
       "hotness": -0.035
     },
     {
@@ -1872,6 +2021,7 @@
       "ret_60": 0.016,
       "ma_aligned": 0,
       "days_below_ma10": 9,
+      "ma200_slope": 12.96,
       "hotness": -0.036
     },
     {
@@ -1883,6 +2033,7 @@
       "ret_60": -0.008,
       "ma_aligned": 0,
       "days_below_ma10": 0,
+      "ma200_slope": 38.58,
       "hotness": -0.043
     },
     {
@@ -1894,6 +2045,7 @@
       "ret_60": -0.009,
       "ma_aligned": 0,
       "days_below_ma10": 17,
+      "ma200_slope": 15.65,
       "hotness": -0.052
     },
     {
@@ -1905,6 +2057,7 @@
       "ret_60": -0.054,
       "ma_aligned": 0,
       "days_below_ma10": 10,
+      "ma200_slope": -1.29,
       "hotness": -0.065
     },
     {
@@ -1916,6 +2069,7 @@
       "ret_60": 0.018,
       "ma_aligned": 0,
       "days_below_ma10": 9,
+      "ma200_slope": 13.52,
       "hotness": -0.068
     },
     {
@@ -1927,6 +2081,7 @@
       "ret_60": 0.029,
       "ma_aligned": 0,
       "days_below_ma10": 1,
+      "ma200_slope": 19.99,
       "hotness": -0.086
     },
     {
@@ -1938,6 +2093,7 @@
       "ret_60": 0.029,
       "ma_aligned": 0,
       "days_below_ma10": 10,
+      "ma200_slope": 21.5,
       "hotness": -0.107
     },
     {
@@ -1949,6 +2105,7 @@
       "ret_60": -0.02,
       "ma_aligned": 0,
       "days_below_ma10": 20,
+      "ma200_slope": 29.08,
       "hotness": -0.11
     },
     {
@@ -1960,6 +2117,7 @@
       "ret_60": 0.068,
       "ma_aligned": 1,
       "days_below_ma10": 0,
+      "ma200_slope": 12.82,
       "hotness": -0.121
     },
     {
@@ -1971,6 +2129,7 @@
       "ret_60": -0.002,
       "ma_aligned": 0,
       "days_below_ma10": 1,
+      "ma200_slope": -0.02,
       "hotness": -0.121
     },
     {
@@ -1982,6 +2141,7 @@
       "ret_60": -0.036,
       "ma_aligned": 0,
       "days_below_ma10": 2,
+      "ma200_slope": 21.23,
       "hotness": -0.136
     },
     {
@@ -1993,6 +2153,7 @@
       "ret_60": -0.012,
       "ma_aligned": 0,
       "days_below_ma10": 14,
+      "ma200_slope": -6.04,
       "hotness": -0.164
     },
     {
@@ -2004,6 +2165,7 @@
       "ret_60": -0.035,
       "ma_aligned": 0,
       "days_below_ma10": 6,
+      "ma200_slope": 4.43,
       "hotness": -0.168
     },
     {
@@ -2015,6 +2177,7 @@
       "ret_60": 0.006,
       "ma_aligned": 0,
       "days_below_ma10": 9,
+      "ma200_slope": 11.11,
       "hotness": -0.171
     },
     {
@@ -2026,6 +2189,7 @@
       "ret_60": -0.0,
       "ma_aligned": 0,
       "days_below_ma10": 5,
+      "ma200_slope": 17.61,
       "hotness": -0.171
     },
     {
@@ -2037,6 +2201,7 @@
       "ret_60": -0.176,
       "ma_aligned": 0,
       "days_below_ma10": 24,
+      "ma200_slope": 31.3,
       "hotness": -0.173
     },
     {
@@ -2048,6 +2213,7 @@
       "ret_60": 0.012,
       "ma_aligned": 0,
       "days_below_ma10": 13,
+      "ma200_slope": 18.2,
       "hotness": -0.175
     },
     {
@@ -2059,6 +2225,7 @@
       "ret_60": 0.079,
       "ma_aligned": 1,
       "days_below_ma10": 0,
+      "ma200_slope": 10.78,
       "hotness": -0.18
     },
     {
@@ -2070,6 +2237,7 @@
       "ret_60": -0.193,
       "ma_aligned": 0,
       "days_below_ma10": 26,
+      "ma200_slope": 12.31,
       "hotness": -0.188
     },
     {
@@ -2081,6 +2249,7 @@
       "ret_60": -0.022,
       "ma_aligned": 0,
       "days_below_ma10": 3,
+      "ma200_slope": 10.76,
       "hotness": -0.211
     },
     {
@@ -2092,6 +2261,7 @@
       "ret_60": -0.011,
       "ma_aligned": 0,
       "days_below_ma10": 0,
+      "ma200_slope": -17.87,
       "hotness": -0.223
     },
     {
@@ -2103,6 +2273,7 @@
       "ret_60": 0.118,
       "ma_aligned": 1,
       "days_below_ma10": 0,
+      "ma200_slope": 13.69,
       "hotness": -0.226
     },
     {
@@ -2114,6 +2285,7 @@
       "ret_60": -0.094,
       "ma_aligned": 0,
       "days_below_ma10": 0,
+      "ma200_slope": 75.97,
       "hotness": -0.234
     },
     {
@@ -2125,6 +2297,7 @@
       "ret_60": -0.009,
       "ma_aligned": 0,
       "days_below_ma10": 13,
+      "ma200_slope": 13.87,
       "hotness": -0.234
     },
     {
@@ -2136,6 +2309,7 @@
       "ret_60": 0.001,
       "ma_aligned": 0,
       "days_below_ma10": 0,
+      "ma200_slope": -10.39,
       "hotness": -0.248
     },
     {
@@ -2147,6 +2321,7 @@
       "ret_60": -0.12,
       "ma_aligned": 0,
       "days_below_ma10": 20,
+      "ma200_slope": 17.72,
       "hotness": -0.27
     },
     {
@@ -2158,6 +2333,7 @@
       "ret_60": 0.009,
       "ma_aligned": 0,
       "days_below_ma10": 0,
+      "ma200_slope": 22.49,
       "hotness": -0.289
     },
     {
@@ -2169,6 +2345,7 @@
       "ret_60": 0.051,
       "ma_aligned": 0,
       "days_below_ma10": 0,
+      "ma200_slope": -1.43,
       "hotness": -0.32
     },
     {
@@ -2180,6 +2357,7 @@
       "ret_60": 0.02,
       "ma_aligned": 0,
       "days_below_ma10": 1,
+      "ma200_slope": -9.36,
       "hotness": -0.345
     },
     {
@@ -2191,6 +2369,7 @@
       "ret_60": -0.092,
       "ma_aligned": 0,
       "days_below_ma10": 1,
+      "ma200_slope": 26.93,
       "hotness": -0.352
     },
     {
@@ -2202,6 +2381,7 @@
       "ret_60": -0.043,
       "ma_aligned": 0,
       "days_below_ma10": 2,
+      "ma200_slope": 8.47,
       "hotness": -0.36
     },
     {
@@ -2213,6 +2393,7 @@
       "ret_60": 0.019,
       "ma_aligned": 0,
       "days_below_ma10": 0,
+      "ma200_slope": -12.25,
       "hotness": -0.382
     },
     {
@@ -2224,6 +2405,7 @@
       "ret_60": -0.176,
       "ma_aligned": 0,
       "days_below_ma10": 1,
+      "ma200_slope": 2.1,
       "hotness": -0.391
     },
     {
@@ -2235,6 +2417,7 @@
       "ret_60": 0.016,
       "ma_aligned": 0,
       "days_below_ma10": 0,
+      "ma200_slope": 25.02,
       "hotness": -0.396
     },
     {
@@ -2246,6 +2429,7 @@
       "ret_60": -0.082,
       "ma_aligned": 0,
       "days_below_ma10": 14,
+      "ma200_slope": -30.68,
       "hotness": -0.399
     },
     {
@@ -2257,6 +2441,7 @@
       "ret_60": 0.047,
       "ma_aligned": 0,
       "days_below_ma10": 0,
+      "ma200_slope": -5.0,
       "hotness": -0.41
     },
     {
@@ -2268,6 +2453,7 @@
       "ret_60": 0.027,
       "ma_aligned": 0,
       "days_below_ma10": 1,
+      "ma200_slope": 16.79,
       "hotness": -0.413
     },
     {
@@ -2279,6 +2465,7 @@
       "ret_60": -0.123,
       "ma_aligned": 0,
       "days_below_ma10": 2,
+      "ma200_slope": 2.05,
       "hotness": -0.485
     },
     {
@@ -2290,6 +2477,7 @@
       "ret_60": 0.002,
       "ma_aligned": 0,
       "days_below_ma10": 9,
+      "ma200_slope": 4.06,
       "hotness": -0.492
     },
     {
@@ -2301,6 +2489,7 @@
       "ret_60": -0.196,
       "ma_aligned": 0,
       "days_below_ma10": 10,
+      "ma200_slope": 9.92,
       "hotness": -0.51
     },
     {
@@ -2312,6 +2501,7 @@
       "ret_60": -0.076,
       "ma_aligned": 0,
       "days_below_ma10": 2,
+      "ma200_slope": null,
       "hotness": -0.525
     },
     {
@@ -2323,6 +2513,7 @@
       "ret_60": -0.034,
       "ma_aligned": 0,
       "days_below_ma10": 2,
+      "ma200_slope": 27.85,
       "hotness": -0.539
     },
     {
@@ -2334,6 +2525,7 @@
       "ret_60": -0.034,
       "ma_aligned": 0,
       "days_below_ma10": 0,
+      "ma200_slope": -52.68,
       "hotness": -0.589
     },
     {
@@ -2345,6 +2537,7 @@
       "ret_60": -0.173,
       "ma_aligned": 0,
       "days_below_ma10": 2,
+      "ma200_slope": 44.62,
       "hotness": -0.6
     },
     {
@@ -2356,6 +2549,7 @@
       "ret_60": 0.029,
       "ma_aligned": 0,
       "days_below_ma10": 6,
+      "ma200_slope": -18.0,
       "hotness": -0.603
     },
     {
@@ -2367,6 +2561,7 @@
       "ret_60": -0.127,
       "ma_aligned": 0,
       "days_below_ma10": 17,
+      "ma200_slope": -10.18,
       "hotness": -0.615
     },
     {
@@ -2378,6 +2573,7 @@
       "ret_60": -0.04,
       "ma_aligned": 0,
       "days_below_ma10": 0,
+      "ma200_slope": -23.84,
       "hotness": -0.629
     },
     {
@@ -2389,6 +2585,7 @@
       "ret_60": -0.155,
       "ma_aligned": 0,
       "days_below_ma10": 1,
+      "ma200_slope": -3.23,
       "hotness": -0.646
     },
     {
@@ -2400,6 +2597,7 @@
       "ret_60": -0.05,
       "ma_aligned": 0,
       "days_below_ma10": 0,
+      "ma200_slope": -14.88,
       "hotness": -0.661
     },
     {
@@ -2411,6 +2609,7 @@
       "ret_60": -0.023,
       "ma_aligned": 0,
       "days_below_ma10": 3,
+      "ma200_slope": 38.47,
       "hotness": -0.67
     },
     {
@@ -2422,6 +2621,7 @@
       "ret_60": -0.04,
       "ma_aligned": 0,
       "days_below_ma10": 1,
+      "ma200_slope": 30.17,
       "hotness": -0.678
     },
     {
@@ -2433,6 +2633,7 @@
       "ret_60": -0.017,
       "ma_aligned": 0,
       "days_below_ma10": 2,
+      "ma200_slope": 7.58,
       "hotness": -0.76
     },
     {
@@ -2444,6 +2645,7 @@
       "ret_60": -0.034,
       "ma_aligned": 0,
       "days_below_ma10": 0,
+      "ma200_slope": -34.87,
       "hotness": -0.762
     },
     {
@@ -2455,6 +2657,7 @@
       "ret_60": -0.19,
       "ma_aligned": 0,
       "days_below_ma10": 4,
+      "ma200_slope": -94.41,
       "hotness": -0.799
     },
     {
@@ -2466,6 +2669,7 @@
       "ret_60": -0.084,
       "ma_aligned": 0,
       "days_below_ma10": 0,
+      "ma200_slope": -13.68,
       "hotness": -0.842
     },
     {
@@ -2477,6 +2681,7 @@
       "ret_60": -0.016,
       "ma_aligned": 0,
       "days_below_ma10": 0,
+      "ma200_slope": -20.88,
       "hotness": -0.843
     },
     {
@@ -2488,6 +2693,7 @@
       "ret_60": -0.031,
       "ma_aligned": 0,
       "days_below_ma10": 0,
+      "ma200_slope": 37.97,
       "hotness": -0.872
     },
     {
@@ -2499,6 +2705,7 @@
       "ret_60": 0.002,
       "ma_aligned": 0,
       "days_below_ma10": 18,
+      "ma200_slope": 39.94,
       "hotness": -0.912
     },
     {
@@ -2510,6 +2717,7 @@
       "ret_60": -0.015,
       "ma_aligned": 0,
       "days_below_ma10": 1,
+      "ma200_slope": 31.74,
       "hotness": -1.039
     },
     {
@@ -2521,6 +2729,7 @@
       "ret_60": -0.12,
       "ma_aligned": 0,
       "days_below_ma10": 4,
+      "ma200_slope": -43.68,
       "hotness": -1.05
     },
     {
@@ -2532,6 +2741,7 @@
       "ret_60": -0.015,
       "ma_aligned": 0,
       "days_below_ma10": 3,
+      "ma200_slope": 35.99,
       "hotness": -1.094
     },
     {
@@ -2543,6 +2753,7 @@
       "ret_60": -0.175,
       "ma_aligned": 0,
       "days_below_ma10": 0,
+      "ma200_slope": -48.0,
       "hotness": -1.115
     },
     {
@@ -2554,6 +2765,7 @@
       "ret_60": -0.328,
       "ma_aligned": 0,
       "days_below_ma10": 2,
+      "ma200_slope": -23.94,
       "hotness": -1.12
     },
     {
@@ -2565,6 +2777,7 @@
       "ret_60": -0.19,
       "ma_aligned": 0,
       "days_below_ma10": 4,
+      "ma200_slope": -94.28,
       "hotness": -1.121
     },
     {
@@ -2576,6 +2789,7 @@
       "ret_60": -0.242,
       "ma_aligned": 0,
       "days_below_ma10": 2,
+      "ma200_slope": 16.76,
       "hotness": -1.179
     },
     {
@@ -2587,6 +2801,7 @@
       "ret_60": -0.073,
       "ma_aligned": 0,
       "days_below_ma10": 3,
+      "ma200_slope": -31.85,
       "hotness": -1.272
     },
     {
@@ -2598,6 +2813,7 @@
       "ret_60": -0.183,
       "ma_aligned": 0,
       "days_below_ma10": 1,
+      "ma200_slope": -133.2,
       "hotness": -1.312
     },
     {
@@ -2609,6 +2825,7 @@
       "ret_60": -0.09,
       "ma_aligned": 0,
       "days_below_ma10": 0,
+      "ma200_slope": -81.23,
       "hotness": -1.48
     },
     {
@@ -2620,6 +2837,7 @@
       "ret_60": -0.103,
       "ma_aligned": 0,
       "days_below_ma10": 0,
+      "ma200_slope": -124.89,
       "hotness": -1.482
     },
     {
@@ -2631,6 +2849,7 @@
       "ret_60": -0.114,
       "ma_aligned": 0,
       "days_below_ma10": 0,
+      "ma200_slope": -75.52,
       "hotness": -1.744
     },
     {
@@ -2642,6 +2861,7 @@
       "ret_60": -0.338,
       "ma_aligned": 0,
       "days_below_ma10": 1,
+      "ma200_slope": -32.19,
       "hotness": -1.744
     }
   ]

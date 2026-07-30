@@ -351,6 +351,7 @@
       "ret_60": 0.092,
       "ma_aligned": 1,
       "days_below_ma10": 0,
+      "ma200_slope": 13.81,
       "hotness": 0.793,
       "pct_high_126": 0.997,
       "nh_ratio_126": 0.008
@@ -367,6 +368,7 @@
       "ret_60": 0.065,
       "ma_aligned": 0,
       "days_below_ma10": 0,
+      "ma200_slope": 0.86,
       "hotness": 0.635,
       "pct_high_126": 1.0,
       "nh_ratio_126": 0.024
@@ -383,6 +385,7 @@
       "ret_60": 0.029,
       "ma_aligned": 0,
       "days_below_ma10": 0,
+      "ma200_slope": 4.04,
       "hotness": 0.523,
       "pct_high_126": 0.997,
       "nh_ratio_126": 0.008
@@ -399,6 +402,7 @@
       "ret_60": 0.04,
       "ma_aligned": 1,
       "days_below_ma10": 0,
+      "ma200_slope": 6.26,
       "hotness": 0.433,
       "pct_high_126": 1.0,
       "nh_ratio_126": 0.04
@@ -415,6 +419,7 @@
       "ret_60": 0.07,
       "ma_aligned": 0,
       "days_below_ma10": 0,
+      "ma200_slope": 9.17,
       "hotness": 0.359,
       "pct_high_126": 0.997,
       "nh_ratio_126": 0.024
@@ -431,6 +436,7 @@
       "ret_60": 0.021,
       "ma_aligned": 0,
       "days_below_ma10": 0,
+      "ma200_slope": 7.64,
       "hotness": 0.259,
       "pct_high_126": 0.983,
       "nh_ratio_126": 0.0
@@ -447,6 +453,7 @@
       "ret_60": 0.116,
       "ma_aligned": 1,
       "days_below_ma10": 0,
+      "ma200_slope": 17.51,
       "hotness": 0.215,
       "pct_high_126": 0.994,
       "nh_ratio_126": 0.024
@@ -463,6 +470,7 @@
       "ret_60": 0.014,
       "ma_aligned": 0,
       "days_below_ma10": 0,
+      "ma200_slope": 3.68,
       "hotness": 0.165,
       "pct_high_126": 1.0,
       "nh_ratio_126": 0.008
@@ -479,6 +487,7 @@
       "ret_60": 0.03,
       "ma_aligned": 0,
       "days_below_ma10": 0,
+      "ma200_slope": -10.83,
       "hotness": 0.027,
       "pct_high_126": 0.985,
       "nh_ratio_126": 0.0
@@ -495,6 +504,7 @@
       "ret_60": 0.045,
       "ma_aligned": 0,
       "days_below_ma10": 0,
+      "ma200_slope": -3.07,
       "hotness": -0.125,
       "pct_high_126": 0.99,
       "nh_ratio_126": 0.0
@@ -511,6 +521,7 @@
       "ret_60": 0.034,
       "ma_aligned": 0,
       "days_below_ma10": 0,
+      "ma200_slope": -26.95,
       "hotness": -0.238,
       "pct_high_126": 0.894,
       "nh_ratio_126": 0.0
@@ -527,6 +538,7 @@
       "ret_60": 0.03,
       "ma_aligned": 0,
       "days_below_ma10": 0,
+      "ma200_slope": -16.18,
       "hotness": -0.296,
       "pct_high_126": 0.985,
       "nh_ratio_126": 0.008
@@ -543,6 +555,7 @@
       "ret_60": 0.025,
       "ma_aligned": 0,
       "days_below_ma10": 0,
+      "ma200_slope": -29.69,
       "hotness": -0.377,
       "pct_high_126": 0.963,
       "nh_ratio_126": 0.0
@@ -561,6 +574,7 @@
       "ret_60": 0.731,
       "ma_aligned": 1,
       "days_below_ma10": 0,
+      "ma200_slope": 60.85,
       "hotness": 1.739,
       "pct_high_126": 1.0,
       "nh_ratio_126": 0.063
@@ -577,6 +591,7 @@
       "ret_60": 0.089,
       "ma_aligned": 1,
       "days_below_ma10": 0,
+      "ma200_slope": 12.63,
       "hotness": 1.08,
       "pct_high_126": 0.995,
       "nh_ratio_126": 0.056
@@ -593,6 +608,7 @@
       "ret_60": 0.126,
       "ma_aligned": 1,
       "days_below_ma10": 0,
+      "ma200_slope": 26.88,
       "hotness": 0.999,
       "pct_high_126": 1.0,
       "nh_ratio_126": 0.087
@@ -609,6 +625,7 @@
       "ret_60": 0.09,
       "ma_aligned": 0,
       "days_below_ma10": 0,
+      "ma200_slope": 28.58,
       "hotness": 0.634,
       "pct_high_126": 0.999,
       "nh_ratio_126": 0.111
@@ -625,6 +642,7 @@
       "ret_60": 0.313,
       "ma_aligned": 1,
       "days_below_ma10": 0,
+      "ma200_slope": 71.63,
       "hotness": 0.454,
       "pct_high_126": 1.0,
       "nh_ratio_126": 0.127
@@ -641,6 +659,7 @@
       "ret_60": 0.05,
       "ma_aligned": 1,
       "days_below_ma10": 0,
+      "ma200_slope": 23.61,
       "hotness": 0.307,
       "pct_high_126": 0.997,
       "nh_ratio_126": 0.111
@@ -659,6 +678,7 @@
       "ret_60": 1.226,
       "ma_aligned": 0,
       "days_below_ma10": 6,
+      "ma200_slope": 187.23,
       "hotness": 1.752
     },
     {
@@ -673,6 +693,7 @@
       "ret_60": 0.731,
       "ma_aligned": 1,
       "days_below_ma10": 0,
+      "ma200_slope": 60.85,
       "hotness": 1.739
     },
     {
@@ -687,6 +708,7 @@
       "ret_60": 2.751,
       "ma_aligned": 0,
       "days_below_ma10": 0,
+      "ma200_slope": 287.1,
       "hotness": 1.716
     },
     {
@@ -701,6 +723,7 @@
       "ret_60": 0.72,
       "ma_aligned": 1,
       "days_below_ma10": 1,
+      "ma200_slope": 109.46,
       "hotness": 1.701
     },
     {
@@ -715,6 +738,7 @@
       "ret_60": 0.576,
       "ma_aligned": 0,
       "days_below_ma10": 2,
+      "ma200_slope": 155.39,
       "hotness": 1.663
     },
     {
@@ -729,6 +753,7 @@
       "ret_60": 0.907,
       "ma_aligned": 0,
       "days_below_ma10": 0,
+      "ma200_slope": 143.73,
       "hotness": 1.509
     },
     {
@@ -743,6 +768,7 @@
       "ret_60": 0.317,
       "ma_aligned": 0,
       "days_below_ma10": 2,
+      "ma200_slope": 77.09,
       "hotness": 1.424
     },
     {
@@ -757,6 +783,7 @@
       "ret_60": 0.835,
       "ma_aligned": 0,
       "days_below_ma10": 0,
+      "ma200_slope": 175.89,
       "hotness": 1.376
     },
     {
@@ -771,6 +798,7 @@
       "ret_60": 0.802,
       "ma_aligned": 0,
       "days_below_ma10": 0,
+      "ma200_slope": 118.86,
       "hotness": 1.36
     },
     {
@@ -785,6 +813,7 @@
       "ret_60": 0.427,
       "ma_aligned": 0,
       "days_below_ma10": 1,
+      "ma200_slope": 105.05,
       "hotness": 1.301
     },
     {
@@ -799,6 +828,7 @@
       "ret_60": 0.398,
       "ma_aligned": 0,
       "days_below_ma10": 0,
+      "ma200_slope": 45.81,
       "hotness": 1.26
     },
     {
@@ -813,6 +843,7 @@
       "ret_60": 0.531,
       "ma_aligned": 0,
       "days_below_ma10": 11,
+      "ma200_slope": 141.05,
       "hotness": 1.172
     },
     {
@@ -827,6 +858,7 @@
       "ret_60": 0.462,
       "ma_aligned": 0,
       "days_below_ma10": 1,
+      "ma200_slope": 107.7,
       "hotness": 1.145
     },
     {
@@ -841,6 +873,7 @@
       "ret_60": 0.118,
       "ma_aligned": 0,
       "days_below_ma10": 18,
+      "ma200_slope": 104.55,
       "hotness": 1.13
     },
     {
@@ -855,6 +888,7 @@
       "ret_60": 0.556,
       "ma_aligned": 0,
       "days_below_ma10": 2,
+      "ma200_slope": 178.94,
       "hotness": 1.123
     },
     {
@@ -869,6 +903,7 @@
       "ret_60": 0.42,
       "ma_aligned": 0,
       "days_below_ma10": 13,
+      "ma200_slope": 28.11,
       "hotness": 1.121
     },
     {
@@ -883,6 +918,7 @@
       "ret_60": 0.879,
       "ma_aligned": 0,
       "days_below_ma10": 0,
+      "ma200_slope": 191.56,
       "hotness": 1.071
     },
     {
@@ -897,6 +933,7 @@
       "ret_60": 0.278,
       "ma_aligned": 1,
       "days_below_ma10": 2,
+      "ma200_slope": 17.0,
       "hotness": 1.024
     },
     {
@@ -911,6 +948,7 @@
       "ret_60": 0.173,
       "ma_aligned": 1,
       "days_below_ma10": 0,
+      "ma200_slope": 26.53,
       "hotness": 0.979
     },
     {
@@ -925,6 +963,7 @@
       "ret_60": 0.503,
       "ma_aligned": 0,
       "days_below_ma10": 10,
+      "ma200_slope": 137.08,
       "hotness": 0.902
     },
     {
@@ -939,6 +978,7 @@
       "ret_60": 0.443,
       "ma_aligned": 0,
       "days_below_ma10": 2,
+      "ma200_slope": 130.86,
       "hotness": 0.898
     },
     {
@@ -953,6 +993,7 @@
       "ret_60": 0.374,
       "ma_aligned": 0,
       "days_below_ma10": 14,
+      "ma200_slope": 135.03,
       "hotness": 0.853
     },
     {
@@ -967,6 +1008,7 @@
       "ret_60": 0.802,
       "ma_aligned": 0,
       "days_below_ma10": 12,
+      "ma200_slope": 78.09,
       "hotness": 0.852
     },
     {
@@ -981,6 +1023,7 @@
       "ret_60": 0.134,
       "ma_aligned": 1,
       "days_below_ma10": 2,
+      "ma200_slope": 32.1,
       "hotness": 0.85
     },
     {
@@ -995,6 +1038,7 @@
       "ret_60": 0.225,
       "ma_aligned": 0,
       "days_below_ma10": 14,
+      "ma200_slope": 117.33,
       "hotness": 0.845
     },
     {
@@ -1009,6 +1053,7 @@
       "ret_60": 0.181,
       "ma_aligned": 0,
       "days_below_ma10": 14,
+      "ma200_slope": 11.71,
       "hotness": 0.7
     },
     {
@@ -1023,6 +1068,7 @@
       "ret_60": 0.266,
       "ma_aligned": 0,
       "days_below_ma10": 16,
+      "ma200_slope": 70.12,
       "hotness": 0.67
     },
     {
@@ -1037,6 +1083,7 @@
       "ret_60": 0.245,
       "ma_aligned": 0,
       "days_below_ma10": 6,
+      "ma200_slope": 58.75,
       "hotness": 0.626
     },
     {
@@ -1051,6 +1098,7 @@
       "ret_60": 0.73,
       "ma_aligned": 0,
       "days_below_ma10": 2,
+      "ma200_slope": null,
       "hotness": 0.623
     },
     {
@@ -1065,6 +1113,7 @@
       "ret_60": 0.168,
       "ma_aligned": 0,
       "days_below_ma10": 22,
+      "ma200_slope": 157.05,
       "hotness": 0.504
     }
   ],
