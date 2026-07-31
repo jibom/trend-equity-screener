@@ -893,7 +893,7 @@
       "ma_aligned": 0,
       "days_below_ma10": 6,
       "ma200_slope": 57.97,
-      "hotness": 1.089
+      "hotness": 1.09
     },
     {
       "ticker": "JEPQ.US",
@@ -1268,18 +1268,6 @@
       "hotness": 0.474
     },
     {
-      "ticker": "VLUE.US",
-      "name": "iShares MSCI USA Value Factor ETF",
-      "sub_industry": "MSCI USA Value",
-      "close": 193.33,
-      "pct_high_250": 0.945,
-      "ret_60": 0.155,
-      "ma_aligned": 0,
-      "days_below_ma10": 0,
-      "ma200_slope": 57.98,
-      "hotness": 0.45
-    },
-    {
       "ticker": "IJR.US",
       "name": "iShares Core S&P Small-Cap ETF",
       "sub_industry": "Small Blend",
@@ -1289,6 +1277,18 @@
       "ma_aligned": 0,
       "days_below_ma10": 0,
       "ma200_slope": 28.73,
+      "hotness": 0.45
+    },
+    {
+      "ticker": "VLUE.US",
+      "name": "iShares MSCI USA Value Factor ETF",
+      "sub_industry": "MSCI USA Value",
+      "close": 193.33,
+      "pct_high_250": 0.945,
+      "ret_60": 0.155,
+      "ma_aligned": 0,
+      "days_below_ma10": 0,
+      "ma200_slope": 57.98,
       "hotness": 0.45
     },
     {
@@ -1997,7 +1997,7 @@
       "ma_aligned": 0,
       "days_below_ma10": 0,
       "ma200_slope": 39.13,
-      "hotness": 0.054
+      "hotness": 0.053
     },
     {
       "ticker": "VWO.US",
@@ -2204,6 +2204,18 @@
       "hotness": -0.086
     },
     {
+      "ticker": "RSPS.US",
+      "name": "Invesco S&P 500 Equal Weight Co",
+      "sub_industry": "S&P 500 EW Consumer Staples",
+      "close": 31.09,
+      "pct_high_250": 0.95,
+      "ret_60": 0.065,
+      "ma_aligned": 1,
+      "days_below_ma10": 0,
+      "ma200_slope": 11.8,
+      "hotness": -0.091
+    },
+    {
       "ticker": "SPMD.US",
       "name": "SPDR Russell Small Cap Completeness",
       "sub_industry": "Mid-Cap Blend",
@@ -2214,18 +2226,6 @@
       "days_below_ma10": 2,
       "ma200_slope": 20.87,
       "hotness": -0.091
-    },
-    {
-      "ticker": "RSPS.US",
-      "name": "Invesco S&P 500 Equal Weight Co",
-      "sub_industry": "S&P 500 EW Consumer Staples",
-      "close": 31.09,
-      "pct_high_250": 0.95,
-      "ret_60": 0.065,
-      "ma_aligned": 1,
-      "days_below_ma10": 0,
-      "ma200_slope": 11.8,
-      "hotness": -0.092
     },
     {
       "ticker": "IBAT.US",
@@ -2381,7 +2381,7 @@
       "ma_aligned": 0,
       "days_below_ma10": 0,
       "ma200_slope": 26.84,
-      "hotness": -0.24
+      "hotness": -0.239
     },
     {
       "ticker": "DBA.US",
