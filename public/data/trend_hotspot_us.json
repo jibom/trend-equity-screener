@@ -203,7 +203,7 @@
         "amt_1d_yi": 519.99,
         "amt_5d_yi": 527.96,
         "share_1d": 7.24,
-        "share_5d": 8.26,
+        "share_5d": 8.25,
         "share5_pctile200": 24.0,
         "ret_60": 0.078,
         "composite": 0.707
@@ -232,8 +232,8 @@
         "breadth_60": 5.714,
         "amt_surge": 1.173,
         "amt_rank": 0.605,
-        "amt_1d_yi": 3742.88,
-        "amt_5d_yi": 3196.87,
+        "amt_1d_yi": 3744.48,
+        "amt_5d_yi": 3197.18,
         "share_1d": 52.14,
         "share_5d": 49.99,
         "share5_pctile200": 83.0,
@@ -280,9 +280,9 @@
         "breadth_60": 16.129,
         "amt_surge": 0.981,
         "amt_rank": 0.451,
-        "amt_1d_yi": 132.71,
-        "amt_5d_yi": 156.65,
-        "share_1d": 1.85,
+        "amt_1d_yi": 133.87,
+        "amt_5d_yi": 156.88,
+        "share_1d": 1.86,
         "share_5d": 2.45,
         "share5_pctile200": 33.5,
         "ret_60": -0.033,
@@ -2006,8 +2006,8 @@
       "pctile_now": 63.5,
       "pctile_ago": 10.5,
       "delta10": 53.0,
-      "amt5_now_yi": 114.47,
-      "amt5_chg_pct": 81.7,
+      "amt5_now_yi": 115.64,
+      "amt5_chg_pct": 83.6,
       "flag": "gain"
     },
     {
@@ -2526,8 +2526,8 @@
       "pctile_now": 75.5,
       "pctile_ago": 75.5,
       "delta10": 0.0,
-      "amt5_now_yi": 7138.92,
-      "amt5_chg_pct": 15.1,
+      "amt5_now_yi": 7140.47,
+      "amt5_chg_pct": 15.2,
       "flag": ""
     },
     {
@@ -2621,16 +2621,6 @@
       "flag": ""
     },
     {
-      "sub_industry": "Medical Devices",
-      "n": 7,
-      "pctile_now": 70.0,
-      "pctile_ago": 74.5,
-      "delta10": -4.5,
-      "amt5_now_yi": 273.08,
-      "amt5_chg_pct": 10.6,
-      "flag": ""
-    },
-    {
       "sub_industry": "REIT - Hotel & Motel",
       "n": 1,
       "pctile_now": 86.0,
@@ -2638,6 +2628,16 @@
       "delta10": -4.5,
       "amt5_now_yi": 11.85,
       "amt5_chg_pct": 9.6,
+      "flag": ""
+    },
+    {
+      "sub_industry": "Medical Devices",
+      "n": 7,
+      "pctile_now": 69.5,
+      "pctile_ago": 74.5,
+      "delta10": -5.0,
+      "amt5_now_yi": 273.08,
+      "amt5_chg_pct": 10.6,
       "flag": ""
     },
     {
@@ -2826,7 +2826,7 @@
       "pctile_now": 42.0,
       "pctile_ago": 59.5,
       "delta10": -17.5,
-      "amt5_now_yi": 562.1,
+      "amt5_now_yi": 562.15,
       "amt5_chg_pct": -7.0,
       "flag": ""
     },
@@ -3140,8 +3140,8 @@
         "pctile_now": 63.5,
         "pctile_ago": 10.5,
         "delta10": 53.0,
-        "amt5_now_yi": 114.47,
-        "amt5_chg_pct": 81.7,
+        "amt5_now_yi": 115.64,
+        "amt5_chg_pct": 83.6,
         "flag": "gain"
       },
       {
