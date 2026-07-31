@@ -2446,16 +2446,6 @@
       "last_close": 23.82
     },
     {
-      "ticker": "0817.HK",
-      "name_cn": "中国金茂",
-      "gics_sector": "Real Estate",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 4,
-      "last_close": 1.38
-    },
-    {
       "ticker": "2869.HK",
       "name_cn": "绿城服务",
       "gics_sector": "Real Estate",
@@ -2464,6 +2454,16 @@
       "emoji": "🔴",
       "days_in_state": 4,
       "last_close": 4.33
+    },
+    {
+      "ticker": "0817.HK",
+      "name_cn": "中国金茂",
+      "gics_sector": "Real Estate",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 4,
+      "last_close": 1.38
     },
     {
       "ticker": "0083.HK",
