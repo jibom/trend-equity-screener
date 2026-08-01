@@ -1122,7 +1122,7 @@
       "ma_aligned": 0,
       "days_below_ma10": 6,
       "ma200_slope": -94.1,
-      "hotness": 0.486
+      "hotness": 0.485
     },
     {
       "ticker": "IWS.US",
@@ -2106,7 +2106,7 @@
       "ma_aligned": 0,
       "days_below_ma10": 0,
       "ma200_slope": 5.09,
-      "hotness": -0.113
+      "hotness": -0.114
     },
     {
       "ticker": "IYW.US",
@@ -2273,8 +2273,8 @@
       "ret_60": -0.009,
       "ma_aligned": 0,
       "days_below_ma10": 1,
-      "ma200_slope": 27.06,
-      "hotness": -0.238
+      "ma200_slope": 27.07,
+      "hotness": -0.237
     },
     {
       "ticker": "GRID.US",
