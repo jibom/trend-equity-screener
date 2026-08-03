@@ -2706,16 +2706,6 @@
       "last_close": 119.3
     },
     {
-      "ticker": "1876.HK",
-      "name_cn": "百威亚太",
-      "gics_sector": "Consumer Staples",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 2,
-      "last_close": 6.565
-    },
-    {
       "ticker": "0168.HK",
       "name_cn": "青岛啤酒股份",
       "gics_sector": "Consumer Staples",
@@ -2724,6 +2714,16 @@
       "emoji": "🔴",
       "days_in_state": 1,
       "last_close": 45.84
+    },
+    {
+      "ticker": "1876.HK",
+      "name_cn": "百威亚太",
+      "gics_sector": "Consumer Staples",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 2,
+      "last_close": 6.565
     },
     {
       "ticker": "0288.HK",
@@ -2796,16 +2796,6 @@
       "last_close": 11.23
     },
     {
-      "ticker": "9903.HK",
-      "name_cn": "天数智芯",
-      "gics_sector": "Information Technology",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 2,
-      "last_close": 428.2
-    },
-    {
       "ticker": "6809.HK",
       "name_cn": "澜起科技",
       "gics_sector": "Information Technology",
@@ -2814,6 +2804,16 @@
       "emoji": "🔴",
       "days_in_state": 1,
       "last_close": 248.8
+    },
+    {
+      "ticker": "9903.HK",
+      "name_cn": "天数智芯",
+      "gics_sector": "Information Technology",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 2,
+      "last_close": 428.2
     },
     {
       "ticker": "0763.HK",
