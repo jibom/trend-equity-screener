@@ -80,7 +80,7 @@
         "breadth_60": 50.0,
         "amt_surge": 1.233,
         "amt_rank": 0.365,
-        "amt_1d_yi": 15.67,
+        "amt_1d_yi": 15.68,
         "amt_5d_yi": 14.74,
         "share_1d": 0.23,
         "share_5d": 0.22,
@@ -216,8 +216,8 @@
         "breadth_60": 9.783,
         "amt_surge": 1.087,
         "amt_rank": 0.467,
-        "amt_1d_yi": 521.71,
-        "amt_5d_yi": 588.93,
+        "amt_1d_yi": 521.75,
+        "amt_5d_yi": 588.94,
         "share_1d": 7.57,
         "share_5d": 8.69,
         "share5_pctile200": 82.5,
@@ -232,7 +232,7 @@
         "breadth_60": 25.806,
         "amt_surge": 0.984,
         "amt_rank": 0.435,
-        "amt_1d_yi": 157.24,
+        "amt_1d_yi": 157.25,
         "amt_5d_yi": 159.85,
         "share_1d": 2.28,
         "share_5d": 2.36,
@@ -248,8 +248,8 @@
         "breadth_60": 5.714,
         "amt_surge": 1.159,
         "amt_rank": 0.607,
-        "amt_1d_yi": 3316.37,
-        "amt_5d_yi": 3379.05,
+        "amt_1d_yi": 3316.33,
+        "amt_5d_yi": 3378.99,
         "share_1d": 48.15,
         "share_5d": 49.83,
         "share5_pctile200": 81.5,
@@ -2044,7 +2044,7 @@
       "pctile_now": 44.0,
       "pctile_ago": 6.5,
       "delta10": 37.5,
-      "amt5_now_yi": 1276.01,
+      "amt5_now_yi": 1276.0,
       "amt5_chg_pct": 38.4,
       "flag": ""
     },
@@ -2154,7 +2154,7 @@
       "pctile_now": 100.0,
       "pctile_ago": 73.5,
       "delta10": 26.5,
-      "amt5_now_yi": 519.15,
+      "amt5_now_yi": 519.17,
       "amt5_chg_pct": 76.9,
       "flag": ""
     },
@@ -2339,6 +2339,16 @@
       "flag": ""
     },
     {
+      "sub_industry": "Health Info Svc",
+      "n": 2,
+      "pctile_now": 10.0,
+      "pctile_ago": 1.5,
+      "delta10": 8.5,
+      "amt5_now_yi": 31.22,
+      "amt5_chg_pct": 20.7,
+      "flag": ""
+    },
+    {
       "sub_industry": "Footwear & Accessories",
       "n": 2,
       "pctile_now": 11.5,
@@ -2346,16 +2356,6 @@
       "delta10": 8.0,
       "amt5_now_yi": 53.23,
       "amt5_chg_pct": 28.4,
-      "flag": ""
-    },
-    {
-      "sub_industry": "Health Info Svc",
-      "n": 2,
-      "pctile_now": 9.5,
-      "pctile_ago": 1.5,
-      "delta10": 8.0,
-      "amt5_now_yi": 31.22,
-      "amt5_chg_pct": 20.7,
       "flag": ""
     },
     {
@@ -2434,7 +2434,7 @@
       "pctile_now": 88.5,
       "pctile_ago": 89.0,
       "delta10": -0.5,
-      "amt5_now_yi": 1060.89,
+      "amt5_now_yi": 1060.59,
       "amt5_chg_pct": 14.8,
       "flag": ""
     },
@@ -2454,7 +2454,7 @@
       "pctile_now": 34.5,
       "pctile_ago": 35.5,
       "delta10": -1.0,
-      "amt5_now_yi": 287.28,
+      "amt5_now_yi": 287.3,
       "amt5_chg_pct": 12.4,
       "flag": ""
     },
@@ -2524,7 +2524,7 @@
       "pctile_now": 15.5,
       "pctile_ago": 20.0,
       "delta10": -4.5,
-      "amt5_now_yi": 14.62,
+      "amt5_now_yi": 14.61,
       "amt5_chg_pct": 8.1,
       "flag": ""
     },
@@ -2844,7 +2844,7 @@
       "pctile_now": 62.5,
       "pctile_ago": 95.5,
       "delta10": -33.0,
-      "amt5_now_yi": 73.7,
+      "amt5_now_yi": 73.71,
       "amt5_chg_pct": -8.2,
       "flag": ""
     },
