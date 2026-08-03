@@ -2726,16 +2726,6 @@
       "last_close": 6.565
     },
     {
-      "ticker": "0288.HK",
-      "name_cn": "万洲国际",
-      "gics_sector": "Consumer Staples",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 3,
-      "last_close": 8.415
-    },
-    {
       "ticker": "2648.HK",
       "name_cn": "安井食品",
       "gics_sector": "Consumer Staples",
@@ -2744,6 +2734,16 @@
       "emoji": "🔴",
       "days_in_state": 1,
       "last_close": 72.65
+    },
+    {
+      "ticker": "0288.HK",
+      "name_cn": "万洲国际",
+      "gics_sector": "Consumer Staples",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 3,
+      "last_close": 8.415
     },
     {
       "ticker": "2714.HK",
@@ -2796,16 +2796,6 @@
       "last_close": 11.23
     },
     {
-      "ticker": "6809.HK",
-      "name_cn": "澜起科技",
-      "gics_sector": "Information Technology",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 1,
-      "last_close": 248.8
-    },
-    {
       "ticker": "9903.HK",
       "name_cn": "天数智芯",
       "gics_sector": "Information Technology",
@@ -2816,14 +2806,14 @@
       "last_close": 428.2
     },
     {
-      "ticker": "0763.HK",
-      "name_cn": "中兴通讯",
+      "ticker": "6809.HK",
+      "name_cn": "澜起科技",
       "gics_sector": "Information Technology",
       "alert_type": "B_EXIT",
       "label": "B·EXIT",
       "emoji": "🔴",
-      "days_in_state": 3,
-      "last_close": 25.26
+      "days_in_state": 1,
+      "last_close": 248.8
     },
     {
       "ticker": "0981.HK",
@@ -2834,6 +2824,16 @@
       "emoji": "🔴",
       "days_in_state": 3,
       "last_close": 62.2
+    },
+    {
+      "ticker": "0763.HK",
+      "name_cn": "中兴通讯",
+      "gics_sector": "Information Technology",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 3,
+      "last_close": 25.26
     },
     {
       "ticker": "2696.HK",
