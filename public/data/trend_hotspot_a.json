@@ -341,7 +341,7 @@
   "part1c1": [
     {
       "ticker": "600036.SH",
-      "name": "招商银行",
+      "name": "ÕÐÉÌÒøÐÐ",
       "sub_industry": "股份制银行",
       "sector": "银行",
       "close": 40.36,
@@ -358,7 +358,7 @@
     },
     {
       "ticker": "601328.SH",
-      "name": "交通银行",
+      "name": "½»Í¨ÒøÐÐ",
       "sub_industry": "国有大型银行",
       "sector": "银行",
       "close": 7.25,
@@ -375,7 +375,7 @@
     },
     {
       "ticker": "000001.SZ",
-      "name": "平安银行",
+      "name": "Æ½°²ÒøÐÐ",
       "sub_industry": "股份制银行",
       "sector": "银行",
       "close": 11.62,
@@ -392,7 +392,7 @@
     },
     {
       "ticker": "601166.SH",
-      "name": "兴业银行",
+      "name": "ÐËÒµÒøÐÐ",
       "sub_industry": "股份制银行",
       "sector": "银行",
       "close": 19.1,
@@ -409,7 +409,7 @@
     },
     {
       "ticker": "600941.SH",
-      "name": "中国移动",
+      "name": "ÖÐ¹úÒÆ¶¯",
       "sub_industry": "电信运营商",
       "sector": "通信",
       "close": 98.97,
@@ -426,7 +426,7 @@
     },
     {
       "ticker": "688111.SH",
-      "name": "金山办公",
+      "name": "½ðÉ½°ì¹«",
       "sub_industry": "横向通用软件",
       "sector": "计算机",
       "close": 274.01,
@@ -443,7 +443,7 @@
     },
     {
       "ticker": "601816.SH",
-      "name": "京沪高铁",
+      "name": "¾©»¦¸ßÌú",
       "sub_industry": "铁路运输",
       "sector": "交通运输",
       "close": 5.22,
@@ -460,7 +460,7 @@
     },
     {
       "ticker": "601668.SH",
-      "name": "中国建筑",
+      "name": "ÖÐ¹ú½¨Öþ",
       "sub_industry": "房屋建设",
       "sector": "建筑装饰",
       "close": 4.76,
@@ -477,7 +477,7 @@
     },
     {
       "ticker": "601985.SH",
-      "name": "中国核电",
+      "name": "ÖÐ¹úºËµç",
       "sub_industry": "核力发电",
       "sector": "公用事业",
       "close": 9.03,
@@ -494,7 +494,7 @@
     },
     {
       "ticker": "601658.SH",
-      "name": "邮储银行",
+      "name": "ÓÊ´¢ÒøÐÐ",
       "sub_industry": "国有大型银行",
       "sector": "银行",
       "close": 5.14,
@@ -511,7 +511,7 @@
     },
     {
       "ticker": "000676.SZ",
-      "name": "智度股份",
+      "name": "ÖÇ¶È¹É·Ý",
       "sub_industry": "营销代理",
       "sector": "传媒",
       "close": 7.59,
@@ -528,7 +528,7 @@
     },
     {
       "ticker": "601169.SH",
-      "name": "北京银行",
+      "name": "±±¾©ÒøÐÐ",
       "sub_industry": "城商行",
       "sector": "银行",
       "close": 5.23,
@@ -545,7 +545,7 @@
     },
     {
       "ticker": "600028.SH",
-      "name": "中国石化",
+      "name": "ÖÐ¹úÊ¯»¯",
       "sub_industry": "炼油化工",
       "sector": "石油石化",
       "close": 5.28,
@@ -562,7 +562,7 @@
     },
     {
       "ticker": "300779.SZ",
-      "name": "惠城环保",
+      "name": "»Ý³Ç»·±£",
       "sub_industry": "固废治理",
       "sector": "环保",
       "close": 82.43,
@@ -579,7 +579,7 @@
     },
     {
       "ticker": "600795.SH",
-      "name": "国电电力",
+      "name": "¹úµçµçÁ¦",
       "sub_industry": "火力发电",
       "sector": "公用事业",
       "close": 5.11,
@@ -596,7 +596,7 @@
     },
     {
       "ticker": "601818.SH",
-      "name": "光大银行",
+      "name": "¹â´óÒøÐÐ",
       "sub_industry": "股份制银行",
       "sector": "银行",
       "close": 3.2,
@@ -613,7 +613,7 @@
     },
     {
       "ticker": "600016.SH",
-      "name": "民生银行",
+      "name": "ÃñÉúÒøÐÐ",
       "sub_industry": "股份制银行",
       "sector": "银行",
       "close": 3.65,
@@ -632,7 +632,7 @@
   "part1c2": [
     {
       "ticker": "600664.SH",
-      "name": "哈药股份",
+      "name": "¹þÒ©¹É·Ý",
       "sub_industry": "化学制剂",
       "sector": "医药生物",
       "close": 5.99,
@@ -649,7 +649,7 @@
     },
     {
       "ticker": "000779.SZ",
-      "name": "甘咨询",
+      "name": "¸Ê×ÉÑ¯",
       "sub_industry": "工程咨询服务",
       "sector": "建筑装饰",
       "close": 13.26,
@@ -666,7 +666,7 @@
     },
     {
       "ticker": "600900.SH",
-      "name": "长江电力",
+      "name": "³¤½­µçÁ¦",
       "sub_industry": "水力发电",
       "sector": "公用事业",
       "close": 29.05,
@@ -683,7 +683,7 @@
     },
     {
       "ticker": "002415.SZ",
-      "name": "海康威视",
+      "name": "º£¿µÍþÊÓ",
       "sub_industry": "安防设备",
       "sector": "计算机",
       "close": 37.95,
@@ -700,7 +700,7 @@
     },
     {
       "ticker": "600428.SH",
-      "name": "中远海特",
+      "name": "ÖÐÔ¶º£ÌØ",
       "sub_industry": "航运",
       "sector": "交通运输",
       "close": 11.35,
@@ -717,7 +717,7 @@
     },
     {
       "ticker": "600919.SH",
-      "name": "江苏银行",
+      "name": "½­ËÕÒøÐÐ",
       "sub_industry": "城商行",
       "sector": "银行",
       "close": 11.69,
@@ -734,7 +734,7 @@
     },
     {
       "ticker": "002142.SZ",
-      "name": "宁波银行",
+      "name": "Äþ²¨ÒøÐÐ",
       "sub_industry": "城商行",
       "sector": "银行",
       "close": 32.29,
@@ -753,7 +753,7 @@
   "part2": [
     {
       "ticker": "600664.SH",
-      "name": "哈药股份",
+      "name": "¹þÒ©¹É·Ý",
       "sub_industry": "化学制剂",
       "sector": "医药生物",
       "close": 5.99,
@@ -768,7 +768,7 @@
     },
     {
       "ticker": "688146.SH",
-      "name": "中船特气",
+      "name": "ÖÐ´¬ÌØÆø",
       "sub_industry": "半导体材料",
       "sector": "电子",
       "close": 247.99,
@@ -783,7 +783,7 @@
     },
     {
       "ticker": "688072.SH",
-      "name": "拓荆科技",
+      "name": "ÍØ¾£¿Æ¼¼",
       "sub_industry": "半导体设备",
       "sector": "电子",
       "close": 591.86,
@@ -798,7 +798,7 @@
     },
     {
       "ticker": "300534.SZ",
-      "name": "陇神戎发",
+      "name": "Â¤ÉñÈÖ·¢",
       "sub_industry": "中药",
       "sector": "医药生物",
       "close": 12.67,
@@ -813,7 +813,7 @@
     },
     {
       "ticker": "688432.SH",
-      "name": "有研硅",
+      "name": "ÓÐÑÐ¹è",
       "sub_industry": "半导体材料",
       "sector": "电子",
       "close": 26.68,
@@ -828,7 +828,7 @@
     },
     {
       "ticker": "688120.SH",
-      "name": "华海清科",
+      "name": "»ªº£Çå¿Æ",
       "sub_industry": "半导体设备",
       "sector": "电子",
       "close": 226.99,
@@ -843,7 +843,7 @@
     },
     {
       "ticker": "301520.SZ",
-      "name": "万邦医药",
+      "name": "Íò°îÒ½Ò©",
       "sub_industry": "医疗研发外包",
       "sector": "医药生物",
       "close": 41.83,
@@ -858,7 +858,7 @@
     },
     {
       "ticker": "002371.SZ",
-      "name": "北方华创",
+      "name": "±±·½»ª´´",
       "sub_industry": "半导体设备",
       "sector": "电子",
       "close": 641.3,
@@ -873,7 +873,7 @@
     },
     {
       "ticker": "688361.SH",
-      "name": "中科飞测",
+      "name": "ÖÐ¿Æ·É²â",
       "sub_industry": "半导体设备",
       "sector": "电子",
       "close": 302.97,
@@ -888,7 +888,7 @@
     },
     {
       "ticker": "002409.SZ",
-      "name": "雅克科技",
+      "name": "ÑÅ¿Ë¿Æ¼¼",
       "sub_industry": "半导体材料",
       "sector": "电子",
       "close": 120.91,
@@ -903,7 +903,7 @@
     },
     {
       "ticker": "688012.SH",
-      "name": "中微公司",
+      "name": "ÖÐÎ¢¹«Ë¾",
       "sub_industry": "半导体设备",
       "sector": "电子",
       "close": 309.85,
@@ -918,7 +918,7 @@
     },
     {
       "ticker": "002422.SZ",
-      "name": "科伦药业",
+      "name": "¿ÆÂ×Ò©Òµ",
       "sub_industry": "化学制剂",
       "sector": "医药生物",
       "close": 41.33,
@@ -933,7 +933,7 @@
     },
     {
       "ticker": "688200.SH",
-      "name": "华峰测控",
+      "name": "»ª·å²â¿Ø",
       "sub_industry": "半导体设备",
       "sector": "电子",
       "close": 319.88,
@@ -948,7 +948,7 @@
     },
     {
       "ticker": "603259.SH",
-      "name": "药明康德",
+      "name": "Ò©Ã÷¿µµÂ",
       "sub_industry": "医疗研发外包",
       "sector": "医药生物",
       "close": 128.5,
@@ -963,7 +963,7 @@
     },
     {
       "ticker": "300604.SZ",
-      "name": "长川科技",
+      "name": "³¤´¨¿Æ¼¼",
       "sub_industry": "半导体设备",
       "sector": "电子",
       "close": 227.42,
@@ -978,7 +978,7 @@
     },
     {
       "ticker": "601939.SH",
-      "name": "建设银行",
+      "name": "½¨ÉèÒøÐÐ",
       "sub_industry": "国有大型银行",
       "sector": "银行",
       "close": 10.45,
@@ -993,7 +993,7 @@
     },
     {
       "ticker": "300759.SZ",
-      "name": "康龙化成",
+      "name": "¿µÁú»¯³É",
       "sub_industry": "医疗研发外包",
       "sector": "医药生物",
       "close": 36.07,
@@ -1008,7 +1008,7 @@
     },
     {
       "ticker": "688627.SH",
-      "name": "精智达",
+      "name": "¾«ÖÇ´ï",
       "sub_industry": "仪器仪表",
       "sector": "机械设备",
       "close": 371.88,
@@ -1023,7 +1023,7 @@
     },
     {
       "ticker": "688082.SH",
-      "name": "盛美上海",
+      "name": "Ê¢ÃÀÉÏº£",
       "sub_industry": "半导体设备",
       "sector": "电子",
       "close": 247.15,
@@ -1038,7 +1038,7 @@
     },
     {
       "ticker": "688409.SH",
-      "name": "富创精密",
+      "name": "¸»´´¾«ÃÜ",
       "sub_industry": "半导体设备",
       "sector": "电子",
       "close": 146.84,
@@ -1053,7 +1053,7 @@
     },
     {
       "ticker": "600428.SH",
-      "name": "中远海特",
+      "name": "ÖÐÔ¶º£ÌØ",
       "sub_industry": "航运",
       "sector": "交通运输",
       "close": 11.35,
@@ -1068,7 +1068,7 @@
     },
     {
       "ticker": "601328.SH",
-      "name": "交通银行",
+      "name": "½»Í¨ÒøÐÐ",
       "sub_industry": "国有大型银行",
       "sector": "银行",
       "close": 7.25,
@@ -1083,7 +1083,7 @@
     },
     {
       "ticker": "688037.SH",
-      "name": "芯源微",
+      "name": "Ð¾Ô´Î¢",
       "sub_industry": "半导体设备",
       "sector": "电子",
       "close": 261.0,
@@ -1098,7 +1098,7 @@
     },
     {
       "ticker": "601919.SH",
-      "name": "中远海控",
+      "name": "ÖÐÔ¶º£¿Ø",
       "sub_industry": "航运",
       "sector": "交通运输",
       "close": 15.72,
@@ -1113,7 +1113,7 @@
     },
     {
       "ticker": "688808.SH",
-      "name": "联讯仪器",
+      "name": "ÁªÑ¶ÒÇÆ÷",
       "sub_industry": "仪器仪表",
       "sector": "机械设备",
       "close": 1624.0,
@@ -1128,7 +1128,7 @@
     },
     {
       "ticker": "002821.SZ",
-      "name": "凯莱英",
+      "name": "¿­À³Ó¢",
       "sub_industry": "医疗研发外包",
       "sector": "医药生物",
       "close": 146.92,
@@ -1143,7 +1143,7 @@
     },
     {
       "ticker": "688578.SH",
-      "name": "艾力斯",
+      "name": "°¬Á¦Ë¹",
       "sub_industry": "化学制剂",
       "sector": "医药生物",
       "close": 105.88,
@@ -1158,7 +1158,7 @@
     },
     {
       "ticker": "601166.SH",
-      "name": "兴业银行",
+      "name": "ÐËÒµÒøÐÐ",
       "sub_industry": "股份制银行",
       "sector": "银行",
       "close": 19.1,
@@ -1173,7 +1173,7 @@
     },
     {
       "ticker": "300567.SZ",
-      "name": "精测电子",
+      "name": "¾«²âµç×Ó",
       "sub_industry": "仪器仪表",
       "sector": "机械设备",
       "close": 167.0,
@@ -1188,7 +1188,7 @@
     },
     {
       "ticker": "002317.SZ",
-      "name": "众生药业",
+      "name": "ÖÚÉúÒ©Òµ",
       "sub_industry": "中药",
       "sector": "医药生物",
       "close": 26.71,
@@ -1205,7 +1205,7 @@
   "part3": [
     {
       "ticker": "000566.SZ",
-      "name": "海南海药",
+      "name": "º£ÄÏº£Ò©",
       "sub_industry": "化学制剂",
       "close": 5.67,
       "ret_1d": 10.0,
@@ -1216,7 +1216,7 @@
     },
     {
       "ticker": "600000.SH",
-      "name": "浦发银行",
+      "name": "ÆÖ·¢ÒøÐÐ",
       "sub_industry": "股份制银行",
       "close": 9.63,
       "ret_1d": 4.6,
@@ -1229,7 +1229,7 @@
   "part4": [
     {
       "ticker": "300759.SZ",
-      "name": "康龙化成",
+      "name": "¿µÁú»¯³É",
       "sub_industry": "医疗研发外包",
       "close": 36.07,
       "retrace": 10.5,
@@ -1244,7 +1244,7 @@
     },
     {
       "ticker": "601872.SH",
-      "name": "招商轮船",
+      "name": "ÕÐÉÌÂÖ´¬",
       "sub_industry": "航运",
       "close": 17.03,
       "retrace": 21.0,
@@ -1259,7 +1259,7 @@
     },
     {
       "ticker": "600026.SH",
-      "name": "中远海能",
+      "name": "ÖÐÔ¶º£ÄÜ",
       "sub_industry": "航运",
       "close": 17.01,
       "retrace": 23.5,
@@ -1276,7 +1276,7 @@
   "all_stocks": [
     {
       "ticker": "600664.SH",
-      "name": "哈药股份",
+      "name": "¹þÒ©¹É·Ý",
       "sub_industry": "化学制剂",
       "sector": "医药生物",
       "close": 5.99,
@@ -1288,7 +1288,7 @@
     },
     {
       "ticker": "688146.SH",
-      "name": "中船特气",
+      "name": "ÖÐ´¬ÌØÆø",
       "sub_industry": "半导体材料",
       "sector": "电子",
       "close": 247.99,
@@ -1300,7 +1300,7 @@
     },
     {
       "ticker": "688072.SH",
-      "name": "拓荆科技",
+      "name": "ÍØ¾£¿Æ¼¼",
       "sub_industry": "半导体设备",
       "sector": "电子",
       "close": 591.86,
@@ -1312,7 +1312,7 @@
     },
     {
       "ticker": "300534.SZ",
-      "name": "陇神戎发",
+      "name": "Â¤ÉñÈÖ·¢",
       "sub_industry": "中药",
       "sector": "医药生物",
       "close": 12.67,
@@ -1324,7 +1324,7 @@
     },
     {
       "ticker": "688432.SH",
-      "name": "有研硅",
+      "name": "ÓÐÑÐ¹è",
       "sub_industry": "半导体材料",
       "sector": "电子",
       "close": 26.68,
@@ -1336,7 +1336,7 @@
     },
     {
       "ticker": "688120.SH",
-      "name": "华海清科",
+      "name": "»ªº£Çå¿Æ",
       "sub_industry": "半导体设备",
       "sector": "电子",
       "close": 226.99,
@@ -1348,7 +1348,7 @@
     },
     {
       "ticker": "301520.SZ",
-      "name": "万邦医药",
+      "name": "Íò°îÒ½Ò©",
       "sub_industry": "医疗研发外包",
       "sector": "医药生物",
       "close": 41.83,
@@ -1360,7 +1360,7 @@
     },
     {
       "ticker": "002371.SZ",
-      "name": "北方华创",
+      "name": "±±·½»ª´´",
       "sub_industry": "半导体设备",
       "sector": "电子",
       "close": 641.3,
@@ -1372,7 +1372,7 @@
     },
     {
       "ticker": "688361.SH",
-      "name": "中科飞测",
+      "name": "ÖÐ¿Æ·É²â",
       "sub_industry": "半导体设备",
       "sector": "电子",
       "close": 302.97,
@@ -1384,7 +1384,7 @@
     },
     {
       "ticker": "002409.SZ",
-      "name": "雅克科技",
+      "name": "ÑÅ¿Ë¿Æ¼¼",
       "sub_industry": "半导体材料",
       "sector": "电子",
       "close": 120.91,
@@ -1396,7 +1396,7 @@
     },
     {
       "ticker": "688012.SH",
-      "name": "中微公司",
+      "name": "ÖÐÎ¢¹«Ë¾",
       "sub_industry": "半导体设备",
       "sector": "电子",
       "close": 309.85,
@@ -1408,7 +1408,7 @@
     },
     {
       "ticker": "002422.SZ",
-      "name": "科伦药业",
+      "name": "¿ÆÂ×Ò©Òµ",
       "sub_industry": "化学制剂",
       "sector": "医药生物",
       "close": 41.33,
@@ -1420,7 +1420,7 @@
     },
     {
       "ticker": "688200.SH",
-      "name": "华峰测控",
+      "name": "»ª·å²â¿Ø",
       "sub_industry": "半导体设备",
       "sector": "电子",
       "close": 319.88,
@@ -1432,7 +1432,7 @@
     },
     {
       "ticker": "603259.SH",
-      "name": "药明康德",
+      "name": "Ò©Ã÷¿µµÂ",
       "sub_industry": "医疗研发外包",
       "sector": "医药生物",
       "close": 128.5,
@@ -1444,7 +1444,7 @@
     },
     {
       "ticker": "300604.SZ",
-      "name": "长川科技",
+      "name": "³¤´¨¿Æ¼¼",
       "sub_industry": "半导体设备",
       "sector": "电子",
       "close": 227.42,
@@ -1456,7 +1456,7 @@
     },
     {
       "ticker": "601939.SH",
-      "name": "建设银行",
+      "name": "½¨ÉèÒøÐÐ",
       "sub_industry": "国有大型银行",
       "sector": "银行",
       "close": 10.45,
@@ -1468,7 +1468,7 @@
     },
     {
       "ticker": "601398.SH",
-      "name": "工商银行",
+      "name": "¹¤ÉÌÒøÐÐ",
       "sub_industry": "国有大型银行",
       "sector": "银行",
       "close": 7.96,
@@ -1480,7 +1480,7 @@
     },
     {
       "ticker": "300759.SZ",
-      "name": "康龙化成",
+      "name": "¿µÁú»¯³É",
       "sub_industry": "医疗研发外包",
       "sector": "医药生物",
       "close": 36.07,
@@ -1492,7 +1492,7 @@
     },
     {
       "ticker": "600206.SH",
-      "name": "有研新材",
+      "name": "ÓÐÑÐÐÂ²Ä",
       "sub_industry": "半导体材料",
       "sector": "电子",
       "close": 33.15,
@@ -1504,7 +1504,7 @@
     },
     {
       "ticker": "600036.SH",
-      "name": "招商银行",
+      "name": "ÕÐÉÌÒøÐÐ",
       "sub_industry": "股份制银行",
       "sector": "银行",
       "close": 40.36,
@@ -1516,7 +1516,7 @@
     },
     {
       "ticker": "688627.SH",
-      "name": "精智达",
+      "name": "¾«ÖÇ´ï",
       "sub_industry": "仪器仪表",
       "sector": "机械设备",
       "close": 371.88,
@@ -1528,7 +1528,7 @@
     },
     {
       "ticker": "688082.SH",
-      "name": "盛美上海",
+      "name": "Ê¢ÃÀÉÏº£",
       "sub_industry": "半导体设备",
       "sector": "电子",
       "close": 247.15,
@@ -1540,7 +1540,7 @@
     },
     {
       "ticker": "603127.SH",
-      "name": "昭衍新药",
+      "name": "ÕÑÑÜÐÂÒ©",
       "sub_industry": "医疗研发外包",
       "sector": "医药生物",
       "close": 41.05,
@@ -1552,7 +1552,7 @@
     },
     {
       "ticker": "688409.SH",
-      "name": "富创精密",
+      "name": "¸»´´¾«ÃÜ",
       "sub_industry": "半导体设备",
       "sector": "电子",
       "close": 146.84,
@@ -1564,7 +1564,7 @@
     },
     {
       "ticker": "601988.SH",
-      "name": "中国银行",
+      "name": "ÖÐ¹úÒøÐÐ",
       "sub_industry": "国有大型银行",
       "sector": "银行",
       "close": 6.03,
@@ -1576,7 +1576,7 @@
     },
     {
       "ticker": "600428.SH",
-      "name": "中远海特",
+      "name": "ÖÐÔ¶º£ÌØ",
       "sub_industry": "航运",
       "sector": "交通运输",
       "close": 11.35,
@@ -1588,7 +1588,7 @@
     },
     {
       "ticker": "601328.SH",
-      "name": "交通银行",
+      "name": "½»Í¨ÒøÐÐ",
       "sub_industry": "国有大型银行",
       "sector": "银行",
       "close": 7.25,
@@ -1600,7 +1600,7 @@
     },
     {
       "ticker": "300666.SZ",
-      "name": "江丰电子",
+      "name": "½­·áµç×Ó",
       "sub_industry": "半导体材料",
       "sector": "电子",
       "close": 185.01,
@@ -1612,7 +1612,7 @@
     },
     {
       "ticker": "688037.SH",
-      "name": "芯源微",
+      "name": "Ð¾Ô´Î¢",
       "sub_industry": "半导体设备",
       "sector": "电子",
       "close": 261.0,
@@ -1624,7 +1624,7 @@
     },
     {
       "ticker": "000001.SZ",
-      "name": "平安银行",
+      "name": "Æ½°²ÒøÐÐ",
       "sub_industry": "股份制银行",
       "sector": "银行",
       "close": 11.62,
@@ -1636,7 +1636,7 @@
     },
     {
       "ticker": "601919.SH",
-      "name": "中远海控",
+      "name": "ÖÐÔ¶º£¿Ø",
       "sub_industry": "航运",
       "sector": "交通运输",
       "close": 15.72,
@@ -1648,7 +1648,7 @@
     },
     {
       "ticker": "688808.SH",
-      "name": "联讯仪器",
+      "name": "ÁªÑ¶ÒÇÆ÷",
       "sub_industry": "仪器仪表",
       "sector": "机械设备",
       "close": 1624.0,
@@ -1660,7 +1660,7 @@
     },
     {
       "ticker": "688126.SH",
-      "name": "沪硅产业",
+      "name": "»¦¹è²úÒµ",
       "sub_industry": "半导体材料",
       "sector": "电子",
       "close": 23.12,
@@ -1672,7 +1672,7 @@
     },
     {
       "ticker": "600919.SH",
-      "name": "江苏银行",
+      "name": "½­ËÕÒøÐÐ",
       "sub_industry": "城商行",
       "sector": "银行",
       "close": 11.69,
@@ -1684,7 +1684,7 @@
     },
     {
       "ticker": "688729.SH",
-      "name": "屹唐股份",
+      "name": "ÒÙÌÆ¹É·Ý",
       "sub_industry": "半导体设备",
       "sector": "电子",
       "close": 21.48,
@@ -1696,7 +1696,7 @@
     },
     {
       "ticker": "002821.SZ",
-      "name": "凯莱英",
+      "name": "¿­À³Ó¢",
       "sub_industry": "医疗研发外包",
       "sector": "医药生物",
       "close": 146.92,
@@ -1708,7 +1708,7 @@
     },
     {
       "ticker": "688578.SH",
-      "name": "艾力斯",
+      "name": "°¬Á¦Ë¹",
       "sub_industry": "化学制剂",
       "sector": "医药生物",
       "close": 105.88,
@@ -1720,7 +1720,7 @@
     },
     {
       "ticker": "688266.SH",
-      "name": "泽璟制药-U",
+      "name": "Ôó­ZÖÆÒ©-U",
       "sub_industry": "化学制剂",
       "sector": "医药生物",
       "close": 107.42,
@@ -1732,7 +1732,7 @@
     },
     {
       "ticker": "601288.SH",
-      "name": "农业银行",
+      "name": "Å©ÒµÒøÐÐ",
       "sub_industry": "国有大型银行",
       "sector": "银行",
       "close": 6.89,
@@ -1744,7 +1744,7 @@
     },
     {
       "ticker": "601166.SH",
-      "name": "兴业银行",
+      "name": "ÐËÒµÒøÐÐ",
       "sub_industry": "股份制银行",
       "sector": "银行",
       "close": 19.1,
@@ -1756,7 +1756,7 @@
     },
     {
       "ticker": "300567.SZ",
-      "name": "精测电子",
+      "name": "¾«²âµç×Ó",
       "sub_industry": "仪器仪表",
       "sector": "机械设备",
       "close": 167.0,
@@ -1768,7 +1768,7 @@
     },
     {
       "ticker": "002142.SZ",
-      "name": "宁波银行",
+      "name": "Äþ²¨ÒøÐÐ",
       "sub_industry": "城商行",
       "sector": "银行",
       "close": 32.29,
@@ -1780,7 +1780,7 @@
     },
     {
       "ticker": "600276.SH",
-      "name": "恒瑞医药",
+      "name": "ºãÈðÒ½Ò©",
       "sub_industry": "化学制剂",
       "sector": "医药生物",
       "close": 53.0,
@@ -1792,7 +1792,7 @@
     },
     {
       "ticker": "605358.SH",
-      "name": "立昂微",
+      "name": "Á¢°ºÎ¢",
       "sub_industry": "半导体材料",
       "sector": "电子",
       "close": 35.86,
@@ -1804,7 +1804,7 @@
     },
     {
       "ticker": "603061.SH",
-      "name": "金海通",
+      "name": "½ðº£Í¨",
       "sub_industry": "半导体设备",
       "sector": "电子",
       "close": 242.04,
@@ -1816,7 +1816,7 @@
     },
     {
       "ticker": "300558.SZ",
-      "name": "贝达药业",
+      "name": "±´´ïÒ©Òµ",
       "sub_industry": "化学制剂",
       "sector": "医药生物",
       "close": 56.15,
@@ -1828,7 +1828,7 @@
     },
     {
       "ticker": "002317.SZ",
-      "name": "众生药业",
+      "name": "ÖÚÉúÒ©Òµ",
       "sub_industry": "中药",
       "sector": "医药生物",
       "close": 26.71,
@@ -1840,7 +1840,7 @@
     },
     {
       "ticker": "000566.SZ",
-      "name": "海南海药",
+      "name": "º£ÄÏº£Ò©",
       "sub_industry": "化学制剂",
       "sector": "医药生物",
       "close": 5.67,
@@ -1852,7 +1852,7 @@
     },
     {
       "ticker": "688233.SH",
-      "name": "神工股份",
+      "name": "Éñ¹¤¹É·Ý",
       "sub_industry": "半导体材料",
       "sector": "电子",
       "close": 84.32,
@@ -1864,7 +1864,7 @@
     },
     {
       "ticker": "601872.SH",
-      "name": "招商轮船",
+      "name": "ÕÐÉÌÂÖ´¬",
       "sub_industry": "航运",
       "sector": "交通运输",
       "close": 17.03,
@@ -1876,7 +1876,7 @@
     },
     {
       "ticker": "600436.SH",
-      "name": "片仔癀",
+      "name": "Æ¬×Ðñ¥",
       "sub_industry": "中药",
       "sector": "医药生物",
       "close": 138.11,
@@ -1888,7 +1888,7 @@
     },
     {
       "ticker": "601658.SH",
-      "name": "邮储银行",
+      "name": "ÓÊ´¢ÒøÐÐ",
       "sub_industry": "国有大型银行",
       "sector": "银行",
       "close": 5.14,
@@ -1900,7 +1900,7 @@
     },
     {
       "ticker": "603690.SH",
-      "name": "至纯科技",
+      "name": "ÖÁ´¿¿Æ¼¼",
       "sub_industry": "半导体设备",
       "sector": "电子",
       "close": 21.2,
@@ -1912,7 +1912,7 @@
     },
     {
       "ticker": "688783.SH",
-      "name": "西安奕材-U",
+      "name": "Î÷°²ÞÈ²Ä-U",
       "sub_industry": "半导体材料",
       "sector": "电子",
       "close": 24.1,
@@ -1924,7 +1924,7 @@
     },
     {
       "ticker": "688652.SH",
-      "name": "京仪装备",
+      "name": "¾©ÒÇ×°±¸",
       "sub_industry": "半导体设备",
       "sector": "电子",
       "close": 114.14,
@@ -1936,7 +1936,7 @@
     },
     {
       "ticker": "601169.SH",
-      "name": "北京银行",
+      "name": "±±¾©ÒøÐÐ",
       "sub_industry": "城商行",
       "sector": "银行",
       "close": 5.23,
@@ -1948,7 +1948,7 @@
     },
     {
       "ticker": "688809.SH",
-      "name": "强一股份",
+      "name": "Ç¿Ò»¹É·Ý",
       "sub_industry": "半导体设备",
       "sector": "电子",
       "close": 413.33,
@@ -1960,7 +1960,7 @@
     },
     {
       "ticker": "688535.SH",
-      "name": "华海诚科",
+      "name": "»ªº£³Ï¿Æ",
       "sub_industry": "半导体材料",
       "sector": "电子",
       "close": 81.66,
@@ -1972,7 +1972,7 @@
     },
     {
       "ticker": "002119.SZ",
-      "name": "康强电子",
+      "name": "¿µÇ¿µç×Ó",
       "sub_industry": "半导体材料",
       "sector": "电子",
       "close": 19.2,
@@ -1984,7 +1984,7 @@
     },
     {
       "ticker": "600000.SH",
-      "name": "浦发银行",
+      "name": "ÆÖ·¢ÒøÐÐ",
       "sub_industry": "股份制银行",
       "sector": "银行",
       "close": 9.63,
@@ -1996,7 +1996,7 @@
     },
     {
       "ticker": "300199.SZ",
-      "name": "翰宇药业",
+      "name": "º²ÓîÒ©Òµ",
       "sub_industry": "化学制剂",
       "sector": "医药生物",
       "close": 20.44,
@@ -2008,7 +2008,7 @@
     },
     {
       "ticker": "601818.SH",
-      "name": "光大银行",
+      "name": "¹â´óÒøÐÐ",
       "sub_industry": "股份制银行",
       "sector": "银行",
       "close": 3.2,
@@ -2020,7 +2020,7 @@
     },
     {
       "ticker": "600016.SH",
-      "name": "民生银行",
+      "name": "ÃñÉúÒøÐÐ",
       "sub_industry": "股份制银行",
       "sector": "银行",
       "close": 3.65,
@@ -2032,7 +2032,7 @@
     },
     {
       "ticker": "301611.SZ",
-      "name": "珂玛科技",
+      "name": "çæÂê¿Æ¼¼",
       "sub_industry": "半导体材料",
       "sector": "电子",
       "close": 77.45,
@@ -2044,7 +2044,7 @@
     },
     {
       "ticker": "300347.SZ",
-      "name": "泰格医药",
+      "name": "Ì©¸ñÒ½Ò©",
       "sub_industry": "医疗研发外包",
       "sector": "医药生物",
       "close": 49.63,
@@ -2056,7 +2056,7 @@
     },
     {
       "ticker": "688234.SH",
-      "name": "天岳先进",
+      "name": "ÌìÔÀÏÈ½ø",
       "sub_industry": "半导体材料",
       "sector": "电子",
       "close": 81.39,
@@ -2068,7 +2068,7 @@
     },
     {
       "ticker": "600026.SH",
-      "name": "中远海能",
+      "name": "ÖÐÔ¶º£ÄÜ",
       "sub_industry": "航运",
       "sector": "交通运输",
       "close": 17.01,
@@ -2080,7 +2080,7 @@
     },
     {
       "ticker": "002294.SZ",
-      "name": "信立泰",
+      "name": "ÐÅÁ¢Ì©",
       "sub_industry": "化学制剂",
       "sector": "医药生物",
       "close": 33.2,
@@ -2092,7 +2092,7 @@
     },
     {
       "ticker": "300255.SZ",
-      "name": "常山药业",
+      "name": "³£É½Ò©Òµ",
       "sub_industry": "化学制剂",
       "sector": "医药生物",
       "close": 25.21,
