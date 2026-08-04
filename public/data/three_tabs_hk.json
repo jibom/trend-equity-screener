@@ -2305,16 +2305,6 @@
       "last_close": 6.29
     },
     {
-      "ticker": "0883.HK",
-      "name_cn": "中国海洋石油",
-      "gics_sector": "Energy",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 1,
-      "last_close": 23.58
-    },
-    {
       "ticker": "0857.HK",
       "name_cn": "中国石油股份",
       "gics_sector": "Energy",
@@ -2323,6 +2313,16 @@
       "emoji": "🔴",
       "days_in_state": 1,
       "last_close": 9.645
+    },
+    {
+      "ticker": "0883.HK",
+      "name_cn": "中国海洋石油",
+      "gics_sector": "Energy",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 1,
+      "last_close": 23.58
     },
     {
       "ticker": "1088.HK",
@@ -2395,16 +2395,6 @@
       "last_close": 2.29
     },
     {
-      "ticker": "1816.HK",
-      "name_cn": "中广核电力",
-      "gics_sector": "Utilities",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 4,
-      "last_close": 2.935
-    },
-    {
       "ticker": "0257.HK",
       "name_cn": "光大环境",
       "gics_sector": "Industrials",
@@ -2413,6 +2403,16 @@
       "emoji": "🔴",
       "days_in_state": 1,
       "last_close": 5.045
+    },
+    {
+      "ticker": "1816.HK",
+      "name_cn": "中广核电力",
+      "gics_sector": "Utilities",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 4,
+      "last_close": 2.935
     },
     {
       "ticker": "0006.HK",
@@ -2475,16 +2475,6 @@
       "last_close": 225.6
     },
     {
-      "ticker": "1876.HK",
-      "name_cn": "百威亚太",
-      "gics_sector": "Consumer Staples",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 3,
-      "last_close": 6.57
-    },
-    {
       "ticker": "0168.HK",
       "name_cn": "青岛啤酒股份",
       "gics_sector": "Consumer Staples",
@@ -2493,6 +2483,16 @@
       "emoji": "🔴",
       "days_in_state": 2,
       "last_close": 45.3
+    },
+    {
+      "ticker": "1876.HK",
+      "name_cn": "百威亚太",
+      "gics_sector": "Consumer Staples",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 3,
+      "last_close": 6.57
     },
     {
       "ticker": "0288.HK",
