@@ -1005,7 +1005,7 @@
       "ma_aligned": 0,
       "days_below_ma10": 0,
       "ma200_slope": 22.34,
-      "hotness": 1.306
+      "hotness": 1.305
     },
     {
       "ticker": "VTV.US",
@@ -1029,7 +1029,7 @@
       "ma_aligned": 0,
       "days_below_ma10": 0,
       "ma200_slope": 59.54,
-      "hotness": 1.042
+      "hotness": 1.043
     },
     {
       "ticker": "JEPQ.US",
@@ -1605,7 +1605,7 @@
       "ma_aligned": 0,
       "days_below_ma10": 0,
       "ma200_slope": 17.37,
-      "hotness": 0.354
+      "hotness": 0.353
     },
     {
       "ticker": "EFA.US",
