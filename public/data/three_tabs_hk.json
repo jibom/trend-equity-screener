@@ -850,7 +850,7 @@
         "state": "ENTANGLED",
         "substate": "",
         "last_close": 4.325,
-        "ma10": 4.357,
+        "ma10": 4.356,
         "ma20": 4.272,
         "ma60": 4.236,
         "ma200": 4.46,
@@ -1497,7 +1497,7 @@
       "substate": "STRONG",
       "last_close": 7.205,
       "ma10": 7.36,
-      "ma20": 7.114,
+      "ma20": 7.113,
       "ma60": 6.913,
       "ma200": 6.429,
       "ma200_slope": 41.71,
@@ -1721,7 +1721,7 @@
       "substate": "EARLY",
       "last_close": 5.94,
       "ma10": 6.123,
-      "ma20": 5.874,
+      "ma20": 5.875,
       "ma60": 5.803,
       "ma200": 5.586,
       "ma200_slope": 30.04,
@@ -2307,16 +2307,6 @@
       "last_close": 121.7
     },
     {
-      "ticker": "0257.HK",
-      "name_cn": "光大环境",
-      "gics_sector": "Industrials",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 2,
-      "last_close": 5.035
-    },
-    {
       "ticker": "0371.HK",
       "name_cn": "北控水务集团",
       "gics_sector": "Utilities",
@@ -2325,6 +2315,16 @@
       "emoji": "🔴",
       "days_in_state": 3,
       "last_close": 2.275
+    },
+    {
+      "ticker": "0257.HK",
+      "name_cn": "光大环境",
+      "gics_sector": "Industrials",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 2,
+      "last_close": 5.035
     },
     {
       "ticker": "0006.HK",
