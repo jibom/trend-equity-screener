@@ -2307,16 +2307,6 @@
       "last_close": 121.7
     },
     {
-      "ticker": "0371.HK",
-      "name_cn": "北控水务集团",
-      "gics_sector": "Utilities",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 3,
-      "last_close": 2.275
-    },
-    {
       "ticker": "0257.HK",
       "name_cn": "光大环境",
       "gics_sector": "Industrials",
@@ -2325,6 +2315,16 @@
       "emoji": "🔴",
       "days_in_state": 2,
       "last_close": 5.035
+    },
+    {
+      "ticker": "0371.HK",
+      "name_cn": "北控水务集团",
+      "gics_sector": "Utilities",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 3,
+      "last_close": 2.275
     },
     {
       "ticker": "0006.HK",
