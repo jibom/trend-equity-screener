@@ -7,7 +7,7 @@
     "prev_pool_status": "",
     "status_change": "none",
     "first_breakout_date": "",
-    "last_breakout_date": "2026-08-05",
+    "last_breakout_date": "2026-08-06",
     "breakout_count_60d": 0,
     "from_bottom": false,
     "days_in_trend": 0,
@@ -18,9 +18,9 @@
     "ma_20w": 202.78,
     "ma_40w": 192.97,
     "ma_50w": 190.66,
-    "sma10": 203.27,
-    "sma50": 205.73,
-    "sma200": 193.41
+    "sma10": 203.28,
+    "sma50": 205.79,
+    "sma200": 193.26
   },
   {
     "ticker": "AMD.US",
@@ -41,9 +41,9 @@
     "ma_20w": 430.13,
     "ma_40w": 322.99,
     "ma_50w": 296.61,
-    "sma10": 488.76,
-    "sma50": 514.62,
-    "sma200": 315.79
+    "sma10": 492.13,
+    "sma50": 513.6,
+    "sma200": 314.37
   },
   {
     "ticker": "AVGO.US",
@@ -64,9 +64,9 @@
     "ma_20w": 390.51,
     "ma_40w": 365.68,
     "ma_50w": 360.27,
-    "sma10": 391.46,
-    "sma50": 394.72,
-    "sma200": 365.82
+    "sma10": 389.33,
+    "sma50": 394.62,
+    "sma200": 365.49
   },
   {
     "ticker": "INTC.US",
@@ -110,9 +110,9 @@
     "ma_20w": 769.13,
     "ma_40w": 550.99,
     "ma_50w": 475.59,
-    "sma10": 868.39,
-    "sma50": 972.17,
-    "sma200": 528.11
+    "sma10": 875.08,
+    "sma50": 969.33,
+    "sma200": 524.66
   },
   {
     "ticker": "QCOM.US",
@@ -156,9 +156,9 @@
     "ma_20w": 273.86,
     "ma_40w": 230.17,
     "ma_50w": 219.18,
-    "sma10": 276.87,
-    "sma50": 295.11,
-    "sma200": 225.79
+    "sma10": 277.78,
+    "sma50": 295.59,
+    "sma200": 225.23
   },
   {
     "ticker": "AMAT.US",
@@ -179,9 +179,9 @@
     "ma_20w": 480.81,
     "ma_40w": 389.27,
     "ma_50w": 351.23,
-    "sma10": 513.74,
-    "sma50": 549.84,
-    "sma200": 377.6
+    "sma10": 514.47,
+    "sma50": 547.55,
+    "sma200": 376.0
   },
   {
     "ticker": "LRCX.US",
@@ -202,9 +202,9 @@
     "ma_20w": 302.22,
     "ma_40w": 249.39,
     "ma_50w": 225.46,
-    "sma10": 294.91,
-    "sma50": 338.25,
-    "sma200": 243.27
+    "sma10": 295.06,
+    "sma50": 338.0,
+    "sma200": 242.39
   },
   {
     "ticker": "KLAC.US",
@@ -225,9 +225,9 @@
     "ma_20w": 199.16,
     "ma_40w": 166.69,
     "ma_50w": 154.13,
-    "sma10": 192.78,
-    "sma50": 221.54,
-    "sma200": 163.56
+    "sma10": 194.7,
+    "sma50": 221.41,
+    "sma200": 163.13
   },
   {
     "ticker": "MRVL.US",
@@ -248,9 +248,9 @@
     "ma_20w": 196.5,
     "ma_40w": 140.6,
     "ma_50w": 128.22,
-    "sma10": 192.48,
-    "sma50": 240.4,
-    "sma200": 136.79
+    "sma10": 191.72,
+    "sma50": 239.96,
+    "sma200": 136.14
   },
   {
     "ticker": "ON.US",
@@ -271,9 +271,9 @@
     "ma_20w": 94.65,
     "ma_40w": 76.33,
     "ma_50w": 71.0,
-    "sma10": 83.27,
-    "sma50": 103.19,
-    "sma200": 75.44
+    "sma10": 84.42,
+    "sma50": 103.9,
+    "sma200": 75.3
   },
   {
     "ticker": "MCHP.US",
@@ -294,9 +294,9 @@
     "ma_20w": 84.77,
     "ma_40w": 75.51,
     "ma_50w": 73.01,
-    "sma10": 76.82,
-    "sma50": 87.99,
-    "sma200": 75.14
+    "sma10": 77.25,
+    "sma50": 88.25,
+    "sma200": 75.05
   },
   {
     "ticker": "NXPI.US",
@@ -359,13 +359,13 @@
     "last_close": 66.99,
     "weekly_aligned": false,
     "daily_aligned": false,
-    "ma_5w": 61.84,
-    "ma_20w": 65.38,
+    "ma_5w": 61.88,
+    "ma_20w": 65.39,
     "ma_40w": 62.96,
     "ma_50w": 65.02,
-    "sma10": 62.98,
-    "sma50": 67.88,
-    "sma200": 63.58
+    "sma10": 62.37,
+    "sma50": 68.61,
+    "sma200": 63.69
   },
   {
     "ticker": "ADI.US",
@@ -432,9 +432,9 @@
     "ma_20w": 1616.86,
     "ma_40w": 1422.34,
     "ma_50w": 1322.93,
-    "sma10": 1665.53,
-    "sma50": 1754.3,
-    "sma200": 1398.01
+    "sma10": 1674.3,
+    "sma50": 1752.68,
+    "sma200": 1394.52
   },
   {
     "ticker": "ARM.US",
@@ -455,9 +455,9 @@
     "ma_20w": 265.74,
     "ma_40w": 194.72,
     "ma_50w": 186.24,
-    "sma10": 255.44,
-    "sma50": 323.3,
-    "sma200": 191.3
+    "sma10": 255.73,
+    "sma50": 323.82,
+    "sma200": 190.75
   },
   {
     "ticker": "TSM.US",
@@ -478,9 +478,9 @@
     "ma_20w": 402.9,
     "ma_40w": 361.41,
     "ma_50w": 343.35,
-    "sma10": 402.99,
-    "sma50": 425.57,
-    "sma200": 357.72
+    "sma10": 403.39,
+    "sma50": 425.3,
+    "sma200": 357.12
   },
   {
     "ticker": "SMCI.US",
@@ -501,9 +501,9 @@
     "ma_20w": 30.26,
     "ma_40w": 31.08,
     "ma_50w": 34.38,
-    "sma10": 29.2,
-    "sma50": 32.15,
-    "sma200": 32.42
+    "sma10": 29.09,
+    "sma50": 32.23,
+    "sma200": 32.54
   },
   {
     "ticker": "MRAM.US",
@@ -524,9 +524,9 @@
     "ma_20w": 19.8,
     "ma_40w": 14.94,
     "ma_50w": 13.73,
-    "sma10": 15.15,
-    "sma50": 21.15,
-    "sma200": 14.74
+    "sma10": 15.02,
+    "sma50": 21.48,
+    "sma200": 14.7
   },
   {
     "ticker": "SIMO.US",
@@ -547,9 +547,9 @@
     "ma_20w": 238.59,
     "ma_40w": 172.91,
     "ma_50w": 156.31,
-    "sma10": 251.09,
-    "sma50": 286.23,
-    "sma200": 166.97
+    "sma10": 252.41,
+    "sma50": 286.38,
+    "sma200": 166.08
   },
   {
     "ticker": "SITM.US",
@@ -566,13 +566,13 @@
     "last_close": 543.12,
     "weekly_aligned": false,
     "daily_aligned": false,
-    "ma_5w": 563.34,
-    "ma_20w": 597.41,
-    "ma_40w": 474.83,
-    "ma_50w": 435.03,
-    "sma10": 534.64,
-    "sma50": 639.85,
-    "sma200": 462.13
+    "ma_5w": 561.87,
+    "ma_20w": 597.04,
+    "ma_40w": 474.65,
+    "ma_50w": 434.88,
+    "sma10": 533.82,
+    "sma50": 650.49,
+    "sma200": 456.44
   },
   {
     "ticker": "ONTO.US",
@@ -612,13 +612,13 @@
     "last_close": 128.31,
     "weekly_aligned": true,
     "daily_aligned": false,
-    "ma_5w": 128.73,
-    "ma_20w": 127.14,
+    "ma_5w": 128.79,
+    "ma_20w": 127.15,
     "ma_40w": 104.07,
     "ma_50w": 97.15,
-    "sma10": 126.48,
-    "sma50": 138.28,
-    "sma200": 102.15
+    "sma10": 125.33,
+    "sma50": 138.48,
+    "sma200": 100.89
   },
   {
     "ticker": "COHR.US",
@@ -639,9 +639,9 @@
     "ma_20w": 330.88,
     "ma_40w": 265.24,
     "ma_50w": 234.39,
-    "sma10": 278.43,
-    "sma50": 343.94,
-    "sma200": 257.97
+    "sma10": 277.28,
+    "sma50": 345.02,
+    "sma200": 256.93
   },
   {
     "ticker": "VRT.US",
@@ -685,9 +685,9 @@
     "ma_20w": 228.05,
     "ma_40w": 233.49,
     "ma_50w": 231.41,
-    "sma10": 214.66,
-    "sma50": 244.54,
-    "sma200": 234.26
+    "sma10": 210.9,
+    "sma50": 245.63,
+    "sma200": 234.41
   },
   {
     "ticker": "STM.US",
@@ -754,9 +754,9 @@
     "ma_20w": 173.14,
     "ma_40w": 138.21,
     "ma_50w": 126.5,
-    "sma10": 143.28,
-    "sma50": 180.4,
-    "sma200": 136.01
+    "sma10": 142.7,
+    "sma50": 181.07,
+    "sma200": 135.65
   },
   {
     "ticker": "TTMI.US",
@@ -777,9 +777,9 @@
     "ma_20w": 150.96,
     "ma_40w": 117.09,
     "ma_50w": 104.52,
-    "sma10": 122.66,
-    "sma50": 164.02,
-    "sma200": 113.48
+    "sma10": 123.85,
+    "sma50": 165.16,
+    "sma200": 113.11
   },
   {
     "ticker": "AEHR.US",
@@ -819,12 +819,12 @@
     "last_close": 4.35,
     "weekly_aligned": false,
     "daily_aligned": false,
-    "ma_5w": 4.37,
+    "ma_5w": 4.39,
     "ma_20w": 5.26,
     "ma_40w": 4.63,
-    "ma_50w": 4.44,
-    "sma10": 4.11,
-    "sma50": 6.03,
+    "ma_50w": 4.45,
+    "sma10": 4.17,
+    "sma50": 6.07,
     "sma200": 4.63
   },
   {
@@ -846,8 +846,8 @@
     "ma_20w": 9.71,
     "ma_40w": 7.93,
     "ma_50w": 7.59,
-    "sma10": 7.3,
-    "sma50": 10.04,
+    "sma10": 7.21,
+    "sma50": 10.16,
     "sma200": 7.91
   },
   {
@@ -870,8 +870,8 @@
     "ma_40w": 12.68,
     "ma_50w": 11.93,
     "sma10": 11.25,
-    "sma50": 18.12,
-    "sma200": 12.79
+    "sma50": 18.45,
+    "sma200": 12.8
   },
   {
     "ticker": "LITE.US",
@@ -915,8 +915,8 @@
     "ma_20w": 3.27,
     "ma_40w": 2.68,
     "ma_50w": 2.38,
-    "sma10": 1.9,
-    "sma50": 2.98,
+    "sma10": 1.88,
+    "sma50": 3.04,
     "sma200": 2.57
   },
   {
@@ -938,9 +938,9 @@
     "ma_20w": 352.67,
     "ma_40w": 331.7,
     "ma_50w": 314.58,
-    "sma10": 343.78,
-    "sma50": 357.78,
-    "sma200": 327.81
+    "sma10": 340.22,
+    "sma50": 357.88,
+    "sma200": 327.18
   },
   {
     "ticker": "GOOG.US",
@@ -961,9 +961,9 @@
     "ma_20w": 350.6,
     "ma_40w": 330.79,
     "ma_50w": 313.98,
-    "sma10": 343.06,
-    "sma50": 355.87,
-    "sma200": 327.01
+    "sma10": 339.72,
+    "sma50": 355.94,
+    "sma200": 326.39
   },
   {
     "ticker": "ORCL.US",
@@ -996,7 +996,7 @@
     "prev_pool_status": "",
     "status_change": "none",
     "first_breakout_date": "",
-    "last_breakout_date": "2026-08-05",
+    "last_breakout_date": "2026-08-06",
     "breakout_count_60d": 0,
     "from_bottom": false,
     "days_in_trend": 0,
@@ -1007,9 +1007,9 @@
     "ma_20w": 126.98,
     "ma_40w": 104.14,
     "ma_50w": 99.92,
-    "sma10": 157.13,
-    "sma50": 151.72,
-    "sma200": 101.77
+    "sma10": 155.81,
+    "sma50": 151.03,
+    "sma200": 101.35
   },
   {
     "ticker": "TWLO.US",
@@ -1030,9 +1030,9 @@
     "ma_20w": 181.74,
     "ma_40w": 153.92,
     "ma_50w": 144.93,
-    "sma10": 192.57,
-    "sma50": 202.01,
-    "sma200": 150.93
+    "sma10": 192.79,
+    "sma50": 201.89,
+    "sma200": 150.11
   },
   {
     "ticker": "OKTA.US",
@@ -1042,7 +1042,7 @@
     "prev_pool_status": "",
     "status_change": "none",
     "first_breakout_date": "",
-    "last_breakout_date": "2026-08-05",
+    "last_breakout_date": "2026-08-06",
     "breakout_count_60d": 0,
     "from_bottom": false,
     "days_in_trend": 0,
@@ -1053,9 +1053,9 @@
     "ma_20w": 107.83,
     "ma_40w": 95.98,
     "ma_50w": 94.98,
-    "sma10": 140.39,
-    "sma50": 130.88,
-    "sma200": 94.84
+    "sma10": 139.28,
+    "sma50": 129.77,
+    "sma200": 94.54
   },
   {
     "ticker": "PL.US",
@@ -1076,9 +1076,9 @@
     "ma_20w": 32.51,
     "ma_40w": 26.69,
     "ma_50w": 23.69,
-    "sma10": 21.11,
-    "sma50": 29.9,
-    "sma200": 25.97
+    "sma10": 21.09,
+    "sma50": 30.33,
+    "sma200": 25.92
   },
   {
     "ticker": "SNPS.US",
@@ -1099,9 +1099,9 @@
     "ma_20w": 444.3,
     "ma_40w": 445.32,
     "ma_50w": 453.94,
-    "sma10": 385.13,
-    "sma50": 439.47,
-    "sma200": 448.86
+    "sma10": 382.51,
+    "sma50": 441.89,
+    "sma200": 449.04
   },
   {
     "ticker": "ROKU.US",
@@ -1111,7 +1111,7 @@
     "prev_pool_status": "",
     "status_change": "none",
     "first_breakout_date": "",
-    "last_breakout_date": "2026-08-05",
+    "last_breakout_date": "2026-08-06",
     "breakout_count_60d": 0,
     "from_bottom": false,
     "days_in_trend": 0,
@@ -1168,9 +1168,9 @@
     "ma_20w": 506.14,
     "ma_40w": 413.92,
     "ma_50w": 385.47,
-    "sma10": 514.1,
-    "sma50": 567.56,
-    "sma200": 406.15
+    "sma10": 515.43,
+    "sma50": 567.46,
+    "sma200": 404.88
   },
   {
     "ticker": "SOXL.US",
@@ -1191,9 +1191,9 @@
     "ma_20w": 154.5,
     "ma_40w": 102.73,
     "ma_50w": 89.23,
-    "sma10": 124.21,
-    "sma50": 194.24,
-    "sma200": 99.89
+    "sma10": 126.32,
+    "sma50": 195.25,
+    "sma200": 99.39
   },
   {
     "ticker": "TECL.US",
@@ -1214,9 +1214,9 @@
     "ma_20w": 177.4,
     "ma_40w": 144.73,
     "ma_50w": 138.57,
-    "sma10": 179.09,
-    "sma50": 207.27,
-    "sma200": 144.01
+    "sma10": 177.38,
+    "sma50": 207.25,
+    "sma200": 143.56
   },
   {
     "ticker": "NVDL.US",
@@ -1237,9 +1237,9 @@
     "ma_20w": 31.47,
     "ma_40w": 29.83,
     "ma_50w": 29.79,
-    "sma10": 30.28,
-    "sma50": 31.69,
-    "sma200": 30.23
+    "sma10": 30.32,
+    "sma50": 31.75,
+    "sma200": 30.22
   },
   {
     "ticker": "QQQ.US",
@@ -1329,9 +1329,9 @@
     "ma_20w": 84.98,
     "ma_40w": 77.16,
     "ma_50w": 75.27,
-    "sma10": 84.52,
-    "sma50": 91.38,
-    "sma200": 76.97
+    "sma10": 84.1,
+    "sma50": 91.39,
+    "sma200": 76.85
   },
   {
     "ticker": "GE.US",
@@ -1341,7 +1341,7 @@
     "prev_pool_status": "",
     "status_change": "none",
     "first_breakout_date": "",
-    "last_breakout_date": "2026-08-05",
+    "last_breakout_date": "2026-08-06",
     "breakout_count_60d": 0,
     "from_bottom": false,
     "days_in_trend": 0,
@@ -1364,7 +1364,7 @@
     "prev_pool_status": "",
     "status_change": "none",
     "first_breakout_date": "",
-    "last_breakout_date": "2026-08-05",
+    "last_breakout_date": "2026-08-06",
     "breakout_count_60d": 0,
     "from_bottom": false,
     "days_in_trend": 0,
@@ -1398,9 +1398,9 @@
     "ma_20w": 869.78,
     "ma_40w": 753.55,
     "ma_50w": 698.48,
-    "sma10": 848.17,
-    "sma50": 917.97,
-    "sma200": 740.52
+    "sma10": 849.45,
+    "sma50": 918.01,
+    "sma200": 738.82
   },
   {
     "ticker": "DELL.US",
@@ -1410,7 +1410,7 @@
     "prev_pool_status": "",
     "status_change": "none",
     "first_breakout_date": "",
-    "last_breakout_date": "2026-08-05",
+    "last_breakout_date": "2026-08-06",
     "breakout_count_60d": 0,
     "from_bottom": false,
     "days_in_trend": 0,
@@ -1433,7 +1433,7 @@
     "prev_pool_status": "",
     "status_change": "none",
     "first_breakout_date": "",
-    "last_breakout_date": "2026-08-05",
+    "last_breakout_date": "2026-08-06",
     "breakout_count_60d": 0,
     "from_bottom": false,
     "days_in_trend": 0,
@@ -1456,7 +1456,7 @@
     "prev_pool_status": "",
     "status_change": "none",
     "first_breakout_date": "",
-    "last_breakout_date": "2026-08-05",
+    "last_breakout_date": "2026-08-06",
     "breakout_count_60d": 0,
     "from_bottom": false,
     "days_in_trend": 0,
@@ -1479,7 +1479,7 @@
     "prev_pool_status": "",
     "status_change": "none",
     "first_breakout_date": "",
-    "last_breakout_date": "2026-08-05",
+    "last_breakout_date": "2026-08-06",
     "breakout_count_60d": 0,
     "from_bottom": false,
     "days_in_trend": 0,
@@ -1525,7 +1525,7 @@
     "prev_pool_status": "",
     "status_change": "none",
     "first_breakout_date": "",
-    "last_breakout_date": "2026-08-05",
+    "last_breakout_date": "2026-08-06",
     "breakout_count_60d": 0,
     "from_bottom": false,
     "days_in_trend": 0,
@@ -1536,9 +1536,9 @@
     "ma_20w": 19.46,
     "ma_40w": 18.26,
     "ma_50w": 17.83,
-    "sma10": 20.26,
+    "sma10": 20.27,
     "sma50": 19.6,
-    "sma200": 18.07
+    "sma200": 18.04
   },
   {
     "ticker": "MOD.US",
@@ -1571,7 +1571,7 @@
     "prev_pool_status": "",
     "status_change": "none",
     "first_breakout_date": "",
-    "last_breakout_date": "2026-08-05",
+    "last_breakout_date": "2026-08-06",
     "breakout_count_60d": 0,
     "from_bottom": false,
     "days_in_trend": 0,
@@ -1594,7 +1594,7 @@
     "prev_pool_status": "",
     "status_change": "none",
     "first_breakout_date": "",
-    "last_breakout_date": "2026-08-05",
+    "last_breakout_date": "2026-08-06",
     "breakout_count_60d": 0,
     "from_bottom": false,
     "days_in_trend": 0,
@@ -1605,9 +1605,9 @@
     "ma_20w": 199.76,
     "ma_40w": 185.08,
     "ma_50w": 178.8,
-    "sma10": 211.9,
-    "sma50": 214.24,
-    "sma200": 183.26
+    "sma10": 211.93,
+    "sma50": 213.59,
+    "sma200": 182.67
   },
   {
     "ticker": "C.US",
@@ -1640,7 +1640,7 @@
     "prev_pool_status": "",
     "status_change": "none",
     "first_breakout_date": "",
-    "last_breakout_date": "2026-08-05",
+    "last_breakout_date": "2026-08-06",
     "breakout_count_60d": 0,
     "from_bottom": false,
     "days_in_trend": 0,
@@ -1663,7 +1663,7 @@
     "prev_pool_status": "",
     "status_change": "none",
     "first_breakout_date": "",
-    "last_breakout_date": "2026-08-05",
+    "last_breakout_date": "2026-08-06",
     "breakout_count_60d": 0,
     "from_bottom": false,
     "days_in_trend": 0,
@@ -1686,7 +1686,7 @@
     "prev_pool_status": "",
     "status_change": "none",
     "first_breakout_date": "",
-    "last_breakout_date": "2026-08-05",
+    "last_breakout_date": "2026-08-06",
     "breakout_count_60d": 0,
     "from_bottom": false,
     "days_in_trend": 0,
@@ -1709,7 +1709,7 @@
     "prev_pool_status": "",
     "status_change": "none",
     "first_breakout_date": "",
-    "last_breakout_date": "2026-08-05",
+    "last_breakout_date": "2026-08-06",
     "breakout_count_60d": 0,
     "from_bottom": false,
     "days_in_trend": 0,
@@ -1732,7 +1732,7 @@
     "prev_pool_status": "",
     "status_change": "none",
     "first_breakout_date": "",
-    "last_breakout_date": "2026-08-05",
+    "last_breakout_date": "2026-08-06",
     "breakout_count_60d": 0,
     "from_bottom": false,
     "days_in_trend": 0,
@@ -1755,7 +1755,7 @@
     "prev_pool_status": "",
     "status_change": "none",
     "first_breakout_date": "",
-    "last_breakout_date": "2026-08-05",
+    "last_breakout_date": "2026-08-06",
     "breakout_count_60d": 0,
     "from_bottom": false,
     "days_in_trend": 0,
@@ -1778,7 +1778,7 @@
     "prev_pool_status": "",
     "status_change": "none",
     "first_breakout_date": "",
-    "last_breakout_date": "2026-08-05",
+    "last_breakout_date": "2026-08-06",
     "breakout_count_60d": 0,
     "from_bottom": false,
     "days_in_trend": 0,
@@ -1789,9 +1789,9 @@
     "ma_20w": 149.32,
     "ma_40w": 140.36,
     "ma_50w": 134.43,
-    "sma10": 155.15,
-    "sma50": 146.28,
-    "sma200": 138.7
+    "sma10": 155.19,
+    "sma50": 146.3,
+    "sma200": 138.47
   },
   {
     "ticker": "CVX.US",
@@ -1801,7 +1801,7 @@
     "prev_pool_status": "",
     "status_change": "none",
     "first_breakout_date": "",
-    "last_breakout_date": "2026-08-05",
+    "last_breakout_date": "2026-08-06",
     "breakout_count_60d": 0,
     "from_bottom": false,
     "days_in_trend": 0,
@@ -1812,9 +1812,9 @@
     "ma_20w": 186.07,
     "ma_40w": 175.69,
     "ma_50w": 170.76,
-    "sma10": 191.78,
-    "sma50": 182.67,
-    "sma200": 173.99
+    "sma10": 192.04,
+    "sma50": 182.69,
+    "sma200": 173.77
   },
   {
     "ticker": "COP.US",
@@ -1824,7 +1824,7 @@
     "prev_pool_status": "",
     "status_change": "none",
     "first_breakout_date": "",
-    "last_breakout_date": "2026-08-05",
+    "last_breakout_date": "2026-08-06",
     "breakout_count_60d": 0,
     "from_bottom": false,
     "days_in_trend": 0,
@@ -1835,9 +1835,9 @@
     "ma_20w": 117.22,
     "ma_40w": 108.69,
     "ma_50w": 104.91,
-    "sma10": 117.99,
-    "sma50": 113.39,
-    "sma200": 107.25
+    "sma10": 118.07,
+    "sma50": 113.44,
+    "sma200": 107.09
   },
   {
     "ticker": "SLB.US",
@@ -1858,9 +1858,9 @@
     "ma_20w": 51.81,
     "ma_40w": 47.45,
     "ma_50w": 44.8,
-    "sma10": 49.86,
-    "sma50": 50.38,
-    "sma200": 46.69
+    "sma10": 49.55,
+    "sma50": 50.5,
+    "sma200": 46.59
   },
   {
     "ticker": "EOG.US",
@@ -1870,7 +1870,7 @@
     "prev_pool_status": "",
     "status_change": "none",
     "first_breakout_date": "",
-    "last_breakout_date": "2026-08-05",
+    "last_breakout_date": "2026-08-06",
     "breakout_count_60d": 0,
     "from_bottom": false,
     "days_in_trend": 0,
@@ -1881,9 +1881,9 @@
     "ma_20w": 136.28,
     "ma_40w": 124.02,
     "ma_50w": 121.15,
-    "sma10": 143.54,
-    "sma50": 136.64,
-    "sma200": 122.75
+    "sma10": 143.59,
+    "sma50": 136.58,
+    "sma200": 122.55
   },
   {
     "ticker": "FANG.US",
@@ -1893,7 +1893,7 @@
     "prev_pool_status": "",
     "status_change": "none",
     "first_breakout_date": "",
-    "last_breakout_date": "2026-08-05",
+    "last_breakout_date": "2026-08-06",
     "breakout_count_60d": 0,
     "from_bottom": false,
     "days_in_trend": 0,
@@ -1916,7 +1916,7 @@
     "prev_pool_status": "",
     "status_change": "none",
     "first_breakout_date": "",
-    "last_breakout_date": "2026-08-05",
+    "last_breakout_date": "2026-08-06",
     "breakout_count_60d": 0,
     "from_bottom": false,
     "days_in_trend": 0,
@@ -1950,9 +1950,9 @@
     "ma_20w": 31.97,
     "ma_40w": 30.33,
     "ma_50w": 29.49,
-    "sma10": 31.65,
-    "sma50": 31.71,
-    "sma200": 29.95
+    "sma10": 31.73,
+    "sma50": 31.75,
+    "sma200": 29.92
   },
   {
     "ticker": "MPC.US",
@@ -1962,7 +1962,7 @@
     "prev_pool_status": "",
     "status_change": "none",
     "first_breakout_date": "",
-    "last_breakout_date": "2026-08-05",
+    "last_breakout_date": "2026-08-06",
     "breakout_count_60d": 0,
     "from_bottom": false,
     "days_in_trend": 0,
@@ -1973,9 +1973,9 @@
     "ma_20w": 260.25,
     "ma_40w": 225.27,
     "ma_50w": 217.18,
-    "sma10": 309.66,
-    "sma50": 277.17,
-    "sma200": 222.58
+    "sma10": 309.98,
+    "sma50": 276.01,
+    "sma200": 221.91
   },
   {
     "ticker": "VLO.US",
@@ -1985,7 +1985,7 @@
     "prev_pool_status": "",
     "status_change": "none",
     "first_breakout_date": "",
-    "last_breakout_date": "2026-08-05",
+    "last_breakout_date": "2026-08-06",
     "breakout_count_60d": 0,
     "from_bottom": false,
     "days_in_trend": 0,
@@ -2019,9 +2019,9 @@
     "ma_20w": 54.65,
     "ma_40w": 51.55,
     "ma_50w": 50.66,
-    "sma10": 54.83,
-    "sma50": 55.37,
-    "sma200": 51.07
+    "sma10": 55.12,
+    "sma50": 55.51,
+    "sma200": 50.99
   },
   {
     "ticker": "CNQ.US",
@@ -2031,7 +2031,7 @@
     "prev_pool_status": "",
     "status_change": "none",
     "first_breakout_date": "",
-    "last_breakout_date": "2026-08-05",
+    "last_breakout_date": "2026-08-06",
     "breakout_count_60d": 0,
     "from_bottom": false,
     "days_in_trend": 0,
@@ -2054,7 +2054,7 @@
     "prev_pool_status": "",
     "status_change": "none",
     "first_breakout_date": "",
-    "last_breakout_date": "2026-08-05",
+    "last_breakout_date": "2026-08-06",
     "breakout_count_60d": 0,
     "from_bottom": false,
     "days_in_trend": 0,
@@ -2084,13 +2084,13 @@
     "last_close": 66.05,
     "weekly_aligned": true,
     "daily_aligned": false,
-    "ma_5w": 60.27,
-    "ma_20w": 59.99,
-    "ma_40w": 54.38,
-    "ma_50w": 51.58,
-    "sma10": 60.96,
-    "sma50": 61.35,
-    "sma200": 53.78
+    "ma_5w": 60.72,
+    "ma_20w": 60.11,
+    "ma_40w": 54.44,
+    "ma_50w": 51.62,
+    "sma10": 59.42,
+    "sma50": 61.48,
+    "sma200": 53.46
   },
   {
     "ticker": "RIO.US",
@@ -2107,13 +2107,13 @@
     "last_close": 101.51,
     "weekly_aligned": false,
     "daily_aligned": false,
-    "ma_5w": 94.05,
-    "ma_20w": 98.2,
+    "ma_5w": 94.12,
+    "ma_20w": 98.21,
     "ma_40w": 89.88,
     "ma_50w": 84.71,
-    "sma10": 95.04,
-    "sma50": 97.48,
-    "sma200": 88.79
+    "sma10": 93.38,
+    "sma50": 98.17,
+    "sma200": 88.23
   },
   {
     "ticker": "BHP.US",
@@ -2130,13 +2130,13 @@
     "last_close": 89.38,
     "weekly_aligned": true,
     "daily_aligned": false,
-    "ma_5w": 83.98,
-    "ma_20w": 82.36,
-    "ma_40w": 72.9,
-    "ma_50w": 69.08,
-    "sma10": 84.89,
-    "sma50": 84.92,
-    "sma200": 71.94
+    "ma_5w": 84.26,
+    "ma_20w": 82.43,
+    "ma_40w": 72.94,
+    "ma_50w": 69.11,
+    "sma10": 83.81,
+    "sma50": 84.82,
+    "sma200": 71.34
   },
   {
     "ticker": "VALE.US",
@@ -2169,7 +2169,7 @@
     "prev_pool_status": "",
     "status_change": "none",
     "first_breakout_date": "",
-    "last_breakout_date": "2026-08-05",
+    "last_breakout_date": "2026-08-06",
     "breakout_count_60d": 0,
     "from_bottom": false,
     "days_in_trend": 0,
@@ -2192,7 +2192,7 @@
     "prev_pool_status": "",
     "status_change": "none",
     "first_breakout_date": "",
-    "last_breakout_date": "2026-08-05",
+    "last_breakout_date": "2026-08-06",
     "breakout_count_60d": 0,
     "from_bottom": false,
     "days_in_trend": 0,
@@ -2215,7 +2215,7 @@
     "prev_pool_status": "",
     "status_change": "none",
     "first_breakout_date": "",
-    "last_breakout_date": "2026-08-05",
+    "last_breakout_date": "2026-08-06",
     "breakout_count_60d": 0,
     "from_bottom": false,
     "days_in_trend": 0,
@@ -2238,7 +2238,7 @@
     "prev_pool_status": "",
     "status_change": "none",
     "first_breakout_date": "",
-    "last_breakout_date": "2026-08-05",
+    "last_breakout_date": "2026-08-06",
     "breakout_count_60d": 0,
     "from_bottom": false,
     "days_in_trend": 0,
@@ -2249,9 +2249,9 @@
     "ma_20w": 378.41,
     "ma_40w": 343.94,
     "ma_50w": 342.34,
-    "sma10": 418.28,
-    "sma50": 411.17,
-    "sma200": 342.38
+    "sma10": 420.66,
+    "sma50": 410.74,
+    "sma200": 342.09
   },
   {
     "ticker": "ABBV.US",
@@ -2261,7 +2261,7 @@
     "prev_pool_status": "",
     "status_change": "none",
     "first_breakout_date": "",
-    "last_breakout_date": "2026-08-05",
+    "last_breakout_date": "2026-08-06",
     "breakout_count_60d": 0,
     "from_bottom": false,
     "days_in_trend": 0,
@@ -2272,9 +2272,9 @@
     "ma_20w": 225.01,
     "ma_40w": 222.71,
     "ma_50w": 221.41,
-    "sma10": 254.31,
-    "sma50": 238.8,
-    "sma200": 221.84
+    "sma10": 255.26,
+    "sma50": 238.21,
+    "sma200": 221.73
   },
   {
     "ticker": "NVS.US",
@@ -2284,7 +2284,7 @@
     "prev_pool_status": "",
     "status_change": "none",
     "first_breakout_date": "",
-    "last_breakout_date": "2026-08-05",
+    "last_breakout_date": "2026-08-06",
     "breakout_count_60d": 0,
     "from_bottom": false,
     "days_in_trend": 0,
@@ -2307,7 +2307,7 @@
     "prev_pool_status": "",
     "status_change": "none",
     "first_breakout_date": "",
-    "last_breakout_date": "2026-08-05",
+    "last_breakout_date": "2026-08-06",
     "breakout_count_60d": 0,
     "from_bottom": false,
     "days_in_trend": 0,
@@ -2330,7 +2330,7 @@
     "prev_pool_status": "",
     "status_change": "none",
     "first_breakout_date": "",
-    "last_breakout_date": "2026-08-05",
+    "last_breakout_date": "2026-08-06",
     "breakout_count_60d": 0,
     "from_bottom": false,
     "days_in_trend": 0,
@@ -2353,7 +2353,7 @@
     "prev_pool_status": "",
     "status_change": "none",
     "first_breakout_date": "",
-    "last_breakout_date": "2026-08-05",
+    "last_breakout_date": "2026-08-06",
     "breakout_count_60d": 0,
     "from_bottom": false,
     "days_in_trend": 0,
@@ -2376,7 +2376,7 @@
     "prev_pool_status": "",
     "status_change": "none",
     "first_breakout_date": "",
-    "last_breakout_date": "2026-08-05",
+    "last_breakout_date": "2026-08-06",
     "breakout_count_60d": 0,
     "from_bottom": false,
     "days_in_trend": 0,
@@ -2399,7 +2399,7 @@
     "prev_pool_status": "",
     "status_change": "none",
     "first_breakout_date": "",
-    "last_breakout_date": "2026-08-05",
+    "last_breakout_date": "2026-08-06",
     "breakout_count_60d": 0,
     "from_bottom": false,
     "days_in_trend": 0,
@@ -2479,9 +2479,9 @@
     "ma_20w": 43.91,
     "ma_40w": 52.56,
     "ma_50w": 55.79,
-    "sma10": 42.17,
-    "sma50": 43.37,
-    "sma200": 53.54
+    "sma10": 42.24,
+    "sma50": 43.43,
+    "sma200": 53.66
   },
   {
     "ticker": "RL.US",
@@ -2514,7 +2514,7 @@
     "prev_pool_status": "",
     "status_change": "none",
     "first_breakout_date": "",
-    "last_breakout_date": "2026-08-05",
+    "last_breakout_date": "2026-08-06",
     "breakout_count_60d": 0,
     "from_bottom": false,
     "days_in_trend": 0,
@@ -2537,7 +2537,7 @@
     "prev_pool_status": "",
     "status_change": "none",
     "first_breakout_date": "",
-    "last_breakout_date": "2026-08-05",
+    "last_breakout_date": "2026-08-06",
     "breakout_count_60d": 0,
     "from_bottom": false,
     "days_in_trend": 0,
@@ -2560,7 +2560,7 @@
     "prev_pool_status": "",
     "status_change": "none",
     "first_breakout_date": "",
-    "last_breakout_date": "2026-08-05",
+    "last_breakout_date": "2026-08-06",
     "breakout_count_60d": 0,
     "from_bottom": false,
     "days_in_trend": 0,
@@ -2583,7 +2583,7 @@
     "prev_pool_status": "",
     "status_change": "none",
     "first_breakout_date": "",
-    "last_breakout_date": "2026-08-05",
+    "last_breakout_date": "2026-08-06",
     "breakout_count_60d": 0,
     "from_bottom": false,
     "days_in_trend": 0,
@@ -2594,9 +2594,9 @@
     "ma_20w": 315.18,
     "ma_40w": 303.8,
     "ma_50w": 299.39,
-    "sma10": 340.62,
-    "sma50": 321.27,
-    "sma200": 301.27
+    "sma10": 339.99,
+    "sma50": 319.95,
+    "sma200": 300.54
   },
   {
     "ticker": "CSX.US",
@@ -2606,7 +2606,7 @@
     "prev_pool_status": "",
     "status_change": "none",
     "first_breakout_date": "",
-    "last_breakout_date": "2026-08-05",
+    "last_breakout_date": "2026-08-06",
     "breakout_count_60d": 0,
     "from_bottom": false,
     "days_in_trend": 0,
@@ -2617,9 +2617,9 @@
     "ma_20w": 46.43,
     "ma_40w": 41.92,
     "ma_50w": 40.36,
-    "sma10": 51.2,
-    "sma50": 48.42,
-    "sma200": 41.36
+    "sma10": 51.09,
+    "sma50": 48.3,
+    "sma200": 41.28
   },
   {
     "ticker": "FDX.US",
@@ -2640,9 +2640,9 @@
     "ma_20w": 312.3,
     "ma_40w": 282.92,
     "ma_50w": 263.84,
-    "sma10": 311.19,
-    "sma50": 319.82,
-    "sma200": 276.5
+    "sma10": 311.37,
+    "sma50": 319.7,
+    "sma200": 275.21
   },
   {
     "ticker": "UPS.US",
@@ -2652,7 +2652,7 @@
     "prev_pool_status": "",
     "status_change": "none",
     "first_breakout_date": "",
-    "last_breakout_date": "2026-08-05",
+    "last_breakout_date": "2026-08-06",
     "breakout_count_60d": 0,
     "from_bottom": false,
     "days_in_trend": 0,
@@ -2675,20 +2675,20 @@
     "prev_pool_status": "",
     "status_change": "none",
     "first_breakout_date": "",
-    "last_breakout_date": "2026-08-05",
+    "last_breakout_date": "2026-08-06",
     "breakout_count_60d": 0,
     "from_bottom": false,
     "days_in_trend": 0,
     "last_close": 1162.04,
     "weekly_aligned": true,
     "daily_aligned": true,
-    "ma_5w": 1104.73,
-    "ma_20w": 987.06,
-    "ma_40w": 910.33,
-    "ma_50w": 916.13,
-    "sma10": 1113.16,
-    "sma50": 1073.6,
-    "sma200": 903.23
+    "ma_5w": 1102.6,
+    "ma_20w": 986.52,
+    "ma_40w": 910.06,
+    "ma_50w": 915.92,
+    "sma10": 1094.99,
+    "sma50": 1064.89,
+    "sma200": 902.05
   },
   {
     "ticker": "JCI.US",
@@ -2698,7 +2698,7 @@
     "prev_pool_status": "",
     "status_change": "none",
     "first_breakout_date": "",
-    "last_breakout_date": "2026-08-05",
+    "last_breakout_date": "2026-08-06",
     "breakout_count_60d": 0,
     "from_bottom": false,
     "days_in_trend": 0,
@@ -2728,13 +2728,13 @@
     "last_close": 822.16,
     "weekly_aligned": false,
     "daily_aligned": false,
-    "ma_5w": 778.0,
-    "ma_20w": 815.69,
-    "ma_40w": 747.24,
-    "ma_50w": 729.11,
-    "sma10": 769.42,
-    "sma50": 800.56,
-    "sma200": 746.49
+    "ma_5w": 778.98,
+    "ma_20w": 815.94,
+    "ma_40w": 747.37,
+    "ma_50w": 729.21,
+    "sma10": 756.51,
+    "sma50": 805.98,
+    "sma200": 744.45
   },
   {
     "ticker": "FIX.US",
@@ -2751,13 +2751,13 @@
     "last_close": 1737.0,
     "weekly_aligned": false,
     "daily_aligned": false,
-    "ma_5w": 1726.09,
-    "ma_20w": 1756.62,
-    "ma_40w": 1439.55,
-    "ma_50w": 1314.88,
-    "sma10": 1715.28,
-    "sma50": 1813.36,
-    "sma200": 1411.3
+    "ma_5w": 1719.72,
+    "ma_20w": 1755.03,
+    "ma_40w": 1438.75,
+    "ma_50w": 1314.24,
+    "sma10": 1715.05,
+    "sma50": 1817.76,
+    "sma200": 1397.43
   },
   {
     "ticker": "FLNC.US",
@@ -2778,9 +2778,9 @@
     "ma_20w": 17.26,
     "ma_40w": 18.81,
     "ma_50w": 17.63,
-    "sma10": 13.77,
-    "sma50": 18.89,
-    "sma200": 18.85
+    "sma10": 13.67,
+    "sma50": 19.0,
+    "sma200": 18.87
   },
   {
     "ticker": "SPY.US",
@@ -2790,7 +2790,7 @@
     "prev_pool_status": "",
     "status_change": "none",
     "first_breakout_date": "",
-    "last_breakout_date": "2026-08-05",
+    "last_breakout_date": "2026-08-06",
     "breakout_count_60d": 0,
     "from_bottom": false,
     "days_in_trend": 0,
@@ -2813,7 +2813,7 @@
     "prev_pool_status": "",
     "status_change": "none",
     "first_breakout_date": "",
-    "last_breakout_date": "2026-08-05",
+    "last_breakout_date": "2026-08-06",
     "breakout_count_60d": 0,
     "from_bottom": false,
     "days_in_trend": 0,
@@ -2836,7 +2836,7 @@
     "prev_pool_status": "",
     "status_change": "none",
     "first_breakout_date": "",
-    "last_breakout_date": "2026-08-05",
+    "last_breakout_date": "2026-08-06",
     "breakout_count_60d": 0,
     "from_bottom": false,
     "days_in_trend": 0,
@@ -2847,9 +2847,9 @@
     "ma_20w": 729.42,
     "ma_40w": 704.26,
     "ma_50w": 695.18,
-    "sma10": 750.89,
-    "sma50": 749.06,
-    "sma200": 702.14
+    "sma10": 748.5,
+    "sma50": 748.51,
+    "sma200": 701.56
   },
   {
     "ticker": "SCHB.US",
@@ -2859,7 +2859,7 @@
     "prev_pool_status": "",
     "status_change": "none",
     "first_breakout_date": "",
-    "last_breakout_date": "2026-08-05",
+    "last_breakout_date": "2026-08-06",
     "breakout_count_60d": 0,
     "from_bottom": false,
     "days_in_trend": 0,
@@ -2870,9 +2870,9 @@
     "ma_20w": 28.05,
     "ma_40w": 27.06,
     "ma_50w": 26.71,
-    "sma10": 28.89,
-    "sma50": 28.83,
-    "sma200": 26.97
+    "sma10": 28.8,
+    "sma50": 28.81,
+    "sma200": 26.95
   },
   {
     "ticker": "VTI.US",
@@ -2882,7 +2882,7 @@
     "prev_pool_status": "",
     "status_change": "none",
     "first_breakout_date": "",
-    "last_breakout_date": "2026-08-05",
+    "last_breakout_date": "2026-08-06",
     "breakout_count_60d": 0,
     "from_bottom": false,
     "days_in_trend": 0,
@@ -2905,20 +2905,20 @@
     "prev_pool_status": "",
     "status_change": "none",
     "first_breakout_date": "",
-    "last_breakout_date": "2026-08-05",
+    "last_breakout_date": "2026-08-06",
     "breakout_count_60d": 0,
     "from_bottom": false,
     "days_in_trend": 0,
     "last_close": 168.62,
     "weekly_aligned": true,
     "daily_aligned": false,
-    "ma_5w": 164.56,
-    "ma_20w": 159.11,
-    "ma_40w": 153.45,
-    "ma_50w": 151.48,
-    "sma10": 163.85,
-    "sma50": 163.53,
-    "sma200": 152.96
+    "ma_5w": 164.37,
+    "ma_20w": 159.06,
+    "ma_40w": 153.43,
+    "ma_50w": 151.47,
+    "sma10": 163.15,
+    "sma50": 163.21,
+    "sma200": 152.53
   },
   {
     "ticker": "DIA.US",
@@ -2928,7 +2928,7 @@
     "prev_pool_status": "",
     "status_change": "none",
     "first_breakout_date": "",
-    "last_breakout_date": "2026-08-05",
+    "last_breakout_date": "2026-08-06",
     "breakout_count_60d": 0,
     "from_bottom": false,
     "days_in_trend": 0,
@@ -2951,7 +2951,7 @@
     "prev_pool_status": "",
     "status_change": "none",
     "first_breakout_date": "",
-    "last_breakout_date": "2026-08-05",
+    "last_breakout_date": "2026-08-06",
     "breakout_count_60d": 0,
     "from_bottom": false,
     "days_in_trend": 0,
@@ -2997,7 +2997,7 @@
     "prev_pool_status": "",
     "status_change": "none",
     "first_breakout_date": "",
-    "last_breakout_date": "2026-08-05",
+    "last_breakout_date": "2026-08-06",
     "breakout_count_60d": 0,
     "from_bottom": false,
     "days_in_trend": 0,
@@ -3020,7 +3020,7 @@
     "prev_pool_status": "",
     "status_change": "none",
     "first_breakout_date": "",
-    "last_breakout_date": "2026-08-05",
+    "last_breakout_date": "2026-08-06",
     "breakout_count_60d": 0,
     "from_bottom": false,
     "days_in_trend": 0,
@@ -3043,7 +3043,7 @@
     "prev_pool_status": "",
     "status_change": "none",
     "first_breakout_date": "",
-    "last_breakout_date": "2026-08-05",
+    "last_breakout_date": "2026-08-06",
     "breakout_count_60d": 0,
     "from_bottom": false,
     "days_in_trend": 0,
@@ -3066,7 +3066,7 @@
     "prev_pool_status": "",
     "status_change": "none",
     "first_breakout_date": "",
-    "last_breakout_date": "2026-08-05",
+    "last_breakout_date": "2026-08-06",
     "breakout_count_60d": 0,
     "from_bottom": false,
     "days_in_trend": 0,
@@ -3089,7 +3089,7 @@
     "prev_pool_status": "",
     "status_change": "none",
     "first_breakout_date": "",
-    "last_breakout_date": "2026-08-05",
+    "last_breakout_date": "2026-08-06",
     "breakout_count_60d": 0,
     "from_bottom": false,
     "days_in_trend": 0,
@@ -3142,13 +3142,13 @@
     "last_close": 110.87,
     "weekly_aligned": false,
     "daily_aligned": false,
-    "ma_5w": 109.54,
-    "ma_20w": 112.03,
-    "ma_40w": 113.5,
-    "ma_50w": 113.67,
-    "sma10": 108.76,
-    "sma50": 110.45,
-    "sma200": 113.77
+    "ma_5w": 109.21,
+    "ma_20w": 111.95,
+    "ma_40w": 113.46,
+    "ma_50w": 113.64,
+    "sma10": 108.73,
+    "sma50": 110.78,
+    "sma200": 113.82
   },
   {
     "ticker": "XLY.US",
@@ -3165,36 +3165,36 @@
     "last_close": 118.64,
     "weekly_aligned": false,
     "daily_aligned": false,
-    "ma_5w": 115.36,
-    "ma_20w": 115.76,
-    "ma_40w": 116.59,
-    "ma_50w": 116.77,
-    "sma10": 113.67,
-    "sma50": 115.99,
+    "ma_5w": 114.62,
+    "ma_20w": 115.57,
+    "ma_40w": 116.5,
+    "ma_50w": 116.69,
+    "sma10": 113.18,
+    "sma50": 116.12,
     "sma200": 116.73
   },
   {
     "ticker": "XLB.US",
     "market": "US",
     "pool": "trend",
-    "pool_status": "WATCHING",
+    "pool_status": "STRONG",
     "prev_pool_status": "",
     "status_change": "none",
     "first_breakout_date": "",
-    "last_breakout_date": "",
+    "last_breakout_date": "2026-08-06",
     "breakout_count_60d": 0,
     "from_bottom": false,
     "days_in_trend": 0,
     "last_close": 52.64,
     "weekly_aligned": true,
-    "daily_aligned": false,
-    "ma_5w": 51.15,
-    "ma_20w": 51.06,
-    "ma_40w": 49.16,
-    "ma_50w": 48.14,
-    "sma10": 51.47,
-    "sma50": 51.11,
-    "sma200": 48.74
+    "daily_aligned": true,
+    "ma_5w": 51.39,
+    "ma_20w": 51.12,
+    "ma_40w": 49.19,
+    "ma_50w": 48.16,
+    "sma10": 51.32,
+    "sma50": 51.05,
+    "sma200": 48.64
   },
   {
     "ticker": "VNQ.US",
@@ -3204,7 +3204,7 @@
     "prev_pool_status": "",
     "status_change": "none",
     "first_breakout_date": "",
-    "last_breakout_date": "2026-08-05",
+    "last_breakout_date": "2026-08-06",
     "breakout_count_60d": 0,
     "from_bottom": false,
     "days_in_trend": 0,
@@ -3215,9 +3215,9 @@
     "ma_20w": 95.7,
     "ma_40w": 92.37,
     "ma_50w": 91.57,
-    "sma10": 99.7,
-    "sma50": 97.43,
-    "sma200": 91.92
+    "sma10": 99.71,
+    "sma50": 97.29,
+    "sma200": 91.81
   },
   {
     "ticker": "SCHD.US",
@@ -3227,7 +3227,7 @@
     "prev_pool_status": "",
     "status_change": "none",
     "first_breakout_date": "",
-    "last_breakout_date": "2026-08-05",
+    "last_breakout_date": "2026-08-06",
     "breakout_count_60d": 0,
     "from_bottom": false,
     "days_in_trend": 0,
@@ -3238,9 +3238,9 @@
     "ma_20w": 31.91,
     "ma_40w": 30.24,
     "ma_50w": 29.47,
-    "sma10": 33.52,
-    "sma50": 32.49,
-    "sma200": 29.9
+    "sma10": 33.42,
+    "sma50": 32.46,
+    "sma200": 29.86
   },
   {
     "ticker": "KRE.US",
@@ -3250,20 +3250,20 @@
     "prev_pool_status": "",
     "status_change": "none",
     "first_breakout_date": "",
-    "last_breakout_date": "2026-08-05",
+    "last_breakout_date": "2026-08-06",
     "breakout_count_60d": 0,
     "from_bottom": false,
     "days_in_trend": 0,
     "last_close": 77.34,
     "weekly_aligned": true,
     "daily_aligned": true,
-    "ma_5w": 76.17,
+    "ma_5w": 76.14,
     "ma_20w": 71.21,
     "ma_40w": 68.25,
     "ma_50w": 66.93,
-    "sma10": 76.36,
-    "sma50": 73.58,
-    "sma200": 67.54
+    "sma10": 76.12,
+    "sma50": 73.26,
+    "sma200": 67.37
   },
   {
     "ticker": "HYG.US",
@@ -3273,7 +3273,7 @@
     "prev_pool_status": "",
     "status_change": "none",
     "first_breakout_date": "",
-    "last_breakout_date": "2026-08-05",
+    "last_breakout_date": "2026-08-06",
     "breakout_count_60d": 0,
     "from_bottom": false,
     "days_in_trend": 0,
@@ -3284,9 +3284,9 @@
     "ma_20w": 78.84,
     "ma_40w": 78.32,
     "ma_50w": 78.01,
-    "sma10": 79.1,
-    "sma50": 79.15,
-    "sma200": 78.25
+    "sma10": 79.08,
+    "sma50": 79.11,
+    "sma200": 78.21
   },
   {
     "ticker": "LQD.US",
@@ -3303,13 +3303,13 @@
     "last_close": 106.74,
     "weekly_aligned": false,
     "daily_aligned": false,
-    "ma_5w": 106.48,
-    "ma_20w": 107.34,
-    "ma_40w": 107.45,
-    "ma_50w": 107.38,
-    "sma10": 106.11,
-    "sma50": 107.37,
-    "sma200": 107.53
+    "ma_5w": 106.88,
+    "ma_20w": 107.79,
+    "ma_40w": 107.91,
+    "ma_50w": 107.84,
+    "sma10": 106.6,
+    "sma50": 107.85,
+    "sma200": 108.03
   },
   {
     "ticker": "RIOT.US",
@@ -3330,9 +3330,9 @@
     "ma_20w": 21.51,
     "ma_40w": 18.32,
     "ma_50w": 18.25,
-    "sma10": 21.46,
-    "sma50": 24.16,
-    "sma200": 18.54
+    "sma10": 21.64,
+    "sma50": 24.22,
+    "sma200": 18.53
   },
   {
     "ticker": "HUT.US",
@@ -3399,9 +3399,9 @@
     "ma_20w": 46.79,
     "ma_40w": 46.03,
     "ma_50w": 46.06,
-    "sma10": 37.17,
-    "sma50": 48.14,
-    "sma200": 47.69
+    "sma10": 37.22,
+    "sma50": 48.46,
+    "sma200": 47.8
   },
   {
     "ticker": "MARA.US",
@@ -3445,9 +3445,9 @@
     "ma_20w": 13.28,
     "ma_40w": 12.34,
     "ma_50w": 13.51,
-    "sma10": 10.97,
-    "sma50": 14.79,
-    "sma200": 13.08
+    "sma10": 11.06,
+    "sma50": 14.85,
+    "sma200": 13.16
   },
   {
     "ticker": "CORZ.US",
@@ -3468,9 +3468,9 @@
     "ma_20w": 22.54,
     "ma_40w": 19.67,
     "ma_50w": 19.21,
-    "sma10": 21.63,
-    "sma50": 24.9,
-    "sma200": 19.76
+    "sma10": 21.71,
+    "sma50": 24.95,
+    "sma200": 19.74
   },
   {
     "ticker": "WULF.US",
@@ -3491,9 +3491,9 @@
     "ma_20w": 21.25,
     "ma_40w": 17.56,
     "ma_50w": 16.44,
-    "sma10": 17.99,
-    "sma50": 22.93,
-    "sma200": 17.6
+    "sma10": 18.05,
+    "sma50": 23.01,
+    "sma200": 17.58
   },
   {
     "ticker": "CIFR.US",
@@ -3514,9 +3514,9 @@
     "ma_20w": 20.51,
     "ma_40w": 18.39,
     "ma_50w": 17.5,
-    "sma10": 21.7,
-    "sma50": 23.19,
-    "sma200": 18.66
+    "sma10": 22.1,
+    "sma50": 23.22,
+    "sma200": 18.65
   },
   {
     "ticker": "RKLB.US",
@@ -3537,9 +3537,9 @@
     "ma_20w": 90.33,
     "ma_40w": 78.74,
     "ma_50w": 74.11,
-    "sma10": 67.27,
-    "sma50": 93.25,
-    "sma200": 77.86
+    "sma10": 66.8,
+    "sma50": 94.47,
+    "sma200": 77.82
   },
   {
     "ticker": "LUNR.US",
@@ -3560,9 +3560,9 @@
     "ma_20w": 23.79,
     "ma_40w": 19.61,
     "ma_50w": 17.82,
-    "sma10": 12.93,
-    "sma50": 21.77,
-    "sma200": 19.16
+    "sma10": 12.95,
+    "sma50": 22.25,
+    "sma200": 19.15
   },
   {
     "ticker": "RDW.US",
@@ -3606,9 +3606,9 @@
     "ma_20w": 80.25,
     "ma_40w": 81.82,
     "ma_50w": 77.68,
-    "sma10": 60.29,
-    "sma50": 79.77,
-    "sma200": 82.12
+    "sma10": 59.45,
+    "sma50": 80.48,
+    "sma200": 82.21
   },
   {
     "ticker": "SAT.US",
@@ -3618,7 +3618,7 @@
     "prev_pool_status": "",
     "status_change": "none",
     "first_breakout_date": "",
-    "last_breakout_date": "2026-08-05",
+    "last_breakout_date": "2026-08-06",
     "breakout_count_60d": 0,
     "from_bottom": false,
     "days_in_trend": 0,
@@ -3670,14 +3670,14 @@
     "days_in_trend": 0,
     "last_close": 557.47,
     "weekly_aligned": false,
-    "daily_aligned": true,
+    "daily_aligned": false,
     "ma_5w": 540.68,
     "ma_20w": 570.76,
     "ma_40w": 603.54,
     "ma_50w": 600.03,
-    "sma10": 544.24,
-    "sma50": 535.31,
-    "sma200": 602.17
+    "sma10": 541.61,
+    "sma50": 535.34,
+    "sma200": 602.37
   },
   {
     "ticker": "LMT.US",
@@ -3687,7 +3687,7 @@
     "prev_pool_status": "",
     "status_change": "none",
     "first_breakout_date": "",
-    "last_breakout_date": "2026-08-05",
+    "last_breakout_date": "2026-08-06",
     "breakout_count_60d": 0,
     "from_bottom": false,
     "days_in_trend": 0,
@@ -3710,7 +3710,7 @@
     "prev_pool_status": "",
     "status_change": "none",
     "first_breakout_date": "",
-    "last_breakout_date": "2026-08-05",
+    "last_breakout_date": "2026-08-06",
     "breakout_count_60d": 0,
     "from_bottom": false,
     "days_in_trend": 0,
@@ -3767,9 +3767,9 @@
     "ma_20w": 129.3,
     "ma_40w": 144.84,
     "ma_50w": 179.08,
-    "sma10": 95.53,
-    "sma50": 108.69,
-    "sma200": 154.89
+    "sma10": 95.77,
+    "sma50": 109.93,
+    "sma200": 155.82
   },
   {
     "ticker": "CRWD.US",
@@ -3779,7 +3779,7 @@
     "prev_pool_status": "",
     "status_change": "none",
     "first_breakout_date": "",
-    "last_breakout_date": "2026-08-05",
+    "last_breakout_date": "2026-08-06",
     "breakout_count_60d": 0,
     "from_bottom": false,
     "days_in_trend": 0,
@@ -3802,7 +3802,7 @@
     "prev_pool_status": "",
     "status_change": "none",
     "first_breakout_date": "",
-    "last_breakout_date": "2026-08-05",
+    "last_breakout_date": "2026-08-06",
     "breakout_count_60d": 0,
     "from_bottom": false,
     "days_in_trend": 0,
@@ -3825,7 +3825,7 @@
     "prev_pool_status": "",
     "status_change": "none",
     "first_breakout_date": "",
-    "last_breakout_date": "2026-08-05",
+    "last_breakout_date": "2026-08-06",
     "breakout_count_60d": 0,
     "from_bottom": false,
     "days_in_trend": 0,
@@ -3836,9 +3836,9 @@
     "ma_20w": 139.26,
     "ma_40w": 133.58,
     "ma_50w": 131.79,
-    "sma10": 148.83,
-    "sma50": 142.21,
-    "sma200": 132.96
+    "sma10": 147.84,
+    "sma50": 141.86,
+    "sma200": 132.83
   },
   {
     "ticker": "COIN.US",
@@ -3859,9 +3859,9 @@
     "ma_20w": 171.45,
     "ma_40w": 198.79,
     "ma_50w": 226.09,
-    "sma10": 157.19,
-    "sma50": 161.9,
-    "sma200": 209.63
+    "sma10": 158.73,
+    "sma50": 162.58,
+    "sma200": 210.53
   },
   {
     "ticker": "AFRM.US",
@@ -3878,13 +3878,13 @@
     "last_close": 78.47,
     "weekly_aligned": true,
     "daily_aligned": false,
-    "ma_5w": 75.94,
-    "ma_20w": 67.47,
-    "ma_40w": 65.64,
-    "ma_50w": 68.28,
-    "sma10": 73.4,
-    "sma50": 74.72,
-    "sma200": 66.2
+    "ma_5w": 76.29,
+    "ma_20w": 67.55,
+    "ma_40w": 65.68,
+    "ma_50w": 68.31,
+    "sma10": 73.3,
+    "sma50": 74.37,
+    "sma200": 66.16
   },
   {
     "ticker": "SOFI.US",
@@ -3905,9 +3905,9 @@
     "ma_20w": 17.03,
     "ma_40w": 20.53,
     "ma_50w": 21.86,
-    "sma10": 16.97,
-    "sma50": 17.35,
-    "sma200": 21.17
+    "sma10": 16.81,
+    "sma50": 17.29,
+    "sma200": 21.21
   },
   {
     "ticker": "RIVN.US",
