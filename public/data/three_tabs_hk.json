@@ -1714,16 +1714,6 @@
       "last_close": 4.84
     },
     {
-      "ticker": "3618.HK",
-      "name_cn": "重庆农村商业银行",
-      "gics_sector": "Financials",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 4,
-      "last_close": 6.19
-    },
-    {
       "ticker": "0998.HK",
       "name_cn": "中信银行",
       "gics_sector": "Financials",
@@ -1732,6 +1722,16 @@
       "emoji": "🔴",
       "days_in_state": 1,
       "last_close": 7.34
+    },
+    {
+      "ticker": "3618.HK",
+      "name_cn": "重庆农村商业银行",
+      "gics_sector": "Financials",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 4,
+      "last_close": 6.19
     },
     {
       "ticker": "1299.HK",
@@ -1744,16 +1744,6 @@
       "last_close": 74.15
     },
     {
-      "ticker": "0883.HK",
-      "name_cn": "中国海洋石油",
-      "gics_sector": "Energy",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 4,
-      "last_close": 23.26
-    },
-    {
       "ticker": "0857.HK",
       "name_cn": "中国石油股份",
       "gics_sector": "Energy",
@@ -1762,6 +1752,16 @@
       "emoji": "🔴",
       "days_in_state": 4,
       "last_close": 9.505
+    },
+    {
+      "ticker": "0883.HK",
+      "name_cn": "中国海洋石油",
+      "gics_sector": "Energy",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 4,
+      "last_close": 23.26
     },
     {
       "ticker": "1171.HK",
@@ -1814,16 +1814,6 @@
       "last_close": 4.185
     },
     {
-      "ticker": "0083.HK",
-      "name_cn": "信和置业",
-      "gics_sector": "Real Estate",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 2,
-      "last_close": 10.19
-    },
-    {
       "ticker": "0101.HK",
       "name_cn": "恒隆地产",
       "gics_sector": "Real Estate",
@@ -1832,6 +1822,16 @@
       "emoji": "🔴",
       "days_in_state": 4,
       "last_close": 7.335
+    },
+    {
+      "ticker": "0083.HK",
+      "name_cn": "信和置业",
+      "gics_sector": "Real Estate",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 2,
+      "last_close": 10.19
     },
     {
       "ticker": "0016.HK",
@@ -1844,16 +1844,6 @@
       "last_close": 115.4
     },
     {
-      "ticker": "0392.HK",
-      "name_cn": "北京控股",
-      "gics_sector": "Utilities",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 1,
-      "last_close": 29.82
-    },
-    {
       "ticker": "0135.HK",
       "name_cn": "昆仑能源",
       "gics_sector": "Utilities",
@@ -1862,6 +1852,16 @@
       "emoji": "🔴",
       "days_in_state": 1,
       "last_close": 6.85
+    },
+    {
+      "ticker": "0392.HK",
+      "name_cn": "北京控股",
+      "gics_sector": "Utilities",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 1,
+      "last_close": 29.82
     },
     {
       "ticker": "0836.HK",
@@ -1874,16 +1874,6 @@
       "last_close": 18.46
     },
     {
-      "ticker": "0902.HK",
-      "name_cn": "华能国际电力股份",
-      "gics_sector": "Utilities",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 2,
-      "last_close": 5.845
-    },
-    {
       "ticker": "0991.HK",
       "name_cn": "大唐",
       "gics_sector": "Utilities",
@@ -1894,14 +1884,14 @@
       "last_close": 2.475
     },
     {
-      "ticker": "1816.HK",
-      "name_cn": "中广核电力",
+      "ticker": "0902.HK",
+      "name_cn": "华能国际电力股份",
       "gics_sector": "Utilities",
       "alert_type": "B_EXIT",
       "label": "B·EXIT",
       "emoji": "🔴",
       "days_in_state": 2,
-      "last_close": 2.83
+      "last_close": 5.845
     },
     {
       "ticker": "0257.HK",
@@ -1912,6 +1902,16 @@
       "emoji": "🔴",
       "days_in_state": 4,
       "last_close": 4.89
+    },
+    {
+      "ticker": "1816.HK",
+      "name_cn": "中广核电力",
+      "gics_sector": "Utilities",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 2,
+      "last_close": 2.83
     },
     {
       "ticker": "0003.HK",
@@ -2014,16 +2014,6 @@
       "last_close": 11.89
     },
     {
-      "ticker": "1072.HK",
-      "name_cn": "东方电气",
-      "gics_sector": "Industrials",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 4,
-      "last_close": 23.38
-    },
-    {
       "ticker": "1157.HK",
       "name_cn": "中联重科",
       "gics_sector": "Industrials",
@@ -2042,6 +2032,16 @@
       "emoji": "🔴",
       "days_in_state": 2,
       "last_close": 35.62
+    },
+    {
+      "ticker": "1072.HK",
+      "name_cn": "东方电气",
+      "gics_sector": "Industrials",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 4,
+      "last_close": 23.38
     },
     {
       "ticker": "1882.HK",
@@ -2084,16 +2084,6 @@
       "last_close": 124.1
     },
     {
-      "ticker": "6088.HK",
-      "name_cn": "鸿腾精密",
-      "gics_sector": "Information Technology",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 2,
-      "last_close": 5.98
-    },
-    {
       "ticker": "2476.HK",
       "name_cn": "胜宏科技",
       "gics_sector": "Information Technology",
@@ -2102,6 +2092,16 @@
       "emoji": "🔴",
       "days_in_state": 2,
       "last_close": 256.2
+    },
+    {
+      "ticker": "6088.HK",
+      "name_cn": "鸿腾精密",
+      "gics_sector": "Information Technology",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 2,
+      "last_close": 5.98
     },
     {
       "ticker": "3200.HK",
