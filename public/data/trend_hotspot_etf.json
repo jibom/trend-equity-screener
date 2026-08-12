@@ -224,7 +224,7 @@
       "days_below_ma10": 0,
       "ma_stack": 1,
       "ma200_slope": 33.79,
-      "hotness": 0.985
+      "hotness": 0.986
     },
     {
       "ticker": "DIA.US",
@@ -371,13 +371,13 @@
       "pct_high_126": 0.992,
       "nh_ratio_126": 0.111,
       "amt_surge": 0.984,
-      "amt_rank": 0.65,
+      "amt_rank": 0.644,
       "ret_60": 0.068,
       "ma_aligned": 1,
       "days_below_ma10": 0,
       "ma_stack": 1,
       "ma200_slope": 29.91,
-      "hotness": 0.707
+      "hotness": 0.702
     },
     {
       "ticker": "IWS.US",
@@ -598,7 +598,7 @@
       "days_below_ma10": 0,
       "ma_stack": 1,
       "ma200_slope": 31.73,
-      "hotness": 0.504
+      "hotness": 0.503
     },
     {
       "ticker": "USMV.US",
@@ -649,7 +649,7 @@
       "days_below_ma10": 0,
       "ma_stack": 1,
       "ma200_slope": 20.65,
-      "hotness": 0.484
+      "hotness": 0.483
     },
     {
       "ticker": "QUAL.US",
@@ -855,7 +855,7 @@
       "days_below_ma10": 0,
       "ma_stack": 1,
       "ma200_slope": 31.73,
-      "hotness": 0.504
+      "hotness": 0.503
     },
     {
       "ticker": "IGV.US",
@@ -1126,7 +1126,7 @@
       "ma_aligned": 1,
       "days_below_ma10": 0,
       "ma200_slope": 33.79,
-      "hotness": 0.985
+      "hotness": 0.986
     },
     {
       "ticker": "DIA.US",
@@ -1270,7 +1270,7 @@
       "ma_aligned": 1,
       "days_below_ma10": 0,
       "ma200_slope": 29.91,
-      "hotness": 0.707
+      "hotness": 0.702
     },
     {
       "ticker": "EWT.US",
@@ -1462,7 +1462,7 @@
       "ma_aligned": 0,
       "days_below_ma10": 0,
       "ma200_slope": 31.73,
-      "hotness": 0.504
+      "hotness": 0.503
     },
     {
       "ticker": "USMV.US",
@@ -1489,18 +1489,6 @@
       "hotness": 0.49
     },
     {
-      "ticker": "VTI.US",
-      "name": "Vanguard Total Stock Market Index Fu",
-      "sub_industry": "CRSP US Total Market",
-      "close": 380.65,
-      "pct_high_250": 0.997,
-      "ret_60": 0.039,
-      "ma_aligned": 1,
-      "days_below_ma10": 0,
-      "ma200_slope": 20.65,
-      "hotness": 0.484
-    },
-    {
       "ticker": "DRAM.US",
       "name": "Roundhill Memory ETF",
       "sub_industry": "Technology",
@@ -1511,6 +1499,18 @@
       "days_below_ma10": 3,
       "ma200_slope": null,
       "hotness": 0.484
+    },
+    {
+      "ticker": "VTI.US",
+      "name": "Vanguard Total Stock Market Index Fu",
+      "sub_industry": "CRSP US Total Market",
+      "close": 380.65,
+      "pct_high_250": 0.997,
+      "ret_60": 0.039,
+      "ma_aligned": 1,
+      "days_below_ma10": 0,
+      "ma200_slope": 20.65,
+      "hotness": 0.483
     },
     {
       "ticker": "QUAL.US",
@@ -2146,7 +2146,7 @@
       "ma_aligned": 1,
       "days_below_ma10": 0,
       "ma200_slope": 46.33,
-      "hotness": 0.087
+      "hotness": 0.093
     },
     {
       "ticker": "URTH.US",
