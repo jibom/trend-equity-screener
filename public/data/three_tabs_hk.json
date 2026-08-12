@@ -94,7 +94,7 @@
         "last_close": 0.765,
         "ma10": 0.691,
         "ma20": 0.647,
-        "ma60": 0.703,
+        "ma60": 0.702,
         "ma200": 0.985,
         "ma200_slope": -75.55,
         "ma10_slope_pct": 14.78,
@@ -363,7 +363,7 @@
         "substate": "",
         "last_close": 22.84,
         "ma10": 20.592,
-        "ma20": 19.955,
+        "ma20": 19.954,
         "ma60": 21.168,
         "ma200": 29.572,
         "ma200_slope": -69.62,
@@ -390,7 +390,7 @@
         "substate": "",
         "last_close": 59.3,
         "ma10": 55.21,
-        "ma20": 52.21,
+        "ma20": 52.211,
         "ma60": 50.604,
         "ma200": 64.528,
         "ma200_slope": -88.05,
@@ -554,7 +554,7 @@
         "substate": "",
         "last_close": 20.36,
         "ma10": 20.45,
-        "ma20": 20.348,
+        "ma20": 20.347,
         "ma60": 20.088,
         "ma200": 21.318,
         "ma200_slope": -4.88,
@@ -580,7 +580,7 @@
         "state": "ENTANGLED",
         "substate": "",
         "last_close": 5.0,
-        "ma10": 5.023,
+        "ma10": 5.024,
         "ma20": 5.012,
         "ma60": 4.98,
         "ma200": 4.987,
@@ -742,7 +742,7 @@
         "state": "ENTANGLED",
         "substate": "",
         "last_close": 8.675,
-        "ma10": 8.565,
+        "ma10": 8.564,
         "ma20": 8.506,
         "ma60": 7.693,
         "ma200": 8.293,
@@ -769,7 +769,7 @@
         "state": "ENTANGLED",
         "substate": "",
         "last_close": 2.435,
-        "ma10": 2.507,
+        "ma10": 2.508,
         "ma20": 2.504,
         "ma60": 2.591,
         "ma200": 2.441,
@@ -878,7 +878,7 @@
         "substate": "",
         "last_close": 81.7,
         "ma10": 82.695,
-        "ma20": 82.077,
+        "ma20": 82.078,
         "ma60": 81.066,
         "ma200": 80.426,
         "ma200_slope": -0.86,
@@ -994,7 +994,7 @@
       "ma60": 115.682,
       "ma200": 112.927,
       "ma200_slope": 3.43,
-      "ma10_slope_pct": 6.58,
+      "ma10_slope_pct": 6.57,
       "days_in_state": 11,
       "days_in_pullback": 11,
       "pullback_dd_pct": null,
@@ -1298,7 +1298,7 @@
       "substate": "STRONG",
       "last_close": 71.25,
       "ma10": 72.96,
-      "ma20": 72.327,
+      "ma20": 72.328,
       "ma60": 69.628,
       "ma200": 61.607,
       "ma200_slope": 47.75,
@@ -1354,7 +1354,7 @@
       "substate": "STRONG",
       "last_close": 15.28,
       "ma10": 15.424,
-      "ma20": 15.407,
+      "ma20": 15.408,
       "ma60": 14.511,
       "ma200": 13.992,
       "ma200_slope": 31.85,
@@ -1634,7 +1634,7 @@
       "substate": "NEW",
       "last_close": 135.6,
       "ma10": 128.14,
-      "ma20": 119.533,
+      "ma20": 119.532,
       "ma60": 115.379,
       "ma200": 152.128,
       "ma200_slope": -1.62,
@@ -2066,16 +2066,6 @@
       "last_close": 161.4
     },
     {
-      "ticker": "1658.HK",
-      "name_cn": "邮储银行",
-      "gics_sector": "Financials",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 1,
-      "last_close": 4.81
-    },
-    {
       "ticker": "0998.HK",
       "name_cn": "中信银行",
       "gics_sector": "Financials",
@@ -2084,6 +2074,16 @@
       "emoji": "🔴",
       "days_in_state": 4,
       "last_close": 7.415
+    },
+    {
+      "ticker": "1658.HK",
+      "name_cn": "邮储银行",
+      "gics_sector": "Financials",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 1,
+      "last_close": 4.81
     },
     {
       "ticker": "3618.HK",
@@ -2136,16 +2136,6 @@
       "last_close": 12.52
     },
     {
-      "ticker": "1908.HK",
-      "name_cn": "建发国际集团",
-      "gics_sector": "Real Estate",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 4,
-      "last_close": 16.0
-    },
-    {
       "ticker": "0688.HK",
       "name_cn": "中国海外发展",
       "gics_sector": "Real Estate",
@@ -2154,6 +2144,16 @@
       "emoji": "🔴",
       "days_in_state": 3,
       "last_close": 13.76
+    },
+    {
+      "ticker": "1908.HK",
+      "name_cn": "建发国际集团",
+      "gics_sector": "Real Estate",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 4,
+      "last_close": 16.0
     },
     {
       "ticker": "2869.HK",
@@ -2176,16 +2176,6 @@
       "last_close": 46.42
     },
     {
-      "ticker": "0392.HK",
-      "name_cn": "北京控股",
-      "gics_sector": "Utilities",
-      "alert_type": "B_EXIT",
-      "label": "B·EXIT",
-      "emoji": "🔴",
-      "days_in_state": 4,
-      "last_close": 29.8
-    },
-    {
       "ticker": "0135.HK",
       "name_cn": "昆仑能源",
       "gics_sector": "Utilities",
@@ -2194,6 +2184,16 @@
       "emoji": "🔴",
       "days_in_state": 4,
       "last_close": 6.92
+    },
+    {
+      "ticker": "0392.HK",
+      "name_cn": "北京控股",
+      "gics_sector": "Utilities",
+      "alert_type": "B_EXIT",
+      "label": "B·EXIT",
+      "emoji": "🔴",
+      "days_in_state": 4,
+      "last_close": 29.8
     },
     {
       "ticker": "0006.HK",
