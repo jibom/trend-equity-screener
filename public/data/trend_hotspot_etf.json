@@ -69,7 +69,7 @@
       "days_below_ma10": 0,
       "ma_stack": 1,
       "ma200_slope": 29.72,
-      "hotness": 0.191
+      "hotness": 0.19
     },
     {
       "ticker": "ITA.US",
@@ -234,7 +234,7 @@
       "pct_high_250": 1.0,
       "pct_high_126": 1.0,
       "nh_ratio_126": 0.127,
-      "amt_surge": 1.298,
+      "amt_surge": 1.299,
       "amt_rank": 0.842,
       "ret_60": 0.089,
       "ma_aligned": 1,
@@ -533,6 +533,23 @@
       "hotness": 0.602
     },
     {
+      "ticker": "VYM.US",
+      "name": "Vanguard High Dividend Yield Index F",
+      "sub_industry": "FTSE High Dividend Yield",
+      "close": 166.67,
+      "pct_high_250": 1.0,
+      "pct_high_126": 1.0,
+      "nh_ratio_126": 0.159,
+      "amt_surge": 0.882,
+      "amt_rank": 0.497,
+      "ret_60": 0.077,
+      "ma_aligned": 1,
+      "days_below_ma10": 0,
+      "ma_stack": 1,
+      "ma200_slope": 23.98,
+      "hotness": 0.585
+    },
+    {
       "ticker": "KRE.US",
       "name": "SPDR® S&P Regional Banking ETF",
       "sub_industry": "Financial",
@@ -565,23 +582,6 @@
       "ma_stack": 1,
       "ma200_slope": 32.86,
       "hotness": 0.582
-    },
-    {
-      "ticker": "VYM.US",
-      "name": "Vanguard High Dividend Yield Index F",
-      "sub_industry": "FTSE High Dividend Yield",
-      "close": 166.67,
-      "pct_high_250": 1.0,
-      "pct_high_126": 1.0,
-      "nh_ratio_126": 0.159,
-      "amt_surge": 0.882,
-      "amt_rank": 0.492,
-      "ret_60": 0.077,
-      "ma_aligned": 1,
-      "days_below_ma10": 0,
-      "ma_stack": 1,
-      "ma200_slope": 23.98,
-      "hotness": 0.58
     },
     {
       "ticker": "SCHV.US",
@@ -1529,6 +1529,18 @@
       "hotness": 0.602
     },
     {
+      "ticker": "VYM.US",
+      "name": "Vanguard High Dividend Yield Index F",
+      "sub_industry": "FTSE High Dividend Yield",
+      "close": 166.67,
+      "pct_high_250": 1.0,
+      "ret_60": 0.077,
+      "ma_aligned": 1,
+      "days_below_ma10": 0,
+      "ma200_slope": 23.98,
+      "hotness": 0.585
+    },
+    {
       "ticker": "KRE.US",
       "name": "SPDR® S&P Regional Banking ETF",
       "sub_industry": "Financial",
@@ -1551,18 +1563,6 @@
       "days_below_ma10": 0,
       "ma200_slope": 32.86,
       "hotness": 0.582
-    },
-    {
-      "ticker": "VYM.US",
-      "name": "Vanguard High Dividend Yield Index F",
-      "sub_industry": "FTSE High Dividend Yield",
-      "close": 166.67,
-      "pct_high_250": 1.0,
-      "ret_60": 0.077,
-      "ma_aligned": 1,
-      "days_below_ma10": 0,
-      "ma200_slope": 23.98,
-      "hotness": 0.58
     },
     {
       "ticker": "SCHV.US",
@@ -2102,7 +2102,7 @@
       "ma_aligned": 1,
       "days_below_ma10": 0,
       "ma200_slope": 29.72,
-      "hotness": 0.191
+      "hotness": 0.19
     },
     {
       "ticker": "VGK.US",
@@ -2270,7 +2270,7 @@
       "ma_aligned": 0,
       "days_below_ma10": 10,
       "ma200_slope": 10.08,
-      "hotness": 0.108
+      "hotness": 0.107
     },
     {
       "ticker": "IWB.US",
@@ -2906,7 +2906,7 @@
       "ma_aligned": 0,
       "days_below_ma10": 0,
       "ma200_slope": 8.77,
-      "hotness": -0.446
+      "hotness": -0.447
     },
     {
       "ticker": "RSPG.US",
@@ -2942,7 +2942,7 @@
       "ma_aligned": 0,
       "days_below_ma10": 1,
       "ma200_slope": -5.79,
-      "hotness": -0.478
+      "hotness": -0.483
     },
     {
       "ticker": "PSQ.US",
@@ -3133,7 +3133,7 @@
       "ret_60": -0.023,
       "ma_aligned": 0,
       "days_below_ma10": 0,
-      "ma200_slope": -9.83,
+      "ma200_slope": -9.84,
       "hotness": -0.902
     },
     {
@@ -3278,7 +3278,7 @@
       "ma_aligned": 0,
       "days_below_ma10": 3,
       "ma200_slope": -39.54,
-      "hotness": -1.39
+      "hotness": -1.389
     },
     {
       "ticker": "FBTC.US",
