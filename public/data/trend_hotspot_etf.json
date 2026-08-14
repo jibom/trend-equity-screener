@@ -11,14 +11,14 @@
       "pct_high_250": 1.0,
       "pct_high_126": 1.0,
       "nh_ratio_126": 0.04,
-      "amt_surge": 1.267,
-      "amt_rank": 0.593,
+      "amt_surge": 1.261,
+      "amt_rank": 0.588,
       "ret_60": 0.074,
       "ma_aligned": 0,
       "days_below_ma10": 0,
       "ma_stack": 0,
       "ma200_slope": 25.02,
-      "hotness": 0.732
+      "hotness": 0.721
     },
     {
       "ticker": "IGV.US",
@@ -69,7 +69,7 @@
       "days_below_ma10": 0,
       "ma_stack": 1,
       "ma200_slope": 29.09,
-      "hotness": 0.168
+      "hotness": 0.169
     },
     {
       "ticker": "ITA.US",
@@ -120,7 +120,7 @@
       "days_below_ma10": 0,
       "ma_stack": 0,
       "ma200_slope": -3.21,
-      "hotness": -0.468
+      "hotness": -0.467
     },
     {
       "ticker": "METV.US",
@@ -200,14 +200,14 @@
       "pct_high_250": 1.0,
       "pct_high_126": 1.0,
       "nh_ratio_126": 0.23,
-      "amt_surge": 1.413,
+      "amt_surge": 1.414,
       "amt_rank": 0.316,
       "ret_60": 0.084,
       "ma_aligned": 1,
       "days_below_ma10": 0,
       "ma_stack": 1,
       "ma200_slope": 35.63,
-      "hotness": 0.933
+      "hotness": 0.934
     },
     {
       "ticker": "DIA.US",
@@ -838,7 +838,7 @@
       "days_below_ma10": 0,
       "ma_stack": 0,
       "ma200_slope": 68.23,
-      "hotness": 0.691
+      "hotness": 0.692
     },
     {
       "ticker": "IWM.US",
@@ -1025,7 +1025,7 @@
       "days_below_ma10": 0,
       "ma_stack": 0,
       "ma200_slope": -13.11,
-      "hotness": 0.379
+      "hotness": 0.38
     },
     {
       "ticker": "VXF.US",
@@ -1235,7 +1235,7 @@
       "ma_aligned": 1,
       "days_below_ma10": 0,
       "ma200_slope": 35.63,
-      "hotness": 0.933
+      "hotness": 0.934
     },
     {
       "ticker": "DIA.US",
@@ -1307,7 +1307,7 @@
       "ma_aligned": 0,
       "days_below_ma10": 0,
       "ma200_slope": 77.1,
-      "hotness": 0.834
+      "hotness": 0.835
     },
     {
       "ticker": "JEPQ.US",
@@ -1367,7 +1367,7 @@
       "ma_aligned": 0,
       "days_below_ma10": 0,
       "ma200_slope": 25.02,
-      "hotness": 0.732
+      "hotness": 0.721
     },
     {
       "ticker": "ARKG.US",
@@ -1391,7 +1391,7 @@
       "ma_aligned": 0,
       "days_below_ma10": 0,
       "ma200_slope": 68.23,
-      "hotness": 0.691
+      "hotness": 0.692
     },
     {
       "ticker": "JEPI.US",
@@ -1619,7 +1619,7 @@
       "ma_aligned": 1,
       "days_below_ma10": 0,
       "ma200_slope": 19.92,
-      "hotness": 0.466
+      "hotness": 0.47
     },
     {
       "ticker": "EFA.US",
@@ -1751,7 +1751,7 @@
       "ma_aligned": 0,
       "days_below_ma10": 0,
       "ma200_slope": -13.11,
-      "hotness": 0.379
+      "hotness": 0.38
     },
     {
       "ticker": "XLB.US",
@@ -2063,7 +2063,7 @@
       "ma_aligned": 0,
       "days_below_ma10": 0,
       "ma200_slope": 36.02,
-      "hotness": 0.182
+      "hotness": 0.183
     },
     {
       "ticker": "XLK.US",
@@ -2111,7 +2111,7 @@
       "ma_aligned": 1,
       "days_below_ma10": 0,
       "ma200_slope": 29.09,
-      "hotness": 0.168
+      "hotness": 0.169
     },
     {
       "ticker": "ICLN.US",
@@ -2207,7 +2207,7 @@
       "ma_aligned": 0,
       "days_below_ma10": 0,
       "ma200_slope": 46.77,
-      "hotness": 0.135
+      "hotness": 0.136
     },
     {
       "ticker": "GRID.US",
@@ -2339,7 +2339,7 @@
       "ma_aligned": 0,
       "days_below_ma10": 0,
       "ma200_slope": 27.08,
-      "hotness": 0.048
+      "hotness": 0.044
     },
     {
       "ticker": "VWO.US",
@@ -2495,7 +2495,7 @@
       "ma_aligned": 1,
       "days_below_ma10": 0,
       "ma200_slope": 8.63,
-      "hotness": -0.083
+      "hotness": -0.082
     },
     {
       "ticker": "RSPD.US",
@@ -2903,7 +2903,7 @@
       "ma_aligned": 1,
       "days_below_ma10": 0,
       "ma200_slope": -3.21,
-      "hotness": -0.468
+      "hotness": -0.467
     },
     {
       "ticker": "DBA.US",
@@ -2999,7 +2999,7 @@
       "ma_aligned": 0,
       "days_below_ma10": 0,
       "ma200_slope": 2.24,
-      "hotness": -0.592
+      "hotness": -0.591
     },
     {
       "ticker": "TAN.US",
