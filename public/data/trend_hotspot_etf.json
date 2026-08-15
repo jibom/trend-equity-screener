@@ -11,14 +11,14 @@
       "pct_high_250": 0.997,
       "pct_high_126": 0.997,
       "nh_ratio_126": 0.04,
-      "amt_surge": 1.259,
+      "amt_surge": 1.26,
       "amt_rank": 0.277,
       "ret_60": 0.077,
       "ma_aligned": 1,
       "days_below_ma10": 0,
       "ma_stack": 1,
       "ma200_slope": 25.35,
-      "hotness": 0.473
+      "hotness": 0.474
     },
     {
       "ticker": "XLB.US",
@@ -190,7 +190,7 @@
       "days_below_ma10": 0,
       "ma_stack": 1,
       "ma200_slope": 26.87,
-      "hotness": 1.238
+      "hotness": 1.237
     },
     {
       "ticker": "SCHD.US",
@@ -574,7 +574,7 @@
       "pct_high_250": 0.999,
       "pct_high_126": 0.999,
       "nh_ratio_126": 0.198,
-      "amt_surge": 0.754,
+      "amt_surge": 0.755,
       "amt_rank": 0.915,
       "ret_60": 0.069,
       "ma_aligned": 1,
@@ -642,7 +642,7 @@
       "pct_high_250": 0.994,
       "pct_high_126": 0.994,
       "nh_ratio_126": 0.222,
-      "amt_surge": 0.566,
+      "amt_surge": 0.567,
       "amt_rank": 0.61,
       "ret_60": 0.08,
       "ma_aligned": 1,
@@ -702,7 +702,7 @@
       "days_below_ma10": 0,
       "ma_stack": 1,
       "ma200_slope": 26.87,
-      "hotness": 1.238
+      "hotness": 1.237
     },
     {
       "ticker": "FBT.US",
@@ -746,14 +746,14 @@
       "pct_high_250": 0.975,
       "pct_high_126": 0.975,
       "nh_ratio_126": 0.119,
-      "amt_surge": 1.421,
+      "amt_surge": 1.422,
       "amt_rank": 0.554,
       "ret_60": 0.24,
       "ma_aligned": 1,
       "days_below_ma10": 0,
       "ma_stack": 1,
       "ma200_slope": 41.04,
-      "hotness": 0.86
+      "hotness": 0.861
     },
     {
       "ticker": "VO.US",
@@ -1209,7 +1209,7 @@
       "ma_aligned": 1,
       "days_below_ma10": 0,
       "ma200_slope": 26.87,
-      "hotness": 1.238
+      "hotness": 1.237
     },
     {
       "ticker": "SCHD.US",
@@ -1305,7 +1305,7 @@
       "ma_aligned": 1,
       "days_below_ma10": 0,
       "ma200_slope": 41.04,
-      "hotness": 0.86
+      "hotness": 0.861
     },
     {
       "ticker": "JEPQ.US",
@@ -1629,7 +1629,7 @@
       "ma_aligned": 1,
       "days_below_ma10": 0,
       "ma200_slope": 25.35,
-      "hotness": 0.473
+      "hotness": 0.474
     },
     {
       "ticker": "QUAL.US",
@@ -1869,7 +1869,7 @@
       "ma_aligned": 1,
       "days_below_ma10": 0,
       "ma200_slope": 23.83,
-      "hotness": 0.358
+      "hotness": 0.357
     },
     {
       "ticker": "VB.US",
@@ -1965,7 +1965,7 @@
       "ma_aligned": 1,
       "days_below_ma10": 0,
       "ma200_slope": 29.93,
-      "hotness": 0.263
+      "hotness": 0.262
     },
     {
       "ticker": "XRT.US",
@@ -2601,7 +2601,7 @@
       "ma_aligned": 0,
       "days_below_ma10": 0,
       "ma200_slope": 47.26,
-      "hotness": -0.152
+      "hotness": -0.151
     },
     {
       "ticker": "GDX.US",
@@ -2685,7 +2685,7 @@
       "ma_aligned": 1,
       "days_below_ma10": 3,
       "ma200_slope": -12.17,
-      "hotness": -0.274
+      "hotness": -0.275
     },
     {
       "ticker": "AIQ.US",
@@ -2781,7 +2781,7 @@
       "ma_aligned": 0,
       "days_below_ma10": 0,
       "ma200_slope": 13.75,
-      "hotness": -0.337
+      "hotness": -0.336
     },
     {
       "ticker": "GLD.US",
@@ -2817,7 +2817,7 @@
       "ma_aligned": 0,
       "days_below_ma10": 0,
       "ma200_slope": 40.14,
-      "hotness": -0.374
+      "hotness": -0.375
     },
     {
       "ticker": "ARKK.US",
@@ -3297,7 +3297,7 @@
       "ma_aligned": 0,
       "days_below_ma10": 4,
       "ma200_slope": -103.93,
-      "hotness": -1.527
+      "hotness": -1.526
     },
     {
       "ticker": "YINN.US",
