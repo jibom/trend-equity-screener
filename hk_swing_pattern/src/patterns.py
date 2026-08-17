@@ -532,13 +532,13 @@ def crossovers(daily: pd.DataFrame) -> dict:
 
 
 # ---------------- SOS (Sign of Strength, Wyckoff) ----------------
-def detect_sos(daily: pd.DataFrame, lookback: int = 3, pos_n: int = 126,
+def detect_sos(daily: pd.DataFrame, lookback: int = 3, pos_n: int = 200,
                pos_n_fallback: int = 63,
-               pos_max: float = 0.50, range_mult: float = 1.5, vol_mult: float = 1.5,
+               pos_max: float = 0.80, range_mult: float = 1.5, vol_mult: float = 1.5,
                close_ratio: float = 0.70, bull_body_pct: float = 0.03,
                entangle_thresh: float = 0.05, entangle_lookback: int = 3) -> int:
     """Sign of Strength (Wyckoff): 位置门 = A OR B, 强度共享放量。
-    A: pos_n(默认126=6个月)区间 pos<=pos_max; 6个月数据不足时回退 pos_n_fallback(默认63=3个月)
+    A: pos_n(默认200日)区间 pos<=pos_max; 200日数据不足时回退 pos_n_fallback(默认63=3个月)
     B: 近 entangle_lookback 日 4均线(5/10/15/20)纠缠 max/min-1<entangle_thresh  (从均线纠缠平台启动)
     阳线path: 中大阳(实体>3%) + 波幅扩张(1.5×) + 收盘靠高(0.70) + 放量 + (A或B)
     近 lookback 日内任一根满足阳线路径 → 返回 1, 否则 0。
@@ -591,34 +591,14 @@ def detect_sos(daily: pd.DataFrame, lookback: int = 3, pos_n: int = 126,
     return 0
 
 
-# ---------------- SOS 原版 (60日pos, 无均线纠缠, 无3月回退) ----------------
-def detect_sos_orig(daily: pd.DataFrame, lookback: int = 3, pos_n: int = 60,
-                    pos_max: float = 0.50, range_mult: float = 1.5, vol_mult: float = 1.5,
-                    close_ratio: float = 0.70, bull_body_pct: float = 0.03) -> int:
-    """原版 Sign of Strength: 60日区间 pos<=0.50 + 放量 + 阳线(body>=3%&range>=1.5x&close_pos>=0.70)。
-    无均线纠缠OR、无6月->3月回退、无十字星路径。近 lookback 日任一根满足阳线路径 → 1, 否则 0。"""
-    need = max(pos_n + 10, lookback + 35)
-    d = daily.tail(need).reset_index(drop=True)
-    if len(d) < 65:
+def detect_sos_today(daily: pd.DataFrame) -> int:
+    """今日(最新一根bar)是否为 SOS。lookback=1, 仅扫描最新一根。"""
+    return detect_sos(daily, lookback=1)
+
+
+def detect_sos_past(daily: pd.DataFrame, past_days: int = 3) -> int:
+    """过去 past_days 日(不含今日)是否出现过 SOS bar。
+    用于观察 SOS 出现后的股价反应(如缩量回踩不破前低=买点)。"""
+    if len(daily) <= 1:
         return 0
-    o = d["fwd_open"].values; c = d["fwd_close"].values
-    h = d["fwd_high"].values; l = d["fwd_low"].values; v = d["volume"].values
-    n = len(d)
-    rng = h - l; body = c - o
-    rmin = pd.Series(c).rolling(pos_n, min_periods=pos_n).min().values
-    rmax = pd.Series(c).rolling(pos_n, min_periods=pos_n).max().values
-    pos = (c - rmin) / np.where(rmax > rmin, rmax - rmin, np.nan)
-    avg_rng = pd.Series(rng).rolling(10, min_periods=5).mean().values
-    vol_ma = pd.Series(v).rolling(20, min_periods=5).mean().values
-    for i in range(n - lookback, n):
-        if i < 25 or np.isnan(avg_rng[i]) or np.isnan(vol_ma[i]) or np.isnan(pos[i]) or rng[i] <= 0:
-            continue
-        if pos[i] > pos_max:
-            continue
-        if v[i] < vol_mult * vol_ma[i]:
-            continue
-        if body[i] > 0 and o[i] > 0 and body[i] / o[i] >= bull_body_pct:
-            if rng[i] < range_mult * avg_rng[i]: continue
-            if (c[i] - l[i]) / rng[i] < close_ratio: continue
-            return 1
-    return 0
+    return detect_sos(daily.iloc[:-1], lookback=past_days)
