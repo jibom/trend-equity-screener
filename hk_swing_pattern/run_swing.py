@@ -31,7 +31,7 @@ COL_ORDER = [
     "周KDJ背离", "周MACD背离", "周RSI背离", "日MACD背离", "日RSI背离",
     "周度背离", "日度背离",
     "周度DeMark", "日度DeMark",
-    "十字星(3d)", "涨放量跌缩量", "SOS", "SOS_过去3日",
+    "十字星(3d)", "涨放量跌缩量", "SOS",
     "KDJ Cross", "日MACD Cross", "5_10 Cross", "10_50 Cross",
 ]
 # HK 专属 4 列 (年线斜率 / RS_HSI / RS_HSI_1W / RS_HSI_4W)
@@ -94,10 +94,7 @@ def write_excel(df: pd.DataFrame, asof: str, out: Path, col_order: list = None):
         ("【③ 多空平衡】(1=命中, 空=未命中)", 11, True),
         ("  十字星(3d): 近3日十字星个数。十字星=实体/振幅≤10% 且 振幅/开盘≥0.5%(经典十字星), 或 实体绝对值≤0.02(价≥5)/≤0.01(价<5)(小实体)", 10, False),
         ("  涨放量跌缩量: 近10日≥2上涨日且≥1下跌日; 上涨日均量≥1.5×下跌日均量; 且每个下跌日成交量<当日20日量均(持续缩量)。多头承接信号", 10, False),
-        ("  SOS (Sign of Strength, Wyckoff): 仅看今日最新一根bar。位置门 A OR B, 强度共享放量", 10, False),
-        ("    位置门A: 200日分位<=0.80(200日不足回退3个月); 位置门B: 近3日 4均线(5/10/15/20)纠缠 max/min-1<5%(平台启动)", 10, False),
-        ("    强度: 放量>=1.5x + 中大阳(实体>3%) + 波幅扩张(1.5x) + 收盘靠高(>=70%)", 10, False),
-        ("  SOS_过去3日: 过去3个交易日(不含今日)出现过SOS的个股。用于观察SOS后的股价反应(如缩量回踩不破前低=买点)", 10, False),
+        ("  SOS (Sign of Strength, Wyckoff): 位置门 = A OR B。A: 200日pos<=0.80(200日数据不足回退3个月); B: 近3日 4均线(5/10/15/20)纠缠 max/min-1<5%。强度: 放量+阳线。捕获纠缠平台突破、次新股底部反强", 10, False),
         ("    阳线path: 中大阳(实体>3%) + 波幅扩张(1.5x) + 收盘靠高(>=70%) + 放量。无十字星路径(小实体不再触发)", 10, False),
         ("", 10, False),
         ("【④ 企稳上行 — Cross】", 11, True),
@@ -129,6 +126,21 @@ def write_excel(df: pd.DataFrame, asof: str, out: Path, col_order: list = None):
             ("  MRS_行业: Mansfield RS vs 行业ETF (GICS sector→XLK/XLE/XLV...) 同法", 10, False),
             ("  MRS_SPY_1W / MRS_SPY_4W: MRS_SPY 分数的 5日 / 20日 变化", 10, False),
         ]
+    elif cols and "MRS_沪深300" in cols:  # A股 / ETF 专属
+        is_a = "MRS_中证500" in cols
+        title = "A股专属" if is_a else "ETF 专属"
+        info += [
+            ("", 10, False),
+            (f"【⑤ {title} — 趋势/Mansfield RS】", 11, True),
+            ("  年线斜率: MA200 近5日变化率 ×52 (年化, %)。正值=年线上行", 10, False),
+            ("  MRS_沪深300: Mansfield RS vs 510300.SH(沪深300ETF代理) = (个股/510300)/(252日均线)-1 ×100。正=跑赢沪深300", 10, False),
+            ("  MRS_沪深300_1W / MRS_沪深300_4W: MRS_沪深300 分数的 5日 / 20日 变化", 10, False),
+        ]
+        if is_a:
+            info += [
+                ("  MRS_中证500: Mansfield RS vs 510500.SH(中证500ETF代理) 同法。正=跑赢中证500 (中小盘相对强度)", 10, False),
+                ("  MRS_中证500_1W / MRS_中证500_4W: MRS_中证500 分数的 5日 / 20日 变化", 10, False),
+            ]
     for i, (t, s, b) in enumerate(info, 1):
         c = ws2.cell(i, 1, t); c.font = Font(size=s, bold=b, color="1F4E78" if b and s >= 12 else "000000")
     ws2.column_dimensions["A"].width = 110
@@ -238,12 +250,12 @@ def main():
         out_path = out_dir / f"swing_{asof}_alt.xlsx"
         print(f"[WARN] 主文件被占用, 写到 {out_path.name}")
         write_excel(df, asof, out_path, col_order=COL_ORDER_HK)
-    # 生成网站页 (两 tab HK/US, 含下载按钮 + 表格) + xlsx 复制到根目录(供下载)
+    # 生成网站页 (四 tab HK/US/A股/ETF, 含下载按钮 + 表格) + xlsx 复制到根目录(供下载)
     try:
         import shutil
         shutil.copy(out_path, ROOT / OUT_XLSX)
         import gen_site
-        gen_site.build(ROOT / OUT_XLSX, ROOT / "US_Swing_Pattern.xlsx", ROOT / "index.html")
+        gen_site.build(gen_site.default_panels(ROOT), ROOT / "index.html")
         print(f"[Site] -> {ROOT / 'index.html'}")
     except Exception as e:
         print(f"[Site] 生成失败: {e}")

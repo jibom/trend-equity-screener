@@ -15,6 +15,9 @@ swing_*.html
 div_doji_chip_*.xlsx
 div_doji_chip_*.html
 _test_*.html
+a_pool.csv
+a_pool_test.csv
 
 # 一次性结果
 out_sos_compare.txt
+out_ablation_*.txt

@@ -109,10 +109,10 @@ def main():
         out_path = out_dir / f"swing_us_{asof}_alt.xlsx"
         print(f"[WARN] 主文件被占用, 写到 {out_path.name}")
         run_swing.write_excel(df, asof, out_path)
-    # 复制到根目录 + 重建两 tab 首页
+    # 复制到根目录 + 重建四 tab 首页
     try:
         shutil.copy(out_path, ROOT / OUT_XLSX)
-        gen_site.build(ROOT / "HK_Swing_Pattern.xlsx", ROOT / OUT_XLSX, ROOT / "index.html")
+        gen_site.build(gen_site.default_panels(ROOT), ROOT / "index.html")
         print(f"[Site] -> {ROOT / 'index.html'}")
     except Exception as e:
         print(f"[Site] 生成失败: {e}")

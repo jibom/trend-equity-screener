@@ -589,16 +589,3 @@ def detect_sos(daily: pd.DataFrame, lookback: int = 3, pos_n: int = 200,
             if (c[i] - l[i]) / rng[i] < close_ratio: continue
             return 1
     return 0
-
-
-def detect_sos_today(daily: pd.DataFrame) -> int:
-    """今日(最新一根bar)是否为 SOS。lookback=1, 仅扫描最新一根。"""
-    return detect_sos(daily, lookback=1)
-
-
-def detect_sos_past(daily: pd.DataFrame, past_days: int = 3) -> int:
-    """过去 past_days 日(不含今日)是否出现过 SOS bar。
-    用于观察 SOS 出现后的股价反应(如缩量回踩不破前低=买点)。"""
-    if len(daily) <= 1:
-        return 0
-    return detect_sos(daily.iloc[:-1], lookback=past_days)

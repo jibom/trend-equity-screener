@@ -19,12 +19,21 @@ REQUIRED_COLS = [
 
 
 class WindFetcher:
-    """从 jianxin MySQL (Wind 镜像) 读取港股 EOD 数据。凭据从环境变量读取。"""
+    """从 jianxin MySQL (Wind 镜像) 读取 EOD 数据。凭据从环境变量读取。
 
-    def __init__(self, db: dict | None = None, lookback_days: int = 520, retries: int = 3):
+    table: 数据表名 (hkshareeodprices / ashareeodprices / chinaclosedfundeodprice)。
+      三张表 schema 一致 (TRADE_DT + S_DQ_* + S_DQ_ADJ* + S_DQ_VOLUME),
+      故 forward_adjust / swing.analyze 对港股/A股/ETF 通用。
+    trade_status_filter: A股 ashareeodprices 有 S_DQ_TRADESTATUS='交易' 过滤;
+      港股/ETF 表无此列, 传 None 跳过。"""
+
+    def __init__(self, db: dict | None = None, lookback_days: int = 520, retries: int = 3,
+                 table: str = "hkshareeodprices", trade_status_filter: str | None = None):
         self._db = db or self._db_from_env()
         self.lookback_days = lookback_days
         self._retries = retries
+        self.table = table
+        self.trade_status_filter = trade_status_filter
         self._conn = self._connect()
 
     @staticmethod
@@ -59,9 +68,10 @@ class WindFetcher:
         start = (datetime.strptime(asof, "%Y-%m-%d")
                  - timedelta(days=int(self.lookback_days * 1.6))).strftime("%Y%m%d")
         end = asof.replace("-", "")
+        extra = " AND S_DQ_TRADESTATUS='交易'" if self.trade_status_filter else ""
         sql = f"""SELECT {",".join(REQUIRED_COLS)}
-                  FROM hkshareeodprices
-                  WHERE S_INFO_WINDCODE=%s AND TRADE_DT BETWEEN %s AND %s
+                  FROM {self.table}
+                  WHERE S_INFO_WINDCODE=%s AND TRADE_DT BETWEEN %s AND %s{extra}
                   ORDER BY TRADE_DT"""
         return pd.read_sql(sql, self._conn, params=(code, start, end))
 
