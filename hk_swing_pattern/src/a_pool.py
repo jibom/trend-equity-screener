@@ -25,8 +25,8 @@ TURNOVER_DAYS = 20   # 近 20 个交易日成交额
 def _conn():
     return pymysql.connect(
         host=os.environ["DB_HOST"], user=os.environ["DB_USER"],
-        password=os.environ["DB_PASSWORD"], database=os.environ.get("DB_NAME", "jianxin"),
-        port=int(os.environ.get("DB_PORT", "3306")), charset="utf8mb4",
+        password=os.environ["DB_PASSWORD"], database=os.environ.get("DB_NAME") or "jianxin",
+        port=int(os.environ.get("DB_PORT") or "3306"), charset="utf8mb4",
     )
 
 

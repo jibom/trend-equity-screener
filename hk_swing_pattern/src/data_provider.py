@@ -46,8 +46,8 @@ class WindFetcher:
                                "本地用 .env, GitHub Actions 用 Secrets.")
         return {
             "host": host, "user": user, "password": pwd,
-            "database": os.environ.get("DB_NAME", "jianxin"),
-            "port": int(os.environ.get("DB_PORT", "3306")),
+            "database": os.environ.get("DB_NAME") or "jianxin",
+            "port": int(os.environ.get("DB_PORT") or "3306"),
             "charset": "utf8mb4",
         }
 
