@@ -31,7 +31,7 @@ COL_ORDER = [
     "周KDJ背离", "周MACD背离", "周RSI背离", "日MACD背离", "日RSI背离",
     "周度背离", "日度背离",
     "周度DeMark", "日度DeMark",
-    "十字星(3d)", "涨放量跌缩量", "SOS",
+    "十字星(3d)", "涨放量跌缩量", "SOS", "SOS 过去3天",
     "KDJ Cross", "日MACD Cross", "5_10 Cross", "10_50 Cross",
 ]
 # HK 专属 4 列 (年线斜率 / RS_HSI / RS_HSI_1W / RS_HSI_4W)
@@ -96,6 +96,8 @@ def write_excel(df: pd.DataFrame, asof: str, out: Path, col_order: list = None):
         ("  涨放量跌缩量: 近10日≥2上涨日且≥1下跌日; 上涨日均量≥1.5×下跌日均量; 且每个下跌日成交量<当日20日量均(持续缩量)。多头承接信号", 10, False),
         ("  SOS (Sign of Strength, Wyckoff): 位置门 = A OR B。A: 200日pos<=0.80(200日数据不足回退3个月); B: 近3日 4均线(5/10/15/20)纠缠 max/min-1<5%。强度: 放量+阳线。捕获纠缠平台突破、次新股底部反强", 10, False),
         ("    阳线path: 中大阳(实体>3%) + 波幅扩张(1.5x) + 收盘靠高(>=70%) + 放量。无十字星路径(小实体不再触发)", 10, False),
+        ("  SOS: 仅最新一根K线命中阳线路径 → 1 (当日新鲜信号)", 10, False),
+        ("  SOS 过去3天: 最新一根之前的3根(不含最新)任一根命中 → 1 (近1-3日曾触发; 与SOS独立, 可同时为1)", 10, False),
         ("", 10, False),
         ("【④ 企稳上行 — Cross】", 11, True),
         ("  KDJ Cross / 日MACD Cross / 10_50 Cross: 日线快线上穿慢线=金叉, 下穿=死叉", 10, False),
