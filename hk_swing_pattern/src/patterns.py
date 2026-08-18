@@ -536,12 +536,15 @@ def detect_sos(daily: pd.DataFrame, lookback: int = 3, pos_n: int = 200,
                pos_n_fallback: int = 63,
                pos_max: float = 0.80, range_mult: float = 1.5, vol_mult: float = 1.5,
                close_ratio: float = 0.70, bull_body_pct: float = 0.03,
-               entangle_thresh: float = 0.05, entangle_lookback: int = 3) -> int:
+               entangle_thresh: float = 0.05, entangle_lookback: int = 3,
+               skip_latest: bool = False) -> int:
     """Sign of Strength (Wyckoff): 位置门 = A OR B, 强度共享放量。
     A: pos_n(默认200日)区间 pos<=pos_max; 200日数据不足时回退 pos_n_fallback(默认63=3个月)
     B: 近 entangle_lookback 日 4均线(5/10/15/20)纠缠 max/min-1<entangle_thresh  (从均线纠缠平台启动)
     阳线path: 中大阳(实体>3%) + 波幅扩张(1.5×) + 收盘靠高(0.70) + 放量 + (A或B)
-    近 lookback 日内任一根满足阳线路径 → 返回 1, 否则 0。
+    扫描窗口: 末尾 lookback 根。skip_latest=True 时跳过最新一根, 扫它之前的 lookback 根
+    (用于 "SOS 过去3天": lookback=3, skip_latest=True → 最新根前3根)。
+    任一根满足阳线路径 → 返回 1, 否则 0。
     pos 仍NaN(<fallback日)时只看B; B只需20日历史, 兼容次新股。"""
     need = max(pos_n + 10, lookback + 65, 65)
     d = daily.tail(need).reset_index(drop=True)
@@ -571,7 +574,8 @@ def detect_sos(daily: pd.DataFrame, lookback: int = 3, pos_n: int = 200,
     with np.errstate(invalid='ignore', divide='ignore'):
         spread = ma_max / np.where(ma_min > 0, ma_min, np.nan) - 1
     entangled = (spread < entangle_thresh) & ma_valid
-    for i in range(n - lookback, n):
+    end = n - 1 if skip_latest else n          # skip_latest: 跳过最新一根, 扫之前 lookback 根
+    for i in range(max(end - lookback, 0), end):
         if i < 25 or np.isnan(avg_rng[i]) or np.isnan(vol_ma[i]) or rng[i] <= 0:
             continue
         # 位置门 A OR B (pos NaN时只看B)
