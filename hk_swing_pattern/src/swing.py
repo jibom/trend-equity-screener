@@ -48,7 +48,8 @@ def analyze(daily: pd.DataFrame) -> dict | None:
         # ③ 多空平衡 (1=命中, 空=未命中)
         "十字星(3d)": cp["doji_count"],
         "涨放量跌缩量": 1 if vp["up_vol_dn_shrink"] else "",
-        "SOS": 1 if P.detect_sos(daily) else "",
+        "SOS": 1 if P.detect_sos(daily, lookback=1) else "",                 # 仅最新一根
+        "SOS 过去3天": 1 if P.detect_sos(daily, lookback=3, skip_latest=True) else "",  # 最新根前3根
         # ④ 企稳上行 (近2日金叉=1/死叉=-1; 推算2日内将金叉=预1/将死叉=预-1)
         "KDJ Cross": P.cross_code(co["KDJ金叉"]),
         "日MACD Cross": P.cross_code(co["MACD金叉"]),
