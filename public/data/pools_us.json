@@ -34,7 +34,7 @@
     "breakout_count_60d": 0,
     "from_bottom": false,
     "days_in_trend": 0,
-    "last_close": 469.45,
+    "last_close": 469.46,
     "weekly_aligned": true,
     "daily_aligned": false,
     "ma_5w": 493.06,
@@ -570,9 +570,9 @@
     "ma_20w": 638.34,
     "ma_40w": 496.91,
     "ma_50w": 455.36,
-    "sma10": 683.01,
-    "sma50": 636.76,
-    "sma200": 482.46
+    "sma10": 680.97,
+    "sma50": 636.91,
+    "sma200": 484.35
   },
   {
     "ticker": "ONTO.US",
@@ -1053,9 +1053,9 @@
     "ma_20w": 114.3,
     "ma_40w": 98.83,
     "ma_50w": 96.95,
-    "sma10": 145.48,
-    "sma50": 136.77,
-    "sma200": 97.69
+    "sma10": 146.16,
+    "sma50": 137.38,
+    "sma200": 97.99
   },
   {
     "ticker": "PL.US",
@@ -2257,7 +2257,7 @@
     "ticker": "ABBV.US",
     "market": "US",
     "pool": "trend",
-    "pool_status": "STRONG",
+    "pool_status": "STRONGEST",
     "prev_pool_status": "",
     "status_change": "none",
     "first_breakout_date": "",
@@ -2267,14 +2267,14 @@
     "days_in_trend": 0,
     "last_close": 261.83,
     "weekly_aligned": true,
-    "daily_aligned": false,
+    "daily_aligned": true,
     "ma_5w": 253.53,
     "ma_20w": 229.97,
     "ma_40w": 224.46,
     "ma_50w": 223.43,
-    "sma10": 252.4,
-    "sma50": 245.88,
-    "sma200": 223.29
+    "sma10": 253.02,
+    "sma50": 246.41,
+    "sma200": 223.48
   },
   {
     "ticker": "NVS.US",
@@ -2548,9 +2548,9 @@
     "ma_20w": 332.25,
     "ma_40w": 314.87,
     "ma_50w": 305.59,
-    "sma10": 351.28,
-    "sma50": 341.94,
-    "sma200": 311.45
+    "sma10": 350.04,
+    "sma50": 342.63,
+    "sma200": 311.88
   },
   {
     "ticker": "UNP.US",
@@ -3146,9 +3146,9 @@
     "ma_20w": 112.32,
     "ma_40w": 113.56,
     "ma_50w": 113.68,
-    "sma10": 111.33,
+    "sma10": 111.34,
     "sma50": 109.95,
-    "sma200": 113.59
+    "sma200": 113.58
   },
   {
     "ticker": "XLY.US",
@@ -3629,9 +3629,9 @@
     "ma_20w": 24.56,
     "ma_40w": 24.21,
     "ma_50w": 24.06,
-    "sma10": 24.86,
-    "sma50": 24.69,
-    "sma200": 24.15
+    "sma10": 24.87,
+    "sma50": 24.7,
+    "sma200": 24.16
   },
   {
     "ticker": "BA.US",
