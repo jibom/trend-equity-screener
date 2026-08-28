@@ -1,12 +1,14 @@
-"""港股统一数据 provider: jianxin DB 主源, 缺数据时按 EODHD → yfinance 顺序补尾部。
+"""港股统一数据 provider: jianxin DB 主源, 缺数据时 yfinance 补尾部。
+
+(2026-08 起 EODHD 下线, 中间层已移除: jianxin → yfinance 两级。)
 
 jianxin 有完整历史但可能缺最近几天 (如港股分支停更)。本模块对每只代码:
 1. 从 jianxin 拿全历史;
-2. 若 jianxin 末日 < 目标 end, 仅补缺失的尾部几天 (EODHD → yfinance), 不重拉全历史;
+2. 若 jianxin 末日 < 目标 end, 仅补缺失的尾部几天 (yfinance), 不重拉全历史;
 3. 返回与 jianxin 同 schema 的 DataFrame, 现有 forward_adjust_group / compute_one 无感复用。
 
-代码格式: 个股三源都是 9988.HK (无映射); HSI 指数 jianxin=HSI.HI, yfinance=^HSI (EODHD 无 HSI)。
-HSICS 行业指数 (HSCIEN 等) EODHD/yfinance 均无, 仅 jianxin (停更时返回部分 + warning)。
+代码格式: 个股两源都是 9988.HK (无映射); HSI 指数 jianxin=HSI.HI, yfinance=^HSI。
+HSICS 行业指数 (HSCIEN 等) yfinance 无, 仅 jianxin (停更时返回部分 + warning)。
 """
 from __future__ import annotations
 import os, sys
@@ -15,9 +17,6 @@ import pandas as pd
 import numpy as np
 import pymysql
 from db_config import DB_CONFIG
-
-EODHD_KEY = os.getenv('EODHD_KEY', '6a10e8411d06d1.41490389')
-EODHD_BASE = 'https://eodhd.com/api'
 
 # 个股 schema (与 jianxin hkshareeodprices 对齐, 供 forward_adjust_group/compute_one 用)
 STOCK_COLS = ['S_INFO_WINDCODE', 'TRADE_DT', 'S_DQ_OPEN', 'S_DQ_HIGH', 'S_DQ_LOW', 'S_DQ_CLOSE',
@@ -69,54 +68,6 @@ def _jianxin_stocks(codes: list[str], start: str, end: str) -> pd.DataFrame:
     return df
 
 
-# ---------------- EODHD 备用 (个股) ----------------
-
-def _eodhd_bulk_day(date_ymd: str) -> dict[str, dict]:
-    """EODHD /eod-bulk-last-day/HK?date=YYYY-MM-DD, 返回 {code: {open,high,low,close,volume}}。
-    date_ymd 为 YYYYMMDD。非交易日或失败返回 {}。"""
-    import requests
-    d = f"{date_ymd[:4]}-{date_ymd[4:6]}-{date_ymd[6:8]}"
-    try:
-        r = requests.get(f"{EODHD_BASE}/eod-bulk-last-day/HK",
-                         params={'api_token': EODHD_KEY, 'fmt': 'json', 'date': d}, timeout=60)
-        if r.status_code != 200:
-            return {}
-        rows = r.json()
-        out = {}
-        for x in rows:
-            code = x.get('code')
-            if not code:
-                continue
-            if not code.endswith('.HK'):
-                code = f"{code}.HK"   # bulk 返回的 code 无 .HK 后缀, 补上
-            out[code] = {'open': float(x['open']), 'high': float(x['high']),
-                         'low': float(x['low']), 'close': float(x['close']),
-                         'volume': float(x['volume'])}
-        return out
-    except Exception:
-        return {}
-
-
-def _eodhd_tail(codes: list[str], tail_start: str, end: str) -> dict[str, list[dict]]:
-    """用 bulk-last-day 逐交易日拉 EODHD, 返回 {code: [{TRADE_DT, OHLCV}]}, 覆盖 tail_start~end。
-    只拉工作日; 空响应跳过。"""
-    out = {c: [] for c in codes}
-    d = pd.to_datetime(tail_start)
-    e = pd.to_datetime(end)
-    while d <= e:
-        if d.weekday() < 5:  # Mon-Fri
-            ds = d.strftime('%Y%m%d')
-            bulk = _eodhd_bulk_day(ds)
-            if bulk:
-                for c in codes:
-                    if c in bulk:
-                        b = bulk[c]
-                        out[c].append({'TRADE_DT': ds, 'S_DQ_OPEN': b['open'], 'S_DQ_HIGH': b['high'],
-                                       'S_DQ_LOW': b['low'], 'S_DQ_CLOSE': b['close'], 'S_DQ_VOLUME': b['volume']})
-        d += pd.Timedelta(days=1)
-    return out
-
-
 # ---------------- yfinance 备用 ----------------
 
 def _yf_index(code: str, start: str, end: str) -> pd.DataFrame:
@@ -148,12 +99,15 @@ def _yf_index(code: str, start: str, end: str) -> pd.DataFrame:
 
 
 def _yf_stocks(codes: list[str], start: str, end: str) -> dict[str, pd.DataFrame]:
-    """yfinance.download 批量拉个股, 返回 {code: DataFrame[TRADE_DT, OHLCV]}。"""
+    """yfinance.download 批量拉个股, 返回 {code: DataFrame[TRADE_DT, OHLCV]}。
+    jianxin 00700.HK (5位) → yfinance 0700.HK (4位)。"""
     import yfinance as yf
+    yf_map = {c: f"{c.split('.')[0].lstrip('0').zfill(4)}.HK" for c in codes}
+    yf_codes = sorted(set(yf_map.values()))
     s = pd.to_datetime(start).strftime('%Y-%m-%d')
     e = (pd.to_datetime(end) + pd.Timedelta(days=1)).strftime('%Y-%m-%d')
     try:
-        h = yf.download(codes, start=s, end=e, auto_adjust=False, progress=False, threads=True)
+        h = yf.download(yf_codes, start=s, end=e, auto_adjust=False, progress=False, threads=True)
     except Exception:
         return {}
     if h is None or h.empty:
@@ -162,14 +116,18 @@ def _yf_stocks(codes: list[str], start: str, end: str) -> dict[str, pd.DataFrame
     multi = isinstance(h.columns, pd.MultiIndex)
     for c in codes:
         try:
+            yc = yf_map[c]
             if multi:
-                sub = h.xs(c, level=1, axis=1)
+                if yc not in h.columns.get_level_values(1):
+                    continue
+                sub = h.xs(yc, level=1, axis=1)
             else:
                 sub = h.copy()
             sub = sub.reset_index().dropna(subset=['Open'])
             if sub.empty:
                 continue
-            sub['TRADE_DT'] = pd.to_datetime(sub['Date']).dt.strftime('%Y%m%d')
+            dcol = 'Date' if 'Date' in sub.columns else sub.columns[0]  # 新版yf index无名
+            sub['TRADE_DT'] = pd.to_datetime(sub[dcol]).dt.strftime('%Y%m%d')
             out[c] = pd.DataFrame({
                 'TRADE_DT': sub['TRADE_DT'],
                 'S_DQ_OPEN': sub['Open'].astype(float),
@@ -205,24 +163,28 @@ def fetch_hk_index(code: str, start: str, end: str) -> pd.DataFrame:
 
 
 def fetch_hk_stocks(codes: list[str], start: str, end: str) -> pd.DataFrame:
-    """个股 OHLCV。jianxin 主源; 缺尾部时 EODHD → yfinance 补。返回 STOCK_COLS (复权列用 jianxin 末日 factor 对齐)。
+    """个股 OHLCV。jianxin 主源; 缺尾部时 yfinance 补。返回 STOCK_COLS (复权列用 jianxin 末日 factor 对齐)。
     start/end 为 YYYYMMDD 字符串。"""
     df = _jianxin_stocks(codes, start, end)
-    # 每只 code 的 jianxin 末日 + factor
+    # 每只 code 的 jianxin 末日 + factor (groupby 一次性算, 避免 N 次全表扫描)
     tail_rows = []
     need_tail = []  # 末 日 < end 的 code
     factor_by_code = {}  # code → factor (adj/raw)
     latest_by_code = {}
+    if not df.empty:
+        df_sorted = df.sort_values(['S_INFO_WINDCODE', 'TRADE_DT'])
+        last_rows = df_sorted.groupby('S_INFO_WINDCODE').last()  # 末日行 (按 TRADE_DT 升序)
+    else:
+        last_rows = pd.DataFrame()
     for c in codes:
-        sub = df[df['S_INFO_WINDCODE'] == c]
-        if sub.empty:
+        if c not in last_rows.index:
             need_tail.append(c)
             latest_by_code[c] = None
             factor_by_code[c] = 1.0
             continue
-        jx_latest = sub['TRADE_DT'].max()
+        last = last_rows.loc[c]
+        jx_latest = last['TRADE_DT']
         latest_by_code[c] = jx_latest
-        last = sub[sub['TRADE_DT'] == jx_latest].iloc[0]
         factor = float(last['S_DQ_ADJCLOSE'] / last['S_DQ_CLOSE']) if last['S_DQ_CLOSE'] else 1.0
         factor_by_code[c] = factor
         if jx_latest < end:
@@ -230,21 +192,19 @@ def fetch_hk_stocks(codes: list[str], start: str, end: str) -> pd.DataFrame:
     if not need_tail:
         return df
 
-    # 尾部起始 = need_tail 里最早的 latest+1 (或 start)
+    # 尾部起始 = need_tail 里最早的 latest+1, 但夹在最近 60 天内 (只补最近尾部, 不为长期停牌股回补整段历史)
     valid_latests = [pd.to_datetime(latest_by_code[c]) for c in need_tail if latest_by_code[c]]
-    tail_start = (min(valid_latests) + pd.Timedelta(days=1)).strftime('%Y%m%d') if valid_latests else start
+    if valid_latests:
+        earliest = (min(valid_latests) + pd.Timedelta(days=1)).strftime('%Y%m%d')
+        floor = (pd.to_datetime(end) - pd.Timedelta(days=60)).strftime('%Y%m%d')
+        tail_start = max(earliest, floor)
+    else:
+        tail_start = start
 
-    # 1) EODHD bulk 逐日
-    eodhd_tail = _eodhd_tail(need_tail, tail_start, end) if valid_latests else {}
-    still_need = [c for c in need_tail if not eodhd_tail.get(c)]
-    for c in need_tail:
-        for row in eodhd_tail.get(c, []):
-            tail_rows.append(_make_stock_row(c, row, factor_by_code[c]))
-
-    # 2) yfinance 补剩余
-    if still_need:
-        yf_tail = _yf_stocks(still_need, tail_start, end)
-        for c in still_need:
+    # yfinance 补尾部 (EODHD 已下线, 唯一备用源)
+    if need_tail:
+        yf_tail = _yf_stocks(need_tail, tail_start, end)
+        for c in need_tail:
             sub = yf_tail.get(c)
             if sub is None or sub.empty:
                 continue
@@ -258,8 +218,8 @@ def fetch_hk_stocks(codes: list[str], start: str, end: str) -> pd.DataFrame:
                 tail_df[c] = tail_df[c].astype(float)
         df = pd.concat([df[STOCK_COLS], tail_df[STOCK_COLS]], ignore_index=True)
         df = df.drop_duplicates(subset=['S_INFO_WINDCODE', 'TRADE_DT']).sort_values(['S_INFO_WINDCODE', 'TRADE_DT']).reset_index(drop=True)
-        supplemented = sorted({c for c in need_tail if any(r['S_INFO_WINDCODE'] == c for r in tail_rows)})
-        print(f"[hk_data] 个股补尾: jianxin 缺 {len(need_tail)} 只, EODHD+yfinance 补 {len(supplemented)} 只 (tail {tail_start}~{end})")
+        supplemented = sorted({r['S_INFO_WINDCODE'] for r in tail_rows} & set(need_tail))
+        print(f"[hk_data] 个股补尾: jianxin 缺 {len(need_tail)} 只, yfinance 补 {len(supplemented)} 只 (tail {tail_start}~{end})")
     else:
         print(f"[hk_data] 个股补尾失败: jianxin 缺 {len(need_tail)} 只, 备用源均无 (tail {tail_start}~{end})")
     return df

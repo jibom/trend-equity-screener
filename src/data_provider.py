@@ -23,16 +23,25 @@ REQUIRED_COLS = [
 class WindFetcher:
     """Reads HK EOD prices from the jianxin MySQL mirror of Wind."""
 
-    DEFAULT_DB = dict(
-        host=os.getenv('WIND_HOST', 'rm-uf62imd2xjxj647jho.mysql.rds.aliyuncs.com'),
-        user=os.getenv('WIND_USER', 'yangdong_gf'),
-        password=os.getenv('WIND_PASSWORD', '4S7Q4pNUzh'),
-        database=os.getenv('WIND_DB', 'jianxin'),
-        port=int(os.getenv('WIND_PORT', '3306')),
-    )
+    @staticmethod
+    def _default_db() -> dict:
+        """凭据只走 env (本地 .env / CI secrets)。兼容 WIND_* 与 CI 的 DB_* 两套命名。"""
+        from dotenv import load_dotenv
+        load_dotenv(os.path.join(os.path.dirname(__file__), "..", ".env"))
+        host = os.getenv('WIND_HOST') or os.getenv('DB_HOST', '')
+        pwd = os.getenv('WIND_PASSWORD') or os.getenv('DB_PASSWORD', '')
+        if not host or not pwd:
+            raise RuntimeError("缺少 WIND_HOST/WIND_PASSWORD (或 DB_HOST/DB_PASSWORD) 环境变量")
+        return dict(
+            host=host,
+            user=os.getenv('WIND_USER') or os.getenv('DB_USER', ''),
+            password=pwd,
+            database=os.getenv('WIND_DB') or os.getenv('DB_NAME', 'jianxin'),
+            port=int(os.getenv('WIND_PORT') or os.getenv('DB_PORT') or '3306'),
+        )
 
     def __init__(self, db: dict | None = None, lookback_days: int = 420):
-        cfg = db or self.DEFAULT_DB
+        cfg = db or self._default_db()
         url = (f"mysql+pymysql://{cfg['user']}:{cfg['password']}"
                f"@{cfg['host']}:{cfg['port']}/{cfg['database']}")
         self._engine = create_engine(url, pool_recycle=1800, pool_pre_ping=True,
