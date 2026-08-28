@@ -6,12 +6,23 @@ tab 切换时调 Plotly.Plots.resize 修隐藏 div 尺寸。
 """
 import os, sys
 sys.path.insert(0, os.path.dirname(__file__))
+import pandas as pd
 import plotly.io as pio
 import plotly.offline as pyo
 import plot_doji_cumulative
 import plot_top_cumulative
 
 OUT = os.path.join(os.path.dirname(__file__), '..', 'output', 'hsi_timing_combined.html')
+
+# 初始可视窗口: 只显示最近 N 年; 数据 trace 全部保留, 用户可缩放/拖动回看长期历史。
+VIEW_YEARS = float(os.environ.get('HSI_VIEW_YEARS', '2'))
+
+
+def set_recent_view(fig, years: float = VIEW_YEARS):
+    """把所有 x 轴初始 range 设为 [今天-years, 今天]; 后台数据不删。"""
+    end = pd.Timestamp.today().normalize()
+    start = end - pd.DateOffset(years=years)
+    fig.update_xaxes(range=[start, end])
 
 
 def crosshair_js(div_id: str) -> str:
@@ -73,6 +84,10 @@ def main():
     fig_b, tbl_b = plot_doji_cumulative.build()
     print("[Build] 逃顶 fig ...")
     fig_t, tbl_t = plot_top_cumulative.build()
+
+    # 初始只显示最近 VIEW_YEARS 年 (数据全留, 可缩放回看)
+    set_recent_view(fig_b)
+    set_recent_view(fig_t)
 
     plotly_js = pyo.get_plotlyjs()
     tabs = [('抄底 (底部择时)', 'bottom', fig_b, tbl_b),

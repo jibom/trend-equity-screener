@@ -18,21 +18,44 @@ import sector_cluster as sc
 from backtest_doji_signal import compute_one
 from backtest_top_signal import compute_active_top
 
-# GICS sector → 恒生综合行业指数 (Hang Seng Composite Industry Index) Wind 代码
-# 11 个 HSICS 子指数与 GICS 11 sector 一一对应 (HSCICO 综合企业无 GICS 对应, 跳过)
-SECTOR_INDEX_MAP = {
-    'Energy': 'HSCIEN.HI',
-    'Materials': 'HSCIMT.HI',
-    'Industrials': 'HSCIIN.HI',
-    'Consumer Discretionary': 'HSCICD.HI',
-    'Consumer Staples': 'HSCICS.HI',
-    'Health Care': 'HSCIH.HI',
-    'Financials': 'HSCIFN.HI',
-    'Information Technology': 'HSCIIT.HI',
-    'Communication Services': 'HSCITC.HI',
-    'Utilities': 'HSCIUT.HI',
-    'Real Estate': 'HSCIPC.HI',
+# sector_cluster 把 sys.stdout 换成 buffered wrapper, 这里改回 line-buffered 看进度
+try:
+    sys.stdout.reconfigure(line_buffering=True)
+except Exception:
+    pass
+
+# 恒生行业分类 (中文) → 恒生综合行业指数 (Hang Seng Composite Industry Index) Wind 代码
+# 12 个 HSICS 子指数, 含综合企业 HSCICO (原 GICS 版跳过, 现用 HSCI 成分股文件原生分类补回)
+HSCI_SECTOR_INDEX_MAP = {
+    '能源业': 'HSCIEN.HI',
+    '原材料业': 'HSCIMT.HI',
+    '工业': 'HSCIIN.HI',
+    '非必需性消费': 'HSCICD.HI',
+    '必需性消费': 'HSCICS.HI',
+    '医疗保健业': 'HSCIH.HI',
+    '金融业': 'HSCIFN.HI',
+    '资讯科技业': 'HSCIIT.HI',
+    '电讯业': 'HSCITC.HI',
+    '公用事业': 'HSCIUT.HI',
+    '地产建筑业': 'HSCIPC.HI',
+    '综合企业': 'HSCICO.HI',
 }
+# 兼容旧名
+SECTOR_INDEX_MAP = HSCI_SECTOR_INDEX_MAP
+
+# 两个基准: 恒生指数 + 恒生高股息率指数 (投资经理双基准)
+BENCHMARK_CODES = {'hsi': 'HSI.HI', 'hdiv': 'HSHDYI.HI'}
+
+HSCI_POOL_FILE = os.path.join(os.path.dirname(__file__), '..', 'configs', 'hsci_sector_map.csv')
+
+
+def load_hsci_pool() -> pd.DataFrame:
+    """读 HSCI 成分股池 (521 只, 恒生行业分类), 返回 [Ticker, Name, Sector]。
+    Sector = 恒生行业中文 (与 HSCI_SECTOR_INDEX_MAP key 一致)。"""
+    df = pd.read_csv(HSCI_POOL_FILE)
+    df = df.dropna(subset=['code']).drop_duplicates(subset='code').copy()
+    return df[['code', 'name_cn', 'hs_sector']].rename(
+        columns={'code': 'Ticker', 'name_cn': 'Name', 'hs_sector': 'Sector'})
 
 
 def compute_active(sig: pd.DataFrame) -> pd.DataFrame:
@@ -63,10 +86,10 @@ def compute_active(sig: pd.DataFrame) -> pd.DataFrame:
 
 
 def fetch_hsics(conn, start: str, end: str) -> pd.DataFrame:
-    """拉 11 个恒生综合行业指数 OHLC, 返回 [Sector, date, sector_index(close), sector_high, sector_low]。
-    sector_index = HSICS 收盘价 (真实指数, 非自建)。"""
-    inv = {v: k for k, v in SECTOR_INDEX_MAP.items()}
-    codes_sql = ','.join(f"'{c}'" for c in SECTOR_INDEX_MAP.values())
+    """拉 12 个恒生综合行业指数 OHLC, 返回 [Sector, date, sector_index(close), sector_high, sector_low]。
+    sector_index = HSICS 收盘价 (真实指数, 非自建)。HSICS 无备用源 (仅 jianxin)。"""
+    inv = {v: k for k, v in HSCI_SECTOR_INDEX_MAP.items()}
+    codes_sql = ','.join(f"'{c}'" for c in HSCI_SECTOR_INDEX_MAP.values())
     raw = pd.read_sql(
         f"SELECT S_INFO_WINDCODE AS code, TRADE_DT AS date, S_DQ_HIGH, S_DQ_LOW, S_DQ_CLOSE "
         f"FROM hkindexeodprices WHERE TRADE_DT BETWEEN '{start}' AND '{end}' "
@@ -75,17 +98,72 @@ def fetch_hsics(conn, start: str, end: str) -> pd.DataFrame:
     raw = raw.rename(columns={'S_DQ_CLOSE': 'sector_index', 'S_DQ_HIGH': 'sector_high', 'S_DQ_LOW': 'sector_low'})
     for c in ['sector_index', 'sector_high', 'sector_low']:
         raw[c] = raw[c].astype(float)
+    # stale warning
+    if not raw.empty:
+        latest = raw['date'].max()
+        if latest < end:
+            print(f"[WARN] HSICS 行业指数 jianxin 末日 {latest} < 目标 {end} (无备用源, 行业择时可能停滞)")
     return raw[['Sector', 'date', 'sector_index', 'sector_high', 'sector_low']]
+
+
+def fetch_benchmarks(conn, start: str, end: str) -> pd.DataFrame:
+    """拉 HSI + HSHDYI 收盘, 返回 [date, hsi_close, hdiv_close] (按 date 对齐)。
+    用于算每个行业指数相对两基准的相对收益。基准无备用源 (仅 jianxin)。"""
+    codes_sql = ','.join(f"'{c}'" for c in BENCHMARK_CODES.values())
+    raw = pd.read_sql(
+        f"SELECT S_INFO_WINDCODE AS code, TRADE_DT AS date, S_DQ_CLOSE AS close "
+        f"FROM hkindexeodprices WHERE TRADE_DT BETWEEN '{start}' AND '{end}' "
+        f"AND S_INFO_WINDCODE IN ({codes_sql}) ORDER BY code, TRADE_DT", conn)
+    raw['close'] = raw['close'].astype(float)
+    out = pd.DataFrame({'date': sorted(raw['date'].unique())})
+    for key, code in BENCHMARK_CODES.items():
+        sub = raw[raw['code'] == code][['date', 'close']].rename(columns={'close': f'{key}_close'})
+        out = out.merge(sub, on='date', how='left')
+    # stale warning
+    for key, code in BENCHMARK_CODES.items():
+        sub = raw[raw['code'] == code]
+        if not sub.empty and sub['date'].max() < end:
+            print(f"[WARN] {code} jianxin 末日 {sub['date'].max()} < 目标 {end} (无备用源)")
+    return out
+
+
+def _add_relative_returns(df: pd.DataFrame) -> None:
+    """在 per-sector df 上 (in-place) 算相对两基准 (hsi/hdiv) 的相对收益特征。
+    df 需含 sector_index, hsi_close, hdiv_close, 已按 date 排序。"""
+    close = df['sector_index'].astype(float)
+    for key in ('hsi', 'hdiv'):
+        bcol = f'{key}_close'
+        if bcol not in df.columns:
+            df[f'rel_idx_{key}'] = np.nan
+            for c in [f'rel_ma60_{key}', f'rel_ret_60_{key}', f'rel_mom_20_{key}', f'rel_z_{key}']:
+                df[c] = np.nan
+            df[f'rel_above_ma60_{key}'] = False
+            continue
+        b = df[bcol].astype(float)
+        rel = close / b                                # 相对收益指数 (行业/基准)
+        df[f'rel_idx_{key}'] = rel
+        ma60 = rel.rolling(60, min_periods=20).mean()
+        df[f'rel_ma60_{key}'] = ma60
+        df[f'rel_ret_60_{key}'] = rel.pct_change(60)
+        df[f'rel_mom_20_{key}'] = rel.pct_change(20)
+        # 20日相对动量的 expanding z (shift(1) 防未来)
+        mom = df[f'rel_mom_20_{key}']
+        roll_mean = mom.shift(1).expanding(min_periods=120).mean()
+        roll_std = mom.shift(1).expanding(min_periods=120).std()
+        df[f'rel_z_{key}'] = ((mom - roll_mean) / roll_std.replace(0, np.nan)).fillna(0)
+        df[f'rel_above_ma60_{key}'] = rel > ma60
 
 
 def score_sector(df: pd.DataFrame) -> pd.DataFrame:
     """单个 sector 的日级 df 上算 RSI/周KDJ/cap_z/expanding阈值/6条件/score/前瞻收益。
     与 plot_doji_cumulative.py 打分段同口径, HSI→HSICS 真实指数 (sector_index=close,
-    sector_high/sector_low 用于周KDJ 的 HHV/LLV, 与 HSI 版同口径)。"""
+    sector_high/sector_low 用于周KDJ 的 HHV/LLV, 与 HSI 版同口径)。
+    df 需含 hsi_close/hdiv_close (基准收盘, 已在 main 里 merge) → 顺带算相对收益列。"""
     df = df.sort_values('date').reset_index(drop=True)
     close = df['sector_index'].astype(float)
     high = df['sector_high'].astype(float)
     low = df['sector_low'].astype(float)
+    _add_relative_returns(df)
 
     # RSI(14)
     delta = close.diff()
@@ -158,6 +236,7 @@ def score_sector_top(df: pd.DataFrame) -> pd.DataFrame:
     close = df['sector_index'].astype(float)
     high = df['sector_high'].astype(float)
     low = df['sector_low'].astype(float)
+    _add_relative_returns(df)
 
     # RSI(14)
     delta = close.diff()
@@ -238,19 +317,23 @@ def main():
     ap.add_argument('--end', default='2026-07-03')
     args = ap.parse_args()
 
-    pool = sc.load_pool()[['Ticker', 'Sector']]
-    print(f"=== Backtest Sector Doji ({args.start} ~ {args.end}) ===\n[Pool] {len(pool)} HK stocks, {pool['Sector'].nunique()} sectors")
+    pool = load_hsci_pool()
+    print(f"=== Backtest Sector Doji ({args.start} ~ {args.end}) ===\n[Pool] {len(pool)} HSCI stocks, {pool['Sector'].nunique()} sectors")
 
     end = args.end.replace('-', '')
     start = (pd.to_datetime(args.start) - pd.Timedelta(days=400)).strftime('%Y%m%d')
     codes = list(pool['Ticker'])
     from hk_data import fetch_hk_stocks
-    print(f"[DB] 拉取 {len(codes)} 只港股 EOD ({start}~{end}) [jianxin→EODHD→yfinance] + HSICS 行业指数 ...")
+    import time as _time
+    print(f"[DB] 拉取 {len(codes)} 只港股 EOD ({start}~{end}) [jianxin→EODHD→yfinance] + HSICS 行业指数 + HSI/HSHDYI 基准 ...")
+    _t0 = _time.time()
     raw = fetch_hk_stocks(codes, start, end).rename(columns={'S_INFO_WINDCODE': 'code'})
+    print(f"[DB] fetch_hk_stocks done {_time.time()-_t0:.1f}s, {raw['code'].nunique()} codes, {len(raw)} rows")
     conn = pymysql.connect(**DB_CONFIG)
     hsics = fetch_hsics(conn, start, end)
+    bench = fetch_benchmarks(conn, start, end)
     conn.close()
-    print(f"[Fetch] {raw['code'].nunique()} stocks, {hsics['Sector'].nunique()} HSICS indices")
+    print(f"[Fetch] {raw['code'].nunique()} stocks, {hsics['Sector'].nunique()} HSICS indices, benchmarks HSI+HSHDYI ({_time.time()-_t0:.1f}s)")
 
     # 预计算每只股票的信号 (compute_one 内部用 fwd_close, 不需要再收集价格)
     all_signals = []
@@ -307,8 +390,9 @@ def main():
     daily['panic_pct'] = daily['panic_count'] / daily['total_count'] * 100
     daily['union_pct'] = daily['union_count'] / daily['total_count'] * 100
 
-    # HSICS 真实行业指数作为 sector_index (close) + high/low (用于周KDJ)
+    # HSICS 真实行业指数作为 sector_index (close) + high/low (用于周KDJ) + 基准收盘 (算相对收益)
     daily = daily.merge(hsics, on=['Sector', 'date'], how='left')
+    daily = daily.merge(bench, on='date', how='left')
 
     # 每个 sector 打分
     out = []
@@ -321,10 +405,19 @@ def main():
             'active_pct', 'cum_pct_4w', 'pctile_4w', 'breadth_below_ma50', 'b90', 'b95',
             'cap_z', 'union_pct', 'union99', 'panic_pct', 'vol_surge_pct', 'big_drop_pct',
             'c_rsi', 'c_kdj', 'c_doji', 'c_brd', 'c_cap', 'c_union', 'score',
-            'fwd_5', 'fwd_20', 'fwd_60', 'total_count', 'signal_count']
+            'fwd_5', 'fwd_20', 'fwd_60', 'total_count', 'signal_count',
+            'rel_idx_hsi', 'rel_ma60_hsi', 'rel_ret_60_hsi', 'rel_mom_20_hsi', 'rel_z_hsi', 'rel_above_ma60_hsi',
+            'rel_idx_hdiv', 'rel_ma60_hdiv', 'rel_ret_60_hdiv', 'rel_mom_20_hdiv', 'rel_z_hdiv', 'rel_above_ma60_hdiv']
     daily = daily[keep]
     out_path = os.path.join(os.path.dirname(__file__), '..', 'output', 'doji_signal_daily_by_sector.csv')
     daily.to_csv(out_path, index=False, encoding='utf-8-sig')
+
+    # 相对收益长表 (供画图: rel_idx / rel_ma60 / rel_ret_60, 两基准)
+    rel_cols = ['date', 'Sector', 'sector_index',
+                'rel_idx_hsi', 'rel_ma60_hsi', 'rel_ret_60_hsi',
+                'rel_idx_hdiv', 'rel_ma60_hdiv', 'rel_ret_60_hdiv']
+    rel_path = os.path.join(os.path.dirname(__file__), '..', 'output', 'sector_rel_returns.csv')
+    daily[rel_cols].to_csv(rel_path, index=False, encoding='utf-8-sig')
 
     print(f"\n[Done] {len(daily)} rows ({daily['Sector'].nunique()} sectors × {daily['date'].nunique()} days) → {out_path}")
     print(summary_text(daily))
@@ -362,6 +455,7 @@ def main():
     daily_t['dist_top_pct'] = daily_t['dist_top_count'] / daily_t['total_count'] * 100
     daily_t['shrink_new_high_pct'] = daily_t['shrink_new_high_count'] / daily_t['total_count'] * 100
     daily_t = daily_t.merge(hsics, on=['Sector', 'date'], how='left')
+    daily_t = daily_t.merge(bench, on='date', how='left')
     out_t = []
     for sector, g in daily_t.groupby('Sector'):
         out_t.append(score_sector_top(g))
@@ -370,7 +464,9 @@ def main():
               'active_top_pct', 'cum_pct_4w', 'pctile_4w', 'breadth_below_ma50', 'cap_z',
               'union_up_pct', 'sky_vol_pct', 'vol_price_div_pct', 'dist_top_pct', 'shrink_new_high_pct',
               'c_rsi', 'c_kdj', 'c_star', 'c_brd', 'c_cap', 'c_union', 'c_sky', 'c_div', 'c_dist', 'c_shrink', 'c_bias',
-              'score', 'fwd_5', 'fwd_20', 'fwd_60', 'total_count', 'top_signal_count']
+              'score', 'fwd_5', 'fwd_20', 'fwd_60', 'total_count', 'top_signal_count',
+              'rel_idx_hsi', 'rel_ma60_hsi', 'rel_ret_60_hsi', 'rel_mom_20_hsi', 'rel_z_hsi', 'rel_above_ma60_hsi',
+              'rel_idx_hdiv', 'rel_ma60_hdiv', 'rel_ret_60_hdiv', 'rel_mom_20_hdiv', 'rel_z_hdiv', 'rel_above_ma60_hdiv']
     daily_t = daily_t[keep_t]
     out_path_t = os.path.join(os.path.dirname(__file__), '..', 'output', 'top_signal_daily_by_sector.csv')
     daily_t.to_csv(out_path_t, index=False, encoding='utf-8-sig')

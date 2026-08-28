@@ -109,16 +109,15 @@ def compute_one(gg):
     weekly_j_low4 = pd.Series(wj).rolling(4, min_periods=4).min().values
     weekly_j_high4 = pd.Series(wj).rolling(4, min_periods=4).max().values
 
-    # 把周线J映射到日线
+    # 把周线J映射到日线 (向量化: 每个日线的周末 → searchsorted 到 wdates, 替代 O(n×weeks) 双重循环)
     weekly_j_map = np.full(n, np.nan)
     weekly_j_high_map = np.full(n, np.nan)
-    for i in range(n):
-        d = pd.Timestamp(dates[i], ).to_period('W-FRI').end_time.normalize()
-        for wi in range(len(wdates)):
-            if wdates[wi] >= d:
-                weekly_j_map[i] = weekly_j_low4[wi] if wi < len(weekly_j_low4) else np.nan
-                weekly_j_high_map[i] = weekly_j_high4[wi] if wi < len(weekly_j_high4) else np.nan
-                break
+    d_week_end = pd.to_datetime(dates, format='%Y%m%d').to_period('W-FRI').end_time.normalize().values
+    wdates_arr = pd.DatetimeIndex(wdates).values
+    pos = np.searchsorted(wdates_arr, d_week_end)            # first wdate >= 该日周末
+    in_range = pos < len(wdates_arr)
+    weekly_j_map[in_range] = np.take(weekly_j_low4, pos[in_range])
+    weekly_j_high_map[in_range] = np.take(weekly_j_high4, pos[in_range])
 
     # 背离检测 (近10日, 在每个交易日检查)
     has_div = np.zeros(n, dtype=bool)

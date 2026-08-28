@@ -48,12 +48,75 @@ def daily_ma10_slope(df: pd.DataFrame, i: int, lookback: int = 10) -> float | No
     return cur / past - 1
 
 
+# ── Weekly resampling ─────────────────────────────────────────────
+
+def resample_to_weekly(daily_df: pd.DataFrame,
+                       ohlcv_cols=('fwd_open', 'fwd_high', 'fwd_low',
+                                   'fwd_close', 'volume')) -> pd.DataFrame:
+    """Resample daily to weekly, including the current incomplete week.
+
+    Complete weeks (ended on past Fridays) use resample('W-FRI').
+    The current incomplete week (Mon–today) is aggregated from daily bars
+    and appended, so weekly indicators always reflect the latest price.
+
+    Returns DataFrame with DatetimeIndex (Friday date for complete weeks,
+    last actual trading date for the current incomplete week).
+    """
+    cols = [c for c in ohlcv_cols if c in daily_df.columns]
+    daily = daily_df.set_index('date')[cols]
+    today = daily.index[-1]  # last available trading day
+
+    # Resample including partial current week (pandas labels it with Friday)
+    all_weeks = daily.resample('W-FRI').agg({
+        'fwd_open': 'first',
+        'fwd_high': 'max',
+        'fwd_low': 'min',
+        'fwd_close': 'last',
+        'volume': 'sum',
+    })
+
+    # Split into complete weeks (Friday <= today) and partial current week
+    complete = all_weeks[all_weeks.index <= today].dropna()
+    partial = all_weeks[all_weeks.index > today].dropna()
+
+    result = complete.copy()
+
+    if len(partial) > 0:
+        # The partial week is labeled with a future Friday — re-label with today
+        pw = partial.copy()
+        pw.index = [today] * len(pw)
+        # Merge: if today falls within an existing complete week, update it;
+        # otherwise append as a new row
+        if today in result.index:
+            # Today IS a Friday — already in complete, just keep it
+            pass
+        else:
+            result = pd.concat([result, pw])
+
+    # Final safety: if the last daily date is AFTER the last weekly date,
+    # aggregate all days after the last weekly bar into a current-week row
+    if len(result) > 0:
+        last_weekly_ts = pd.Timestamp(result.index[-1])
+        remaining = daily[daily.index > last_weekly_ts]
+        if len(remaining) > 0:
+            cw = pd.DataFrame({
+                'fwd_open': remaining['fwd_open'].iloc[0],
+                'fwd_high': remaining['fwd_high'].max(),
+                'fwd_low': remaining['fwd_low'].min(),
+                'fwd_close': remaining['fwd_close'].iloc[-1],
+                'volume': remaining['volume'].sum(),
+            }, index=[remaining.index[-1]])
+            result = pd.concat([result, cw])
+
+    return result
+
+
 # ── Weekly indicators ─────────────────────────────────────────────
 
 def compute_weekly_mas(daily_df: pd.DataFrame,
                        mas=(10, 20, 30, 40, 50, 60, 70)) -> pd.DataFrame:
-    """Resample daily to weekly (Fri) and compute MAs on fwd_close."""
-    w = daily_df.set_index('date')[['fwd_close']].resample('W-FRI').last().dropna()
+    """Resample daily to weekly (including current week) and compute MAs on fwd_close."""
+    w = resample_to_weekly(daily_df, ohlcv_cols=('fwd_close',))
     for m in mas:
         w[f'wma{m}'] = w['fwd_close'].rolling(m).mean()
     return w
@@ -164,14 +227,8 @@ def compute_kdj(df: pd.DataFrame, n: int = 9,
 
 
 def compute_weekly_kdj(daily_df: pd.DataFrame, n: int = 9) -> pd.DataFrame:
-    """Resample daily to weekly (Fri) and compute KDJ."""
-    w = daily_df.set_index('date')[['fwd_open', 'fwd_high', 'fwd_low', 'fwd_close', 'volume']].resample('W-FRI').agg({
-        'fwd_open': 'first',
-        'fwd_high': 'max',
-        'fwd_low': 'min',
-        'fwd_close': 'last',
-        'volume': 'sum',
-    }).dropna()
+    """Resample daily to weekly (including current week) and compute KDJ."""
+    w = resample_to_weekly(daily_df)
     w = compute_kdj(w, n=n)
     return w
 
@@ -277,14 +334,8 @@ def compute_macd(df: pd.DataFrame, fast: int = 12, slow: int = 26,
 
 def compute_weekly_macd(daily_df: pd.DataFrame, fast: int = 12,
                         slow: int = 26, signal: int = 9) -> pd.DataFrame:
-    """Resample daily to weekly (Fri) and compute MACD."""
-    w = daily_df.set_index('date')[['fwd_open', 'fwd_high', 'fwd_low', 'fwd_close', 'volume']].resample('W-FRI').agg({
-        'fwd_open': 'first',
-        'fwd_high': 'max',
-        'fwd_low': 'min',
-        'fwd_close': 'last',
-        'volume': 'sum',
-    }).dropna()
+    """Resample daily to weekly (including current week) and compute MACD."""
+    w = resample_to_weekly(daily_df)
     return compute_macd(w, fast=fast, slow=slow, signal=signal)
 
 

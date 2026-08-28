@@ -73,13 +73,19 @@ def analyze(g, ticker, name, sub, sector):
     # 十字星/锤子线用后复权 OHLC (同日同因子, 比值不变)
     o = g["S_DQ_ADJOPEN"].iloc[-5:].values; h = g["S_DQ_ADJHIGH"].iloc[-5:].values
     lo = g["S_DQ_ADJLOW"].iloc[-5:].values; cl = g["S_DQ_ADJCLOSE"].iloc[-5:].values
+    # 阶梯式十字星实体阈值: 低价股严, 高价股松
+    def _doji_thr(close):
+        if close < 10: return 0.015
+        if close < 50: return 0.03
+        if close < 100: return 0.10
+        return 0.20
     doji = False
     for i in range(len(o)):
         rng = h[i] - lo[i]
         if rng <= 0:
             continue
         body = abs(cl[i] - o[i]); lsh = min(o[i], cl[i]) - lo[i]
-        if body / rng <= 0.10:
+        if body <= _doji_thr(cl[i]) or (body / rng <= 0.05 and body <= _doji_thr(cl[i]) * 1.5):
             doji = True; break
         if body > 0 and lsh >= 2 * body and lsh >= 0.6 * rng:
             doji = True; break
