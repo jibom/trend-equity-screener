@@ -12,6 +12,7 @@ Usage:
 from __future__ import annotations
 
 import sys
+import io
 import os
 import csv
 import json
@@ -20,6 +21,10 @@ import time
 import argparse
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import date
+
+# Windows cp1252 控制台下中文 print 会 UnicodeEncodeError (线程内 hk_data 补尾日志), 统一 utf-8
+if sys.stdout.encoding and sys.stdout.encoding.lower() not in ("utf-8", "utf8"):
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 

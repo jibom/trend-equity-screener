@@ -66,14 +66,13 @@ def resample_to_weekly(daily_df: pd.DataFrame,
     daily = daily_df.set_index('date')[cols]
     today = daily.index[-1]  # last available trading day
 
+    # OHLCV 聚合规则; 只保留 daily 里实际存在的列 (pandas 3.x 对 agg 字典缺失列直接 KeyError)
+    AGG_RULES = {'fwd_open': 'first', 'fwd_high': 'max', 'fwd_low': 'min',
+                 'fwd_close': 'last', 'volume': 'sum'}
+    agg_map = {c: AGG_RULES[c] for c in daily.columns if c in AGG_RULES}
+
     # Resample including partial current week (pandas labels it with Friday)
-    all_weeks = daily.resample('W-FRI').agg({
-        'fwd_open': 'first',
-        'fwd_high': 'max',
-        'fwd_low': 'min',
-        'fwd_close': 'last',
-        'volume': 'sum',
-    })
+    all_weeks = daily.resample('W-FRI').agg(agg_map)
 
     # Split into complete weeks (Friday <= today) and partial current week
     complete = all_weeks[all_weeks.index <= today].dropna()
@@ -99,13 +98,11 @@ def resample_to_weekly(daily_df: pd.DataFrame,
         last_weekly_ts = pd.Timestamp(result.index[-1])
         remaining = daily[daily.index > last_weekly_ts]
         if len(remaining) > 0:
-            cw = pd.DataFrame({
-                'fwd_open': remaining['fwd_open'].iloc[0],
-                'fwd_high': remaining['fwd_high'].max(),
-                'fwd_low': remaining['fwd_low'].min(),
-                'fwd_close': remaining['fwd_close'].iloc[-1],
-                'volume': remaining['volume'].sum(),
-            }, index=[remaining.index[-1]])
+            cw = pd.DataFrame({c: (remaining[c].iloc[0] if AGG_RULES[c] == 'first'
+                                   else remaining[c].max() if AGG_RULES[c] == 'max'
+                                   else remaining[c].iloc[-1] if AGG_RULES[c] == 'last'
+                                   else remaining[c].sum())
+                               for c in agg_map}, index=[remaining.index[-1]])
             result = pd.concat([result, cw])
 
     return result
