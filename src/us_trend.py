@@ -9,7 +9,7 @@ universe: configs/us_universe.csv (top600 by turnover, 含ADR剔ETF, yfinance Se
 
 五部曲:
   Part1 最热行业(Industry)/GICS Sector   Part2 趋势个股(hotness, 60日>10%)
-  Part3 异动放量(单日>4%+量 或 3日>10%+量, 排除Part2/4)
+  Part3 SOS异动(Wyckoff Sign of Strength: 低位/均线纠缠平台放量中大阳, 含3日内SOS, 排除Part2/4)
   Part4 趋势股回调买点(深回调10-25% + ≥2信号, 剔除大阴破位, KDJ底背离用 kdj_div_basic)
   Part5 资金轮动(5日占比200日分位·10日变化, 高位失宠/低位放量突破)
 
@@ -38,6 +38,7 @@ MIN_DAYS = 60
 sys.path.insert(0, BASE_DIR)
 from kdj_div_basic import calc_kdj, detect_divergence  # noqa: E402
 import twelvedata as td  # noqa: E402
+from swing_sos import sos_flags  # noqa: E402
 
 
 # ---------------- 取数 (Twelve Data) ----------------
@@ -398,40 +399,36 @@ def analyze_pullback(g, ticker, name, ind, sector):
 
 
 def screen_surge(raw, pool, exclude=None):
-    """异动放量: 近3日单日>4%+1.5×30均量(且涨幅守住) 或 3日>10%+1.5×量. 排除 exclude. 返回 list[dict]."""
+    """SOS 异动个股 (2026-08 起替代原"单日>4%+量/3日>10%+量"):
+    swing-pattern 的 Wyckoff Sign of Strength — 低位/均线纠缠平台启动的放量中大阳。
+    SOS=最新一根命中; SOS 3日=最新根之前的3根内命中 (swing_sos.detect_sos)。排除 exclude. 返回 list[dict]."""
     exclude = exclude or set()
     out = []
     for code, g in raw.groupby("code"):
         gg = forward_adjust_group(g)
-        if gg is None or len(gg) < 35:
+        if gg is None or len(gg) < 65:
+            continue
+        sos_today, sos_3d = sos_flags(gg)
+        if not (sos_today or sos_3d) or code in exclude:
             continue
         c = gg["fwd_close"].values; v = gg["vol"].values
         vol_ma = np.nanmean(v[-30:])
-        if not vol_ma or vol_ma <= 0:
-            continue
-        ret = np.diff(c) / c[:-1] * 100.0
-        single = False; single_ret = single_vr = None
-        for i in range(max(0, len(ret) - 3), len(ret)):
-            if ret[i] > 4 and v[i + 1] >= 1.5 * vol_ma and c[-1] >= c[i]:
-                single = True; single_ret = float(ret[i]); single_vr = float(v[i + 1] / vol_ma); break
-        ret3 = (c[-1] / c[-4] - 1) * 100.0 if len(c) >= 4 else None
-        three_vr = float(np.nanmean(v[-3:]) / vol_ma) if vol_ma else None
-        three = ret3 is not None and ret3 > 10 and three_vr is not None and three_vr >= 1.5
-        if not (single or three) or code in exclude:
-            continue
+        ret1 = (c[-1] / c[-2] - 1) * 100.0 if len(c) >= 2 and c[-2] else None
+        ret3 = (c[-1] / c[-4] - 1) * 100.0 if len(c) >= 4 and c[-4] else None
+        vr = float(v[-1] / vol_ma) if vol_ma and vol_ma > 0 else None
         meta = pool[pool["Ticker"] == code]
         if meta.empty:
             continue
         meta = meta.iloc[0]
-        trig = "单日+3日" if single and three else ("单日" if single else "3日")
+        trig = "SOS+3日" if sos_today and sos_3d else ("SOS" if sos_today else "SOS 3日")
         out.append(dict(Ticker=code, Name=meta["Name"], Industry=meta["Industry"],
                         Sector=meta["Sector"], Close=round(float(c[-1]), 2),
-                        Ret1d=round(single_ret, 1) if single else None,
+                        Ret1d=round(ret1, 1) if ret1 is not None else None,
                         Ret3d=round(ret3, 1) if ret3 is not None else None,
-                        VolRatio=round(single_vr, 2) if single
-                                 else (round(three_vr, 2) if three_vr is not None else None),
+                        VolRatio=round(vr, 2) if vr is not None else None,
                         Trigger=trig))
-    out.sort(key=lambda x: max(x.get("Ret3d") or 0, x.get("Ret1d") or 0), reverse=True)
+    out.sort(key=lambda x: (x["Trigger"].startswith("SOS+") or x["Trigger"] == "SOS",
+                            x.get("VolRatio") or 0), reverse=True)
     return out
 
 

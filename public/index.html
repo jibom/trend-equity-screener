@@ -708,18 +708,18 @@
       html += trendSection('Part 2 · 趋势个股 (60日涨幅>10%, hotness 排序, ≤30)', p2.length,
         trendTable(['代码','名称','细分行业','收盘','距250高','量放','5日均额排','60日涨幅','多头','MA10','热度分'], p2Rows));
 
-      // ── Part 3: 异动放量个股 (单日>4%+放量 或 3日>10%+放量, 排除Part2/4) ──
+      // ── Part 3: SOS 异动个股 (Wyckoff Sign of Strength: 低位/均线纠缠平台放量中大阳, 排除Part2/4) ──
       const p3 = d.part3 || [];
-      const trigBadge = t => t === '单日+3日' ? '<span class="chg-badge chg-pos">单日+3日</span>'
-                            : t === '3日' ? '<span class="chg-badge" style="background:#a855f7;color:#fff">3日</span>'
-                            : '<span class="chg-badge chg-pos">单日</span>';
+      const trigBadge = t => t === 'SOS+3日' ? '<span class="chg-badge chg-pos">SOS+3日</span>'
+                            : t === 'SOS 3日' ? '<span class="chg-badge" style="background:#a855f7;color:#fff">SOS 3日</span>'
+                            : '<span class="chg-badge chg-pos">SOS</span>';
       const p3Rows = p3.map(e => [
         tk(e.ticker, 'part3'), e.name, e.sub_industry, num2(e.close),
         e.ret_1d != null ? `<span class="chg-pos">+${e.ret_1d}%</span>` : '-',
         e.ret_3d != null ? `<span class="chg-pos">+${e.ret_3d}%</span>` : '-',
         num2(e.vol_ratio) + 'x', trigBadge(e.trigger), num2(e.hotness)]);
-      html += trendSection('Part 3 · 异动放量个股 (单日>4%+放量 或 3日>10%+放量, 已排除Part2/4)', p3.length,
-        trendTable(['代码','名称','细分行业','收盘','单日异动','3日涨幅','量比','触发','热度分'], p3Rows));
+      html += trendSection('Part 3 · SOS 异动个股 (Wyckoff Sign of Strength: 低位/均线纠缠平台放量中大阳, 含3日内SOS, 已排除Part2/4)', p3.length,
+        trendTable(['代码','名称','细分行业','收盘','当日涨幅','3日涨幅','量比','触发','热度分'], p3Rows));
 
       // ── Part 4: 回调买点 ──
       const p4 = d.part4 || [];
@@ -817,16 +817,16 @@
         trendTable(['代码','名称','行业','收盘','距250高','量放','5日均额排','60日涨幅','销售增长','盈利增长','ROE','多头','MA10','热度分'], p2Rows));
 
       const p3 = d.part3 || [];
-      const trigBadge = t => t === '单日+3日' ? '<span class="chg-badge chg-pos">单日+3日</span>'
-                            : t === '3日' ? '<span class="chg-badge" style="background:#a855f7;color:#fff">3日</span>'
-                            : '<span class="chg-badge chg-pos">单日</span>';
+      const trigBadge = t => t === 'SOS+3日' ? '<span class="chg-badge chg-pos">SOS+3日</span>'
+                            : t === 'SOS 3日' ? '<span class="chg-badge" style="background:#a855f7;color:#fff">SOS 3日</span>'
+                            : '<span class="chg-badge chg-pos">SOS</span>';
       const p3Rows = p3.map(e => [
         tk(e.ticker, 'part3'), e.name, e.sub_industry, num2(e.close),
         e.ret_1d != null ? `<span class="chg-pos">+${e.ret_1d}%</span>` : '-',
         e.ret_3d != null ? `<span class="chg-pos">+${e.ret_3d}%</span>` : '-',
         num2(e.vol_ratio) + 'x', trigBadge(e.trigger), num2(e.hotness)]);
-      html += trendSection('Part 3 · 异动放量个股 (Top10行业内, 单日>4%+放量 或 3日>10%+放量, 已排除Part2/4)', p3.length,
-        trendTable(['代码','名称','行业','收盘','单日异动','3日涨幅','量比','触发','热度分'], p3Rows));
+      html += trendSection('Part 3 · SOS 异动个股 (Top10行业内, Wyckoff Sign of Strength, 含3日内SOS, 已排除Part2/4)', p3.length,
+        trendTable(['代码','名称','行业','收盘','当日涨幅','3日涨幅','量比','触发','热度分'], p3Rows));
 
       const p4 = d.part4 || [];
       const sigStr = e => ['doji','shrink','entangle','kdj_div','at_support']

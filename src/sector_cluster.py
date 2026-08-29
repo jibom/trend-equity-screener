@@ -87,6 +87,7 @@ def forward_adjust_group(g: pd.DataFrame) -> pd.DataFrame | None:
         return None
     factor = latest_adj / latest_raw
     g["fwd_close"] = g["S_DQ_ADJCLOSE"] / factor
+    g["fwd_open"] = g["S_DQ_ADJOPEN"] / factor
     g["fwd_high"] = g["S_DQ_ADJHIGH"] / factor
     g["fwd_low"] = g["S_DQ_ADJLOW"] / factor
     g["amt"] = g["S_DQ_AMOUNT"]

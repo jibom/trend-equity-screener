@@ -28,6 +28,7 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 # 复用 sector_cluster (其模块级已设 utf-8 stdout), 不再单独 wrap
 import sector_cluster as sc
 from kdj_div_basic import calc_kdj, detect_divergence
+from swing_sos import sos_flags
 
 
 def analyze(g, ticker, name, sub, sector):
@@ -118,49 +119,38 @@ def analyze(g, ticker, name, sub, sector):
 
 
 def screen_surge(raw, pool, exclude=None):
-    """异动放量个股: 近5日单日涨幅>4%+放量, 或 近3日累计涨幅>10%+放量(3日均量)。
-    exclude: 跳过的 ticker 集合(已在其它 screen 中)。返回 list[dict], 按异动强度降序。"""
+    """SOS 异动个股 (2026-08 起替代原"单日>4%+量/3日>10%+量"):
+    swing-pattern 的 Wyckoff Sign of Strength — 低位/均线纠缠平台启动的放量中大阳。
+    SOS=最新一根命中; SOS 3日=最新根之前的3根内命中 (见 swing_sos.detect_sos)。
+    exclude: 跳过的 ticker 集合(已在其它 screen 中)。返回 list[dict], 当日SOS优先、量比降序。"""
     exclude = exclude or set()
     out = []
     for code, g in raw.groupby("code"):
         gg = sc.forward_adjust_group(g)
-        if gg is None or len(gg) < 35:
+        if gg is None or len(gg) < 65:
+            continue
+        sos_today, sos_3d = sos_flags(gg)
+        if not (sos_today or sos_3d) or code in exclude:
             continue
         c = gg["fwd_close"].values
         v = gg["vol"].values
-        vol_ma = np.nanmean(v[-30:])          # 30日均量(放量基准)
-        if not vol_ma or vol_ma <= 0:
-            continue
-        ret = np.diff(c) / c[:-1] * 100.0      # 日涨幅% (ret[i] 对应 v[i+1] 当日)
-
-        # 单日: 近3日某日 >4% 且 当日量 >=1.5×30日均量, 且涨幅守住(最新收盘≥起涨前收盘, 排除冲高回落假突破)
-        single = False
-        single_ret = single_vr = None
-        for i in range(max(0, len(ret) - 3), len(ret)):
-            if ret[i] > 4 and v[i + 1] >= 1.5 * vol_ma and c[-1] >= c[i]:
-                single = True
-                single_ret = float(ret[i])
-                single_vr = float(v[i + 1] / vol_ma)
-                break
-        # 3日: 近3日累计>10% 且 3日均量>=1.5×30日均量
-        ret3 = (c[-1] / c[-4] - 1) * 100.0 if len(c) >= 4 else None
-        three_vr = float(np.nanmean(v[-3:]) / vol_ma) if vol_ma else None
-        three = ret3 is not None and ret3 > 10 and three_vr is not None and three_vr >= 1.5
-        if not (single or three) or code in exclude:
-            continue
+        vol_ma = np.nanmean(v[-30:])
+        ret1 = (c[-1] / c[-2] - 1) * 100.0 if len(c) >= 2 and c[-2] else None
+        ret3 = (c[-1] / c[-4] - 1) * 100.0 if len(c) >= 4 and c[-4] else None
+        vr = float(v[-1] / vol_ma) if vol_ma and vol_ma > 0 else None
         meta = pool[pool["Ticker"] == code]
         if meta.empty:
             continue
         meta = meta.iloc[0]
-        trig = "单日+3日" if single and three else ("单日" if single else "3日")
+        trig = "SOS+3日" if sos_today and sos_3d else ("SOS" if sos_today else "SOS 3日")
         out.append(dict(Ticker=code, Name=meta["Name"], SubIndustry=meta["SubIndustry"],
                         Sector=meta["Sector"], Close=round(float(c[-1]), 2),
-                        Ret1d=round(single_ret, 1) if single else None,           # 单日异动当天涨幅
-                        Ret3d=round(ret3, 1) if ret3 is not None else None,       # 3日累计涨幅
-                        VolRatio=round(single_vr, 2) if single
-                                 else (round(three_vr, 2) if three_vr is not None else None),
+                        Ret1d=round(ret1, 1) if ret1 is not None else None,       # 当日涨幅(参考)
+                        Ret3d=round(ret3, 1) if ret3 is not None else None,       # 3日累计涨幅(参考)
+                        VolRatio=round(vr, 2) if vr is not None else None,        # 当日量/30日均量
                         Trigger=trig))
-    out.sort(key=lambda x: max(x.get("Ret3d") or 0, x.get("Ret1d") or 0), reverse=True)
+    out.sort(key=lambda x: (x["Trigger"].startswith("SOS+") or x["Trigger"] == "SOS",
+                            x.get("VolRatio") or 0), reverse=True)
     return out
 
 
