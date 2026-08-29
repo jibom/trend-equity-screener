@@ -1,7 +1,7 @@
 """美股板块热度聚类 + 趋势五部曲 (对标港股 sector_cluster/pullback_buypoint, 取数 Twelve Data, 聚类换 yfinance Industry).
 
 universe: configs/us_universe.csv (top600 by turnover, 含ADR剔ETF, yfinance Sector+Industry, 已持久化).
-取数: Twelve Data /time_series 单股日K (split复权 + 股息调整, 前复权). EOD 缓存 data/us_eod_raw_<asof>.pkl.
+取数: EODHD /eod/{CODE}.US 单股日K (adjusted_close 可靠, 前复权). EOD 缓存 data/us_eod_raw_<asof>.pkl.
 特征/打分: 复用港股 compute_features + composite 公式
   composite = 0.25·z(新高广度250) + 0.15·z(新高广度60) + 0.15·z(量放倍数)
               + 0.30·z(5日占比200日分位) + 0.15·z(60日涨幅)
@@ -16,7 +16,7 @@ universe: configs/us_universe.csv (top600 by turnover, 含ADR剔ETF, yfinance Se
 独立运行只打印 Part1-3; 完整5部曲 JSON 由 scripts/export_trend_us.py 组装.
 用法: python src/us_trend.py [--asof 2026-06-18] [--top-stocks 20]
 
-数据源历史: EODHD (2026-09 下线) → Twelve Data (2026-08 起)。
+数据源历史: EODHD → Twelve Data (2026-08, 质量不佳) → 回退 EODHD (2026-08-29 起)。
 """
 from __future__ import annotations
 import os, sys, io, time, argparse, pickle
@@ -37,11 +37,35 @@ MIN_DAYS = 60
 
 sys.path.insert(0, BASE_DIR)
 from kdj_div_basic import calc_kdj, detect_divergence  # noqa: E402
-import twelvedata as td  # noqa: E402
+import requests  # noqa: E402
 from swing_sos import sos_flags  # noqa: E402
 
 
-# ---------------- 取数 (Twelve Data) ----------------
+# ---------------- 取数 (EODHD, 2026-08 自Twelve回退: Twelve质量不佳) ----------------
+
+EODHD_BASE = "https://eodhd.com/api"
+
+
+def _load_eodhd_key():
+    k = os.getenv("EODHD_KEY")
+    if k:
+        return k
+    local = os.path.join(os.path.dirname(__file__), "..", "configs", "eodhd_key.local")
+    if os.path.exists(local):
+        return open(local, encoding="utf-8").read().strip()
+    raise RuntimeError("EODHD_KEY 未设置: 设环境变量 EODHD_KEY, 或写入 configs/eodhd_key.local (gitignored)")
+
+
+EODHD_KEY = _load_eodhd_key()
+
+LOOKBACK_DAYS = 1200         # 日历日, 覆盖周线3年(~780交易日) + 日线热身
+MIN_DAYS = 60
+
+sys.path.insert(0, BASE_DIR)
+from kdj_div_basic import calc_kdj, detect_divergence  # noqa: E402
+
+
+# ---------------- 取数 ----------------
 
 def load_pool() -> pd.DataFrame:
     df = pd.read_csv(UNIVERSE_CSV)
@@ -51,22 +75,31 @@ def load_pool() -> pd.DataFrame:
 
 
 def fetch_eod(code: str, asof: str) -> pd.DataFrame | None:
-    """Twelve Data 单股日K → EODHD 同款小写 schema (date, ohlc, adjusted_close, volume)。
-    close=split复权原始; adjusted_close=股息后复权 (与 EODHD adjusted_close 语义对齐)。"""
-    try:
-        w = td.fetch_us_eod(code, asof, lookback_days=LOOKBACK_DAYS)
-    except Exception as e:
-        print(f"  [warn] {code} fetch err: {e}")
-        return None
-    if w.empty:
-        return None
-    return pd.DataFrame({
-        "date": pd.to_datetime(w["TRADE_DT"], format="%Y%m%d").dt.strftime("%Y-%m-%d"),
-        "open": w["S_DQ_OPEN"].astype(float), "high": w["S_DQ_HIGH"].astype(float),
-        "low": w["S_DQ_LOW"].astype(float), "close": w["S_DQ_CLOSE"].astype(float),
-        "adjusted_close": w["S_DQ_ADJCLOSE"].astype(float),
-        "volume": w["S_DQ_VOLUME"].astype(float),
-    })
+    to = asof
+    frm = (pd.to_datetime(asof) - pd.Timedelta(days=LOOKBACK_DAYS)).strftime("%Y-%m-%d")
+    for attempt in range(3):
+        try:
+            r = requests.get(f"{EODHD_BASE}/eod/{code}.US",
+                             params={"api_token": EODHD_KEY, "from": frm, "to": to,
+                                     "period": "d", "fmt": "json"}, timeout=60)
+            r.raise_for_status()
+            d = r.json()
+            # EODHD 正常返回 list[dict]; 限流/错误时返回 dict (如 {"error": ...}) — 直接跳过该票,
+            # 否则 pd.DataFrame(dict) 无 date 列会抛 KeyError 触发 3 次无意义重试 (每次 sleep 1s)。
+            if not isinstance(d, list) or not d:
+                return None
+            df = pd.DataFrame(d)
+            if "date" not in df.columns:
+                return None
+            df = df.sort_values("date").reset_index(drop=True)
+            for c in ("open", "high", "low", "close", "adjusted_close", "volume"):
+                df[c] = pd.to_numeric(df[c], errors="coerce")
+            return df
+        except Exception as e:
+            if attempt == 2:
+                print(f"  [warn] {code} fetch err: {e}")
+                return None
+            time.sleep(1.0)
 
 
 def fetch_all(pool: pd.DataFrame, asof: str, prefix: str = "us_eod_raw") -> pd.DataFrame:
@@ -77,27 +110,22 @@ def fetch_all(pool: pd.DataFrame, asof: str, prefix: str = "us_eod_raw") -> pd.D
             raw = pickle.load(f)
         print(f"[Cache] 命中 {cache} ({raw['code'].nunique()} 只)")
         return raw
-    if not td._key():
-        raise RuntimeError("TWELVEDATA_KEY 未设置: 设环境变量, 或写入 configs/twelvedata_key.local (gitignored)")
-    codes = pool["Code"].tolist()
-    wcols = td.fetch_all_us(codes, asof, lookback_days=LOOKBACK_DAYS)  # 并行+自带节流
     frames = []
-    for code, w in wcols.items():
-        if len(w) < MIN_DAYS:
+    codes = pool["Code"].tolist()
+    for i, code in enumerate(codes):
+        df = fetch_eod(code, asof)
+        if df is None or len(df) < MIN_DAYS:
             continue
-        df = pd.DataFrame({
-            "code": code + ".US",
-            "date": pd.to_datetime(w["TRADE_DT"], format="%Y%m%d").dt.strftime("%Y-%m-%d"),
-            "open": w["S_DQ_OPEN"].astype(float), "high": w["S_DQ_HIGH"].astype(float),
-            "low": w["S_DQ_LOW"].astype(float), "close": w["S_DQ_CLOSE"].astype(float),
-            "adjusted_close": w["S_DQ_ADJCLOSE"].astype(float),
-            "volume": w["S_DQ_VOLUME"].astype(float),
-        })
-        frames.append(df)
+        df["code"] = code + ".US"
+        frames.append(df[["code", "date", "open", "high", "low", "close",
+                          "adjusted_close", "volume"]])
+        if (i + 1) % 50 == 0:
+            print(f"  fetched {i+1}/{len(codes)}")
+        time.sleep(0.12)
     raw = pd.concat(frames, ignore_index=True) if frames else pd.DataFrame()
     with open(cache, "wb") as f:
         pickle.dump(raw, f)
-    print(f"[Cache] 写入 {cache} ({raw['code'].nunique() if len(raw) else 0} 只)")
+    print(f"[Cache] 写入 {cache} ({raw['code'].nunique()} 只)")
     return raw
 
 
